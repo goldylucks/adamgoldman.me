@@ -1,0 +1,14 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  font-size: 12;
+}
+
+.link {
+  text-decoration: none !important;
+  color: inherit !important;
+}

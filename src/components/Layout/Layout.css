@@ -1,0 +1,19 @@
+.appWrapper {
+  min-height: 100vh;
+  display: flex;
+}
+
+.mainContent {
+  width: 75%;
+  background: #1a7ced;
+  position: relative;
+  padding-bottom: 60;
+}
+
+.sidebar {
+  width: 25%;
+  background: #302f37;
+  position: fixed;
+  right: 0;
+  height: 100%;
+}
