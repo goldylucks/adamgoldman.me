@@ -1,0 +1,29 @@
+.brand {
+  margin-top: 5vh;
+  text-align: center;
+}
+
+.logo {
+  width: 165;
+  border-radius: 50%;
+}
+
+.headline {
+  font-family: Ubuntu, Helvetica, sans-serif;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 200;
+  line-height: 44px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  color: #1a7ced;
+  margin-bottom: 30px;
+}
+
+.fbShare {
+  display: block;
+  margin-top: 20px;
+}

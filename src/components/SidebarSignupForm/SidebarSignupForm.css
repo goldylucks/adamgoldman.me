@@ -1,0 +1,46 @@
+.signup {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 80%;
+  bottom: 10px;
+  display: block;
+}
+
+.container {
+  display: flex;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 50px;
+}
+
+.input {
+  background: #595762;
+  border-radius: 6px 0 0 6px;
+  height: 100%;
+  width: calc(100% - 50px);
+  padding-left: 16px;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+}
+
+.input::placeholder {
+  color: #fff;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.button {
+  height: 100%;
+  width: 50px;
+  border: none;
+  background: '#fff url(img/send-icon.png) no-repeat';
+  background-position: center;
+  background-size: 100%;
+}
+
+.buttonIcon {
+  width: 100%;
+}

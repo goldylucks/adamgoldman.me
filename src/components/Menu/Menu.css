@@ -1,0 +1,34 @@
+.hamburgerWrap {
+  cursor: pointer;
+  margin: 30px;
+  float: right;
+  height: 15px;
+  padding-top: 5px;
+}
+.hamburger {
+  height: 3px;
+  width: 22px;
+  background: #fff;
+  border-radius: 3px;
+  position: relative;
+}
+.hamburger:before {
+  content: "";
+  display: block;
+  background: #fff;
+  height: 3px;
+  border-radius: 3px;
+  position: absolute;
+  top: -6px;
+  width: 100%;
+}
+.hamburger:after {
+    content: "";
+  display: block;
+  background: #fff;
+  height: 3px;
+  border-radius: 3px;
+  position: absolute;
+  bottom: -6px;
+  width: 100%;
+}

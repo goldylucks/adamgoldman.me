@@ -2,9 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 
-// external-global styles must be imported in your JS.
 import s from './Layout.css';
 import Footer from '../Footer';
+import Menu from '../Menu';
+import Brand from '../Brand';
+import SidebarSignupForm from '../SidebarSignupForm';
 
 class Layout extends React.Component {
   static propTypes = {
@@ -19,7 +21,9 @@ class Layout extends React.Component {
           <Footer />
         </div>
         <aside className={s.sidebar}>
-          <h1>Aside!</h1>
+          <Menu />
+          <Brand />
+          <SidebarSignupForm />
         </aside>
       </div>
     );

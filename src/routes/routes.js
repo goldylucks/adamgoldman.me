@@ -18,6 +18,14 @@ const routes = {
       path: '/blog/:post',
       load: () => import(/* webpackChunkName: 'blogPost' */ './blogPost'),
     },
+    {
+      path: '/tools',
+      load: () => import(/* webpackChunkName: 'brainTools' */ './brainTools'),
+    },
+    {
+      path: '/tools/:tool',
+      load: () => import(/* webpackChunkName: 'brainTool' */ './brainTool'),
+    },
     // Wildcard routes, e.g. { path: '(.*)', ... } (must go last)
     {
       path: '(.*)',
@@ -29,7 +37,9 @@ const routes = {
     // Execute each child route until one of them return the result
     const route = await next();
     // Provide default values for title, description etc.
-    route.title = `${route.title && '- '}AdamGoldman.me`;
+    route.title = route.title
+      ? `${route.title} - AdamGoldman.me`
+      : 'AdamGoldman.me';
     route.description = route.description || '';
 
     return route;
