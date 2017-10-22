@@ -5,8 +5,11 @@ import PropTypes from 'prop-types';
 
 import Layout from '../../components/Layout';
 import Markdown from '../../components/Markdown';
+import FbPageBox from '../../components/FbPageBox';
+import Ending from '../../components/Ending';
+import FbShareButton from '../../components/FbShareButton';
 
-const BlogPost = ({ title, pathname, tags, body, html, ps }) => (
+const BlogPost = ({ title, pathname, tags, body, html, nick, ps }) => (
   <Layout>
     <div className="main-layout post-page">
       <h1 className="main-title">{title}</h1>
@@ -18,7 +21,13 @@ const BlogPost = ({ title, pathname, tags, body, html, ps }) => (
         // eslint-disable-next-line react/no-danger
         <div dangerouslySetInnerHTML={{ __html: html }} />
       )}
+      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <FbPageBox style={{ display: 'block', textAlign: 'center' }} />
       <hr />
+      <div style={{ marginBottom: 20 }}>
+        <FbShareButton />
+      </div>
+      <Ending nick={nick} />
       {ps && (
         <Markdown
           className="post-text"

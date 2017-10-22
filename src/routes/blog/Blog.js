@@ -1,30 +1,38 @@
-/* eslint-disable */
+// @flow
 
 import React from 'react';
-import PropTypes from 'prop-types';
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import s from './Blog.css';
 
-class Blog extends React.Component {
-  static propTypes = {
-    posts: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        link: PropTypes.string.isRequired,
-        content: PropTypes.string,
-      }),
-    ).isRequired,
-  };
+import Link from '../../components/Link';
+import Ending from '../../components/Ending';
+import Tags from '../../components/Tags';
+import FbPageBox from '../../components/FbPageBox';
+import FbShareButton from '../../components/FbShareButton';
+import posts from './postsData';
 
-  render() {
-    return (
-      <div className={s.root}>
-        <div className={s.container}>
-          <h1>Blog</h1>
-        </div>
-      </div>
-    );
-  }
-}
+const Blog = () => (
+  <article className="main-layout">
+    <header className="main-title-margin">
+      <h1 className="main-title">My Humble Blog</h1>
+      <h2>With my humble thoughts and diabolical schemes</h2>
+    </header>
+    <div>
+      {posts.map(p => (
+        <article key={p.url}>
+          <h1>
+            <Link to={`/blog/${p.url}/`}>{p.title}</Link>
+          </h1>
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <Tags tags={p.tags} />
+            <FbShareButton urlProp={`/blog/${p.url}/`} />
+          </div>
+          <p>{p.description}</p>
+          <hr />
+        </article>
+      ))}
+    </div>
+    <FbPageBox style={{ display: 'block', textAlign: 'center' }} />
+    <Ending nick="non blogger" />
+  </article>
+);
 
-export default withStyles(s)(Blog);
+export default Blog;

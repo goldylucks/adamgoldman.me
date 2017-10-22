@@ -7,7 +7,7 @@ import { DOMAIN } from '../../constants';
 
 type Props = {
   urlProp?: string, // eslint-disable-line react/require-default-props
-  location: Object,
+  location?: Object,
 };
 
 const url = (location, urlProp) => DOMAIN + (urlProp || location.pathname);
@@ -16,6 +16,11 @@ const encodedUrl = (location, urlProp) =>
   encodeURIComponent(url(location, urlProp));
 
 class FbShareButton extends React.Component {
+  // TODO remove after getting real loaction
+  static defaultProps = {
+    location: { pathname: '/' },
+  };
+
   componentDidMount() {
     this.reloadFB();
   }
