@@ -14,8 +14,8 @@ import type { Props } from '../routes/brainTool/components/toolPageProps';
 export const stepCount = 5;
 export const title = 'Feel Good Generator';
 export const nick = 'how much pleasure can you stand?';
-export const description =
-  'Intensify good feelings on command. How much pleasure can you stand?';
+// eslint-disable-next-line prettier/prettier
+export const description = `Intensify good feelings on command. How much pleasure can you stand?`;
 
 class FeelGoodGenerator extends React.Component {
   state = {

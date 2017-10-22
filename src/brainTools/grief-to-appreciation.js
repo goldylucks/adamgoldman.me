@@ -15,8 +15,8 @@ import type { Props } from '../routes/brainTool/components/toolPageProps';
 export const stepCount = 7;
 export const title = 'Grief To Appreciation';
 export const nick = "don't cry because it's over, smile because it happened";
-export const description =
-  'Turn feelings of loss, miss, and grief into appreciation, presence and warmth';
+// eslint-disable-next-line prettier/prettier
+export const description = `Turn feelings of loss, miss, and grief into appreciation, presence and warmth`;
 
 class GriefToAppreciation extends React.Component {
   state = {

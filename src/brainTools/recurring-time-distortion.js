@@ -15,8 +15,8 @@ import type { Props } from '../routes/brainTool/components/toolPageProps';
 export const stepCount = 12;
 export const title = 'Recurring Time Distortion';
 export const nick = 'time distortion';
-export const description =
-  'Turn bad time to good time and good time to wonderful time by distorting time subjectively';
+// eslint-disable-next-line prettier/prettier
+export const description = `Turn bad time to good time and good time to wonderful time by distorting time subjectively`;
 
 // eslint-disable-next-line react/prefer-stateless-function
 class RecurringTimeDistortion extends React.Component {

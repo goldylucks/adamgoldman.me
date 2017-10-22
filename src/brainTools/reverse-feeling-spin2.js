@@ -15,8 +15,8 @@ import type { Props } from '../routes/brainTool/components/toolPageProps';
 export const stepCount = 9;
 export const title = 'Reverse Feeling Spin';
 export const nick = 'fear in reverse is ...';
-export const description =
-  'A slight alteration for the reverse spin, used for the same things';
+// eslint-disable-next-line prettier/prettier
+export const description = `A slight alteration for the reverse spin, used for the same things`;
 
 class SomeTool extends React.Component {
   state = {

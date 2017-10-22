@@ -14,7 +14,8 @@ import type { Props } from '../routes/brainTool/components/toolPageProps';
 export const stepCount = 4;
 export const title = 'I bet you never designed your perfect day';
 export const nick = 'such a perfect day';
-export const description = 'Design your future';
+// eslint-disable-next-line prettier/prettier
+export const description = `Design your future`;
 
 class PerfectDay extends React.Component {
   state = {

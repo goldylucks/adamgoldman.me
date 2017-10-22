@@ -14,8 +14,8 @@ import type { Props } from '../routes/brainTool/components/toolPageProps';
 export const stepCount = 15;
 export const title = 'Smoking Destroyer';
 export const nick = 'non smoker';
-export const description =
-  'Convert your old smoking habit into a powerful image of yourself';
+// eslint-disable-next-line prettier/prettier
+export const description = `Convert your old smoking habit into a powerful image of yourself`;
 
 const stillCompelled = (onRestart: Function) => {
   global.alert(

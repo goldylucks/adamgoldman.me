@@ -18,8 +18,8 @@ import type { Props } from '../routes/brainTool/components/toolPageProps';
 export const stepCount = 10;
 export const title = 'Internal Dialog Scrambeler';
 export const nick = 'what if, if what?';
-export const description =
-  'Stop recurring intrusive thoughts and limiting beliefs. Perfect for "what if\'s, "I\'m not good enough", and all that lovely things we said to ourselves';
+// eslint-disable-next-line prettier/prettier
+export const description = `Stop recurring intrusive thoughts and limiting beliefs. Perfect for "what if's, "I'm not good enough", and all that lovely things we said to ourselves`;
 
 class InternalDialogScrambler extends React.Component {
   state = {

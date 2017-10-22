@@ -14,7 +14,8 @@ import type { Props } from '../routes/brainTool/components/toolPageProps';
 
 export const stepCount = 25;
 export const title = 'Loved Ones Amplifier';
-export const description = 'Enjoy people you like like never before';
+// eslint-disable-next-line prettier/prettier
+export const description = `Enjoy people you like like never before`;
 export const nick = 'lovey dovey';
 
 // eslint-disable-next-line react/prefer-stateless-function

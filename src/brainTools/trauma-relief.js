@@ -21,8 +21,8 @@ const feelWorse = () => {
 export const stepCount = 13;
 export const title = 'Trauma Relief';
 export const nick = 'war in reverse is peace';
-export const description =
-  'Turn old traumas and bad memories, arguments, and fights into powerful resources';
+// eslint-disable-next-line prettier/prettier
+export const description = `Turn old traumas and bad memories, arguments, and fights into powerful resources`;
 
 // eslint-disable-next-line react/prefer-stateless-function
 class TraumaRelief extends React.Component {

@@ -12,8 +12,8 @@ import type { Props } from '../routes/brainTool/components/toolPageProps';
 
 export const stepCount = 4;
 export const title = 'Loved Ones Amplifier (Generalizer)';
-export const description =
-  "Leverage what you've learned in the loved one amplifier";
+// eslint-disable-next-line prettier/prettier
+export const description = `Leverage what you've learned in the loved one amplifier`;
 export const nick = 'generalizer';
 
 // eslint-disable-next-line react/prefer-stateless-function

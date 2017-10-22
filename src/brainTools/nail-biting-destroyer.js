@@ -14,8 +14,8 @@ import type { Props } from '../routes/brainTool/components/toolPageProps';
 export const stepCount = 15;
 export const title = 'Nail Biting Destroyer';
 export const nick = 'non nail biter';
-export const description =
-  'Convert your old nail biting habit into a powerful image of yourself';
+// eslint-disable-next-line prettier/prettier
+export const description = `Convert your old nail biting habit into a powerful image of yourself`;
 
 const stillCompelled = (onRestart: Function) => {
   global.alert(
