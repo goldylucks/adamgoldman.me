@@ -1,9 +1,15 @@
+// @flow
+
 import React from 'react';
 import Link from '../Link';
 
 import { cloudImg } from '../../utils';
 
-const Ending = ({ nick, ...restProps }) => (
+type Props = {
+  nick: string,
+};
+
+const Ending = ({ nick, ...restProps }: Props) => (
   <section {...restProps}>
     <Link to="/">
       <img

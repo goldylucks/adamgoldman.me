@@ -78,4 +78,5 @@ export default {
   - It's sad that school has conditioned people to think labeling stuff is learning. After a 100 pages into this book, I got some new labels for stuff I already knew since I was 10, and I'm not a penny the wiser.
 
 Feel free to comment below on some of these and add your own.
-`}
+`,
+};

@@ -26,4 +26,4 @@ export type Props = {
   letsContinue: Object,
   back: Object,
   classes: Object,
-}
+};

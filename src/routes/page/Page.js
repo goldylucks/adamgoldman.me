@@ -1,7 +1,8 @@
-/* eslint-disable react/prop-types */
+// @flow
+
+/* eslint-disable react/no-danger */
 
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../../components/Layout';
 import Markdown from '../../components/Markdown';
@@ -10,7 +11,16 @@ import Ending from '../../components/Ending';
 import BreadCrumbs from '../../components/BreadCrumbs';
 import FbShareButton from '../../components/FbShareButton';
 
-const Page = ({ title, tags, body, html, nick, ps }) => (
+type Props = {
+  title: string,
+  tags: Array<string>,
+  body: string,
+  html: string,
+  nick: string,
+  ps?: string, // eslint-disable-line react/require-default-props
+};
+
+const Page = ({ title, tags, body, html, nick, ps }: Props) => (
   <Layout>
     <div className="main-layout post-page">
       <BreadCrumbs crumbs={[{ text: title }]} />
@@ -42,9 +52,5 @@ const Page = ({ title, tags, body, html, nick, ps }) => (
     </div>
   </Layout>
 );
-
-Page.propTypes = {
-  title: PropTypes.string.isRequired,
-};
 
 export default Page;

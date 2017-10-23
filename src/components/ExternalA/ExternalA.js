@@ -1,6 +1,12 @@
+// @flow
+
 import React from 'react';
 
-const ExternalA = props => (
+type Props = {
+  children?: any,
+};
+
+const ExternalA = (props: Props) => (
   <a {...props} target="_blank" rel="nofollow noreferrer noopener">
     {props.children}
   </a>

@@ -1,4 +1,5 @@
-export default [
+/* eslint-disable */
+  export default [
   {
     "title": "Feel Good Generator",
     "description": "Intensify good feelings on command. How much pleasure can you stand?",

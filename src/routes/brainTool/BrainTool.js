@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+// @flow
 
 import React from 'react';
 
@@ -8,6 +8,10 @@ import Ending from '../../components/Ending';
 import BreadCrumbs from '../../components/BreadCrumbs';
 import { scrollToElem } from '../../utils';
 import Step from './components/Step';
+
+type Props = {
+  tool: Object,
+};
 
 const feelTheSame = () => {
   global.alert(
@@ -32,6 +36,8 @@ class ToolPage extends React.Component {
     name: '',
     gender: '',
   };
+
+  props: Props;
 
   restart = () => {
     this.goToStep(0);

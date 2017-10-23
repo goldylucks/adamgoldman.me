@@ -1,7 +1,7 @@
-/* eslint-disable react/prop-types */
+// @flow
+/* eslint-disable react/no-danger */
 
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../../components/Layout';
 import Markdown from '../../components/Markdown';
@@ -10,7 +10,16 @@ import Ending from '../../components/Ending';
 import FbShareButton from '../../components/FbShareButton';
 import BreadCrumbs from '../../components/BreadCrumbs';
 
-const BlogPost = ({ title, tags, body, html, nick, ps }) => (
+type Props = {
+  title: string,
+  tags: Array<string>,
+  body: string,
+  html: string,
+  nick: string,
+  ps?: string, // eslint-disable-line react/require-default-props
+};
+
+const BlogPost = ({ title, tags, body, html, nick, ps }: Props) => (
   <Layout>
     <div className="main-layout post-page">
       <BreadCrumbs
@@ -44,9 +53,5 @@ const BlogPost = ({ title, tags, body, html, nick, ps }) => (
     </div>
   </Layout>
 );
-
-BlogPost.propTypes = {
-  title: PropTypes.string.isRequired,
-};
 
 export default BlogPost;

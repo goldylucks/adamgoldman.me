@@ -1,4 +1,5 @@
-export default [
+/* eslint-disable */
+  export default [
   {
     "title": "A Mind for Numbers - How to Excel at Math and Science Review & Summary",
     "tags": [

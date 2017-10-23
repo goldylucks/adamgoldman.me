@@ -19,7 +19,8 @@ const fileToWrite = fs.readdirSync(dirToReadPath).map(fileNameToObject);
 // // write file posts.js
 fs.writeFileSync(
   pathToWriteFile,
-  `export default ${JSON.stringify(fileToWrite, null, 2)}`,
+  `/* eslint-disable */
+  export default ${JSON.stringify(fileToWrite, null, 2)}`,
 );
 // write export default {array} to file
 // put file in src/routes/posts/postsData.js

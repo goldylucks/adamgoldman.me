@@ -28,7 +28,7 @@ const Brand = () => (
       </Link>
     </header>
     <div>
-      <FbPageBox />
+      <FbPageBox data-width="250" />
       <div className={s.fbShare}>
         <FbShareButton urlProp="/" />
       </div>

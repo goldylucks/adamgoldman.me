@@ -26,7 +26,11 @@ const SidebarSignupForm = () => (
         data-drip-attribute="sign-up-button"
         className={s.button}
       >
-        <img src={cloudImg('adamgoldman.me/send-icon')} alt="send" className={s.buttonIcon} />
+        <img
+          src={cloudImg('adamgoldman.me/send-icon')}
+          alt="send"
+          className={s.buttonIcon}
+        />
       </button>
     </form>
   </section>

@@ -1,6 +1,14 @@
+// @flow
+
+/* eslint-disable jsx-a11y/anchor-is-valid */
+
 import React from 'react';
 
-const Answers = ({ answers }) => (
+type Props = {
+  answers: Array<Object>,
+};
+
+const Answers = ({ answers }: Props) => (
   <div>
     {answers.map((a, idx) => {
       // if it's a component render as is
