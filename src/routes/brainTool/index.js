@@ -15,6 +15,8 @@ async function action({ params }) {
   if (!tool) return null; // go to next route (or render 404)
   return {
     title: tool.title,
+    description: tool.description,
+    path: `/tools/${params.tool}`,
     component: <BrainTool pathname={`/tools/${params.tool}`} tool={tool} />,
   };
 }

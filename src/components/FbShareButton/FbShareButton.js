@@ -61,20 +61,21 @@ class FbShareButton extends React.Component {
     delete restProps.urlProp;
 
     return (
-      <div
-        {...restProps}
-        style={{ height: 28, opacity, transition: '0.5s opacity' }}
-        ref={el => {
-          this.elem = el;
-        }}
-      >
+      <div {...restProps}>
         <div
-          className="fb-share-button"
-          data-href={this.urlToShare()}
-          data-layout="button_count"
-          data-size="large"
-          data-mobile-iframe="true"
-        />
+          style={{ height: 28, opacity, transition: '0.5s opacity' }}
+          ref={el => {
+            this.elem = el;
+          }}
+        >
+          <div
+            className="fb-share-button"
+            data-href={this.urlToShare()}
+            data-layout="button_count"
+            data-size="large"
+            data-mobile-iframe="true"
+          />
+        </div>
       </div>
     );
   }

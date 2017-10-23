@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import serialize from 'serialize-javascript';
 import config from '../config';
 import { cloudImg } from '../utils';
-import { FB_APP_ID, MESSENGER_LINK } from '../constants';
+import { FB_APP_ID, MESSENGER_LINK, DOMAIN } from '../constants';
 
 /* eslint-disable react/no-danger */
 
@@ -28,7 +28,8 @@ class Html extends React.Component {
   };
 
   render() {
-    const { title, description, styles, scripts, app, children } = this.props;
+    const { path, title, description, styles, scripts, app, children } = this.props;
+    console.log('this.props', this.props)
     return (
       <html className="no-js" lang="en">
         <head>
@@ -42,18 +43,18 @@ class Html extends React.Component {
           <meta name="copyright" content="Adam Goldman" />
           <meta name="language" content="EN" />
           <meta name="robots" content="index,follow" />
-          <meta name="description" content="Relax, it's just life ..." />
           <meta
             name="subject"
             content="Adam Goldman's adventures and brain explorations"
           />
-
+          <meta name="url" content={DOMAIN + path} />
+          <meta property="og:url" content={DOMAIN + path} />
           <meta
             property="og:image"
             content={`${cloudImg('adamgoldman.me/profile-smiling')}.jpg`}
           />
-          <meta property="og:title" content="Adam Goldman" />
-          <meta property="og:description" content="Relax, It's just life ..." />
+          <meta property="og:title" content={title} />
+          <meta property="og:description" content={description} />
           <meta property="og:site_name" content="Adam Goldman" />
           <meta property="og:type" content="website" />
           <meta property="fb:app_id" content={FB_APP_ID} />

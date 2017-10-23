@@ -15,7 +15,7 @@ const Home = () => (
       <Markdown
         className="post-text"
         source="
-Until I sort out my homepage, try one of the [brain hacking tools](/tools/) below, read some [reviews](/reviews), be my [friend](FB_PROFILE) and [lets talk!](/lets-talk/)
+Until I sort out my homepage, try one of the [brain hacking tools](/tools/), read some [reviews](/reviews), be my [friend](FB_PROFILE) and [lets talk!](/lets-talk/)
 "
       />
       <FbPageBox style={{ display: 'block', textAlign: 'center' }} />

@@ -146,6 +146,7 @@ app.get('*', async (req, res, next) => {
       apiUrl: config.api.clientUrl,
     };
 
+    // pass to HTML initial meta tags to render!
     const html = ReactDOM.renderToStaticMarkup(<Html {...data} />);
     res.status(route.status || 200);
     res.send(`<!doctype html>${html}`);

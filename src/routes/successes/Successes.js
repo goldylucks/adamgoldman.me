@@ -5,11 +5,20 @@ import React from 'react';
 import Link from '../../components/Link';
 import Ending from '../../components/Ending';
 import Markdown from '../../components/Markdown';
+import BreadCrumbs from '../../components/BreadCrumbs';
+import FbShareButton from '../../components/FbShareButton';
 import Tags from '../../components/Tags';
 import posts from '../../routes/blog/postsData';
 
 const Successes = () => (
   <article className="main-layout">
+    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <BreadCrumbs
+        crumbs={[{ text: 'Successes' }]}
+        style={{ marginBottom: 10 }}
+      />
+      <FbShareButton />
+    </div>
     <header className="main-title-margin">
       <h1 className="main-title">Successful Seesions</h1>
       <h2>Small sample of the results people are getting</h2>

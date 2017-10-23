@@ -5,11 +5,18 @@ import React from 'react';
 import Link from '../../components/Link';
 import Ending from '../../components/Ending';
 import BreadCrumbs from '../../components/BreadCrumbs';
+import FbShareButton from '../../components/FbShareButton';
 import tools from './brainToolsData';
 
 const ToolsListPage = () => (
   <article className="main-layout">
-    <BreadCrumbs crumbs={[{ text: 'Brain Hacking Tools' }]} />
+    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <BreadCrumbs
+        crumbs={[{ text: 'Brain Hacking Tools' }]}
+        style={{ marginBottom: 10 }}
+      />
+      <FbShareButton />
+    </div>
     <header className="main-title-margin">
       <h1 className="main-title">Brain Hacking Automation Tools</h1>
     </header>
@@ -21,11 +28,15 @@ const ToolsListPage = () => (
           </h1>
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <p>{t.description}</p>
+            <FbShareButton urlProp={`/tools/${t.url}/`} />
           </div>
+          <hr />
         </article>
       ))}
     </div>
-    <hr />
+    <div style={{ marginBottom: 20 }}>
+      <FbShareButton />
+    </div>
     <Ending nick="automated brain hacking" />
   </article>
 );

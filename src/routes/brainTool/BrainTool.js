@@ -6,6 +6,7 @@ import Layout from '../../components/Layout';
 import Markdown from '../../components/Markdown';
 import Ending from '../../components/Ending';
 import BreadCrumbs from '../../components/BreadCrumbs';
+import FbShareButton from '../../components/FbShareButton';
 import { scrollToElem } from '../../utils';
 import Step from './components/Step';
 
@@ -47,7 +48,7 @@ class ToolPage extends React.Component {
   next = () => this.goToStep(this.state.currentStep + 1);
 
   goToStep = step => {
-    scrollToElem(document.body, 0, 300);
+    scrollToElem(document.querySelector('#main-layout'), 0, 300);
     this.setState({ currentStep: step });
   };
 
@@ -72,18 +73,20 @@ class ToolPage extends React.Component {
     return (
       <Layout>
         <div className="main-layout tool-page">
-          <BreadCrumbs
-            crumbs={[
-              { text: 'Brain Hacking Tools', path: '/tools' },
-              { text: tool.title },
-            ]}
-          />
-          <h1 className="main-title">{tool.title}</h1>
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-            <h3 style={{ marginBottom: 60 }}>
-              Step {currentStep}/{tool.stepCount}
-            </h3>
+            <BreadCrumbs
+              crumbs={[
+                { text: 'Brain Hacking Tools', path: '/tools' },
+                { text: tool.title },
+              ]}
+              style={{ marginBottom: 10 }}
+            />
+            <FbShareButton />
           </div>
+          <h1 className="main-title">{tool.title}</h1>
+          <h3 style={{ marginBottom: 60 }}>
+            Step {currentStep}/{tool.stepCount}
+          </h3>
           <tool.default
             {...this.props}
             onDontUnderstandStep={dontUnderstandStep}
@@ -115,6 +118,7 @@ class ToolPage extends React.Component {
             myManLady={gender === 'male' ? 'my man' : "m'lady"}
           />
           <hr />
+          <FbShareButton style={{ marginBottom: 10 }} />
           <Markdown source="
   You can do this,  
   and more,  

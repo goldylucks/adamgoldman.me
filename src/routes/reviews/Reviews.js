@@ -5,10 +5,19 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 
 import s from './Reviews.css';
 import FbPageBox from '../../components/FbPageBox';
+import FbShareButton from '../../components/FbShareButton';
+import BreadCrumbs from '../../components/BreadCrumbs';
 import Markdown from '../../components/Markdown';
 
 const ReviewPage = () => (
   <div className="main-layout">
+    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <BreadCrumbs
+        crumbs={[{ text: 'Reviews' }]}
+        style={{ marginBottom: 10 }}
+      />
+      <FbShareButton />
+    </div>
     <h1 className="main-title">Students Share ...</h1>
     <Markdown
       className="page-text"

@@ -88,13 +88,6 @@ async function onLocationChange(location, action) {
       container,
       () => {
         document.title = route.title;
-        updateMeta('description', 'foo' || route.description);
-        // Update necessary tags in <head> at runtime here, ie:
-        // updateMeta('keywords', route.keywords);
-        updateMeta('og:url', route.canonicalUrl);
-        updateCustomMeta('url', route.canonicalUrl);
-        // updateLink('canonical', route.canonicalUrl);
-        // etc.
         if (isInitialRender) {
           const elem = document.getElementById('css');
           if (elem) elem.parentNode.removeChild(elem);

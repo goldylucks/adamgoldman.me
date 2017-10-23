@@ -23,7 +23,10 @@ type Props = {
 const Page = ({ title, tags, body, html, nick, ps }: Props) => (
   <Layout>
     <div className="main-layout post-page">
-      <BreadCrumbs crumbs={[{ text: title }]} />
+      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <BreadCrumbs crumbs={[{ text: title }]} style={{ marginBottom: 10 }} />
+        <FbShareButton />
+      </div>
       <h1 className="main-title">{title}</h1>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
         <p className="post-tags">{tags.join(', ')}</p>

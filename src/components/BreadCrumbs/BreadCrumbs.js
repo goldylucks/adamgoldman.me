@@ -8,8 +8,8 @@ type Props = {
   crumbs: Array<Object>,
 };
 
-const BreadCrumbs = ({ crumbs }: Props) => (
-  <div>
+const BreadCrumbs = ({ crumbs, ...restProps }: Props) => (
+  <div {...restProps}>
     <Link to="/">Home</Link>
     {crumbs.map(
       (c, idx) =>

@@ -16,7 +16,7 @@ class Layout extends React.Component {
   render() {
     return (
       <div className={s.appWrapper}>
-        <div className={`${s.mainContent} main-content`}>
+        <div className={`${s.mainContent} main-content`} id="main-layout">
           {this.props.children}
           <Footer />
         </div>

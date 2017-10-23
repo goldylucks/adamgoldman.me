@@ -6,6 +6,7 @@ function action() {
   return {
     chunks: ['successes'],
     title: 'Reviews',
+    path: '/review',
     component: (
       <Layout>
         <Reviews />

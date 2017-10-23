@@ -14,6 +14,7 @@ async function action({ params }) {
   if (!page) return null; // go to next route (or render 404)
   return {
     title: page.title,
+    path: `/${params.page}`,
     component: <Page pathname={`/${params.page}`} {...page} />,
   };
 }
