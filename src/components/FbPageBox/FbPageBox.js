@@ -25,7 +25,6 @@ class FbPageBox extends React.Component {
       this.timeoutFB = setTimeout(this.reloadFB, 500);
       return;
     }
-    console.log('BOX: Parsing!')
     global.FB.XFBML.parse(this.elem);
   };
 

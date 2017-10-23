@@ -45,7 +45,6 @@ class FbShareButton extends React.Component {
       return;
     }
     this.setState({ href: window.location.href }, () => {
-      console.log('BUTTON: Parsing!')
       global.FB.XFBML.parse(this.shareButton);
     });
   };
