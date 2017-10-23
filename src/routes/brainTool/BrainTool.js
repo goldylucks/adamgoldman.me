@@ -30,13 +30,6 @@ class ToolPage extends React.Component {
     age: '',
     name: '',
     gender: '',
-    // tool: {
-    //   title: '',
-    //   description: '',
-    //   default: {},
-    //   stepCount: 0,
-    //   nick: '',
-    // },
   };
 
   restart = () => {

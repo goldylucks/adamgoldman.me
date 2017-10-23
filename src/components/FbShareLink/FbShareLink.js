@@ -2,17 +2,40 @@
 
 import React from 'react';
 
-import { DOMAIN } from '../../constants';
+type Props = {
+  children: any,
+};
 
-// eslint-disable-next-line react/require-default-props
-const FbShareLink = ({ children }: { children?: any }) => (
-  <a
-    rel="nofollow noreferrer noopener"
-    target="_blank"
-    href={`https://www.facebook.com/sharer/sharer.php?u=${DOMAIN}`}
-  >
-    {children}
-  </a>
-);
+class FbShareLink extends React.Component {
+  state = {
+    href: '',
+  };
+
+  componentDidMount() {
+    this.setHref();
+  }
+
+  setHref = () => {
+    if (typeof window === 'undefined') {
+      setTimeout(this.setHref, 500);
+      return;
+    }
+    this.setState({ href: window.location.href });
+  };
+
+  props: Props;
+
+  render() {
+    return (
+      <a
+        rel="nofollow noreferrer noopener"
+        target="_blank"
+        href={`https://www.facebook.com/sharer/sharer.php?u=${this.state.href}`}
+      >
+        {this.props.children}
+      </a>
+    );
+  }
+}
 
 export default FbShareLink;
