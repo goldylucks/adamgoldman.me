@@ -15,6 +15,14 @@ const routes = {
       load: () => import(/* webpackChunkName: 'blog' */ './blog'),
     },
     {
+      path: '/successes',
+      load: () => import(/* webpackChunkName: 'successes' */ './successes'),
+    },
+    {
+      path: '/reviews',
+      load: () => import(/* webpackChunkName: 'reviews' */ './reviews'),
+    },
+    {
       path: '/blog/:post',
       load: () => import(/* webpackChunkName: 'blogPost' */ './blogPost'),
     },
@@ -25,6 +33,10 @@ const routes = {
     {
       path: '/tools/:tool',
       load: () => import(/* webpackChunkName: 'brainTool' */ './brainTool'),
+    },
+    {
+      path: '/:page',
+      load: () => import(/* webpackChunkName: 'page' */ './page'),
     },
     // Wildcard routes, e.g. { path: '(.*)', ... } (must go last)
     {
