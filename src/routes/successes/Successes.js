@@ -33,10 +33,11 @@ If you still have pain to resolve or a desire to fulfill, let me know and we'll 
           <h1>
             <Link to={`/blog/${p.url}/`}>{p.title}</Link>
           </h1>
-          <Tags tags={p.tags} />
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-            <p>{p.description}</p>
+            <Tags tags={p.tags} />
+            <FbShareButton urlProp={`/blog/${p.url}/`} />
           </div>
+          <p>{p.description}</p>
           <hr />
         </article>
       ))}
