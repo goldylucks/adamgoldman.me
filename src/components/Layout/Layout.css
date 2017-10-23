@@ -1,13 +1,13 @@
 .appWrapper {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
 }
 
 .mainContent {
+  overflow-y: scroll;
   width: 75%;
   background: #1a7ced;
   position: relative;
-  padding-bottom: 60px;
 }
 
 .sidebar {

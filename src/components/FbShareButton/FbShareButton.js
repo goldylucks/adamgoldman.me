@@ -2,7 +2,6 @@
 
 import React from 'react';
 
-import ExternalA from '../ExternalA';
 import { DOMAIN } from '../../constants';
 
 type Props = {
@@ -12,22 +11,25 @@ type Props = {
 class FbShareButton extends React.Component {
   state = {
     href: '',
+    rendered: false,
   };
 
   componentDidMount() {
     this.reloadFB();
   }
 
-  shouldComponentUpdate() {
-    return false;
+  shouldComponentUpdate(nextProps, nextState) {
+    return nextState.rendered !== this.state.rendered;
   }
 
   componentWillUnmount() {
-    clearTimeout(this.timeoutFB);
+    clearTimeout(this.timeoutFb);
+    clearTimeout(this.timeoutFbRender);
   }
 
-  shareButton = null;
-  timeoutFB = null;
+  elem = null;
+  timeoutFb = null;
+  timeoutFbRender = null;
 
   props: Props;
 
@@ -41,24 +43,29 @@ class FbShareButton extends React.Component {
 
   reloadFB = () => {
     if (!global.FB) {
-      this.timeoutFB = setTimeout(this.reloadFB, 500);
+      this.timeoutFb = setTimeout(this.reloadFB, 500);
       return;
     }
     this.setState({ href: window.location.href }, () => {
-      global.FB.XFBML.parse(this.shareButton);
+      global.FB.XFBML.parse(this.elem, () => {
+        this.timeoutFbRender = setTimeout(() => {
+          this.setState({ rendered: true });
+        }, 1000);
+      });
     });
   };
 
   render() {
     const { ...restProps } = this.props;
-
+    const opacity = this.state.rendered ? 1 : 0;
     delete restProps.urlProp;
 
     return (
       <div
         {...restProps}
+        style={{ height: 28, opacity, transition: '0.5s opacity' }}
         ref={el => {
-          this.shareButton = el;
+          this.elem = el;
         }}
       >
         <div
@@ -67,15 +74,7 @@ class FbShareButton extends React.Component {
           data-layout="button_count"
           data-size="large"
           data-mobile-iframe="true"
-        >
-          <ExternalA
-            className="fb-xfbml-parse-ignore"
-            target="_blank"
-            href={`https://www.facebook.com/sharer/sharer.php?u=${this.encodedUrlToShare()}&amp;src=sdkpreparse`}
-          >
-            Share
-          </ExternalA>
-        </div>
+        />
       </div>
     );
   }
