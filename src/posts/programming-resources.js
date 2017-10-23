@@ -54,7 +54,7 @@ It’s by NO MEANS an exhaustive all-u-will-ever-need list. Feel free to [messag
   * Read: [PWA with react](https://medium.com/@addyosmani/progressive-web-apps-with-react-js-part-i-introduction-50679aef2b12)
   * AWESOME Tutorial - [Thinking in react](https://facebook.github.io/react/docs/thinking-in-react.html) (by … facebook!)
 * **[Redux](http://redux.js.org/)**
-  * [Vids](https://egghead.io/courses/getting-started-with-redux) by <span data-title="The man who started it all. Brilliant coder AND writer">[Dan Abrahamov](https://medium.com/@dan_abramov)</span>
+  * [Vids](https://egghead.io/courses/getting-started-with-redux) by [Dan Abrahamov](https://medium.com/@dan_abramov)
   * [Smart/Dumb components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0), kinda
 * **ES6/7**
   * [Babel Playground](https://babeljs.io/repl/)

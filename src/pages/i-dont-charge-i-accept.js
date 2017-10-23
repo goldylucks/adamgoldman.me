@@ -12,7 +12,7 @@ So you want to give back? How awesome are you!
 
 **All my content is**, and always will be, **100% free and open sourced**. FOREVER.
 
-**I still need to eat tho**, so for my time I do accept something in return, but I don't charge you for it <span data-title="I used to charge 40$ for 15 minutes of my time">anymore</span>.
+**I still need to eat tho**, so for my time I do accept something in return, but I don't charge you for it [anymore](TITLE_I_used_to_charge_40$_for_15_minutes_of_my_time).
 
 ![Boromir Charges money](${cloudImg('adamgoldman.me/boromir-charge.jpg')})
 
@@ -24,7 +24,7 @@ Once you get immense value from our time together, **u decide** if and **how muc
 
 First of all, I ain't afraid of anything ;)
 
-So far no one has "taken advantage". **Some give less, some give more**, some really can't spare a dime so they work more passionately to refer me future <s>victims</s> clients.
+So far no one has "taken advantage". **Some give less, some give more**, some really can't spare a dime so they work more passionately to refer me future clients.
 
 ![Yoda give more](${cloudImg('adamgoldman.me/yoda-give.jpg')})
 

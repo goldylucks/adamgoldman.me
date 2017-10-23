@@ -68,7 +68,7 @@ Even tho I can help you [shorten this tremendously](/lets-talk/), **I** really h
  - Pull back shoulders when walking for a minute a day  
 
 8. Awesome.
-Now break each one of those to the <span data-title="No such thing as too small, too easy, or too dumb here">tiniest</span> ACTIONABLE steps you could think of.
+Now break each one of those to the [tiniest](TITLE_No_such_thing_as_too_small,_too_easy,_or_too_dumb_here) ACTIONABLE steps you could think of.
 
  **Apologizing less than 10 times a day**
 
@@ -76,7 +76,7 @@ Now break each one of those to the <span data-title="No such thing as too small,
 
   - Log daily apologizes (Include context, data & time, i.e. *"10/06 Said sorry to stranger at Starbucks when HE dropped his fork"*)
 
-  - After logging for a week, identify recurring <span data-title="Before speaking at family dinner, expressing different opinion, etc">themes</span>
+  - After logging for a week, identify recurring [themes](TITLE_Before_speaking_at_family_dinner,_expressing_different_opinion,_etc)
 
   - Set reminders for those contexts and have end goal in mind
 
@@ -86,7 +86,7 @@ Now break each one of those to the <span data-title="No such thing as too small,
 
   **Strike a conversation with 3 strangers a day, and hold one for a minute or more**
 
- - Set reminders for times where people <span data-title="walking to the office, launch break, walking the dog etc">roam freely</span>
+ - Set reminders for times where people [roam freely](TITLE_walking_to_the_office,_launch_break,_walking_the_dog_etc)
 
  - Move pupils to the direction of 10 people at least, for 4 days
 

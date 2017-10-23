@@ -16,7 +16,7 @@ Before you read the topics **I sense you* like me just **LOVE presentations**, n
     'adamgoldman.me/presentation-is-coming.jpg',
   )})
 
-There are very few people I can actually <span data-title="as in, focus, and not doing anything else">listen</span> to without plotting my exit right off the bat, as their move to their second slide.
+There are very few people I can actually [listen](TITLE_as_in,_focus,_and_not_doing_anything_else) to without plotting my exit right off the bat, as their move to their second slide.
 
 **Puking information just ain't gonna cut it for me**, even if it's wrapped in a fancy presentation with well aligned slides and bullet points.
 
@@ -44,7 +44,7 @@ It's my job to digest the information for you and package it in a way your uncon
 
 ![unconscious-learning](${cloudImg('adamgoldman.me/unconscious-learning.png')})
 
-Soup operas rake in the Benjamins NOT because they have <span data-title="and definitely not for the acting">killer plots or scripts</span>.
+Soup operas rake in the Benjamins NOT because they have [killer plots or scripts](TITLE_and_definitely_not_for_the_acting).
 
 The same reason the [princess survived a thousand nights](http://amzn.to/2txLHZw), it's the degree to which you are able to weave stories and emotions that let's you keep your ass and have theirs eagerly presenting attention for the next piece.
 
