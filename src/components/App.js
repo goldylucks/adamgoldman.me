@@ -10,6 +10,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { FB_APP_ID } from '../constants';
+
 const ContextType = {
   // Enables critical path CSS rendering
   // https://github.com/kriasoft/isomorphic-style-loader
@@ -40,6 +42,34 @@ const ContextType = {
  *     container,
  *   );
  */
+
+/* eslint-disable */
+const initDrip = () => {
+  var _dcq = _dcq || [];
+  var _dcs = _dcs || {};
+  _dcs.account = '3809371';
+  const dc = document.createElement('script');
+  dc.type = 'text/javascript';
+  dc.async = true;
+  dc.src = '//tag.getdrip.com/3809371.js';
+  const s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(dc, s);
+};
+
+const initFbSdk = () => {
+  (function(d, s, id) {
+    let js,
+      fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src =
+      `//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=${FB_APP_ID}`;
+    fjs.parentNode.insertBefore(js, fjs);
+  })(document, 'script', 'facebook-jssdk');
+};
+/* eslint-enable */
+
 class App extends React.PureComponent {
   static propTypes = {
     context: PropTypes.shape(ContextType).isRequired,
@@ -50,6 +80,11 @@ class App extends React.PureComponent {
 
   getChildContext() {
     return this.props.context;
+  }
+
+  componentDidMount() {
+    initDrip();
+    initFbSdk();
   }
 
   render() {

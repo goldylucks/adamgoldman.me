@@ -91,6 +91,7 @@ class Html extends React.Component {
           ))}
         </head>
         <body>
+          <div id="fb-root" />
           <div id="app" dangerouslySetInnerHTML={{ __html: children }} />
           <script
             dangerouslySetInnerHTML={{ __html: `window.App=${serialize(app)}` }}
