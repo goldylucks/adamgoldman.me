@@ -9,7 +9,7 @@ export default {
 
 <br />
 
-For most humans who go crazy for this brown nectar it's a guilty pleasure cuz like many (misconceptions](/blog/common-misconceptions/) that still float around, it's "common knowledge" that **coffee is bad right**?
+For most humans who go crazy for this brown nectar it's a guilty pleasure cuz like many [misconceptions](/blog/common-misconceptions/) that still float around, it's "common knowledge" that **coffee is bad right**?
 
 This is one of those cases where it feels so good to be wrong :)
 
