@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import serialize from 'serialize-javascript';
 import config from '../config';
 import { cloudImg } from '../utils';
-import { FB_APP_ID } from '../constants';
+import { FB_APP_ID, MESSENGER_LINK } from '../constants';
 
 /* eslint-disable react/no-danger */
 
@@ -113,6 +113,18 @@ class Html extends React.Component {
               defer
             />
           )}
+          <a
+            style={{ position: 'fixed', bottom: 20, left: 20 }}
+            href={MESSENGER_LINK}
+            target="_blank"
+            rel="nofollow noreferrer noopener"
+          >
+            <img
+              src="https://cdn.supple.com.au/wp-content/themes/supple/img/msg.png"
+              alt="Messenger Link"
+              style={{ width: 100 }}
+            />
+          </a>
         </body>
       </html>
     );
