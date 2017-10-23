@@ -10,7 +10,7 @@ import Ending from '../../components/Ending';
 import BreadCrumbs from '../../components/BreadCrumbs';
 import FbShareButton from '../../components/FbShareButton';
 
-const Page = ({ title, pathname, tags, body, html, nick, ps }) => (
+const Page = ({ title, tags, body, html, nick, ps }) => (
   <Layout>
     <div className="main-layout post-page">
       <BreadCrumbs crumbs={[{ text: title }]} />
@@ -18,7 +18,7 @@ const Page = ({ title, pathname, tags, body, html, nick, ps }) => (
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
         <p className="post-tags">{tags.join(', ')}</p>
       </div>
-      <Markdown pathname={pathname} className="post-text" source={body} />
+      <Markdown className="post-text" source={body} />
       {html && (
         // eslint-disable-next-line react/no-danger
         <div dangerouslySetInnerHTML={{ __html: html }} />

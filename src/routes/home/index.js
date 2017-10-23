@@ -5,7 +5,7 @@ import Layout from '../../components/Layout';
 function action() {
   return {
     chunks: ['home'],
-    title: 'React Starter Kit',
+    title: 'Adam Goldman',
     component: (
       <Layout>
         <Home />
