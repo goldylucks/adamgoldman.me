@@ -18,6 +18,10 @@ class FbShareButton extends React.Component {
     this.reloadFB();
   }
 
+  shouldComponentUpdate() {
+    return false;
+  }
+
   componentWillUnmount() {
     clearTimeout(this.timeoutFB);
   }
@@ -41,6 +45,7 @@ class FbShareButton extends React.Component {
       return;
     }
     this.setState({ href: window.location.href }, () => {
+      console.log('BUTTON: Parsing!')
       global.FB.XFBML.parse(this.shareButton);
     });
   };
@@ -51,11 +56,13 @@ class FbShareButton extends React.Component {
     delete restProps.urlProp;
 
     return (
-      <div {...restProps}>
+      <div
+        {...restProps}
+        ref={el => {
+          this.shareButton = el;
+        }}
+      >
         <div
-          ref={el => {
-            this.shareButton = el;
-          }}
           className="fb-share-button"
           data-href={this.urlToShare()}
           data-layout="button_count"

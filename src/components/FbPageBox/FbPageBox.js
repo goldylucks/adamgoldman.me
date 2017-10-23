@@ -9,10 +9,15 @@ class FbPageBox extends React.Component {
     this.reloadFB();
   }
 
+  shouldComponentUpdate() {
+    return false;
+  }
+
   componentWillUnmount() {
     clearTimeout(this.timeoutFB);
   }
 
+  elem = null;
   timeoutFB = null;
 
   reloadFB = () => {
@@ -20,27 +25,34 @@ class FbPageBox extends React.Component {
       this.timeoutFB = setTimeout(this.reloadFB, 500);
       return;
     }
-    global.FB.XFBML.parse();
+    console.log('BOX: Parsing!')
+    global.FB.XFBML.parse(this.elem);
   };
 
   render() {
     return (
       <div
-        className="fb-page"
-        data-href="https://www.facebook.com/adamgoldman.me"
-        data-tabs="messages"
-        data-height="250"
-        {...this.props}
-        data-small-header="true"
+        ref={el => {
+          this.elem = el;
+        }}
       >
-        <blockquote
-          cite="https://www.facebook.com/adamgoldman.me"
-          className="fb-xfbml-parse-ignore"
+        <div
+          {...this.props}
+          className="fb-page"
+          data-href="https://www.facebook.com/adamgoldman.me"
+          data-tabs="messages"
+          data-height="250"
+          data-small-header="true"
         >
-          <ExternalA href="https://www.facebook.com/adamgoldman.me">
-            Adam Goldman
-          </ExternalA>
-        </blockquote>
+          <blockquote
+            cite="https://www.facebook.com/adamgoldman.me"
+            className="fb-xfbml-parse-ignore"
+          >
+            <ExternalA href="https://www.facebook.com/adamgoldman.me">
+              Adam Goldman
+            </ExternalA>
+          </blockquote>
+        </div>
       </div>
     );
   }
