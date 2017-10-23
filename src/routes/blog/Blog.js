@@ -7,10 +7,12 @@ import Ending from '../../components/Ending';
 import Tags from '../../components/Tags';
 import FbPageBox from '../../components/FbPageBox';
 import FbShareButton from '../../components/FbShareButton';
+import BreadCrumbs from '../../components/BreadCrumbs';
 import posts from './postsData';
 
 const Blog = () => (
   <article className="main-layout">
+    <BreadCrumbs crumbs={[{ text: 'Blog' }]} />
     <header className="main-title-margin">
       <h1 className="main-title">My Humble Blog</h1>
       <h2>With my humble thoughts and diabolical schemes</h2>

@@ -8,10 +8,14 @@ import Markdown from '../../components/Markdown';
 import FbPageBox from '../../components/FbPageBox';
 import Ending from '../../components/Ending';
 import FbShareButton from '../../components/FbShareButton';
+import BreadCrumbs from '../../components/BreadCrumbs';
 
 const BlogPost = ({ title, pathname, tags, body, html, nick, ps }) => (
   <Layout>
     <div className="main-layout post-page">
+      <BreadCrumbs
+        crumbs={[{ text: 'Blog', path: '/blog' }, { text: title }]}
+      />
       <h1 className="main-title">{title}</h1>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
         <p className="post-tags">{tags.join(', ')}</p>

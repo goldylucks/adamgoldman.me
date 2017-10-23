@@ -4,10 +4,12 @@ import React from 'react';
 
 import Link from '../../components/Link';
 import Ending from '../../components/Ending';
+import BreadCrumbs from '../../components/BreadCrumbs';
 import tools from './brainToolsData';
 
 const ToolsListPage = () => (
   <article className="main-layout">
+    <BreadCrumbs crumbs={[{ text: 'Brain Hacking Tools' }]} />
     <header className="main-title-margin">
       <h1 className="main-title">Brain Hacking Automation Tools</h1>
     </header>

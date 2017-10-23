@@ -5,6 +5,7 @@ import React from 'react';
 import Layout from '../../components/Layout';
 import Markdown from '../../components/Markdown';
 import Ending from '../../components/Ending';
+import BreadCrumbs from '../../components/BreadCrumbs';
 import { scrollToElem } from '../../utils';
 import Step from './components/Step';
 
@@ -65,6 +66,12 @@ class ToolPage extends React.Component {
     return (
       <Layout>
         <div className="main-layout tool-page">
+          <BreadCrumbs
+            crumbs={[
+              { text: 'Brain Hacking Tools', path: '/tools' },
+              { text: tool.title },
+            ]}
+          />
           <h1 className="main-title">{tool.title}</h1>
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <h3 style={{ marginBottom: 60 }}>
