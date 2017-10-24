@@ -6,6 +6,7 @@ import Link from '../../components/Link';
 import Ending from '../../components/Ending';
 import BreadCrumbs from '../../components/BreadCrumbs';
 import FbShareButton from '../../components/FbShareButton';
+import { filterDrafts } from '../../utils';
 import tools from './brainToolsData';
 
 const ToolsListPage = () => (
@@ -21,7 +22,7 @@ const ToolsListPage = () => (
       <h1 className="main-title">Brain Hacking Automation Tools</h1>
     </header>
     <div>
-      {tools.map(t => (
+      {tools.filter(filterDrafts).map(t => (
         <article key={t.url}>
           <h1>
             <Link to={`/tools/${t.url}/`}>{t.title}</Link>

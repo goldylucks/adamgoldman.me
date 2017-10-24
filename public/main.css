@@ -324,3 +324,9 @@ span[data-title]:hover:after {
 .no-margin-bottom {
   margin-bottom: 0 !important;
 }
+
+.flash-button {
+  width: 300;
+  font-size: 40;
+  padding: 30;
+}

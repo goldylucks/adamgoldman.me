@@ -3,9 +3,6 @@
 /* eslint react/jsx-curly-brace-presence: 0 */
 
 import React from 'react';
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
-
-import s from './internal-dialog-scrambeler.css';
 
 import Link from '../components/Link';
 import FbShareLink from '../components/FbShareLink';
@@ -179,7 +176,7 @@ say this phrase exactly as you have done to date and notice how you feel in resp
   `}
               />
               <button
-                className={`button ${s.flashButton}`}
+                className="button flash-button"
                 style={
                   !flashingWord && !doneFlashing
                     ? { display: 'block' }
@@ -247,7 +244,7 @@ Oddly enough, now I'm going to flash the phrase on the screen even slower, and f
   `}
               />
               <button
-                className={`button ${s.flashButton}`}
+                className="button flash-button"
                 style={
                   !flashingWord && !doneFlashingSlower
                     ? { display: 'block' }
@@ -361,4 +358,4 @@ Source: I've adapted this [tool](/tools/) from Nick Kemp's Internal Tempo Shift 
   }
 }
 
-export default withStyles(s)(InternalDialogScrambler);
+export default InternalDialogScrambler;

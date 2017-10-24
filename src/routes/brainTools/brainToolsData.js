@@ -18,6 +18,7 @@
   {
     "title": "Loved Ones Amplifier (Generalizer)",
     "description": "Leverage what you've learned in the loved one amplifier",
+    "IS_DRAFT": true,
     "url": "loved-one-amplifier-generalizer"
   },
   {
