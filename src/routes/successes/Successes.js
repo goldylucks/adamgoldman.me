@@ -9,6 +9,7 @@ import BreadCrumbs from '../../components/BreadCrumbs';
 import FbShareButton from '../../components/FbShareButton';
 import Tags from '../../components/Tags';
 import posts from '../../routes/blog/postsData';
+import { filterDrafts } from '../../utils';
 
 const Successes = () => (
   <article className="main-layout">
@@ -28,19 +29,22 @@ If you still have pain to resolve or a desire to fulfill, let me know and we'll 
 " />
     <hr />
     <div>
-      {posts.filter(p => p.tags.includes('Successes')).map(p => (
-        <article key={p.url}>
-          <h1>
-            <Link to={`/blog/${p.url}/`}>{p.title}</Link>
-          </h1>
-          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-            <Tags tags={p.tags} />
-            <FbShareButton urlProp={`/blog/${p.url}/`} />
-          </div>
-          <p>{p.description}</p>
-          <hr />
-        </article>
-      ))}
+      {posts
+        .filter(filterDrafts)
+        .filter(p => p.tags.includes('Successes'))
+        .map(p => (
+          <article key={p.url}>
+            <h1>
+              <Link to={`/blog/${p.url}/`}>{p.title}</Link>
+            </h1>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+              <Tags tags={p.tags} />
+              <FbShareButton urlProp={`/blog/${p.url}/`} />
+            </div>
+            <p>{p.description}</p>
+            <hr />
+          </article>
+        ))}
     </div>
     <Ending nick="mutual success" />
   </article>

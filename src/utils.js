@@ -17,3 +17,5 @@ export const scrollToElem = (element, to, duration) => {
     scrollToElem(element, to, duration - 10);
   }, 10);
 };
+
+export const filterDrafts = post => !post.IS_DRAFT;

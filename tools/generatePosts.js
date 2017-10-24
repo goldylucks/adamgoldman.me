@@ -27,9 +27,6 @@ fs.writeFileSync(
 
 function fileNameToObject(fileName) {
   // eslint-disable-next-line global-require,import/no-dynamic-require
-  const { title, description, tags } = require(path.resolve(
-    dirToReadPath,
-    fileName,
-  )).default;
-  return { title, description, tags, url: fileName.split('.js')[0] };
+  const post = require(path.resolve(dirToReadPath, fileName)).default;
+  return { ...post, url: fileName.split('.js')[0] };
 }

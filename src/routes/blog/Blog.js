@@ -9,6 +9,7 @@ import FbPageBox from '../../components/FbPageBox';
 import FbShareButton from '../../components/FbShareButton';
 import BreadCrumbs from '../../components/BreadCrumbs';
 import posts from './postsData';
+import { filterDrafts } from '../../utils' 
 
 const Blog = () => (
   <article className="main-layout">
@@ -18,7 +19,7 @@ const Blog = () => (
       <h2>With my humble thoughts and diabolical schemes</h2>
     </header>
     <div>
-      {posts.map(p => (
+      {posts.filter(filterDrafts).map(p => (
         <article key={p.url}>
           <h1>
             <Link to={`/blog/${p.url}/`}>{p.title}</Link>

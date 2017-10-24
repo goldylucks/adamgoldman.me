@@ -327,6 +327,15 @@
     "url": "sort-out-your-past"
   },
   {
+    "title": "Streamlining communication",
+    "description": "Some tricks for saying more (impact) with less",
+    "tags": [
+      "Adam Goldman"
+    ],
+    "IS_DRAFT": true,
+    "url": "streamlining-communication"
+  },
+  {
     "title": "Tea over meditation",
     "tags": [
       "Optimize Performance",
