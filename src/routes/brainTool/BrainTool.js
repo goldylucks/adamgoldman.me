@@ -7,6 +7,7 @@ import Markdown from '../../components/Markdown';
 import Ending from '../../components/Ending';
 import BreadCrumbs from '../../components/BreadCrumbs';
 import FbShareButton from '../../components/FbShareButton';
+import FbComments from '../../components/FbComments';
 import { scrollToElem } from '../../utils';
 import Step from './components/Step';
 
@@ -125,6 +126,7 @@ class ToolPage extends React.Component {
   I've got your back.
   " />
           <Ending nick={tool.nick} />
+          <FbComments style={{ marginTop: 10 }} />
         </div>
       </Layout>
     );

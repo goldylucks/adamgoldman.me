@@ -9,6 +9,7 @@ import FbPageBox from '../../components/FbPageBox';
 import Ending from '../../components/Ending';
 import FbShareButton from '../../components/FbShareButton';
 import BreadCrumbs from '../../components/BreadCrumbs';
+import FbComments from '../../components/FbComments';
 
 type Props = {
   title: string,
@@ -50,6 +51,7 @@ const BlogPost = ({ title, tags, body, html, nick, ps }: Props) => (
           source={ps}
         />
       )}
+      <FbComments style={{ marginTop: 10 }} />
     </div>
   </Layout>
 );

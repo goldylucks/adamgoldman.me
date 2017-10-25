@@ -7,6 +7,7 @@ import Ending from '../../components/Ending';
 import Markdown from '../../components/Markdown';
 import BreadCrumbs from '../../components/BreadCrumbs';
 import FbShareButton from '../../components/FbShareButton';
+import FbComments from '../../components/FbComments';
 import Tags from '../../components/Tags';
 import posts from '../../routes/blog/postsData';
 import { filterDrafts } from '../../utils';
@@ -47,6 +48,7 @@ If you still have pain to resolve or a desire to fulfill, let me know and we'll 
         ))}
     </div>
     <Ending nick="mutual success" />
+    <FbComments style={{ marginTop: 10 }} />
   </article>
 );
 

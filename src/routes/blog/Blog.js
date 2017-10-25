@@ -8,6 +8,7 @@ import Tags from '../../components/Tags';
 import FbPageBox from '../../components/FbPageBox';
 import FbShareButton from '../../components/FbShareButton';
 import BreadCrumbs from '../../components/BreadCrumbs';
+import FbComments from '../../components/FbComments';
 import posts from './postsData';
 import { filterDrafts } from '../../utils';
 
@@ -41,6 +42,7 @@ const Blog = () => (
     </div>
     <FbPageBox style={{ display: 'block', textAlign: 'center' }} />
     <Ending nick="non blogger" />
+    <FbComments style={{ marginTop: 10 }} />
   </article>
 );
 

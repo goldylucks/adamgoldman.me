@@ -7,12 +7,13 @@ import Markdown from '../../components/Markdown';
 import FbPageBox from '../../components/FbPageBox';
 import Ending from '../../components/Ending';
 import FbShareButton from '../../components/FbShareButton';
+import FbComments from '../../components/FbComments';
 
 const Home = () => (
   <Layout>
     <div className="main-layout post-page">
       <FbShareButton />
-      <h1 className="main-title">Welcome to my home!</h1>
+      <h1 className="main-title">Welcome to my (virtual) home!</h1>
       <Markdown
         className="post-text"
         source="
@@ -25,6 +26,7 @@ Until I sort out my homepage, try one of the [brain hacking tools](/tools/), rea
         <FbShareButton />
       </div>
       <Ending nick="me case tu casa" />
+      <FbComments style={{ marginTop: 10 }} />
     </div>
   </Layout>
 );
