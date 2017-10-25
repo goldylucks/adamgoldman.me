@@ -25,8 +25,8 @@ addons:
 script:
   - yarn lint
 
-before_deploy: yarn add babel-cli
-  
+before_deploy: yarn global add babel-cli
+
 deploy:
   provider: script
   script: yarn deploy
