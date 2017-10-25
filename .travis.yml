@@ -13,3 +13,9 @@ addons:
 script:
   - yarn lint
   - yarn test
+
+deploy:
+  provider: script
+  script: deploy
+  on:
+    branch: master
