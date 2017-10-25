@@ -239,12 +239,14 @@ ul {
 }
 
 /* data-title tooltip */
-span[data-title] {
+span[data-title],
+a[data-title] {
   border-bottom: 1px dotted red;
   position: relative;
 }
 
-span[data-title]:hover:after {
+span[data-title]:hover:after,
+a[data-title]:hover:after {
   content: attr(data-title);
   padding: 4px 8px;
   color: #fff;
@@ -413,8 +415,9 @@ span[data-title]:hover:after {
 
 .messenger-fixed {
   transition: 0.5s opacity;
+  opacity: 0.5;
 }
 
 .messenger-fixed:hover {
-  opacity: 0.8;
+  opacity: 1;
 }
