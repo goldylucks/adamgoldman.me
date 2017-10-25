@@ -75,5 +75,9 @@ fs.writeFileSync(
 function fileNameToObject(fileName) {
   // eslint-disable-next-line global-require,import/no-dynamic-require
   const post = require(path.resolve(dirToReadPath, fileName)).default;
+  delete post.body
+  delete post.html
+  delete post.nick
+  delete post.ps
   return { ...post, url: fileName.split('.js')[0] };
 }
