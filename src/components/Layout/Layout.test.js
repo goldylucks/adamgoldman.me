@@ -20,9 +20,9 @@ describe('Layout', () => {
     const wrapper = renderer
       .create(
         <App context={{ insertCss: () => {}, fetch: () => {} }}>
-          <div>
+          <Layout>
             <div className="child" />
-          </div>
+          </Layout>
         </App>,
       )
       .toJSON();

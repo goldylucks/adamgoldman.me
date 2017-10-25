@@ -3,7 +3,6 @@
 
 import React from 'react';
 
-import Layout from '../../components/Layout';
 import Markdown from '../../components/Markdown';
 import FbPageBox from '../../components/FbPageBox';
 import Ending from '../../components/Ending';

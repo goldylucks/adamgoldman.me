@@ -1,5 +1,4 @@
 import React from 'react';
-import Layout from '../../components/Layout';
 import BrainTools from './BrainTools';
 
 const title = 'Brain Hacking Automation Tools';

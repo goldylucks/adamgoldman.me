@@ -1,6 +1,5 @@
 import React from 'react';
 import Successes from './Successes';
-import Layout from '../../components/Layout';
 
 function action() {
   return {

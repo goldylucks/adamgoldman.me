@@ -50,7 +50,7 @@ const onSuggestionSelected = (event, { suggestion }) => {
 const renderSectionTitle = section => <strong>{section.title}</strong>;
 
 // Use your imagination to render suggestions.
-const renderSuggestion = ({ title }) => <div>{title}</div>;
+const renderSuggestion = suggestion => <div>{suggestion.title}</div>;
 
 const getSectionSuggestions = section => section.suggestions;
 
