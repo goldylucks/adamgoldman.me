@@ -6,6 +6,7 @@ import s from './Layout.css';
 import Footer from '../Footer';
 import Menu from '../Menu';
 import Brand from '../Brand';
+import GlobalSearch from '../GlobalSearch';
 import SidebarSignupForm from '../SidebarSignupForm';
 
 class Layout extends React.Component {
@@ -17,6 +18,7 @@ class Layout extends React.Component {
     return (
       <div className={s.appWrapper}>
         <div className={`${s.mainContent} main-content`} id="main-layout">
+          <GlobalSearch />
           {this.props.children}
           <Footer />
         </div>
