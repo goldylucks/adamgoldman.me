@@ -9,6 +9,7 @@ import { FB_APP_ID, MESSENGER_LINK, DOMAIN } from '../constants';
 
 class Html extends React.Component {
   static propTypes = {
+    path: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     styles: PropTypes.arrayOf(
@@ -28,7 +29,15 @@ class Html extends React.Component {
   };
 
   render() {
-    const { path, title, description, styles, scripts, app, children } = this.props;
+    const {
+      path,
+      title,
+      description,
+      styles,
+      scripts,
+      app,
+      children,
+    } = this.props;
     return (
       <html className="no-js" lang="en">
         <head>

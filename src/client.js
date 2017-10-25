@@ -16,7 +16,6 @@ import { createPath } from 'history/PathUtils';
 import App from './components/App';
 import createFetch from './createFetch';
 import history from './history';
-import { updateMeta, updateCustomMeta } from './DOMUtils';
 import router from './router';
 
 // Global (context) variables that can be easily accessed from any React component
