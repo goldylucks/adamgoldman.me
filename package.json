@@ -135,6 +135,7 @@
     ]
   },
   "scripts": {
+    "heroku-postbuild": "yarn run build -- --release",
     "precommit": "lint-staged",
     "prepush": "fix",
     "lint-js": "eslint --ignore-path .gitignore --ignore-pattern \"!**/.*\" .",
