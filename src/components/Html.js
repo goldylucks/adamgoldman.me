@@ -125,6 +125,7 @@ class Html extends React.Component {
           )}
           <a
             style={{ position: 'fixed', bottom: 20, left: 20 }}
+            className="messenger-fixed"
             href={MESSENGER_LINK}
             target="_blank"
             rel="nofollow noreferrer noopener"
