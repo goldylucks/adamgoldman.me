@@ -13,11 +13,14 @@ import { filterDrafts } from '../../utils';
 
 const Successes = () => (
   <article className="main-layout">
-    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-      <BreadCrumbs
-        crumbs={[{ text: 'Successes' }]}
-        style={{ marginBottom: 10 }}
-      />
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+      }}
+    >
+      <BreadCrumbs crumbs={[{ text: 'Successes' }]} />
       <FbShareButton />
     </div>
     <header className="main-title-margin">
@@ -37,10 +40,7 @@ If you still have pain to resolve or a desire to fulfill, let me know and we'll 
             <h1>
               <Link to={`/blog/${p.url}/`}>{p.title}</Link>
             </h1>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <Tags tags={p.tags} />
-              <FbShareButton urlProp={`/blog/${p.url}/`} />
-            </div>
+            <Tags tags={p.tags} />
             <p>{p.description}</p>
             <hr />
           </article>

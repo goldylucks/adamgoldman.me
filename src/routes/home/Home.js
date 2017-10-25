@@ -11,6 +11,7 @@ import FbShareButton from '../../components/FbShareButton';
 const Home = () => (
   <Layout>
     <div className="main-layout post-page">
+      <FbShareButton />
       <h1 className="main-title">Welcome to my home!</h1>
       <Markdown
         className="post-text"

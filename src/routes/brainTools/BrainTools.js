@@ -11,11 +11,14 @@ import tools from './brainToolsData';
 
 const ToolsListPage = () => (
   <article className="main-layout">
-    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-      <BreadCrumbs
-        crumbs={[{ text: 'Brain Hacking Tools' }]}
-        style={{ marginBottom: 10 }}
-      />
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+      }}
+    >
+      <BreadCrumbs crumbs={[{ text: 'Brain Hacking Tools' }]} />
       <FbShareButton />
     </div>
     <header className="main-title-margin">

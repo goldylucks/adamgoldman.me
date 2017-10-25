@@ -9,11 +9,20 @@ import FbPageBox from '../../components/FbPageBox';
 import FbShareButton from '../../components/FbShareButton';
 import BreadCrumbs from '../../components/BreadCrumbs';
 import posts from './postsData';
-import { filterDrafts } from '../../utils' 
+import { filterDrafts } from '../../utils';
 
 const Blog = () => (
   <article className="main-layout">
-    <BreadCrumbs crumbs={[{ text: 'Blog' }]} />
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+      }}
+    >
+      <BreadCrumbs crumbs={[{ text: 'Blog' }]} />
+      <FbShareButton />
+    </div>
     <header className="main-title-margin">
       <h1 className="main-title">My Humble Blog</h1>
       <h2>With my humble thoughts and diabolical schemes</h2>
@@ -24,10 +33,7 @@ const Blog = () => (
           <h1>
             <Link to={`/blog/${p.url}/`}>{p.title}</Link>
           </h1>
-          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-            <Tags tags={p.tags} />
-            <FbShareButton urlProp={`/blog/${p.url}/`} />
-          </div>
+          <Tags tags={p.tags} />
           <p>{p.description}</p>
           <hr />
         </article>
