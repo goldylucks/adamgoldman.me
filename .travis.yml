@@ -27,6 +27,6 @@ script:
 
 deploy:
   provider: script
-  script: deploy
+  script: yarn deploy
   on:
     branch: master
