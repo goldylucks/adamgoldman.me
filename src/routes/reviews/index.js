@@ -8,9 +8,9 @@ function action() {
     title: 'Reviews',
     path: '/review',
     component: (
-      <Layout>
+      <div>
         <Reviews />
-      </Layout>
+      </div>
     ),
   };
 }

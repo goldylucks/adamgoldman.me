@@ -10,7 +10,7 @@ import FbShareButton from '../../components/FbShareButton';
 import FbComments from '../../components/FbComments';
 
 const Home = () => (
-  <Layout>
+  <div>
     <div className="main-layout post-page">
       <FbShareButton />
       <h1 className="main-title">Welcome to my (virtual) home!</h1>
@@ -28,7 +28,7 @@ Until I sort out my homepage, try one of the [brain hacking tools](/tools/), rea
       <Ending nick="me case tu casa" />
       <FbComments style={{ marginTop: 10 }} />
     </div>
-  </Layout>
+  </div>
 );
 
 export default Home;

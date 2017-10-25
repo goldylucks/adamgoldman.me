@@ -21,7 +21,7 @@ type Props = {
 };
 
 const Page = ({ title, tags, body, html, nick, ps }: Props) => (
-  <Layout>
+  <div>
     <div className="main-layout post-page">
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
         <BreadCrumbs crumbs={[{ text: title }]} style={{ marginBottom: 10 }} />
@@ -54,7 +54,7 @@ const Page = ({ title, tags, body, html, nick, ps }: Props) => (
       )}
       <FbComments style={{ marginTop: 10 }} />
     </div>
-  </Layout>
+  </div>
 );
 
 export default Page;

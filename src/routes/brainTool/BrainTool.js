@@ -72,7 +72,7 @@ class ToolPage extends React.Component {
     const { gender, name, age, currentStep } = this.state;
     const { tool } = this.props;
     return (
-      <Layout>
+      <div>
         <div className="main-layout tool-page">
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <BreadCrumbs
@@ -128,7 +128,7 @@ class ToolPage extends React.Component {
           <Ending nick={tool.nick} />
           <FbComments style={{ marginTop: 10 }} />
         </div>
-      </Layout>
+      </div>
     );
   }
 }

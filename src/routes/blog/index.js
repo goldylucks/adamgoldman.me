@@ -10,9 +10,9 @@ function action() {
     title,
     description: 'A blog with my humble thoughts and diabolical schemes',
     component: (
-      <Layout>
+      <div>
         <Blog />
-      </Layout>
+      </div>
     ),
   };
 }

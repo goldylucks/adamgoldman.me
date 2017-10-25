@@ -21,7 +21,7 @@ type Props = {
 };
 
 const BlogPost = ({ title, tags, body, html, nick, ps }: Props) => (
-  <Layout>
+  <div>
     <div className="main-layout post-page">
       <BreadCrumbs
         crumbs={[{ text: 'Blog', path: '/blog' }, { text: title }]}
@@ -53,7 +53,7 @@ const BlogPost = ({ title, tags, body, html, nick, ps }: Props) => (
       )}
       <FbComments style={{ marginTop: 10 }} />
     </div>
-  </Layout>
+  </div>
 );
 
 export default BlogPost;

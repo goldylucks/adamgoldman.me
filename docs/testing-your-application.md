@@ -49,9 +49,9 @@ describe('Layout', () => {
   it('renders children correctly', () => {
     const wrapper = shallow(
       <App context={{ insertCss: () => {} }}>
-        <Layout>
+        <div>
           <div className="child" />
-        </Layout>
+        </div>
       </App>
     );
 

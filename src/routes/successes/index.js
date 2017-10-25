@@ -8,9 +8,9 @@ function action() {
     title: 'Successes',
     path: '/successes',
     component: (
-      <Layout>
+      <div>
         <Successes />
-      </Layout>
+      </div>
     ),
   };
 }

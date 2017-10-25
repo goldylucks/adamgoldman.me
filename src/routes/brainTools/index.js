@@ -12,9 +12,9 @@ function action() {
     description:
       'Hack your brain with an internet connection and a small screen',
     component: (
-      <Layout>
+      <div>
         <BrainTools title={title} />
-      </Layout>
+      </div>
     ),
   };
 }
