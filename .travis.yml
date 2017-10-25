@@ -1,6 +1,6 @@
 language: node_js
 node_js: node
-script: yarn lint && yarn flow && yarn prod:build
+script: yarn lint && yarn prod:build
 branches:
   only:
   - master
