@@ -5,6 +5,7 @@
   height: 15px;
   padding-top: 5px;
 }
+
 .hamburger {
   height: 3px;
   width: 22px;
@@ -12,8 +13,9 @@
   border-radius: 3px;
   position: relative;
 }
-.hamburger:before {
-  content: "";
+
+.hamburger::before {
+  content: '';
   display: block;
   background: #fff;
   height: 3px;
@@ -22,8 +24,9 @@
   top: -6px;
   width: 100%;
 }
-.hamburger:after {
-    content: "";
+
+.hamburger::after {
+  content: '';
   display: block;
   background: #fff;
   height: 3px;
