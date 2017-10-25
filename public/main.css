@@ -245,19 +245,27 @@ a[data-title] {
   position: relative;
 }
 
-span[data-title]:hover:after,
-a[data-title]:hover:after {
+span[data-title]:after,
+a[data-title]:after {
   content: attr(data-title);
   padding: 4px 8px;
   color: #fff;
   position: absolute;
   left: 0;
-  top: 100%;
+  top: -20px;
   white-space: nowrap;
   z-index: 20;
   border: 1px solid #fff;
   border-radius: 5px;
   background: #000;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+span[data-title]:hover:after,
+a[data-title]:hover:after {
+  top: -40px;
+  opacity: 1;
 }
 
 /* fb messages */
@@ -415,6 +423,7 @@ a[data-title]:hover:after {
 
 .messenger-fixed {
   transition: 0.5s opacity;
+  border-bottom: none !important;
   opacity: 0.5;
 }
 
