@@ -9,8 +9,6 @@ cache:
   directories:
   - node_modules
 
-install: yarn install --production=false
-
 deploy:
   provider: script
-  script: yarn deploy
+  script: yarn install --production=false && yarn deploy
