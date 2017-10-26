@@ -6,6 +6,12 @@ import postsData from '../src/routes/blog/postsData';
 import pagesData from '../src/routes/page/pagesData';
 import brainToolsData from '../src/routes/brainTools/brainToolsData';
 
+/* eslint-disable no-console */
+console.log('\n*******************');
+console.log('Are all posts, pages and brain tools generated?');
+console.log('*******************\n');
+/* eslint-enable no-console */
+
 const pathToWriteFile = path.resolve(
   __dirname,
   '..',

@@ -27,6 +27,10 @@
       {
         "url": "rachel-turns-family-trauma-to-parody",
         "type": "blog"
+      },
+      {
+        "url": "trauma-relief",
+        "type": "tools"
       }
     ]
   },
@@ -36,6 +40,10 @@
       {
         "url": "fibromyalgia-0-julianne-1",
         "type": "blog"
+      },
+      {
+        "url": "grief-to-appreciation",
+        "type": "tools"
       }
     ]
   },
@@ -195,6 +203,10 @@
       {
         "url": "panic-attacks-a-broken-heart",
         "type": "blog"
+      },
+      {
+        "url": "reverse-feeling-spin",
+        "type": "tools"
       }
     ]
   },
@@ -208,6 +220,10 @@
       {
         "url": "panic-away-insiders-view",
         "type": "blog"
+      },
+      {
+        "url": "reverse-feeling-spin",
+        "type": "tools"
       }
     ]
   },
@@ -326,6 +342,10 @@
       {
         "url": "dan-cuts-smoking",
         "type": "blog"
+      },
+      {
+        "url": "smoking-destroyer",
+        "type": "tools"
       }
     ]
   },
@@ -577,6 +597,15 @@
       {
         "url": "udemy-super-learner",
         "type": "blog"
+      }
+    ]
+  },
+  {
+    "title": "Nail Biting",
+    "items": [
+      {
+        "url": "nail-biting-destroyer",
+        "type": "tools"
       }
     ]
   }

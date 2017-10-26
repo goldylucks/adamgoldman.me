@@ -29,6 +29,7 @@ const items = tag =>
       if (type === 'page') {
         return pages.find(p => p.url === url);
       }
+      console.error('item with no type found!'); // eslint-disable-line no-console
       return {}; // this should never happen
     });
 
@@ -41,7 +42,7 @@ const Tag = ({ tag }: Props) => (
     <div className="main-layout post-page">
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
         <BreadCrumbs
-          crumbs={[{ text: 'Tag', path: '/tags' }, { text: tag }]}
+          crumbs={[{ text: 'Tags', path: '/tags' }, { text: tag }]}
           style={{ marginBottom: 10 }}
         />
         <FbShareButton />

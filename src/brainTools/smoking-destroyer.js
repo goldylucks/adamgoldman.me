@@ -11,6 +11,7 @@ import Markdown from '../components/Markdown';
 import Answers from '../routes/brainTool/components/Answers';
 import type { Props } from '../routes/brainTool/components/toolPageProps';
 
+export const tags = ['Smoking'];
 export const stepCount = 15;
 export const title = 'Smoking Destroyer';
 export const nick = 'non smoker';

@@ -12,6 +12,7 @@ import Answers from '../routes/brainTool/components/Answers';
 import HowItsGoingToWorkStep from '../routes/brainTool/components/HowItsGoingToWorkStep';
 import type { Props } from '../routes/brainTool/components/toolPageProps';
 
+export const tags = ['Grief'];
 export const stepCount = 7;
 export const title = 'Grief To Appreciation';
 export const nick = "don't cry because it's over, smile because it happened";

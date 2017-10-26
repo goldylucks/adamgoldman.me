@@ -18,6 +18,7 @@ const feelWorse = () => {
   );
 };
 
+export const tags = ['Trauma'];
 export const stepCount = 13;
 export const title = 'Trauma Relief';
 export const nick = 'war in reverse is peace';

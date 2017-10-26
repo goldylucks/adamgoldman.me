@@ -1,6 +1,9 @@
 /* eslint-disable */
   export default [
   {
+    "tags": [
+      "Smoking"
+    ],
     "title": "Smoking Destroyer",
     "description": "Convert your old smoking habit into a powerful image of yourself",
     "url": "smoking-destroyer"
@@ -11,11 +14,17 @@
     "url": "feel-good-generator"
   },
   {
+    "tags": [
+      "Grief"
+    ],
     "title": "Grief To Appreciation",
     "description": "Turn feelings of loss, miss, and grief into appreciation, presence and warmth",
     "url": "grief-to-appreciation"
   },
   {
+    "tags": [
+      "Nail Biting"
+    ],
     "title": "Nail Biting Destroyer",
     "description": "Convert your old nail biting habit into a powerful image of yourself",
     "url": "nail-biting-destroyer"
@@ -26,6 +35,9 @@
     "url": "perfect-day"
   },
   {
+    "tags": [
+      "Trauma"
+    ],
     "title": "Trauma Relief",
     "description": "Turn old traumas and bad memories, arguments, and fights into powerful resources",
     "url": "trauma-relief"
@@ -41,6 +53,10 @@
     "url": "loved-one-amplifier"
   },
   {
+    "tags": [
+      "Anxiety",
+      "Panic Attack"
+    ],
     "title": "Reverse Feeling Spin",
     "description": "Turn anxiety, pain, depression, and any unwanted feeling to something new",
     "url": "reverse-feeling-spin"
