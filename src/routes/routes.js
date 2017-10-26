@@ -11,10 +11,6 @@ const routes = {
       load: () => import(/* webpackChunkName: 'home' */ './home'),
     },
     {
-      path: '/blog',
-      load: () => import(/* webpackChunkName: 'blog' */ './blog'),
-    },
-    {
       path: '/successes',
       load: () => import(/* webpackChunkName: 'successes' */ './successes'),
     },
@@ -23,8 +19,20 @@ const routes = {
       load: () => import(/* webpackChunkName: 'reviews' */ './reviews'),
     },
     {
+      path: '/blog',
+      load: () => import(/* webpackChunkName: 'blog' */ './blog'),
+    },
+    {
       path: '/blog/:post',
       load: () => import(/* webpackChunkName: 'blogPost' */ './blogPost'),
+    },
+    {
+      path: '/tags',
+      load: () => import(/* webpackChunkName: 'tags' */ './tags'),
+    },
+    {
+      path: '/tags/:tag',
+      load: () => import(/* webpackChunkName: 'tag' */ './tag'),
     },
     {
       path: '/tools',

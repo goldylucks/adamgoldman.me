@@ -10,6 +10,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import '../utils';
 import { FB_APP_ID } from '../constants';
 import Layout from './Layout';
 

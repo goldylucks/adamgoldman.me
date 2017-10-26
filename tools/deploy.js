@@ -25,9 +25,9 @@ import run from './run';
 // Heroku
 const remote = {
   name: 'heroku',
-  url: 'https://git.heroku.com/adamgoldman-starter-kit.git',
+  url: 'https://git.heroku.com/adamgoldman.git',
   branch: 'master',
-  website: 'https://adamgoldman-starter-kit.herokuapp.com',
+  website: 'https://adamgoldman.herokuapp.com',
 };
 
 // Azure Web Apps

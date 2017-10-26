@@ -17,7 +17,7 @@ async function action({ params }) {
     title: tool.title,
     description: tool.description,
     path: `/tools/${params.tool}`,
-    component: <BrainTool pathname={`/tools/${params.tool}`} tool={tool} />,
+    component: <BrainTool tool={tool} />,
   };
 }
 

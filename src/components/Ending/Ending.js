@@ -6,7 +6,7 @@ import Link from '../Link';
 import { cloudImg } from '../../utils';
 
 type Props = {
-  nick: string,
+  nick?: string,
 };
 
 const Ending = ({ nick, ...restProps }: Props) => (
@@ -27,10 +27,12 @@ const Ending = ({ nick, ...restProps }: Props) => (
     -{' '}
     <Link to="/">
       <strong style={{ fontSize: 20 }}>
-        Adam &ldquo;{nick}&rdquo; Goldman
+        Adam {nick && `“${nick}”`} Goldman
       </strong>
     </Link>
   </section>
 );
+
+Ending.defaultProps = { nick: '' };
 
 export default Ending;

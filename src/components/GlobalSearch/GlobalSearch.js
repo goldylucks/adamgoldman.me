@@ -8,7 +8,8 @@ import history from '../../history';
 import posts from '../../routes/blog/postsData';
 import tools from '../../routes/brainTools/brainToolsData';
 import pages from '../../routes/page/pagesData';
-import { filterDrafts } from '../../utils';
+import tags from '../../routes/tags/tagsData';
+import { filterDrafts, getSlug } from '../../utils';
 
 const shouldRenderSuggestions = value => value.trim().length > 2;
 
@@ -17,6 +18,7 @@ const addType = type => suggestion => Object.assign(suggestion, { type });
 const filteredPosts = posts.filter(filterDrafts).map(addType('blog'));
 const filteredTools = tools.filter(filterDrafts).map(addType('tools'));
 const filteredPages = pages.filter(filterDrafts).map(addType('pages'));
+const filteredTags = tags.filter(filterDrafts).map(addType('tags'));
 
 const fuseOptions = {
   keys: ['title', 'description', 'tags'],
@@ -26,6 +28,7 @@ const fuseOptions = {
 const fusePosts = new Fuse(filteredPosts, fuseOptions);
 const fuseTools = new Fuse(filteredTools, fuseOptions);
 const fusePages = new Fuse(filteredPages, fuseOptions);
+const fuseTags = new Fuse(filteredTags, fuseOptions);
 
 // Teach Autosuggest how to calculate suggestions for any given input value.
 const getSuggestions = value =>
@@ -42,6 +45,10 @@ const getSuggestions = value =>
       title: 'Posts',
       suggestions: fusePosts.search(value),
     },
+    {
+      title: 'Tags',
+      suggestions: fuseTags.search(value),
+    },
   ].filter(section => section.suggestions.length > 0);
 
 // When suggestion is clicked, Autosuggest needs to populate the input
@@ -50,11 +57,7 @@ const getSuggestions = value =>
 const getSuggestionValue = suggestion => suggestion.title;
 
 const onSuggestionSelected = (event, { suggestion }) => {
-  if (suggestion.type === 'pages') {
-    history.push(`/${suggestion.url}`);
-    return;
-  }
-  history.push(`/${suggestion.type}/${suggestion.url}`);
+  history.push(getSlug(suggestion));
 };
 
 const renderSectionTitle = section => <strong>{section.title}</strong>;

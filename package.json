@@ -25,6 +25,7 @@
     "generate-brain-tools": "babel-node tools/generateBrainTools",
     "generate-posts": "babel-node tools/generatePosts",
     "generate-pages": "babel-node tools/generatePages",
+    "generate-tags": "babel-node tools/generateTags",
     "start": "babel-node tools/run start"
   },
   "private": true,
