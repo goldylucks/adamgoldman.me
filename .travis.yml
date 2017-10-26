@@ -9,7 +9,7 @@ cache:
   directories:
   - node_modules
 
-before_deploy: yarn global add babel-cli babel-core && yarn add --dev babel-preset-env babel-preset-flow babel-preset-react babel-preset-stage-2
+before_deploy: yarn install --production=false
 
 deploy:
   provider: script
