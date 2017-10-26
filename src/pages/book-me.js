@@ -3,7 +3,8 @@ import { cloudImg } from '../utils';
 export default {
   title: 'Book Me',
   nick: 'my ass is not yours',
-  description: 'The meaningless legal part of Mr. Adam Goldman site',
+  description:
+    'Why will you want to book me to pass information to you in an effective way',
   tags: [],
   body: `
 > *I loved every bit of the training but the part that stood out the most was the LACK of a presentation.*

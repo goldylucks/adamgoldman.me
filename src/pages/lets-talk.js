@@ -1,7 +1,7 @@
 export default {
   title: "Let's talk?",
   nick: "friend u've yet to meet",
-  description: 'The meaningless legal part of Mr. Adam Goldman site',
+  description: "Choose how you'd like to talk to me online",
   tags: [],
   body: `
 What can I do you for my friend?

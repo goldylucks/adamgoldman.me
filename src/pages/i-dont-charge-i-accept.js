@@ -2,7 +2,7 @@ import { cloudImg } from '../utils';
 
 export default {
   title: "I don't charge I accept",
-  nick: "I don't charge I accept",
+  nick: "Give, then ask, don't take",
   description: 'Wish to donate? Right this way!',
   tags: [],
   body: `
