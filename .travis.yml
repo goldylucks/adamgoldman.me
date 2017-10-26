@@ -9,8 +9,6 @@ cache:
   directories:
   - node_modules
 
-before_deploy: yarn build -- --release && cd build && git init && git add . && git commit -m "update build"
-
 deploy:
   provider: heroku
   app: adamgoldman-starter-kit
