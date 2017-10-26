@@ -17,6 +17,8 @@ import App from './components/App';
 import createFetch from './createFetch';
 import history from './history';
 import router from './router';
+import { updateMeta, updateCustomMeta } from './DOMUtils';
+import { DOMAIN } from './constants';
 
 // Global (context) variables that can be easily accessed from any React component
 // https://facebook.github.io/react/docs/context.html
@@ -87,12 +89,16 @@ async function onLocationChange(location, action) {
       container,
       () => {
         document.title = route.title;
+        updateMeta('description', route.description);
+        updateMeta('url', DOMAIN + route.path);
+        updateCustomMeta('og:url', DOMAIN + route.path);
+        updateCustomMeta('og:description', route.description);
+        updateCustomMeta('og:title', route.title);
         if (isInitialRender) {
           const elem = document.getElementById('css');
           if (elem) elem.parentNode.removeChild(elem);
           return;
         }
-
         let scrollX = 0;
         let scrollY = 0;
         const pos = scrollPositionsHistory[location.key];
