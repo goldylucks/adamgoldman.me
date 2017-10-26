@@ -112,6 +112,7 @@ class GlobalSearch extends React.Component {
     // Finally, render it!
     return (
       <Autosuggest
+        focusInputOnSuggestionClick={false}
         onSuggestionSelected={onSuggestionSelected}
         suggestions={suggestions}
         multiSection
