@@ -59,10 +59,9 @@ class Markdown extends React.Component {
             }
 
             if (linkProps.href.match('FB_MESSAGE')) {
-              const newRef = MESSENGER_LINK;
               return (
                 <a
-                  href={newRef}
+                  href={MESSENGER_LINK}
                   target="_blank"
                   rel="nofollow noreferrer noopener"
                 >
