@@ -22,7 +22,13 @@ type Props = {
 const Page = ({ title, tags, body, html, nick, ps }: Props) => (
   <div>
     <div className="main-layout post-page">
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}
+      >
         <BreadCrumbs crumbs={[{ text: title }]} style={{ marginBottom: 10 }} />
         <FbShareButton />
       </div>

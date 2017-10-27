@@ -73,7 +73,13 @@ class ToolPage extends React.Component {
     return (
       <div>
         <div className="main-layout tool-page">
-          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+            }}
+          >
             <BreadCrumbs
               crumbs={[
                 { text: 'Brain Hacking Tools', path: '/tools' },

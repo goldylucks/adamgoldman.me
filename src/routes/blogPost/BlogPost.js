@@ -23,9 +23,18 @@ type Props = {
 const BlogPost = ({ title, tags, body, html, nick, ps }: Props) => (
   <div>
     <div className="main-layout post-page">
-      <BreadCrumbs
-        crumbs={[{ text: 'Blog', path: '/blog' }, { text: title }]}
-      />
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}
+      >
+        <BreadCrumbs
+          crumbs={[{ text: 'Blog', path: '/blog' }, { text: title }]}
+        />
+        <FbShareButton />
+      </div>
       <h1 className="main-title">{title}</h1>
       <Tags tags={tags} />
       <Markdown className="post-text" source={body} />
