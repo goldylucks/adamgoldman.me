@@ -3,8 +3,9 @@ import Reviews from './Reviews';
 
 function action() {
   return {
-    chunks: ['successes'],
+    chunks: ['reviews'],
     title: 'Reviews',
+    decsription: 'Reviews from past students',
     path: '/review',
     component: (
       <div>
