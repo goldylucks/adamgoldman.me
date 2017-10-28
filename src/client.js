@@ -88,17 +88,17 @@ async function onLocationChange(location, action) {
       <App context={context}>{route.component}</App>,
       container,
       () => {
+        if (isInitialRender) {
+          const elem = document.getElementById('css');
+          if (elem) elem.parentNode.removeChild(elem);
+          return;
+        }
         document.title = route.title;
         updateMeta('description', route.description);
         updateMeta('url', DOMAIN + route.path);
         updateCustomMeta('og:url', DOMAIN + route.path);
         updateCustomMeta('og:description', route.description);
         updateCustomMeta('og:title', route.title);
-        if (isInitialRender) {
-          const elem = document.getElementById('css');
-          if (elem) elem.parentNode.removeChild(elem);
-          return;
-        }
         let scrollX = 0;
         let scrollY = 0;
         const pos = scrollPositionsHistory[location.key];

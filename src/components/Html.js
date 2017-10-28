@@ -3,12 +3,14 @@ import PropTypes from 'prop-types';
 import serialize from 'serialize-javascript';
 import config from '../config';
 import { cloudImg } from '../utils';
-import { FB_APP_ID, MESSENGER_LINK } from '../constants';
+import { DOMAIN, FB_APP_ID, MESSENGER_LINK } from '../constants';
 
 /* eslint-disable react/no-danger */
 
 class Html extends React.Component {
   static propTypes = {
+    description: PropTypes.string.isRequired,
+    path: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     styles: PropTypes.arrayOf(
       PropTypes.shape({
@@ -27,13 +29,26 @@ class Html extends React.Component {
   };
 
   render() {
-    const { title, styles, scripts, app, children } = this.props;
+    const {
+      title,
+      description,
+      path,
+      styles,
+      scripts,
+      app,
+      children,
+    } = this.props;
     return (
       <html className="no-js" lang="en">
         <head>
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <title>{title}</title>
+          <meta name="description" content={description} />
+          <meta name="url" content={DOMAIN + path} />
+          <meta property="og:url" content={DOMAIN + path} />
+          <meta property="og:description" content={description} />
+          <meta property="og:title" content={title} />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="author" content="Adam Goldman" />
           <meta name="owner" content="Adam Goldman" />
