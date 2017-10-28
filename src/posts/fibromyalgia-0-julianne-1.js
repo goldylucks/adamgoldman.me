@@ -1422,7 +1422,7 @@ Grief to Appreciation <br />
 </div></div><div class="chat-message-container clearfix other"><div class="chat-message">Same <img alt="🙂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/z4c/1/16/1f642.png"> it's also really nice cause combining the happiness from friendship and adding that my feelings about my mum and dad. They are different feelings. Like I said, they died before the relationship made that change from me being a child to an adult. I was a difficult adolescent when they were here and well. So that is lovely. Experiencing feelings I wouldn't have been able to find when thinking of them! So that's pretty revolutionary to me</div></div><div class="chat-message-container clearfix adam"><div class="chat-message">Great!
 </div><div class="chat-message">and can you see all 3 together?
 </div></div><div class="chat-message-container clearfix other"><div class="chat-message">Yeah
-</div></div><div class="chat-message-container clearfix adam"><div class="chat-message">any more people u'd like to add in there?
+</div></div><div class="chat-message-container clearfix adam"><div class="chat-message">any more people you'd like to add in there?
 </div><div class="chat-message">(or might have joined already)
 </div></div><div class="chat-message-container clearfix other"><div class="chat-message">No. It was hard enough thinking in one lol
 </div></div><div class="chat-message-container clearfix adam"><div class="chat-message">well
@@ -1876,7 +1876,7 @@ let me know when you want o continue learning!
 </div></div><div class="chat-message-container clearfix adam"><div class="chat-message">well that would certainly be fun <img alt="🙂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/z4c/1/16/1f642.png"></div><div class="chat-message">infact,
 why stop there?
 
-imagine everytime someone would mention the word "fibro" u'd have an explosion
+imagine everytime someone would mention the word "fibro" you'd have an explosion
 
 and everytime you'd think about the symptoms you used to have
 </div><div class="chat-message">lol or everytime you finish a run!
