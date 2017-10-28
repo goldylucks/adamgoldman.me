@@ -60,9 +60,9 @@ class FeelGoodGenerator extends React.Component {
             <Markdown
               className="tool-text"
               source={`
-Think of a feeling or a resource u'd like to
+Think of a feeling or a resource you'd like to
 have more available for you now (and then),
-and u'd like to experience it more as you progress through life.
+and you'd like to experience it more as you progress through life.
 `}
             />
             <form onSubmit={onUserInputSubmit} className="tool-form">

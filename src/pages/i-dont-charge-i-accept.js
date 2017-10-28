@@ -16,7 +16,7 @@ So you want to give back? How awesome are you!
 
 ![Boromir Charges money](${cloudImg('adamgoldman.me/boromir-charge.jpg')})
 
-Once you get immense value from our time together, **u decide** if and **how much u'd love to give**. I don't want to hold you hostage ahead of time.
+Once you get immense value from our time together, **u decide** if and **how much you'd love to give**. I don't want to hold you hostage ahead of time.
 
 *"But Adam, aren't you afraid people will take advantage of you?"*
 
@@ -44,7 +44,7 @@ U can imagine she was more than happy to give back ...
 My favorite way of moving value around without giving a cut to the banksters and people in suits in the ivory tower. I made a dedicated page for that to make it easier for you. [Start here](/first-steps-with-bitcoin-real-money/).
 
 #### Card
-The easiest way most people choose to give back. Click on the select field below, choose the amount u'd be happy to give, and click the "buy now" button. Oh and ... Get ready for a dose of good karma ;)
+The easiest way most people choose to give back. Click on the select field below, choose the amount you'd be happy to give, and click the "buy now" button. Oh and ... Get ready for a dose of good karma ;)
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="margin-bottom: 40px;">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="L73XBAVRMGQ6S">
