@@ -444,7 +444,7 @@ Describe that feeling as vividly as you can
               source={`
 Isn't it cool you can learn so fast? [know others](FB_SHARE) that can enjoy that as well?
 
-or you want to to it again on another memory first?
+or you want to do it again on another memory first?
                 `}
             />
             <Answers
