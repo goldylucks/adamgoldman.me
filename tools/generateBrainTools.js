@@ -20,6 +20,7 @@ const fileToWrite = [
   'feel-good-generator',
   'grief-to-appreciation',
   'nail-biting-destroyer',
+  'coming-to-wholeness',
   'perfect-day',
   'trauma-relief',
   'internal-dialog-scrambeler',
