@@ -118,6 +118,7 @@ class ToolPage extends React.Component {
             gender={gender}
             name={name}
             age={age}
+            Next={({ children }) => <a onClick={this.next}>{children}</a>}
             heShe={gender === 'male' ? 'he' : 'she'}
             hisHer={gender === 'male' ? 'his' : 'her'}
             himHer={gender === 'male' ? 'him' : 'her'}
