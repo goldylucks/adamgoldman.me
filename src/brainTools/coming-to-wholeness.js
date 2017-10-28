@@ -11,7 +11,7 @@ import Markdown from '../components/Markdown';
 import Answers from '../routes/brainTool/components/Answers';
 import type { Props } from '../routes/brainTool/components/toolPageProps';
 
-export const stepCount = 18;
+export const stepCount = 19;
 export const title = 'Coming To Wholeness';
 export const IS_DRAFT = true;
 export const nick = 'whole';
@@ -20,8 +20,8 @@ export const description = `A PRACTICAL step by step tool for non "enlightment"`
 
 const format = str =>
   str
-    .replace(/my/g, 'your') // negate instances of "my" NOT followed by space (i.e. watermelon)
-    .replace(/me/g, 'you') // negate instances of "me" NOT followed by space (i.e. mercy, merged,)
+    .replace(/my /g, 'your ') // negate instances of "my" NOT followed by space (i.e. watermelon)
+    .replace(/me /g, 'you ') // negate instances of "me" NOT followed by space (i.e. mercy, merged,)
     .trim();
 
 class ComingToWholeness extends React.Component {
@@ -36,8 +36,11 @@ class ComingToWholeness extends React.Component {
     firstISensationQuality: '',
     firstIAcceptsInvitation: '',
     firstIDissolvingDescription: '',
-    firstFeelingIntegration: '',
+    firstFeelingIntegrationDescription: '',
     firstFeelingCompareAnswer: '',
+    initialContextBeingThisWayAnswer: '',
+    initialContextBeingThisWayInThePastAnswer: '',
+    initialContextBeingThisWayInTheFutureAnswer: '',
   };
 
   experienceChange = evt => this.setState({ experience: evt.target.value });
@@ -58,12 +61,29 @@ class ComingToWholeness extends React.Component {
     this.setState({ firstIAcceptsInvitation: evt.target.value });
   firstIDissolvingDescriptionChange = evt =>
     this.setState({ firstIDissolvingDescription: evt.target.value });
-  firstFeelingIntegrationChange = evt =>
-    this.setState({ firstFeelingIntegration: evt.target.value });
+  firstFeelingIntegrationDescriptionChange = evt =>
+    this.setState({ firstFeelingIntegrationDescription: evt.target.value });
   props: Props;
 
   firstFeelingCompare = str =>
-    this.setState({ firstFeelingCompareAnswer: str });
+    this.setState({ firstFeelingCompareAnswer: str }, this.props.onNext());
+
+  initialContextBeingThisWay = str =>
+    this.setState(
+      { initialContextBeingThisWayAnswer: str },
+      this.props.onNext(),
+    );
+
+  initialContextBeingThisWayInThePast = str =>
+    this.setState(
+      { initialContextBeingThisWayInThePastAnswer: str },
+      this.props.onNext(),
+    );
+  initialContextBeingThisWayInTheFuture = str =>
+    this.setState(
+      { initialContextBeingThisWayInTheFutureAnswer: str },
+      this.props.onNext(),
+    );
 
   render() {
     const {
@@ -88,8 +108,11 @@ class ComingToWholeness extends React.Component {
       firstISensationQuality,
       firstIAcceptsInvitation,
       firstIDissolvingDescription,
-      firstFeelingIntegration,
+      firstFeelingIntegrationDescription,
       firstFeelingCompareAnswer,
+      initialContextBeingThisWayAnswer,
+      initialContextBeingThisWayInThePastAnswer,
+      initialContextBeingThisWayInTheFutureAnswer,
     } = this.state;
     return (
       <div>
@@ -98,6 +121,8 @@ class ComingToWholeness extends React.Component {
             <Markdown
               className="tool-text"
               source={`
+## Background
+
 *"enlightment is easy, you just surrender your ego and become a vast self like all the gurus tell you to"* - said no human being, EVER.
 
 If you, like me, are willing to ACTIVELY go after a more complete life, and feeling more "whole", I see no reason this process will not affect you in some memorable way.
@@ -132,6 +157,8 @@ So are we together on this my friend?
             <Markdown
               className="tool-text"
               source={`
+## Choose Experience
+
 Good choice!
 
 You'd be surprised how many people "wish" their life to be better, but never go pass that, so I'm glad YOU are in the right direction.
@@ -157,6 +184,8 @@ E.g. Something that pushes your buttons, but really doesn’t hurt anyone.
             <Markdown
               className="tool-text"
               source={`
+## Initial Feeling
+
 Imagine it is happening now ...
 
 *${experience.trim()}*
@@ -184,6 +213,8 @@ Describe your response in one short sentence.
             <Markdown
               className="tool-text"
               source={`
+## Initial Feeling - location
+
 And *${feel}* ...
 
 And when you feel *${feel}*, where is this feeling of *${feel}* located, when you feel *${feel}*?
@@ -207,11 +238,13 @@ And when you feel *${feel}*, where is this feeling of *${feel}* located, when yo
             <Markdown
               className="tool-text"
               source={`
+## Initial Feeling - Size & Shape
+
 And *${format(feelingLocation)}* ...
 
 And when it's *${format(
                 feelingLocation,
-              )}*, and it's a *${feel}* feeling, notice it's size and shape, when it's *${format(
+              )}*, and it's a *${feel}* feeling, notice it's size & shape, when it's *${format(
                 feelingLocation,
               )}*, and it's a *${feel}* feeling.
 
@@ -234,7 +267,9 @@ And when it's *${format(
             <Markdown
               className="tool-text"
               source={`
-And it's *${format(feelingShapeSize)}* ...
+## Initial Feeling - Sensation Quality
+
+And *${format(feelingShapeSize)}* ...
 
 And when it's *${format(feelingShapeSize)}*, and it's *${format(
                 feelingLocation,
@@ -259,11 +294,13 @@ And when it's *${format(feelingShapeSize)}*, and it's *${format(
             <Markdown
               className="tool-text"
               source={`
-And it's *${format(feelingSensationQuality)}*....
+## Noticing Awareness
+
+And *${format(feelingSensationQuality)}*....
 
 And when it's *${format(feelingSensationQuality)}*, you can recognize,
 
-*‘I am aware of this ${format(
+*I am aware of this ${format(
                 feelingSensationQuality,
               )} sensation, so awareness is present.*
 `}
@@ -289,6 +326,8 @@ And when it's *${format(feelingSensationQuality)}*, you can recognize,
             <Markdown
               className="tool-text"
               source={`
+## Experiencing Practical Awareness
+
 Now take a moment to experience Awareness ...
 
 By "Awareness" I mean the actual capacity to notice, A.K.A. "be aware" of stuff in and around you, with your senses.
@@ -329,11 +368,13 @@ When I refer to Awareness, I'm pointing to this capacity to notice, that is thro
             <Markdown
               className="tool-text"
               source={`
-Now with [your permission](TITLE_or_without_it\,_I\'m_running_the_show_here_;\\)) let’s return to this statement, *“I am aware of this ${format(
-                feelingSensationQuality,
-              )} sensation in ${format(feelingLocation)}”* ...
+## First "I" - Location
 
-Where is the ‘I,’ that is aware of this sensation...? Where is this ‘I’ located?
+Now with [your permission](TITLE_or_without_it,_I'm_running_the_show_here_;\\)) let’s return to this statement, *“I am aware of this ${format(
+                feelingSensationQuality,
+              )} sensation ${format(feelingLocation)}”* ...
+
+Where is the "I", that is aware of this sensation...? Where is this "I" located?
 
 I know it's probably a strange question, but a useful one nonetheless, and you can just notice whatever location comes to mind.
 
@@ -343,7 +384,7 @@ And what location do you notice?
 
 Another way of experiencing this is asking *“Where is the perceiving happening from?”*
 
-i.e. *"it's about 2 meter in front of me, slightly to the right"*
+i.e. *"it's about 2 meters in front of me, slightly to the right"*
 `}
             />
             <form onSubmit={onUserInputSubmit} className="tool-form">
@@ -363,11 +404,13 @@ i.e. *"it's about 2 meter in front of me, slightly to the right"*
             <Markdown
               className="tool-text"
               source={`
+## First "I" - Size & Shape
+
 And *${format(firstILocation)}* ...
 
 And when it's *${format(
                 firstILocation,
-              )}*, what is the size and shape of this ‘I’, when it's *${format(
+              )}*, what is the size & shape of this ‘I’, when it's *${format(
                 firstILocation,
               )}*?
 `}
@@ -389,6 +432,8 @@ And when it's *${format(
             <Markdown
               className="tool-text"
               source={`
+## First "I" - Sensation Quality
+
 And *${format(firstISizeShape)}* ...
 
 And when it's *${format(firstISizeShape)}*, and it's *${format(
@@ -417,15 +462,17 @@ E.g foggy, clear, dense, or empty, heavy, light, vibrating, still, etc.
             <Markdown
               className="tool-text"
               source={`
+## First "I" - Inviting Integration
+
 And ${firstISensationQuality} ...
 
-And when this ‘I’ is ${format(firstILocation)} and ${format(
-                firstISensationQuality,
-              )} ...
+And when this ‘I’ is ${format(firstILocation)} ...
+
+and ${format(firstISensationQuality)} ...
 
 Does the sensation of this ‘I’ welcome the invitation to open and relax as the fullness of Awareness?
 
-Some people prefer to notice what happens when the fullness of Awareness... all of consciousness... is invited to flow in and as... the sensation in ${format(
+Some people prefer to notice what happens when the fullness of Awareness... all of consciousness... is invited to flow in and as... the sensation ${format(
                 firstILocation,
               )}.
 
@@ -456,6 +503,8 @@ It matters less if the answer is ‘Yes’ or ‘No’, It just tells us what to
             <Markdown
               className="tool-text"
               source={`
+## First "I" - Experiencing Integration
+
 And yes ...
 
 And notice what happens, when the sensation of the ‘I’ is invited to open and relax ...
@@ -484,6 +533,8 @@ And what happens?
             <Markdown
               className="tool-text"
               source={`
+## First "I" - Allowing Complete Integration
+
 And *${format(firstIDissolvingDescription)}* ...
 
 And if you are experiencing a relaxing, melting, or dissolving, just stay with it until things settle. Enjoy the sense of relaxation, peace or flow as long as you like.
@@ -505,7 +556,9 @@ And if you are experiencing a relaxing, melting, or dissolving, just stay with i
             <Markdown
               className="tool-text"
               source={`
-Now let’s return to the area that you started with, in *${format(
+## Circling Back
+
+Now let’s return to the area that you started with, *${format(
                 feelingLocation,
               )}*.
 
@@ -520,14 +573,12 @@ Or is it a little bit different?
                 {
                   text: "it's exactly the same as before",
                   onClick: () =>
-                    this.firstFeelingCompare("it's exactly the same as before"),
+                    this.firstFeelingCompare('exactly the same as before'),
                 },
                 {
-                  text: "it's a bit different than before",
+                  text: 'a bit different than before',
                   onClick: () =>
-                    this.firstFeelingCompare(
-                      "it's a bit different than before",
-                    ),
+                    this.firstFeelingCompare('a bit different than before'),
                 },
                 {
                   text: "it's very different than before",
@@ -544,13 +595,15 @@ Or is it a little bit different?
             <Markdown
               className="tool-text"
               source={`
+## Circling Back - Inviting Integration
+
 And ${firstFeelingCompareAnswer} ...
 
-And notice what happens when this sensation in ${format(
+And notice what happens when this sensation ${format(
                 feelingLocation,
               )} is invited to open and relax ... as all of Awareness.
 
-Another way to experience it is notice what happens when the fullness of Awareness..., all of consciousness..., is invited to flow in and as... the sensation in ${format(
+Another way to experience it is notice what happens when the fullness of Awareness..., all of consciousness..., is invited to flow in and as... the sensation ${format(
                 feelingLocation,
               )}.
 
@@ -563,13 +616,14 @@ Now there is just an allowing of whatever happens. You can enjoy this experience
             />
 
             <form onSubmit={onUserInputSubmit} className="tool-form">
-              <textarea
-                value={firstFeelingIntegration}
-                onChange={this.firstFeelingIntegrationChange}
-                className="textarea"
+              <input
+                value={firstFeelingIntegrationDescription}
+                onChange={this.firstFeelingIntegrationDescriptionChange}
+                className="input"
                 placeholder="I feel ..."
                 required
               />
+              <button className="button">let&apos;s continue</button>
             </form>
             <Answers answers={[dontUnderstand, back]} />
           </div>,
@@ -578,6 +632,10 @@ Now there is just an allowing of whatever happens. You can enjoy this experience
             <Markdown
               className="tool-text"
               source={`
+## Circling Back - Initial Context
+
+And ${firstFeelingIntegrationDescription} ...
+
 Being this way, with the I’s and the feeling integrated with Awareness ...
 
 Notice what is it like now, when you imagine being in a situation where *${format(
@@ -589,9 +647,21 @@ What is it like, being this way?
             />
             <Answers
               answers={[
-                <Next>I feel more at ease</Next>,
-                <Next>It&apos;s more neutral</Next>,
-                <Next>I feel more resourcefull</Next>,
+                {
+                  text: 'I feel more at ease',
+                  onClick: () =>
+                    this.initialContextBeingThisWay('more at ease'),
+                },
+                {
+                  text: "It's more neutral",
+                  onClick: () =>
+                    this.initialContextBeingThisWay('more at neutral'),
+                },
+                {
+                  text: 'I feel more resourceful',
+                  onClick: () =>
+                    this.initialContextBeingThisWay('more resourceful'),
+                },
                 {
                   text: "It's better but there's still something left",
                   onClick: () =>
@@ -617,6 +687,114 @@ What is it like, being this way?
             <Markdown
               className="tool-text"
               source={`
+## "Being This Way" In The Past
+
+And ${initialContextBeingThisWayAnswer} ...
+
+And check how it is being this way in two situations in the past of *${experience.trim()}*
+`}
+            />
+            <Answers
+              answers={[
+                {
+                  text: 'I feel more at ease',
+                  onClick: () =>
+                    this.initialContextBeingThisWayInThePast('more at ease'),
+                },
+                {
+                  text: "It's more neutral",
+                  onClick: () =>
+                    this.initialContextBeingThisWayInThePast('more at neutral'),
+                },
+                {
+                  text: 'I feel more resourceful',
+                  onClick: () =>
+                    this.initialContextBeingThisWayInThePast(
+                      'more resourceful',
+                    ),
+                },
+                {
+                  text: "It's better but there's still something left",
+                  onClick: () =>
+                    global.alert(
+                      "it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?",
+                    ),
+                },
+                {
+                  text:
+                    "It's exactly the same as before, I don't percieve any change",
+                  onClick: () =>
+                    global.alert(
+                      "it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?",
+                    ),
+                },
+                dontUnderstand,
+                back,
+              ]}
+            />
+          </div>,
+
+          <div>
+            <Markdown
+              className="tool-text"
+              source={`
+## "Being This Way" In The Future
+
+And ${initialContextBeingThisWayInThePastAnswer} ...
+
+And check how it is being this way in three more future scenarios of *${experience.trim()}*
+`}
+            />
+            <Answers
+              answers={[
+                {
+                  text: 'I feel more at ease',
+                  onClick: () =>
+                    this.initialContextBeingThisWayInTheFuture('more at ease'),
+                },
+                {
+                  text: "It's more neutral",
+                  onClick: () =>
+                    this.initialContextBeingThisWayInTheFuture(
+                      'more at neutral',
+                    ),
+                },
+                {
+                  text: 'I feel more resourceful',
+                  onClick: () =>
+                    this.initialContextBeingThisWayInTheFuture(
+                      'more resourceful',
+                    ),
+                },
+                {
+                  text: "It's better but there's still something left",
+                  onClick: () =>
+                    global.alert(
+                      "it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?",
+                    ),
+                },
+                {
+                  text:
+                    "It's exactly the same as before, I don't percieve any change",
+                  onClick: () =>
+                    global.alert(
+                      "it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?",
+                    ),
+                },
+                dontUnderstand,
+                back,
+              ]}
+            />
+          </div>,
+
+          <div>
+            <Markdown
+              className="tool-text"
+              source={`
+## Rejoicing Learning
+
+And ${initialContextBeingThisWayInTheFutureAnswer} ...
+
 Isn't it great you can learn so fast?
 
 [know others](FB_SHARE) that can enjoy that as well?
