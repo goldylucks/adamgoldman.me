@@ -44,8 +44,10 @@ class ToolPage extends React.Component {
     this.goToStep(0);
   };
 
-  back = () => this.goToStep(this.state.currentStep - 1);
-  next = () => this.goToStep(this.state.currentStep + 1);
+  back = n =>
+    this.goToStep(this.state.currentStep - (typeof n === 'number' ? n : 1));
+  next = n =>
+    this.goToStep(this.state.currentStep + (typeof n === 'number' ? n : 1));
 
   goToStep = step => {
     scrollToElem(document.querySelector('#main-layout'), 0, 300);

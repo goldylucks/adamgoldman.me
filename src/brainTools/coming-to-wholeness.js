@@ -11,7 +11,7 @@ import Markdown from '../components/Markdown';
 import Answers from '../routes/brainTool/components/Answers';
 import type { Props } from '../routes/brainTool/components/toolPageProps';
 
-export const stepCount = 19;
+export const stepCount = 22;
 export const title = 'Coming To Wholeness';
 export const IS_DRAFT = true;
 export const nick = 'whole';
@@ -19,9 +19,10 @@ export const nick = 'whole';
 export const description = `A PRACTICAL step by step tool for non "enlightment"`;
 
 const format = str =>
+  str &&
   str
-    .replace(/my /g, 'your ') // negate instances of "my" NOT followed by space (i.e. watermelon)
-    .replace(/me /g, 'you ') // negate instances of "me" NOT followed by space (i.e. mercy, merged,)
+    .replace(/my(?![a-zA-Z])/g, 'your')
+    .replace(/me(?![a-zA-Z])/g, 'you')
     .trim();
 
 class ComingToWholeness extends React.Component {
@@ -31,16 +32,18 @@ class ComingToWholeness extends React.Component {
     feelingLocation: '',
     feelingShapeSize: '',
     feelingSensationQuality: '',
-    firstILocation: '',
-    firstISizeShape: '',
-    firstISensationQuality: '',
-    firstIAcceptsInvitation: '',
-    firstIDissolvingDescription: '',
+    nextILocation: '',
+    nextISizeShape: '',
+    nextISensationQuality: '',
+    nextIDissolvingDescription: '',
     firstFeelingIntegrationDescription: '',
     firstFeelingCompareAnswer: '',
     initialContextBeingThisWayAnswer: '',
     initialContextBeingThisWayInThePastAnswer: '',
     initialContextBeingThisWayInTheFutureAnswer: '',
+    isFirstTimeInFindingIsLocation: true,
+    isSecondTimeInFindingIsLocation: false,
+    Is: [],
   };
 
   experienceChange = evt => this.setState({ experience: evt.target.value });
@@ -51,16 +54,19 @@ class ComingToWholeness extends React.Component {
     this.setState({ feelingShapeSize: evt.target.value });
   feelingSensationQualityChange = evt =>
     this.setState({ feelingSensationQuality: evt.target.value });
-  firstILocationChange = evt =>
-    this.setState({ firstILocation: evt.target.value });
-  firstISizeShapeChange = evt =>
-    this.setState({ firstISizeShape: evt.target.value });
-  firstISensationQualityChange = evt =>
-    this.setState({ firstISensationQuality: evt.target.value });
-  firstIAcceptsInvitationChange = evt =>
-    this.setState({ firstIAcceptsInvitation: evt.target.value });
-  firstIDissolvingDescriptionChange = evt =>
-    this.setState({ firstIDissolvingDescription: evt.target.value });
+
+  nextILocationChange = evt =>
+    this.setState({ nextILocation: evt.target.value });
+
+  nextISizeShapeChange = evt =>
+    this.setState({ nextISizeShape: evt.target.value });
+
+  nextISensationQualityChange = evt =>
+    this.setState({ nextISensationQuality: evt.target.value });
+
+  nextIDissolvingDescriptionChange = evt =>
+    this.setState({ nextIDissolvingDescription: evt.target.value });
+
   firstFeelingIntegrationDescriptionChange = evt =>
     this.setState({ firstFeelingIntegrationDescription: evt.target.value });
   props: Props;
@@ -85,15 +91,105 @@ class ComingToWholeness extends React.Component {
       this.props.onNext(),
     );
 
+  submitILocation = evt => {
+    evt.preventDefault();
+    this.setState({
+      Is: this.state.Is.concat({ location: this.state.nextILocation }),
+    });
+    this.props.onNext();
+  };
+
+  submitISizeShape = evt => {
+    evt.preventDefault();
+    const nextIs = [...this.state.Is];
+    nextIs[nextIs.length - 1].sizeShape = this.state.nextISizeShape;
+    this.setState({ Is: nextIs });
+    this.props.onNext();
+  };
+
+  // remove I from the array, since "submit I Location" will push a new one
+  ISizeShapeStepBack = () => {
+    const nextIs = [...this.state.Is];
+    nextIs.pop();
+    this.setState({ Is: nextIs });
+  };
+
+  submitISensationQuality = evt => {
+    evt.preventDefault();
+    const nextIs = [...this.state.Is];
+    nextIs[
+      nextIs.length - 1
+    ].sensationQuality = this.state.nextISensationQuality;
+    this.setState({ Is: nextIs });
+    this.props.onNext();
+  };
+
+  confirmIDecliningInvitation = () => {
+    const {
+      isFirstTimeInFindingIsLocation,
+      isSecondTimeInFindingIsLocation,
+    } = this.state;
+    if (isFirstTimeInFindingIsLocation) {
+      this.setState({
+        isFirstTimeInFindingIsLocation: false,
+        isSecondTimeInFindingIsLocation: true,
+      });
+    } else if (isSecondTimeInFindingIsLocation) {
+      this.setState({ isSecondTimeInFindingIsLocation: false });
+    }
+    this.setState({
+      nextILocation: '',
+      nextISizeShape: '',
+      nextISensationQuality: '',
+    });
+    this.props.onBack(4);
+  };
+
+  allowCompleteIntegration = () => {
+    const nextIs = [...this.state.Is];
+    nextIs.pop();
+    this.setState({
+      Is: nextIs,
+      nextIDissolvingDescription: '',
+    });
+    if (nextIs.length) {
+      this.props.onNext();
+      return;
+    }
+    this.props.onNext(3);
+  };
+
+  previousICompare = str =>
+    this.setState({ previousICompareAnswer: str }, this.props.onNext());
+
+  lastI() {
+    return this.state.Is[this.state.Is.length - 1] || {}; // empty object to avoid undefined errors
+  }
+
+  INumberInWords(add = 0) {
+    const n = this.state.Is.length + add;
+    if (n === 1) return 'First';
+    if (n === 2) return 'Second';
+    if (n === 3) return 'Third';
+    if (n === 4) return 'Fourth';
+    if (n === 5) return 'Fifth';
+    if (n === 6) return 'Sixth';
+    if (n === 7) return 'Seventh';
+    if (n === 8) return 'Eigth';
+    if (n === 9) return 'Ninth';
+    if (n === 10) return 'Tenth';
+    return `${n}th`;
+  }
+
   render() {
     const {
       renderStep,
       onShareWithAdam,
       onUserInputSubmit,
       onRestart,
-      letsContinue,
       onNext,
       back,
+      onBack,
       dontUnderstand,
       Next,
     } = this.props;
@@ -103,16 +199,18 @@ class ComingToWholeness extends React.Component {
       feelingLocation,
       feelingShapeSize,
       feelingSensationQuality,
-      firstILocation,
-      firstISizeShape,
-      firstISensationQuality,
-      firstIAcceptsInvitation,
-      firstIDissolvingDescription,
+      nextILocation,
+      nextISizeShape,
+      nextISensationQuality,
+      nextIDissolvingDescription,
       firstFeelingIntegrationDescription,
       firstFeelingCompareAnswer,
       initialContextBeingThisWayAnswer,
       initialContextBeingThisWayInThePastAnswer,
       initialContextBeingThisWayInTheFutureAnswer,
+      isFirstTimeInFindingIsLocation,
+      isSecondTimeInFindingIsLocation,
+      previousICompareAnswer,
     } = this.state;
     return (
       <div>
@@ -273,7 +371,7 @@ And *${format(feelingShapeSize)}* ...
 
 And when it's *${format(feelingShapeSize)}*, and it's *${format(
                 feelingLocation,
-              )}*, what is it's sensation quality?
+              )}*, **what's it's sensation quality?**
 
 (E.g. “It’s fuzzy and a bit prickly.”)
 `}
@@ -368,11 +466,15 @@ When I refer to Awareness, I'm pointing to this capacity to notice, that is thro
             <Markdown
               className="tool-text"
               source={`
-## First "I" - Location
+## ${this.INumberInWords(1)} "I" - Location
 
+
+${!isFirstTimeInFindingIsLocation
+                ? ''
+                : `
 Now with [your permission](TITLE_or_without_it,_I'm_running_the_show_here_;\\)) let’s return to this statement, *“I am aware of this ${format(
-                feelingSensationQuality,
-              )} sensation ${format(feelingLocation)}”* ...
+                    feelingSensationQuality,
+                  )} sensation ${format(feelingLocation)}”* ...
 
 Where is the "I", that is aware of this sensation...? Where is this "I" located?
 
@@ -384,13 +486,36 @@ And what location do you notice?
 
 Another way of experiencing this is asking *“Where is the perceiving happening from?”*
 
-i.e. *"it's about 2 meters in front of me, slightly to the right"*
+E.g.*"it's in front of me, pretty close, slightly to the right"*
+`}
+
+
+${!isSecondTimeInFindingIsLocation
+                ? ''
+                : `
+So where is the ‘I’ that notices this? ...
+
+Again it's a weird question, but you have a bit more experience with this right now
+
+Where is the perceiving of this happening from?
+E.g.*"it's further away, about 2 meters slightly above eye level"*
+`}
+
+
+${isFirstTimeInFindingIsLocation || isSecondTimeInFindingIsLocation
+                ? ''
+                : `
+So where is the ‘I’ that notices this? ...
+
+Where is the perceiving of this happening from?  
+`}
+
 `}
             />
-            <form onSubmit={onUserInputSubmit} className="tool-form">
+            <form onSubmit={this.submitILocation} className="tool-form">
               <input
-                value={firstILocation}
-                onChange={this.firstILocationChange}
+                value={nextILocation}
+                onChange={this.nextILocationChange}
                 placeholder="It’s ..."
                 className="input"
                 required
@@ -404,51 +529,57 @@ i.e. *"it's about 2 meters in front of me, slightly to the right"*
             <Markdown
               className="tool-text"
               source={`
-## First "I" - Size & Shape
+                
+## ${this.INumberInWords()} "I" - Size & Shape
 
-And *${format(firstILocation)}* ...
+And *${format(nextILocation)}* ...
 
 And when it's *${format(
-                firstILocation,
-              )}*, what is the size & shape of this ‘I’, when it's *${format(
-                firstILocation,
+                nextILocation,
+              )}*, **what is the size & shape of this ‘I’**, when it's *${format(
+                nextILocation,
               )}*?
 `}
             />
-            <form onSubmit={onUserInputSubmit} className="tool-form">
+            <form onSubmit={this.submitISizeShape} className="tool-form">
               <input
-                value={firstISizeShape}
-                onChange={this.firstISizeShapeChange}
+                value={nextISizeShape}
+                onChange={this.nextISizeShapeChange}
                 placeholder="It’s ..."
                 className="input"
                 required
               />
               <button className="button">let&apos;s continue</button>
             </form>
-            <Answers answers={[dontUnderstand, back]} />
+            <Answers
+              answers={[
+                dontUnderstand,
+                { text: 'back', onClick: this.ISizeShapeStepBack },
+              ]}
+            />
           </div>,
 
           <div>
             <Markdown
               className="tool-text"
               source={`
-## First "I" - Sensation Quality
+## ${this.INumberInWords()} "I" - Sensation Quality
 
-And *${format(firstISizeShape)}* ...
+And *${format(nextISizeShape)}* ...
 
-And when it's *${format(firstISizeShape)}*, and it's *${format(
-                firstILocation,
-              )}*, what's the sensation quality of this *${format(
-                firstISizeShape,
-              )}* that’s *${format(firstILocation)}*?
+And when it's *${format(nextISizeShape)}*, and it's *${format(
+                nextILocation,
+              )}*, **what's the sensation quality** of this *${format(
+                nextISizeShape,
+              )}* that’s *${format(nextILocation)}*?
 
 E.g foggy, clear, dense, or empty, heavy, light, vibrating, still, etc.
 `}
             />
-            <form onSubmit={onUserInputSubmit} className="tool-form">
+            <form onSubmit={this.submitISensationQuality} className="tool-form">
               <input
-                value={firstISensationQuality}
-                onChange={this.firstISensationQualityChange}
+                value={nextISensationQuality}
+                onChange={this.nextISensationQualityChange}
                 placeholder="The sensation quality is ..."
                 className="input"
                 required
@@ -462,48 +593,75 @@ E.g foggy, clear, dense, or empty, heavy, light, vibrating, still, etc.
             <Markdown
               className="tool-text"
               source={`
-## First "I" - Inviting Integration
+## ${this.INumberInWords()} "I" - Inviting Integration
 
-And ${firstISensationQuality} ...
+And ${nextISensationQuality} ...
 
-And when this ‘I’ is ${format(firstILocation)} ...
+And when this ‘I’ is ${format(nextILocation)} ...
 
-and ${format(firstISensationQuality)} ...
+and ${format(nextISensationQuality)} ...
 
 Does the sensation of this ‘I’ welcome the invitation to open and relax as the fullness of Awareness?
 
 Some people prefer to notice what happens when the fullness of Awareness... all of consciousness... is invited to flow in and as... the sensation ${format(
-                firstILocation,
+                nextILocation,
               )}.
 
 Or, it may feel like the Awareness already present in ${format(
-                firstILocation,
+                nextILocation,
               )}, wakes up to itself.
 
 It matters less if the answer is ‘Yes’ or ‘No’, It just tells us what to do next.
 `}
             />
-            <form onSubmit={onUserInputSubmit} className="tool-form">
-              <select
-                value={firstIAcceptsInvitation}
-                onChange={this.firstIAcceptsInvitationChange}
-                className="select"
-                required
-              >
-                <option value="">Yes / no</option>
-                <option value="no">No</option>
-                <option value="yes">Yes</option>
-              </select>
-              <button className="button">let&apos;s continue</button>
-            </form>
-            <Answers answers={[dontUnderstand, back]} />
+
+            <Answers
+              answers={[
+                <Next>No</Next>,
+                {
+                  text: 'Yes',
+                  onClick: () => {
+                    onNext(2);
+                  },
+                },
+                dontUnderstand,
+                back,
+              ]}
+            />
           </div>,
 
           <div>
             <Markdown
               className="tool-text"
               source={`
-## First "I" - Experiencing Integration
+## ${this.INumberInWords()} "I" - Acknolwedging
+
+And no ...
+
+And you just noticed the sensation here - **${this.lastI()
+                .location}** -  doesn’t welcome the invitation to open and relax, right?
+      `}
+            />
+            <Answers
+              answers={[
+                { text: `Correct`, onClick: this.confirmIDecliningInvitation },
+                {
+                  text: `Right, the sensation - ${this.lastI()
+                    .location} - doesn't welcome the invitationto open and relax`,
+                  onClick: this.confirmIDecliningInvitation,
+                },
+                <Next>Actually it does accept the invitation now</Next>,
+                dontUnderstand,
+                back,
+              ]}
+            />
+          </div>,
+
+          <div>
+            <Markdown
+              className="tool-text"
+              source={`
+## ${this.INumberInWords()} "I" - Experiencing Integration
 
 And yes ...
 
@@ -518,9 +676,9 @@ And what happens?
             />
             <form onSubmit={onUserInputSubmit} className="tool-form">
               <input
-                value={firstIDissolvingDescription}
-                onChange={this.firstIDissolvingDescriptionChange}
-                className="textarea"
+                value={nextIDissolvingDescription}
+                onChange={this.nextIDissolvingDescriptionChange}
+                className="input"
                 placeholder="I feel ..."
                 required
               />
@@ -533,19 +691,31 @@ And what happens?
             <Markdown
               className="tool-text"
               source={`
-## First "I" - Allowing Complete Integration
+## ${this.INumberInWords()} "I" - Allowing Complete Integration
 
-And *${format(firstIDissolvingDescription)}* ...
+And *${format(nextIDissolvingDescription)}* ...
 
 And if you are experiencing a relaxing, melting, or dissolving, just stay with it until things settle. Enjoy the sense of relaxation, peace or flow as long as you like.
 `}
             />
             <Answers
               answers={[
-                <Next>I&apos;m experiencing more relaxing ...</Next>,
-                <Next>I&apos;m experiencing more melting ...</Next>,
-                <Next>I&apos;m experiencing more dissolving ...</Next>,
-                letsContinue,
+                {
+                  text: "I'm experiencing more relaxing ...",
+                  onClick: this.allowCompleteIntegration,
+                },
+                {
+                  text: "I'm experiencing more melting ...",
+                  onClick: this.allowCompleteIntegration,
+                },
+                {
+                  text: "I'm experiencing more dissolving ...",
+                  onClick: this.allowCompleteIntegration,
+                },
+                {
+                  text: 'I feel the integration is complete ...',
+                  onClick: this.allowCompleteIntegration,
+                },
                 dontUnderstand,
                 back,
               ]}
@@ -556,7 +726,77 @@ And if you are experiencing a relaxing, melting, or dissolving, just stay with i
             <Markdown
               className="tool-text"
               source={`
-## Circling Back
+## Circling Back - Previous I
+
+Now let's check with the ‘I’ that was ${format(this.lastI().location)}.
+
+First notice, is it the same as it was before, or is it a little bit different? Either is fine.
+      `}
+            />
+            <Answers
+              answers={[
+                {
+                  text: "It's exactly the same as before",
+                  onClick: () =>
+                    this.previousICompare('exactly the same as before'),
+                },
+                {
+                  text: "It's a bit different than before",
+                  onClick: () =>
+                    this.previousICompare('a bit different than before'),
+                },
+                {
+                  text: "It's very different than before",
+                  onClick: () =>
+                    this.previousICompare('very different than before'),
+                },
+                dontUnderstand,
+                back,
+              ]}
+            />
+          </div>,
+
+          <div>
+            <Markdown
+              className="tool-text"
+              source={`
+## Circling Back - Previous I - Inviting Integration
+
+And It's ${previousICompareAnswer} ...
+
+And now notice what happens, when this sensation of this "I" here - ${format(
+                this.lastI().location,
+              )} - is invited to open and relax ... as the fullness of Awareness ... There can be an allowing of this to happen in its own way.  
+
+Does the sensation of this ‘I’ welcome the invitation to open and relax as the fullness of Awareness?
+
+You might prefer to notice what happens when the fullness of Awareness... all of consciousness... is invited to flow in and as... the sensation ${format(
+                this.lastI().location,
+              )}.
+
+Or, it may feel like the Awareness already present in ${format(
+                this.lastI().location,
+              )}, wakes up to itself.
+
+It matters less if the answer is ‘Yes’ or ‘No’, It just tells us what to do next.
+`}
+            />
+
+            <Answers
+              answers={[
+                { text: 'Yes', onClick: () => onBack(3) },
+                { text: 'No', onClick: () => onBack(4) },
+                dontUnderstand,
+                back,
+              ]}
+            />
+          </div>,
+
+          <div>
+            <Markdown
+              className="tool-text"
+              source={`
+## Circling Back - Where We Started
 
 Now let’s return to the area that you started with, *${format(
                 feelingLocation,
