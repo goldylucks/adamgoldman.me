@@ -42,7 +42,6 @@ const BlogPost = ({ title, tags, body, html, nick, ps }: Props) => (
         // eslint-disable-next-line react/no-danger
         <div dangerouslySetInnerHTML={{ __html: html }} />
       )}
-      <div dangerouslySetInnerHTML={{ __html: html }} />
       <FbPageBox style={{ display: 'block', textAlign: 'center' }} />
       <hr />
       <div style={{ marginBottom: 20 }}>
