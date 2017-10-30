@@ -17,10 +17,21 @@ type Props = {
   body: string,
   html: string,
   nick: string,
+  isBodyRtl?: boolean, // eslint-disable-line react/require-default-props
+  isTitleRtl?: boolean, // eslint-disable-line react/require-default-props
   ps?: string, // eslint-disable-line react/require-default-props
 };
 
-const BlogPost = ({ title, tags, body, html, nick, ps }: Props) => (
+const BlogPost = ({
+  title,
+  isTitleRtl,
+  tags,
+  body,
+  isBodyRtl,
+  html,
+  nick,
+  ps,
+}: Props) => (
   <div>
     <div className="main-layout post-page">
       <div
@@ -35,9 +46,16 @@ const BlogPost = ({ title, tags, body, html, nick, ps }: Props) => (
         />
         <FbShareButton />
       </div>
-      <h1 className="main-title">{title}</h1>
+      <h1
+        className="main-title"
+        style={{ direction: isTitleRtl ? 'rtl' : 'ltr' }}
+      >
+        {title}
+      </h1>
       <Tags tags={tags} />
-      <Markdown className="post-text" source={body} />
+      <div style={{ direction: isBodyRtl ? 'rtl' : 'ltr' }}>
+        <Markdown className="post-text" source={body} />
+      </div>
       {html && (
         // eslint-disable-next-line react/no-danger
         <div dangerouslySetInnerHTML={{ __html: html }} />

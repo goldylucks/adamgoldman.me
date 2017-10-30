@@ -37,3 +37,52 @@ export const getSlug = item => {
   }
   return `/${item.type}/${item.url}`;
 };
+
+const parseFbMsg = ({ type, html, alt, src, style, duration }) => {
+  if (type === 'voiceMsg') {
+    return `Voice msg - Duration: ${duration}`;
+  }
+
+  if (type === 'sticker') {
+    return `<div style="${style}"></div>`;
+  }
+
+  if (type === 'emoticon' || type === 'image') {
+    return `<img alt=${alt} src=${src} />`;
+  }
+
+  if (type === 'likeSticker') {
+    return '{LIKE}';
+  }
+
+  if (type === 'textWithHtml') {
+    return html;
+  }
+
+  if (type === 'textWithEmoticon') {
+    return html;
+  }
+
+  if (type === 'text') {
+    return html;
+  }
+  console.error('Caught message with no type, that shoul not happen!');
+  return '';
+};
+
+export const parseFbConversation = arrOfMsgs =>
+  arrOfMsgs
+    .map(({ author, content }) => {
+      if (author === 'time') {
+        return `<div class="chat-message-time">${content}</div>`;
+      }
+      return content
+        .map(
+          msg =>
+            `<div class="chat-message-container clearfix ${author} ${msg.isRtl
+              ? 'rtl'
+              : ''}"><div class="chat-message">${parseFbMsg(msg)}</div></div>`,
+        )
+        .join('');
+    })
+    .join('');

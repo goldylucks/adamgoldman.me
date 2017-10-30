@@ -42,6 +42,10 @@ ul {
   margin-left: 20px;
 }
 
+.rtl {
+  direction: rtl;
+}
+
 /* slide menu */
 .cbp-spmenu {
   background: #595762;
