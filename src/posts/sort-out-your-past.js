@@ -14,12 +14,12 @@ In all your XX years on our odd little planet, you had many experiences, some mo
 I want you now to open your favorite notepad and list all the big events you had in your life, ones that make you feel good and the ones which made you feel bad in the past, and list them in chronological order, like this example:
 (years old - years old)
 
-5 years old - Fabulous memory of my mom playing with me and singing (happiness, love)
-6 years old - big fight with a family member (anger, frustration)
-9 years old - Teacher commands me to solve a problem in front of everyone and I was terrified (the most common fear and shame feeling across the world btw)
-11 years old - sexually abused by family member (fear, physical pain, helplessness)
-15 years old - car accident, my uncle was driving (shock, panic, physical pain)
-17 years old - Boyfriend / Girlfriend looks into my eyes in the most loving way (love, butterflies)
+- 5 years old - Fabulous memory of my mom playing with me and singing (happiness, love)
+- 6 years old - big fight with a family member (anger, frustration)
+- 9 years old - Teacher commands me to solve a problem in front of everyone and I was terrified (the most common fear and shame feeling across the world btw)
+- 11 years old - sexually abused by family member (fear, physical pain, helplessness)
+- 15 years old - car accident, my uncle was driving (shock, panic, physical pain)
+- 17 years old - Boyfriend / Girlfriend looks into my eyes in the most loving way (love, butterflies)
 
 ## Negative events and feelings to sort through
 
