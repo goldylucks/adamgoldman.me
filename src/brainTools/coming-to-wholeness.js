@@ -20,8 +20,8 @@ export const description = `A PRACTICAL step by step tool for non "enlightment"`
 const format = str =>
   str &&
   str
-    .replace(/my(?![a-zA-Z])/g, 'your')
-    .replace(/me(?![a-zA-Z])/g, 'you')
+    .replace(/\bme\b/g, 'you')
+    .replace(/\bmy\b/g, 'your')
     .trim();
 
 class ComingToWholeness extends React.Component {
