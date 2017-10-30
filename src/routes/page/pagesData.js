@@ -2,7 +2,7 @@
   export default [
   {
     "title": "Book Me",
-    "description": "The meaningless legal part of Mr. Adam Goldman site",
+    "description": "Why will you want to book me to pass information to you in an effective way",
     "tags": [],
     "url": "book-me"
   },
@@ -14,7 +14,7 @@
   },
   {
     "title": "Let's talk?",
-    "description": "The meaningless legal part of Mr. Adam Goldman site",
+    "description": "Choose how you'd like to talk to me online",
     "tags": [],
     "url": "lets-talk"
   },

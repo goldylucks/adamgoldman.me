@@ -30,6 +30,11 @@
     "url": "nail-biting-destroyer"
   },
   {
+    "title": "Coming To Wholeness",
+    "description": "A PRACTICAL step by step tool for non \"enlightment\"",
+    "url": "coming-to-wholeness"
+  },
+  {
     "title": "I bet you never designed your perfect day",
     "description": "Design your future",
     "url": "perfect-day"

@@ -13,7 +13,6 @@ import type { Props } from '../routes/brainTool/components/toolPageProps';
 
 export const stepCount = 22;
 export const title = 'Coming To Wholeness';
-export const IS_DRAFT = true;
 export const nick = 'whole';
 // eslint-disable-next-line prettier/prettier
 export const description = `A PRACTICAL step by step tool for non "enlightment"`;
@@ -1078,3 +1077,31 @@ Source: I've adapted this [tool](/tools/) from Connirae's [Wholeness Process](ht
 }
 
 export default ComingToWholeness;
+
+/* Steps
+
+- Background
+- Choose Experience
+- Initial Feeling
+- Initial Feeling - location
+- Initial Feeling - Size & Shape
+- Initial Feeling - Sensation Quality
+- Noticing Awareness
+- Experiencing Practical Awareness
+- ${this.INumberInWords()} "I" - Location
+- ${this.INumberInWords()} "I" - Size & Shape
+- ${this.INumberInWords()} "I" - Sensation Quality
+- ${this.INumberInWords()} "I" - Inviting Integration
+- ${this.INumberInWords()} "I" - Acknolwedging
+- ${this.INumberInWords()} "I" - Experiencing Integration
+- ${this.INumberInWords()} "I" - Allowing Complete Integration
+- Circling Back - Previous I
+- Circling Back - Previous I - Inviting Integration
+- Circling Back - Where We Started
+- Circling Back - Inviting Integration
+- Circling Back - Initial Context
+- "Being This Way" In The Past
+- "Being This Way" In The Future
+- Rejoicing Learning
+
+*/
