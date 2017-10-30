@@ -315,7 +315,7 @@ Describe your response in one short sentence.
 
 And *${feel}* ...
 
-And when you feel *${feel}*, where is this feeling of *${feel}* located, when you feel *${feel}*?
+And when you feel *${feel}*, **where is this feeling** of *${feel}* located, when you feel *${feel}*?
 
 (E.g. “in my chest.”)
 `}
@@ -342,7 +342,7 @@ And *${format(feelingLocation)}* ...
 
 And when it's *${format(
                 feelingLocation,
-              )}*, and it's a *${feel}* feeling, notice it's size & shape, when it's *${format(
+              )}*, and it's a *${feel}* feeling, **notice it's size & shape**, when it's *${format(
                 feelingLocation,
               )}*, and it's a *${feel}* feeling.
 
@@ -472,9 +472,7 @@ When I refer to Awareness, I'm pointing to this capacity to notice, that is thro
 ${!isFirstTimeInFindingIsLocation
                 ? ''
                 : `
-Now with [your permission](TITLE_or_without_it,_I'm_running_the_show_here_;\\)) let’s return to this statement, *“I am aware of this ${format(
-                    feelingSensationQuality,
-                  )} sensation ${format(feelingLocation)}”* ...
+Now with [your permission](TITLE_or_without_it,_I'm_running_the_show_here_;\\)) let’s return to this statement, *“I am aware of this ${feelingSensationQuality} sensation ${feelingLocation}”* ...
 
 Where is the "I", that is aware of this sensation...? Where is this "I" located?
 
@@ -607,7 +605,7 @@ Some people prefer to notice what happens when the fullness of Awareness... all 
                 nextILocation,
               )}.
 
-Or, it may feel like the Awareness already present in ${format(
+Or, it may feel like the Awareness already present ${format(
                 nextILocation,
               )}, wakes up to itself.
 
