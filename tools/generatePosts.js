@@ -1,5 +1,3 @@
-/* eslint no-use-before-define: 0 */
-
 import path from 'path';
 import fs from 'fs';
 
