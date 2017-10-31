@@ -36,3 +36,7 @@ export function updateCustomMeta(property, content) {
 export function updateLink(rel, href) {
   updateTag('link', 'rel', rel, 'href', href);
 }
+
+export function scrollElem() {
+  return document.querySelector('#main-layout');
+}

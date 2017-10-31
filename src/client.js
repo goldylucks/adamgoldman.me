@@ -53,8 +53,8 @@ if (window.history && 'scrollRestoration' in window.history) {
 async function onLocationChange(location, action) {
   // Remember the latest scroll position for the previous location
   scrollPositionsHistory[currentLocation.key] = {
-    scrollX: window.pageXOffset,
-    scrollY: window.pageYOffset,
+    scrollX: document.querySelector('#main-layout').scrollTop,
+    scrollY: document.querySelector('#main-layout').scrollLeft,
   };
   // Delete stored scroll position for next page if any
   if (action === 'PUSH') {
@@ -94,7 +94,7 @@ async function onLocationChange(location, action) {
           if (elem) elem.parentNode.removeChild(elem);
           return;
         }
-        document.querySelector('#main-layout').scrollTop = 0;
+
         document.title = route.title;
         updateMeta('description', route.description);
         updateMeta('url', DOMAIN + route.path);
@@ -112,7 +112,9 @@ async function onLocationChange(location, action) {
           if (targetHash) {
             const target = document.getElementById(targetHash);
             if (target) {
-              scrollY = window.pageYOffset + target.getBoundingClientRect().top;
+              scrollY =
+                document.querySelector('#main-layout').pageYOffset +
+                target.getBoundingClientRect().top;
             }
           }
         }
@@ -120,7 +122,8 @@ async function onLocationChange(location, action) {
         // Restore the scroll position if it was saved into the state
         // or scroll to the given #hash anchor
         // or scroll to top of the page
-        window.scrollTo(scrollX, scrollY);
+        document.querySelector('#main-layout').scrollTop = scrollX;
+        document.querySelector('#main-layout').scrollLeft = scrollY;
 
         // Google Analytics tracking. Don't send 'pageview' event after
         // the initial rendering, as it was already sent
