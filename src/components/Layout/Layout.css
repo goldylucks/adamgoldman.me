@@ -8,6 +8,7 @@
   width: 75%;
   background: #1a7ced;
   position: relative;
+  padding: 10px;
 }
 
 .sidebar {
@@ -16,4 +17,22 @@
   position: fixed;
   right: 0;
   height: 100%;
+}
+
+/* mobile */
+@media (max-width: 800px) {
+  .appWrapper {
+    flex-direction: column-reverse;
+    min-height: 100vh;
+    height: auto;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: static;
+  }
+  
+  .mainContent {
+    width: 100%;
+  }
 }

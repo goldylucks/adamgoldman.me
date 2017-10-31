@@ -35,7 +35,10 @@ class Menu extends React.Component {
 
   render() {
     return (
-      <ClickOutside onClickOutside={this.close} className="clearfix">
+      <ClickOutside
+        onClickOutside={this.close}
+        className={`clearfix ${s.container}`}
+      >
         <div onClick={this.toggle} className={s.hamburgerWrap}>
           <div className={s.hamburger} />
         </div>

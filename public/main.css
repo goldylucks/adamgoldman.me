@@ -46,6 +46,10 @@ ul {
   direction: rtl;
 }
 
+.mobile-show { 
+  display: none
+}
+
 /* slide menu */
 .cbp-spmenu {
   background: #595762;
@@ -440,4 +444,13 @@ a[data-title]:hover:after {
 
 .messenger-fixed:hover {
   opacity: 1;
+}
+
+@media (max-width: 800px) {
+  .mobile-hide { 
+    display: none;
+  }
+  .mobile-show {
+    display: block;
+  }
 }

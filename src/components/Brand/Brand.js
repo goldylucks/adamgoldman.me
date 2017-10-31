@@ -14,9 +14,15 @@ const Brand = () => (
   <section className={s.brand}>
     <Link to="/">
       <img
-        className={s.logo}
+        className={`${s.logo} mobile-hide`}
         alt="Adam Goldman logo"
         src={cloudImg('adamgoldman.me/logo')}
+      />
+
+      <img
+        className={`${s.logo} mobile-show`}
+        alt="Adam Goldman logo"
+        src={cloudImg('adamgoldman.me/profile-smiling')}
       />
     </Link>
     <header>
