@@ -118,7 +118,7 @@
     "tags": [
       "Successes",
       "Panic Attacks",
-      "Healing Physical Pain"
+      "Physical Pain"
     ],
     "url": "ron-diving-panic-and-physical-pain"
   },
@@ -134,7 +134,7 @@
     "title": "Shedding Mother's Grief With Extra Weight",
     "tags": [
       "Successes",
-      "Grief Resolution",
+      "Grief",
       "Weight Loss"
     ],
     "url": "shedding-grief-with-extra-weight"

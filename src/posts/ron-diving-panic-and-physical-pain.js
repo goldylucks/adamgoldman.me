@@ -2,7 +2,7 @@ import { cloudImg } from '../utils';
 
 export default {
   title: "Healing Ron's physical pain and diving panic",
-  tags: ['Successes', 'Panic Attacks', 'Healing Physical Pain'],
+  tags: ['Successes', 'Panic Attacks', 'Physical Pain'],
   nick: 'hindsight is always 19/19',
   body: `
 A nice little fellow at his early 30’s who’ve been through some wacky episodes in his life, which lead him to make two big ass tattoos across his chest he later regret.

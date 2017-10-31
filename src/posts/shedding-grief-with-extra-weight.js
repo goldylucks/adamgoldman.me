@@ -1,6 +1,6 @@
 export default {
   title: "Shedding Mother's Grief With Extra Weight",
-  tags: ['Successes', 'Grief Resolution', 'Weight Loss'],
+  tags: ['Successes', 'Grief', 'Weight Loss'],
   nick: 'dear mama',
   body: `
 Yael came to see me with cluttered unquiet mind, hiding a very sad look underneath. Her mother passed away a few years prior to seeing me, and she couldn’t “let go”. 

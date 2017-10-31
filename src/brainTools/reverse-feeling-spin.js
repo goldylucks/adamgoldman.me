@@ -13,7 +13,7 @@ import HowItsGoingToWorkStep from '../routes/brainTool/components/HowItsGoingToW
 import Answers from '../routes/brainTool/components/Answers';
 import type { Props } from '../routes/brainTool/components/toolPageProps';
 
-export const tags = ['Anxiety', 'Panic Attack'];
+export const tags = ['Anxiety', 'Panic Attack', 'Depression'];
 export const stepCount = 9;
 export const title = 'Reverse Feeling Spin';
 export const nick = 'fear in reverse is ...';

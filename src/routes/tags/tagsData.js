@@ -42,6 +42,10 @@
         "type": "blog"
       },
       {
+        "url": "shedding-grief-with-extra-weight",
+        "type": "blog"
+      },
+      {
         "url": "grief-to-appreciation",
         "type": "tools"
       }
@@ -207,6 +211,10 @@
       {
         "url": "reverse-feeling-spin",
         "type": "tools"
+      },
+      {
+        "url": "reverse-feeling-spin2",
+        "type": "tools"
       }
     ]
   },
@@ -223,6 +231,10 @@
       },
       {
         "url": "reverse-feeling-spin",
+        "type": "tools"
+      },
+      {
+        "url": "reverse-feeling-spin2",
         "type": "tools"
       }
     ]
@@ -246,6 +258,14 @@
       {
         "url": "rachel-turns-family-trauma-to-parody",
         "type": "blog"
+      },
+      {
+        "url": "reverse-feeling-spin",
+        "type": "tools"
+      },
+      {
+        "url": "reverse-feeling-spin2",
+        "type": "tools"
       }
     ]
   },
@@ -310,19 +330,10 @@
     ]
   },
   {
-    "title": "Healing Physical Pain",
+    "title": "Physical Pain",
     "items": [
       {
         "url": "ron-diving-panic-and-physical-pain",
-        "type": "blog"
-      }
-    ]
-  },
-  {
-    "title": "Grief Resolution",
-    "items": [
-      {
-        "url": "shedding-grief-with-extra-weight",
         "type": "blog"
       }
     ]
