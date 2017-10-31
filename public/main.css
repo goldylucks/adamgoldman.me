@@ -192,7 +192,7 @@ ul {
   color: #fff;
 }
 
-.post-text img:not(.ending-avatar),
+.post-text img:not(.ending-avatar):not([class*="_1ift"]),
 .page-text img {
   display: block;
   margin: 60px auto;
@@ -281,6 +281,7 @@ a[data-title]:hover:after {
 /* fb messages */
 .chat-message-container {
   margin-bottom: 15px;
+  display: block;
 }
 
 .chat-message {

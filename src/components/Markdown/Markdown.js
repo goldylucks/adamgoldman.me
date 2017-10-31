@@ -12,6 +12,34 @@ class Markdown extends React.Component {
         {...this.props}
         renderers={{
           Link: linkProps => {
+            if (linkProps.href.match(/adam|other/)) {
+              const href = linkProps.children[1];
+              if (href && href.includes && href.includes('://')) {
+                return (
+                  <span
+                    className={`chat-message-container clearfix ${linkProps.href}`}
+                  >
+                    <span className="chat-message">
+                      <a
+                        href={href}
+                        target="_blank"
+                        rel="nofollow noreferrer noopener"
+                      >
+                        {href}
+                      </a>
+                    </span>
+                  </span>
+                );
+              }
+              return (
+                <span
+                  className={`chat-message-container clearfix ${linkProps.href}`}
+                >
+                  <span className="chat-message">{linkProps.children}</span>
+                </span>
+              );
+            }
+
             if (linkProps.href.indexOf('STRIKE') === 0) {
               return <s>{linkProps.children}</s>;
             }
