@@ -9,14 +9,20 @@ type Props = {
   tags: Array<string>,
 };
 
-const Tags = ({ tags }: Props) =>
-  tags.map((t, idx) => (
-    <span>
-      {idx > 0 && ', '}
-      <Link style={{ color: 'inherit' }} to={`/tags/${titleToSlug(t)}`}>
-        {t}
-      </Link>
-    </span>
-  ));
+const Tags = ({ tags }: Props) => (
+  <div style={{ marginBottom: 5 }}>
+    {tags.map((t, idx) => (
+      <span>
+        {idx > 0 && ', '}
+        <Link
+          style={{ color: '#c8ffc8', textDecoration: 'none' }}
+          to={`/tags/${titleToSlug(t)}`}
+        >
+          {t}
+        </Link>
+      </span>
+    ))}
+  </div>
+);
 
 export default Tags;

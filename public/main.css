@@ -184,6 +184,11 @@ ul {
 .main-content a {
   text-decoration: underline;
   color: #96c7ff;
+  transition: 0.5s color;
+}
+
+.main-content a:hover {
+  color: #fff;
 }
 
 .post-text img:not(.ending-avatar),
