@@ -32,7 +32,7 @@ Talk soon`,
 
 Both of them do the exact same thing, I'm just curious which one your about to click :)
 
-**PSS**. If your not ready to contact me yet, go through some [results](/tag/people-ive-helped/) and [feedbacks](/reviews/) first.
+**PSS**. If your not ready to contact me yet, go through some [results](/successes/) and [feedbacks](/reviews/) first.
 
 [I'm not](TITLE_I_don't_do_the_'time-limited-discount-amazing-offers'_crap) [going anywhere](TITLE_Contact_me_when_u_r_ready_to_move_things_forward,_not_before).
 `,
