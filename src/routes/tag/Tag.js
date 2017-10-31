@@ -33,6 +33,8 @@ const items = tag =>
       return {}; // this should never happen
     });
 
+const toolsFirst = a => a.type !== 'tool';
+
 type Props = {
   tag: string,
 };
@@ -50,6 +52,7 @@ const Tag = ({ tag }: Props) => (
       <h1 className="main-title">{tag}</h1>
       {items(tag)
         .filter(filterDrafts)
+        .sort(toolsFirst)
         .map(i => (
           <article key={i.url}>
             <h1>

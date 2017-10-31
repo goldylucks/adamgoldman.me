@@ -45,6 +45,7 @@ class Menu extends React.Component {
           <Link to="/successes/">Successes</Link>
           <Link to="/reviews/">Students Share ...</Link>
           <Link to="/blog/">Blog</Link>
+          <Link to="/tags/">Tags</Link>
           <Link to="/book-me/">Book Me</Link>
           <Link to="/trainings/">Trainings</Link>
           <Link to="/quotes/">Quotes</Link>

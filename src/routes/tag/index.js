@@ -10,7 +10,7 @@ const tagSlugToTitle = tag =>
 function action({ params }) {
   return {
     chunks: ['tag'],
-    title: 'My Virtual Tag',
+    title: params.tag,
     path: `/tags/${params.tag}`,
     description: 'Some tag yo!',
     component: <Tag tag={tagSlugToTitle(params.tag)} />,
