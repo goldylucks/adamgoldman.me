@@ -17,7 +17,7 @@ import App from './components/App';
 import createFetch from './createFetch';
 import history from './history';
 import router from './router';
-import { updateMeta, updateCustomMeta } from './DOMUtils';
+import { updateMeta, updateCustomMeta, scrollElem } from './DOMUtils';
 import { DOMAIN } from './constants';
 
 // Global (context) variables that can be easily accessed from any React component
@@ -53,8 +53,8 @@ if (window.history && 'scrollRestoration' in window.history) {
 async function onLocationChange(location, action) {
   // Remember the latest scroll position for the previous location
   scrollPositionsHistory[currentLocation.key] = {
-    scrollX: document.querySelector('#main-layout').scrollTop,
-    scrollY: document.querySelector('#main-layout').scrollLeft,
+    scrollX: scrollElem().scrollTop,
+    scrollY: scrollElem().scrollLeft,
   };
   // Delete stored scroll position for next page if any
   if (action === 'PUSH') {
@@ -113,8 +113,7 @@ async function onLocationChange(location, action) {
             const target = document.getElementById(targetHash);
             if (target) {
               scrollY =
-                document.querySelector('#main-layout').pageYOffset +
-                target.getBoundingClientRect().top;
+                scrollElem().pageYOffset + target.getBoundingClientRect().top;
             }
           }
         }
@@ -122,8 +121,8 @@ async function onLocationChange(location, action) {
         // Restore the scroll position if it was saved into the state
         // or scroll to the given #hash anchor
         // or scroll to top of the page
-        document.querySelector('#main-layout').scrollTop = scrollX;
-        document.querySelector('#main-layout').scrollLeft = scrollY;
+        scrollElem().scrollTop = scrollX;
+        scrollElem().scrollLeft = scrollY;
 
         // Google Analytics tracking. Don't send 'pageview' event after
         // the initial rendering, as it was already sent
