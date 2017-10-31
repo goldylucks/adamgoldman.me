@@ -69,6 +69,7 @@ ul {
   transition: 0.3s;
 }
 
+.cbp-spmenu a.active,
 .cbp-spmenu a:hover {
   background: #1a7ced;
 }

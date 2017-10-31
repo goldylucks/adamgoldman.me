@@ -11,6 +11,7 @@ import s from './Menu.css';
 class Menu extends React.Component {
   state = {
     isOpen: false,
+    isMounted: false,
   };
 
   componentDidMount() {
@@ -19,11 +20,18 @@ class Menu extends React.Component {
         this.close();
       }
     });
+    this.setState({ isMounted: true }); // eslint-disable-line react/no-did-mount-set-state
   }
 
   toggle = () => this.setState({ isOpen: !this.state.isOpen });
 
   close = () => this.setState({ isOpen: false });
+
+  activeClass(to) {
+    return this.state.isMounted && window.location.pathname.split('/')[1] === to
+      ? { className: 'active' }
+      : {};
+  }
 
   render() {
     return (
@@ -38,19 +46,23 @@ class Menu extends React.Component {
             : ''}`}
         >
           <h3 onClick={this.toggle}>Menu</h3>
-          <Link to="/">Start Here</Link>
-          <Link to="/i-dont-charge-i-accept/">Pricing?</Link>
-          <Link to="/who-am-i-anyway/">who Am I Anyway</Link>
-          <Link to="/tools/">Brain Hacking Tools</Link>
-          <Link to="/successes/">Successes</Link>
-          <Link to="/reviews/">Students Share ...</Link>
-          <Link to="/blog/">Blog</Link>
-          <Link to="/tags/">Tags</Link>
-          <Link to="/book-me/">Book Me</Link>
-          <Link to="/trainings/">Trainings</Link>
-          <Link to="/quotes/">Quotes</Link>
-          <Link to="/books/">Books</Link>
-          <Link to="/lets-talk/">Let&apos;s Talk?</Link>
+          {[
+            { to: '', text: 'Start Here' },
+            { to: 'i-dont-charge-i-accept', text: 'Pricing' },
+            { to: 'who-am-i-anyway', text: 'who Am I Anyway' },
+            { to: 'tools', text: 'Brain Hacking Tools' },
+            { to: 'successes', text: 'Successes' },
+            { to: 'tags', text: 'Tags' },
+            { to: 'book-me', text: 'Book Me' },
+            { to: 'trainings', text: 'Trainings' },
+            { to: 'quotes', text: 'Quotes' },
+            { to: 'books', text: 'Books' },
+            { to: 'lets-talk', text: "Let's Talk?" },
+          ].map(({ to, text }) => (
+            <Link key={to} {...this.activeClass(to)} to={`/${to}`}>
+              {text}
+            </Link>
+          ))}
         </nav>
       </ClickOutside>
     );
