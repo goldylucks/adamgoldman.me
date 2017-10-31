@@ -60,6 +60,7 @@ async function onLocationChange(location, action) {
   if (action === 'PUSH') {
     delete scrollPositionsHistory[location.key];
   }
+
   currentLocation = location;
 
   const isInitialRender = !action;
@@ -93,6 +94,7 @@ async function onLocationChange(location, action) {
           if (elem) elem.parentNode.removeChild(elem);
           return;
         }
+        document.querySelector('#main-layout').scrollTop = 0;
         document.title = route.title;
         updateMeta('description', route.description);
         updateMeta('url', DOMAIN + route.path);
