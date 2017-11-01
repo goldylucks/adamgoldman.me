@@ -22,6 +22,8 @@
     "deploy": "babel-node tools/run deploy",
     "render": "babel-node tools/run render",
     "serve": "babel-node tools/run runServer",
+    "generate":
+      "yarn generate-brain-tools && yarn generate-posts && yarn generate-pages && yarn generate-tags",
     "generate-brain-tools": "babel-node tools/generateBrainTools",
     "generate-posts": "babel-node tools/generatePosts",
     "generate-pages": "babel-node tools/generatePages",
