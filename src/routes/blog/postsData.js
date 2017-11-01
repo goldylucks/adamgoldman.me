@@ -3,7 +3,7 @@
   {
     "title": "Fibromyalgia symptoms (almost) gone in 1 session",
     "tags": [
-      "Fibromyalgia",
+      "Fibromyalgia | C.F.S | M.E",
       "Trauma",
       "Grief",
       "Successes"
