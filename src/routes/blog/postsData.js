@@ -1,6 +1,25 @@
 /* eslint-disable */
   export default [
   {
+    "title": "Healing Metaphors - Water & Slime",
+    "tags": [
+      "Metaphors",
+      "Clean Language",
+      "Successes",
+      "Fibromyalgia | C.F.S | M.E"
+    ],
+    "url": "healing-metaphors-water-slime"
+  },
+  {
+    "title": "דורה טליאס - ניקוי אבל ואבדן, געגועים לבעל, אכזבה, כעס, עצב ואבחון של סרטן",
+    "isTitleRtl": true,
+    "tags": [],
+    "IS_DRAFT": true,
+    "description": "לתת לדורה לספר על עצמה כאן ...",
+    "isBodyRtl": true,
+    "url": "dora-talias-cancer"
+  },
+  {
     "title": "Fibromyalgia symptoms (almost) gone in 1 session",
     "tags": [
       "Fibromyalgia | C.F.S | M.E",

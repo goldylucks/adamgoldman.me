@@ -14,6 +14,8 @@ const pathToWriteFile = path.resolve(
 const dirToReadPath = path.resolve(__dirname, '..', 'src', 'posts');
 
 const fileToWrite = [
+  'healing-metaphors-water-slime',
+  'dora-talias-cancer',
   'fibromyalgia-0-julianne-1',
   'ocd-and-guilt-gone-in-one-session',
   'im-not-like-the-others',

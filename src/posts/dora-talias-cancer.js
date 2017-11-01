@@ -4,7 +4,6 @@ export default {
   title: 'דורה טליאס - ניקוי אבל ואבדן, געגועים לבעל, אכזבה, כעס, עצב ואבחון של סרטן', // eslint-disable-line prettier/prettier
   isTitleRtl: true,
   tags: [],
-  IS_DRAFT: true,
   description: 'לתת לדורה לספר על עצמה כאן ...',
   nick: 'סרטן, אין חיה כזאת',
   isBodyRtl: true,
@@ -33,7 +32,7 @@ export default {
 # תמלול סשן מילה במילה
 
   `,
-  html: `<div>${parseFbConversation(msgs())}</div>`, // eslint-disable-line no-use-before-define
+  html: `<div>${parseFbConversation(msgs())}</div>`,
 };
 
 function msgs() {
