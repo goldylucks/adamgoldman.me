@@ -29,9 +29,6 @@ module.exports = {
       `http://localhost:${process.env.PORT || 3000}`,
   },
 
-  // Database
-  databaseUrl: process.env.DATABASE_URL || 'sqlite:database.sqlite',
-
   // Web analytics
   analytics: {
     // https://analytics.google.com/

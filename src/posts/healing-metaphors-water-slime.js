@@ -2,8 +2,12 @@ import { parseFbConversation } from '../utils';
 
 export default {
   title: 'Healing Metaphors - Water & Slime',
-  IS_DRAFT: true,
-  tags: ['Metaphors', 'Clean Language', 'Successes'],
+  tags: [
+    'Metaphors',
+    'Clean Language',
+    'Successes',
+    'Fibromyalgia | C.F.S | M.E',
+  ],
   nick: 'this is some voodoo shit right here',
   body: `
 
@@ -19,28 +23,41 @@ export default {
 # Intro
 
 Date of session: OCT 31th, 2017  
-Client's Name: Tamar Herbert  
-Age: ??  
-Diagnosis: Fibromyalgia, C.F.S., M.E.  
+Client's Name: [Tamar Herbert](https://www.facebook.com/tamar.dewbery)  
+Age: 25  
+Diagnosis: Fibromyalgia, M.E, E.D.S  
 Medium of communication: Facebook chat  
 
 I've been working with Tamar for some time now, and we already cleared many traumas, nightmares, anxiety, PTSDs and many negative feelings (full case study up ahead - brace yourself)
 
 This particular session was solely on her feelings from this morning, following a really intense disturbing vivid dream she woke up from.
 
-If you are not familiar with clean language and working with metaphors, this will seem pretty freakin' WHACKY to you. 
+#### Legend:  
 
-Proceed ONLY with an open mind about what your mind is capable of.  
-
-Special thanks to the late David Grov for giving life to this field.  
+Gray bubbles are Tamar's own words from our conversation, blue bubbles are mine, and texts without bubbles are my comments.
+[example of Adam's words](adam)
+[example of Tamar's words](other)
+This is an example comment 
 
 ---
 
 # Notes from the session
 
+You are about to see my notes about the session, followed by a complete unedited word by word transcript of the conversation.
+
+I'm using pure clean language and metaphors, which will seem pretty freakin' WHACKY to you, if this is your first experience with this kind of work.
+
+Proceed ONLY with an open mind about what your mind is capable of.  
+
+Special thanks to the late David Grov for giving life to this field.  
+
+Let's begin ...
+
 <br />
 
-## Metaphor #1 - rugby ball - eliciation
+## Ribcage - Metaphor #1 - Eliciation - Rugby Ball
+She mentioned a "ton of weight" earlier in our conversation, so I zoom in on the feeling first ...
+
 [and when you have a ton of weight](adam)
 [I'm rocking baby down, I'm not gonna fall off the chair right?! <img alt="😂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zd0/1/16/1f602.png" />](other)
 [where do you feel the weight](adam)
@@ -56,6 +73,9 @@ Special thanks to the late David Grov for giving life to this field.
 [and in the inside](adam)
 [and when it's in the inside](adam)
 [and in ribcage](adam)
+
+... then elicit the metaphor ...
+
 [does it have a shape or a size?](adam)
 [when it's in ribcage](adam)
 [and a ton of weight](adam)
@@ -71,7 +91,10 @@ Special thanks to the late David Grov for giving life to this field.
 [and it's not moving](adam)
 [A rugby ball](other)
 
-## Metaphor #1 - rugby ball - empowering & maturation
+## Ribcage - Metaphor #1 - Empowering & Maturation - Rugby Ball
+
+Now that I have the metaphor, I empower and mature it ...
+
 [and wedged and stuck](adam)
 [and a rugby ball](adam)
 [and is there anything else about rugby ball](adam)
@@ -85,14 +108,22 @@ Special thanks to the late David Grov for giving life to this field.
 [and after it stopping breathing v well](adam)
 [and what does rugby ball wants to do next?](adam)
 [Nothing. It won't budge](other)
+
+Looks like this is a dead end for now, so I'm maturing the entire experience forward:
+
 [and it won't budge](adam)
 [and after it won't budge](adam)
 [and rugby ball in ribcage](adam)
 [then what happens?](adam)
-ther than the sick feeling not much
 
-## Metaphors #2 - courgette - eliciation
+
+## Throat - Metaphors #2 - Eliciation - Courgette
+
+[other than the sick feeling not much](other)
+
 She mentions a feeling ("sick"), time to fish for the next metaphor!
+
+First I zoom in the feeling again ...
 
 [Other than the sick feeling not much](other)
 [and sick feeling](adam)
@@ -104,7 +135,7 @@ She mentions a feeling ("sick"), time to fish for the next metaphor!
 [And my throat](other)
 [and in throat](adam)
 
-Separate the two locations
+Two locations usually indicate two separate metaphors, time to divide and conquer!
 
 [and when it's in stomach](adam)
 [and thorat](adam)
@@ -121,14 +152,18 @@ Separate the two locations
 [and in top of the stomach](adam)
 [and all of the throat?](adam)
 [Throat I think actually.](other)
+
+She goes with the throat first, so I zoom in on that first:
+
 [and throat](adam)
 [and when it's in throat](adam)
 [does it have a shape or a size](adam)
 [when it's in throat?](adam)
 
-[Size large <img alt="😂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zd0/1/16/1f602.png"> it feels like a thick short courgette <img alt="😂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zd0/1/16/1f602.png"><img alt="😂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zd0/1/16/1f602.png"><img alt="😂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zd0/1/16/1f602.png"><img alt="😂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zd0/1/16/1f602.png"><img alt="😂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zd0/1/16/1f602.png"><img alt="😂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zd0/1/16/1f602.png"><img alt="😂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zd0/1/16/1f602.png" />](other)
 
-## Metaphors #2 - courgette - maturation
+## Metaphors #2 - Courgette - Maturation
+
+[Size large <img alt="😂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zd0/1/16/1f602.png"> it feels like a thick short courgette <img alt="😂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zd0/1/16/1f602.png"><img alt="😂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zd0/1/16/1f602.png"><img alt="😂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zd0/1/16/1f602.png"><img alt="😂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zd0/1/16/1f602.png"><img alt="😂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zd0/1/16/1f602.png"><img alt="😂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zd0/1/16/1f602.png"><img alt="😂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zd0/1/16/1f602.png" />](other)
 
 [and Large](adam)
 [and like a thick](adam)
@@ -149,7 +184,7 @@ Separate the two locations
 [and slimy](adam)
 [and slimy like what?](adam)
 
-## Metaphors #2 - maturation - courgette -> slug
+## Metaphors #2 - Maturation - Courgette -> slug
 [A slug](other)
 [and a slug](adam)
 [and is there anything special about a slug](adam)
@@ -163,9 +198,16 @@ Separate the two locations
 [Nothing. The slug is stuck too!](other)
 [and slug is stuck too](adam)
 
-So at this point rugby ball is in ribcage, slug has matured from courgette, and there's the unexplored sick feeling in stomach, which we'll elicit a metaphor from next ...
+Looks like another dead end for the moment. Let's take a look at what we've currently got:
 
-## Metaphor #3 - elicitation - toxic dirty water
+###### Overview
+- Ribcage - Ton of weight - Rugby ball, not matured
+- Throat - Sick feeling - Courgette evolved into Slug
+- Top of Stomach - Sick feeling - No metaphor yet
+
+Pretty obvious how to proceed at this point, yes?
+
+## Stomach - Metaphor #3 - Elicitation - Toxic Dirty Water
 
 [and when it's sick in stomach](adam)
 [and on top of stomach](adam)
@@ -178,7 +220,11 @@ So at this point rugby ball is in ribcage, slug has matured from courgette, and 
 ?](adam)
 [It feels unhappy like really toxic dirty water](other)
 
-## Metaphor #3 - empowering & maturation - toxic dirty water
+Notice how I keep the language clean even when it's "gramatically painful". This is KEY to establish an "everything is allowed" frame.
+
+## Stomach - Metaphor #3 - Empowering & Maturation - Toxic Dirty Water
+
+Now that we got the metaphor, time to mature it ...
 
 [and toxic water](adam)
 [and what would toxic](adam)
@@ -202,11 +248,14 @@ So at this point rugby ball is in ribcage, slug has matured from courgette, and 
 [I don't think it wants to do anything it's pretty stagnant](other)
 [and stagnat](adam)
 
-## Metaphors - rallying up the troops
-At this point we have 3 metaphors:
- - Rugby ball - ribcage - haven't matured at all
- - Slug - throat - Evolved (courgette -> slug) and matured (throbbing -> stagnat)
- - Toxic water - top of stomach - matured (bubble and gurgle -> stagnat)
+Even tho it doesn't seem like it, this is progress! From bubbling to stagnat.
+
+## Calling All Metaphors
+
+###### Overview
+- Ribcage - Ton of weight - Rugby ball, not matured
+- Throat - Sick feeling - Courgette, evolved into Slug, and matured (throbbing -> stagnat)
+- Top of Stomach - Sick feeling - Toxic water, matured (bubble and gurgle -> stagnat)
 
 First I'm pointing her awareness to all of them ...
 
@@ -230,7 +279,7 @@ First I'm pointing her awareness to all of them ...
 [and take all the time they need to merge into one](adam)
 [and then what happens?](adam)
 
-## Metaphor #4 - chest - elicitation - Ditto
+## Chest - Metaphor #4 - Elicitation - Ditto
 
 [My chest feels like it's going to explode. But it's gone very hot](other)
 
@@ -238,18 +287,32 @@ Since she mentions a feeling again, I'm eliciting the next metaphor ...
 
 [and chest feels like it's going to explode](adam)
 [and gone very hot](adam)
+
+Notice the separation between the chest and the "gone very hot". I do NOT know at this point "what" has "gone very hot", and do NOT connect it to the chest. I treat them as the two different entities they might be.
+
 [and when chest feels like going to explode](adam)
 [and going to explode like what?](adam)
 [Like john hurt giving birth to an alien <img alt="😂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zd0/1/16/1f602.png" />](other)
+
+Sounds ridiculous to echo back that statement, I know, but this is NOT about me and my model of the world, it's about HER and HER experience.
+
 [and when it's like john hurt giving birth to an alien](adam)
-[does it have a shapre or a size](adam)
+[does it have a shape or a size](adam)
 [when chest going to explode](adam)
 [and it's gone very hot](adam)
 [?](adam)
+
+
 [Not really but it feels like it's trying to push its way out. So like a sort of wobbly shape](other)
+
+This is a great indication she is already going for a resolution, as the metaphor is actively "trying to push its way out."
+
 [Like a ditto](other)
 
-## Metaphor #4 - chest - empowering & maturation - Ditto -> ping pong
+## Chest - Metaphor #4 - Empowering & Maturation - Ditto -> Ping Pong
+
+We got the 4th metaphor, time to mature it ...
+
 [and a wobbly shape](adam)
 [like a ditto](adam)
 [and is there anything else](adam)
@@ -262,6 +325,9 @@ Since she mentions a feeling again, I'm eliciting the next metaphor ...
 [when it's wobbly shape](adam)
 [and like a ditto](adam)
 [No it just feels like it's stretching my chest up and bouncing up the wall](other)
+
+This is progres, maturation of the metaphor, it now moved beyond "trying to push" to "bouncing". Now I could have explored the "wall" metaphor here, and I actually might do so with her in a later session in the future, but she was about to leave soon, so I zoomed in the "Ditto".
+
 [and strecthing chest up](adam)
 [and bouncing up the wall like what?](adam)
 [Sorry bouncing off the wall. So it's like... A ping pong ball made of jelly. I know that sounds weird](other)
@@ -272,9 +338,12 @@ Since she mentions a feeling again, I'm eliciting the next metaphor ...
 [a ping pong ball made of jelly](adam)
 [like to do next?](adam)
 
-# Metaphor #4 - chest - integration - ping pong
+# Metaphor #4 - Chest - Integration - Ping Pong
 
 [<img alt="😂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zd0/1/16/1f602.png"> I think a ping pong ball made of jelly would be a pretty special thing in itself. But it just merges in with the rest of the jelly once it's bounced off the wall ](other)
+
+So now the ping pong played it's part ("it's bounced off the wall"), and it's merging with the rest of the "Jelly", which is probably what the other metaphors merged into before, when she said "they all merge into one".
+
 [But at least it's more fluid than a rugby ball. I can breathe a bit better](other)
 [and merges with the rest of the jelly](adam)
 [and ping pong is merged](adam)
@@ -289,6 +358,10 @@ Since she mentions a feeling again, I'm eliciting the next metaphor ...
 
 # Testing Integration
 Now that she reports everything is merged, time to test the metaphors and their respective locations.
+
+Actually ...
+
+In retrospect I think It would have been quicker to go after the "Jelly" and empower it to resolution. Luckily all the roads lead to ~rome~ better feelings when the right frame is installed :)
 
 [and is slug still in throat?](adam)
 [Yes but smaller](other)
@@ -317,17 +390,23 @@ Here we have partial integration of the entire experience, but somehting isn't d
 
 [and slug is draining into the jelly](adam)
 [and rugby ball more squishy, floats in the jelly](adam)
-[and ping ball maade of jelly merges with all the rest of jelly](adam)
+[and ping ball made of jelly merges with all the rest of jelly](adam)
+
+Then invite maturation of the entire experience ...
+
 [and then what happens?](adam)
 [I don't know <img alt="😂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zd0/1/16/1f602.png" />](other)
 [and you don't know ...](adam)
 
-Nothing "comes" from her at this point, and we have 4 metaphors:
+And now we're fucked :O
 
-- Ping pong - chest - merged into Jelly
-- Rugby ball - ribcage - Squishy, floats in jelly
-- Slug - throat - draining into jelly slowly
-- Toxic water - top of stomach - stagnat
+So where do we go from here?
+
+###### Overview
+- Ribcage - Rugby ball - Squishy, floats in jelly
+- Throat - Slug - Draining slowly into jelly 
+- Top of stomach - Toxic Water - stagnat
+- Ping Pong - Chest - Merged into Jelly
 
 Scroll up and notice her response to my questions about each metaphor:
 
@@ -337,7 +416,7 @@ Scroll up and notice her response to my questions about each metaphor:
 
 The toxic water is the only one that she just answered "Yes" about, without mentioning upcoming resolution.
 
-So I focus on the water ...
+So I focus on the water and mature it ...
 
 [and what would toxic water like to do next](adam)
 [and what would toxic water like to have happened](adam)
@@ -349,7 +428,7 @@ So I focus on the water ...
 [and ping pong ball merges with rest of Jelly](adam)
 [?](adam)
 
-# Metaphor #3 - Toxic water - transformation to a resource
+# Stomach - Metaphor #3 - Toxic Water - Transformation to a Resource
 
 [Toxic water needs to filter](other)
 [And become purer](other)
@@ -357,7 +436,8 @@ So I focus on the water ...
 [and become purer?](adam)
 [I think so](other)
 
-Notice next how many times I'm repeating her own words about the water. I want to "give it a nudge" towards maturation and finally resolution.
+Notice next how many times I'm repeating her own words about the water.
+I want to "give it a nudge" towards maturation and finally resolution.
 
 [and toxic water can filter](adam)
 [and become purer](adam)
@@ -380,6 +460,8 @@ Notice next how many times I'm repeating her own words about the water. I want t
 
 This is great! Great indictaion that the water is now a resource, and the "problem" is resolved.
 
+Since the stomach feels better now, I focus on the GOOD feeling in there, to elicit the resource metaphor ...
+
 [and stomach more netural](adam)
 [and more neutral like what?](adam)
 [and when tomach is more neutral](adam)
@@ -396,15 +478,15 @@ This is great! Great indictaion that the water is now a resource, and the "probl
 [and more neutral?](adam)
 [It's rippling gently](other)
 
-Now there's no question about the water being a resource, as it's behaving "gently"
+Now there's no question about the water being a resource, as it's behaving "gently".
 
 [and it's rippling Gently](adam)
 
-## Inviting integration - slug and water
+## Inviting integration - Slug and Water
 
 Now that water is a resource, I'm inviting it to integrate / collaborate with the other yet-to-be-resolved metaphors.
 
-I start by just mentioning the water after the slug ...
+I start by checking in on the Slug ...
 
 [and is slug still in throat?](adam)
 [Yes](other)
@@ -412,11 +494,14 @@ I start by just mentioning the water after the slug ...
 [and slug in throat](adam)
 [and can slug drain into jelly?](adam)
 [and what would slug like to do](adam)
+
+... Then just mentioning the water after the slug ...
+
 [when water is still, and rippling gently](adam)
 [and ping pong ball merges in jelly](adam)
 [It is slowly draining but it feels a bit wedged](other)
 
-... then directly asking if water wants to go to slug ...
+... Then I directly ask if water wants to go to slug ...
 
 [and rugby ball merge in jelly](adam)
 [and would clean water](adam)
@@ -426,7 +511,7 @@ I start by just mentioning the water after the slug ...
 [The water won't go up](other)
 [and water won't go up](adam)
 
-At this point I decide to explore "wedged", since she mentioned it twice, for the rugby ball in ribcage and for the slug.
+At this point I decide to explore "wedged", since she mentioned it twice, first for the rugby ball in ribcage and for the slug.
 
 [and when slug slowly draining and feels a bit wedged](adam)
 [and wedged like what?](adam)
@@ -461,6 +546,9 @@ But she mentions "sliding down in **bulk**" - meaning there's a lot going on all
 Seems like it's working ... ;)
 
 [The water begins to rise and the jelly begins to dissolve into the water](other)
+
+(Confession - At this point my happiness meter shot thru the roof! :O)
+
 [and water begins to rise](adam)
 [and jelly begins to dissolve into the water](adam)
 [and water rise](adam)
@@ -497,7 +585,9 @@ Seems like it's working ... ;)
 [and water is still](adam)
 
 Yup that last line was a mistake :O  
-The water already went from still to gently rippling, long time ago. Sorry Tamar! Could you ever forgive this humble servant who means nothing but ecstatic futures for us all?
+The water already went from still to gently rippling, oh so long time ago ... Sorry Tamar!
+
+Could you ever forgive this humble servant who means nothing but ecstatic futures for us all?
 
 (Okay okay, let's get back to business ... Forgive my mind as it sometimes forgets it's place as well ...)
 
@@ -544,17 +634,23 @@ Wild is a semantically packed word. I use it to induce curiousity, mystery and a
 
 [No it makes u very aware of how your body feels](other)
 [it does, doesn't t](adam)
-[and one can only imagine the depth of the change the was done today](adam) - Inducing more curiousity and generalization of the learning/change
+[and one can only imagine the depth of the change the was done today](adam)
+Inducing more curiousity and generalization of the learning/change
 
-[and the impact will ripple gently throughout many experiences yet to come](adam) - Using her own resource words ("ripple gently") to further generalize
+[and the impact will ripple gently throughout many experiences yet to come](adam)
+Using her own resource words ("ripple gently") to further generalize
 
-[as it cleans all that was toxic and dirty](adam) - Ambigous language (ALL that was toxic, instead of just the water) + past predicate ("WAS toxic")
+[as it cleans all that was toxic and dirty](adam)
+Ambigous language (ALL that was toxic, instead of just the water) + past predicate ("WAS toxic")
 
-[and slides everything to it's place](adam) - Like the bulk slide of the slug
+[and slides everything to it's place](adam)
+Like the bulk slide of the slug
 
-[dissolving what's not needed anymore](adam) - Dissolving like the jelly + "not needed anymore" implies all these parts of her were always good and served a purpose.
+[dissolving what's not needed anymore](adam)
+Dissolving like the jelly + "not needed anymore" implies all these parts of her were always good and served a purpose.
 
-[as new learnings take form in many unexpected ways](adam) - More curiousity and generalization
+[as new learnings take form in many unexpected ways](adam)
+More curiousity and generalization
 
 [now](adam)
 [how do you feel about going to sleep tonight](adam)
@@ -573,7 +669,7 @@ Her dreams were a recurring issue for her, and today she woke up with intense fe
 
 [I can't but HE can](adam)
 
-(Picture of Ally the gator here ...)
+[<div style="background-image: url(http://res.cloudinary.com/goldylucks/image/upload/v1504165088/stickers/sticker-crock-magic.png); background-repeat: no-repeat; background-size: 120px 120px; height: 120px; width: 120px;"></div>](adam)
 
 ["look into my reptalian eye child ..."](adam)
 [so let's see](adam)
@@ -1708,7 +1804,7 @@ function msgs() {
         },
         {
           type: 'text',
-          html: 'does it have a shapre or a size\n',
+          html: 'does it have a shape or a size\n',
           isRtl: false,
         },
         {
@@ -2151,7 +2247,7 @@ function msgs() {
         {
           type: 'text',
           html:
-            'and ping ball maade of jelly merges with all the rest of jelly\n',
+            'and ping ball made of jelly merges with all the rest of jelly\n',
           isRtl: false,
         },
         {

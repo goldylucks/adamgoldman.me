@@ -55,6 +55,7 @@ class Menu extends React.Component {
             { to: 'tags', text: 'Tags' },
             { to: 'book-me', text: 'Book Me' },
             { to: 'trainings', text: 'Trainings' },
+            { to: 'blog', text: 'Blog' },
             { to: 'quotes', text: 'Quotes' },
             { to: 'books', text: 'Books' },
             { to: 'lets-talk', text: "Let's Talk?" },
