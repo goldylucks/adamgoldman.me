@@ -1,0 +1,9 @@
+.tag {
+  transition: .5s color !important;
+  color: #c8ffc8 !important;
+  text-decoration: none !important;
+}
+
+.tag:hover {
+  color: #fff !important;
+}
