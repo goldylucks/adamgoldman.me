@@ -1,5 +1,5 @@
 .tag {
-  transition: .5s color !important;
+  transition: 0.5s color !important;
   color: #c8ffc8 !important;
   text-decoration: none !important;
 }
