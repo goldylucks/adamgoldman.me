@@ -24,7 +24,7 @@ const Wholeness = () => (
       title="Experiencing Practical Awareness"
       description="Experiencing Practical Awareness"
     />
-    <Square title="I - Location" description="I - Location" />
+    <Square title="I - Location" description="I - Location" id="location" />
     <Square title="I - Size & Shape" description="I - Size & Shape" />
     <Square title="I - Sensation Quality" description="I - Sensation Quality" />
     <Square
@@ -36,6 +36,7 @@ const Wholeness = () => (
       title="Acknolwedging Decline"
       description="I - Acknolwedging Decline"
       decline
+      id="decline"
     />
     <Square
       title="I - Experiencing Integration"

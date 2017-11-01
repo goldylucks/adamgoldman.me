@@ -16,12 +16,13 @@ type Props = {
 class Square extends React.Component {
   state = {
     line: {},
+    lineToILocation: {},
   };
   componentDidMount() {
     if (this.props.invitation) {
       const { top, right } = this.el.getBoundingClientRect();
       const targetEl = document
-        .querySelector('#Acknolwedging')
+        .querySelector('#decline')
         .getBoundingClientRect();
       // eslint-disable-next-line react/no-did-mount-set-state
       this.setState({
@@ -31,9 +32,54 @@ class Square extends React.Component {
         },
       });
     }
+
+    if (this.props.decline) {
+      const { top, left, width } = this.el.getBoundingClientRect();
+      const targetEl = document
+        .querySelector('#location')
+        .getBoundingClientRect();
+      // eslint-disable-next-line react/no-did-mount-set-state
+      this.setState({
+        lineToILocation: {
+          width: Math.abs(left - targetEl.right + width / 2),
+          height: Math.abs(top - targetEl.top - targetEl.height / 2),
+        },
+      });
+    }
   }
 
   props: Props;
+
+  renderArrowToILocation() {
+    if (!this.props.decline) {
+      return null;
+    }
+    return (
+      <div
+        style={{
+          position: 'absolute',
+          bottom: 100,
+          right: '50%',
+        }}
+      >
+        <svg
+          height={this.state.lineToILocation.height}
+          width={this.state.lineToILocation.width}
+        >
+          <line
+            x1="0"
+            y1="0"
+            x2={this.state.lineToILocation.width}
+            y2={this.state.lineToILocation.height}
+            style={{
+              stroke: 'rgb(120,120,120)',
+              strokeWidth: 2,
+            }}
+          />
+        </svg>
+      </div>
+    );
+  }
 
   render() {
     const {
@@ -46,7 +92,6 @@ class Square extends React.Component {
     } = this.props;
     return (
       <div
-        id={title.split(' ')[0]}
         key={title}
         ref={el => {
           this.el = el;
@@ -83,6 +128,7 @@ class Square extends React.Component {
             </svg>
           </div>
         )}
+        {this.renderArrowToILocation()}
       </div>
     );
   }
