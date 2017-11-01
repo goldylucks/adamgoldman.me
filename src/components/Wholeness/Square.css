@@ -1,0 +1,46 @@
+.container {
+  width: 240px;
+  position: relative;
+  padding: 20px;
+  background: #fff;
+  color: #000;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  height: 100px;
+}
+
+.container.decline {
+  float: right;
+  border: 5px solid red;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.description {
+  display: none;
+}
+
+.container:hover .title {
+  display: none;
+}
+
+.container:hover .description {
+  display: block;
+}
+
+/*
+.line {
+  position: absolute;
+  background: red;
+  height: 1px;
+}
+
+.line::after {
+  content: attr(data-content);
+}
+*/
