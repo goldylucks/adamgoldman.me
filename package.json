@@ -149,6 +149,7 @@
     "webpack-node-externals": "^1.6.0"
   },
   "lint-staged": {
+    "*.css": ["stylelint --fix", "git add"],
     "*.{js,jsx}": ["eslint --fix", "git add"],
     "*.{json,graphql}": ["prettier --write", "git add"]
   }
