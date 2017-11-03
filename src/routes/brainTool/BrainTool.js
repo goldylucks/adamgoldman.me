@@ -8,6 +8,7 @@ import BreadCrumbs from '../../components/BreadCrumbs';
 import FbShareButton from '../../components/FbShareButton';
 import FbComments from '../../components/FbComments';
 import Chart from '../../components/Chart';
+import StopWarning from '../../components/StopWarning';
 import Steps from './components/Steps';
 import { cloudImg } from '../../utils';
 
@@ -87,7 +88,17 @@ class BrainToolPage extends React.Component {
           </div>
           {tool.mockState && (
             <div>
-              {switchLeft && <Chart {...tool} />}
+              {switchLeft && (
+                <div>
+                  <StopWarning
+                    id={tool.title}
+                    text="# Don't rob yourself from a valuable learning experience!
+                    
+Go through the wholeness tool once or twice before going over the 'dry information'. You only have ONE chance in your life to EXPERIENCE it without your conscious brain knowing it. Please take it! Pretty please?"
+                  />
+                  <Chart {...tool} />
+                </div>
+              )}
               {!switchLeft && <Steps {...tool} />}
             </div>
           )}
