@@ -368,6 +368,7 @@ a[data-title]:hover::after {
   color: #1a7ced;
   margin-top: 20px;
   margin-left: 20px;
+  margin-right: 20px;
 }
 
 .react-autosuggest__input {
@@ -383,6 +384,12 @@ a[data-title]:hover::after {
   background-repeat: no-repeat;
   background-size: 20px;
   background-position: right 5px center;
+}
+
+@media (max-width: 800px) {
+  .react-autosuggest__input {
+    width: 100%;
+  }
 }
 
 .react-autosuggest__input--focused {
@@ -442,16 +449,6 @@ a[data-title]:hover::after {
   color: #777;
 }
 
-.messenger-fixed {
-  transition: 0.5s opacity;
-  border-bottom: none !important;
-  opacity: 0.5;
-}
-
-.messenger-fixed:hover {
-  opacity: 1;
-}
-
 .switch-container {
   display: flex;
   align-items: center;
@@ -496,13 +493,4 @@ a[data-title]:hover::after {
 
 .switch.right::before {
   left: 31px;
-}
-
-@media (max-width: 800px) {
-  .mobile-hide { 
-    display: none;
-  }
-  .mobile-show {
-    display: block;
-  }
 }

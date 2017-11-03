@@ -31,8 +31,13 @@
 @media (max-width: 800px) {
   .brand {
     margin-top: 0;
+    text-align: inherit;
+  }
+  .headline {
+    margin-top: 14px !important;
+    margin-left: 23px !important;
   }
   .logo {
-    width: 50px;
+    width: 40px;
   }
 }

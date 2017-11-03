@@ -4,7 +4,7 @@ import serialize from 'serialize-javascript'
 
 import config from '../config'
 import { cloudImg } from '../utils'
-import { DOMAIN, FB_APP_ID, MESSENGER_LINK } from '../constants'
+import { DOMAIN, FB_APP_ID } from '../constants'
 
 /* eslint-disable react/no-danger */
 
@@ -122,20 +122,6 @@ class Html extends React.Component {
               defer
             />
           )}
-          <a
-            data-title="No don't click me!"
-            style={{ position: 'fixed', bottom: 20, left: 20 }}
-            className="messenger-fixed"
-            href={MESSENGER_LINK}
-            target="_blank"
-            rel="nofollow noreferrer noopener"
-          >
-            <img
-              src="https://cdn.supple.com.au/wp-content/themes/supple/img/msg.png"
-              alt="Messenger Link"
-              style={{ width: 100 }}
-            />
-          </a>
         </body>
       </html>
     )
