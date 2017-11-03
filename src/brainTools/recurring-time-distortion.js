@@ -2,21 +2,20 @@
 /* eslint max-len: 0 */
 /* eslint react/jsx-curly-brace-presence: 0 */
 
-import React from 'react';
-import Link from '../components/Link';
+import React from 'react'
 
-import FbShareLink from '../components/FbShareLink';
-import Markdown from '../components/Markdown';
+import Link from '../components/Link'
+import FbShareLink from '../components/FbShareLink'
+import Markdown from '../components/Markdown'
+import HowItsGoingToWorkStep from '../routes/brainTool/components/HowItsGoingToWorkStep'
+import Answers from '../routes/brainTool/components/Answers'
+import type { Props } from '../routes/brainTool/components/toolPageProps'
 
-import HowItsGoingToWorkStep from '../routes/brainTool/components/HowItsGoingToWorkStep';
-import Answers from '../routes/brainTool/components/Answers';
-import type { Props } from '../routes/brainTool/components/toolPageProps';
-
-export const stepCount = 12;
-export const title = 'Recurring Time Distortion';
-export const nick = 'time distortion';
+export const stepCount = 12
+export const title = 'Recurring Time Distortion'
+export const nick = 'time distortion'
 // eslint-disable-next-line prettier/prettier
-export const description = `Turn bad time to good time and good time to wonderful time by distorting time subjectively`;
+export const description = 'Turn bad time to good time and good time to wonderful time by distorting time subjectively'
 
 // eslint-disable-next-line react/prefer-stateless-function
 class RecurringTimeDistortion extends React.Component {
@@ -31,7 +30,7 @@ class RecurringTimeDistortion extends React.Component {
       onNext,
       back,
       dontUnderstand,
-    } = this.props;
+    } = this.props
     return (
       <div>
         {[
@@ -311,8 +310,8 @@ Source: I've adapted this [tool](/tools/) from Bandler's time distortion process
           </div>,
         ].map(renderStep)}
       </div>
-    );
+    )
   }
 }
 
-export default RecurringTimeDistortion;
+export default RecurringTimeDistortion

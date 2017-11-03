@@ -1,13 +1,14 @@
 // @flow
 
-import React from 'react';
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import React from 'react'
+import withStyles from 'isomorphic-style-loader/lib/withStyles'
 
-import s from './Reviews.css';
-import FbPageBox from '../../components/FbPageBox';
-import FbShareButton from '../../components/FbShareButton';
-import BreadCrumbs from '../../components/BreadCrumbs';
-import Markdown from '../../components/Markdown';
+import FbPageBox from '../../components/FbPageBox'
+import FbShareButton from '../../components/FbShareButton'
+import BreadCrumbs from '../../components/BreadCrumbs'
+import Markdown from '../../components/Markdown'
+
+import s from './Reviews.css'
 
 const ReviewPage = () => (
   <div className="main-layout">
@@ -101,6 +102,6 @@ const ReviewPage = () => (
     />
     <FbPageBox style={{ display: 'block', textAlign: 'center' }} />
   </div>
-);
+)
 
-export default withStyles(s)(ReviewPage);
+export default withStyles(s)(ReviewPage)

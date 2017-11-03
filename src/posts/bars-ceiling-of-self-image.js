@@ -35,4 +35,4 @@ He was so blown away from his fast change he started learning NLP as well and no
 
 If you are in Israel, I highly recommend paying him a visit. He gets insane results and if you buy him dinner he got some pretty intriguing stories to tell.
 `,
-};
+}

@@ -23,4 +23,4 @@ When she “came back” to the present, she broke into tears, adorably thanking
 
 Today she is fully booked and wakes up excited to help people live better painless lives.
 `,
-};
+}

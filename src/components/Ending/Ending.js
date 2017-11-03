@@ -1,9 +1,9 @@
 // @flow
 
-import React from 'react';
-import Link from '../Link';
+import React from 'react'
 
-import { cloudImg } from '../../utils';
+import Link from '../Link'
+import { cloudImg } from '../../utils'
 
 type Props = {
   nick?: string,
@@ -31,8 +31,8 @@ const Ending = ({ nick, ...restProps }: Props) => (
       </strong>
     </Link>
   </section>
-);
+)
 
-Ending.defaultProps = { nick: '' };
+Ending.defaultProps = { nick: '' }
 
-export default Ending;
+export default Ending

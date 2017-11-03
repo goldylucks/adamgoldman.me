@@ -33,19 +33,19 @@ function createFetch(fetch: Fetch, { baseUrl, cookie }: Options) {
       'Content-Type': 'application/json',
       ...(cookie ? { Cookie: cookie } : null),
     },
-  };
+  }
 
   return (url: string, options: any) =>
-    url.startsWith('/graphql') || url.startsWith('/api')
+    (url.startsWith('/graphql') || url.startsWith('/api')
       ? fetch(`${baseUrl}${url}`, {
-          ...defaults,
-          ...options,
-          headers: {
-            ...defaults.headers,
-            ...(options && options.headers),
-          },
-        })
-      : fetch(url, options);
+        ...defaults,
+        ...options,
+        headers: {
+          ...defaults.headers,
+          ...(options && options.headers),
+        },
+      })
+      : fetch(url, options))
 }
 
-export default createFetch;
+export default createFetch

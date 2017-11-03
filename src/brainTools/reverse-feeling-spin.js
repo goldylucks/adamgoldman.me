@@ -3,22 +3,21 @@
 /* eslint react/jsx-curly-brace-presence: 0 */
 /* eslint jsx-a11y/anchor-is-valid: 0 */
 
-import React from 'react';
-import Link from '../components/Link';
+import React from 'react'
 
-import FbShareLink from '../components/FbShareLink';
-import Markdown from '../components/Markdown';
+import Link from '../components/Link'
+import FbShareLink from '../components/FbShareLink'
+import Markdown from '../components/Markdown'
+import HowItsGoingToWorkStep from '../routes/brainTool/components/HowItsGoingToWorkStep'
+import Answers from '../routes/brainTool/components/Answers'
+import type { Props } from '../routes/brainTool/components/toolPageProps'
 
-import HowItsGoingToWorkStep from '../routes/brainTool/components/HowItsGoingToWorkStep';
-import Answers from '../routes/brainTool/components/Answers';
-import type { Props } from '../routes/brainTool/components/toolPageProps';
-
-export const tags = ['Anxiety', 'Panic Attack', 'Depression'];
-export const stepCount = 9;
-export const title = 'Reverse Feeling Spin';
-export const nick = 'fear in reverse is ...';
+export const tags = ['Anxiety', 'Panic Attack', 'Depression']
+export const stepCount = 9
+export const title = 'Reverse Feeling Spin'
+export const nick = 'fear in reverse is ...'
 // eslint-disable-next-line prettier/prettier
-export const description = `Turn anxiety, pain, depression, and any unwanted feeling to something new`;
+export const description = 'Turn anxiety, pain, depression, and any unwanted feeling to something new'
 
 class SomeTool extends React.Component {
   state = {
@@ -47,13 +46,13 @@ class SomeTool extends React.Component {
       onNext,
       back,
       dontUnderstand,
-    } = this.props;
+    } = this.props
     const {
       badFeeling,
       badFeelingLocation,
       badFeelingDescription,
       badFeelingColor,
-    } = this.state;
+    } = this.state
     return (
       <div>
         {[
@@ -300,8 +299,8 @@ Source: I've adapted this [tool](/tools/) from Bandler's reverse feeling spin pr
           </div>,
         ].map(renderStep)}
       </div>
-    );
+    )
   }
 }
 
-export default SomeTool;
+export default SomeTool

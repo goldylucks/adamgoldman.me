@@ -1,7 +1,8 @@
-import React from 'react';
-import Tags from './Tags';
+import React from 'react'
 
-const title = 'Tags';
+import Tags from './Tags'
+
+const title = 'Tags'
 
 function action() {
   return {
@@ -10,11 +11,9 @@ function action() {
     path: '/tags',
     description: 'Tags of the site',
     component: (
-      <div>
-        <Tags title={title} />
-      </div>
+      <Tags title={title} />
     ),
-  };
+  }
 }
 
-export default action;
+export default action

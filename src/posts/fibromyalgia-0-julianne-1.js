@@ -1,6 +1,6 @@
 export default {
   title: 'Fibromyalgia symptoms (almost) gone in 1 session',
-  tags: ['Fibromyalgia', 'Trauma', 'Grief', 'Successes'],
+  tags: ['Fibromyalgia | C.F.S | M.E', 'Trauma', 'Grief', 'Successes'],
   nick: "doctors don't know everything",
   body: `
 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fjulianne.barley%2Fposts%2F10154923498533379%3A0&width=500" width="500" height="335" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
@@ -10,6 +10,8 @@ export default {
 - ### Symptoms cleared (3 days in)
 - ### Notes from the session
 - ### Verbatim transcript
+
+---
 
 # Intro
 Date of first session: AUG 19th, 2017  
@@ -47,6 +49,8 @@ As you'll see below, within 3 days into the first intervention most of her sympt
 I'll post a followup in a month or so with her progress and more processes we've done.
 
 If you or someone you know have any of the symptoms, do [contact](/lets-talk/) me and we'll start gearing you towards a brighter future ASAP.
+
+---
 
 # Symptoms cleared (3 days in)
 (X meaning the symptom is gone)
@@ -86,6 +90,8 @@ If you or someone you know have any of the symptoms, do [contact](/lets-talk/) m
 - Cold feet and hands 
 - Clumsiness and accidents several times a day 
 - X (feeling high!) Feeling low 
+
+---
 
 # Notes from the session
 You are about to see my notes about the first 20 interventions we've done, over the course of 11 days, followed by a complete unedited word by word transcript of the conversation.
@@ -2069,4 +2075,4 @@ u are one of my favs by far!
 </div></div>
 </div>  
 `,
-};
+}

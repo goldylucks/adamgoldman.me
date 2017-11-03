@@ -79,4 +79,4 @@ export default {
 
 Feel free to comment below on some of these and add your own.
 `,
-};
+}

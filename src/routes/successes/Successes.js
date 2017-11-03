@@ -1,16 +1,16 @@
 // @flow
 
-import React from 'react';
+import React from 'react'
 
-import Link from '../../components/Link';
-import Ending from '../../components/Ending';
-import Markdown from '../../components/Markdown';
-import BreadCrumbs from '../../components/BreadCrumbs';
-import FbShareButton from '../../components/FbShareButton';
-import FbComments from '../../components/FbComments';
-import Tags from '../../components/Tags';
-import posts from '../../routes/blog/postsData';
-import { filterDrafts } from '../../utils';
+import Link from '../../components/Link'
+import Ending from '../../components/Ending'
+import Markdown from '../../components/Markdown'
+import BreadCrumbs from '../../components/BreadCrumbs'
+import FbShareButton from '../../components/FbShareButton'
+import FbComments from '../../components/FbComments'
+import Tags from '../../components/Tags'
+import posts from '../../routes/blog/postsData'
+import { filterDrafts } from '../../utils'
 
 const Successes = () => (
   <article className="main-layout">
@@ -30,7 +30,8 @@ const Successes = () => (
     </header>
     <Markdown source="
 If you still have pain to resolve or a desire to fulfill, let me know and we'll get you started ASAP. And don't worry about [the price](/i-dont-charge-i-accept), we'll get to that after
-" />
+"
+    />
     <hr />
     <div>
       {posts
@@ -50,6 +51,6 @@ If you still have pain to resolve or a desire to fulfill, let me know and we'll 
     <Ending nick="mutual success" />
     <FbComments style={{ marginTop: 10 }} />
   </article>
-);
+)
 
-export default Successes;
+export default Successes

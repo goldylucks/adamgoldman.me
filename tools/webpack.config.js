@@ -7,30 +7,33 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import path from 'path';
-import webpack from 'webpack';
-import AssetsPlugin from 'assets-webpack-plugin';
-import nodeExternals from 'webpack-node-externals';
-import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
-import overrideRules from './lib/overrideRules';
-import pkg from '../package.json';
+import path from 'path'
 
-const isDebug = !process.argv.includes('--release');
-const isVerbose = process.argv.includes('--verbose');
+import webpack from 'webpack'
+import AssetsPlugin from 'assets-webpack-plugin'
+import nodeExternals from 'webpack-node-externals'
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
+
+import pkg from '../package.json'
+
+import overrideRules from './lib/overrideRules'
+
+const isDebug = !process.argv.includes('--release')
+const isVerbose = process.argv.includes('--verbose')
 const isAnalyze =
-  process.argv.includes('--analyze') || process.argv.includes('--analyse');
+  process.argv.includes('--analyze') || process.argv.includes('--analyse')
 
-const reScript = /\.(js|jsx|mjs)$/;
-const reStyle = /\.(css|less|styl|scss|sass|sss)$/;
-const reImage = /\.(bmp|gif|jpg|jpeg|png|svg)$/;
+const reScript = /\.(js|jsx|mjs)$/
+const reStyle = /\.(css|less|styl|scss|sass|sss)$/
+const reImage = /\.(bmp|gif|jpg|jpeg|png|svg)$/
 const staticAssetName = isDebug
   ? '[path][name].[ext]?[hash:8]'
-  : '[hash:8].[ext]';
+  : '[hash:8].[ext]'
 
 // CSS Nano options http://cssnano.co/
 const minimizeCssOptions = {
   discardComments: { removeAll: true },
-};
+}
 
 //
 // Common configuration chunk to be used for both
@@ -95,7 +98,7 @@ const config = {
             ],
             // Experimental ECMAScript proposals
             // https://babeljs.io/docs/plugins/#presets-stage-x-experimental-presets-
-            'stage-2',
+            'stage-0',
             // Flow
             // https://github.com/babel/babel/tree/master/packages/babel-preset-flow
             'flow',
@@ -107,6 +110,7 @@ const config = {
             // Treat React JSX elements as value types and hoist them to the highest scope
             // https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-react-constant-elements
             ...(isDebug ? ['transform-react-constant-elements'] : []),
+            // eslint-disable-next-line max-len
             // Replaces the React.createElement function with one that is more optimized for production
             // https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-react-inline-elements
             ...(isDebug ? ['transform-react-inline-elements'] : []),
@@ -248,14 +252,14 @@ const config = {
       ...(isDebug
         ? []
         : [
-            {
-              test: path.resolve(
-                __dirname,
-                '../node_modules/react-deep-force-update/lib/index.js',
-              ),
-              loader: 'null-loader',
-            },
-          ]),
+          {
+            test: path.resolve(
+              __dirname,
+              '../node_modules/react-deep-force-update/lib/index.js',
+            ),
+            loader: 'null-loader',
+          },
+        ]),
     ],
   },
 
@@ -282,7 +286,7 @@ const config = {
   // Choose a developer tool to enhance debugging
   // https://webpack.js.org/configuration/devtool/#devtool
   devtool: isDebug ? 'cheap-module-inline-source-map' : 'source-map',
-};
+}
 
 //
 // Configuration for the client-side bundle (client.js)
@@ -325,29 +329,29 @@ const clientConfig = {
     ...(isDebug
       ? []
       : [
-          // Decrease script evaluation time
-          // https://github.com/webpack/webpack/blob/master/examples/scope-hoisting/README.md
-          new webpack.optimize.ModuleConcatenationPlugin(),
+        // Decrease script evaluation time
+        // https://github.com/webpack/webpack/blob/master/examples/scope-hoisting/README.md
+        new webpack.optimize.ModuleConcatenationPlugin(),
 
-          // Minimize all JavaScript output of chunks
-          // https://github.com/mishoo/UglifyJS2#compressor-options
-          new webpack.optimize.UglifyJsPlugin({
-            compress: {
-              warnings: isVerbose,
-              unused: true,
-              dead_code: true,
-              screw_ie8: true,
-            },
-            mangle: {
-              screw_ie8: true,
-            },
-            output: {
-              comments: false,
-              screw_ie8: true,
-            },
-            sourceMap: true,
-          }),
-        ]),
+        // Minimize all JavaScript output of chunks
+        // https://github.com/mishoo/UglifyJS2#compressor-options
+        new webpack.optimize.UglifyJsPlugin({
+          compress: {
+            warnings: isVerbose,
+            unused: true,
+            dead_code: true,
+            screw_ie8: true,
+          },
+          mangle: {
+            screw_ie8: true,
+          },
+          output: {
+            comments: false,
+            screw_ie8: true,
+          },
+          sourceMap: true,
+        }),
+      ]),
 
     // Webpack Bundle Analyzer
     // https://github.com/th0r/webpack-bundle-analyzer
@@ -363,7 +367,7 @@ const clientConfig = {
     net: 'empty',
     tls: 'empty',
   },
-};
+}
 
 //
 // Configuration for the server-side bundle (server.js)
@@ -396,7 +400,7 @@ const serverConfig = {
   module: {
     ...config.module,
 
-    rules: overrideRules(config.module.rules, rule => {
+    rules: overrideRules(config.module.rules, (rule) => {
       // Override babel-preset-env configuration for Node.js
       if (rule.loader === 'babel-loader') {
         return {
@@ -405,22 +409,22 @@ const serverConfig = {
             ...rule.options,
             presets: rule.options.presets.map(
               preset =>
-                preset[0] !== 'env'
+                (preset[0] !== 'env'
                   ? preset
                   : [
-                      'env',
-                      {
-                        targets: {
-                          node: pkg.engines.node.match(/(\d+\.?)+/)[0],
-                        },
-                        modules: false,
-                        useBuiltIns: false,
-                        debug: false,
+                    'env',
+                    {
+                      targets: {
+                        node: pkg.engines.node.match(/(\d+\.?)+/)[0],
                       },
-                    ],
+                      modules: false,
+                      useBuiltIns: false,
+                      debug: false,
+                    },
+                  ]),
             ),
           },
-        };
+        }
       }
 
       // Override paths to static assets
@@ -436,10 +440,10 @@ const serverConfig = {
             name: `public/assets/${rule.options.name}`,
             publicPath: url => url.replace(/^public/, ''),
           },
-        };
+        }
       }
 
-      return rule;
+      return rule
     }),
   },
 
@@ -478,6 +482,6 @@ const serverConfig = {
     __filename: false,
     __dirname: false,
   },
-};
+}
 
-export default [clientConfig, serverConfig];
+export default [clientConfig, serverConfig]

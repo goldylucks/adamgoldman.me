@@ -49,4 +49,4 @@ This way there’s (almost) ZERO room for miscommunication, and I know exactly w
 
 8. This is programming, be specific! Mention relevant file names, line numbers, function names etc
  `,
-};
+}

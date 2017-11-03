@@ -1,8 +1,9 @@
-import React from 'react';
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import React from 'react'
+import withStyles from 'isomorphic-style-loader/lib/withStyles'
 
-import { cloudImg } from '../../utils';
-import s from './SidebarSignupForm.css';
+import { cloudImg } from '../../utils'
+
+import s from './SidebarSignupForm.css'
 
 const SidebarSignupForm = () => (
   <section className={s.signup}>
@@ -34,6 +35,6 @@ const SidebarSignupForm = () => (
       </button>
     </form>
   </section>
-);
+)
 
-export default withStyles(s)(SidebarSignupForm);
+export default withStyles(s)(SidebarSignupForm)

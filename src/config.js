@@ -10,9 +10,7 @@
 /* eslint-disable max-len */
 
 if (process.env.BROWSER) {
-  throw new Error(
-    'Do not import `config.js` from inside the client-side code.',
-  );
+  throw new Error('Do not import `config.js` from inside the client-side code.')
 }
 
 module.exports = {
@@ -28,9 +26,6 @@ module.exports = {
       process.env.API_SERVER_URL ||
       `http://localhost:${process.env.PORT || 3000}`,
   },
-
-  // Database
-  databaseUrl: process.env.DATABASE_URL || 'sqlite:database.sqlite',
 
   // Web analytics
   analytics: {
@@ -65,4 +60,4 @@ module.exports = {
         'KTZ6cxoKnEakQCeSpZlaUCJWGAlTEBJj0y2EMkUBujA7zWSvaQ',
     },
   },
-};
+}

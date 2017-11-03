@@ -1,14 +1,15 @@
 // @flow
 
-import React from 'react';
+import React from 'react'
 
-import Link from '../../components/Link';
-import Ending from '../../components/Ending';
-import BreadCrumbs from '../../components/BreadCrumbs';
-import FbShareButton from '../../components/FbShareButton';
-import FbComments from '../../components/FbComments';
-import { titleToSlug } from '../../utils';
-import tags from './tagsData';
+import Link from '../../components/Link'
+import Ending from '../../components/Ending'
+import BreadCrumbs from '../../components/BreadCrumbs'
+import FbShareButton from '../../components/FbShareButton'
+import FbComments from '../../components/FbComments'
+import { titleToSlug } from '../../utils'
+
+import tags from './tagsData'
 
 const ToolsListPage = () => (
   <article className="main-layout">
@@ -42,6 +43,6 @@ const ToolsListPage = () => (
     <Ending nick="tag, not it" />
     <FbComments style={{ marginTop: 10 }} />
   </article>
-);
+)
 
-export default ToolsListPage;
+export default ToolsListPage

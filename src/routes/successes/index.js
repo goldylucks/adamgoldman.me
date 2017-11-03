@@ -1,5 +1,6 @@
-import React from 'react';
-import Successes from './Successes';
+import React from 'react'
+
+import Successes from './Successes'
 
 function action() {
   return {
@@ -8,11 +9,9 @@ function action() {
     description: "Students' successes",
     path: '/successes',
     component: (
-      <div>
-        <Successes />
-      </div>
+      <Successes />
     ),
-  };
+  }
 }
 
-export default action;
+export default action

@@ -388,4 +388,4 @@ We all deserve it!
 
 PS. Too many people promise but don't deliver, which might make you hesitant to depart your hard earned cash BEFORE knowing if you get any value. I like to flip things around, so [I don't charge, I accept](/i-dont-charge-i-accept/).
 `,
-};
+}

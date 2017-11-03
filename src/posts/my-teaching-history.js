@@ -58,4 +58,4 @@ export default {
   ps: `
   **P.S.** Do you want to [communicate more](/book-me/) in less time AND [enjoy installing more information in your unsuspecting audiences](/book-me/)? It takes some practice, but [I got your back](/lets-talk/) ;)
 `,
-};
+}

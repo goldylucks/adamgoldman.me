@@ -1,6 +1,6 @@
 // @flow
 
-import React from 'react';
+import React from 'react'
 
 type Props = {
   children: any,
@@ -12,15 +12,15 @@ class FbShareLink extends React.Component {
   };
 
   componentDidMount() {
-    this.setHref();
+    this.setHref()
   }
 
   setHref = () => {
     if (typeof window === 'undefined') {
-      setTimeout(this.setHref, 500);
-      return;
+      setTimeout(this.setHref, 500)
+      return
     }
-    this.setState({ href: window.location.href });
+    this.setState({ href: window.location.href })
   };
 
   props: Props;
@@ -34,8 +34,8 @@ class FbShareLink extends React.Component {
       >
         {this.props.children}
       </a>
-    );
+    )
   }
 }
 
-export default FbShareLink;
+export default FbShareLink

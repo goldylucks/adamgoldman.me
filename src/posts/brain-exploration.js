@@ -36,4 +36,4 @@ You can do this,
 and more,
 [I got your back](/who-am-i-anyway/)
 `,
-};
+}

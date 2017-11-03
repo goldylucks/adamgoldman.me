@@ -983,4 +983,4 @@ and we will to a workshop together
 </div></div>
 </div>
 `,
-};
+}

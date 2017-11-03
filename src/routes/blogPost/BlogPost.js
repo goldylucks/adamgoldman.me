@@ -1,15 +1,15 @@
 // @flow
 /* eslint-disable react/no-danger */
 
-import React from 'react';
+import React from 'react'
 
-import Markdown from '../../components/Markdown';
-import FbPageBox from '../../components/FbPageBox';
-import Ending from '../../components/Ending';
-import FbShareButton from '../../components/FbShareButton';
-import BreadCrumbs from '../../components/BreadCrumbs';
-import FbComments from '../../components/FbComments';
-import Tags from '../../components/Tags';
+import Markdown from '../../components/Markdown'
+import FbPageBox from '../../components/FbPageBox'
+import Ending from '../../components/Ending'
+import FbShareButton from '../../components/FbShareButton'
+import BreadCrumbs from '../../components/BreadCrumbs'
+import FbComments from '../../components/FbComments'
+import Tags from '../../components/Tags'
 
 type Props = {
   title: string,
@@ -22,16 +22,18 @@ type Props = {
   ps?: string, // eslint-disable-line react/require-default-props
 };
 
-const BlogPost = ({
-  title,
-  isTitleRtl,
-  tags,
-  body,
-  isBodyRtl,
-  html,
-  nick,
-  ps,
-}: Props) => (
+const BlogPost = (
+  {
+    title,
+    isTitleRtl,
+    tags,
+    body,
+    isBodyRtl,
+    html,
+    nick,
+    ps,
+  }: Props, // eslint-disable-line object-curly-newline
+) => (
   <div>
     <div className="main-layout post-page">
       <div
@@ -78,6 +80,6 @@ const BlogPost = ({
       <FbComments style={{ marginTop: 10 }} />
     </div>
   </div>
-);
+)
 
-export default BlogPost;
+export default BlogPost

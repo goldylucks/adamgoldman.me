@@ -1,3 +1,1 @@
-import FbComments from './FbComments';
-
-export default FbComments;
+export default from './FbComments'

@@ -1,3 +1,1 @@
-import FbShareLink from './FbShareLink';
-
-export default FbShareLink;
+export default from './FbShareLink'

@@ -1424,4 +1424,4 @@ Then had her think about the next time she sees her sister that had the accident
 </div>
 </div>
 `,
-};
+}

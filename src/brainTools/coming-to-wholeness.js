@@ -1,430 +1,213 @@
-// @flow
-/* eslint max-len: 0 */
-/* eslint react/jsx-curly-brace-presence: 0 */
+import React from 'react'
 
-import React from 'react';
-import Link from '../components/Link';
+import Link from '../components/Link'
+import FbShareLink from '../components/FbShareLink'
 
-import FbShareLink from '../components/FbShareLink';
-import Markdown from '../components/Markdown';
-
-import Answers from '../routes/brainTool/components/Answers';
-import type { Props } from '../routes/brainTool/components/toolPageProps';
-
-export const stepCount = 22;
-export const title = 'Coming To Wholeness';
-export const nick = 'whole';
+export const title = 'Coming To Wholeness'
+export const nick = 'whole'
 // eslint-disable-next-line prettier/prettier
-export const description = `A PRACTICAL step by step tool for non "enlightment"`;
+export const description = 'A PRACTICAL step by step tool for non "enlightment"'
 
-const format = str =>
-  str &&
-  str
-    .replace(/\bme\b/g, 'you')
-    .replace(/\bmy\b/g, 'your')
-    .trim();
+const confirmDecline = (that) => {
+  const nextInputs = { ...that.state.inputs }
+  nextInputs.iLocation = ''
+  nextInputs.iSizeShape = ''
+  nextInputs.iSensationQuality = ''
+  that.setState({ inputs: nextInputs }, () =>
+    that.goToStepByTitle('I - Location'))
+}
 
-class ComingToWholeness extends React.Component {
-  state = {
-    experience: '',
-    feel: '',
-    feelingLocation: '',
-    feelingShapeSize: '',
-    feelingSensationQuality: '',
-    nextILocation: '',
-    nextISizeShape: '',
-    nextISensationQuality: '',
-    nextIDissolvingDescription: '',
-    firstFeelingIntegrationDescription: '',
-    firstFeelingCompareAnswer: '',
-    initialContextBeingThisWayAnswer: '',
-    initialContextBeingThisWayInThePastAnswer: '',
-    initialContextBeingThisWayInTheFutureAnswer: '',
-    isFirstTimeInFindingIsLocation: true,
-    isSecondTimeInFindingIsLocation: false,
-    Is: [],
-  };
-
-  experienceChange = evt => this.setState({ experience: evt.target.value });
-  feelChange = evt => this.setState({ feel: evt.target.value });
-  feelingLocationChange = evt =>
-    this.setState({ feelingLocation: evt.target.value });
-  feelingShapeSizeChange = evt =>
-    this.setState({ feelingShapeSize: evt.target.value });
-  feelingSensationQualityChange = evt =>
-    this.setState({ feelingSensationQuality: evt.target.value });
-
-  nextILocationChange = evt =>
-    this.setState({ nextILocation: evt.target.value });
-
-  nextISizeShapeChange = evt =>
-    this.setState({ nextISizeShape: evt.target.value });
-
-  nextISensationQualityChange = evt =>
-    this.setState({ nextISensationQuality: evt.target.value });
-
-  nextIDissolvingDescriptionChange = evt =>
-    this.setState({ nextIDissolvingDescription: evt.target.value });
-
-  firstFeelingIntegrationDescriptionChange = evt =>
-    this.setState({ firstFeelingIntegrationDescription: evt.target.value });
-  props: Props;
-
-  firstFeelingCompare = str =>
-    this.setState({ firstFeelingCompareAnswer: str }, this.props.onNext());
-
-  initialContextBeingThisWay = str =>
-    this.setState(
-      { initialContextBeingThisWayAnswer: str },
-      this.props.onNext(),
-    );
-
-  initialContextBeingThisWayInThePast = str =>
-    this.setState(
-      { initialContextBeingThisWayInThePastAnswer: str },
-      this.props.onNext(),
-    );
-  initialContextBeingThisWayInTheFuture = str =>
-    this.setState(
-      { initialContextBeingThisWayInTheFutureAnswer: str },
-      this.props.onNext(),
-    );
-
-  submitILocation = evt => {
-    evt.preventDefault();
-    this.setState({
-      Is: this.state.Is.concat({ location: this.state.nextILocation }),
-    });
-    this.props.onNext();
-  };
-
-  submitISizeShape = evt => {
-    evt.preventDefault();
-    const nextIs = [...this.state.Is];
-    nextIs[nextIs.length - 1].sizeShape = this.state.nextISizeShape;
-    this.setState({ Is: nextIs });
-    this.props.onNext();
-  };
-
-  // remove I from the array, since "submit I Location" will push a new one
-  ISizeShapeStepBack = () => {
-    const nextIs = [...this.state.Is];
-    nextIs.pop();
-    this.setState({ Is: nextIs });
-  };
-
-  submitISensationQuality = evt => {
-    evt.preventDefault();
-    const nextIs = [...this.state.Is];
-    nextIs[
-      nextIs.length - 1
-    ].sensationQuality = this.state.nextISensationQuality;
-    this.setState({ Is: nextIs });
-    this.props.onNext();
-  };
-
-  confirmIDecliningInvitation = () => {
-    const {
-      isFirstTimeInFindingIsLocation,
-      isSecondTimeInFindingIsLocation,
-    } = this.state;
-    if (isFirstTimeInFindingIsLocation) {
-      this.setState({
-        isFirstTimeInFindingIsLocation: false,
-        isSecondTimeInFindingIsLocation: true,
-      });
-    } else if (isSecondTimeInFindingIsLocation) {
-      this.setState({ isSecondTimeInFindingIsLocation: false });
-    }
-    this.setState({
-      nextILocation: '',
-      nextISizeShape: '',
-      nextISensationQuality: '',
-    });
-    this.props.onBack(4);
-  };
-
-  allowCompleteIntegration = () => {
-    const nextIs = [...this.state.Is];
-    nextIs.pop();
-    this.setState({
-      Is: nextIs,
-      nextIDissolvingDescription: '',
-    });
-    if (nextIs.length) {
-      this.props.onNext();
-      return;
-    }
-    this.props.onNext(3);
-  };
-
-  previousICompare = str =>
-    this.setState({ previousICompareAnswer: str }, this.props.onNext());
-
-  lastI() {
-    return this.state.Is[this.state.Is.length - 1] || {}; // empty object to avoid undefined errors
+const allowCompleteIntegration = (that) => {
+  const nextIs = [...that.state.Is]
+  const nextInputs = { ...that.state.inputs }
+  nextInputs.iIntegrationDescription = ''
+  nextIs.pop()
+  that.setState({
+    Is: nextIs,
+    inputs: nextInputs,
+  })
+  if (nextIs.length) {
+    that.next()
+    return
   }
+  that.goToStepByTitle('Circling Back - Initial Feeling - Compare')
+}
 
-  INumberInWords(add = 0) {
-    const n = this.state.Is.length + add;
-    if (n === 1) return 'First';
-    if (n === 2) return 'Second';
-    if (n === 3) return 'Third';
-    if (n === 4) return 'Fourth';
-    if (n === 5) return 'Fifth';
-    if (n === 6) return 'Sixth';
-    if (n === 7) return 'Seventh';
-    if (n === 8) return 'Eigth';
-    if (n === 9) return 'Ninth';
-    if (n === 10) return 'Tenth';
-    return `${n}th`;
-  }
+const initialContext = (that, str) => {
+  that.setState({ initialContext: str }, that.next)
+}
 
-  render() {
-    const {
-      renderStep,
-      onShareWithAdam,
-      onUserInputSubmit,
-      onRestart,
-      onNext,
-      back,
-      onBack,
-      dontUnderstand,
-      Next,
-    } = this.props;
-    const {
-      experience,
-      feel,
-      feelingLocation,
-      feelingShapeSize,
-      feelingSensationQuality,
-      nextILocation,
-      nextISizeShape,
-      nextISensationQuality,
-      nextIDissolvingDescription,
-      firstFeelingIntegrationDescription,
-      firstFeelingCompareAnswer,
-      initialContextBeingThisWayAnswer,
-      initialContextBeingThisWayInThePastAnswer,
-      initialContextBeingThisWayInTheFutureAnswer,
-      isFirstTimeInFindingIsLocation,
-      isSecondTimeInFindingIsLocation,
-      previousICompareAnswer,
-    } = this.state;
-    return (
-      <div>
-        {[
-          <div>
-            <Markdown
-              className="tool-text"
-              source={`
-## Background
+const initialContextPast = (that, str) => {
+  that.setState({ initialContextPast: str }, that.next)
+}
 
+const initialContextFuture = (that, str) => {
+  that.setState({ initialContextFuture: str }, that.next)
+}
+
+const lastI = stepsState => (!stepsState.Is.length ? {} : stepsState.Is.last())
+
+export const initialState = {
+  Is: [],
+}
+
+export const mockState = {
+  Is: [
+    {
+      location: 'Above me, two meters',
+      sizeShape: 'round small orange',
+      sensationQuality: 'warm anf fuzzy',
+    },
+  ],
+  iCompare: 'very different than before',
+  feelingCompare: 'somewhat different than before',
+  inputs: {
+    experience: 'Fighting with father',
+    feel: 'Feel annoyed',
+    feelingLocation: 'In stomach',
+    feelingSizeShape: 'small brick',
+    feelingSensationQuality: 'vast and clear',
+    iLocation: 'Above me, two meters',
+    iSizeShape: 'round small orange',
+    iSensationQuality: 'warm anf fuzzy',
+    iIntegrationDescription: 'omg is it the best feeling or what?',
+    feelingIntegrationDescription: "I'm light as a gazelle!",
+  },
+}
+
+export const steps = [
+  {
+    title: 'Background',
+    description: () => `
 *"enlightment is easy, you just surrender your ego and become a vast self like all the gurus tell you to"* - said no human being, EVER.
 
 If you, like me, are willing to ACTIVELY go after a more complete life, and feeling more "whole", I see no reason this process will not affect you in some memorable way.
 
 If you prefer to meditate until that complete life "arrives", this will not be for you, and you are welcome to [ask me why](FB_MESSAGE).
 
-So are we together on this my friend?
-`}
-            />
-            <Answers
-              answers={[
-                {
-                  text: 'Yes, I want to proactively go after a better life!',
-                  onClick: onNext,
-                },
-                {
-                  text: "Makes sense to me, let's continue",
-                  onClick: onNext,
-                },
-                {
-                  text: 'I rather wait passively for life to improve',
-                  onClick: () =>
-                    global.alert(
-                      "I wish you all the luck then, hoping you won't need it ;)",
-                    ),
-                },
-                dontUnderstand,
-              ]}
-            />
-          </div>,
-          <div>
-            <Markdown
-              className="tool-text"
-              source={`
-## Choose Experience
+So are we together on this my friend?`,
+    answers: [
+      {
+        text: 'Yes, I want to proactively go after a better life!',
+      },
+      {
+        text: "Makes sense to me, let's continue",
+      },
+      {
+        text: 'I rather wait passively for life to improve',
+        onClick: () =>
+          global.alert("I wish you all the luck then, hoping you won't need it ;)"),
+      },
+    ],
+  },
 
+  {
+    title: 'Choose Experience',
+    description: () => `
 Good choice!
 
 You'd be surprised how many people "wish" their life to be better, but never go pass that, so I'm glad YOU are in the right direction.
 
 Now, if this is your first time using this tool, you'd benefit most by picking an issue or difficult experience that’s mild to medium intensity.
 
-E.g. Something that pushes your buttons, but really doesn’t hurt anyone.                
-`}
-            />
-            <form onSubmit={onUserInputSubmit} className="tool-form">
-              <input
-                value={experience}
-                onChange={this.experienceChange}
-                className="input"
-                placeholder="I want to resolve the experience of ..."
-                required
-              />
-              <button className="button">Let&apos; continue</button>
-            </form>
-            <Answers answers={[dontUnderstand, back]} />
-          </div>,
-          <div>
-            <Markdown
-              className="tool-text"
-              source={`
-## Initial Feeling
+E.g. Something that pushes your buttons, but really doesn’t hurt anyone.
+`,
+    input: {
+      placeholder: 'I want to resolve the experience of ...',
+      id: 'experience',
+    },
+  },
 
+  {
+    title: 'Initial Feeling',
+    description: stepsState => `
 Imagine it is happening now ...
 
-*${experience.trim()}*
+*${stepsState.inputs.experience}*
 
 and notice how you feel in response ...
 
 Describe your response in one short sentence.
 
 (E.g. *“I feel annoyed.”*)
-`}
-            />
-            <form onSubmit={onUserInputSubmit} className="tool-form">
-              <input
-                value={feel}
-                onChange={this.feelChange}
-                className="input"
-                placeholder="I feel ..."
-                required
-              />
-              <button className="button">Let&apos; continue</button>
-            </form>
-            <Answers answers={[dontUnderstand, back]} />
-          </div>,
-          <div>
-            <Markdown
-              className="tool-text"
-              source={`
-## Initial Feeling - location
+`,
+    input: {
+      placeholder: 'I feel ...',
+      id: 'feel',
+    },
+  },
 
-And *${feel}* ...
+  {
+    title: 'Initial Feeling - location',
+    description: stepsState => `
+And *${stepsState.inputs.feel}* ...
 
-And when you feel *${feel}*, **where is this feeling** of *${feel}* located, when you feel *${feel}*?
+And when you feel *${stepsState.inputs
+    .feel}*, **where is this feeling** of *${stepsState.inputs
+  .feel}* located, when you feel *${stepsState.inputs.feel}*?
 
-(E.g. “in my chest.”)
-`}
-            />
-            <form onSubmit={onUserInputSubmit} className="tool-form">
-              <input
-                value={feelingLocation}
-                onChange={this.feelingLocationChange}
-                className="input"
-                placeholder="It’s ..."
-                required
-              />
-              <button className="button">Let&apos; continue</button>
-            </form>
-            <Answers answers={[dontUnderstand, back]} />
-          </div>,
-          <div>
-            <Markdown
-              className="tool-text"
-              source={`
-## Initial Feeling - Size & Shape
+(E.g. “in my chest.”)    
+`,
+    input: {
+      placeholder: 'It’s ...',
+      id: 'feelingLocation',
+    },
+  },
 
-And *${format(feelingLocation)}* ...
+  {
+    title: 'Initial Feeling - Size & Shape',
+    description: stepsState => `
+And *${stepsState.inputs.feelingLocation}* ...
 
-And when it's *${format(
-                feelingLocation,
-              )}*, and it's a *${feel}* feeling, **notice it's size & shape**, when it's *${format(
-                feelingLocation,
-              )}*, and it's a *${feel}* feeling.
+And when it's *${stepsState.inputs
+    .feelingLocation}*, and it's a FEEL feeling, **notice it's size & shape**, when it's *${stepsState
+  .inputs.feelingLocation}*, and it's a FEEL feeling.
 
-(E.g. “It’s sort of round and the size of an orange.”)
-`}
-            />
-            <form onSubmit={onUserInputSubmit} className="tool-form">
-              <input
-                value={feelingShapeSize}
-                onChange={this.feelingShapeSizeChange}
-                placeholder="It’s ..."
-                className="input"
-                required
-              />
-              <button className="button">let&apos;s continue</button>
-            </form>
-            <Answers answers={[dontUnderstand, back]} />
-          </div>,
-          <div>
-            <Markdown
-              className="tool-text"
-              source={`
-## Initial Feeling - Sensation Quality
+(E.g. “It’s sort of round and the size of an orange.”)    
+`,
+    input: {
+      placeholder: 'It’s ...',
+      id: 'feelingSizeShape',
+    },
+  },
 
-And *${format(feelingShapeSize)}* ...
+  {
+    title: 'Initial Feeling - Sensation Quality',
+    description: stepsState => `
+And ${stepsState.inputs.feelingSizeShape} ...
 
-And when it's *${format(feelingShapeSize)}*, and it's *${format(
-                feelingLocation,
-              )}*, **what's it's sensation quality?**
+And when it's ${stepsState.inputs.feelingSizeShape}, and it's ${stepsState
+  .inputs.feelingLocation}, **what's it's sensation quality?**
 
 (E.g. “It’s fuzzy and a bit prickly.”)
-`}
-            />
-            <form onSubmit={onUserInputSubmit} className="tool-form">
-              <input
-                value={feelingSensationQuality}
-                onChange={this.feelingSensationQualityChange}
-                placeholder="It’s ..."
-                className="input"
-                required
-              />
-              <button className="button">let&apos;s continue</button>
-            </form>
-            <Answers answers={[dontUnderstand, back]} />
-          </div>,
-          <div>
-            <Markdown
-              className="tool-text"
-              source={`
-## Noticing Awareness
+    `,
+    input: {
+      placeholder: "It's ...",
+      id: 'feelingSensationQuality',
+    },
+  },
 
-And *${format(feelingSensationQuality)}*....
+  {
+    title: 'Noticing Awareness',
+    description: stepsState => `
+And ${stepsState.inputs.feelingSensationQuality}....
 
-And when it's *${format(feelingSensationQuality)}*, you can recognize,
+And when it's ${stepsState.inputs.feelingSensationQuality}, you can recognize,
 
-*I am aware of this ${format(
-                feelingSensationQuality,
-              )} sensation, so awareness is present.*
-`}
-            />
-            <Answers
-              answers={[
-                {
-                  text: 'Indeed I can',
-                  onClick: onNext,
-                },
-                {
-                  text: `I am aware of this ${format(
-                    feelingSensationQuality,
-                  )} sensation, so awareness is present`,
-                  onClick: onNext,
-                },
-                dontUnderstand,
-                back,
-              ]}
-            />
-          </div>,
-          <div>
-            <Markdown
-              className="tool-text"
-              source={`
-## Experiencing Practical Awareness
+*I am aware of this ${stepsState.inputs
+    .feelingSensationQuality} sensation, so awareness is present.*
+  `,
+    answers: [
+      { text: 'Indeed I can' },
+      {
+        text: 'I do recognize, now what am I recognizing this "Awareness" for?',
+      },
+    ],
+  },
 
+  {
+    title: 'Experiencing Practical Awareness',
+    description: () => `
 Now take a moment to experience Awareness ...
 
 By "Awareness" I mean the actual capacity to notice, A.K.A. "be aware" of stuff in and around you, with your senses.
@@ -442,36 +225,19 @@ If someone will talk next to you, would you need any effort to hear it?
 If a sound happened on the other side of you, you’d also be aware of it without effort, and even if your eyes are closed, you can notice a sense of space all around you.
 
 When I refer to Awareness, I'm pointing to this capacity to notice, that is throughout the body, and all around. And there isn’t really any edge to it or an end to it. And you can notice this all, simultaneously, right now, kinda like on "autopilot".
-`}
-            />
-            <Answers
-              answers={[
-                {
-                  text: "Yes, I'm aware of all that, and more",
-                  onClick: onNext,
-                },
+  `,
+    answers: [
+      { text: "Yes, I'm aware of all that, and more" },
+      { text: "Yup, awareness is here, what's next?" },
+    ],
+  },
 
-                {
-                  text: "Yup, awareness is here, what's next?",
-                  onClick: onNext,
-                },
+  {
+    title: 'I - Location',
+    id: 'location',
+    description: () => `
 
-                dontUnderstand,
-                back,
-              ]}
-            />
-          </div>,
-          <div>
-            <Markdown
-              className="tool-text"
-              source={`
-## ${this.INumberInWords(1)} "I" - Location
-
-
-${!isFirstTimeInFindingIsLocation
-                ? ''
-                : `
-Now with [your permission](TITLE_or_without_it,_I'm_running_the_show_here_;\\)) let’s return to this statement, *“I am aware of this ${feelingSensationQuality} sensation ${feelingLocation}”* ...
+Now with [your permission](TITLE_or_without_it,_I'm_running_the_show_here_;\\)) let’s return to this statement, *“I am aware of this feelingSensationQuality} sensation feelingLocation}”* ...
 
 Where is the "I", that is aware of this sensation...? Where is this "I" located?
 
@@ -483,183 +249,113 @@ And what location do you notice?
 
 Another way of experiencing this is asking *“Where is the perceiving happening from?”*
 
-E.g.*"it's in front of me, pretty close, slightly to the right"*
-`}
+E.g. *"it's in front of me, pretty close, slightly to the right"*
+`,
+    input: {
+      placeholder: 'It’s ...',
+      id: 'iLocation',
+      onSubmit: (that) => {
+        that.setState(
+          {
+            Is: that.state.Is.concat({
+              location: that.state.inputs.iLocation,
+            }),
+          },
+          that.next,
+        )
+      },
+    },
+  },
 
+  {
+    title: 'I - Size & Shape',
+    description: stepsState => `
 
-${!isSecondTimeInFindingIsLocation
-                ? ''
-                : `
-So where is the ‘I’ that notices this? ...
+And *${stepsState.inputs.iLocation}* ...
 
-Again it's a weird question, but you have a bit more experience with this right now
+And when it's *${stepsState.inputs
+    .iLocation}*, **what is the size & shape of this ‘I’**, when it's *${stepsState
+  .inputs.iLocation}*?
+`,
+    input: {
+      placeholder: 'It’s ...',
+      id: 'iSizeShape',
+      onSubmit: (that) => {
+        const nextIs = [...that.state.Is]
+        nextIs.last().sizeShape = that.state.inputs.iSizeShape
+        that.setState({ Is: nextIs }, that.next)
+      },
+    },
+  },
 
-Where is the perceiving of this happening from?
-E.g.*"it's further away, about 2 meters slightly above eye level"*
-`}
+  {
+    title: 'I - Sensation Quality',
+    description: stepsState => `
 
+And *${stepsState.inputs.iSizeShape}* ...
 
-${isFirstTimeInFindingIsLocation || isSecondTimeInFindingIsLocation
-                ? ''
-                : `
-So where is the ‘I’ that notices this? ...
-
-Where is the perceiving of this happening from?  
-`}
-
-`}
-            />
-            <form onSubmit={this.submitILocation} className="tool-form">
-              <input
-                value={nextILocation}
-                onChange={this.nextILocationChange}
-                placeholder="It’s ..."
-                className="input"
-                required
-              />
-              <button className="button">let&apos;s continue</button>
-            </form>
-            <Answers answers={[dontUnderstand, back]} />
-          </div>,
-
-          <div>
-            <Markdown
-              className="tool-text"
-              source={`
-                
-## ${this.INumberInWords()} "I" - Size & Shape
-
-And *${format(nextILocation)}* ...
-
-And when it's *${format(
-                nextILocation,
-              )}*, **what is the size & shape of this ‘I’**, when it's *${format(
-                nextILocation,
-              )}*?
-`}
-            />
-            <form onSubmit={this.submitISizeShape} className="tool-form">
-              <input
-                value={nextISizeShape}
-                onChange={this.nextISizeShapeChange}
-                placeholder="It’s ..."
-                className="input"
-                required
-              />
-              <button className="button">let&apos;s continue</button>
-            </form>
-            <Answers
-              answers={[
-                dontUnderstand,
-                { text: 'back', onClick: this.ISizeShapeStepBack },
-              ]}
-            />
-          </div>,
-
-          <div>
-            <Markdown
-              className="tool-text"
-              source={`
-## ${this.INumberInWords()} "I" - Sensation Quality
-
-And *${format(nextISizeShape)}* ...
-
-And when it's *${format(nextISizeShape)}*, and it's *${format(
-                nextILocation,
-              )}*, **what's the sensation quality** of this *${format(
-                nextISizeShape,
-              )}* that’s *${format(nextILocation)}*?
+And when it's *${stepsState.inputs.iSizeShape}*, and it's *${stepsState.inputs
+  .iLocation}*, **what's the sensation quality** of this *${stepsState
+  .inputs.iSizeShape}*, that’s *${stepsState.inputs.iLocation}*?
 
 E.g foggy, clear, dense, or empty, heavy, light, vibrating, still, etc.
-`}
-            />
-            <form onSubmit={this.submitISensationQuality} className="tool-form">
-              <input
-                value={nextISensationQuality}
-                onChange={this.nextISensationQualityChange}
-                placeholder="The sensation quality is ..."
-                className="input"
-                required
-              />
-              <button className="button">let&apos;s continue</button>
-            </form>
-            <Answers answers={[dontUnderstand, back]} />
-          </div>,
+`,
+    input: {
+      placeholder: 'The sensation quality is ...',
+      id: 'iSensationQuality',
+      onSubmit: (that) => {
+        const nextIs = [...that.state.Is]
+        nextIs.last().sensationQuality = that.state.inputs.iSensationQuality
+        that.setState({ Is: nextIs }, that.next)
+      },
+    },
+  },
 
-          <div>
-            <Markdown
-              className="tool-text"
-              source={`
-## ${this.INumberInWords()} "I" - Inviting Integration
+  {
+    title: 'I - Inviting Integration',
+    invitation: true,
+    description: stepsState => `
+And *${stepsState.inputs.iSensationQuality}* ...
 
-And ${nextISensationQuality} ...
+And when this ‘I’ is *${stepsState.inputs.iLocation}* ...
 
-And when this ‘I’ is ${format(nextILocation)} ...
-
-and ${format(nextISensationQuality)} ...
+and *${stepsState.inputs.iSensationQuality}* ...
 
 Does the sensation of this ‘I’ welcome the invitation to open and relax as the fullness of Awareness?
 
-Some people prefer to notice what happens when the fullness of Awareness... all of consciousness... is invited to flow in and as... the sensation ${format(
-                nextILocation,
-              )}.
+Some people prefer to notice what happens when the fullness of Awareness... all of consciousness... is invited to flow in and as... the sensation *${stepsState
+    .inputs.iLocation}*.
 
-Or, it may feel like the Awareness already present ${format(
-                nextILocation,
-              )}, wakes up to itself.
+Or, it may feel like the Awareness already present *${stepsState.inputs
+    .iLocation}*, wakes up to itself.
 
 It matters less if the answer is ‘Yes’ or ‘No’, It just tells us what to do next.
-`}
-            />
+`,
+    answers: [
+      { text: 'No', goToStepByTitle: 'Acknolwedging Decline' },
+      { text: 'Yes', goToStepByTitle: 'I - Experiencing Integration' },
+    ],
+  },
 
-            <Answers
-              answers={[
-                <Next>No</Next>,
-                {
-                  text: 'Yes',
-                  onClick: () => {
-                    onNext(2);
-                  },
-                },
-                dontUnderstand,
-                back,
-              ]}
-            />
-          </div>,
-
-          <div>
-            <Markdown
-              className="tool-text"
-              source={`
-## ${this.INumberInWords()} "I" - Acknolwedging
-
+  {
+    title: 'Acknolwedging Decline',
+    decline: true,
+    id: 'decline',
+    description: stepsState => `
 And no ...
 
-And you just noticed the sensation here - **${this.lastI()
-                .location}** -  doesn’t welcome the invitation to open and relax, right?
-      `}
-            />
-            <Answers
-              answers={[
-                { text: `Correct`, onClick: this.confirmIDecliningInvitation },
-                {
-                  text: `Right, the sensation - ${this.lastI()
-                    .location} - doesn't welcome the invitationto open and relax`,
-                  onClick: this.confirmIDecliningInvitation,
-                },
-                <Next>Actually it does accept the invitation now</Next>,
-                dontUnderstand,
-                back,
-              ]}
-            />
-          </div>,
+And you just noticed the sensation here - ***${lastI(stepsState)
+    .location}*** - doesn’t welcome the invitation to open and relax, right?
+`,
+    answers: [
+      { text: 'Correct', onClickThat: confirmDecline },
+      { text: 'Actually it does accept the invitation now' },
+    ],
+  },
 
-          <div>
-            <Markdown
-              className="tool-text"
-              source={`
-## ${this.INumberInWords()} "I" - Experiencing Integration
-
+  {
+    title: 'I - Experiencing Integration',
+    description: () => `
 And yes ...
 
 And notice what happens, when the sensation of the ‘I’ is invited to open and relax ...
@@ -669,439 +365,293 @@ as the fullness of Awareness ...
 There can be a gentle sensing into the sensation in this location, and an allowing this opening and relaxing to happen in its own way. You are not really doing anything, just sensing how it occurs on its own.
 
 And what happens?
-`}
-            />
-            <form onSubmit={onUserInputSubmit} className="tool-form">
-              <input
-                value={nextIDissolvingDescription}
-                onChange={this.nextIDissolvingDescriptionChange}
-                className="input"
-                placeholder="I feel ..."
-                required
-              />
-              <button className="button">let&apos;s continue</button>
-            </form>
-            <Answers answers={[dontUnderstand, back]} />
-          </div>,
+`,
+    input: {
+      placeholder: 'I feel ...',
+      id: 'iIntegrationDescription',
+    },
+  },
 
-          <div>
-            <Markdown
-              className="tool-text"
-              source={`
-## ${this.INumberInWords()} "I" - Allowing Complete Integration
-
-And *${format(nextIDissolvingDescription)}* ...
-
+  {
+    title: 'I - Allowing Complete Integration',
+    description: stepsState => `
+And *${stepsState.inputs.iIntegrationDescription}*
+    
 And if you are experiencing a relaxing, melting, or dissolving, just stay with it until things settle. Enjoy the sense of relaxation, peace or flow as long as you like.
-`}
-            />
-            <Answers
-              answers={[
-                {
-                  text: "I'm experiencing more relaxing ...",
-                  onClick: this.allowCompleteIntegration,
-                },
-                {
-                  text: "I'm experiencing more melting ...",
-                  onClick: this.allowCompleteIntegration,
-                },
-                {
-                  text: "I'm experiencing more dissolving ...",
-                  onClick: this.allowCompleteIntegration,
-                },
-                {
-                  text: 'I feel the integration is complete ...',
-                  onClick: this.allowCompleteIntegration,
-                },
-                dontUnderstand,
-                back,
-              ]}
-            />
-          </div>,
+`,
+    answers: [
+      {
+        text: "I'm experiencing more relaxing ...",
+        onClickThat: allowCompleteIntegration,
+      },
+      {
+        text: "I'm experiencing more melting ...",
+        onClickThat: allowCompleteIntegration,
+      },
+      {
+        text: "I'm experiencing more dissolving ...",
+        onClickThat: allowCompleteIntegration,
+      },
+      {
+        text: 'I feel the integration is complete ...',
+        onClickThat: allowCompleteIntegration,
+      },
+    ],
+  },
 
-          <div>
-            <Markdown
-              className="tool-text"
-              source={`
-## Circling Back - Previous I
-
-Now let's check with the ‘I’ that was ${format(this.lastI().location)}.
+  {
+    title: 'Circling Back - Previous I - Compare',
+    description: stepsState => `
+Now let's check with the ‘I’ that was *${lastI(stepsState).location}*
 
 First notice, is it the same as it was before, or is it a little bit different? Either is fine.
-      `}
-            />
-            <Answers
-              answers={[
-                {
-                  text: "It's exactly the same as before",
-                  onClick: () =>
-                    this.previousICompare('exactly the same as before'),
-                },
-                {
-                  text: "It's a bit different than before",
-                  onClick: () =>
-                    this.previousICompare('a bit different than before'),
-                },
-                {
-                  text: "It's very different than before",
-                  onClick: () =>
-                    this.previousICompare('very different than before'),
-                },
-                dontUnderstand,
-                back,
-              ]}
-            />
-          </div>,
+`,
+    answers: [
+      {
+        text: "It's exactly the same as before",
+        onClickThat: that =>
+          that.setState({ iCompare: 'exactly the same as before' }, that.next),
+      },
+      {
+        text: "It's somewhat different than before",
+        onClickThat: that =>
+          that.setState(
+            { iCompare: 'somewhat different than before' },
+            that.next,
+          ),
+      },
+      {
+        text: "It's very different than before",
+        onClickThat: that =>
+          that.setState({ iCompare: 'very different than before' }, that.next),
+      },
+    ],
+  },
 
-          <div>
-            <Markdown
-              className="tool-text"
-              source={`
-## Circling Back - Previous I - Inviting Integration
+  {
+    title: 'Circling Back - Previous I - Inviting Integration',
+    invitation: true,
+    description: stepsState => `
+And It's *${stepsState.iCompare}*
 
-And It's ${previousICompareAnswer} ...
-
-And now notice what happens, when this sensation of this "I" here - ${format(
-                this.lastI().location,
-              )} - is invited to open and relax ... as the fullness of Awareness ... There can be an allowing of this to happen in its own way.  
+And now notice what happens, when this sensation of this "I" here - *${lastI(stepsState)
+    .location}* - is invited to open and relax ... as the fullness of Awareness ... There can be an allowing of this to happen in its own way.
 
 Does the sensation of this ‘I’ welcome the invitation to open and relax as the fullness of Awareness?
 
-You might prefer to notice what happens when the fullness of Awareness... all of consciousness... is invited to flow in and as... the sensation ${format(
-                this.lastI().location,
-              )}.
+You might prefer to notice what happens when the fullness of Awareness... all of consciousness... is invited to flow in and as... the sensation *${lastI(stepsState).location}*.
 
-Or, it may feel like the Awareness already present in ${format(
-                this.lastI().location,
-              )}, wakes up to itself.
+Or, it may feel like the Awareness already present in *${lastI(stepsState)
+    .location}*, wakes up to itself.
 
-It matters less if the answer is ‘Yes’ or ‘No’, It just tells us what to do next.
-`}
-            />
+It matters less if the answer is ‘Yes’ or ‘No’, It just tells us what to do next.    
+`,
+    answers: [
+      { text: 'Yes', goToStepByTitle: 'I - Experiencing Integration' },
+      { text: 'No', goToStepByTitle: 'Acknolwedging Decline' },
+    ],
+  },
 
-            <Answers
-              answers={[
-                { text: 'Yes', onClick: () => onBack(3) },
-                { text: 'No', onClick: () => onBack(4) },
-                dontUnderstand,
-                back,
-              ]}
-            />
-          </div>,
-
-          <div>
-            <Markdown
-              className="tool-text"
-              source={`
-## Circling Back - Where We Started
-
-Now let’s return to the area that you started with, *${format(
-                feelingLocation,
-              )}*.
+  {
+    title: 'Circling Back - Initial Feeling - Compare',
+    description: stepsState => `
+Now let’s return to the area that you started with, ${stepsState.inputs
+    .feelingLocation}.
 
 First notice, is the sensation there the same as it was before?
 
 Or is it a little bit different?
-`}
-            />
+`,
+    answers: [
+      {
+        text: "It's exactly the same as before",
+        onClickThat: that =>
+          that.setState(
+            { feelingCompare: 'exactly the same as before' },
+            that.next,
+          ),
+      },
+      {
+        text: "It's somewhat different than before",
+        onClickThat: that =>
+          that.setState(
+            { feelingCompare: 'somewhat different than before' },
+            that.next,
+          ),
+      },
+      {
+        text: "It's very different than before",
+        onClickThat: that =>
+          that.setState(
+            { feelingCompare: 'very different than before' },
+            that.next,
+          ),
+      },
+    ],
+  },
 
-            <Answers
-              answers={[
-                {
-                  text: "it's exactly the same as before",
-                  onClick: () =>
-                    this.firstFeelingCompare('exactly the same as before'),
-                },
-                {
-                  text: 'a bit different than before',
-                  onClick: () =>
-                    this.firstFeelingCompare('a bit different than before'),
-                },
-                {
-                  text: "it's very different than before",
-                  onClick: () =>
-                    this.firstFeelingCompare("it's very different than before"),
-                },
-                dontUnderstand,
-                back,
-              ]}
-            />
-          </div>,
+  {
+    title: 'Circling Back - Initial Feeling - Inviting Integration',
+    invitation: true,
+    description: stepsState => `
+And ${stepsState.feelingCompare} ...
 
-          <div>
-            <Markdown
-              className="tool-text"
-              source={`
-## Circling Back - Inviting Integration
+And notice what happens when this sensation here - *${stepsState.inputs
+    .feelingLocation}* - is invited to open and relax ... as all of Awareness.
 
-And ${firstFeelingCompareAnswer} ...
+Another way to experience it is notice what happens when the fullness of Awareness... all of consciousness... is invited to flow in and as... the sensation *${stepsState
+    .inputs.feelingLocation}*.
 
-And notice what happens when this sensation ${format(
-                feelingLocation,
-              )} is invited to open and relax ... as all of Awareness.
+Or, it may feel like the Awareness already present *${stepsState.inputs
+    .feelingLocation}*, wakes up to itself.
 
-Another way to experience it is notice what happens when the fullness of Awareness..., all of consciousness..., is invited to flow in and as... the sensation ${format(
-                feelingLocation,
-              )}.
+Now there is just an allowing of whatever happens. You can enjoy this experience as long as you like, and share what happens and how you feel:    
+`,
+    input: {
+      placeholder: 'I feel ...',
+      id: 'feelingIntegrationDescription',
+    },
+  },
 
-Or, it may feel like the Awareness already present in ${format(
-                feelingLocation,
-              )}, wakes up to itself.
-
-Now there is just an allowing of whatever happens. You can enjoy this experience as long as you like, and share what happens or how you feel:
-`}
-            />
-
-            <form onSubmit={onUserInputSubmit} className="tool-form">
-              <input
-                value={firstFeelingIntegrationDescription}
-                onChange={this.firstFeelingIntegrationDescriptionChange}
-                className="input"
-                placeholder="I feel ..."
-                required
-              />
-              <button className="button">let&apos;s continue</button>
-            </form>
-            <Answers answers={[dontUnderstand, back]} />
-          </div>,
-
-          <div>
-            <Markdown
-              className="tool-text"
-              source={`
-## Circling Back - Initial Context
-
-And ${firstFeelingIntegrationDescription} ...
+  {
+    title: 'Circling Back - Initial Context',
+    description: stepsState => `
+And *${stepsState.inputs.feelingIntegrationDescription}* ...
 
 Being this way, with the I’s and the feeling integrated with Awareness ...
 
-Notice what is it like now, when you imagine being in a situation where *${format(
-                experience,
-              )}* ...
+Notice what is it like now, when you imagine being in a situation where *${stepsState
+    .inputs.experience}* ...
 
 What is it like, being this way?
-`}
-            />
-            <Answers
-              answers={[
-                {
-                  text: 'I feel more at ease',
-                  onClick: () =>
-                    this.initialContextBeingThisWay('more at ease'),
-                },
-                {
-                  text: "It's more neutral",
-                  onClick: () =>
-                    this.initialContextBeingThisWay('more at neutral'),
-                },
-                {
-                  text: 'I feel more resourceful',
-                  onClick: () =>
-                    this.initialContextBeingThisWay('more resourceful'),
-                },
-                {
-                  text: "It's better but there's still something left",
-                  onClick: () =>
-                    global.alert(
-                      "it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?",
-                    ),
-                },
-                {
-                  text:
-                    "It's exactly the same as before, I don't percieve any change",
-                  onClick: () =>
-                    global.alert(
-                      "it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?",
-                    ),
-                },
-                dontUnderstand,
-                back,
-              ]}
-            />
-          </div>,
+`,
+    answers: [
+      {
+        text: 'I feel more at ease',
+        onClickThat: that => initialContext(that, 'more at ease'),
+      },
+      {
+        text: "It's more neutral",
+        onClickThat: that => initialContext(that, 'more at neutral'),
+      },
+      {
+        text: 'I feel more resourceful',
+        onClickThat: that => initialContext(that, 'more resourceful'),
+      },
+      {
+        text: "It's better but there's still something left",
+        onClick: () =>
+          global.alert("it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?"),
+      },
+      {
+        text: "It's exactly the same as before, I don't percieve any change",
+        onClick: () =>
+          global.alert("it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?"),
+      },
+    ],
+  },
 
-          <div>
-            <Markdown
-              className="tool-text"
-              source={`
-## "Being This Way" In The Past
+  {
+    title: '"Being This Way" In The Past',
+    description: stepsState => `
+And *${stepsState.initialContext}* ...
 
-And ${initialContextBeingThisWayAnswer} ...
+And check how it is being this way in two situations in the past of *${stepsState
+    .inputs.experience}*    
+`,
+    answers: [
+      {
+        text: 'I feel more at ease',
+        onClickThat: that => initialContextPast(that, 'more at ease'),
+      },
+      {
+        text: "It's more neutral",
+        onClickThat: that => initialContextPast(that, 'more at neutral'),
+      },
+      {
+        text: 'I feel more resourceful',
+        onClickThat: that => initialContextPast(that, 'more resourceful'),
+      },
+      {
+        text: "It's better but there's still something left",
+        onClick: () =>
+          global.alert("it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?"),
+      },
+      {
+        text: "It's exactly the same as before, I don't percieve any change",
+        onClick: () =>
+          global.alert("it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?"),
+      },
+    ],
+  },
 
-And check how it is being this way in two situations in the past of *${experience.trim()}*
-`}
-            />
-            <Answers
-              answers={[
-                {
-                  text: 'I feel more at ease',
-                  onClick: () =>
-                    this.initialContextBeingThisWayInThePast('more at ease'),
-                },
-                {
-                  text: "It's more neutral",
-                  onClick: () =>
-                    this.initialContextBeingThisWayInThePast('more at neutral'),
-                },
-                {
-                  text: 'I feel more resourceful',
-                  onClick: () =>
-                    this.initialContextBeingThisWayInThePast(
-                      'more resourceful',
-                    ),
-                },
-                {
-                  text: "It's better but there's still something left",
-                  onClick: () =>
-                    global.alert(
-                      "it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?",
-                    ),
-                },
-                {
-                  text:
-                    "It's exactly the same as before, I don't percieve any change",
-                  onClick: () =>
-                    global.alert(
-                      "it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?",
-                    ),
-                },
-                dontUnderstand,
-                back,
-              ]}
-            />
-          </div>,
+  {
+    title: '"Being This Way" In The Future',
+    description: stepsState => `
 
-          <div>
-            <Markdown
-              className="tool-text"
-              source={`
-## "Being This Way" In The Future
+And *${stepsState.initialContextPast}*
 
-And ${initialContextBeingThisWayInThePastAnswer} ...
+And check how it is being this way in three (or) more future scenarios of *${stepsState
+    .inputs.experience}*  
+`,
+    answers: [
+      {
+        text: 'I feel more at ease',
+        onClickThat: that => initialContextFuture(that, 'more at ease'),
+      },
+      {
+        text: "It's more neutral",
+        onClickThat: that => initialContextFuture(that, 'more at neutral'),
+      },
+      {
+        text: 'I feel more resourceful',
+        onClickThat: that => initialContextFuture(that, 'more resourceful'),
+      },
+      {
+        text: "It's better but there's still something left",
+        onClick: () =>
+          global.alert("it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?"),
+      },
+      {
+        text: "It's exactly the same as before, I don't percieve any change",
+        onClick: () =>
+          global.alert("it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?"),
+      },
+    ],
+  },
 
-And check how it is being this way in three more future scenarios of *${experience.trim()}*
-`}
-            />
-            <Answers
-              answers={[
-                {
-                  text: 'I feel more at ease',
-                  onClick: () =>
-                    this.initialContextBeingThisWayInTheFuture('more at ease'),
-                },
-                {
-                  text: "It's more neutral",
-                  onClick: () =>
-                    this.initialContextBeingThisWayInTheFuture(
-                      'more at neutral',
-                    ),
-                },
-                {
-                  text: 'I feel more resourceful',
-                  onClick: () =>
-                    this.initialContextBeingThisWayInTheFuture(
-                      'more resourceful',
-                    ),
-                },
-                {
-                  text: "It's better but there's still something left",
-                  onClick: () =>
-                    global.alert(
-                      "it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?",
-                    ),
-                },
-                {
-                  text:
-                    "It's exactly the same as before, I don't percieve any change",
-                  onClick: () =>
-                    global.alert(
-                      "it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?",
-                    ),
-                },
-                dontUnderstand,
-                back,
-              ]}
-            />
-          </div>,
-
-          <div>
-            <Markdown
-              className="tool-text"
-              source={`
-## Rejoicing Learning
-
-And ${initialContextBeingThisWayInTheFutureAnswer} ...
+  {
+    title: 'Rejoicing Learning',
+    description: stepsState => `
+And *${stepsState.initialContextFuture}* ...
 
 Isn't it great you can learn so fast?
 
 [know others](FB_SHARE) that can enjoy that as well?
 
 or you want to do it again on another issue / experience first?
-                `}
-            />
-            <Answers
-              answers={[
-                {
-                  onClick: onRestart,
-                  text: 'I want to do it again on the experience!',
-                },
-                {
-                  onClick: onRestart,
-                  text: 'I want to do it again on a different experience',
-                },
-                <FbShareLink>I want more to experience this!</FbShareLink>,
-                <Link to="/i-dont-charge-i-accept/">
-                  This is great and I want to give back
-                </Link>,
-                <Link to={'/tools/'}>
-                  Cool! what other brain hacks can you teach me?
-                </Link>,
-                {
-                  text: 'Thank you Adam, can I share with you my experience?',
-                  onClick: onShareWithAdam,
-                },
-                back,
-              ]}
-            />
-            <Markdown
-              className="tool-source"
-              source={`
+`,
+    answers: [
+      {
+        onClick: 'onRestart',
+        text: 'I want to do it again on the experience!',
+      },
+      {
+        onClick: 'onRestart',
+        text: 'I want to do it again on a different experience',
+      },
+      <FbShareLink>I want more to experience this!</FbShareLink>,
+      <Link to="/i-dont-charge-i-accept/">
+        This is great and I want to give back
+      </Link>,
+      <Link to="/tools/">Cool! what other brain hacks can you teach me?</Link>,
+      {
+        text: 'Thank you Adam, can I share with you my experience?',
+        onClick: 'onShareWithAdam',
+      },
+    ],
+    postAnswer: `
 Source: I've adapted this [tool](/tools/) from Connirae's [Wholeness Process](http://andreasnlptrainings.com/wholeness/).
-                `}
-            />
-          </div>,
-        ].map(renderStep)}
-      </div>
-    );
-  }
-}
-
-export default ComingToWholeness;
-
-/* Steps
-
-- Background
-- Choose Experience
-- Initial Feeling
-- Initial Feeling - location
-- Initial Feeling - Size & Shape
-- Initial Feeling - Sensation Quality
-- Noticing Awareness
-- Experiencing Practical Awareness
-- ${this.INumberInWords()} "I" - Location
-- ${this.INumberInWords()} "I" - Size & Shape
-- ${this.INumberInWords()} "I" - Sensation Quality
-- ${this.INumberInWords()} "I" - Inviting Integration
-- ${this.INumberInWords()} "I" - Acknolwedging
-- ${this.INumberInWords()} "I" - Experiencing Integration
-- ${this.INumberInWords()} "I" - Allowing Complete Integration
-- Circling Back - Previous I
-- Circling Back - Previous I - Inviting Integration
-- Circling Back - Where We Started
-- Circling Back - Inviting Integration
-- Circling Back - Initial Context
-- "Being This Way" In The Past
-- "Being This Way" In The Future
-- Rejoicing Learning
-
-*/
+`,
+  },
+]

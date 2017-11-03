@@ -2,20 +2,19 @@
 /* eslint max-len: 0 */
 /* eslint react/jsx-curly-brace-presence: 0 */
 
-import React from 'react';
-import Link from '../components/Link';
+import React from 'react'
 
-import FbShareLink from '../components/FbShareLink';
-import Markdown from '../components/Markdown';
+import Link from '../components/Link'
+import FbShareLink from '../components/FbShareLink'
+import Markdown from '../components/Markdown'
+import Answers from '../routes/brainTool/components/Answers'
+import type { Props } from '../routes/brainTool/components/toolPageProps'
 
-import Answers from '../routes/brainTool/components/Answers';
-import type { Props } from '../routes/brainTool/components/toolPageProps';
-
-export const stepCount = 4;
-export const title = 'I bet you never designed your perfect day';
-export const nick = 'such a perfect day';
+export const stepCount = 4
+export const title = 'I bet you never designed your perfect day'
+export const nick = 'such a perfect day'
 // eslint-disable-next-line prettier/prettier
-export const description = `Design your future`;
+export const description = 'Design your future'
 
 class PerfectDay extends React.Component {
   state = {
@@ -37,9 +36,9 @@ class PerfectDay extends React.Component {
       onNext,
       back,
       dontUnderstand,
-    } = this.props;
+    } = this.props
 
-    const { firstDescription, secondDescription } = this.state;
+    const { firstDescription, secondDescription } = this.state
     return (
       <div>
         {[
@@ -240,8 +239,8 @@ Just like I keep updating the [tools](/tools/) and [methods](/successes/) I shar
           </div>,
         ].map(renderStep)}
       </div>
-    );
+    )
   }
 }
 
-export default PerfectDay;
+export default PerfectDay

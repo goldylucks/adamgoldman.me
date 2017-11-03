@@ -1,4 +1,4 @@
-import { cloudImg } from '../utils';
+import { cloudImg } from '../utils'
 
 export default {
   title: 'Hello, Slave',
@@ -85,4 +85,4 @@ Goodbye, slave.
 
 **PSS**. If you want to [free yourself](/lets-talk/) from the tyranny of words faster, you know where to [find me](/lets-talk/) ;)
 `,
-};
+}

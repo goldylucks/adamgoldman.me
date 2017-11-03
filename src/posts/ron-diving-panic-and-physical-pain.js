@@ -1,4 +1,4 @@
-import { cloudImg } from '../utils';
+import { cloudImg } from '../utils'
 
 export default {
   title: "Healing Ron's physical pain and diving panic",
@@ -32,4 +32,4 @@ I find the best way to avoid regretting mistakes is not to make them, as a wise 
 
 ![Captain Hindsight](${cloudImg('adamgoldman.me/Captain_Hindsight')})
 `,
-};
+}

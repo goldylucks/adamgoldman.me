@@ -1,7 +1,8 @@
-import React from 'react';
-import Page from '../page/Page';
+import React from 'react'
 
-import notFound from './notFound';
+import Page from '../page/Page'
+
+import notFound from './notFound'
 
 function action() {
   return {
@@ -10,7 +11,7 @@ function action() {
     chunks: ['not-found'],
     component: <Page {...notFound} />,
     status: 404,
-  };
+  }
 }
 
-export default action;
+export default action

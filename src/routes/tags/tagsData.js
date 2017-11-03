@@ -1,7 +1,7 @@
 /* eslint-disable */
   export default [
   {
-    "title": "Fibromyalgia",
+    "title": "Fibromyalgia | C.F.S | M.E",
     "items": [
       {
         "url": "fibromyalgia-0-julianne-1",

@@ -1,6 +1,6 @@
 // @flow
 
-import React from 'react';
+import React from 'react'
 
 type Props = {
   step: number,
@@ -14,6 +14,6 @@ const Step = ({ step, currentStep, children }: Props) => (
   >
     {children}
   </div>
-);
+)
 
-export default Step;
+export default Step

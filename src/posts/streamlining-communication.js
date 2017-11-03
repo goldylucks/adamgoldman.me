@@ -63,4 +63,4 @@ if any, over the current headline you already read.
 I'm still on the fence regarding three of them.
 
 `,
-};
+}

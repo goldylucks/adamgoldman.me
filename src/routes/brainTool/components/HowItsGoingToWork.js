@@ -1,8 +1,8 @@
 // @flow
 
 /* eslint-disable react/jsx-curly-brace-presence */
-import React from 'react';
-import ReactMarkdown from 'react-markdown';
+import React from 'react'
+import ReactMarkdown from 'react-markdown'
 
 const HowItsGoingToWork = () => (
   <div className="tool-text">
@@ -20,6 +20,6 @@ const HowItsGoingToWork = () => (
   Sounds good?`}
     />
   </div>
-);
+)
 
-export default HowItsGoingToWork;
+export default HowItsGoingToWork

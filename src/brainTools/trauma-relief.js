@@ -2,28 +2,25 @@
 /* eslint max-len: 0 */
 /* eslint react/jsx-curly-brace-presence: 0 */
 
-import React from 'react';
-import Link from '../components/Link';
+import React from 'react'
 
-import FbShareLink from '../components/FbShareLink';
-import Markdown from '../components/Markdown';
-
-import HowItsGoingToWorkStep from '../routes/brainTool/components/HowItsGoingToWorkStep';
-import Answers from '../routes/brainTool/components/Answers';
-import type { Props } from '../routes/brainTool/components/toolPageProps';
+import Link from '../components/Link'
+import FbShareLink from '../components/FbShareLink'
+import Markdown from '../components/Markdown'
+import HowItsGoingToWorkStep from '../routes/brainTool/components/HowItsGoingToWorkStep'
+import Answers from '../routes/brainTool/components/Answers'
+import type { Props } from '../routes/brainTool/components/toolPageProps'
 
 const feelWorse = () => {
-  global.alert(
-    "this is rare, but if it happens it's usually due to a mixed feeling about the event. contact me and I will show you what to do to feel better, fast",
-  );
-};
+  global.alert("this is rare, but if it happens it's usually due to a mixed feeling about the event. contact me and I will show you what to do to feel better, fast")
+}
 
-export const tags = ['Trauma'];
-export const stepCount = 13;
-export const title = 'Trauma Relief';
-export const nick = 'war in reverse is peace';
+export const tags = ['Trauma']
+export const stepCount = 13
+export const title = 'Trauma Relief'
+export const nick = 'war in reverse is peace'
 // eslint-disable-next-line prettier/prettier
-export const description = `Turn old traumas and bad memories, arguments, and fights into powerful resources`;
+export const description = 'Turn old traumas and bad memories, arguments, and fights into powerful resources'
 
 // eslint-disable-next-line react/prefer-stateless-function
 class TraumaRelief extends React.Component {
@@ -42,7 +39,7 @@ class TraumaRelief extends React.Component {
       onNext,
       back,
       dontUnderstand,
-    } = this.props;
+    } = this.props
     return (
       <div>
         {[
@@ -473,8 +470,8 @@ Source: I've adapted this [tool](/tools/) from Bandler's trauma process, see [He
           </div>,
         ].map(renderStep)}
       </div>
-    );
+    )
   }
 }
 
-export default TraumaRelief;
+export default TraumaRelief

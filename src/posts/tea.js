@@ -9,4 +9,4 @@ Here's a comparison of your brain's [alpha waves](TITLE_marked_in_read) after lo
 
 [Coffee](/blog/coffee/) is still healthy (and usually tastier) but tea has way more benefits.
 `,
-};
+}

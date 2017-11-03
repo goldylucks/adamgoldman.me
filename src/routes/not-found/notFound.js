@@ -1,4 +1,4 @@
-import { cloudImg } from '../../utils';
+import { cloudImg } from '../../utils'
 
 export default {
   title: "Where am I? Who am I? What's the meaning of all this?",
@@ -8,9 +8,7 @@ export default {
   body: `
 ## Looks like you took one too many left turns ...
 
-<img alt="Middle of nowhere" src="${cloudImg(
-    'adamgoldman.me/nowhere',
-  )}" style="max-width: 100%;" />
+<img alt="Middle of nowhere" src="${cloudImg('adamgoldman.me/nowhere')}" style="max-width: 100%;" />
 
 Whatever it is you were looking for, it's not here my friend.
 
@@ -23,4 +21,4 @@ on the bright side, this is a great opportunity for you to [talk to me](/lets-ta
   ps: `> *caminante no hay camino,*  
 > *se hace camino al andar* - **Manuel Serrat**  
 `,
-};
+}

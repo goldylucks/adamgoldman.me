@@ -31,4 +31,4 @@ Sol: *“It’s crazy … I know I’ve been through some rough times, but i had
   ps: `
 If you know anyone who's still controlled by her past, [contact me](/lets-talk/) and we'll get her some relief as soon as possible.
 `,
-};
+}

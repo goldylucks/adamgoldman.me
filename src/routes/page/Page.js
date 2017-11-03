@@ -2,13 +2,14 @@
 
 /* eslint-disable react/no-danger */
 
-import React from 'react';
-import Markdown from '../../components/Markdown';
-import FbPageBox from '../../components/FbPageBox';
-import Ending from '../../components/Ending';
-import BreadCrumbs from '../../components/BreadCrumbs';
-import FbShareButton from '../../components/FbShareButton';
-import FbComments from '../../components/FbComments';
+import React from 'react'
+
+import Markdown from '../../components/Markdown'
+import FbPageBox from '../../components/FbPageBox'
+import Ending from '../../components/Ending'
+import BreadCrumbs from '../../components/BreadCrumbs'
+import FbShareButton from '../../components/FbShareButton'
+import FbComments from '../../components/FbComments'
 
 type Props = {
   title: string,
@@ -19,7 +20,9 @@ type Props = {
   ps?: string, // eslint-disable-line react/require-default-props
 };
 
-const Page = ({ title, tags, body, html, nick, ps }: Props) => (
+const Page = ({
+  title, tags, body, html, nick, ps }:
+Props) => (
   <div>
     <div className="main-layout post-page">
       <div
@@ -60,6 +63,6 @@ const Page = ({ title, tags, body, html, nick, ps }: Props) => (
       <FbComments style={{ marginTop: 10 }} />
     </div>
   </div>
-);
+)
 
-export default Page;
+export default Page

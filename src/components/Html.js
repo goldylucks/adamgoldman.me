@@ -1,9 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import serialize from 'serialize-javascript';
-import config from '../config';
-import { cloudImg } from '../utils';
-import { DOMAIN, FB_APP_ID, MESSENGER_LINK } from '../constants';
+import React from 'react'
+import PropTypes from 'prop-types'
+import serialize from 'serialize-javascript'
+
+import config from '../config'
+import { cloudImg } from '../utils'
+import { DOMAIN, FB_APP_ID, MESSENGER_LINK } from '../constants'
 
 /* eslint-disable react/no-danger */
 
@@ -12,12 +13,10 @@ class Html extends React.Component {
     description: PropTypes.string.isRequired,
     path: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    styles: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        cssText: PropTypes.string.isRequired,
-      }).isRequired,
-    ),
+    styles: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      cssText: PropTypes.string.isRequired,
+    }).isRequired),
     scripts: PropTypes.arrayOf(PropTypes.string.isRequired),
     app: PropTypes.object, // eslint-disable-line
     children: PropTypes.string.isRequired,
@@ -37,7 +36,7 @@ class Html extends React.Component {
       scripts,
       app,
       children,
-    } = this.props;
+    } = this.props
     return (
       <html className="no-js" lang="en">
         <head>
@@ -139,8 +138,8 @@ class Html extends React.Component {
           </a>
         </body>
       </html>
-    );
+    )
   }
 }
 
-export default Html;
+export default Html

@@ -20,4 +20,4 @@ As you watch this, notice any internal resistance that pops up, and make a note 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wgwxn9mRpAY?modestbranding=1&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
 `,
-};
+}

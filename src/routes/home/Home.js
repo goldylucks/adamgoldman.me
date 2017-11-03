@@ -1,12 +1,12 @@
 // @flow
 
-import React from 'react';
+import React from 'react'
 
-import Markdown from '../../components/Markdown';
-import FbPageBox from '../../components/FbPageBox';
-import Ending from '../../components/Ending';
-import FbShareButton from '../../components/FbShareButton';
-import FbComments from '../../components/FbComments';
+import Markdown from '../../components/Markdown'
+import FbPageBox from '../../components/FbPageBox'
+import Ending from '../../components/Ending'
+import FbShareButton from '../../components/FbShareButton'
+import FbComments from '../../components/FbComments'
 
 const Home = () => (
   <div>
@@ -28,6 +28,6 @@ Until I sort out my homepage, try one of the [brain hacking tools](/tools/), rea
       <FbComments style={{ marginTop: 10 }} />
     </div>
   </div>
-);
+)
 
-export default Home;
+export default Home

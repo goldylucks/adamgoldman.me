@@ -22,4 +22,4 @@ make the psychosis real, and it's gone! Or spoil it :)
 - tape 4 - 01:18:00 - hysterical laughter induction + anchoring entire crowd (this is awesome, John is actually charismatic here!)
 - tape 4 - 01:30:00 - demo: laughing through a trauma
 `,
-};
+}

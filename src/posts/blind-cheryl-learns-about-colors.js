@@ -34,4 +34,4 @@ Questions are good, but if Cheryl waited until she understands what blue is BEFO
 
 If you want to get the final nudge about this, [let the king](/blog/the-executed-king/) further open your eyes
 `,
-};
+}

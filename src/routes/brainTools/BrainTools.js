@@ -1,14 +1,15 @@
 // @flow
 
-import React from 'react';
+import React from 'react'
 
-import Link from '../../components/Link';
-import Ending from '../../components/Ending';
-import BreadCrumbs from '../../components/BreadCrumbs';
-import FbShareButton from '../../components/FbShareButton';
-import FbComments from '../../components/FbComments';
-import { filterDrafts } from '../../utils';
-import tools from './brainToolsData';
+import Link from '../../components/Link'
+import Ending from '../../components/Ending'
+import BreadCrumbs from '../../components/BreadCrumbs'
+import FbShareButton from '../../components/FbShareButton'
+import FbComments from '../../components/FbComments'
+import { filterDrafts } from '../../utils'
+
+import tools from './brainToolsData'
 
 const ToolsListPage = () => (
   <article className="main-layout">
@@ -45,6 +46,6 @@ const ToolsListPage = () => (
     <Ending nick="automated brain hacking" />
     <FbComments style={{ marginTop: 10 }} />
   </article>
-);
+)
 
-export default ToolsListPage;
+export default ToolsListPage

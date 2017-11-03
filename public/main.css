@@ -27,7 +27,12 @@ a {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -174,7 +179,7 @@ ul {
   text-transform: uppercase;
   text-shadow: none;
   border-radius: 0.3rem;
-  border: rgba(0,0,0,0.05) 0.1em solid;
+  border: rgba(0, 0, 0, 0.05) 0.1em solid;
   background: #5ba4e5;
 }
 
@@ -196,7 +201,7 @@ ul {
   color: #fff;
 }
 
-.post-text img:not(.ending-avatar):not([class*="_1ift"]),
+.post-text img:not(.ending-avatar):not([class*='_1ift']),
 .page-text img {
   display: block;
   margin: 60px auto;
@@ -259,8 +264,8 @@ a[data-title] {
   position: relative;
 }
 
-span[data-title]:after,
-a[data-title]:after {
+span[data-title]::after,
+a[data-title]::after {
   content: attr(data-title);
   padding: 4px 8px;
   color: #fff;
@@ -276,8 +281,8 @@ a[data-title]:after {
   opacity: 0;
 }
 
-span[data-title]:hover:after,
-a[data-title]:hover:after {
+span[data-title]:hover::after,
+a[data-title]:hover::after {
   top: -40px;
   opacity: 1;
 }
@@ -308,7 +313,7 @@ a[data-title]:hover:after {
 .chat-message-time {
   text-align: center;
 }
-    
+
 .chat-message img {
   display: inline;
   position: static;
@@ -320,12 +325,13 @@ a[data-title]:hover:after {
   zoom: 1;
 }
 
-.clearfix:before, .clearfix:after {
-  content: " ";
+.clearfix::before,
+.clearfix::after {
+  content: ' ';
   display: table;
 }
 
-.clearfix:after {
+.clearfix::after {
   clear: both;
 }
 
@@ -356,7 +362,7 @@ a[data-title]:hover:after {
   padding: 30;
 }
 
-/* Auto Complete*/
+/* Auto Complete */
 .react-autosuggest__container {
   position: relative;
   color: #1a7ced;
@@ -444,6 +450,52 @@ a[data-title]:hover:after {
 
 .messenger-fixed:hover {
   opacity: 1;
+}
+
+.switch-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 8px;
+}
+
+.switch-icon {
+  height: 20px;
+  width: 20px;
+  opacity: 0.5;
+  transition: opacity 0.5s;
+}
+
+.switch-icon.active {
+  opacity: 1;
+}
+
+.switch {
+  width: 40px;
+  height: 10px;
+  border-radius: 10px;
+  border: #fff 1px solid;
+  position: relative;
+}
+
+.switch::before {
+  content: '';
+  background: #fff;
+  display: block;
+  border-radius: 50%;
+  height: 6px;
+  width: 6px;
+  top: 1px;
+  position: absolute;
+  transition: left 0.5s;
+}
+
+.switch.left::before {
+  left: 1px;
+}
+
+.switch.right::before {
+  left: 31px;
 }
 
 @media (max-width: 800px) {

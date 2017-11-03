@@ -93,4 +93,4 @@ What we do works, and [it works FAST](/successes).
 So when you are ready to [join the others](/successes) and learn to operate your brain better, [talk to me](/lets-talk) and let's do this.
 
 `,
-};
+}

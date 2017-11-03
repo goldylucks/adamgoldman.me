@@ -1,5 +1,5 @@
-import path from 'path';
-import fs from 'fs';
+import path from 'path'
+import fs from 'fs'
 
 const pathToWriteFile = path.resolve(
   __dirname,
@@ -8,10 +8,10 @@ const pathToWriteFile = path.resolve(
   'routes',
   'page',
   'pagesData.js',
-);
+)
 
 // read all files in src/posts
-const dirToReadPath = path.resolve(__dirname, '..', 'src', 'pages');
+const dirToReadPath = path.resolve(__dirname, '..', 'src', 'pages')
 
 const fileToWrite = [
   'book-me.js',
@@ -23,19 +23,19 @@ const fileToWrite = [
   'legal-stuff.js',
   'quotes.js',
   'who-am-i-anyway.js',
-].map(fileNameToObject);
+].map(fileNameToObject)
 
 fs.writeFileSync(
   pathToWriteFile,
   `/* eslint-disable */
   export default ${JSON.stringify(fileToWrite, null, 2)}`,
-);
+)
 
 function fileNameToObject(fileName) {
   // eslint-disable-next-line global-require,import/no-dynamic-require
-  const page = require(path.resolve(dirToReadPath, fileName)).default;
-  delete page.body;
-  delete page.nick;
-  delete page.ps;
-  return { ...page, url: fileName.split('.js')[0] };
+  const page = require(path.resolve(dirToReadPath, fileName)).default
+  delete page.body
+  delete page.nick
+  delete page.ps
+  return { ...page, url: fileName.split('.js')[0] }
 }

@@ -1,4 +1,4 @@
-import { cloudImg } from '../utils';
+import { cloudImg } from '../utils'
 
 export default {
   title: 'how to improve confidence and self esteem in a hard way',
@@ -111,4 +111,4 @@ Talk soon,
   ps: `
 **PS.** Works from my own experience AND [people I've helped](/successes/). Even tho [I have faster ways](/tools/) to induce learnings and desire results, this is still very powerful. **Do it!**
 `,
-};
+}
