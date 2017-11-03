@@ -1,3 +1,1 @@
-import SidebarSignupForm from './SidebarSignupForm';
-
-export default SidebarSignupForm;
+export default from './SidebarSignupForm'

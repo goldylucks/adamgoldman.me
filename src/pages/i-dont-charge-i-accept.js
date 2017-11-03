@@ -1,4 +1,4 @@
-import { cloudImg } from '../utils';
+import { cloudImg } from '../utils'
 
 export default {
   title: "I don't charge I accept",
@@ -82,4 +82,4 @@ That's perfectly fine, I have a bit of savings and I don't spend too much. There
 
 If we haven't done [anything](/tools/) together [yet](/lets-talk/), **what can I do you for my friend?**
 `,
-};
+}

@@ -1,5 +1,5 @@
-import path from 'path';
-import fs from 'fs';
+import path from 'path'
+import fs from 'fs'
 
 // read all files in src/brainTools
 const pathToWriteFile = path.resolve(
@@ -9,8 +9,8 @@ const pathToWriteFile = path.resolve(
   'routes',
   'brainTools',
   'brainToolsData.js',
-);
-const dirToReadPath = path.resolve(__dirname, '..', 'src', 'brainTools');
+)
+const dirToReadPath = path.resolve(__dirname, '..', 'src', 'brainTools')
 
 // tools by rendering order
 const fileToWrite = [
@@ -26,20 +26,20 @@ const fileToWrite = [
   'reverse-feeling-spin',
   'reverse-feeling-spin2',
   'recurring-time-distortion',
-].map(fileNameToObject);
+].map(fileNameToObject)
 
 // write file brainTools.js
 fs.writeFileSync(
   pathToWriteFile,
   `/* eslint-disable */
   export default ${JSON.stringify(fileToWrite, null, 2)}`,
-);
+)
 
 function fileNameToObject(fileName) {
   // eslint-disable-next-line global-require,import/no-dynamic-require
-  const { ...tool } = require(path.resolve(dirToReadPath, fileName));
-  delete tool.default;
-  delete tool.stepCount;
-  delete tool.nick;
-  return { ...tool, url: fileName.split('.js')[0] };
+  const { ...tool } = require(path.resolve(dirToReadPath, fileName))
+  delete tool.default
+  delete tool.stepCount
+  delete tool.nick
+  return { ...tool, url: fileName.split('.js')[0] }
 }

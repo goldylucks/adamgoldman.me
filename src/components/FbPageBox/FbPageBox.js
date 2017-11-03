@@ -1,6 +1,6 @@
 // @flow
 
-import React from 'react';
+import React from 'react'
 
 class FbPageBox extends React.Component {
   state = {
@@ -8,16 +8,16 @@ class FbPageBox extends React.Component {
   };
 
   componentDidMount() {
-    this.reloadFB();
+    this.reloadFB()
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    return nextState.rendered !== this.state.rendered;
+    return nextState.rendered !== this.state.rendered
   }
 
   componentWillUnmount() {
-    clearTimeout(this.timeoutFb);
-    clearTimeout(this.timeoutFbRender);
+    clearTimeout(this.timeoutFb)
+    clearTimeout(this.timeoutFbRender)
   }
 
   elem = null;
@@ -26,23 +26,23 @@ class FbPageBox extends React.Component {
 
   reloadFB = () => {
     if (!global.FB) {
-      this.timeoutFb = setTimeout(this.reloadFB, 500);
-      return;
+      this.timeoutFb = setTimeout(this.reloadFB, 500)
+      return
     }
     global.FB.XFBML.parse(this.elem, () => {
       this.timeoutFbRender = setTimeout(() => {
-        this.setState({ rendered: true });
-      }, 1000);
-    });
+        this.setState({ rendered: true })
+      }, 1000)
+    })
   };
 
   render() {
-    const opacity = this.state.rendered ? 1 : 0;
+    const opacity = this.state.rendered ? 1 : 0
     return (
       <div
         style={{ height: 250, opacity, transition: '0.5s opacity' }}
-        ref={el => {
-          this.elem = el;
+        ref={(el) => {
+          this.elem = el
         }}
       >
         <div
@@ -54,8 +54,8 @@ class FbPageBox extends React.Component {
           data-small-header="true"
         />
       </div>
-    );
+    )
   }
 }
 
-export default FbPageBox;
+export default FbPageBox

@@ -25,4 +25,4 @@ HER: *"Oh yea I remember we've done something about buses, anywayz it's fine eve
 
 If you have a phobia or an unwanted response for something, go over [these steps](/tools/trauma-relief/), and [let me know](/lets-talk/) how was it.
 `,
-};
+}

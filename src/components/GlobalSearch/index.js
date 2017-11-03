@@ -1,3 +1,1 @@
-import GlobalSearch from './GlobalSearch';
-
-export default GlobalSearch;
+export default from './GlobalSearch'

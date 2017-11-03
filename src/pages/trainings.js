@@ -226,4 +226,4 @@ This guy is such a powerful writer and story teller, I've done each of these cou
 - [Lucrative Email Marketing](https://tinylittlebusinesses.com/email/) (Free)
 - [Lucrative List Building](https://tinylittlebusinesses.com/list-building/) (Free)
 `,
-};
+}

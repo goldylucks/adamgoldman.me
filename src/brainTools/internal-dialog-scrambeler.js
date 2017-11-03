@@ -2,21 +2,20 @@
 /* eslint max-len: 0 */
 /* eslint react/jsx-curly-brace-presence: 0 */
 
-import React from 'react';
+import React from 'react'
 
-import Link from '../components/Link';
-import FbShareLink from '../components/FbShareLink';
-import Markdown from '../components/Markdown';
+import Link from '../components/Link'
+import FbShareLink from '../components/FbShareLink'
+import Markdown from '../components/Markdown'
+import Answers from '../routes/brainTool/components/Answers'
+import HowItsGoingToWorkStep from '../routes/brainTool/components/HowItsGoingToWorkStep'
+import type { Props } from '../routes/brainTool/components/toolPageProps'
 
-import Answers from '../routes/brainTool/components/Answers';
-import HowItsGoingToWorkStep from '../routes/brainTool/components/HowItsGoingToWorkStep';
-import type { Props } from '../routes/brainTool/components/toolPageProps';
-
-export const stepCount = 10;
-export const title = 'Internal Dialog Scrambeler';
-export const nick = 'what if, if what?';
+export const stepCount = 10
+export const title = 'Internal Dialog Scrambeler'
+export const nick = 'what if, if what?'
 // eslint-disable-next-line prettier/prettier
-export const description = `Stop recurring intrusive thoughts and limiting beliefs. Perfect for "what if's, "I'm not good enough", and all that lovely things we said to ourselves`;
+export const description = 'Stop recurring intrusive thoughts and limiting beliefs. Perfect for "what if\'s, "I\'m not good enough", and all that lovely things we said to ourselves'
 
 class InternalDialogScrambler extends React.Component {
   state = {
@@ -31,33 +30,33 @@ class InternalDialogScrambler extends React.Component {
   props: Props;
 
   flash = () => {
-    this.setState({ doneFlashing: false });
+    this.setState({ doneFlashing: false })
     this.state.phrase.split(' ').forEach((w, idx, array) => {
       setTimeout(() => {
-        this.setState({ flashingWord: w });
+        this.setState({ flashingWord: w })
         if (idx !== array.length - 1) {
-          return;
+          return
         }
         setTimeout(() => {
-          this.setState({ doneFlashing: true, flashingWord: '' });
-        }, 3500);
-      }, idx * 3500);
-    });
+          this.setState({ doneFlashing: true, flashingWord: '' })
+        }, 3500)
+      }, idx * 3500)
+    })
   };
 
   flashSlower = () => {
-    this.setState({ doneFlashingSlower: false });
+    this.setState({ doneFlashingSlower: false })
     this.state.phrase.split(' ').forEach((w, idx, array) => {
       setTimeout(() => {
-        this.setState({ flashingWord: w });
+        this.setState({ flashingWord: w })
         if (idx !== array.length - 1) {
-          return;
+          return
         }
         setTimeout(() => {
-          this.setState({ doneFlashingSlower: true, flashingWord: '' });
-        }, 5500);
-      }, idx * 5500);
-    });
+          this.setState({ doneFlashingSlower: true, flashingWord: '' })
+        }, 5500)
+      }, idx * 5500)
+    })
   };
 
   render() {
@@ -68,14 +67,14 @@ class InternalDialogScrambler extends React.Component {
       onNext,
       back,
       dontUnderstand,
-    } = this.props;
+    } = this.props
 
     const {
       doneFlashing,
       doneFlashingSlower,
       flashingWord,
       phrase,
-    } = this.state;
+    } = this.state
 
     return (
       <div>
@@ -354,8 +353,8 @@ Source: I've adapted this [tool](/tools/) from Nick Kemp's Internal Tempo Shift 
           </div>,
         ].map(renderStep)}
       </div>
-    );
+    )
   }
 }
 
-export default InternalDialogScrambler;
+export default InternalDialogScrambler

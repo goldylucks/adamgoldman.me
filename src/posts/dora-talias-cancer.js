@@ -1,4 +1,4 @@
-import { parseFbConversation } from '../utils';
+import { parseFbConversation } from '../utils'
 
 export default {
   title: 'דורה טליאס - ניקוי אבל ואבדן, געגועים לבעל, אכזבה, כעס, עצב ואבחון של סרטן', // eslint-disable-line prettier/prettier
@@ -33,7 +33,7 @@ export default {
 
   `,
   html: `<div>${parseFbConversation(msgs())}</div>`,
-};
+}
 
 function msgs() {
   return [
@@ -2884,5 +2884,5 @@ function msgs() {
       author: 'adam',
     },
     { content: [{ type: 'likeSticker' }], author: 'other' },
-  ];
+  ]
 }

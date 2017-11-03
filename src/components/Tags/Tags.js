@@ -1,11 +1,12 @@
 // @flow
 
-import React from 'react';
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import React from 'react'
+import withStyles from 'isomorphic-style-loader/lib/withStyles'
 
-import s from './Tags.css';
-import Link from '../Link';
-import { titleToSlug } from '../../utils';
+import Link from '../Link'
+import { titleToSlug } from '../../utils'
+
+import s from './Tags.css'
 
 type Props = {
   tags: Array<string>,
@@ -22,6 +23,6 @@ const Tags = ({ tags }: Props) => (
       </span>
     ))}
   </div>
-);
+)
 
-export default withStyles(s)(Tags);
+export default withStyles(s)(Tags)

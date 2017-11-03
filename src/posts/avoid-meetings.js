@@ -76,4 +76,4 @@ U'd be surprised how small tweaks into your workflow can exponentially increase 
 
 Much easier than the other way around ;)
 `,
-};
+}

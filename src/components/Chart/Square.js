@@ -1,10 +1,11 @@
-// @flow
+/* eslint-disable */
 
-import React from 'react';
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import React from 'react'
+import withStyles from 'isomorphic-style-loader/lib/withStyles'
 
-import Markdown from '../../components/Markdown';
-import s from './Square.css';
+import Markdown from '../../components/Markdown'
+
+import s from './Square.css'
 
 type Props = {
   title: string,
@@ -25,31 +26,31 @@ class Square extends React.Component {
 
   componentDidMount() {
     if (this.props.invitation) {
-      const { top, right } = this.el.getBoundingClientRect();
+      const { top, right } = this.el.getBoundingClientRect()
       const targetEl = document
         .querySelector('#decline')
-        .getBoundingClientRect();
+        .getBoundingClientRect()
       // eslint-disable-next-line react/no-did-mount-set-state
       this.setState({
         line: {
           width: targetEl.left - right,
           height: targetEl.top - top,
         },
-      });
+      })
     }
 
     if (this.props.decline) {
-      const { top, left, width } = this.el.getBoundingClientRect();
+      const { top, left, width } = this.el.getBoundingClientRect()
       const targetEl = document
         .querySelector('#location')
-        .getBoundingClientRect();
+        .getBoundingClientRect()
       // eslint-disable-next-line react/no-did-mount-set-state
       this.setState({
         lineToILocation: {
-          width: Math.abs(left - targetEl.right + width / 2),
-          height: Math.abs(top - targetEl.top - targetEl.height / 2),
+          width: Math.abs(left - targetEl.right + (width / 2)),
+          height: Math.abs(top - targetEl.top - (targetEl.height / 2)),
         },
-      });
+      })
     }
   }
 
@@ -59,7 +60,7 @@ class Square extends React.Component {
 
   renderArrowToILocation() {
     if (!this.props.decline) {
-      return null;
+      return null
     }
     return (
       <div
@@ -85,7 +86,7 @@ class Square extends React.Component {
           />
         </svg>
       </div>
-    );
+    )
   }
 
   render() {
@@ -99,13 +100,13 @@ class Square extends React.Component {
       mockState,
       idx,
       ...rest
-    } = this.props;
-    delete rest.postAnswer;
+    } = this.props
+    delete rest.postAnswer
     return (
       <div
         key={title}
-        ref={el => {
-          this.el = el;
+        ref={(el) => {
+          this.el = el
         }}
         className={`${s.container} ${decline ? s.decline : ''}`}
         {...rest}
@@ -113,9 +114,7 @@ class Square extends React.Component {
         <h1 className={s.title}>{title}</h1>
         <Markdown
           className={s.description}
-          source={`## ${title} \n Step ${idx}/${nOfSteps} \n ${description(
-            mockState,
-          )}`}
+          source={`## ${title} \n Step ${idx}/${nOfSteps} \n ${description(mockState)}`}
         />
         {invitation && (
           <div
@@ -146,7 +145,7 @@ class Square extends React.Component {
         )}
         {this.renderArrowToILocation()}
       </div>
-    );
+    )
   }
 }
-export default withStyles(s)(Square);
+export default withStyles(s)(Square)

@@ -102,4 +102,4 @@ The dude presenting the course seems sweet and genuine, trying to be professiona
   ps: `
 **PS**. once you're done, [contact me](/lets-talk/) to get your skills to the next level
 `,
-};
+}

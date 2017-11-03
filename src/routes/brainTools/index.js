@@ -1,7 +1,8 @@
-import React from 'react';
-import BrainTools from './BrainTools';
+import React from 'react'
 
-const title = 'Brain Hacking Automation Tools';
+import BrainTools from './BrainTools'
+
+const title = 'Brain Hacking Automation Tools'
 
 function action() {
   return {
@@ -11,11 +12,9 @@ function action() {
     description:
       'Hack your brain with an internet connection and a small screen',
     component: (
-      <div>
-        <BrainTools title={title} />
-      </div>
+      <BrainTools title={title} />
     ),
-  };
+  }
 }
 
-export default action;
+export default action

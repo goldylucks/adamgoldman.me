@@ -2,23 +2,21 @@
 /* eslint max-len: 0 */
 /* eslint react/jsx-curly-brace-presence: 0 */
 
-import React from 'react';
-import Link from '../components/Link';
+import React from 'react'
 
-import FbShareLink from '../components/FbShareLink';
-import Markdown from '../components/Markdown';
+import Link from '../components/Link'
+import FbShareLink from '../components/FbShareLink'
+import Markdown from '../components/Markdown'
+import Answers from '../routes/brainTool/components/Answers'
+import ToolsIntro from '../routes/brainTool/components/ToolsIntro'
+import type { Props } from '../routes/brainTool/components/toolPageProps'
 
-import Answers from '../routes/brainTool/components/Answers';
-import ToolsIntro from '../routes/brainTool/components/ToolsIntro';
-import type { Props } from '../routes/brainTool/components/toolPageProps';
-
-export const stepCount = 25;
-export const title = 'Loved Ones Amplifier';
+export const stepCount = 25
+export const title = 'Loved Ones Amplifier'
 // eslint-disable-next-line prettier/prettier
-export const description = `Enjoy people you like like never before`;
-export const nick = 'lovey dovey';
+export const description = 'Enjoy people you like like never before'
+export const nick = 'lovey dovey'
 
-// eslint-disable-next-line react/prefer-stateless-function
 class LovedOnesAmplifier extends React.Component {
   state = {
     lovedOneName: '',
@@ -44,8 +42,8 @@ class LovedOnesAmplifier extends React.Component {
     this.setState({
       lovedOneName: '',
       lovedOneGender: '',
-    });
-    this.props.onGoToStep(4);
+    })
+    this.props.onGoToStep(4)
   };
   render() {
     const {
@@ -60,14 +58,14 @@ class LovedOnesAmplifier extends React.Component {
       letsContinue,
       back,
       dontUnderstand,
-    } = this.props;
+    } = this.props
     const {
       lovedOneName,
       lovedOneGender,
       lovedOneHeShe,
       lovedOneHisHer,
       lovedOneHimHer,
-    } = this.state;
+    } = this.state
 
     return (
       <div>
@@ -731,8 +729,8 @@ Source: I've adapted this [tool](/tools/) from Bandler's processes, see [Using Y
           </div>,
         ].map(renderStep)}
       </div>
-    );
+    )
   }
 }
 
-export default LovedOnesAmplifier;
+export default LovedOnesAmplifier

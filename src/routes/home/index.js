@@ -1,5 +1,6 @@
-import React from 'react';
-import Home from './Home';
+import React from 'react'
+
+import Home from './Home'
 
 function action() {
   return {
@@ -8,7 +9,7 @@ function action() {
     path: '/',
     description: "Relax, it's just life",
     component: <Home />,
-  };
+  }
 }
 
-export default action;
+export default action

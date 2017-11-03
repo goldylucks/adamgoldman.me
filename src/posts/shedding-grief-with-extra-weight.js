@@ -15,4 +15,4 @@ If you have lost a loved one(s), like many before you, go through [these steps](
 
 [I'm waiting for you on the other side](/lets-talk/).
 `,
-};
+}

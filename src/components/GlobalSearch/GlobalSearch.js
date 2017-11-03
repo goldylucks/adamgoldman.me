@@ -1,34 +1,34 @@
 // @flow
 
-import React from 'react';
-import Autosuggest from 'react-autosuggest';
-import Fuse from 'fuse.js';
+import React from 'react'
+import Autosuggest from 'react-autosuggest'
+import Fuse from 'fuse.js'
 
-import history from '../../history';
-import posts from '../../routes/blog/postsData';
-import tools from '../../routes/brainTools/brainToolsData';
-import pages from '../../routes/page/pagesData';
-import tags from '../../routes/tags/tagsData';
-import { filterDrafts, getSlug } from '../../utils';
+import history from '../../history'
+import posts from '../../routes/blog/postsData'
+import tools from '../../routes/brainTools/brainToolsData'
+import pages from '../../routes/page/pagesData'
+import tags from '../../routes/tags/tagsData'
+import { filterDrafts, getSlug } from '../../utils'
 
-const shouldRenderSuggestions = value => value.trim().length > 2;
+const shouldRenderSuggestions = value => value.trim().length > 2
 
-const addType = type => suggestion => Object.assign(suggestion, { type });
+const addType = type => suggestion => Object.assign(suggestion, { type })
 
-const filteredPosts = posts.filter(filterDrafts).map(addType('blog'));
-const filteredTools = tools.filter(filterDrafts).map(addType('tools'));
-const filteredPages = pages.filter(filterDrafts).map(addType('pages'));
-const filteredTags = tags.filter(filterDrafts).map(addType('tags'));
+const filteredPosts = posts.filter(filterDrafts).map(addType('blog'))
+const filteredTools = tools.filter(filterDrafts).map(addType('tools'))
+const filteredPages = pages.filter(filterDrafts).map(addType('pages'))
+const filteredTags = tags.filter(filterDrafts).map(addType('tags'))
 
 const fuseOptions = {
   keys: ['title', 'description', 'tags'],
   threshold: 0.4,
-};
+}
 
-const fusePosts = new Fuse(filteredPosts, fuseOptions);
-const fuseTools = new Fuse(filteredTools, fuseOptions);
-const fusePages = new Fuse(filteredPages, fuseOptions);
-const fuseTags = new Fuse(filteredTags, fuseOptions);
+const fusePosts = new Fuse(filteredPosts, fuseOptions)
+const fuseTools = new Fuse(filteredTools, fuseOptions)
+const fusePages = new Fuse(filteredPages, fuseOptions)
+const fuseTags = new Fuse(filteredTags, fuseOptions)
 
 // Teach Autosuggest how to calculate suggestions for any given input value.
 const getSuggestions = value =>
@@ -49,22 +49,22 @@ const getSuggestions = value =>
       title: 'Tags',
       suggestions: fuseTags.search(value),
     },
-  ].filter(section => section.suggestions.length > 0);
+  ].filter(section => section.suggestions.length > 0)
 
 // When suggestion is clicked, Autosuggest needs to populate the input
 // based on the clicked suggestion. Teach Autosuggest how to calculate the
 // input value for every given suggestion.
-const getSuggestionValue = suggestion => suggestion.title;
+const getSuggestionValue = suggestion => suggestion.title
 
 const onSuggestionSelected = (event, { suggestion }) => {
-  history.push(getSlug(suggestion));
-};
+  history.push(getSlug(suggestion))
+}
 
-const renderSectionTitle = section => <strong>{section.title}</strong>;
+const renderSectionTitle = section => <strong>{section.title}</strong>
 
-const renderSuggestion = suggestion => <div>{suggestion.title}</div>;
+const renderSuggestion = suggestion => <div>{suggestion.title}</div>
 
-const getSectionSuggestions = section => section.suggestions;
+const getSectionSuggestions = section => section.suggestions
 
 class GlobalSearch extends React.Component {
   // Autosuggest is a controlled component.
@@ -80,7 +80,7 @@ class GlobalSearch extends React.Component {
   onChange = (event, { newValue }) => {
     this.setState({
       value: newValue,
-    });
+    })
   };
 
   // Autosuggest will call this function every time you need to update suggestions.
@@ -88,18 +88,18 @@ class GlobalSearch extends React.Component {
   onSuggestionsFetchRequested = ({ value }) => {
     this.setState({
       suggestions: getSuggestions(value),
-    });
+    })
   };
 
   // Autosuggest will call this function every time you need to clear suggestions.
   onSuggestionsClearRequested = () => {
     this.setState({
       suggestions: [],
-    });
+    })
   };
 
   render() {
-    const { value, suggestions } = this.state;
+    const { value, suggestions } = this.state
 
     // Autosuggest will pass through all these props to the input.
     const inputProps = {
@@ -107,7 +107,7 @@ class GlobalSearch extends React.Component {
       value,
       onChange: this.onChange,
       maxLength: 16,
-    };
+    }
 
     // Finally, render it!
     return (
@@ -125,8 +125,8 @@ class GlobalSearch extends React.Component {
         renderSuggestion={renderSuggestion}
         inputProps={inputProps}
       />
-    );
+    )
   }
 }
 
-export default GlobalSearch;
+export default GlobalSearch

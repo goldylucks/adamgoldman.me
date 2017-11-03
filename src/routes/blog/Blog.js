@@ -1,16 +1,17 @@
 // @flow
 
-import React from 'react';
+import React from 'react'
 
-import Link from '../../components/Link';
-import Ending from '../../components/Ending';
-import Tags from '../../components/Tags';
-import FbPageBox from '../../components/FbPageBox';
-import FbShareButton from '../../components/FbShareButton';
-import BreadCrumbs from '../../components/BreadCrumbs';
-import FbComments from '../../components/FbComments';
-import posts from './postsData';
-import { filterDrafts } from '../../utils';
+import Link from '../../components/Link'
+import Ending from '../../components/Ending'
+import Tags from '../../components/Tags'
+import FbPageBox from '../../components/FbPageBox'
+import FbShareButton from '../../components/FbShareButton'
+import BreadCrumbs from '../../components/BreadCrumbs'
+import FbComments from '../../components/FbComments'
+import { filterDrafts } from '../../utils'
+
+import posts from './postsData'
 
 const Blog = () => (
   <article className="main-layout">
@@ -44,6 +45,6 @@ const Blog = () => (
     <Ending nick="non blogger" />
     <FbComments style={{ marginTop: 10 }} />
   </article>
-);
+)
 
-export default Blog;
+export default Blog

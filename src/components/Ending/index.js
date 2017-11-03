@@ -1,3 +1,1 @@
-import Ending from './Ending';
-
-export default Ending;
+export default from './Ending'

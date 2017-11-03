@@ -1,57 +1,55 @@
-import React from 'react';
+import React from 'react'
 
-import Link from '../components/Link';
+import Link from '../components/Link'
+import FbShareLink from '../components/FbShareLink'
 
-import FbShareLink from '../components/FbShareLink';
-
-export const title = 'Coming To Wholeness';
-export const nick = 'whole';
+export const title = 'Coming To Wholeness'
+export const nick = 'whole'
 // eslint-disable-next-line prettier/prettier
-export const description = `A PRACTICAL step by step tool for non "enlightment"`;
+export const description = 'A PRACTICAL step by step tool for non "enlightment"'
 
-const confirmDecline = that => {
-  const nextInputs = { ...that.state.inputs };
-  nextInputs.iLocation = '';
-  nextInputs.iSizeShape = '';
-  nextInputs.iSensationQuality = '';
+const confirmDecline = (that) => {
+  const nextInputs = { ...that.state.inputs }
+  nextInputs.iLocation = ''
+  nextInputs.iSizeShape = ''
+  nextInputs.iSensationQuality = ''
   that.setState({ inputs: nextInputs }, () =>
-    that.goToStepByTitle('I - Location'),
-  );
-};
+    that.goToStepByTitle('I - Location'))
+}
 
-const allowCompleteIntegration = that => {
-  const nextIs = [...that.state.Is];
-  const nextInputs = { ...that.state.inputs };
-  nextInputs.iIntegrationDescription = '';
-  nextIs.pop();
+const allowCompleteIntegration = (that) => {
+  const nextIs = [...that.state.Is]
+  const nextInputs = { ...that.state.inputs }
+  nextInputs.iIntegrationDescription = ''
+  nextIs.pop()
   that.setState({
     Is: nextIs,
     inputs: nextInputs,
-  });
+  })
   if (nextIs.length) {
-    that.next();
-    return;
+    that.next()
+    return
   }
-  that.goToStepByTitle('Circling Back - Initial Feeling - Compare');
-};
+  that.goToStepByTitle('Circling Back - Initial Feeling - Compare')
+}
 
 const initialContext = (that, str) => {
-  that.setState({ initialContext: str }, that.next);
-};
+  that.setState({ initialContext: str }, that.next)
+}
 
 const initialContextPast = (that, str) => {
-  that.setState({ initialContextPast: str }, that.next);
-};
+  that.setState({ initialContextPast: str }, that.next)
+}
 
 const initialContextFuture = (that, str) => {
-  that.setState({ initialContextFuture: str }, that.next);
-};
+  that.setState({ initialContextFuture: str }, that.next)
+}
 
-const lastI = stepsState => (!stepsState.Is.length ? {} : stepsState.Is.last());
+const lastI = stepsState => (!stepsState.Is.length ? {} : stepsState.Is.last())
 
 export const initialState = {
   Is: [],
-};
+}
 
 export const mockState = {
   Is: [
@@ -75,7 +73,7 @@ export const mockState = {
     iIntegrationDescription: 'omg is it the best feeling or what?',
     feelingIntegrationDescription: "I'm light as a gazelle!",
   },
-};
+}
 
 export const steps = [
   {
@@ -98,9 +96,7 @@ So are we together on this my friend?`,
       {
         text: 'I rather wait passively for life to improve',
         onClick: () =>
-          global.alert(
-            "I wish you all the luck then, hoping you won't need it ;)",
-          ),
+          global.alert("I wish you all the luck then, hoping you won't need it ;)"),
       },
     ],
   },
@@ -147,8 +143,8 @@ Describe your response in one short sentence.
 And *${stepsState.inputs.feel}* ...
 
 And when you feel *${stepsState.inputs
-      .feel}*, **where is this feeling** of *${stepsState.inputs
-      .feel}* located, when you feel *${stepsState.inputs.feel}*?
+    .feel}*, **where is this feeling** of *${stepsState.inputs
+  .feel}* located, when you feel *${stepsState.inputs.feel}*?
 
 (E.g. “in my chest.”)    
 `,
@@ -164,8 +160,8 @@ And when you feel *${stepsState.inputs
 And *${stepsState.inputs.feelingLocation}* ...
 
 And when it's *${stepsState.inputs
-      .feelingLocation}*, and it's a FEEL feeling, **notice it's size & shape**, when it's *${stepsState
-      .inputs.feelingLocation}*, and it's a FEEL feeling.
+    .feelingLocation}*, and it's a FEEL feeling, **notice it's size & shape**, when it's *${stepsState
+  .inputs.feelingLocation}*, and it's a FEEL feeling.
 
 (E.g. “It’s sort of round and the size of an orange.”)    
 `,
@@ -181,7 +177,7 @@ And when it's *${stepsState.inputs
 And ${stepsState.inputs.feelingSizeShape} ...
 
 And when it's ${stepsState.inputs.feelingSizeShape}, and it's ${stepsState
-      .inputs.feelingLocation}, **what's it's sensation quality?**
+  .inputs.feelingLocation}, **what's it's sensation quality?**
 
 (E.g. “It’s fuzzy and a bit prickly.”)
     `,
@@ -199,7 +195,7 @@ And ${stepsState.inputs.feelingSensationQuality}....
 And when it's ${stepsState.inputs.feelingSensationQuality}, you can recognize,
 
 *I am aware of this ${stepsState.inputs
-      .feelingSensationQuality} sensation, so awareness is present.*
+    .feelingSensationQuality} sensation, so awareness is present.*
   `,
     answers: [
       { text: 'Indeed I can' },
@@ -258,7 +254,7 @@ E.g. *"it's in front of me, pretty close, slightly to the right"*
     input: {
       placeholder: 'It’s ...',
       id: 'iLocation',
-      onSubmit: that => {
+      onSubmit: (that) => {
         that.setState(
           {
             Is: that.state.Is.concat({
@@ -266,7 +262,7 @@ E.g. *"it's in front of me, pretty close, slightly to the right"*
             }),
           },
           that.next,
-        );
+        )
       },
     },
   },
@@ -278,16 +274,16 @@ E.g. *"it's in front of me, pretty close, slightly to the right"*
 And *${stepsState.inputs.iLocation}* ...
 
 And when it's *${stepsState.inputs
-      .iLocation}*, **what is the size & shape of this ‘I’**, when it's *${stepsState
-      .inputs.iLocation}*?
+    .iLocation}*, **what is the size & shape of this ‘I’**, when it's *${stepsState
+  .inputs.iLocation}*?
 `,
     input: {
       placeholder: 'It’s ...',
       id: 'iSizeShape',
-      onSubmit: that => {
-        const nextIs = [...that.state.Is];
-        nextIs.last().sizeShape = that.state.inputs.iSizeShape;
-        that.setState({ Is: nextIs }, that.next);
+      onSubmit: (that) => {
+        const nextIs = [...that.state.Is]
+        nextIs.last().sizeShape = that.state.inputs.iSizeShape
+        that.setState({ Is: nextIs }, that.next)
       },
     },
   },
@@ -299,18 +295,18 @@ And when it's *${stepsState.inputs
 And *${stepsState.inputs.iSizeShape}* ...
 
 And when it's *${stepsState.inputs.iSizeShape}*, and it's *${stepsState.inputs
-      .iLocation}*, **what's the sensation quality** of this *${stepsState
-      .inputs.iSizeShape}*, that’s *${stepsState.inputs.iLocation}*?
+  .iLocation}*, **what's the sensation quality** of this *${stepsState
+  .inputs.iSizeShape}*, that’s *${stepsState.inputs.iLocation}*?
 
 E.g foggy, clear, dense, or empty, heavy, light, vibrating, still, etc.
 `,
     input: {
       placeholder: 'The sensation quality is ...',
       id: 'iSensationQuality',
-      onSubmit: that => {
-        const nextIs = [...that.state.Is];
-        nextIs.last().sensationQuality = that.state.inputs.iSensationQuality;
-        that.setState({ Is: nextIs }, that.next);
+      onSubmit: (that) => {
+        const nextIs = [...that.state.Is]
+        nextIs.last().sensationQuality = that.state.inputs.iSensationQuality
+        that.setState({ Is: nextIs }, that.next)
       },
     },
   },
@@ -328,10 +324,10 @@ and *${stepsState.inputs.iSensationQuality}* ...
 Does the sensation of this ‘I’ welcome the invitation to open and relax as the fullness of Awareness?
 
 Some people prefer to notice what happens when the fullness of Awareness... all of consciousness... is invited to flow in and as... the sensation *${stepsState
-      .inputs.iLocation}*.
+    .inputs.iLocation}*.
 
 Or, it may feel like the Awareness already present *${stepsState.inputs
-      .iLocation}*, wakes up to itself.
+    .iLocation}*, wakes up to itself.
 
 It matters less if the answer is ‘Yes’ or ‘No’, It just tells us what to do next.
 `,
@@ -349,7 +345,7 @@ It matters less if the answer is ‘Yes’ or ‘No’, It just tells us what to
 And no ...
 
 And you just noticed the sensation here - ***${lastI(stepsState)
-      .location}*** - doesn’t welcome the invitation to open and relax, right?
+    .location}*** - doesn’t welcome the invitation to open and relax, right?
 `,
     answers: [
       { text: 'Correct', onClickThat: confirmDecline },
@@ -438,19 +434,15 @@ First notice, is it the same as it was before, or is it a little bit different? 
     description: stepsState => `
 And It's *${stepsState.iCompare}*
 
-And now notice what happens, when this sensation of this "I" here - *${lastI(
-      stepsState,
-    )
-      .location}* - is invited to open and relax ... as the fullness of Awareness ... There can be an allowing of this to happen in its own way.
+And now notice what happens, when this sensation of this "I" here - *${lastI(stepsState)
+    .location}* - is invited to open and relax ... as the fullness of Awareness ... There can be an allowing of this to happen in its own way.
 
 Does the sensation of this ‘I’ welcome the invitation to open and relax as the fullness of Awareness?
 
-You might prefer to notice what happens when the fullness of Awareness... all of consciousness... is invited to flow in and as... the sensation *${lastI(
-      stepsState,
-    ).location}*.
+You might prefer to notice what happens when the fullness of Awareness... all of consciousness... is invited to flow in and as... the sensation *${lastI(stepsState).location}*.
 
 Or, it may feel like the Awareness already present in *${lastI(stepsState)
-      .location}*, wakes up to itself.
+    .location}*, wakes up to itself.
 
 It matters less if the answer is ‘Yes’ or ‘No’, It just tells us what to do next.    
 `,
@@ -464,7 +456,7 @@ It matters less if the answer is ‘Yes’ or ‘No’, It just tells us what to
     title: 'Circling Back - Initial Feeling - Compare',
     description: stepsState => `
 Now let’s return to the area that you started with, ${stepsState.inputs
-      .feelingLocation}.
+    .feelingLocation}.
 
 First notice, is the sensation there the same as it was before?
 
@@ -505,13 +497,13 @@ Or is it a little bit different?
 And ${stepsState.feelingCompare} ...
 
 And notice what happens when this sensation here - *${stepsState.inputs
-      .feelingLocation}* - is invited to open and relax ... as all of Awareness.
+    .feelingLocation}* - is invited to open and relax ... as all of Awareness.
 
 Another way to experience it is notice what happens when the fullness of Awareness... all of consciousness... is invited to flow in and as... the sensation *${stepsState
-      .inputs.feelingLocation}*.
+    .inputs.feelingLocation}*.
 
 Or, it may feel like the Awareness already present *${stepsState.inputs
-      .feelingLocation}*, wakes up to itself.
+    .feelingLocation}*, wakes up to itself.
 
 Now there is just an allowing of whatever happens. You can enjoy this experience as long as you like, and share what happens and how you feel:    
 `,
@@ -529,7 +521,7 @@ And *${stepsState.inputs.feelingIntegrationDescription}* ...
 Being this way, with the I’s and the feeling integrated with Awareness ...
 
 Notice what is it like now, when you imagine being in a situation where *${stepsState
-      .inputs.experience}* ...
+    .inputs.experience}* ...
 
 What is it like, being this way?
 `,
@@ -549,16 +541,12 @@ What is it like, being this way?
       {
         text: "It's better but there's still something left",
         onClick: () =>
-          global.alert(
-            "it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?",
-          ),
+          global.alert("it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?"),
       },
       {
         text: "It's exactly the same as before, I don't percieve any change",
         onClick: () =>
-          global.alert(
-            "it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?",
-          ),
+          global.alert("it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?"),
       },
     ],
   },
@@ -569,7 +557,7 @@ What is it like, being this way?
 And *${stepsState.initialContext}* ...
 
 And check how it is being this way in two situations in the past of *${stepsState
-      .inputs.experience}*    
+    .inputs.experience}*    
 `,
     answers: [
       {
@@ -587,16 +575,12 @@ And check how it is being this way in two situations in the past of *${stepsStat
       {
         text: "It's better but there's still something left",
         onClick: () =>
-          global.alert(
-            "it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?",
-          ),
+          global.alert("it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?"),
       },
       {
         text: "It's exactly the same as before, I don't percieve any change",
         onClick: () =>
-          global.alert(
-            "it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?",
-          ),
+          global.alert("it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?"),
       },
     ],
   },
@@ -608,7 +592,7 @@ And check how it is being this way in two situations in the past of *${stepsStat
 And *${stepsState.initialContextPast}*
 
 And check how it is being this way in three (or) more future scenarios of *${stepsState
-      .inputs.experience}*  
+    .inputs.experience}*  
 `,
     answers: [
       {
@@ -626,16 +610,12 @@ And check how it is being this way in three (or) more future scenarios of *${ste
       {
         text: "It's better but there's still something left",
         onClick: () =>
-          global.alert(
-            "it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?",
-          ),
+          global.alert("it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?"),
       },
       {
         text: "It's exactly the same as before, I don't percieve any change",
         onClick: () =>
-          global.alert(
-            "it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?",
-          ),
+          global.alert("it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?"),
       },
     ],
   },
@@ -674,4 +654,4 @@ or you want to do it again on another issue / experience first?
 Source: I've adapted this [tool](/tools/) from Connirae's [Wholeness Process](http://andreasnlptrainings.com/wholeness/).
 `,
   },
-];
+]

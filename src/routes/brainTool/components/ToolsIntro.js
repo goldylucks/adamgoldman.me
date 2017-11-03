@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import Link from '../../../components/Link';
+import Link from '../../../components/Link'
 
 const ToolsIntro = () => (
   <p>
@@ -9,6 +9,6 @@ const ToolsIntro = () => (
     <Link to="/blog/brain-exploration/">how it&apos;s going to work</Link>{' '}
     first, tho it&apos;s not needed)
   </p>
-);
+)
 
-export default ToolsIntro;
+export default ToolsIntro

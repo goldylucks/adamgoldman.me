@@ -1,23 +1,21 @@
 // @flow
-/* eslint max-len: 0 */
 /* eslint react/jsx-curly-brace-presence: 0 */
 
-import React from 'react';
-import Link from '../components/Link';
+import React from 'react'
 
-import FbShareLink from '../components/FbShareLink';
-import Markdown from '../components/Markdown';
+import Link from '../components/Link'
+import FbShareLink from '../components/FbShareLink'
+import Markdown from '../components/Markdown'
+import Answers from '../routes/brainTool/components/Answers'
+import HowItsGoingToWorkStep from '../routes/brainTool/components/HowItsGoingToWorkStep'
+import type { Props } from '../routes/brainTool/components/toolPageProps'
 
-import Answers from '../routes/brainTool/components/Answers';
-import HowItsGoingToWorkStep from '../routes/brainTool/components/HowItsGoingToWorkStep';
-import type { Props } from '../routes/brainTool/components/toolPageProps';
-
-export const tags = ['Grief'];
-export const stepCount = 7;
-export const title = 'Grief To Appreciation';
-export const nick = "don't cry because it's over, smile because it happened";
+export const tags = ['Grief']
+export const stepCount = 7
+export const title = 'Grief To Appreciation'
+export const nick = "don't cry because it's over, smile because it happened"
 // eslint-disable-next-line prettier/prettier
-export const description = `Turn feelings of loss, miss, and grief into appreciation, presence and warmth`;
+export const description = 'Turn feelings of loss, miss, and grief into appreciation, presence and warmth'
 
 class GriefToAppreciation extends React.Component {
   state = {
@@ -60,7 +58,7 @@ class GriefToAppreciation extends React.Component {
       onNext,
       back,
       dontUnderstand,
-    } = this.props;
+    } = this.props
 
     const {
       goodMemoryPersonName,
@@ -70,7 +68,7 @@ class GriefToAppreciation extends React.Component {
       lossPersonName,
       lossPersonHimher,
       lossPersonGender,
-    } = this.state;
+    } = this.state
     return (
       <div>
         {[
@@ -389,8 +387,8 @@ Source: I've adapted this [tool](/tools/) from Bandler's mapping across process,
           </div>,
         ].map(renderStep)}
       </div>
-    );
+    )
   }
 }
 
-export default GriefToAppreciation;
+export default GriefToAppreciation

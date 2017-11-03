@@ -2,28 +2,25 @@
 /* eslint max-len: 0 */
 /* eslint react/jsx-curly-brace-presence: 0 */
 
-import React from 'react';
-import Link from '../components/Link';
+import React from 'react'
 
-import FbShareLink from '../components/FbShareLink';
-import Markdown from '../components/Markdown';
+import Link from '../components/Link'
+import FbShareLink from '../components/FbShareLink'
+import Markdown from '../components/Markdown'
+import Answers from '../routes/brainTool/components/Answers'
+import type { Props } from '../routes/brainTool/components/toolPageProps'
 
-import Answers from '../routes/brainTool/components/Answers';
-import type { Props } from '../routes/brainTool/components/toolPageProps';
-
-export const tags = ['Nail Biting'];
-export const stepCount = 15;
-export const title = 'Nail Biting Destroyer';
-export const nick = 'non nail biter';
+export const tags = ['Nail Biting']
+export const stepCount = 15
+export const title = 'Nail Biting Destroyer'
+export const nick = 'non nail biter'
 // eslint-disable-next-line prettier/prettier
-export const description = `Convert your old nail biting habit into a powerful image of yourself`;
+export const description = 'Convert your old nail biting habit into a powerful image of yourself'
 
 const stillCompelled = (onRestart: Function) => {
-  global.alert(
-    'Great, do it again and notice how much natural and more autoamtic it is this time',
-  );
-  onRestart();
-};
+  global.alert('Great, do it again and notice how much natural and more autoamtic it is this time')
+  onRestart()
+}
 
 // eslint-disable-next-line react/prefer-stateless-function
 class NailBitingDestroyer extends React.Component {
@@ -44,7 +41,7 @@ class NailBitingDestroyer extends React.Component {
       onNext,
       back,
       dontUnderstand,
-    } = this.props;
+    } = this.props
     return (
       <div>
         {[
@@ -537,8 +534,8 @@ Source: I've adapted this [tool](/tools/) from Bandler's Swish Pattern, see [Usi
           </div>,
         ].map(renderStep)}
       </div>
-    );
+    )
   }
 }
 
-export default NailBitingDestroyer;
+export default NailBitingDestroyer

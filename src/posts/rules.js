@@ -56,4 +56,4 @@ export default {
 
 - by now you should buy my stupid ambiguity ebook, now, for $7, before I might write it and the price will soar to $7.01 (it's still a steal, and have many ambiguities like this one!)
 `,
-};
+}

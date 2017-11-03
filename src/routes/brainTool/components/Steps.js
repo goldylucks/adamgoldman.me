@@ -1,16 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+// @flow
 
-import Markdown from '../../../components/Markdown';
-import Answers from './Answers';
-import { scrollToElem } from '../../../utils';
+import React from 'react'
+
+import Markdown from '../../../components/Markdown'
+import { scrollToElem } from '../../../utils'
+
+import Answers from './Answers'
+
+type Props = {
+  initialState?: Object,
+  steps: Array<any>,
+}
 
 class Steps extends React.Component {
-  static propTypes = {
-    initialState: PropTypes.object,
-    steps: PropTypes.array.isRequired,
-  };
-
   static defaultProps = {
     initialState: {},
   };
@@ -21,48 +23,50 @@ class Steps extends React.Component {
     inputs: {},
   };
 
+  props: Props
+
   back = n =>
     this.goToStep(this.state.currentStep - (typeof n === 'number' ? n : 1));
   next = n =>
     this.goToStep(this.state.currentStep + (typeof n === 'number' ? n : 1));
 
-  goToStep = step => {
-    scrollToElem(document.querySelector('#main-layout'), 0, 300);
-    this.setState({ currentStep: step });
+  goToStep = (step) => {
+    scrollToElem(document.querySelector('#main-layout'), 0, 300)
+    this.setState({ currentStep: step })
   };
 
-  goToStepByTitle = title => {
-    const { steps } = this.props;
-    scrollToElem(document.querySelector('#main-layout'), 0, 300);
+  goToStepByTitle = (title) => {
+    const { steps } = this.props
+    scrollToElem(document.querySelector('#main-layout'), 0, 300)
     this.setState({
       currentStep: steps.indexOf(steps.find(s => s.title === title)),
-    });
+    })
   };
 
-  registerInput = id => evt => {
+  registerInput = id => (evt) => {
     this.setState({
       inputs: Object.assign({}, this.state.inputs, {
         [id]: evt.target.value,
       }),
-    });
+    })
   };
 
-  replaceVars = description => {
+  replaceVars = (description) => {
     if (Object.keys(this.state.inputs).length === 0) {
-      return description;
+      return description
     }
     const reg = new RegExp(
       Object.keys(this.state.inputs)
         .map(id => `\\b${id}\\b`)
         .join('|'),
       'g',
-    );
-    return description.replace(reg, match => this.state.inputs[match]);
+    )
+    return description.replace(reg, match => this.state.inputs[match])
   };
 
   render() {
-    const { steps } = this.props;
-    const { currentStep } = this.state;
+    const { steps } = this.props
+    const { currentStep } = this.state
 
     return (
       <div>
@@ -85,13 +89,13 @@ ${step.description(this.state)}
             />
             {step.input && (
               <form
-                onSubmit={evt => {
-                  evt.preventDefault();
+                onSubmit={(evt) => {
+                  evt.preventDefault()
                   if (step.input.onSubmit) {
-                    step.input.onSubmit(this);
-                    return;
+                    step.input.onSubmit(this)
+                    return
                   }
-                  this.next();
+                  this.next()
                 }}
                 className="tool-form"
               >
@@ -118,7 +122,7 @@ ${step.description(this.state)}
           </div>
         ))}
       </div>
-    );
+    )
   }
 }
-export default Steps;
+export default Steps

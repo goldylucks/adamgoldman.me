@@ -1,4 +1,4 @@
-import { cloudImg } from '../utils';
+import { cloudImg } from '../utils'
 
 export default {
   title: 'Calibrate -> Intervene -> Calibrate',
@@ -10,9 +10,7 @@ export default {
 as each and every one of us has different neural networks
 in our minds, and we respond to different things so that when I tell you to
 
-![What's normal for the spider is chaos for the fly](${cloudImg(
-    'adamgoldman.me/normal-for-spider',
-  )})
+![What's normal for the spider is chaos for the fly](${cloudImg('adamgoldman.me/normal-for-spider')})
 
 *"now notice how a blue cool wave of relaxation overflows your body"*
 
@@ -51,4 +49,4 @@ We all have fun and process information in different ways, and making ALL of us 
   ps: `
 **PS**. do you have something that still bothers you? or a good feeling you want to intensify?you know where to [find me](/lets-talk/) ;)  
 `,
-};
+}

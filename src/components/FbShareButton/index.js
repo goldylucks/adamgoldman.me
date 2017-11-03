@@ -1,3 +1,1 @@
-import FbShareButton from './FbShareButton';
-
-export default FbShareButton;
+export default from './FbShareButton'

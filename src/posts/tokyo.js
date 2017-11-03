@@ -29,4 +29,4 @@ Been there for two weeks, this is what I recommend:
 - [Jokers bar](https://www.google.com.ph/maps/place/JOKERS+BAR/@35.6622575,139.7345852,18.62z/data=!4m8!1m2!2m1!1svegetarian+restaurant!3m4!1s0x0:0x1d76696cfca9c14b!8m2!3d35.6623859!4d139.7351591?hl=en) - Bring [3 lady friends](TITLE_yes,_really,_I_asked_3_times_:\\)) and get some free drinks and shisha for ¥1,500
 - [Some shisha place](https://www.google.com.ph/maps/place/Shisha+Salon+Shibuya/@35.6612403,139.6978771,14.08z/data=!4m8!1m2!2m1!1svegetarian+restaurant!3m4!1s0x0:0xfc2d0f4539e7a8ff!8m2!3d35.6613018!4d139.6979266?hl=en) - Amazing shisha, one of the best I've ever tasted, set me back ¥2,500 + ¥500 for the table + ¥500 for a drink you must order. One waiter is a bit shy, one waitress is extremely friendly and easy to talk to. The crowd is lovely.
 `,
-};
+}

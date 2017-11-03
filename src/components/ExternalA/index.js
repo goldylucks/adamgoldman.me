@@ -1,3 +1,3 @@
-import ExternalA from './ExternalA';
+import ExternalA from './ExternalA'
 
-export default ExternalA;
+export default ExternalA

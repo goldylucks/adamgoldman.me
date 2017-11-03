@@ -2,28 +2,27 @@
 /* eslint max-len: 0 */
 /* eslint react/jsx-curly-brace-presence: 0 */
 
-import React from 'react';
+import React from 'react'
 
-import Markdown from '../components/Markdown';
+import Markdown from '../components/Markdown'
+import Answers from '../routes/brainTool/components/Answers'
+import ToolsIntro from '../routes/brainTool/components/ToolsIntro'
+import type { Props } from '../routes/brainTool/components/toolPageProps'
 
-import Answers from '../routes/brainTool/components/Answers';
-import ToolsIntro from '../routes/brainTool/components/ToolsIntro';
-import type { Props } from '../routes/brainTool/components/toolPageProps';
-
-export const stepCount = 4;
-export const title = 'Loved Ones Amplifier (Generalizer)';
+export const stepCount = 4
+export const title = 'Loved Ones Amplifier (Generalizer)'
 // eslint-disable-next-line prettier/prettier
-export const description = `Leverage what you've learned in the loved one amplifier`;
-export const nick = 'generalizer';
+export const description = 'Leverage what you\'ve learned in the loved one amplifier'
+export const nick = 'generalizer'
 
-export const IS_DRAFT = true;
+export const IS_DRAFT = true
 
 // eslint-disable-next-line react/prefer-stateless-function
 class LovedOneAmplifierGeneralizer extends React.Component {
   props: Props;
 
   render() {
-    const { onNext, renderStep } = this.props;
+    const { onNext, renderStep } = this.props
     return (
       <div>
         {[
@@ -66,8 +65,8 @@ In the meantime, try one of the other [brain hacking tools](/tools/), read some 
           </div>,
         ].map(renderStep)}
       </div>
-    );
+    )
   }
 }
 
-export default LovedOneAmplifierGeneralizer;
+export default LovedOneAmplifierGeneralizer

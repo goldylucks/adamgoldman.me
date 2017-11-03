@@ -1,11 +1,12 @@
-import React from 'react';
-import Tag from './Tag';
+import React from 'react'
+
+import Tag from './Tag'
 
 const tagSlugToTitle = tag =>
   tag
     .split('-')
     .map(s => s.capitalize())
-    .join(' ');
+    .join(' ')
 
 function action({ params }) {
   return {
@@ -14,7 +15,7 @@ function action({ params }) {
     path: `/tags/${params.tag}`,
     description: 'Some tag yo!',
     component: <Tag tag={tagSlugToTitle(params.tag)} />,
-  };
+  }
 }
 
-export default action;
+export default action

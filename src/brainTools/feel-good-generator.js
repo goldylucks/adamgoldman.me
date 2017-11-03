@@ -2,20 +2,19 @@
 /* eslint max-len: 0 */
 /* eslint react/jsx-curly-brace-presence: 0 */
 
-import React from 'react';
-import Link from '../components/Link';
+import React from 'react'
 
-import FbShareLink from '../components/FbShareLink';
-import Markdown from '../components/Markdown';
+import Link from '../components/Link'
+import FbShareLink from '../components/FbShareLink'
+import Markdown from '../components/Markdown'
+import Answers from '../routes/brainTool/components/Answers'
+import type { Props } from '../routes/brainTool/components/toolPageProps'
 
-import Answers from '../routes/brainTool/components/Answers';
-import type { Props } from '../routes/brainTool/components/toolPageProps';
-
-export const stepCount = 5;
-export const title = 'Feel Good Generator';
-export const nick = 'how much pleasure can you stand?';
+export const stepCount = 5
+export const title = 'Feel Good Generator'
+export const nick = 'how much pleasure can you stand?'
 // eslint-disable-next-line prettier/prettier
-export const description = `Intensify good feelings on command. How much pleasure can you stand?`;
+export const description = 'Intensify good feelings on command. How much pleasure can you stand?'
 
 class FeelGoodGenerator extends React.Component {
   state = {
@@ -46,13 +45,13 @@ class FeelGoodGenerator extends React.Component {
       onNext,
       back,
       dontUnderstand,
-    } = this.props;
+    } = this.props
     const {
       resource,
       memoryAge,
       memoryLocation,
       memoryDescription,
-    } = this.state;
+    } = this.state
     return (
       <div>
         {[
@@ -264,8 +263,8 @@ to good feelings, and it feels so right to be lost sometimes, and what's still l
           </div>,
         ].map(renderStep)}
       </div>
-    );
+    )
   }
 }
 
-export default FeelGoodGenerator;
+export default FeelGoodGenerator

@@ -101,4 +101,4 @@ Your's in former anxiety,
   ps: `
 > *I can accept failure, everyone fails at something. But I can't accept not trying* - **Michael Jordan**
 `,
-};
+}

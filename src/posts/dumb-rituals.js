@@ -146,4 +146,4 @@ Hope you enjoyed my (perhaps miserable) experience with script writing, and if y
 - Dive into a short trance (sometimes)
 - Pre sleep suggestion for the night
 `,
-};
+}

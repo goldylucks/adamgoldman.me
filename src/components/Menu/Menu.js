@@ -1,12 +1,13 @@
 // @flow
 
-import React from 'react';
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import ClickOutside from 'react-click-outside';
+import React from 'react'
+import withStyles from 'isomorphic-style-loader/lib/withStyles'
+import ClickOutside from 'react-click-outside'
 
-import history from '../../history';
-import Link from '../Link';
-import s from './Menu.css';
+import history from '../../history'
+import Link from '../Link'
+
+import s from './Menu.css'
 
 class Menu extends React.Component {
   state = {
@@ -17,10 +18,10 @@ class Menu extends React.Component {
   componentDidMount() {
     history.listen(() => {
       if (this.state.isOpen) {
-        this.close();
+        this.close()
       }
-    });
-    this.setState({ isMounted: true }); // eslint-disable-line react/no-did-mount-set-state
+    })
+    this.setState({ isMounted: true }) // eslint-disable-line react/no-did-mount-set-state
   }
 
   toggle = () => this.setState({ isOpen: !this.state.isOpen });
@@ -30,7 +31,7 @@ class Menu extends React.Component {
   activeClass(to) {
     return this.state.isMounted && window.location.pathname.split('/')[1] === to
       ? { className: 'active' }
-      : {};
+      : {}
   }
 
   render() {
@@ -66,8 +67,8 @@ class Menu extends React.Component {
           ))}
         </nav>
       </ClickOutside>
-    );
+    )
   }
 }
 
-export default withStyles(s)(Menu);
+export default withStyles(s)(Menu)

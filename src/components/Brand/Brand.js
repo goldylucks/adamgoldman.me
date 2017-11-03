@@ -1,14 +1,14 @@
 // @flow
 
-import React from 'react';
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import React from 'react'
+import withStyles from 'isomorphic-style-loader/lib/withStyles'
 
-import { cloudImg } from '../../utils';
-import s from './Brand.css';
-import Link from '../Link';
+import { cloudImg } from '../../utils'
+import Link from '../Link'
+import FbShareButton from '../FbShareButton'
+import FbPageBox from '../FbPageBox'
 
-import FbShareButton from '../FbShareButton';
-import FbPageBox from '../FbPageBox';
+import s from './Brand.css'
 
 const Brand = () => (
   <section className={s.brand}>
@@ -34,6 +34,6 @@ const Brand = () => (
       </div>
     </div>
   </section>
-);
+)
 
-export default withStyles(s)(Brand);
+export default withStyles(s)(Brand)

@@ -69,4 +69,4 @@ Most importantly, don't be a redgreen grumble ...
   ps: `
 **PS**. Add your discoveries in the comments below and I'll [add them to this post](TITLE_crediting_you_of_course!) :)
 `,
-};
+}

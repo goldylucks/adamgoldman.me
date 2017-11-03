@@ -33,4 +33,4 @@ NOTE: [Yours truly](/who-am-i-anyway/) haven’t been to Israel for a year, so c
 - [Mitham Hatahana](https://www.google.co.za/maps/place/Hatahana/@32.0585541,34.7608327,18.01z/data=!4m5!3m4!1s0x151d4a24e84f4e29:0x9b9978ff704d017c!8m2!3d32.0586423!4d34.761652) - it's like a "mini-downtown" with some cool businesses and restaurants / bars. nice place walk around and have a meal, pass an hour or two.
 - [Pinati](https://www.google.com.ph/maps/place/Pinati/@31.7817716,35.2146351,17z/data=!3m1!4b1!4m5!3m4!1s0x150329d64dda50f1:0x7b11f9ef9272aef!8m2!3d31.7817716!4d35.2168291?hl=en) - Famous iconic restaurant and hummus place. there's literally a guy rushing everybody to eat fast, so they could bring more customers in. it's fun 😛
 `,
-};
+}

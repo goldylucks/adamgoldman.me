@@ -1,8 +1,8 @@
 // @flow
 
-import React from 'react';
+import React from 'react'
 
-import { DOMAIN } from '../../constants';
+import { DOMAIN } from '../../constants'
 
 type Props = {
   urlProp?: string, // eslint-disable-line react/require-default-props
@@ -15,16 +15,16 @@ class FbShareButton extends React.Component {
   };
 
   componentDidMount() {
-    this.reloadFB();
+    this.reloadFB()
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    return nextState.rendered !== this.state.rendered;
+    return nextState.rendered !== this.state.rendered
   }
 
   componentWillUnmount() {
-    clearTimeout(this.timeoutFb);
-    clearTimeout(this.timeoutFbRender);
+    clearTimeout(this.timeoutFb)
+    clearTimeout(this.timeoutFbRender)
   }
 
   elem = null;
@@ -34,38 +34,38 @@ class FbShareButton extends React.Component {
   props: Props;
 
   urlToShare() {
-    return this.props.urlProp ? DOMAIN + this.props.urlProp : this.state.href;
+    return this.props.urlProp ? DOMAIN + this.props.urlProp : this.state.href
   }
 
   encodedUrlToShare() {
-    return encodeURIComponent(this.urlToShare());
+    return encodeURIComponent(this.urlToShare())
   }
 
   reloadFB = () => {
     if (!global.FB) {
-      this.timeoutFb = setTimeout(this.reloadFB, 500);
-      return;
+      this.timeoutFb = setTimeout(this.reloadFB, 500)
+      return
     }
     this.setState({ href: window.location.href }, () => {
       global.FB.XFBML.parse(this.elem, () => {
         this.timeoutFbRender = setTimeout(() => {
-          this.setState({ rendered: true });
-        }, 1000);
-      });
-    });
+          this.setState({ rendered: true })
+        }, 1000)
+      })
+    })
   };
 
   render() {
-    const { ...restProps } = this.props;
-    const opacity = this.state.rendered ? 1 : 0;
-    delete restProps.urlProp;
+    const { ...restProps } = this.props
+    const opacity = this.state.rendered ? 1 : 0
+    delete restProps.urlProp
 
     return (
       <div {...restProps}>
         <div
           style={{ height: 28, opacity, transition: '0.5s opacity' }}
-          ref={el => {
-            this.elem = el;
+          ref={(el) => {
+            this.elem = el
           }}
         >
           <div
@@ -77,8 +77,8 @@ class FbShareButton extends React.Component {
           />
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default FbShareButton;
+export default FbShareButton

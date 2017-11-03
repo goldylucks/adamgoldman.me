@@ -17,4 +17,4 @@ Jealousy was gone INSTANTLY.
 
 the whole process took just a few minutes.
 `,
-};
+}

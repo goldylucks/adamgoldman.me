@@ -35,4 +35,4 @@ If you really want to corner me in a dark ally and FORCE me to utter a word abou
 
 We are [exploring](/blog/brain-exploration/) different [brain processes](/tools/) and [calibrating](/blog/calibrate-intervene-calibrate/).
 `,
-};
+}

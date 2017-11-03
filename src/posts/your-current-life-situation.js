@@ -33,4 +33,4 @@ While it does provide a new perspective for many people I've shown this to, the 
 
 Now that you are ready, [talk to me](FB_MESSAGE) and let's begin
 `,
-};
+}

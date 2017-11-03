@@ -1,34 +1,31 @@
 // @flow
 
-import React from 'react';
+import React from 'react'
 
-import Markdown from '../../components/Markdown';
-import Ending from '../../components/Ending';
-import BreadCrumbs from '../../components/BreadCrumbs';
-import FbShareButton from '../../components/FbShareButton';
-import FbComments from '../../components/FbComments';
-import { scrollToElem } from '../../utils';
-import Step from './components/Step';
+import Markdown from '../../components/Markdown'
+import Ending from '../../components/Ending'
+import BreadCrumbs from '../../components/BreadCrumbs'
+import FbShareButton from '../../components/FbShareButton'
+import FbComments from '../../components/FbComments'
+import { scrollToElem } from '../../utils'
+
+import Step from './components/Step'
 
 type Props = {
   tool: Object,
 };
 
 const feelTheSame = () => {
-  global.alert(
-    'sometimes it takes one "learning round" to really notice the benefits on the second round. Do it again and contact me.',
-  );
-};
+  global.alert('sometimes it takes one "learning round" to really notice the benefits on the second round. Do it again and contact me.')
+}
 
 const dontUnderstandStep = () => {
-  global.alert(
-    "follow the steps as best you can now, and contact me when you're done",
-  );
-};
+  global.alert("follow the steps as best you can now, and contact me when you're done")
+}
 
 const shareWithAdam = () => {
-  global.alert('sure, FB or email me!');
-};
+  global.alert('sure, FB or email me!')
+}
 
 class BrainToolDEPRECATED extends React.Component {
   state = {
@@ -41,7 +38,7 @@ class BrainToolDEPRECATED extends React.Component {
   props: Props;
 
   restart = () => {
-    this.goToStep(0);
+    this.goToStep(0)
   };
 
   back = n =>
@@ -49,18 +46,18 @@ class BrainToolDEPRECATED extends React.Component {
   next = n =>
     this.goToStep(this.state.currentStep + (typeof n === 'number' ? n : 1));
 
-  goToStep = step => {
-    scrollToElem(document.querySelector('#main-layout'), 0, 300);
-    this.setState({ currentStep: step });
+  goToStep = (step) => {
+    scrollToElem(document.querySelector('#main-layout'), 0, 300)
+    this.setState({ currentStep: step })
   };
 
   ageChange = evt => this.setState({ age: evt.target.value });
   nameChange = evt => this.setState({ name: evt.target.value });
   genderChange = evt => this.setState({ gender: evt.target.value });
 
-  userInputSubmit = evt => {
-    evt.preventDefault();
-    this.goToStep(this.state.currentStep + 1);
+  userInputSubmit = (evt) => {
+    evt.preventDefault()
+    this.goToStep(this.state.currentStep + 1)
   };
 
   renderStep = (stepHtml, idx) => (
@@ -70,8 +67,10 @@ class BrainToolDEPRECATED extends React.Component {
   );
 
   render() {
-    const { gender, name, age, currentStep } = this.state;
-    const { tool } = this.props;
+    const {
+      gender, name, age, currentStep,
+    } = this.state
+    const { tool } = this.props
     return (
       <div>
         <div className="main-layout tool-page">
@@ -129,16 +128,17 @@ class BrainToolDEPRECATED extends React.Component {
           <hr />
           <FbShareButton style={{ marginBottom: 10 }} />
           <Markdown source="
-  You can do this,  
-  and more,  
+  You can do this,
+  and more,
   I've got your back.
-  " />
+  "
+          />
           <Ending nick={tool.nick} />
           <FbComments style={{ marginTop: 10 }} />
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default BrainToolDEPRECATED;
+export default BrainToolDEPRECATED

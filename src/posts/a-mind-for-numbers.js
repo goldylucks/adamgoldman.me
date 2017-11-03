@@ -136,4 +136,4 @@ Tasks, Planning, and Flash Cards
 
 If you found these notes useful, stack up your karma points and share this with others, and if you want to dive deeper, you can [get it here](http://amzn.to/2vDVzk1)
 `,
-};
+}

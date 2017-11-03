@@ -1,5 +1,5 @@
-import path from 'path';
-import fs from 'fs';
+import path from 'path'
+import fs from 'fs'
 
 const pathToWriteFile = path.resolve(
   __dirname,
@@ -8,10 +8,10 @@ const pathToWriteFile = path.resolve(
   'routes',
   'blog',
   'postsData.js',
-);
+)
 
 // read all files in src/posts
-const dirToReadPath = path.resolve(__dirname, '..', 'src', 'posts');
+const dirToReadPath = path.resolve(__dirname, '..', 'src', 'posts')
 
 const fileToWrite = [
   'healing-metaphors-water-slime',
@@ -64,20 +64,20 @@ const fileToWrite = [
   'tokyo',
   'udemy-super-learner',
   'your-current-life-situation',
-].map(fileNameToObject);
+].map(fileNameToObject)
 
 fs.writeFileSync(
   pathToWriteFile,
   `/* eslint-disable */
   export default ${JSON.stringify(fileToWrite, null, 2)}`,
-);
+)
 
 function fileNameToObject(fileName) {
   // eslint-disable-next-line global-require,import/no-dynamic-require
-  const post = require(path.resolve(dirToReadPath, fileName)).default;
-  delete post.body;
-  delete post.html;
-  delete post.nick;
-  delete post.ps;
-  return { ...post, url: fileName.split('.js')[0] };
+  const post = require(path.resolve(dirToReadPath, fileName)).default
+  delete post.body
+  delete post.html
+  delete post.nick
+  delete post.ps
+  return { ...post, url: fileName.split('.js')[0] }
 }

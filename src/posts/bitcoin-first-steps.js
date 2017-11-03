@@ -31,4 +31,4 @@ Yours in rebellion,
   ps: `
 **PS**. I love moving people over to "our" side. If you have any questions, [contact me](/lets-talk/)!
 `,
-};
+}

@@ -1,8 +1,6 @@
 // @flow
 
-/* eslint-disable jsx-a11y/anchor-is-valid */
-
-import React from 'react';
+import React from 'react'
 
 type Props = {
   answers?: Array<any>,
@@ -12,30 +10,33 @@ type Props = {
   that: any,
 };
 
-const Answers = ({ answers, onNext, goToStepByTitle, that, noBack }: Props) => (
+const Answers = ({
+  answers, onNext, goToStepByTitle, that, noBack,
+}:
+Props) => (
   <div>
     {answers.map((answer, idx) => {
-      let html;
+      let html
       // if react component
       if (!answer.text) {
-        html = answer;
+        html = answer
       } else if (answer.goToStepByTitle) {
         html = (
           <a onClick={() => goToStepByTitle(answer.goToStepByTitle)}>
             {answer.text}
           </a>
-        );
+        )
       } else if (answer.onClickThat) {
-        html = <a onClick={() => answer.onClickThat(that)}>{answer.text}</a>;
+        html = <a onClick={() => answer.onClickThat(that)}>{answer.text}</a>
       } else {
-        html = <a onClick={answer.onClick || onNext}>{answer.text}</a>;
+        html = <a onClick={answer.onClick || onNext}>{answer.text}</a>
       }
 
       return (
         <div key={idx} className="tool-answer">
           - {html}
         </div>
-      );
+      )
     })}
 
     {!noBack && (
@@ -47,18 +48,16 @@ const Answers = ({ answers, onNext, goToStepByTitle, that, noBack }: Props) => (
       -{' '}
       <a
         onClick={() =>
-          global.alert(
-            "follow the steps as best you can now, and contact me when you're done",
-          )}
+          global.alert("follow the steps as best you can now, and contact me when you're done")}
       >
         I dont Understand
       </a>
     </div>
   </div>
-);
+)
 
 Answers.defaultProps = {
   answers: [],
-};
+}
 
-export default Answers;
+export default Answers

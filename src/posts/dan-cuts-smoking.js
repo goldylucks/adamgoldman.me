@@ -31,4 +31,4 @@ Dan: *“Oh damn … now I see a disgusting burger dripping of burned black fat 
  
 But [here’s where his story get’s really interesting](/blog/dan-gets-laid/) …
 `,
-};
+}

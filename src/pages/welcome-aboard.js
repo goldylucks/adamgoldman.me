@@ -13,4 +13,4 @@ Smart move my friend ;)
 
 btw, one of my virtual minions might have sent you a quick email to make sure we got the address right, and that you want to get more from [me](/who-am-i-anyway/).
 `,
-};
+}

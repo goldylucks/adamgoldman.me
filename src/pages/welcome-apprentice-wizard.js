@@ -1,4 +1,4 @@
-import { cloudImg } from '../utils';
+import { cloudImg } from '../utils'
 
 export default {
   title: 'Welcome Apprentice Wizard!',
@@ -136,4 +136,4 @@ Please, please, (pretty please?) if any question or comment about our work toget
 Real glad to have you on board, and I’m curious to see how fast u’ll be amazed from your progress and the cool projects you will help bring to life.
 
 `,
-};
+}

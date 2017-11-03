@@ -1,3 +1,1 @@
-import FbPageBox from './FbPageBox';
-
-export default FbPageBox;
+export default from './FbPageBox'

@@ -1,4 +1,4 @@
-import { parseFbConversation } from '../utils';
+import { parseFbConversation } from '../utils'
 
 export default {
   title: 'Healing Metaphors - Water & Slime',
@@ -688,7 +688,7 @@ Her dreams were a recurring issue for her, and today she woke up with intense fe
 # Verbatim transcript
 `,
   html: `<div>${parseFbConversation(msgs())}</div>`,
-};
+}
 
 function msgs() {
   return [
@@ -3470,5 +3470,5 @@ function msgs() {
       ],
       author: 'adam',
     },
-  ];
+  ]
 }

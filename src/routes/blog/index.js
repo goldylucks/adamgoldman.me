@@ -1,7 +1,8 @@
-import React from 'react';
-import Blog from './Blog';
+import React from 'react'
 
-const title = 'Blog';
+import Blog from './Blog'
+
+const title = 'Blog'
 
 function action() {
   return {
@@ -10,11 +11,9 @@ function action() {
     path: '/blog',
     description: 'A blog with my humble thoughts and diabolical schemes',
     component: (
-      <div>
-        <Blog />
-      </div>
+      <Blog />
     ),
-  };
+  }
 }
 
-export default action;
+export default action

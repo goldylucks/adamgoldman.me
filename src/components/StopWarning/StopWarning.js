@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import Markdown from '../Markdown';
-import { cloudImg } from '../../utils';
+import Markdown from '../Markdown'
+import { cloudImg } from '../../utils'
 
 class StopWarning extends React.Component {
   static propTypes = {
@@ -14,23 +14,23 @@ class StopWarning extends React.Component {
 
   componentDidMount() {
     if (localStorage.getItem(`hideWarning${this.props.id}`)) {
-      return;
+      return
     }
     // eslint-disable-next-line react/no-did-mount-set-state
-    this.setState({ hide: false });
+    this.setState({ hide: false })
   }
 
   dismiss = () => {
-    localStorage.setItem(`hideWarning${this.props.id}`, true);
-    this.setState({ hide: true });
+    localStorage.setItem(`hideWarning${this.props.id}`, true)
+    this.setState({ hide: true })
   };
 
   render() {
     if (this.state.hide) {
-      return null;
+      return null
     }
 
-    const { text } = this.props;
+    const { text } = this.props
     return (
       <article
         style={{
@@ -59,8 +59,8 @@ class StopWarning extends React.Component {
         <Markdown source={text} />
         <a onClick={this.dismiss}>Never show this again</a>
       </article>
-    );
+    )
   }
 }
 
-export default StopWarning;
+export default StopWarning

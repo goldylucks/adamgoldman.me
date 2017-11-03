@@ -1,9 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+// @flow
 
-import Square from './Square';
+import React from 'react'
 
-const Chart = ({ steps, mockState }) => (
+import Square from './Square'
+
+type Props = {
+  steps: Array<Object>,
+  mockState: Object,
+}
+
+const Chart = ({ steps, mockState }: Props) => (
   <div className="clearfix">
     {steps.map((props, idx) => (
       <Square
@@ -14,11 +20,6 @@ const Chart = ({ steps, mockState }) => (
       />
     ))}
   </div>
-);
+)
 
-Chart.propTypes = {
-  steps: PropTypes.array.isRequired,
-  mockState: PropTypes.object.isRequired,
-};
-
-export default Chart;
+export default Chart

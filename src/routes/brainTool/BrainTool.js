@@ -1,16 +1,17 @@
 // @flow
 
-import React from 'react';
+import React from 'react'
 
-import Markdown from '../../components/Markdown';
-import Ending from '../../components/Ending';
-import BreadCrumbs from '../../components/BreadCrumbs';
-import FbShareButton from '../../components/FbShareButton';
-import FbComments from '../../components/FbComments';
-import Chart from '../../components/Chart';
-import StopWarning from '../../components/StopWarning';
-import Steps from './components/Steps';
-import { cloudImg } from '../../utils';
+import Markdown from '../../components/Markdown'
+import Ending from '../../components/Ending'
+import BreadCrumbs from '../../components/BreadCrumbs'
+import FbShareButton from '../../components/FbShareButton'
+import FbComments from '../../components/FbComments'
+import Chart from '../../components/Chart'
+import StopWarning from '../../components/StopWarning'
+import { cloudImg } from '../../utils'
+
+import Steps from './components/Steps'
 
 type Props = {
   tool: Object,
@@ -23,7 +24,7 @@ class BrainToolPage extends React.Component {
 
   componentDidMount = () => {
     if (window.location.search.match(/chart/)) {
-      this.setState({ switchLeft: true });
+      this.setState({ switchLeft: true })
     }
   };
 
@@ -35,8 +36,8 @@ class BrainToolPage extends React.Component {
   props: Props;
 
   render() {
-    const { tool } = this.props;
-    const { switchLeft } = this.state;
+    const { tool } = this.props
+    const { switchLeft } = this.state
     return (
       <div>
         <div className="main-layout tool-page">
@@ -93,7 +94,7 @@ class BrainToolPage extends React.Component {
                   <StopWarning
                     id={tool.title}
                     text="# Don't rob yourself from a valuable learning experience!
-                    
+
 Go through the wholeness tool once or twice before going over the 'dry information'. You only have ONE chance in your life to EXPERIENCE it without your conscious brain knowing it. Please take it! Pretty please?"
                   />
                   <Chart {...tool} />
@@ -106,16 +107,17 @@ Go through the wholeness tool once or twice before going over the 'dry informati
           <hr />
           <FbShareButton style={{ marginBottom: 10 }} />
           <Markdown source="
-  You can do this,  
-  and more,  
+  You can do this,
+  and more,
   I've got your back.
-  " />
+  "
+          />
           <Ending nick={tool.nick} />
           <FbComments style={{ marginTop: 10 }} />
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default BrainToolPage;
+export default BrainToolPage

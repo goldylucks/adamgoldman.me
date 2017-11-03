@@ -49,4 +49,4 @@ Dare to aim yourself towards a great life,`,
   ps: `
 Remember to [calibrate](/blog/calibrate-intervene-calibrate/) first. If you still have some past traumas, I encourage you to [go through the process](/tools/trauma-relief/) Rachel has, and do it with the curiosity about what it is you will learn about your brain. Do NOT expect it to have a certain outcome, because you have to experience it first.
 `,
-};
+}

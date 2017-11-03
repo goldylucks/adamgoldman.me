@@ -66,4 +66,4 @@ It’s by NO MEANS an exhaustive all-u-will-ever-need list. Feel free to [messag
 
 
 `,
-};
+}

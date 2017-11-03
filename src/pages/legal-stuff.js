@@ -23,4 +23,4 @@ life on earth would flourish.
 
 Think about it ;)
 `,
-};
+}

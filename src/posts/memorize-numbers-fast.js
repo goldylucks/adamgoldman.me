@@ -43,4 +43,4 @@ Auditory: "What's my local phone number?"
 
 - imagining different people imagining the number the same way
 `,
-};
+}

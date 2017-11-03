@@ -1,5 +1,6 @@
-import React from 'react';
-import Reviews from './Reviews';
+import React from 'react'
+
+import Reviews from './Reviews'
 
 function action() {
   return {
@@ -8,11 +9,9 @@ function action() {
     decsription: 'Reviews from past students',
     path: '/review',
     component: (
-      <div>
-        <Reviews />
-      </div>
+      <Reviews />
     ),
-  };
+  }
 }
 
-export default action;
+export default action

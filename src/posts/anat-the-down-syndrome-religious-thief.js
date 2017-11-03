@@ -33,4 +33,4 @@ Her therapist updates me from time to time, saying she keeps mentioning our time
 
 No operational results this with Anat, tho was an interesting time indeed.
 `,
-};
+}
