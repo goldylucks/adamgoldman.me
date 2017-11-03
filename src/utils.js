@@ -4,6 +4,10 @@ import cloudinary from 'cloudinary-core';
 String.prototype.capitalize = function () {
   return this[0].toUpperCase() + this.substr(1).toLowerCase();
 }
+
+Array.prototype.last = function () {
+  return this[this.length - 1];
+}
 /* eslint-enable */
 
 const cloudinaryCore = new cloudinary.Cloudinary({ cloud_name: 'goldylucks' });
