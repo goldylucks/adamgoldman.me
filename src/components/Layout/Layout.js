@@ -7,6 +7,7 @@ import Footer from '../Footer'
 import Menu from '../Menu'
 import Brand from '../Brand'
 import GlobalSearch from '../GlobalSearch'
+import MessengerFixed from '../MessengerFixed'
 import SidebarSignupForm from '../SidebarSignupForm'
 
 import s from './Layout.css'
@@ -21,6 +22,7 @@ const Layout = ({ children }: Props) => (
       <GlobalSearch />
       {children}
       <Footer />
+      <MessengerFixed />
     </div>
     <aside className={s.sidebar}>
       <Menu />

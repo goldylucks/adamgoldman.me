@@ -4,7 +4,7 @@
 }
 
 .logo {
-  width: 165;
+  width: 165px;
   border-radius: 50%;
 }
 
@@ -26,4 +26,18 @@
 .fbShare {
   display: block;
   margin-top: 20px;
+}
+
+@media (max-width: 800px) {
+  .brand {
+    margin-top: 0;
+    text-align: inherit;
+  }
+  .headline {
+    margin-top: 14px !important;
+    margin-left: 23px !important;
+  }
+  .logo {
+    width: 40px;
+  }
 }

@@ -35,3 +35,10 @@
   bottom: -6px;
   width: 100%;
 }
+
+@media (max-width: 800px) {
+  .container {
+      float: right;
+  }
+}
+  
