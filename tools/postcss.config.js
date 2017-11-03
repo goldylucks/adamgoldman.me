@@ -9,7 +9,7 @@
 
 /* eslint-disable global-require */
 
-const pkg = require('../package.json');
+const pkg = require('../package.json')
 
 module.exports = () => ({
   // The list of plugins for PostCSS
@@ -64,4 +64,4 @@ module.exports = () => ({
       flexbox: 'no-2009',
     }),
   ],
-});
+})

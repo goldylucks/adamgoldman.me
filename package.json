@@ -3,12 +3,11 @@
     "heroku-postbuild": "yarn run build -- --release",
     "precommit": "lint-staged",
     "prepush": "yarn fix",
-    "lint-js": "eslint --ignore-path .gitignore --ignore-pattern \"!**/.*\" .",
-    "lint-css": "stylelint \"src/**/*.{css,less,styl,scss,sass,sss}\"",
-    "lint": "yarn run lint-js && yarn run lint-css",
+    "lint-js":
+      "eslint --ignore-path .gitignore --ignore-pattern tools/ \"!**/.*\" .",
+    "lint": "yarn run lint-js",
     "fix-js": "yarn run lint-js --fix",
-    "fix-css": "yarn run lint-css --fix",
-    "fix": "yarn run fix-js && yarn run fix-css",
+    "fix": "yarn run fix-js",
     "check": "flow check",
     "test": "jest",
     "test-watch": "yarn run test --watch --notify",
@@ -140,8 +139,6 @@
     "webpack-node-externals": "^1.6.0"
   },
   "lint-staged": {
-    "*.css": ["stylelint --fix", "git add"],
-    "*.{js,jsx}": ["eslint --fix", "git add"],
-    "*.{json,graphql}": ["prettier --write", "git add"]
+    "*.{js,jsx}": ["eslint --fix", "git add"]
   }
 }
