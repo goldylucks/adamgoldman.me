@@ -7,12 +7,10 @@ import FbPageBox from '../../components/FbPageBox';
 import Ending from '../../components/Ending';
 import FbShareButton from '../../components/FbShareButton';
 import FbComments from '../../components/FbComments';
-import Wholeness from '../../components/Wholeness';
 
 const Home = () => (
   <div>
     <div className="main-layout post-page">
-      <Wholeness />
       <FbShareButton />
       <h1 className="main-title">Welcome to my (virtual) home!</h1>
       <Markdown

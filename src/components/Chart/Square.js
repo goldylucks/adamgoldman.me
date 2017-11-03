@@ -3,6 +3,7 @@
 import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 
+import Markdown from '../../components/Markdown';
 import s from './Square.css';
 
 type Props = {
@@ -10,6 +11,9 @@ type Props = {
   description: string,
   declineText: string,
   decline: boolean,
+  mockState: Object,
+  idx: number,
+  nOfSteps: number,
   invitation: boolean,
 };
 
@@ -18,6 +22,7 @@ class Square extends React.Component {
     line: {},
     lineToILocation: {},
   };
+
   componentDidMount() {
     if (this.props.invitation) {
       const { top, right } = this.el.getBoundingClientRect();
@@ -49,6 +54,8 @@ class Square extends React.Component {
   }
 
   props: Props;
+
+  el = null;
 
   renderArrowToILocation() {
     if (!this.props.decline) {
@@ -88,8 +95,12 @@ class Square extends React.Component {
       decline,
       invitation,
       declineText,
+      nOfSteps,
+      mockState,
+      idx,
       ...rest
     } = this.props;
+    delete rest.postAnswer;
     return (
       <div
         key={title}
@@ -100,7 +111,12 @@ class Square extends React.Component {
         {...rest}
       >
         <h1 className={s.title}>{title}</h1>
-        <p className={s.description}>{description}</p>
+        <Markdown
+          className={s.description}
+          source={`## ${title} \n Step ${idx}/${nOfSteps} \n ${description(
+            mockState,
+          )}`}
+        />
         {invitation && (
           <div
             style={{
