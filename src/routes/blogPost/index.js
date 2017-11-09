@@ -1,6 +1,7 @@
 import React from 'react'
 
 import BlogPost from './BlogPost'
+import Transcript from './Transcript'
 
 async function action({ params }) {
   const post = await import(`../../posts/${params.post}.js`)
@@ -12,11 +13,13 @@ async function action({ params }) {
       throw error // loading chunk failed (render error page)
     })
   if (!post) return null // go to next route (or render 404)
+  const Comp = post.transcript ? Transcript : BlogPost
+
   return {
     title: post.title,
     path: `/blog/${params.post}`,
     description: post.description,
-    component: <BlogPost pathname={`/blog/${params.post}`} {...post} />,
+    component: <Comp {...post} />,
   }
 }
 

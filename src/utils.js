@@ -91,3 +91,5 @@ export const parseFbConversation = arrOfMsgs =>
         .join('')
     })
     .join('')
+
+export const comment = md => ({ author: 'comment', md })

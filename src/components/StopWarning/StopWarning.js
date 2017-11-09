@@ -7,13 +7,20 @@ import { cloudImg } from '../../utils'
 class StopWarning extends React.Component {
   static propTypes = {
     text: PropTypes.string.isRequired,
+    dismissText: PropTypes.string,
     id: PropTypes.string.isRequired,
+    onDismiss: PropTypes.func.isRequired,
   };
+
+  static defaultProps = {
+    dismissText: 'Got it, never show this again',
+  }
 
   state = { hide: true };
 
   componentDidMount() {
     if (localStorage.getItem(`hideWarning${this.props.id}`)) {
+      this.props.onDismiss()
       return
     }
     // eslint-disable-next-line react/no-did-mount-set-state
@@ -23,6 +30,7 @@ class StopWarning extends React.Component {
   dismiss = () => {
     localStorage.setItem(`hideWarning${this.props.id}`, true)
     this.setState({ hide: true })
+    this.props.onDismiss()
   };
 
   render() {
@@ -30,7 +38,7 @@ class StopWarning extends React.Component {
       return null
     }
 
-    const { text } = this.props
+    const { text, dismissText } = this.props
     return (
       <article
         style={{
@@ -57,7 +65,7 @@ class StopWarning extends React.Component {
           src={`${cloudImg('adamgoldman.me/boots')}`}
         />
         <Markdown source={text} />
-        <a onClick={this.dismiss}>Never show this again</a>
+        <a onClick={this.dismiss} style={{ fontStyle: 'italic' }}>{dismissText}</a>
       </article>
     )
   }
