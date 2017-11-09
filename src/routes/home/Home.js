@@ -24,7 +24,7 @@ Until I sort out my homepage, try one of the [brain hacking tools](/tools/), rea
       <div style={{ marginBottom: 20 }}>
         <FbShareButton />
       </div>
-      <Ending nick="me case tu casa" />
+      <Ending nick="mi case tu casa" />
       <FbComments style={{ marginTop: 10 }} />
     </div>
   </div>
