@@ -34,5 +34,6 @@
   
   .mainContent {
     width: 100%;
+    overflow-y: visible;
   }
 }

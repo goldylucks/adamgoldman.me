@@ -51,10 +51,6 @@ ul {
   direction: rtl;
 }
 
-.mobile-show { 
-  display: none
-}
-
 /* slide menu */
 .cbp-spmenu {
   background: #595762;
@@ -129,6 +125,12 @@ ul {
   max-width: 710px;
   padding-top: 10vh;
   margin: 0 auto;
+}
+
+@media (max-width: 800px) {
+  .main-layout {
+    padding-top: 15px;
+  }
 }
 
 .main-title {
