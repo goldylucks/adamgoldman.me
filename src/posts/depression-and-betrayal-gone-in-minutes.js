@@ -3,7 +3,7 @@ export default {
   tags: ['Successes', 'Depression'],
   nick: 'expensive problem solver',
   body: `
-  <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D446539335730222%26id%3D100011224775781%26substory_index%3D0&width=500" width="500" height="354" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+[%2Fpermalink.php%3Fstory_fbid%3D446539335730222%26id%3D100011224775781%26substory_index%3D0](iframe)
   
   A full session, raw, unedited, with a (now former) sufferer from depression and betrayal.
 `,

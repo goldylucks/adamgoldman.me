@@ -10,6 +10,7 @@ import BreadCrumbs from '../../components/BreadCrumbs'
 import FbComments from '../../components/FbComments'
 import Tags from '../../components/Tags'
 import StopWarning from '../../components/StopWarning'
+import FbReview from '../../components/FbReview'
 
 type Props = {
   title: string,
@@ -82,20 +83,7 @@ class Transcript extends React.Component {
           </h1>
           <Tags tags={tags} />
 
-          {fbReview && (
-            <iframe
-              title="Client Review"
-              style={{
-                border: 'none', overflow: 'hidden', margin: '50px auto', display: 'block',
-              }}
-              src={`https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com${fbReview}&width=500`}
-              width="500"
-              height="392"
-              scrolling="no"
-              frameBorder="0"
-              allowTransparency="true"
-            />
-          )}
+          {fbReview && <FbReview review={fbReview} />}
 
           <Markdown
             className="post-text"

@@ -4,12 +4,17 @@ import ReactMarkdown from 'react-markdown'
 import { MESSENGER_LINK } from '../../constants'
 import FbShareLink from '../FbShareLink'
 import Link from '../Link'
+import FbReview from '../FbReview'
 
 const Markdown = props => (
   <ReactMarkdown
     {...props}
     renderers={{
           Link: (linkProps) => {
+            if (linkProps.href === 'iframe') {
+              return <FbReview review={linkProps.children} />
+            }
+
             if (linkProps.href.match(/adam|other/)) {
               const href = linkProps.children[1]
               if (href && href.includes && href.includes('://')) {

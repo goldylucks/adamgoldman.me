@@ -3,7 +3,7 @@ export default {
   tags: ['Fibromyalgia | C.F.S | M.E', 'Trauma', 'Grief', 'Successes'],
   nick: "doctors don't know everything",
   body: `
-<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fjulianne.barley%2Fposts%2F10154923498533379%3A0&width=500" width="500" height="335" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+[%2Fjulianne.barley%2Fposts%2F10154923498533379%3A0](iframe)
 
 # TOC
 - ### Intro

@@ -3,7 +3,7 @@ export default {
   tags: ['Successes', 'Panic Attack', 'Anxiety', 'Breakup'],
   nick: 'anyone can learn',
   body: `
-<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fdennis.pateo%2Fposts%2F715337218655134%3A0&width=500" width="500" height="335" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+[%2Fdennis.pateo%2Fposts%2F715337218655134%3A0](iframe)
 
 A full session, raw, unedited, with a (now former) sufferer from panic attacks and nasty breakup.
 
