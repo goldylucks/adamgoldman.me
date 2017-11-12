@@ -3,6 +3,7 @@
 import React from 'react'
 
 import { SmallScreen, BigScreen } from '../Responsive'
+import { isProd, noop } from '../../utils'
 
 type Props = {
   review: string,
@@ -41,4 +42,4 @@ const FbReview = ({ review }: Props) => (
   </div>
 )
 
-export default FbReview
+export default isProd ? FbReview : noop

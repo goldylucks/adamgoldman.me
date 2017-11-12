@@ -2,6 +2,8 @@
 
 import React from 'react'
 
+import { isProd, noop } from '../../utils'
+
 class FbPageBox extends React.Component {
   state = {
     rendered: false,
@@ -58,4 +60,4 @@ class FbPageBox extends React.Component {
   }
 }
 
-export default FbPageBox
+export default isProd ? FbPageBox : noop

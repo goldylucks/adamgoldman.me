@@ -14,6 +14,8 @@ const cloudinaryCore = new cloudinary.Cloudinary({ cloud_name: 'goldylucks' })
 
 export const cloudImg = imgName => cloudinaryCore.url(imgName)
 
+export const noop = () => null
+
 export const isProd = process.env.NODE_ENV === 'production'
 
 export const scrollToElem = (element, to, duration) => {

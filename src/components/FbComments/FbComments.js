@@ -3,6 +3,7 @@
 import React from 'react'
 
 import { DOMAIN } from '../../constants'
+import { isProd, noop } from '../../utils'
 
 class FbComments extends React.Component {
   state = {
@@ -85,4 +86,5 @@ class FbComments extends React.Component {
   }
 }
 
-export default FbComments
+export default isProd ? FbComments : noop
+

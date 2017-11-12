@@ -3,6 +3,7 @@
 import React from 'react'
 
 import { DOMAIN } from '../../constants'
+import { isProd, noop } from '../../utils'
 
 type Props = {
   urlProp?: string, // eslint-disable-line react/require-default-props
@@ -81,4 +82,4 @@ class FbShareButton extends React.Component {
   }
 }
 
-export default FbShareButton
+export default isProd ? FbShareButton : noop
