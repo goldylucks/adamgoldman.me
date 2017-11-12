@@ -1,6 +1,6 @@
 export default {
   title: 'Fibromyalgia symptoms (almost) gone in 1 session',
-  tags: ['Fibromyalgia | C.F.S | M.E', 'Trauma', 'Grief', 'Successes'],
+  tags: ['Fibromyalgia | C.F.S | M.E', 'Trauma', 'Grief', 'Successes', 'Rape'],
   nick: "doctors don't know everything",
   body: `
 [%2Fjulianne.barley%2Fposts%2F10154923498533379%3A0](iframe)

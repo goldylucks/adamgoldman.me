@@ -1,59 +1,30 @@
 /* eslint-disable */
   export default [
   {
-    "title": "Fibromyalgia | C.F.S | M.E",
+    "title": "Metaphors",
     "items": [
       {
-        "url": "fibromyalgia-0-julianne-1",
+        "url": "healing-metaphors-water-slime",
         "type": "blog"
       }
     ]
   },
   {
-    "title": "Trauma",
+    "title": "Clean Language",
     "items": [
       {
-        "url": "fibromyalgia-0-julianne-1",
+        "url": "healing-metaphors-water-slime",
         "type": "blog"
-      },
-      {
-        "url": "ocd-and-guilt-gone-in-one-session",
-        "type": "blog"
-      },
-      {
-        "url": "sol-and-the-authorized-rapist",
-        "type": "blog"
-      },
-      {
-        "url": "rachel-turns-family-trauma-to-parody",
-        "type": "blog"
-      },
-      {
-        "url": "trauma-relief",
-        "type": "tools"
-      }
-    ]
-  },
-  {
-    "title": "Grief",
-    "items": [
-      {
-        "url": "fibromyalgia-0-julianne-1",
-        "type": "blog"
-      },
-      {
-        "url": "shedding-grief-with-extra-weight",
-        "type": "blog"
-      },
-      {
-        "url": "grief-to-appreciation",
-        "type": "tools"
       }
     ]
   },
   {
     "title": "Successes",
     "items": [
+      {
+        "url": "healing-metaphors-water-slime",
+        "type": "blog"
+      },
       {
         "url": "fibromyalgia-0-julianne-1",
         "type": "blog"
@@ -112,6 +83,74 @@
       },
       {
         "url": "jelous-nathan",
+        "type": "blog"
+      }
+    ]
+  },
+  {
+    "title": "Fibromyalgia | C.F.S | M.E",
+    "items": [
+      {
+        "url": "healing-metaphors-water-slime",
+        "type": "blog"
+      },
+      {
+        "url": "fibromyalgia-0-julianne-1",
+        "type": "blog"
+      }
+    ]
+  },
+  {
+    "title": "Trauma",
+    "items": [
+      {
+        "url": "fibromyalgia-0-julianne-1",
+        "type": "blog"
+      },
+      {
+        "url": "ocd-and-guilt-gone-in-one-session",
+        "type": "blog"
+      },
+      {
+        "url": "sol-and-the-authorized-rapist",
+        "type": "blog"
+      },
+      {
+        "url": "rachel-turns-family-trauma-to-parody",
+        "type": "blog"
+      },
+      {
+        "url": "trauma-relief",
+        "type": "tools"
+      }
+    ]
+  },
+  {
+    "title": "Grief",
+    "items": [
+      {
+        "url": "fibromyalgia-0-julianne-1",
+        "type": "blog"
+      },
+      {
+        "url": "shedding-grief-with-extra-weight",
+        "type": "blog"
+      },
+      {
+        "url": "grief-to-appreciation",
+        "type": "tools"
+      }
+    ]
+  },
+  {
+    "title": "Rape",
+    "items": [
+      {
+        "url": "fibromyalgia-0-julianne-1",
+        "type": "blog"
+      },
+      {
+        "url": "sol-and-the-authorized-rapist",
         "type": "blog"
       }
     ]

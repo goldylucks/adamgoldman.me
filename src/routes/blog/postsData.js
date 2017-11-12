@@ -12,11 +12,8 @@
   },
   {
     "title": "דורה טליאס - ניקוי אבל ואבדן, געגועים לבעל, אכזבה, כעס, עצב ואבחון של סרטן",
-    "isTitleRtl": true,
-    "tags": [],
-    "IS_DRAFT": true,
     "description": "לתת לדורה לספר על עצמה כאן ...",
-    "isBodyRtl": true,
+    "tags": [],
     "url": "dora-talias-cancer"
   },
   {
@@ -25,12 +22,14 @@
       "Fibromyalgia | C.F.S | M.E",
       "Trauma",
       "Grief",
-      "Successes"
+      "Successes",
+      "Rape"
     ],
     "url": "fibromyalgia-0-julianne-1"
   },
   {
     "title": "Clearing lifetime of OCD and guilt in one session",
+    "description": "Jennifer had anxiety, obsessive thoughts, compulsive behaviors and rituals for as long as she can remember. Today she has no more guilt, no anxiety, and ...",
     "tags": [
       "OCD",
       "Guilt",
@@ -38,13 +37,12 @@
       "Intrusive Thoughts",
       "Successes"
     ],
-    "description": "Jennifer had anxiety, obsessive thoughts, compulsive behaviors and rituals for as long as she can remember. Today she has no more guilt, no anxiety, and ...",
     "url": "ocd-and-guilt-gone-in-one-session"
   },
   {
     "title": "I'm not like the others, I'm different",
-    "tags": [],
     "description": "\nIf you are here reading these lines, I've probably sent you here in one point of our interaction. \n\nMaybe we were talking 1x1, or you were trying one of the brain hacking tools, and you uttered or thought one of the above statements.\n\nWell ... How can I say this ...\n",
+    "tags": [],
     "url": "im-not-like-the-others"
   },
   {
@@ -59,7 +57,8 @@
     "tags": [
       "Successes",
       "Trauma",
-      "Limiting Beliefs"
+      "Limiting Beliefs",
+      "Rape"
     ],
     "url": "sol-and-the-authorized-rapist"
   },
@@ -345,11 +344,11 @@
   },
   {
     "title": "Streamlining communication",
-    "IS_DRAFT": true,
     "description": "Some tricks for saying more (impact) with less",
     "tags": [
       "Adam Goldman"
     ],
+    "IS_DRAFT": true,
     "url": "streamlining-communication"
   },
   {

@@ -1,6 +1,6 @@
 export default {
   title: 'Sol And The Authorized Rapist',
-  tags: ['Successes', 'Trauma', 'Limiting Beliefs'],
+  tags: ['Successes', 'Trauma', 'Limiting Beliefs', 'Rape'],
   nick: 'lay the past to rest',
   body: `
 > *It’s crazy … I know I’ve been through some rough times, but i had no idea how much those experiences had an impact on my day to day life!*
