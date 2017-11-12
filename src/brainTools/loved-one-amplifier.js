@@ -56,8 +56,6 @@ class LovedOnesAmplifier extends React.Component {
       onUserInputSubmit,
       onNext,
       letsContinue,
-      back,
-      dontUnderstand,
     } = this.props
     const {
       lovedOneName,
@@ -80,6 +78,8 @@ How awesome would that be?
 `}
             />
             <Answers
+              onNext={onNext}
+              noBack
               answers={[
                 { text: "That'd be great!", onClick: onNext },
                 {
@@ -90,7 +90,6 @@ How awesome would that be?
                   text: "ecstasy and good feelings? sure, I'll have some",
                   onClick: onNext,
                 },
-                dontUnderstand,
               ]}
             />
             <ToolsIntro />
@@ -149,6 +148,7 @@ Like their mere prenence fills you up with good feelings, sometimes without sayi
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 { text: 'Of course I love those people!', onClick: onNext },
                 {
@@ -156,8 +156,6 @@ Like their mere prenence fills you up with good feelings, sometimes without sayi
                   onClick: onNext,
                 },
                 { text: 'I got some in mind, yes', onClick: onNext },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -199,11 +197,10 @@ As you think of ${lovedOneHimHer}, do you see ${lovedOneHimHer} looking at you?
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 { text: 'Yes', onClick: onNext },
                 { text: 'No', onClick: onNext },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -217,6 +214,7 @@ Notice how bright is the image of ${lovedOneHimHer} in your mind, and see what h
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 {
                   text: 'Brightening the image makes my feeling stronger!',
@@ -227,8 +225,6 @@ Notice how bright is the image of ${lovedOneHimHer} in your mind, and see what h
                   onClick: onNext,
                 },
                 letsContinue,
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -243,11 +239,10 @@ Now go all the way brighter until it's a bit blinding, and then start decreasing
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 { text: 'my eyes, my eyes!', onClick: onNext },
                 letsContinue,
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -262,6 +257,7 @@ Now go the other way around and make it darker, and see what happens. Then make 
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 { text: 'Sweet spot? Check!', onClick: onNext },
                 {
@@ -269,8 +265,6 @@ Now go the other way around and make it darker, and see what happens. Then make 
                   onClick: onNext,
                 },
                 letsContinue,
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -286,11 +280,10 @@ As you look at ${lovedOneHimHer} with this brightness, do you see ${lovedOneHimH
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 { text: `I see ${lovedOneName} in color`, onClick: onNext },
                 { text: `I see ${lovedOneName} in B&W`, onClick: onNext },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -306,6 +299,7 @@ Make the colors richer and as vivid as you can. Just like brightness, go full in
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 {
                   text: `Feels much better to see ${lovedOneName} in vivid colors!`,
@@ -316,8 +310,6 @@ Make the colors richer and as vivid as you can. Just like brightness, go full in
                   onClick: onNext,
                 },
                 letsContinue,
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -333,14 +325,13 @@ Now go the other way around and decrease the colors until it's grayscale / B&W, 
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 {
                   text: "I've played with the colors and reached the sweetspot",
                   onClick: onNext,
                 },
                 letsContinue,
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -360,6 +351,7 @@ Now look at ${lovedOneName} and increase the quality of the image, set it to max
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 {
                   text:
@@ -371,8 +363,6 @@ Now look at ${lovedOneName} and increase the quality of the image, set it to max
                   onClick: onNext,
                 },
                 letsContinue,
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -388,14 +378,13 @@ Now decrease the resolution and quality all the way down until you can barely re
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 {
                   text: 'Yup, the maximum quality is higher than before now',
                   onClick: onNext,
                 },
                 letsContinue,
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -413,6 +402,7 @@ Usually it's something in between. Now push the image away all the way into the 
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 {
                   text:
@@ -424,8 +414,6 @@ Usually it's something in between. Now push the image away all the way into the 
                   onClick: onNext,
                 },
                 letsContinue,
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -440,6 +428,7 @@ Do you see ${lovedOneName} in a flat image or in 3d?
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 {
                   text: `I see ${lovedOneHimHer} in a flat image`,
@@ -449,8 +438,6 @@ Do you see ${lovedOneName} in a flat image or in 3d?
                   text: `I see ${lovedOneHimHer} in a 3d image`,
                   onClick: onNext,
                 },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -465,6 +452,7 @@ Add more and more depth, so you make ${lovedOneName}'s representation as deep an
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 {
                   text: 'Adding depth induces stronger good feelings',
@@ -475,8 +463,6 @@ Add more and more depth, so you make ${lovedOneName}'s representation as deep an
                   onClick: onNext,
                 },
                 letsContinue,
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -492,7 +478,10 @@ Now start decreasing it until it's a flat image, and start adding more and more 
 (yes, you guessed it, find the sweetspot of good emotions. Aren't you intuitive? ;) )
 `}
             />
-            <Answers answers={[letsContinue, dontUnderstand, back]} />
+            <Answers
+              onNext={onNext}
+              answers={[letsContinue]}
+            />
           </div>,
 
           <div>
@@ -507,6 +496,7 @@ Now make the image clearer and more focused, as much as you can.
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 {
                   text: 'I made it clearer, feels even better now',
@@ -517,8 +507,6 @@ Now make the image clearer and more focused, as much as you can.
                   onClick: onNext,
                 },
                 letsContinue,
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -535,12 +523,11 @@ Now start defocusing and blurrying it until you can barely recognize it's ${love
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 { text: 'Found the focus sweetspot!', onClick: onNext },
                 { text: "I've made it even clearer now", onClick: onNext },
                 letsContinue,
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -557,6 +544,7 @@ If it's not yet a movie, "press play" so you see ${lovedOneHimHer} moving, and n
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 { text: 'It was already a movie', onClick: onNext },
                 {
@@ -564,8 +552,6 @@ If it's not yet a movie, "press play" so you see ${lovedOneHimHer} moving, and n
                   onClick: onNext,
                 },
                 letsContinue,
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -582,6 +568,7 @@ Hear what ${lovedOneHeShe}'s saying and more importantly HOW ${lovedOneHeShe}'s 
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 {
                   text: `Hearing ${lovedOneName} Makes the feeling stronger`,
@@ -596,8 +583,6 @@ Hear what ${lovedOneHeShe}'s saying and more importantly HOW ${lovedOneHeShe}'s 
                   onClick: onNext,
                 },
                 letsContinue,
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -614,12 +599,11 @@ As ${lovedOneHeShe} speaks, hear ${lovedOneHimHer} as if the sound would come fr
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 { text: "that's so cool!", onClick: onNext },
                 { text: 'that is interesting ...', onClick: onNext },
                 letsContinue,
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -636,6 +620,7 @@ Now play with the volume of the experience. Make everything louder, until it's t
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 {
                   text: 'Making it louder intensified the good feelings',
@@ -647,8 +632,6 @@ Now play with the volume of the experience. Make everything louder, until it's t
                 },
                 { text: 'that is interesting ...', onClick: onNext },
                 letsContinue,
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -666,6 +649,7 @@ If there's no smell already, add it in and notice if you feel good in a better w
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 {
                   text: 'I was already noticed the smell before',
@@ -677,8 +661,6 @@ If there's no smell already, add it in and notice if you feel good in a better w
                 },
                 { text: 'that is interesting ...', onClick: onNext },
                 letsContinue,
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -705,6 +687,7 @@ I will wait for you either way. Promise!
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 {
                   text: "I'm ready to do it on the next person!",
@@ -716,8 +699,6 @@ I will wait for you either way. Promise!
                 <FbShareLink>
                   This is cool and I want more to experince this
                 </FbShareLink>,
-                dontUnderstand,
-                back,
               ]}
             />
             <Markdown

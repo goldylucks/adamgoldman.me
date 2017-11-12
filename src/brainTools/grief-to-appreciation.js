@@ -56,8 +56,6 @@ class GriefToAppreciation extends React.Component {
       age,
       onUserInputSubmit,
       onNext,
-      back,
-      dontUnderstand,
     } = this.props
 
     const {
@@ -85,17 +83,14 @@ and before we turn this around you might wonder ...
               `}
             />
             <Answers
+              noBack
+              onNext={onNext}
               answers={[
                 { text: 'How is this going to work?', onClick: onNext },
-                dontUnderstand,
               ]}
             />
           </div>,
-          <HowItsGoingToWorkStep
-            onNext={onNext}
-            dontUnderstand={dontUnderstand}
-            back={back}
-          />,
+          <HowItsGoingToWorkStep onNext={onNext} />,
           <div>
             <Markdown
               className="tool-text"
@@ -112,12 +107,14 @@ I want you to quickly share with me the following:
                 min="0"
                 placeholder="What is your age?"
                 type="number"
+                required
               />
               <input
                 className="input"
                 onChange={this.lossPersonNameChange}
                 value={lossPersonName}
                 placeholder="how do you call that person in question?"
+                required
               />
               <select
                 className="select"
@@ -131,7 +128,7 @@ I want you to quickly share with me the following:
               </select>
               <button className="button">Let&apos;s continue</button>
             </form>
-            <Answers answers={[dontUnderstand, back]} />
+            <Answers onNext={onNext} />
           </div>,
           <div>
             <Markdown
@@ -185,7 +182,7 @@ as you think of that person, share the following:
               </div>
               <button className="button">Let&apos;s continue</button>
             </form>
-            <Answers answers={[dontUnderstand, back]} />
+            <Answers onNext={onNext} />
           </div>,
           <div>
             <Markdown
@@ -246,8 +243,6 @@ and describe this good feeling vivdly in as much detail as humanly possible,
                   text: 'I like to learn to feel even better',
                   onClick: onNext,
                 },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -290,8 +285,6 @@ and how good do you feel now as you see ${lossPersonName} in this way?
                   text: "It's exactly the same as before",
                 },
                 { text: 'This is so much better ...', onClick: onNext },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -341,8 +334,6 @@ for the rest of your life (and then some ...)
                 <Link to="/i-dont-charge-i-accept/">
                   This is wonderful, I wish to give back
                 </Link>,
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -375,7 +366,6 @@ and take the next action to further improve your life!
                   This is great, I want more to experience this gratitude and
                   peace
                 </FbShareLink>,
-                back,
               ]}
             />
             <Markdown

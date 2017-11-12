@@ -43,8 +43,6 @@ class FeelGoodGenerator extends React.Component {
       onAgeChange,
       onRestart,
       onNext,
-      back,
-      dontUnderstand,
     } = this.props
     const {
       resource,
@@ -74,7 +72,7 @@ and you'd like to experience it more as you progress through life.
               />
               <button className="button">Let&apos; continue</button>
             </form>
-            <Answers answers={[dontUnderstand]} />
+            <Answers onNext={onNext} noBack />
           </div>,
           <div>
             <Markdown
@@ -93,7 +91,7 @@ And how many times has the earth revolved around the sun since your inception on
               />
               <button className="button">Let&apos; continue</button>
             </form>
-            <Answers answers={[dontUnderstand, back]} />
+            <Answers onNext={onNext} />
           </div>,
           <div>
             <Markdown
@@ -208,6 +206,7 @@ and when your ready to get even more advanced ...
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 <FbShareLink>
                   This is great, I want more to experience this too!
@@ -219,8 +218,6 @@ and when your ready to get even more advanced ...
                 <Link to="/i-dont-charge-i-accept">
                   This is great, I want to give back!
                 </Link>,
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -245,6 +242,7 @@ to good feelings, and it feels so right to be lost sometimes, and what's still l
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 {
                   text: "I feel better, let's do it again!",
@@ -256,8 +254,6 @@ to good feelings, and it feels so right to be lost sometimes, and what's still l
                 <Link to="/i-dont-charge-i-accept">
                   This is great, I want to give back!
                 </Link>,
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,

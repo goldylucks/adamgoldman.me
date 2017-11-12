@@ -36,6 +36,8 @@ I am about to show you how to generalize what you've experienced in the [loved o
 `}
             />
             <Answers
+              noBack
+              onNext={onNext}
               answers={[
                 {
                   text:

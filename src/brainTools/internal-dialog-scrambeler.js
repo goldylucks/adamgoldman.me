@@ -65,8 +65,6 @@ class InternalDialogScrambler extends React.Component {
       renderStep,
       onUserInputSubmit,
       onNext,
-      back,
-      dontUnderstand,
     } = this.props
 
     const {
@@ -95,17 +93,14 @@ and before we turn this around you might wonder ...
             `}
             />
             <Answers
+              onNext={onNext}
+              noBack
               answers={[
                 { text: 'How is this going to work?', onClick: onNext },
-                dontUnderstand,
               ]}
             />
           </div>,
-          <HowItsGoingToWorkStep
-            onNext={onNext}
-            dontUnderstand={dontUnderstand}
-            back={back}
-          />,
+          <HowItsGoingToWorkStep onNext={onNext} />,
           <div>
             <Markdown
               className="tool-text"
@@ -121,7 +116,9 @@ and before we turn this around you might wonder ...
               />
               <button className="button">Let&apos;s continue</button>
             </form>
-            <Answers answers={[back, dontUnderstand]} />
+            <Answers
+              onNext={onNext}
+            />
           </div>,
 
           <div>
@@ -136,11 +133,10 @@ When you have said this to yourself, do you say it in your normal conversational
             `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 { text: 'normal tempo', onClick: onNext },
                 { text: 'fast tempo', onClick: onNext },
-                back,
-                dontUnderstand,
               ]}
             />
           </div>,
@@ -162,7 +158,9 @@ say this phrase exactly as you have done to date and notice how you feel in resp
                 Done describing to date
               </button>
             </form>
-            <Answers answers={[back, dontUnderstand]} />
+            <Answers
+              onNext={onNext}
+            />
           </div>,
 
           <div>
@@ -198,6 +196,7 @@ ${doneFlashing
               style={doneFlashing ? { display: 'block' } : { display: 'none' }}
             >
               <Answers
+                onNext={onNext}
                 answers={[
                   {
                     text:
@@ -206,8 +205,6 @@ ${doneFlashing
                   },
                   { text: "that's much better", onClick: onNext },
                   { text: 'flash me again', onClick: this.flash },
-                  back,
-                  dontUnderstand,
                 ]}
               />
             </div>
@@ -230,7 +227,9 @@ Describe the difference between the way you used to say it to yourself until now
                 Done describing the difference
               </button>
             </form>
-            <Answers answers={[back, dontUnderstand]} />
+            <Answers
+              onNext={onNext}
+            />
           </div>,
 
           <div>
@@ -268,12 +267,11 @@ ${doneFlashingSlower
               }
             >
               <Answers
+                onNext={onNext}
                 answers={[
                   { text: "that's even better", onClick: onNext },
                   { text: "It's almost laughable now", onClick: onNext },
                   { text: 'flash me again', onClick: this.flashSlower },
-                  back,
-                  dontUnderstand,
                 ]}
               />
             </div>
@@ -296,7 +294,7 @@ Describe the difference between the way you used to say it to yourself until now
                 Done describing the difference
               </button>
             </form>
-            <Answers answers={[back, dontUnderstand]} />
+            <Answers onNext={onNext} />
           </div>,
           <div>
             <Markdown
@@ -306,13 +304,12 @@ as you try now to think of this as you used to, what are you noticing that is di
             `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 { text: "it's ridiculous now", onClick: onNext },
                 { text: "it's much better", onClick: onNext },
                 { text: "it's exactly the same", onClick: onNext },
                 { text: "it's hummurous, almost laughable!", onClick: onNext },
-                back,
-                dontUnderstand,
               ]}
             />
           </div>,
@@ -324,6 +321,7 @@ Isn't it interesting you can learn to learn to use your brain for a change you w
             `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 <FbShareLink>
                   This is wonderful, I want more to experience this
@@ -341,7 +339,6 @@ Isn't it interesting you can learn to learn to use your brain for a change you w
                 <Link to="/i-dont-charge-i-accept/">
                   I feel much better and want to give back
                 </Link>,
-                back,
               ]}
             />
             <Markdown

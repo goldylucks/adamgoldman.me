@@ -44,8 +44,6 @@ class SomeTool extends React.Component {
       onRestart,
       onUserInputSubmit,
       onNext,
-      back,
-      dontUnderstand,
     } = this.props
     const {
       badFeeling,
@@ -68,17 +66,15 @@ and if this is first time your using any of my tools, you're probably wondering 
 `}
             />
             <Answers
+              onNext={onNext}
+              noBack
               answers={[
                 { text: "so how's this going to work?", onClick: onNext },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
           <HowItsGoingToWorkStep
             onNext={onNext}
-            dontUnderstand={dontUnderstand}
-            back={back}
           />,
           <div>
             <Markdown
@@ -94,11 +90,10 @@ and tell me...
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 { text: 'tell you what Adam?', onClick: onNext },
                 { text: "let's continue", onClick: onNext },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -214,6 +209,7 @@ and do it now
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 {
                   text:
@@ -221,8 +217,6 @@ and do it now
                   onClick: onNext,
                 },
                 { text: "Done. Let's proceed", onClick: onNext },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -237,6 +231,7 @@ and how much better do you feel now?
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 { text: 'This is amazing! No more Anxiety!', onClick: onNext },
                 { text: "Yea that's better", onClick: onNext },
@@ -244,8 +239,6 @@ and how much better do you feel now?
                   text: 'The feeling changed to something new',
                   onClick: onNext,
                 },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -268,6 +261,7 @@ u open to more and more possibilties now...
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 <FbShareLink>
                   This is beneficial and I want more to experience this
@@ -286,8 +280,6 @@ u open to more and more possibilties now...
                 <Link to="/tools/reverse-feeling-spin2">
                   I want to try the other version of the reverse spin
                 </Link>,
-                dontUnderstand,
-                back,
               ]}
             />
             <Markdown

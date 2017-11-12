@@ -7,18 +7,15 @@ import Answers from './Answers'
 
 type Props = {
   onNext: Function,
-  dontUnderstand: Object,
-  back: Object,
 };
 
-const HowItsGoingToWorkStep = ({ onNext, dontUnderstand, back }: Props) => (
+const HowItsGoingToWorkStep = ({ onNext }: Props) => (
   <div>
     <HowItsGoingToWork />
     <Answers
+      onNext={onNext}
       answers={[
         { text: "Good indeed, let's continue.", onClick: onNext },
-        dontUnderstand,
-        back,
       ]}
     />
   </div>

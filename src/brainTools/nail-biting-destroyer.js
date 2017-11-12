@@ -39,8 +39,6 @@ class NailBitingDestroyer extends React.Component {
       onGenderChange,
       onUserInputSubmit,
       onNext,
-      back,
-      dontUnderstand,
     } = this.props
     return (
       <div>
@@ -54,6 +52,8 @@ been biting your nails for too long eh?
             `}
             />
             <Answers
+              noBack
+              onNext={onNext}
               answers={[
                 { text: 'yes, yes I have', onClick: onNext },
                 { text: 'shamefuly guilty your honor!', onClick: onNext },
@@ -81,6 +81,7 @@ but this works extremely well if (and only if) you will not miss this old behavi
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 {
                   onClick: onNext,
@@ -92,8 +93,6 @@ but this works extremely well if (and only if) you will not miss this old behavi
                     global.alert('so quit wasting my time will ya?! ^_^'),
                   text: 'yes I will miss it',
                 },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -138,11 +137,10 @@ We'll use it soon.
             />
 
             <Answers
+              onNext={onNext}
               answers={[
                 { onClick: onNext, text: 'blah! me not like this image' },
                 { onClick: onNext, text: "done. let's continue" },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -164,12 +162,11 @@ know what I'm talking about?
             `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 { onClick: onNext, text: 'yes I do!' },
                 { onClick: onNext, text: 'sure this happens a lot' },
                 { onClick: onNext, text: "It's rare but I do encounter it" },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -188,14 +185,13 @@ Got it?
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 { onClick: onNext, text: 'yes, I see my evolved version' },
                 {
                   onClick: onNext,
                   text: `sure, I see myself in the image, for ${himHer} nail biting is a joke!`,
                 },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -213,6 +209,7 @@ Got it?
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 {
                   onClick: onNext,
@@ -223,8 +220,6 @@ Got it?
                   onClick: onNext,
                   text: 'yes, I see the evolved version without any context',
                 },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -240,6 +235,7 @@ Got it?
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 {
                   onClick: onNext,
@@ -247,8 +243,6 @@ Got it?
                     "Yes! I've made it brighter sharper and bigger I'm drawn to myself in that image!",
                 },
                 { onClick: onNext, text: "Yes, I've made the changes" },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -273,6 +267,7 @@ Got it?
             />
 
             <Answers
+              onNext={onNext}
               answers={[
                 {
                   onClick: onNext,
@@ -280,8 +275,6 @@ Got it?
                     'Yes, I shrinked the image of myself, made it colorless and dim, and locked it in the tiny container',
                 },
                 { onClick: onNext, text: "Got it, let's continue" },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -303,14 +296,13 @@ Got it?
           `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 {
                   onClick: onNext,
                   text: 'Yes. I placed the container in the image of my hand',
                 },
                 { onClick: onNext, text: "Got it. Let's continue" },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -354,11 +346,10 @@ Done?
           `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 { onClick: onNext, text: 'Yea this is cool!' },
                 { onClick: onNext, text: "that's interesting ..." },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -389,12 +380,11 @@ GO!
             />
 
             <Answers
+              onNext={onNext}
               answers={[
                 { onClick: onNext, text: "Wowwza that's trippy!" },
                 { onClick: onNext, text: "That's surprisingly feel good" },
                 { onClick: onNext, text: "Done it 3 times, let's continue" },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -413,11 +403,10 @@ GO!
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 { onClick: onNext, text: 'done it 7+ times, this is cool!' },
                 { onClick: onNext, text: 'done and done' },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -434,6 +423,7 @@ and if there's any trace of your old behavior.
           `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 {
                   onClick: onNext,
@@ -449,8 +439,6 @@ and if there's any trace of your old behavior.
                   text:
                     "It's much better, but I still feel compelled to bite my nails.",
                 },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -466,6 +454,7 @@ Do you want me to revert you back to your old behavior?
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 {
                   onClick: onNext,
@@ -476,8 +465,6 @@ Do you want me to revert you back to your old behavior?
                   text: "don't you dare Adam! I'll kick your ass!",
                 },
                 { onClick: onNext, text: 'lol, of course not :)' },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -509,6 +496,7 @@ Done?
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 <FbShareLink>
                   This is Great! I want more to experience this!

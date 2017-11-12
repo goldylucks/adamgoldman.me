@@ -37,8 +37,6 @@ class TraumaRelief extends React.Component {
       onRestart,
       onFeelTheSame,
       onNext,
-      back,
-      dontUnderstand,
     } = this.props
     return (
       <div>
@@ -62,9 +60,9 @@ In a moment I'll walk you thru a short process but first you're probably wonderi
 `}
             />
             <Answers
+              noBack
               answers={[
                 { text: "so how's this going to work?", onClick: onNext },
-                dontUnderstand,
               ]}
             />
             <p>
@@ -74,11 +72,7 @@ In a moment I'll walk you thru a short process but first you're probably wonderi
             </p>
           </div>,
 
-          <HowItsGoingToWorkStep
-            back={back}
-            dontUnderstand={dontUnderstand}
-            onNext={onNext}
-          />,
+          <HowItsGoingToWorkStep onNext={onNext} />,
 
           <div>
             <Markdown
@@ -147,8 +141,6 @@ Do it now, and let me know when you're done
             <Answers
               answers={[
                 { text: 'Done, ready to continue', onClick: onNext },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -177,8 +169,6 @@ Now, know the sound of fast forwarding a cartoon?
                   text: 'Fast forwarding a cartoon, of course! funny sound',
                 },
                 { onClick: onNext, text: "Yes I do, let's continue" },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -212,8 +202,6 @@ do it now, and let me know when you're done
                   onClick: onNext,
                   text: `OK. I fast forwarded the memory, and I see ${age} years old ${name} perfectly safe after the end`,
                 },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -245,8 +233,6 @@ Did you ever think of that?
                     "haven't thought of that before, it's actually quite interesting ...",
                 },
                 { onClick: onNext, text: 'yes I have' },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -286,8 +272,6 @@ Close your eyes and do it now, let me know when you're done
                 { onClick: onNext, text: 'Done and done!' },
                 { onClick: onNext, text: 'I ran the memory in reverse' },
                 { onClick: onNext, text: 'Did it, that was funky!' },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -336,8 +320,6 @@ let me know when you're done, and your at the beginning of the memory, perfectly
                 { onClick: onNext, text: 'Done and done!' },
                 { onClick: onNext, text: "It's even better with the tune!" },
                 { onClick: onNext, text: 'Did it, that was funky!' },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -362,7 +344,6 @@ Silly, I know, I just wanted to distract you from a moment before the next piece
                   onClick: onNext,
                   text: "show me the next piece, I'm ready for ...",
                 },
-                back,
               ]}
             />
           </div>,
@@ -386,8 +367,6 @@ U might be surprised to find it's not as easy anymore ;)
                   text: 'lol, I actually feel good about this wtf?!',
                 },
                 { onClick: onFeelTheSame, text: 'I feel exactly like before' },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -429,8 +408,6 @@ Describe that feeling as vividly as you can
                   This is great, must inform the others!
                 </FbShareLink>,
                 { onClick: onNext, text: "Let's continue!" },
-                dontUnderstand,
-                back,
               ]}
             />
           </div>,
@@ -458,7 +435,6 @@ or you want to do it again on another memory first?
                 <Link to="/i-dont-charge-i-accept/">
                   This is great and I want to give back
                 </Link>,
-                back,
               ]}
             />
             <Markdown

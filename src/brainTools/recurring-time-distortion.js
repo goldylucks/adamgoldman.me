@@ -28,8 +28,6 @@ class RecurringTimeDistortion extends React.Component {
       onGoToStep,
       onUserInputSubmit,
       onNext,
-      back,
-      dontUnderstand,
     } = this.props
     return (
       <div>
@@ -50,16 +48,15 @@ Now before we get you into some whacky states, you might wonder ...
 `}
             />
             <Answers
+              noBack
+              onNext={onNext}
               answers={[
                 { text: 'how is it going to work?', onClick: onNext },
-                dontUnderstand,
               ]}
             />
           </div>,
           <HowItsGoingToWorkStep
             onNext={onNext}
-            dontUnderstand={dontUnderstand}
-            back={back}
           />,
           <div>
             <Markdown
@@ -77,7 +74,7 @@ going to the bank, dealing with a certain person, etc
               />
               <button className="button">Done choosing category</button>
             </form>
-            <Answers answers={[back, dontUnderstand]} />
+            <Answers onNext={onNext} />
           </div>,
           <div>
             <Markdown
@@ -94,7 +91,7 @@ Pick aspecific example or a future scenario of that recurring situation (i.e. a 
               />
               <button className="button">Done choosing example</button>
             </form>
-            <Answers answers={[back, dontUnderstand]} />
+            <Answers onNext={onNext} />
           </div>,
           <div>
             <Markdown
@@ -102,13 +99,12 @@ Pick aspecific example or a future scenario of that recurring situation (i.e. a 
               source="run that scenario in your mind in normal time, just as you usually think about it"
             />
             <Answers
+              onNext={onNext}
               answers={[
                 {
                   text: "I ran the scenario in normal time, what's next?",
                   onClick: onNext,
                 },
-                back,
-                dontUnderstand,
               ]}
             />
           </div>,
@@ -129,7 +125,7 @@ and how intense is the feeling?
               />
               <button className="button">Done describing normal time</button>
             </form>
-            <Answers answers={[back, dontUnderstand]} />
+            <Answers onNext={onNext} />
           </div>,
           <div>
             <Markdown
@@ -145,13 +141,12 @@ i.e. every one in the bank will talk and move twice as fast as u
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 {
                   text: "I ran the scenario in fast time, what's next?",
                   onClick: onNext,
                 },
-                back,
-                dontUnderstand,
               ]}
             />
           </div>,
@@ -172,7 +167,7 @@ and how intense is the feeling?
               />
               <button className="button">Done describing fast time</button>
             </form>
-            <Answers answers={[back, dontUnderstand]} />
+            <Answers onNext={onNext} />
           </div>,
           <div>
             <Markdown
@@ -188,13 +183,12 @@ and go through the scenario in slow time
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 {
                   text: "I ran the scenario in slow time, what's next?",
                   onClick: onNext,
                 },
-                back,
-                dontUnderstand,
               ]}
             />
           </div>,
@@ -215,7 +209,7 @@ and how intense is the feeling?
               />
               <button className="button">Done describing slow time</button>
             </form>
-            <Answers answers={[back, dontUnderstand]} />
+            <Answers onNext={onNext} />
           </div>,
           <div>
             <Markdown
@@ -244,6 +238,7 @@ for me it changed from negative to "c'mon out with it! let's get it over with!" 
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 {
                   text:
@@ -260,8 +255,6 @@ for me it changed from negative to "c'mon out with it! let's get it over with!" 
                 <Link to="/i-dont-charge-i-accept/">
                   This is great, I want to give back!
                 </Link>,
-                back,
-                dontUnderstand,
               ]}
             />
           </div>,
@@ -284,6 +277,7 @@ When your ready, repeat the process, and replace "trouble" with "pleasurable" as
 `}
             />
             <Answers
+              onNext={onNext}
               answers={[
                 {
                   text: "okay let's intensify some good feelings!",

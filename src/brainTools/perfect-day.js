@@ -34,8 +34,6 @@ class PerfectDay extends React.Component {
       renderStep,
       onUserInputSubmit,
       onNext,
-      back,
-      dontUnderstand,
     } = this.props
 
     const { firstDescription, secondDescription } = this.state
@@ -84,6 +82,7 @@ Now let's begin.
 `}
             />
             <Answers
+              noBack
               answers={[
                 { text: "Let's do this!", onClick: onNext },
                 {
@@ -91,7 +90,6 @@ Now let's begin.
                   onClick: onNext,
                 },
                 { text: "so what's the first step Adam?", onClick: onNext },
-                dontUnderstand,
               ]}
             />
           </div>,
@@ -127,7 +125,7 @@ Now that we are still friends, start spilling!
                 I&apos;m done puking on the screen
               </button>
             </form>
-            <Answers answers={[dontUnderstand, back]} />
+            <Answers onNext={onNext} />
           </div>,
           <div>
             <div className="tool-text">
@@ -166,7 +164,7 @@ Now read what u've written, and notice if anything else comes to your mind ...
                 Done adding to my perfect day
               </button>
             </form>
-            <Answers answers={[dontUnderstand, back]} />
+            <Answers onNext={onNext} />
           </div>,
           <div>
             <Markdown
@@ -189,7 +187,7 @@ Now read everything that you have written, and construct your ideal day, chronol
                 Done describing chronologically
               </button>
             </form>
-            <Answers answers={[dontUnderstand, back]} />
+            <Answers onNext={onNext} />
           </div>,
           <div>
             <Markdown
