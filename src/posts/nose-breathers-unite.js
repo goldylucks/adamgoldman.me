@@ -18,6 +18,6 @@ We are all here to shine lights on each others' dark spots. This is another one 
 
 As you watch this, notice any internal resistance that pops up, and make a note about that. Enjoy the following 11 minutes and [let me know what you think](/lets-talks/).
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wgwxn9mRpAY?modestbranding=1&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
+[wgwxn9mRpAY](YtEmbedd)
 `,
 }

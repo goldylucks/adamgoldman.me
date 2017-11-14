@@ -20,7 +20,7 @@ export default {
 
 ## What I've learned video
 I just LOVE this guy presents hard-to-digest information in such an elegant friendly way. I've watched all [his videos](https://www.youtube.com/channel/UCqYPhGiB9tkShZorfgcL2lA), multiple times.
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PKfR6bAXr-c?modestbranding=1&rel=0" frameborder="0" allowfullscreen></iframe>
+[PKfR6bAXr-c](YtEmbedd)
 
 ---
 
@@ -65,6 +65,6 @@ To be continued ...
 
 ## Controversial vegan dead lift champion
 Meet Dr. Amen-ra, 2011 [dead lift champion](https://www.youtube.com/watch?v=gpj00GoS3S0) that's been eating veggies and nuts only at nights for 20+ years with his wife, and is just a "bit" unconventional fellow ...
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dR1FCJS8DoM?modestbranding=1&rel=0" frameborder="0" allowfullscreen></iframe>
+[dR1FCJS8DoM](YtEmbedd)
 `,
 }

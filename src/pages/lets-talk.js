@@ -6,7 +6,7 @@ export default {
   body: `
 What can I do you for my friend?
 
-<iframe style="margin: 60px auto; display: block;" width="560" height="315" src="https://www.youtube.com/embed/Iv8VWQlUq90?modestbranding=1&rel=0" frameborder="0" allowfullscreen></iframe>
+[Iv8VWQlUq90](YtEmbedd)
 
 [Messege](FB_MESSAGE), [email](EMAIL), or contact me through the form below.
 

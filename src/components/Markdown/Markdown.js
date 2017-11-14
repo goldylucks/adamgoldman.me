@@ -5,12 +5,16 @@ import { MESSENGER_LINK } from '../../constants'
 import FbShareLink from '../FbShareLink'
 import Link from '../Link'
 import FbReview from '../FbReview'
+import YtEmbedd from '../YtEmbedd'
 
 const Markdown = props => (
   <ReactMarkdown
     {...props}
     renderers={{
           Link: (linkProps) => {
+            if (linkProps.href === 'YtEmbedd') {
+              return <YtEmbedd src={linkProps.children} />
+            }
             if (linkProps.href === 'iframe') {
               return <FbReview review={linkProps.children} />
             }

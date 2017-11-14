@@ -10,7 +10,7 @@ Even tho the first one caught him way off guard (in a very social setting), it's
 ---
 
 ## Barry on the Balancing Act
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0pwqnCRNHYA?modestbranding=1&rel=0&end=345&autoplay=1" frameborder="0" allowfullscreen></iframe>
+[0pwqnCRNHYA](YtEmbedd)
 
 - 0:36 - Your first panic attack
 - 0:56 - **The common mistake we all do which make it worse**
@@ -34,7 +34,7 @@ He seems like a simple man to me, but that does not stop him from [helping thous
 
 
 ## Barry on Dare People
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3BHZ630ooRQ?modestbranding=1&rel=0" frameborder="0" allowfullscreen></iframe>
+[3BHZ630ooRQ](YtEmbedd)
 
 - 0:11 - **"Nerve" - Your life's movie**
 - 0:45 - Barry's life movie (I had no idea he's so popular among viewers...)
@@ -52,7 +52,7 @@ He [shares some gold nuggets](http://ead105p3zfv8jv0ooem2hmqwb2.hop.clickbank.ne
 ---
 
 ## A doctor who actually "gets" it
-<iframe width="560" height="315" src="https://www.youtube.com/embed/g_mFzOudxng?modestbranding=1&rel=0&stop=610" frameborder="0" allowfullscreen></iframe>
+[g_mFzOudxng](YtEmbedd)
 
 - 0:55 - What you are going through (**share with loved ones who don't get it** and give meaningless tips)
 - 2:24 - The "secret" - **uncomfortable, NOT dangerous. Write it down!**
@@ -70,7 +70,7 @@ This is the opposite of what therapists told him (and me), and he went the oppos
 ---
 
 ## Panic away with 4 steps
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0P8f4ExY3vs?modestbranding=1&rel=0" frameborder="0" allowfullscreen></iframe>
+[0P8f4ExY3vs](YtEmbedd)
 
 - 0:33 - Observe
 - 1:06 - **Embrace**
@@ -80,7 +80,7 @@ This is the opposite of what therapists told him (and me), and he went the oppos
 ---
 
 ## Supermarket - Her first panic attack
-<iframe width="560" height="315" src="https://www.youtube.com/embed/32K-rEIbBgE" frameborder="0" allowfullscreen></iframe>
+[32K-rEIbBgE](YtEmbedd)
 
 - 0:20 - **First symptoms**
 - 1:20 - *"something awful is about to happen"*

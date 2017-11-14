@@ -212,7 +212,7 @@ do it now, and let me know when you're done
               source={`
 Now, as you see ${age} years old ${name} in the small still picture far far away, perfectly safe, after the end, did you ever think what does a war movie turns into, when you run it in reverse?
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/diihWjg0lAM?rel=0&amp;controls=0&amp;showinfo=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+[diihWjg0lAM](YtEmbedd)
 
 I just heard it in a seminar the other day, and it made perfect sense to me.
 
@@ -289,7 +289,7 @@ I want you to do the same thing, but this time add a nice / funny tune in your m
 
 For most people circus theme song works magic:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1D5Sa2Yq-2g?rel=0&amp;controls=0&amp;showinfo=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+[1D5Sa2Yq-2g](YtEmbedd)
 
 U can use ANYTHING you want that makes you laugh, feel silly, powerful, curious, whatever it is.
 
@@ -297,7 +297,7 @@ Some people like to hear a certain comedian. For others a certain song make them
 
 And of course there's always laughter :)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/yLmd0100T9g?rel=0&amp;controls=0&amp;showinfo=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+[yLmd0100T9g](YtEmbedd)
 
 Pick one that makes you feel the best now and do it again like so:
 

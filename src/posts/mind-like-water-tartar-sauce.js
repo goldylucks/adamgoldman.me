@@ -5,7 +5,7 @@ export default {
   body: `
 **U know how** sometimes you walk somewhere and **your mind yacks on and on** *"I gotta tell my boss about the missing deadline and Nicholas about the party and **don't forget the tarter sauce** and ..."*?
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Swt3d5Xntog?modestbranding=1&rel=0&start=14" frameborder="0" allowfullscreen></iframe>
+[Swt3d5Xntog](YtEmbedd)
 
 **Well I don't**.
 
@@ -75,6 +75,6 @@ The fastest way to transition yourself to a mind like water state is with [perso
 Most importantly, don't **forget the tartar sauce**!
 `,
   ps: `
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kOSFxKaqOm4?modestbranding=1&rel=0&start=15" frameborder="0" allowfullscreen></iframe>
+[kOSFxKaqOm4](YtEmbedd)
 `,
 }

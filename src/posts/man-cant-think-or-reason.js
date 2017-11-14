@@ -3,9 +3,9 @@ export default {
   tags: [],
   nick: 'non thinker',
   body: `
-that applies to you2 ladies, even tho some argue your closer ;)
+that applies to you to ladies, even tho some argue you're closer ;)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/p-CyFOQqf3s?autoplay=1&modestbranding=1&rel=0" frameborder="0" allowfullscreen></iframe>
+[p-CyFOQqf3s](YtEmbedd)
 
 I've seen that talk and processed it every time at a different level. It's one of those multi-layered communication examples which I enjoy so much.
 

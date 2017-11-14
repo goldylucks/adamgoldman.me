@@ -13,7 +13,7 @@ A curated list of "common knowledge" that "everybody knows" to be true :)
 ---
 
 ### General Misconceptions
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SCzXZfNIu3A?modestbranding=1&rel=0" frameborder="0" allowfullscreen></iframe>
+[SCzXZfNIu3A](YtEmbedd)
 
 **10**. Seeing the great wall of china from space  
 **09**. Cracking knuckles & arthritis  
@@ -29,7 +29,7 @@ A curated list of "common knowledge" that "everybody knows" to be true :)
 ---
 
 ### Historical Misconceptions
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sYzfKiIWN4g?modestbranding=1&rel=0" frameborder="0" allowfullscreen></iframe>
+[sYzfKiIWN4g](YtEmbedd)
 
 **05**. Vikings helmet  
 **04**. Lady Godiva naked ride  
@@ -40,7 +40,7 @@ A curated list of "common knowledge" that "everybody knows" to be true :)
 ---
 
 ### Animal Misconceptions
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F9-iSl_eg5U?modestbranding=1&rel=0" frameborder="0" allowfullscreen></iframe>
+[F9-iSl_eg5U](YtEmbedd)
 
 **08**. [Lemmings](TITLE_not_the_video_game_:\\))  
 **07**. Daddy long legs "spiders"  
@@ -64,7 +64,7 @@ Be different.
 
 Most importantly, don't be a redgreen grumble ...
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/WE8_QbvtSjQ?start=7&modestbranding=1&rel=0" frameborder="0" allowfullscreen></iframe>
+[WE8_QbvtSjQ](YtEmbedd)
 `,
   ps: `
 **PS**. Add your discoveries in the comments below and I'll [add them to this post](TITLE_crediting_you_of_course!) :)

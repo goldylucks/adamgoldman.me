@@ -63,7 +63,8 @@ Here's the gist of it:
   - Practicing learning faster and deeper can drain you at times.
   - Memory/power naps can help, up to 26 minutes (otherwise we get into deep sleep)
 - **State based learning**
-<iframe width="560" height="315" src="https://www.youtube.com/embed/oYgN-m8Q5yE?modestbranding=1&rel=0" frameborder="0" allowfullscreen></iframe>
+[oYgN-m8Q5yE](YtEmbedd)
+
   - If u'll have a test in a noisy place, study in a noisy enviornment
   
 - [Coffee](/blog/coffee/) is okay!
