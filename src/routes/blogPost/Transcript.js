@@ -34,7 +34,7 @@ class Transcript extends React.Component {
     fbReview: '',
     diagnosis: '',
     fbProfile: '',
-    isBodyRtl: '',
+    isBodyRtl: false,
     ps: '',
   }
 
