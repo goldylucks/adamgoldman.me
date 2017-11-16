@@ -62,7 +62,7 @@ In a moment I'll walk you thru a short process but first you're probably wonderi
             <Answers
               noBack
               answers={[
-                { text: "so how's this going to work?", onClick: onNext },
+                { text: "so how's this going to work Adam?", onClick: onNext },
               ]}
             />
             <p>
@@ -178,7 +178,6 @@ Now, know the sound of fast forwarding a cartoon?
               className="tool-text"
               source={`
 Great, so here's what I want you to do:
-
 
 1. see ${age} years old ${name}, in a small screen far far away, frozen in time, at the beginning of the memory, before anything had happened, perfectly safe
 
@@ -312,7 +311,7 @@ Pick one that makes you feel the best now and do it again like so:
 
 <br />
 
-let me know when you're done, and your at the beginning of the memory, perfectly safe
+let me know when you're done, and you're at the beginning of the memory, perfectly safe
 `}
             />
             <Answers
@@ -375,7 +374,7 @@ U might be surprised to find it's not as easy anymore ;)
             <Markdown
               className="tool-text"
               source={`
-and how good do you feel now, as you learn, that you can learn to feel better and better about what it is that used to affect in a way you no longer wish?
+and how good do you feel now, as you learn, that you can learn to feel better and better about what it is that used to affect you in a way you no longer wish?
 
 1-10, how good do you feel now?
 
