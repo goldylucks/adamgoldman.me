@@ -141,7 +141,7 @@ ${he.taase(gender)} את זה עכשיו, ותגיד לי כשסיימת.
 1. ${he.tire(gender)} את ${inputs.name} ${he.ben(gender)} ${inputs.ageInMemory}, במסך קטן רחוק רחוק, קפוא בזמן, בהתחלת הזכרון, לפני שמשהו קרה, ${he.batuaj(gender)} לחלוטין
 2.  ${he.taase(gender)} את התמונה שחור לבן, קצת לא בפוקוס, ו${he.torid(gender)} את הרזולוציה
 3. תשתיק את הקול
-4.  ${he.tarits(gender)} קדימה את הסרט הכי מהר ש${he.ata(gender)}  ${he.yajol(gender)} כל הדרך עד אחרי שהכל נגמר, ו${he.ata(gender)} רואה את ${inputs.name} ${he.ben(gender)} ${inputs.age} ברגע הנייטרלי או החיובי הבא
+4.  ${he.tarits(gender)} קדימה את הסרט הכי מהר ש${he.ata(gender)}  ${he.yajol(gender)} כל הדרך עד אחרי שהכל נגמר, ו${he.ata(gender)} רואה את ${inputs.name} ${he.ben(gender)} ${inputs.ageInMemory} ברגע הנייטרלי או החיובי הבא
 5. כמו סרט מצוייר,  ${he.tishma(gender)} את הכל רץ קדימה מאוד מהר
 
 ${he.taase(gender)} את זה עכשיו, ו${he.teiadea(gender)} אותי כש${he.ata(gender)}  ${he.mesayem(gender)}
@@ -149,7 +149,7 @@ ${he.taase(gender)} את זה עכשיו, ו${he.teiadea(gender)} אותי כש$
 `,
     answers: ({ gender, inputs }) => [
       { text: 'סיימתי, בוא נמשיך' },
-      { text: `אוקיי. הרצתי את הזכרון קדימה, ואני רואה את ${inputs.name} ${he.ben(gender)} ${inputs.age} ${he.batuaj(gender)} לחלוטין אחרי הסוף` },
+      { text: `אוקיי. הרצתי את הזכרון קדימה, ואני רואה את ${inputs.name} ${he.ben(gender)} ${inputs.ageInMemory} ${he.batuaj(gender)} לחלוטין אחרי הסוף` },
     ],
   },
 
