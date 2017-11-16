@@ -43,8 +43,16 @@ h1 {
   margin-top: 20px;
 }
 
-ul {
+ul,
+ol {
+  margin-bottom: 19px;
   margin-left: 20px;
+}
+
+.rtl ol,
+.rtl ul {
+  margin-left: 0;
+  margin-right: 20px;
 }
 
 .rtl {
@@ -155,6 +163,12 @@ ul {
   font-size: 24px;
   padding-right: 15px;
   padding-left: 15px;
+}
+
+.input.rtl ,
+.textarea.rtl ,
+.select.rtl {
+  text-align: right !important;
 }
 
 .textarea {
