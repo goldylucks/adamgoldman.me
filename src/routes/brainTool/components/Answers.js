@@ -7,15 +7,16 @@ type Props = {
   onNext: Function,
   goToStepByTitle: Function,
   noBack: boolean,
+  isRtl: boolean,
   that: any,
 };
 
 const Answers = ({
-  answers, onNext, goToStepByTitle, that, noBack,
+  answers, onNext, goToStepByTitle, that, noBack, isRtl,
 }:
 Props) => (
   <div>
-    {answers.map((answer, idx) => {
+    {answers && answers.map((answer, idx) => {
       let html
       // if react component
       if (!answer.text) {
@@ -33,24 +34,24 @@ Props) => (
       }
 
       return (
-        <div key={idx} className="tool-answer">
+        <div key={idx} className={`tool-answer ${!isRtl ? '' : 'rtl'}`}>
           - {html}
         </div>
       )
     })}
 
     {!noBack && (
-      <div className="tool-answer">
-        - <a onClick={() => onNext(-1)}>Back</a>
+      <div className={`tool-answer ${!isRtl ? '' : 'rtl'}`}>
+        - <a onClick={() => onNext(-1)}>{!isRtl ? 'Back' : 'אחורה'}</a>
       </div>
     )}
-    <div className="tool-answer">
+    <div className={`tool-answer ${!isRtl ? '' : 'rtl'}`}>
       -{' '}
       <a
         onClick={() =>
-          global.alert("follow the steps as best you can now, and contact me when you're done")}
+          global.alert(!isRtl ? "follow the steps as best you can now, and contact me when you're done" : 'תעקוב אחר הצעדים הכי טוב שאתה יכול עכשיו, וצור איתי קשר כשאתה מסיים')}
       >
-        I dont Understand
+        {!isRtl ? 'I dont understand' : 'אני לא מבין'}
       </a>
     </div>
   </div>

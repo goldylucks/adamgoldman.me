@@ -1,0 +1,48 @@
+/* eslint-disable no-confusing-arrow */
+
+// TODO :: add state to placehodlers
+
+const g = (male, female) => gender => gender === 'male' ? male : female
+
+export default {
+  alul: g('עלול', 'עלולה'),
+  ajerim: g('אחרים', 'אחרות'),
+  ata: g('אתה', 'את'),
+  batuaj: g('בטוח', 'בטוחה'),
+  ben: g('בן', 'בת'),
+  bojer: g('בוחר', 'בוחרת'),
+  lomed: g('לומד', 'לומדת'),
+  maadif: g('מעדיף', 'מעדיפה'),
+  makir: g('מכיר', 'מכירה'),
+  margish: g('מרגיש', 'מרגישה'),
+  margishim: g('מרגישים', 'מרגישות'),
+  mashir: g('משאיר', 'משאירה'),
+  meritz: g('מריץ', 'מריצה'),
+  mesayem: g('מסיים', 'מסיימת'),
+  mufta: g('מופתע', 'מופתעת'),
+  ohavim: g('אוהבים', 'אוהבות'),
+  sam: g('שם', 'שמה'),
+  shomea: g('שומע', 'שומעת'),
+  shomim: g('שומעים', 'שומעות'),
+  sim: g('שים', 'שימי'),
+  taatsom: g('תעצום', 'תעצמי'),
+  taase: g('תעשה', 'תעשי'),
+  taer: g('תאר', 'תארי'),
+  tagid: g('תגיד', 'תגידי'),
+  tajshov: g('תחשוב', 'תחשבי'),
+  takpi: g('תקפיא', 'תקפיאי'),
+  tarits: g('תריץ', 'תריצי'),
+  tatjil: g('תתחיל', 'תתחילי'),
+  teiadea: g('תיידע', 'תיידעי'),
+  tenase: g('תנסה', 'תנסי'),
+  tikanes: g('תיכנס', 'תיכנסי'),
+  tire: g('תראה', 'תראי'),
+  tishma: g('תשמע', 'תשמעי'),
+  tomar: g('תאמר', 'תאמרי'),
+  tosif: g('תוסיף', 'תוסיפי'),
+  tivjar: g('תבחר', 'תבחרי'),
+  torid: g('תוריד', 'תורידי'),
+  yajol: g('יכול', 'יכולה'),
+  yodea: g('יודע', 'יודעת'),
+  // : g('', ''),
+}

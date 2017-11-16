@@ -1,20 +1,21 @@
-// @flow
-
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import Markdown from '../../../components/Markdown'
 import { scrollToElem } from '../../../utils'
 
 import Answers from './Answers'
 
-type Props = {
-  initialState?: Object,
-  steps: Array<any>,
-}
-
 class Steps extends React.Component {
+  static propTypes = {
+    initialState: PropTypes.object,
+    steps: PropTypes.array.isRequired,
+    isRtl: PropTypes.boolean,
+  }
+
   static defaultProps = {
     initialState: {},
+    isRtl: false,
   };
 
   state = {
@@ -22,8 +23,6 @@ class Steps extends React.Component {
     currentStep: 0,
     inputs: {},
   };
-
-  props: Props
 
   back = n =>
     this.goToStep(this.state.currentStep - (typeof n === 'number' ? n : 1));
@@ -43,7 +42,7 @@ class Steps extends React.Component {
     })
   };
 
-  registerInput = id => (evt) => {
+  inputsChange = id => (evt) => {
     this.setState({
       inputs: Object.assign({}, this.state.inputs, {
         [id]: evt.target.value,
@@ -51,27 +50,20 @@ class Steps extends React.Component {
     })
   };
 
-  replaceVars = (description) => {
-    if (Object.keys(this.state.inputs).length === 0) {
-      return description
-    }
-    const reg = new RegExp(
-      Object.keys(this.state.inputs)
-        .map(id => `\\b${id}\\b`)
-        .join('|'),
-      'g',
-    )
-    return description.replace(reg, match => this.state.inputs[match])
-  };
+  resetInputs = (...inputsToReset) => {
+    const nextInputs = { ...this.state.inputs }
+    inputsToReset.forEach(input => delete nextInputs[input])
+    this.setState({ inputs: nextInputs })
+  }
 
   render() {
-    const { steps } = this.props
+    const { steps, isRtl } = this.props
     const { currentStep } = this.state
 
     return (
       <div>
-        <h3 style={{ marginBottom: 60 }}>
-          Step {currentStep}/{steps.length - 1}
+        <h3 style={{ marginBottom: 60 }} className={isRtl && 'rtl'}>
+          {!isRtl ? 'Step' : 'צעד'} {currentStep}/{steps.length - 1}
         </h3>
         {steps.map((step, idx) => (
           <div
@@ -81,6 +73,7 @@ class Steps extends React.Component {
             }
           >
             <Markdown
+              className={isRtl && 'rtl'}
               source={`
 ${!step.title ? '' : `## ${step.title}`}
 
@@ -101,23 +94,31 @@ ${step.description(this.state)}
               >
                 <input
                   value={this.state.inputs[step.input.id]}
-                  onChange={this.registerInput(step.input.id)}
-                  className="input"
-                  placeholder={step.input.placeholder}
+                  onChange={this.inputsChange(step.input.id)}
+                  className={`input ${!isRtl ? '' : 'rtl'}`}
+                  placeholder={typeof step.input.placeholder === 'function' ? step.input.placeholder(this.state) : step.input.placeholder}
                   required
                 />
-                <button className="button">Let&apos; continue</button>
+                <button className="button">{!isRtl ? 'Let\'s continue' : 'בוא נמשיך'}</button>
               </form>
             )}
             <Answers
               that={this}
+              isRtl={isRtl}
               goToStepByTitle={this.goToStepByTitle}
-              answers={step.answers}
+              answers={
+                typeof step.answers === 'function'
+                  ? step.answers(this.state, {
+                    goToStepByTitle: this.goToStepByTitle,
+                    resetInputs: this.resetInputs,
+                  })
+                  : step.answers
+              }
               onNext={this.next}
               noBack={idx === 0}
             />
             {step.postAnswer && (
-              <Markdown source={step.postAnswer} className="tool-source" />
+              <Markdown source={step.postAnswer} className={`tool-source ${!isRtl ? '' : 'rtl'}`} />
             )}
           </div>
         ))}

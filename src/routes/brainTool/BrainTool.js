@@ -57,7 +57,7 @@ class BrainToolPage extends React.Component {
             />
             <FbShareButton />
           </div>
-          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', direction: tool.isRtl ? 'rtl' : 'ltr' }}>
             <h1 className="main-title">{tool.title}</h1>
             {tool.mockState && (
               <a

@@ -15,6 +15,7 @@ const dirToReadPath = path.resolve(__dirname, '..', 'src', 'brainTools')
 // tools by rendering order
 const fileToWrite = [
   'smoking-destroyer',
+  'trauma-relief-he',
   'feel-good-generator',
   'grief-to-appreciation',
   'nail-biting-destroyer',
