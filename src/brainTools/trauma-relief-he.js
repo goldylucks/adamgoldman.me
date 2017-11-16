@@ -4,6 +4,7 @@ import Link from '../components/Link'
 import FbShareLink from '../components/FbShareLink'
 import he from '../he'
 
+export const tags = ['טראומה']
 export const title = 'שחרור מטראומה'
 export const nick = 'מלחמה ברוורס זה שלום'
 // eslint-disable-next-line prettier/prettier
