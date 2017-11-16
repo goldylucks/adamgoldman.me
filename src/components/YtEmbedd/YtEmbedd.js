@@ -14,7 +14,7 @@ const YtEmbedd = ({ src }: Props) => (
     height="340"
     src={`https://www.youtube.com/embed/${src}?modestbranding=1&rel=0`}
     frameBorder="0"
-    allowFullscreen
+    allowFullScreen
   />
 )
 
