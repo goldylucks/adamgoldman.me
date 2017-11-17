@@ -8,6 +8,8 @@ export const nick = 'whole'
 // eslint-disable-next-line prettier/prettier
 export const description = 'A PRACTICAL step by step tool for non "enlightment"'
 
+export const credits = 'Source: I\'ve adapted this [tool](/tools/) from Connirae\'s [Wholeness Process](http://andreasnlptrainings.com/wholeness/).'
+
 const confirmDecline = (that) => {
   const nextInputs = { ...that.state.inputs }
   nextInputs.iLocation = ''
@@ -650,8 +652,5 @@ or you want to do it again on another issue / experience first?
         onClick: 'onShareWithAdam',
       },
     ],
-    postAnswer: `
-Source: I've adapted this [tool](/tools/) from Connirae's [Wholeness Process](http://andreasnlptrainings.com/wholeness/).
-`,
   },
 ]
