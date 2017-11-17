@@ -85,9 +85,6 @@ ${step.description(this.state)}
               onNext={this.next}
               noBack={idx === 0}
             />
-            {step.postAnswer && (
-              <Markdown source={step.postAnswer} className={`tool-source ${!isRtl ? '' : 'rtl'}`} />
-            )}
           </div>
         ))}
       </div>

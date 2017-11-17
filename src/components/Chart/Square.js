@@ -101,7 +101,6 @@ class Square extends React.Component {
       idx,
       ...rest
     } = this.props
-    delete rest.postAnswer
     return (
       <div
         key={title}
