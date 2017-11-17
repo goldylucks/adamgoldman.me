@@ -40,55 +40,74 @@ class Steps extends React.Component {
               idx === currentStep ? { display: 'block' } : { display: 'none' }
             }
           >
-            <Markdown
-              className={isRtl && 'rtl'}
-              source={`
+            {this.renderContent(step)}
+            {this.renderInput(step.input)}
+            {this.renderAnswers(step.answers, idx)}
+          </div>
+        ))}
+      </div>
+    )
+  }
+
+  renderContent(step) {
+    return (
+      <Markdown
+        className={this.props.isRtl && 'rtl'}
+        source={`
 ${!step.title ? '' : `## ${step.title}`}
 
 ${step.description(this.state)}
 `}
-            />
-            {step.input && (
-              <form
-                onSubmit={(evt) => {
-                  evt.preventDefault()
-                  if (step.input.onSubmit) {
-                    step.input.onSubmit(this)
-                    return
-                  }
-                  this.next()
-                }}
-                className="tool-form"
-              >
-                <input
-                  value={this.state.inputs[step.input.id]}
-                  onChange={this.inputsChange(step.input.id)}
-                  className={`input ${!isRtl ? '' : 'rtl'}`}
-                  placeholder={typeof step.input.placeholder === 'function' ? step.input.placeholder(this.state) : step.input.placeholder}
-                  required
-                />
-                <button className="button">{!isRtl ? 'Let\'s continue' : 'בוא נמשיך'}</button>
-              </form>
-            )}
-            <Answers
-              that={this}
-              gender={this.state.gender}
-              isRtl={isRtl}
-              goToStepByTitle={this.goToStepByTitle}
-              answers={
-                typeof step.answers === 'function'
-                  ? step.answers(this.state, {
-                    goToStepByTitle: this.goToStepByTitle,
-                    resetInputs: this.resetInputs,
-                  })
-                  : step.answers
-              }
-              onNext={this.next}
-              noBack={idx === 0}
-            />
-          </div>
-        ))}
-      </div>
+      />
+    )
+  }
+
+  renderInput(input) {
+    if (!input) {
+      return null
+    }
+    return (
+      <form
+        onSubmit={(evt) => {
+          evt.preventDefault()
+          if (input.onSubmit) {
+            input.onSubmit(this)
+            return
+          }
+          this.next()
+        }}
+        className="tool-form"
+      >
+        <input
+          value={this.state.inputs[input.id]}
+          onChange={this.inputsChange(input.id)}
+          className={`input ${!this.props.isRtl ? '' : 'rtl'}`}
+          placeholder={typeof input.placeholder === 'function' ? input.placeholder(this.state) : input.placeholder}
+          required
+        />
+        <button className="button">{!this.props.isRtl ? 'Let\'s continue' : 'בוא נמשיך'}</button>
+      </form>
+    )
+  }
+
+  renderAnswers(answers, idx) {
+    return (
+      <Answers
+        that={this}
+        gender={this.state.gender}
+        isRtl={this.props.isRtl}
+        goToStepByTitle={this.goToStepByTitle}
+        answers={
+          typeof answers === 'function'
+            ? answers(this.state, {
+              goToStepByTitle: this.goToStepByTitle,
+              resetInputs: this.resetInputs,
+            })
+            : answers
+        }
+        onNext={this.next}
+        noBack={idx === 0}
+      />
     )
   }
 
