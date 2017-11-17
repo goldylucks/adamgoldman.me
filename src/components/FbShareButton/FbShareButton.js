@@ -28,33 +28,7 @@ class FbShareButton extends React.Component {
     clearTimeout(this.timeoutFbRender)
   }
 
-  elem = null;
-  timeoutFb = null;
-  timeoutFbRender = null;
-
   props: Props;
-
-  urlToShare() {
-    return this.props.urlProp ? DOMAIN + this.props.urlProp : this.state.href
-  }
-
-  encodedUrlToShare() {
-    return encodeURIComponent(this.urlToShare())
-  }
-
-  reloadFB = () => {
-    if (!global.FB) {
-      this.timeoutFb = setTimeout(this.reloadFB, 500)
-      return
-    }
-    this.setState({ href: window.location.href }, () => {
-      global.FB.XFBML.parse(this.elem, () => {
-        this.timeoutFbRender = setTimeout(() => {
-          this.setState({ rendered: true })
-        }, 1000)
-      })
-    })
-  };
 
   render() {
     const { ...restProps } = this.props
@@ -79,6 +53,32 @@ class FbShareButton extends React.Component {
         </div>
       </div>
     )
+  }
+
+  elem = null;
+  timeoutFb = null;
+  timeoutFbRender = null;
+
+  urlToShare() {
+    return this.props.urlProp ? DOMAIN + this.props.urlProp : this.state.href
+  }
+
+  encodedUrlToShare() {
+    return encodeURIComponent(this.urlToShare())
+  }
+
+  reloadFB = () => {
+    if (!global.FB) {
+      this.timeoutFb = setTimeout(this.reloadFB, 500)
+      return
+    }
+    this.setState({ href: window.location.href }, () => {
+      global.FB.XFBML.parse(this.elem, () => {
+        this.timeoutFbRender = setTimeout(() => {
+          this.setState({ rendered: true })
+        }, 1000)
+      })
+    })
   }
 }
 

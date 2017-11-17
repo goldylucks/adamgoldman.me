@@ -27,12 +27,6 @@ class StopWarning extends React.Component {
     this.setState({ hide: false })
   }
 
-  dismiss = () => {
-    localStorage.setItem(`hideWarning${this.props.id}`, true)
-    this.setState({ hide: true })
-    this.props.onDismiss()
-  };
-
   render() {
     if (this.state.hide) {
       return null
@@ -69,6 +63,12 @@ class StopWarning extends React.Component {
       </article>
     )
   }
+
+  dismiss = () => {
+    localStorage.setItem(`hideWarning${this.props.id}`, true)
+    this.setState({ hide: true })
+    this.props.onDismiss()
+  };
 }
 
 export default StopWarning

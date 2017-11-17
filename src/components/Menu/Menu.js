@@ -24,16 +24,6 @@ class Menu extends React.Component {
     this.setState({ isMounted: true }) // eslint-disable-line react/no-did-mount-set-state
   }
 
-  toggle = () => this.setState({ isOpen: !this.state.isOpen });
-
-  close = () => this.setState({ isOpen: false });
-
-  activeClass(to) {
-    return this.state.isMounted && window.location.pathname.split('/')[1] === to
-      ? { className: 'active' }
-      : {}
-  }
-
   render() {
     return (
       <ClickOutside
@@ -71,6 +61,16 @@ class Menu extends React.Component {
         </nav>
       </ClickOutside>
     )
+  }
+
+  toggle = () => this.setState({ isOpen: !this.state.isOpen });
+
+  close = () => this.setState({ isOpen: false });
+
+  activeClass(to) {
+    return this.state.isMounted && window.location.pathname.split('/')[1] === to
+      ? { className: 'active' }
+      : {}
   }
 }
 

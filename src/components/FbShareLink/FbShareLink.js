@@ -15,14 +15,6 @@ class FbShareLink extends React.Component {
     this.setHref()
   }
 
-  setHref = () => {
-    if (typeof window === 'undefined') {
-      setTimeout(this.setHref, 500)
-      return
-    }
-    this.setState({ href: window.location.href })
-  };
-
   props: Props;
 
   render() {
@@ -35,6 +27,14 @@ class FbShareLink extends React.Component {
         {this.props.children}
       </a>
     )
+  }
+
+  setHref = () => {
+    if (typeof window === 'undefined') {
+      setTimeout(this.setHref, 500)
+      return
+    }
+    this.setState({ href: window.location.href })
   }
 }
 

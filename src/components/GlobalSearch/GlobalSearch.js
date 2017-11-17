@@ -77,27 +77,6 @@ class GlobalSearch extends React.Component {
     suggestions: [],
   };
 
-  onChange = (event, { newValue }) => {
-    this.setState({
-      value: newValue,
-    })
-  };
-
-  // Autosuggest will call this function every time you need to update suggestions.
-  // You already implemented this logic above, so just use it.
-  onSuggestionsFetchRequested = ({ value }) => {
-    this.setState({
-      suggestions: getSuggestions(value),
-    })
-  };
-
-  // Autosuggest will call this function every time you need to clear suggestions.
-  onSuggestionsClearRequested = () => {
-    this.setState({
-      suggestions: [],
-    })
-  };
-
   render() {
     const { value, suggestions } = this.state
 
@@ -127,6 +106,27 @@ class GlobalSearch extends React.Component {
       />
     )
   }
+
+  onChange = (event, { newValue }) => {
+    this.setState({
+      value: newValue,
+    })
+  };
+
+  // Autosuggest will call this function every time you need to update suggestions.
+  // You already implemented this logic above, so just use it.
+  onSuggestionsFetchRequested = ({ value }) => {
+    this.setState({
+      suggestions: getSuggestions(value),
+    })
+  };
+
+  // Autosuggest will call this function every time you need to clear suggestions.
+  onSuggestionsClearRequested = () => {
+    this.setState({
+      suggestions: [],
+    })
+  };
 }
 
 export default GlobalSearch

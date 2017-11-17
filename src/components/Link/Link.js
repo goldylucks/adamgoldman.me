@@ -22,6 +22,15 @@ class Link extends React.Component {
     onClick: null,
   };
 
+  render() {
+    const { to, children, ...props } = this.props
+    return (
+      <a href={to} {...props} onClick={this.handleClick}>
+        {children}
+      </a>
+    )
+  }
+
   handleClick = (event) => {
     if (this.props.onClick) {
       this.props.onClick(event)
@@ -37,15 +46,6 @@ class Link extends React.Component {
 
     event.preventDefault()
     history.push(this.props.to)
-  };
-
-  render() {
-    const { to, children, ...props } = this.props
-    return (
-      <a href={to} {...props} onClick={this.handleClick}>
-        {children}
-      </a>
-    )
   }
 }
 

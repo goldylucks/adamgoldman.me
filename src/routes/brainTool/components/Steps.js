@@ -16,44 +16,12 @@ class Steps extends React.Component {
   static defaultProps = {
     initialState: {},
     isRtl: false,
-  };
+  }
 
   state = {
     ...this.props.initialState,
     currentStep: 0,
     inputs: {},
-  };
-
-  back = n =>
-    this.goToStep(this.state.currentStep - (typeof n === 'number' ? n : 1));
-  next = n =>
-    this.goToStep(this.state.currentStep + (typeof n === 'number' ? n : 1));
-
-  goToStep = (step) => {
-    scrollToElem(document.querySelector('#main-layout'), 0, 300)
-    this.setState({ currentStep: step })
-  };
-
-  goToStepByTitle = (title) => {
-    const { steps } = this.props
-    scrollToElem(document.querySelector('#main-layout'), 0, 300)
-    this.setState({
-      currentStep: steps.indexOf(steps.find(s => s.title === title)),
-    })
-  };
-
-  inputsChange = id => (evt) => {
-    this.setState({
-      inputs: Object.assign({}, this.state.inputs, {
-        [id]: evt.target.value,
-      }),
-    })
-  };
-
-  resetInputs = (...inputsToReset) => {
-    const nextInputs = { ...this.state.inputs }
-    inputsToReset.forEach(input => delete nextInputs[input])
-    this.setState({ inputs: nextInputs })
   }
 
   render() {
@@ -124,6 +92,38 @@ ${step.description(this.state)}
         ))}
       </div>
     )
+  }
+
+  back = n =>
+    this.goToStep(this.state.currentStep - (typeof n === 'number' ? n : 1));
+  next = n =>
+    this.goToStep(this.state.currentStep + (typeof n === 'number' ? n : 1));
+
+  goToStep = (step) => {
+    scrollToElem(document.querySelector('#main-layout'), 0, 300)
+    this.setState({ currentStep: step })
+  };
+
+  goToStepByTitle = (title) => {
+    const { steps } = this.props
+    scrollToElem(document.querySelector('#main-layout'), 0, 300)
+    this.setState({
+      currentStep: steps.indexOf(steps.find(s => s.title === title)),
+    })
+  };
+
+  inputsChange = id => (evt) => {
+    this.setState({
+      inputs: Object.assign({}, this.state.inputs, {
+        [id]: evt.target.value,
+      }),
+    })
+  };
+
+  resetInputs = (...inputsToReset) => {
+    const nextInputs = { ...this.state.inputs }
+    inputsToReset.forEach(input => delete nextInputs[input])
+    this.setState({ inputs: nextInputs })
   }
 }
 export default Steps

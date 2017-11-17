@@ -22,22 +22,6 @@ class FbPageBox extends React.Component {
     clearTimeout(this.timeoutFbRender)
   }
 
-  elem = null;
-  timeoutFb = null;
-  timeoutFbRender = null;
-
-  reloadFB = () => {
-    if (!global.FB) {
-      this.timeoutFb = setTimeout(this.reloadFB, 500)
-      return
-    }
-    global.FB.XFBML.parse(this.elem, () => {
-      this.timeoutFbRender = setTimeout(() => {
-        this.setState({ rendered: true })
-      }, 1000)
-    })
-  };
-
   render() {
     const opacity = this.state.rendered ? 1 : 0
     return (
@@ -58,6 +42,22 @@ class FbPageBox extends React.Component {
       </div>
     )
   }
+
+  elem = null;
+  timeoutFb = null;
+  timeoutFbRender = null;
+
+  reloadFB = () => {
+    if (!global.FB) {
+      this.timeoutFb = setTimeout(this.reloadFB, 500)
+      return
+    }
+    global.FB.XFBML.parse(this.elem, () => {
+      this.timeoutFbRender = setTimeout(() => {
+        this.setState({ rendered: true })
+      }, 1000)
+    })
+  };
 }
 
 export default isProd ? FbPageBox : noop
