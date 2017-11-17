@@ -21,7 +21,6 @@ class Steps extends React.Component {
   state = {
     ...this.props.initialState,
     currentStep: 0,
-    inputs: {},
   }
 
   render() {
@@ -30,7 +29,7 @@ class Steps extends React.Component {
 
     return (
       <div>
-        <h3 style={{ marginBottom: 60 }} className={isRtl && 'rtl'}>
+        <h3 style={{ marginBottom: 60 }} className={!isRtl ? '' : 'rtl'}>
           {!isRtl ? 'Step' : 'צעד'} {currentStep}/{steps.length - 1}
         </h3>
         {steps.map((step, idx) => (
@@ -52,7 +51,7 @@ class Steps extends React.Component {
   renderContent(step) {
     return (
       <Markdown
-        className={this.props.isRtl && 'rtl'}
+        className={!this.props.isRtl ? '' : 'rtl'}
         source={`
 ${!step.title ? '' : `## ${step.title}`}
 
@@ -79,7 +78,7 @@ ${step.description(this.state)}
         className="tool-form"
       >
         <input
-          value={this.state.inputs[input.id]}
+          value={this.state[`input${input.id}`]}
           onChange={this.inputsChange(input.id)}
           className={`input ${!this.props.isRtl ? '' : 'rtl'}`}
           placeholder={typeof input.placeholder === 'function' ? input.placeholder(this.state) : input.placeholder}
@@ -129,18 +128,10 @@ ${step.description(this.state)}
     })
   };
 
-  inputsChange = id => (evt) => {
-    this.setState({
-      inputs: Object.assign({}, this.state.inputs, {
-        [id]: evt.target.value,
-      }),
-    })
-  };
+  inputsChange = id => evt => this.setState({ [`input${id}`]: evt.target.value })
 
-  resetInputs = (...inputsToReset) => {
-    const nextInputs = { ...this.state.inputs }
-    inputsToReset.forEach(input => delete nextInputs[input])
-    this.setState({ inputs: nextInputs })
+  resetInputs = (...inputIdsToReset) => {
+    inputIdsToReset.forEach(id => this.setState({ [`input${id}`]: '' }))
   }
 }
 export default Steps

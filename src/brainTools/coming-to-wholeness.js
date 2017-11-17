@@ -11,22 +11,19 @@ export const description = 'A PRACTICAL step by step tool for non "enlightment"'
 export const credits = 'Source: I\'ve adapted this [tool](/tools/) from Connirae\'s [Wholeness Process](http://andreasnlptrainings.com/wholeness/).'
 
 const confirmDecline = (that) => {
-  const nextInputs = { ...that.state.inputs }
-  nextInputs.iLocation = ''
-  nextInputs.iSizeShape = ''
-  nextInputs.iSensationQuality = ''
-  that.setState({ inputs: nextInputs }, () =>
-    that.goToStepByTitle('I - Location'))
+  this.setState({
+    inputILocation: '',
+    inputISizeShape: '',
+    inputISensationQuality: '',
+  }, that.goToStepByTitle('I - Location'))
 }
 
 const allowCompleteIntegration = (that) => {
   const nextIs = [...that.state.Is]
-  const nextInputs = { ...that.state.inputs }
-  nextInputs.iIntegrationDescription = ''
   nextIs.pop()
   that.setState({
     Is: nextIs,
-    inputs: nextInputs,
+    inputIIntegrationDescription: '',
   })
   if (nextIs.length) {
     that.next()
@@ -51,6 +48,16 @@ const lastI = stepsState => (!stepsState.Is.length ? {} : stepsState.Is.last())
 
 export const initialState = {
   Is: [],
+  inputExperience: '',
+  inputFeel: '',
+  inputFeelingLocation: '',
+  inputFeelingSizeShape: '',
+  inputFeelingSensationQuality: '',
+  inputILocation: '',
+  inputISizeShape: '',
+  inputISensationQuality: '',
+  inputIIntegrationDescription: '',
+  inputFeelingIntegrationDescription: '',
 }
 
 export const mockState = {
@@ -63,18 +70,16 @@ export const mockState = {
   ],
   iCompare: 'very different than before',
   feelingCompare: 'somewhat different than before',
-  inputs: {
-    experience: 'Fighting with father',
-    feel: 'Feel annoyed',
-    feelingLocation: 'In stomach',
-    feelingSizeShape: 'small brick',
-    feelingSensationQuality: 'vast and clear',
-    iLocation: 'Above me, two meters',
-    iSizeShape: 'round small orange',
-    iSensationQuality: 'warm anf fuzzy',
-    iIntegrationDescription: 'omg is it the best feeling or what?',
-    feelingIntegrationDescription: "I'm light as a gazelle!",
-  },
+  inputExperience: 'Fighting with father',
+  inputFeel: 'Feel annoyed',
+  inputFeelingLocation: 'In stomach',
+  inputFeelingSizeShape: 'small brick',
+  inputFeelingSensationQuality: 'vast and clear',
+  inputILocation: 'Above me, two meters',
+  inputISizeShape: 'round small orange',
+  inputISensationQuality: 'warm anf fuzzy',
+  inputIIntegrationDescription: 'omg is it the best feeling or what?',
+  inputFeelingIntegrationDescription: "I'm light as a gazelle!",
 }
 
 export const steps = [
@@ -116,7 +121,7 @@ E.g. Something that pushes your buttons, but really doesn’t hurt anyone.
 `,
     input: {
       placeholder: 'I want to resolve the experience of ...',
-      id: 'experience',
+      id: 'Experience',
     },
   },
 
@@ -125,7 +130,7 @@ E.g. Something that pushes your buttons, but really doesn’t hurt anyone.
     description: stepsState => `
 Imagine it is happening now ...
 
-*${stepsState.inputs.experience}*
+*${stepsState.inputExperience}*
 
 and notice how you feel in response ...
 
@@ -135,69 +140,63 @@ Describe your response in one short sentence.
 `,
     input: {
       placeholder: 'I feel ...',
-      id: 'feel',
+      id: 'Feel',
     },
   },
 
   {
     title: 'Initial Feeling - location',
     description: stepsState => `
-And *${stepsState.inputs.feel}* ...
+And *${stepsState.inputFeel}* ...
 
-And when you feel *${stepsState.inputs
-    .feel}*, **where is this feeling** of *${stepsState.inputs
-  .feel}* located, when you feel *${stepsState.inputs.feel}*?
+And when you feel *${stepsState.inputFeel}*, **where is this feeling** of *${stepsState.inputFeel}* located, when you feel *${stepsState.inputFeel}*?
 
 (E.g. “in my chest.”)    
 `,
     input: {
       placeholder: 'It’s ...',
-      id: 'feelingLocation',
+      id: 'FeelingLocation',
     },
   },
 
   {
     title: 'Initial Feeling - Size & Shape',
     description: stepsState => `
-And *${stepsState.inputs.feelingLocation}* ...
+And *${stepsState.inputFeelingLocation}* ...
 
-And when it's *${stepsState.inputs
-    .feelingLocation}*, and it's a FEEL feeling, **notice it's size & shape**, when it's *${stepsState
-  .inputs.feelingLocation}*, and it's a FEEL feeling.
+And when it's *${stepsState.inputFeelingLocation}*, and it's a ${stepsState.inputFeel} feeling, **notice it's size & shape**, when it's *${stepsState.inputFeelingLocation}*, and it's a ${stepsState.inputFeel} feeling.
 
 (E.g. “It’s sort of round and the size of an orange.”)    
 `,
     input: {
       placeholder: 'It’s ...',
-      id: 'feelingSizeShape',
+      id: 'FeelingSizeShape',
     },
   },
 
   {
     title: 'Initial Feeling - Sensation Quality',
     description: stepsState => `
-And ${stepsState.inputs.feelingSizeShape} ...
+And ${stepsState.inputFeelingSizeShape} ...
 
-And when it's ${stepsState.inputs.feelingSizeShape}, and it's ${stepsState
-  .inputs.feelingLocation}, **what's it's sensation quality?**
+And when it's ${stepsState.inputFeelingSizeShape}, and it's ${stepsState.inputFeelingLocation}, **what's it's sensation quality?**
 
 (E.g. “It’s fuzzy and a bit prickly.”)
     `,
     input: {
       placeholder: "It's ...",
-      id: 'feelingSensationQuality',
+      id: 'FeelingSensationQuality',
     },
   },
 
   {
     title: 'Noticing Awareness',
     description: stepsState => `
-And ${stepsState.inputs.feelingSensationQuality}....
+And ${stepsState.inputFeelingSensationQuality}....
 
-And when it's ${stepsState.inputs.feelingSensationQuality}, you can recognize,
+And when it's ${stepsState.inputFeelingSensationQuality}, you can recognize,
 
-*I am aware of this ${stepsState.inputs
-    .feelingSensationQuality} sensation, so awareness is present.*
+*I am aware of this ${stepsState.inputFeelingSensationQuality} sensation, so awareness is present.*
   `,
     answers: [
       { text: 'Indeed I can' },
@@ -236,7 +235,7 @@ When I refer to Awareness, I'm pointing to this capacity to notice, that is thro
 
   {
     title: 'I - Location',
-    id: 'location',
+    id: 'Location',
     description: () => `
 
 Now with [your permission](TITLE_or_without_it,_I'm_running_the_show_here_;\\)) let’s return to this statement, *“I am aware of this feelingSensationQuality} sensation feelingLocation}”* ...
@@ -255,12 +254,12 @@ E.g. *"it's in front of me, pretty close, slightly to the right"*
 `,
     input: {
       placeholder: 'It’s ...',
-      id: 'iLocation',
+      id: 'ILocation',
       onSubmit: (that) => {
         that.setState(
           {
             Is: that.state.Is.concat({
-              location: that.state.inputs.iLocation,
+              location: that.state.inputILocation,
             }),
           },
           that.next,
@@ -273,18 +272,16 @@ E.g. *"it's in front of me, pretty close, slightly to the right"*
     title: 'I - Size & Shape',
     description: stepsState => `
 
-And *${stepsState.inputs.iLocation}* ...
+And *${stepsState.inputILocation}* ...
 
-And when it's *${stepsState.inputs
-    .iLocation}*, **what is the size & shape of this ‘I’**, when it's *${stepsState
-  .inputs.iLocation}*?
+And when it's *${stepsState.inputILocation}*, **what is the size & shape of this ‘I’**, when it's *${stepsState.inputILocation}*?
 `,
     input: {
       placeholder: 'It’s ...',
-      id: 'iSizeShape',
+      id: 'ISizeShape',
       onSubmit: (that) => {
         const nextIs = [...that.state.Is]
-        nextIs.last().sizeShape = that.state.inputs.iSizeShape
+        nextIs.last().sizeShape = that.state.inputISizeShape
         that.setState({ Is: nextIs }, that.next)
       },
     },
@@ -294,20 +291,18 @@ And when it's *${stepsState.inputs
     title: 'I - Sensation Quality',
     description: stepsState => `
 
-And *${stepsState.inputs.iSizeShape}* ...
+And *${stepsState.inputISizeShape}* ...
 
-And when it's *${stepsState.inputs.iSizeShape}*, and it's *${stepsState.inputs
-  .iLocation}*, **what's the sensation quality** of this *${stepsState
-  .inputs.iSizeShape}*, that’s *${stepsState.inputs.iLocation}*?
+And when it's *${stepsState.inputISizeShape}*, and it's *${stepsState.inputILocation}*, **what's the sensation quality** of this *${stepsState.inputISizeShape}*, that’s *${stepsState.inputILocation}*?
 
 E.g foggy, clear, dense, or empty, heavy, light, vibrating, still, etc.
 `,
     input: {
       placeholder: 'The sensation quality is ...',
-      id: 'iSensationQuality',
+      id: 'ISensationQuality',
       onSubmit: (that) => {
         const nextIs = [...that.state.Is]
-        nextIs.last().sensationQuality = that.state.inputs.iSensationQuality
+        nextIs.last().sensationQuality = that.state.inputISensationQuality
         that.setState({ Is: nextIs }, that.next)
       },
     },
@@ -317,19 +312,17 @@ E.g foggy, clear, dense, or empty, heavy, light, vibrating, still, etc.
     title: 'I - Inviting Integration',
     invitation: true,
     description: stepsState => `
-And *${stepsState.inputs.iSensationQuality}* ...
+And *${stepsState.inputISensationQuality}* ...
 
-And when this ‘I’ is *${stepsState.inputs.iLocation}* ...
+And when this ‘I’ is *${stepsState.inputILocation}* ...
 
-and *${stepsState.inputs.iSensationQuality}* ...
+and *${stepsState.inputISensationQuality}* ...
 
 Does the sensation of this ‘I’ welcome the invitation to open and relax as the fullness of Awareness?
 
-Some people prefer to notice what happens when the fullness of Awareness... all of consciousness... is invited to flow in and as... the sensation *${stepsState
-    .inputs.iLocation}*.
+Some people prefer to notice what happens when the fullness of Awareness... all of consciousness... is invited to flow in and as... the sensation *${stepsState.inputILocation}*.
 
-Or, it may feel like the Awareness already present *${stepsState.inputs
-    .iLocation}*, wakes up to itself.
+Or, it may feel like the Awareness already present *${stepsState.inputILocation}*, wakes up to itself.
 
 It matters less if the answer is ‘Yes’ or ‘No’, It just tells us what to do next.
 `,
@@ -370,14 +363,14 @@ And what happens?
 `,
     input: {
       placeholder: 'I feel ...',
-      id: 'iIntegrationDescription',
+      id: 'IIntegrationDescription',
     },
   },
 
   {
     title: 'I - Allowing Complete Integration',
     description: stepsState => `
-And *${stepsState.inputs.iIntegrationDescription}*
+And *${stepsState.inputIIntegrationDescription}*
     
 And if you are experiencing a relaxing, melting, or dissolving, just stay with it until things settle. Enjoy the sense of relaxation, peace or flow as long as you like.
 `,
@@ -457,8 +450,7 @@ It matters less if the answer is ‘Yes’ or ‘No’, It just tells us what to
   {
     title: 'Circling Back - Initial Feeling - Compare',
     description: stepsState => `
-Now let’s return to the area that you started with, ${stepsState.inputs
-    .feelingLocation}.
+Now let’s return to the area that you started with, ${stepsState.inputFeelingLocation}.
 
 First notice, is the sensation there the same as it was before?
 
@@ -498,32 +490,28 @@ Or is it a little bit different?
     description: stepsState => `
 And ${stepsState.feelingCompare} ...
 
-And notice what happens when this sensation here - *${stepsState.inputs
-    .feelingLocation}* - is invited to open and relax ... as all of Awareness.
+And notice what happens when this sensation here - *${stepsState.inputFeelingLocation}* - is invited to open and relax ... as all of Awareness.
 
-Another way to experience it is notice what happens when the fullness of Awareness... all of consciousness... is invited to flow in and as... the sensation *${stepsState
-    .inputs.feelingLocation}*.
+Another way to experience it is notice what happens when the fullness of Awareness... all of consciousness... is invited to flow in and as... the sensation *${stepsState.inputFeelingLocation}*.
 
-Or, it may feel like the Awareness already present *${stepsState.inputs
-    .feelingLocation}*, wakes up to itself.
+Or, it may feel like the Awareness already present *${stepsState.inputFeelingLocation}*, wakes up to itself.
 
 Now there is just an allowing of whatever happens. You can enjoy this experience as long as you like, and share what happens and how you feel:    
 `,
     input: {
       placeholder: 'I feel ...',
-      id: 'feelingIntegrationDescription',
+      id: 'FeelingIntegrationDescription',
     },
   },
 
   {
     title: 'Circling Back - Initial Context',
     description: stepsState => `
-And *${stepsState.inputs.feelingIntegrationDescription}* ...
+And *${stepsState.inputFeelingIntegrationDescription}* ...
 
 Being this way, with the I’s and the feeling integrated with Awareness ...
 
-Notice what is it like now, when you imagine being in a situation where *${stepsState
-    .inputs.experience}* ...
+Notice what is it like now, when you imagine being in a situation where *${stepsState.inputExperience}* ...
 
 What is it like, being this way?
 `,
@@ -558,8 +546,7 @@ What is it like, being this way?
     description: stepsState => `
 And *${stepsState.initialContext}* ...
 
-And check how it is being this way in two situations in the past of *${stepsState
-    .inputs.experience}*    
+And check how it is being this way in two situations in the past of *${stepsState.inputExperience}*
 `,
     answers: [
       {
@@ -593,8 +580,7 @@ And check how it is being this way in two situations in the past of *${stepsStat
 
 And *${stepsState.initialContextPast}*
 
-And check how it is being this way in three (or) more future scenarios of *${stepsState
-    .inputs.experience}*  
+And check how it is being this way in three (or) more future scenarios of *${stepsState.inputExperience}*  
 `,
     answers: [
       {
@@ -636,7 +622,7 @@ or you want to do it again on another issue / experience first?
     answers: [
       {
         onClick: 'onRestart',
-        text: 'I want to do it again on the experience!',
+        text: 'I want to do it again on the same experience!',
       },
       {
         onClick: 'onRestart',

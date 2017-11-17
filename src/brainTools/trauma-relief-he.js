@@ -14,6 +14,13 @@ export const isRtl = true
 
 export const credits = 'בניתי את ה[כלי](/tools/) הזה על בסיס תהליך הטראומה של באנדלר, פרטים נוספים בספר [Heart of the Mind](http://amzn.to/2xFE4yX) פרק 7'
 
+export const initialState = {
+  gender: '',
+  inputName: '',
+  inputAgeInMemory: '',
+  inputGoodFeelingDescription: '',
+}
+
 export const steps = [
   {
     title: 'מגדר',
@@ -74,28 +81,28 @@ export const steps = [
 `,
     input: {
       placeholder: 'קוראים לי ...',
-      id: 'name',
+      id: 'Name',
     },
   },
 
   {
     title: 'בחירת זכרון מהעבר לשחרר',
-    description: ({ inputs, gender }) => `
-אוקי ${inputs.name},
+    description: ({ inputName, gender }) => `
+אוקי ${inputName},
 ${he.tajshov(gender)} על זכרון שהיה לך בעבר, שקופץ לך לראש לפעמים, ועדיין גורם לך להרגיש רע, או באופן ש${he.ata(gender)} לא רוצה, ו${he.tomar(gender)} לי ...
 
-מה היה הגיל של ${inputs.name} בזכרון הזה?
+מה היה הגיל של ${inputName} בזכרון הזה?
 `,
     input: {
-      placeholder: ({ inputs }) => `בזכרון הזה הגיל של ${inputs.name} היה ...`,
-      id: 'ageInMemory',
+      placeholder: ({ inputName }) => `בזכרון הזה הגיל של ${inputName} היה ...`,
+      id: 'AgeInMemory',
     },
   },
 
   {
     title: 'לפני שמשהו קרה, בטוח לחלוטין',
-    description: ({ gender, inputs }) => `
-עכשיו בעוד רגע אני אבקש ממך להקפיא את הזכרון ברגע שלפני שמשהו קרה, ככה ש${he.ata(gender)} רואה את ${inputs.name} ${he.ben(gender)} ${inputs.ageInMemory} בתמונה קפואה, ${he.batuaj(gender)} לחלוטין כמו שאני הייתי לפני התאונה שלי:
+    description: ({ gender, inputName, inputAgeInMemory }) => `
+עכשיו בעוד רגע אני אבקש ממך להקפיא את הזכרון ברגע שלפני שמשהו קרה, ככה ש${he.ata(gender)} רואה את ${inputName} ${he.ben(gender)} ${inputAgeInMemory} בתמונה קפואה, ${he.batuaj(gender)} לחלוטין כמו שאני הייתי לפני התאונה שלי:
 
 לאחי הייתה תאונה לפני הרבה זמן על האופנוע, בזמן שעבדך הנאמן כאן היה רכוב מאחור.
 
@@ -103,7 +110,7 @@ ${he.tajshov(gender)} על זכרון שהיה לך בעבר, שקופץ לך ל
 
 כמה רגעים לפני התאונה, לא היה שום סימן לסכנה, וכולנו בטוחים לחלוטין.
 
-אז אני רוצה ש${he.tire(gender)} את ${inputs.name} ${he.ben(gender)} ${inputs.ageInMemory} בתמונה קפואה, שחור לבן, ${he.batuaj(gender)} לחלוטין, במסך קטן מושתק רחוק רחוק, ו${he.taase(gender)} את התמונה קצת לא בפוקוס וברזולוציה נמוכה.
+אז אני רוצה ש${he.tire(gender)} את ${inputName} ${he.ben(gender)} ${inputAgeInMemory} בתמונה קפואה, שחור לבן, ${he.batuaj(gender)} לחלוטין, במסך קטן מושתק רחוק רחוק, ו${he.taase(gender)} את התמונה קצת לא בפוקוס וברזולוציה נמוכה.
 
 קצת כמו ש${he.ata(gender)}  ${he.bojer(gender)} את הרזולוציה הכי נמוכה ביוטיוב,  ${he.makir(gender)}?
 
@@ -116,8 +123,8 @@ ${he.taase(gender)} את זה עכשיו, ותגיד לי כשסיימת.
 
   {
     title: 'אחרי שהכל נגמר, בטוח לחלוטין',
-    description: ({ gender, inputs }) => `
-מעולה, עכשיו בעוד רגע אני אבקש ממך לראות את ${inputs.name} ${he.ben(gender)} ${inputs.ageInMemory} באותה תמונה קפואה, שחור לבן, במסך הקטן הרחוק רחוק, ו${he.tarits(gender)} את הזכרון קדימה הכי מהר ש${he.ata(gender)}  ${he.yajol(gender)}, ו${he.takpi(gender)} את התמונה בסוף הזכרון, אחרי שהכל נגמר" ו${he.ata(gender)} רואה את ${inputs.name} ${he.ben(gender)} ${inputs.ageInMemory} שם ${he.batuaj(gender)} לחלוטין.
+    description: ({ gender, inputName, inputAgeInMemory }) => `
+מעולה, עכשיו בעוד רגע אני אבקש ממך לראות את ${inputName} ${he.ben(gender)} ${inputAgeInMemory} באותה תמונה קפואה, שחור לבן, במסך הקטן הרחוק רחוק, ו${he.tarits(gender)} את הזכרון קדימה הכי מהר ש${he.ata(gender)}  ${he.yajol(gender)}, ו${he.takpi(gender)} את התמונה בסוף הזכרון, אחרי שהכל נגמר" ו${he.ata(gender)} רואה את ${inputName} ${he.ben(gender)} ${inputAgeInMemory} שם ${he.batuaj(gender)} לחלוטין.
 
 כמה שניות לפני התאונה שלנו, אחי ואני נסענו בכיף שלנו על האופנוע, סצנה די נייטרלית סך הכל.
 
@@ -125,7 +132,7 @@ ${he.taase(gender)} את זה עכשיו, ותגיד לי כשסיימת.
 
 הרגל שלי לא החלימה 100% עדיין, אבל התאונה עצמה נגמרה, וכולנו בטוחים שוב.
 
-אז אני רוצה ש${he.tarits(gender)} קדימה את זכרון העבר למקום דומה, בו${he.ata(gender)}  ${he.yajol(gender)} לראות את ${inputs.name} ${he.ben(gender)} ${inputs.ageInMemory} אחרי כל מה שקרה, ${he.batuaj(gender)} לחלוטין, ברגע הנייטרלי או החיובי הבא.
+אז אני רוצה ש${he.tarits(gender)} קדימה את זכרון העבר למקום דומה, בו${he.ata(gender)}  ${he.yajol(gender)} לראות את ${inputName} ${he.ben(gender)} ${inputAgeInMemory} אחרי כל מה שקרה, ${he.batuaj(gender)} לחלוטין, ברגע הנייטרלי או החיובי הבא.
 
 עכשיו, ${he.ata(gender)}  ${he.makir(gender)} את הסאונד של סרט מצוייר ש${he.ata(gender)}  ${he.meritz(gender)} אותו קדימה?
 `,
@@ -137,28 +144,28 @@ ${he.taase(gender)} את זה עכשיו, ותגיד לי כשסיימת.
 
   {
     title: 'קדימה כמו סרט מצוייר',
-    description: ({ gender, inputs }) => `
+    description: ({ gender, inputName, inputAgeInMemory }) => `
 מעולה, אז הנה מה שאני רוצה ש${he.taase(gender)}:
 
-1. ${he.tire(gender)} את ${inputs.name} ${he.ben(gender)} ${inputs.ageInMemory}, במסך קטן רחוק רחוק, קפוא בזמן, בהתחלת הזכרון, לפני שמשהו קרה, ${he.batuaj(gender)} לחלוטין
+1. ${he.tire(gender)} את ${inputName} ${he.ben(gender)} ${inputAgeInMemory}, במסך קטן רחוק רחוק, קפוא בזמן, בהתחלת הזכרון, לפני שמשהו קרה, ${he.batuaj(gender)} לחלוטין
 2.  ${he.taase(gender)} את התמונה שחור לבן, קצת לא בפוקוס, ו${he.torid(gender)} את הרזולוציה
 3. תשתיק את הקול
-4.  ${he.tarits(gender)} קדימה את הסרט הכי מהר ש${he.ata(gender)}  ${he.yajol(gender)} כל הדרך עד אחרי שהכל נגמר, ו${he.ata(gender)} רואה את ${inputs.name} ${he.ben(gender)} ${inputs.ageInMemory} ברגע הנייטרלי או החיובי הבא
+4.  ${he.tarits(gender)} קדימה את הסרט הכי מהר ש${he.ata(gender)}  ${he.yajol(gender)} כל הדרך עד אחרי שהכל נגמר, ו${he.ata(gender)} רואה את ${inputName} ${he.ben(gender)} ${inputAgeInMemory} ברגע הנייטרלי או החיובי הבא
 5. כמו סרט מצוייר,  ${he.tishma(gender)} את הכל רץ קדימה מאוד מהר
 
 ${he.taase(gender)} את זה עכשיו, ו${he.teiadea(gender)} אותי כש${he.ata(gender)}  ${he.mesayem(gender)}
 
 `,
-    answers: ({ gender, inputs }) => [
+    answers: ({ gender, inputName, inputAgeInMemory }) => [
       { text: 'סיימתי, בוא נמשיך' },
-      { text: `אוקיי. הרצתי את הזכרון קדימה, ואני רואה את ${inputs.name} ${he.ben(gender)} ${inputs.ageInMemory} ${he.batuaj(gender)} לחלוטין אחרי הסוף` },
+      { text: `אוקיי. הרצתי את הזכרון קדימה, ואני רואה את ${inputName} ${he.ben(gender)} ${inputAgeInMemory} ${he.batuaj(gender)} לחלוטין אחרי הסוף` },
     ],
   },
 
   {
     title: 'מלחמה ברוורס זה ...',
-    description: ({ gender, inputs }) => `
-עכשיו, בזמן ש${he.ata(gender)} רואה את ${inputs.name} ${he.ben(gender)} ${inputs.ageInMemory} בתמונה הקטנה רחוק רחוק, ${he.batuaj(gender)} לחלוטין, אחרי הסוף, אי פעם חשבת כבר למה הופך סרט מלחמה, כש${he.ata(gender)}  ${he.meritz(gender)} אותו ברוורס?
+    description: ({ gender, inputName, inputAgeInMemory }) => `
+עכשיו, בזמן ש${he.ata(gender)} רואה את ${inputName} ${he.ben(gender)} ${inputAgeInMemory} בתמונה הקטנה רחוק רחוק, ${he.batuaj(gender)} לחלוטין, אחרי הסוף, אי פעם חשבת כבר למה הופך סרט מלחמה, כש${he.ata(gender)}  ${he.meritz(gender)} אותו ברוורס?
 
 [diihWjg0lAM](YtEmbedd)
 
@@ -181,10 +188,10 @@ ${he.taase(gender)} את זה עכשיו, ו${he.teiadea(gender)} אותי כש$
 
   {
     title: 'רוורס כמו סרט מצוייר',
-    description: ({ gender, inputs }) => `
+    description: ({ gender, inputAgeInMemory }) => `
 עכשיו בעוד רגע אני אבקש ממך לעשות משהו מעניין, ואל  ${he.taase(gender)} את זה עד שאני אומר לך, אוקיי?
 
-אני רוצה ש${he.tikanes(gender)} אל תוך סוף הזכרון, אל תוך הגוף של עצמך ${he.ben(gender)}  ה${inputs.ageInMemory}, ${he.batuaj(gender)} לחלוטין, ככה ש${he.ata(gender)} רואה את מה שראית באותו זמן,  ${he.shomea(gender)} מה ששמעת ו...
+אני רוצה ש${he.tikanes(gender)} אל תוך סוף הזכרון, אל תוך הגוף של עצמך ${he.ben(gender)}  ה${inputAgeInMemory}, ${he.batuaj(gender)} לחלוטין, ככה ש${he.ata(gender)} רואה את מה שראית באותו זמן,  ${he.shomea(gender)} מה ששמעת ו...
 
 ${he.tarits(gender)} את הזכרון ברוורס, דרך העיניים שלך, הכי מהר ש${he.ata(gender)}  ${he.yajol(gender)}, כל הדרך עד ללפני ההתחלה, איפה ש${he.ata(gender)} ${he.batuaj(gender)} לחלוטין שוב.
 
@@ -196,7 +203,7 @@ ${he.tarits(gender)} את הזכרון ברוורס, דרך העיניים של�
 
 אז הנה הצעדים שוב:
 
-1.  ${he.tikanes(gender)} אל תוך סוף הזכרון, לתוך הגוף של עצמך ${he.ben(gender)} ${inputs.ageInMemory}, ${he.batuaj(gender)} לחלוטין
+1.  ${he.tikanes(gender)} אל תוך סוף הזכרון, לתוך הגוף של עצמך ${he.ben(gender)} ${inputAgeInMemory}, ${he.batuaj(gender)} לחלוטין
 2. ${he.tire(gender)} את מה שראית באותו זמן,  ${he.tishma(gender)} את מה ששמעת
 3.  ${he.tarits(gender)} את הזכרון ברוורס הכי מהר ש${he.ata(gender)}  ${he.yajol(gender)},  ${he.tishma(gender)} את כולם מדברים אחורה, ${he.tire(gender)} את הכל ואת כולם נעים אחורה ברוורס, הכי מהר ש${he.ata(gender)}  ${he.yajol(gender)}, כמו סרט מצוייר, כל הדרך עד לפני ההתחלה, איפה ש${he.ata(gender)} ${he.batuaj(gender)} לחלוטין שוב
 
@@ -212,7 +219,7 @@ ${he.taatsom(gender)} את העיניים ו${he.taase(gender)} את זה עכש
 
   {
     title: 'רוורס כמו סרט מצוייר + סאונד',
-    description: ({ gender, inputs }) => `
+    description: ({ gender, inputAgeInMemory }) => `
 חזרת?
 
 מעולה!
@@ -236,7 +243,7 @@ ${he.ata(gender)}  ${he.yajol(gender)} להשתמש בכל דבר ש${he.ata(gen
 ${he.tivjar(gender)} את מה שגורם לך להרגיש הכי טוב עכשיו ו${he.taase(gender)} את זה שוב ככה:
 
 
-1.  ${he.tikanes(gender)} אל תוך סוף הזכרון, לתוך הגוף של עצמך ${he.ben(gender)} ${inputs.ageInMemory}, ${he.batuaj(gender)} לחלוטין
+1.  ${he.tikanes(gender)} אל תוך סוף הזכרון, לתוך הגוף של עצמך ${he.ben(gender)} ${inputAgeInMemory}, ${he.batuaj(gender)} לחלוטין
 2. ${he.tire(gender)} את מה שראית באותו זמן,  ${he.tishma(gender)} את מה ששמעת
 3.  ${he.tatjil(gender)} את מוזיקת הקרקס (או צליל/שיר אחר שבחרת)
 4.  ${he.tarits(gender)} את הזכרון ברוורס הכי מהר ש${he.ata(gender)}  ${he.yajol(gender)},  ${he.tishma(gender)} את כולם מדברים אחורה, ${he.tire(gender)} את הכל ואת כולם נעים אחורה ברוורס, הכי מהר ש${he.ata(gender)}  ${he.yajol(gender)}, כמו סרט מצוייר, כל הדרך עד לפני ההתחלה, איפה ש${he.ata(gender)} ${he.batuaj(gender)} לחלוטין שוב
@@ -302,7 +309,7 @@ ${he.taer(gender)} את התחושה הזאת באופן הכי חי ומפור�
 `,
     input: {
       placeholder: ({ gender }) => `אני ${he.margish(gender)} טוב קודם ב... וזה כמו ... וזה מתפשט/זורם ל... בצבע ...`,
-      id: 'goodFeelingDescription',
+      id: 'GoodFeelingDescription',
     },
   },
 
