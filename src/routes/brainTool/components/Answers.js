@@ -2,9 +2,12 @@
 
 import React from 'react'
 
+import he from '../../../he'
+
 type Props = {
   answers?: Array<any>,
   onNext: Function,
+  gender?: string,
   goToStepByTitle: Function,
   noBack: boolean,
   isRtl: boolean,
@@ -12,7 +15,7 @@ type Props = {
 };
 
 const Answers = ({
-  answers, onNext, goToStepByTitle, that, noBack, isRtl,
+  answers, onNext, goToStepByTitle, that, noBack, isRtl, gender,
 }:
 Props) => (
   <div>
@@ -40,25 +43,41 @@ Props) => (
       )
     })}
 
-    {!noBack && (
-      <div className={`tool-answer ${!isRtl ? '' : 'rtl'}`}>
-        - <a onClick={() => onNext(-1)}>{!isRtl ? 'Back' : 'אחורה'}</a>
-      </div>
-    )}
-    <div className={`tool-answer ${!isRtl ? '' : 'rtl'}`}>
-      -{' '}
-      <a
-        onClick={() =>
-          global.alert(!isRtl ? "follow the steps as best you can now, and contact me when you're done" : 'תעקוב אחר הצעדים הכי טוב שאתה יכול עכשיו, וצור איתי קשר כשאתה מסיים')}
-      >
-        {!isRtl ? 'I dont understand' : 'אני לא מבין'}
-      </a>
-    </div>
+    {renderBack({ noBack, isRtl, onNext })}
+    {renderDontUnderstand({ isRtl, gender })}
   </div>
 )
 
 Answers.defaultProps = {
   answers: [],
+  gender: 'male',
+}
+
+// eslint-disable-next-line react/prop-types
+function renderBack({ noBack, isRtl, onNext }) {
+  if (noBack) {
+    return null
+  }
+  return (
+    <div className={`tool-answer ${!isRtl ? '' : 'rtl'}`}>
+      - <a onClick={() => onNext(-1)}>{!isRtl ? 'Back' : 'אחורה'}</a>
+    </div>
+  )
+}
+
+// eslint-disable-next-line react/prop-types
+function renderDontUnderstand({ isRtl, gender }) {
+  return (
+    <div className={`tool-answer ${!isRtl ? '' : 'rtl'}`}>
+      -{' '}
+      <a
+        onClick={() =>
+          global.alert(!isRtl ? "follow the steps as best you can now, and contact me when you're done" : `${he.taakov(gender)} אחר הצעדים הכי טוב ש${he.ata(gender)} ${he.yajol(gender)} עכשיו, ו${he.tsor(gender)} איתי קשר כש${he.ata(gender)} ${he.mesayem(gender)}`)}
+      >
+        {!isRtl ? 'I dont understand' : `אני לא ${he.mevin(gender)}`}
+      </a>
+    </div>
+  )
 }
 
 export default Answers

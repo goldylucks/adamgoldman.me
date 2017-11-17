@@ -72,6 +72,7 @@ ${step.description(this.state)}
             )}
             <Answers
               that={this}
+              gender={this.state.gender}
               isRtl={isRtl}
               goToStepByTitle={this.goToStepByTitle}
               answers={
