@@ -1,14 +1,14 @@
 import cloudinary from 'cloudinary-core'
 
-/* eslint-disable */
+/* eslint-disable no-extend-native,func-names */
 String.prototype.capitalize = function () {
-  return this[0].toUpperCase() + this.substr(1).toLowerCase();
+  return this[0].toUpperCase() + this.substr(1).toLowerCase()
 }
 
 Array.prototype.last = function () {
-  return this[this.length - 1];
+  return this[this.length - 1]
 }
-/* eslint-enable */
+/* eslint-enable no-extend-native */
 
 const cloudinaryCore = new cloudinary.Cloudinary({ cloud_name: 'goldylucks' })
 

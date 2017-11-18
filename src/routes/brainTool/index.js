@@ -1,6 +1,7 @@
 import React from 'react'
 
 import BrainTool from './BrainTool'
+import BrainToolNew from './BrainToolNew'
 import BrainToolDEPRECATED from './BrainToolDEPRECATED'
 
 const toolToRefactor = [
@@ -18,8 +19,7 @@ const toolToRefactor = [
 ]
 
 async function action({ params }) {
-  const tool = await import(`../../brainTools/${params.tool}.js`)
-    // .then(module => module) // use an object from `export default`
+  let tool = await import(`../../brainTools/${params.tool}.js`)
     .catch((error) => {
       if (error.message.startsWith('Cannot find module')) {
         console.error(`module ${params.tool} does not exists`) // eslint-disable-line no-console
@@ -28,9 +28,15 @@ async function action({ params }) {
       throw error // loading chunk failed (render error page)
     })
   if (!tool) return null // go to next route (or render 404)
-  const Comp = toolToRefactor.includes(params.tool)
+  let Comp = toolToRefactor.includes(params.tool)
     ? BrainToolDEPRECATED
     : BrainTool
+
+  if (params.tool === 'trauma-new') {
+    Comp = BrainToolNew
+    tool = tool.default
+  }
+
   return {
     title: tool.title,
     description: tool.description,
