@@ -24,7 +24,7 @@ export const scrollToElem = (element, to, duration) => {
   const perTick = difference / duration * 10
 
   setTimeout(() => {
-    // eslint-disable-next-line no-param-reassign, operator-assignment
+    // eslint-disable-next-line operator-assignment
     element.scrollTop = element.scrollTop + perTick
     if (element.scrollTop === to) return
     scrollToElem(element, to, duration - 10)
