@@ -8,6 +8,7 @@ import s from './BrainToolGenerator.css'
 
 class BrainToolGenerator extends React.Component {
   state = {
+    url: '',
     initialState: {},
     title: '',
     description: '',
@@ -26,11 +27,12 @@ class BrainToolGenerator extends React.Component {
 
   render() {
     const {
-      title, nick, description, isRtl, credits,
+      title, nick, description, isRtl, credits, url,
     } = this.state
     return (
       <div className="main-layout relative">
         <h1>Details</h1>
+        <input className="input" placeholder="url" value={url} onChange={inputChange.call(this, 'url')} />
         <input className="input" placeholder="title" value={title} onChange={inputChange.call(this, 'title')} />
         <input className="input" placeholder="nick" value={nick} onChange={inputChange.call(this, 'nick')} />
         <input className="input" placeholder="description" value={description} onChange={inputChange.call(this, 'description')} />
@@ -169,7 +171,7 @@ class BrainToolGenerator extends React.Component {
     const nextSteps = [...this.state.steps]
     nextSteps.push({
       title: '',
-      hasDynamicTitle: '',
+      hasDynamicTitle: false,
       titleDynamics: '',
       description: '',
       hasInput: false,
@@ -230,12 +232,10 @@ class BrainToolGenerator extends React.Component {
 
   export = () => {
     const state = { ...this.state }
-    // addDynamicSupport(state)
+    addDynamicSupport(state)
     cleanEmptyValues(state)
     addInputsToInitialState(state)
-    /* eslint-enable no-param-reassign */
-    prompt(null, `export default ${JSON.stringify(state, null, 2)}`)
-    axios.post('/tools/new', state)
+    axios.post('/api/tools/', state)
       .then((response) => {
         console.log(response)
       })
@@ -290,11 +290,11 @@ function addInputsToInitialState(state) {
   state.steps.filter(step => step.inputId).forEach((step) => { state.initialState[step.inputId] = '' })
 }
 
-// function addDynamicSupport(state) {
-//   state.steps = state.steps.map((step) => {
-//     if (step.hasDynamicTitle) {
-//       step.title = new Function(`{ ${step.titleDynamics} }`, `return ${step.title}`) // eslint-disable-line no-new-func
-//     }
-//     return step
-//   })
-// }
+function addDynamicSupport(state) {
+  state.steps = state.steps.map((step) => {
+    if (step.hasDynamicTitle) {
+      step.title = new Function(`{ ${step.titleDynamics} }`, `return ${step.title}`) // eslint-disable-line no-new-func
+    }
+    return step
+  })
+}

@@ -27,6 +27,7 @@ module.exports = {
       `http://localhost:${process.env.PORT || 3000}`,
   },
 
+  dbUrl: process.env.MONGODB_URI || 'mongodb://localhost/adamgoldman',
   // Web analytics
   analytics: {
     // https://analytics.google.com/
