@@ -8,6 +8,7 @@ import fetch from 'node-fetch'
 import React from 'react'
 import ReactDOM from 'react-dom/server'
 import PrettyError from 'pretty-error'
+import cors from 'cors'
 
 import api from './server/api'
 import App from './components/App'
@@ -36,6 +37,7 @@ global.navigator.userAgent = global.navigator.userAgent || 'all'
 // -----------------------------------------------------------------------------
 app.use(express.static(path.resolve(__dirname, 'public')))
 app.use(cookieParser())
+app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
