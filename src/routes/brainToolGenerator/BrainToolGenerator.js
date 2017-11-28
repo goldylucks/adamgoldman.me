@@ -302,9 +302,6 @@ function cleanEmptyValues(state) {
     if (!step.inputPlaceholder) { delete step.inputPlaceholder }
 
     step.answers = step.answers.map((a) => {
-      delete a.hasResetInputs
-      delete a.hasGoToStepByTitle
-      delete a.isLink
       if (!a.text) { delete a.text }
       if (!a.hasInput) { delete a.hasInput }
       if (!a.inputId) { delete a.inputId }
