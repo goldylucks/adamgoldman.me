@@ -16,7 +16,7 @@ import { FB_APP_ID } from '../constants'
 
 import Layout from './Layout'
 
-axios.defaults.baseURL = isProd ? 'http://adamgoldman.me' : 'http://localhost:3000'
+axios.defaults.baseURL = isProd ? 'http://www.adamgoldman.me' : 'http://localhost:3000'
 
 const ContextType = {
   // Enables critical path CSS rendering
