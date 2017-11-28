@@ -13,6 +13,11 @@ function getSchema() {
       index: { unique: true },
     },
 
+    isDraft: {
+      type: Boolean,
+      required: true,
+    },
+
     title: {
       type: String,
       required: true,

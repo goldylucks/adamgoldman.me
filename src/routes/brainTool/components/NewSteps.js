@@ -32,46 +32,35 @@ class Steps extends React.Component {
         <h3 style={{ marginBottom: 60 }} className={!isRtl ? '' : 'rtl'}>
           {!isRtl ? 'Step' : 'צעד'} {currentStep}/{steps.length - 1}
         </h3>
-        {steps.map((step, idx) => (
-          <div
-            key={step.title}
-            style={
-              idx === currentStep ? { display: 'block' } : { display: 'none' }
-            }
-          >
-            {this.renderContent(step)}
-            {this.renderInput(step)}
-            {this.renderAnswers(step.answers, idx)}
-          </div>
-        ))}
+        {this.renderContent()}
+        {this.renderInput()}
+        {this.renderAnswers()}
       </div>
     )
   }
 
-  renderContent(step) {
+  renderContent() {
+    const step = this.props.steps[this.state.currentStep]
     return (
       <Markdown
         className={!this.props.isRtl ? '' : 'rtl'}
         source={`
-${this.renderTitle(step)}
+${this.renderTitle()}
 
-${step.description}
+${replaceVars(step.description, this.state)}
 `}
       />
     )
   }
 
-  renderTitle(step) {
+  renderTitle() {
+    const step = this.props.steps[this.state.currentStep]
     if (!step.title) { return '' }
-    if (!step.titleDynamics) { return `## ${step.title}` }
-    return step.title(this.state)
+    return `## ${replaceVars(step.title, this.state)}`
   }
 
-  titleFunc(step) {
-    return new Function(`{ ${step.titleDynamics} }`, `return ${step.title}`) // eslint-disable-line no-new-func
-  }
-
-  renderInput({ inputId, inputPlaceholder }) {
+  renderInput() {
+    const { inputId, inputPlaceholder } = this.props.steps[this.state.currentStep]
     if (!inputId) {
       return null
     }
@@ -87,7 +76,7 @@ ${step.description}
           value={this.state[`${inputId}`]}
           onChange={this.inputsChange(inputId)}
           className={`input ${!this.props.isRtl ? '' : 'rtl'}`}
-          placeholder={inputPlaceholder}
+          placeholder={replaceVars(inputPlaceholder, this.state)}
           required
         />
         <button className="button">{!this.props.isRtl ? 'Let\'s continue' : 'בוא נמשיך'}</button>
@@ -95,16 +84,23 @@ ${step.description}
     )
   }
 
-  renderAnswers(answers, idx) {
+  renderAnswers() {
+    const answers = this.props.steps[this.state.currentStep].answers.map((answer) => {
+      if (answer.text) {
+        answer.text = replaceVars(answer.text, this.state)
+      }
+      return answer
+    })
     return (
       <NewAnswers
         gender={this.state.gender}
         isRtl={this.props.isRtl}
+        answers={answers}
         onGoToStepByTitle={this.goToStepByTitle}
         onResetInputs={this.resetInputs}
         onSetInput={this.setInput}
         onNext={this.next}
-        noBack={idx === 0}
+        noBack={this.state.currentStep === 0}
       />
     )
   }
@@ -129,12 +125,14 @@ ${step.description}
 
   inputsChange = id => evt => this.setState({ [id]: evt.target.value })
 
-  resetInputs = (...inputIdsToReset) => {
-    inputIdsToReset.forEach(id => this.setState({ [`input${id}`]: '' }))
-  }
+  resetInputs = inputIdsToReset => inputIdsToReset.forEach(id => this.setState({ [id]: '' }))
 
   setInput = (id, value) => {
     this.setState({ [id]: value })
   }
 }
 export default Steps
+
+function replaceVars(str, state) {
+  return str.replace(/\${(.*?)}/g, (...args) => state[args[1]])
+}

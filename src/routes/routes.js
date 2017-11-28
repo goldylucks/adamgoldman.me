@@ -39,7 +39,7 @@ const routes = {
       load: () => import(/* webpackChunkName: 'brainTools' */ './brainTools'),
     },
     {
-      path: '/tool-wizard',
+      path: '/tool-generator/:tool',
       load: () => import(/* webpackChunkName: 'brainToolGenerator' */ './brainToolGenerator'),
     },
     {

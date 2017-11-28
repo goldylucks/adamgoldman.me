@@ -1,4 +1,5 @@
 import React from 'react'
+import axios from 'axios'
 
 import BrainTool from './BrainTool'
 import BrainToolNew from './BrainToolNew'
@@ -19,7 +20,17 @@ const toolToRefactor = [
 ]
 
 async function action({ params }) {
-  let tool = await import(`../../brainTools/${params.tool}.js`)
+  if (params.tool.match(/EXP/)) {
+    const { data } = await axios.get(`/api/tools/${params.tool.replace('EXP', '')}`)
+    return {
+      title: data.title,
+      description: data.description,
+      path: `/tools/${params.tool}`,
+      component: <BrainToolNew tool={data} />,
+    }
+  }
+
+  const tool = await import(`../../brainTools/${params.tool}.js`)
     .catch((error) => {
       if (error.message.startsWith('Cannot find module')) {
         console.error(`module ${params.tool} does not exists`) // eslint-disable-line no-console
@@ -28,14 +39,9 @@ async function action({ params }) {
       throw error // loading chunk failed (render error page)
     })
   if (!tool) return null // go to next route (or render 404)
-  let Comp = toolToRefactor.includes(params.tool)
+  const Comp = toolToRefactor.includes(params.tool)
     ? BrainToolDEPRECATED
     : BrainTool
-
-  if (params.tool === 'trauma-new') {
-    Comp = BrainToolNew
-    tool = tool.default
-  }
 
   return {
     title: tool.title,

@@ -1,15 +1,23 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd'
 import axios from 'axios'
 
 import { inputChange, inputToggle } from '../../forms'
+import { reorder } from '../../utils'
 
 import s from './BrainToolGenerator.css'
 
 class BrainToolGenerator extends React.Component {
+  static propTypes = {
+    data: PropTypes.any.isRequired,
+    url: PropTypes.string.isRequired,
+  }
+
   state = {
-    url: '',
     initialState: {},
+    isDraft: false,
     title: '',
     description: '',
     nick: '',
@@ -18,21 +26,42 @@ class BrainToolGenerator extends React.Component {
     steps: [],
   }
 
-  componentDidMount() {
-    const state = localStorage.getItem('generatorState')
-    if (state) {
-      this.setState(JSON.parse(state)) // eslint-disable-line react/no-did-mount-set-state
+  componentWillMount() {
+    if (this.props.data) {
+      this.setState(this.props.data)
     }
   }
 
   render() {
-    const {
-      title, nick, description, isRtl, credits, url,
-    } = this.state
     return (
       <div className="main-layout relative">
         <h1>Details</h1>
-        <input className="input" placeholder="url" value={url} onChange={inputChange.call(this, 'url')} />
+        {this.renderDetails()}
+
+        <hr />
+
+        <h1>Steps</h1>
+        {this.renderStepsTOC()}
+
+        <hr />
+
+        {this.renderSteps()}
+
+        <a onClick={this.addStep}>+ Step</a>
+
+        <div className={s.controls}>
+          <a className={s.control} onClick={this.export}>+</a>
+        </div>
+      </div>
+    )
+  }
+
+  renderDetails() {
+    const {
+      title, nick, description, isRtl, credits, isDraft,
+    } = this.state
+    return (
+      <div>
         <input className="input" placeholder="title" value={title} onChange={inputChange.call(this, 'title')} />
         <input className="input" placeholder="nick" value={nick} onChange={inputChange.call(this, 'nick')} />
         <input className="input" placeholder="description" value={description} onChange={inputChange.call(this, 'description')} />
@@ -41,36 +70,50 @@ class BrainToolGenerator extends React.Component {
           <input type="checkbox" id="isRtl" value={isRtl} checked={isRtl} onChange={inputToggle.call(this, 'isRtl')} />
           <label htmlFor="isRtl">RTL</label>
         </div>
-
-        <hr />
-
-        <h1>Steps</h1>
-        {this.renderStepsTOC()}
-        {this.renderSteps()}
-
-        <a onClick={this.addStep}>+ Step</a>
-
-        <div className={s.controls}>
-          <a className={s.control} onClick={this.export}>+</a>
-          <a className={s.control} onClick={this.saveToLocalstorage}>S</a>
-          <a className={s.control} onClick={this.RemoveFromLocalstorage}>D</a>
+        <div>
+          <input type="checkbox" id="isDraft" value={isDraft} checked={isDraft} onChange={inputToggle.call(this, 'isDraft')} />
+          <label htmlFor="isDraft">Draft</label>
         </div>
       </div>
     )
   }
-
   renderStepsTOC() {
     const stepsCount = this.state.steps.length - 1
     return (
       <div>
         <h2>TOC</h2>
-        <ul>
-          {this.state.steps.map(({ title }, idx) => (
-            <li>
-              <a href={`#step-${idx}`}>Step {(idx <= 9 && stepsCount > 9) ? `0${idx}` : idx}/{stepsCount}</a> - {title}
-            </li>
-          ))}
-        </ul>
+        <DragDropContext onDragEnd={this.onDragEnd}>
+          <Droppable droppableId="droppable">
+            {(provided, snapshot) => (
+              <div
+                ref={provided.innerRef}
+                style={getListStyle(snapshot.isDraggingOver)}
+              >
+                {this.state.steps.map(({ title }, idx) => (
+                  <Draggable key={idx} draggableId={idx}>
+                    {(providedInner, snapshotInner) => (
+                      <div>
+                        <div
+                          key={idx}
+                          ref={providedInner.innerRef}
+                          style={getItemStyle(
+                            providedInner.draggableStyle,
+                            snapshotInner.isDragging,
+                          )}
+                          {...providedInner.dragHandleProps}
+                        >
+                          - <a onClick={evt => evt.stopPropagation()} href={`#step-${idx}`}>Step {(idx <= 9 && stepsCount > 9) ? `0${idx}` : idx}/{stepsCount}</a> - {title}
+                        </div>
+                        {providedInner.placeholder}
+                      </div>
+                    )}
+                  </Draggable>
+                ))}
+                {provided.placeholder}
+              </div>
+            )}
+          </Droppable>
+        </DragDropContext>
       </div>
     )
   }
@@ -85,11 +128,6 @@ class BrainToolGenerator extends React.Component {
 
         <div className={s.stepSection}>
           <label>Title</label>
-          <div>
-            <input type="checkbox" id={`step-${idx}-hasDynamicTitle`} value={step.hasDynamicTitle} checked={step.hasDynamicTitle} onChange={this.toggleStepKey('hasDynamicTitle', idx)} />
-            <label htmlFor={`step-${idx}-hasDynamicTitle`}>Dynamic</label>
-            {step.hasDynamicTitle && <input placeholder="var1, var2 ..." value={step.titleDynamics} onChange={this.changeStepKey('titleDynamics', idx)} />}
-          </div>
           <input className={`input ${s.input}`} placeholder="title" value={step.title} onChange={this.changeStepKey('title', idx)} />
         </div>
 
@@ -152,13 +190,30 @@ class BrainToolGenerator extends React.Component {
               </div>
 
             </div>
-            <hr className={s.answersHr} />
+            { step.answers.length - 1 > aIdx && <hr className={s.answersHr} />}
           </div>
           ))}
         <hr />
       </div>
     ),
     )
+  }
+
+  onDragEnd = (result) => {
+    // dropped outside the list
+    if (!result.destination) {
+      return
+    }
+
+    const steps = reorder(
+      this.state.steps,
+      result.source.index,
+      result.destination.index,
+    )
+
+    this.setState({
+      steps,
+    })
   }
 
   removeStep = idx => () => {
@@ -171,8 +226,6 @@ class BrainToolGenerator extends React.Component {
     const nextSteps = [...this.state.steps]
     nextSteps.push({
       title: '',
-      hasDynamicTitle: false,
-      titleDynamics: '',
       description: '',
       hasInput: false,
       inputId: '',
@@ -230,40 +283,23 @@ class BrainToolGenerator extends React.Component {
     this.setState({ steps: nextSteps })
   }
 
-  export = () => {
+  export = async () => {
     const state = { ...this.state }
-    addDynamicSupport(state)
+    state.url = this.props.url
     cleanEmptyValues(state)
     addInputsToInitialState(state)
-    axios.post('/api/tools/', state)
-      .then((response) => {
-        console.log(response)
-      })
-      .catch((error) => {
-        console.log(error)
-      })
-  }
-
-  saveToLocalstorage = () => {
-    localStorage.setItem('generatorState', JSON.stringify(this.state, null, 2))
-  }
-
-  RemoveFromLocalstorage = () => {
-    localStorage.removeItem('generatorState')
+    await axios.post('/api/tools/', state)
   }
 }
 
 export default withStyles(s)(BrainToolGenerator)
 
 function cleanEmptyValues(state) {
-  /* eslint-disable no-param-reassign */
   if (!state.isRtl) { delete state.isRtl }
   // clear empty values
   state.steps = state.steps.map((step) => {
     if (!step.inputId) { delete step.inputId }
     if (!step.inputPlaceholder) { delete step.inputPlaceholder }
-    delete step.hasDynamicTitle
-    delete step.titleDynamics
 
     step.answers = step.answers.map((a) => {
       delete a.hasResetInputs
@@ -290,11 +326,24 @@ function addInputsToInitialState(state) {
   state.steps.filter(step => step.inputId).forEach((step) => { state.initialState[step.inputId] = '' })
 }
 
-function addDynamicSupport(state) {
-  state.steps = state.steps.map((step) => {
-    if (step.hasDynamicTitle) {
-      step.title = new Function(`{ ${step.titleDynamics} }`, `return ${step.title}`) // eslint-disable-line no-new-func
-    }
-    return step
-  })
+const grid = 2
+
+function getItemStyle(draggableStyle, isDragging) {
+  return {
+    // some basic styles to make the items look a bit nicer
+    userSelect: 'none',
+    padding: grid * 2,
+    margin: `0 0 ${grid}px 0`,
+    // change background colour if dragging
+    background: isDragging ? 'lightgreen' : 'grey',
+    // styles we need to apply on draggables
+    ...draggableStyle,
+  }
+}
+
+function getListStyle(isDraggingOver) {
+  return {
+    background: isDraggingOver ? 'lightblue' : 'lightgrey',
+    padding: grid,
+  }
 }

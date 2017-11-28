@@ -3,7 +3,7 @@
 import React from 'react'
 
 import Link from '../../../components/Link'
-import FbShareButton from '../../../components/FbShareButton'
+import FbShareLink from '../../../components/FbShareLink'
 import he from '../../../he'
 
 type Props = {
@@ -25,7 +25,7 @@ Props) => (
     {answers && answers.map((answer, idx) => {
       let html
       if (answer.isFbShare) {
-        html = <FbShareButton>I want more to experience this</FbShareButton>
+        html = <FbShareLink>I want more to experience this</FbShareLink>
       } else if (answer.link) {
         html = <Link to={answer.link}>{answer.text}</Link>
       } else {

@@ -1,9 +1,11 @@
+import { isAdmin } from '../../auth'
+
 import controller from './toolsController'
 
 const router = require('express').Router()
 
 router.route('/')
-  .post(controller.createItem)
+  .post(isAdmin, controller.updateOrCreate)
 
 router.route('/:url')
   .get(controller.getByUrl)
