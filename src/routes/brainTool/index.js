@@ -1,6 +1,8 @@
 import React from 'react'
+import axios from 'axios'
 
 import BrainTool from './BrainTool'
+import BrainToolNew from './BrainToolNew'
 import BrainToolDEPRECATED from './BrainToolDEPRECATED'
 
 const toolToRefactor = [
@@ -18,8 +20,17 @@ const toolToRefactor = [
 ]
 
 async function action({ params }) {
+  if (params.tool.match(/EXP/)) {
+    const { data } = await axios.get(`/api/tools/${params.tool.replace('EXP', '')}`)
+    return {
+      title: data.title,
+      description: data.description,
+      path: `/tools/${params.tool}`,
+      component: <BrainToolNew tool={data} />,
+    }
+  }
+
   const tool = await import(`../../brainTools/${params.tool}.js`)
-    // .then(module => module) // use an object from `export default`
     .catch((error) => {
       if (error.message.startsWith('Cannot find module')) {
         console.error(`module ${params.tool} does not exists`) // eslint-disable-line no-console
@@ -31,6 +42,7 @@ async function action({ params }) {
   const Comp = toolToRefactor.includes(params.tool)
     ? BrainToolDEPRECATED
     : BrainTool
+
   return {
     title: tool.title,
     description: tool.description,

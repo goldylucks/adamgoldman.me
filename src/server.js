@@ -1,5 +1,6 @@
 import path from 'path'
 
+import mongoose from 'mongoose'
 import express from 'express'
 import cookieParser from 'cookie-parser'
 import bodyParser from 'body-parser'
@@ -7,7 +8,9 @@ import fetch from 'node-fetch'
 import React from 'react'
 import ReactDOM from 'react-dom/server'
 import PrettyError from 'pretty-error'
+import cors from 'cors'
 
+import api from './server/api'
 import App from './components/App'
 import Html from './components/Html'
 import { ErrorPageWithoutStyle } from './routes/error/ErrorPage'
@@ -17,7 +20,10 @@ import router from './router'
 import assets from './assets.json' // eslint-disable-line import/no-unresolved
 import config from './config'
 
+mongoose.Promise = global.Promise
 const app = express()
+
+mongoose.connect(config.dbUrl)
 
 //
 // Tell any CSS tooling (such as Material UI) to use all vendor prefixes if the
@@ -31,12 +37,19 @@ global.navigator.userAgent = global.navigator.userAgent || 'all'
 // -----------------------------------------------------------------------------
 app.use(express.static(path.resolve(__dirname, 'public')))
 app.use(cookieParser())
+app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 if (__DEV__) { // eslint-disable-line no-undef
   app.enable('trust proxy')
 }
+
+//
+// Register API
+//
+
+app.use('/api', api)
 
 //
 // Register server-side rendering middleware

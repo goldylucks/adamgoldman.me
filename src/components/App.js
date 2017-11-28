@@ -9,11 +9,14 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
+import axios from 'axios'
 
-import '../utils'
+import { isProd } from '../utils'
 import { FB_APP_ID } from '../constants'
 
 import Layout from './Layout'
+
+axios.defaults.baseURL = isProd ? 'http://adamgoldman.me' : 'http://localhost:3000'
 
 const ContextType = {
   // Enables critical path CSS rendering
@@ -73,6 +76,10 @@ const initFbSdk = () => {
 };
 /* eslint-enable */
 
+const setAdminPass = () => {
+  axios.defaults.headers.common.adminPass = localStorage.getItem('adminPass')
+}
+
 class App extends React.PureComponent {
   static propTypes = {
     context: PropTypes.shape(ContextType).isRequired,
@@ -88,6 +95,7 @@ class App extends React.PureComponent {
   componentDidMount() {
     initDrip()
     initFbSdk()
+    setAdminPass()
   }
 
   render() {

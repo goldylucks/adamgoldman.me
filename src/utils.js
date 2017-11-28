@@ -1,14 +1,14 @@
 import cloudinary from 'cloudinary-core'
 
-/* eslint-disable */
+/* eslint-disable no-extend-native,func-names */
 String.prototype.capitalize = function () {
-  return this[0].toUpperCase() + this.substr(1).toLowerCase();
+  return this[0].toUpperCase() + this.substr(1).toLowerCase()
 }
 
 Array.prototype.last = function () {
-  return this[this.length - 1];
+  return this[this.length - 1]
 }
-/* eslint-enable */
+/* eslint-enable no-extend-native */
 
 const cloudinaryCore = new cloudinary.Cloudinary({ cloud_name: 'goldylucks' })
 
@@ -24,7 +24,7 @@ export const scrollToElem = (element, to, duration) => {
   const perTick = difference / duration * 10
 
   setTimeout(() => {
-    // eslint-disable-next-line no-param-reassign, operator-assignment
+    // eslint-disable-next-line operator-assignment
     element.scrollTop = element.scrollTop + perTick
     if (element.scrollTop === to) return
     scrollToElem(element, to, duration - 10)
@@ -95,3 +95,11 @@ export const parseFbConversation = arrOfMsgs =>
     .join('')
 
 export const comment = md => ({ author: 'comment', md })
+
+export const reorder = (list, startIndex, endIndex) => {
+  const result = Array.from(list)
+  const [removed] = result.splice(startIndex, 1)
+  result.splice(endIndex, 0, removed)
+
+  return result
+}

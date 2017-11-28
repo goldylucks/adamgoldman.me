@@ -59,6 +59,10 @@ ol {
   direction: rtl;
 }
 
+.relative {
+  position: relative;
+}
+
 /* slide menu */
 .cbp-spmenu {
   background: #595762;

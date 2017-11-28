@@ -1,0 +1,43 @@
+.input {
+  margin-top: 0;
+}
+
+.stepHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inputHalf {
+  width: 50%;
+  display: inline-block;
+}
+
+.stepSection {
+  margin-bottom: 20px;
+}
+
+.answersHr {
+  margin: 15px 5px !important;
+}
+
+.controls {
+  position: fixed;
+  bottom: 20px;
+  right: 39%;
+  display: flex;
+  flex-direction: row;
+}
+
+.control {
+  border: 1px solid #1a7ced;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 50%;
+}
+
+
