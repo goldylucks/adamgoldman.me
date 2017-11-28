@@ -77,7 +77,7 @@ const initFbSdk = () => {
 /* eslint-enable */
 
 const setAdminPass = () => {
-  axios.defaults.headers.common.adminPass = localStorage.getItem('adminPass')
+  axios.defaults.headers.common['admin-pass'] = localStorage.getItem('adminPass')
 }
 
 class App extends React.PureComponent {

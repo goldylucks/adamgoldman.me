@@ -3,7 +3,15 @@ import mongoose from 'mongoose'
 const { Schema } = mongoose
 const ToolsSchema = getSchema()
 
-export default mongoose.model('tools', ToolsSchema)
+export default (function toolsModel() {
+  let tools
+  try {
+    tools = mongoose.model('tools')
+  } catch (error) {
+    tools = mongoose.model('tools', ToolsSchema)
+  }
+  return tools
+}())
 
 function getSchema() {
   return new Schema({

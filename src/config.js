@@ -27,7 +27,7 @@ module.exports = {
       `http://localhost:${process.env.PORT || 3000}`,
   },
 
-  adminPass: process.env.ADMIN_PASS,
+  adminPass: process.env.ADMIN_PASS || 'foo',
 
   dbUrl: process.env.MONGODB_URI || 'mongodb://localhost/adamgoldman',
   // Web analytics
