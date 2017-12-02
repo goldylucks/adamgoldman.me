@@ -50,6 +50,11 @@ class TraumaRelief extends React.Component {
             />
 
             <Testimony
+              text="Thank you, this was very nice. I can see this helping at a time of great need. If memories are haunting, emotions pushing down, doing this really helps"
+              name="Lorenzo Diamond, yelled at for 3 hours straight at age 4.5"
+            />
+
+            <Testimony
               imgSrc="https://scontent.fmad3-4.fna.fbcdn.net/v/t1.0-1/p50x50/22780443_10212203257589618_2502826521621293084_n.jpg?oh=580f8f1e363f8c8317173dd0bf07872f&oe=5AD5A23B"
               text="Any negative feeling I have he helps me squash it before it becomes a problem. He has helped me overcome my anxieties one by one, my ptsd that my councillor failed with. I look forward to seeing whats next. Seriously guys give Adam a go, you have nothing to loose and everything to gain"
               name="Tamar Herbert, former PTSD sufferer"
