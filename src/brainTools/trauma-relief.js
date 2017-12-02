@@ -5,6 +5,7 @@
 import React from 'react'
 
 import Link from '../components/Link'
+import Testimony from '../components/Testimony'
 import FbShareLink from '../components/FbShareLink'
 import Markdown from '../components/Markdown'
 import HowItsGoingToWorkStep from '../routes/brainTool/components/HowItsGoingToWorkStep'
@@ -42,6 +43,18 @@ class TraumaRelief extends React.Component {
       <div>
         {[
           <div>
+            <Testimony
+              imgSrc="https://scontent.fmad3-4.fna.fbcdn.net/v/t1.0-1/p50x50/22852018_10155160350728379_1394566735044658139_n.jpg?oh=57414f3649e2f9a526776e8a6be6d521&oe=5AC94334"
+              text="I feel good. Its like it wasn't what it was? ... And I've tried so many times to play it back, make sense of it. See whether I did make it happen if it was my fault. If I remember it right. To suddenly feel this way is incredible ...  It's quite a rewind!"
+              name="Julianne Barley, raped at 15"
+            />
+
+            <Testimony
+              imgSrc="https://scontent.fmad3-4.fna.fbcdn.net/v/t1.0-1/p50x50/22780443_10212203257589618_2502826521621293084_n.jpg?oh=580f8f1e363f8c8317173dd0bf07872f&oe=5AD5A23B"
+              text="Any negative feeling I have he helps me squash it before it becomes a problem. He has helped me overcome my anxieties one by one, my ptsd that my councillor failed with. I look forward to seeing whats next. Seriously guys give Adam a go, you have nothing to loose and everything to gain"
+              name="Tamar Herbert, former PTSD sufferer"
+            />
+
             <Markdown
               className="tool-text"
               source={`

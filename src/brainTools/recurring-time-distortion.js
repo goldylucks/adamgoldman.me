@@ -5,6 +5,7 @@
 import React from 'react'
 
 import Link from '../components/Link'
+import Testimony from '../components/Testimony'
 import FbShareLink from '../components/FbShareLink'
 import Markdown from '../components/Markdown'
 import HowItsGoingToWorkStep from '../routes/brainTool/components/HowItsGoingToWorkStep'
@@ -33,6 +34,11 @@ class RecurringTimeDistortion extends React.Component {
       <div>
         {[
           <div>
+            <Testimony
+              imgSrc="https://scontent.fmad3-4.fna.fbcdn.net/v/t1.0-1/p50x50/22852018_10155160350728379_1394566735044658139_n.jpg?oh=57414f3649e2f9a526776e8a6be6d521&oe=5AC94334"
+              text="That was amazing. I have this thing like going into a party or gathering of people where I'm self conscious and stressed and wired and feeling like I don't want to be there I want to just hide. I no longer felt stressed. I don't have the same feels of dred. Feels like I'm in control of making it ok."
+              name="Julianne Barley, no longer dreading social gatherings"
+            />
             <Markdown
               className="tool-text"
               source={`

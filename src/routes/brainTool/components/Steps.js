@@ -50,14 +50,17 @@ class Steps extends React.Component {
 
   renderContent(step) {
     return (
-      <Markdown
-        className={!this.props.isRtl ? '' : 'rtl'}
-        source={`
+      <div>
+        {step.preDescriptionHtml}
+        <Markdown
+          className={!this.props.isRtl ? '' : 'rtl'}
+          source={`
 ${!step.title ? '' : `## ${step.title}`}
 
 ${step.description(this.state)}
-`}
-      />
+            `}
+        />
+      </div>
     )
   }
 

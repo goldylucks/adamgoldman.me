@@ -4,6 +4,7 @@
 import React from 'react'
 
 import Link from '../components/Link'
+import Testimony from '../components/Testimony'
 import FbShareLink from '../components/FbShareLink'
 import Markdown from '../components/Markdown'
 import Answers from '../routes/brainTool/components/Answers'
@@ -71,6 +72,11 @@ class GriefToAppreciation extends React.Component {
       <div>
         {[
           <div>
+            <Testimony
+              imgSrc="https://scontent.fmad3-4.fna.fbcdn.net/v/t1.0-1/p50x50/22852018_10155160350728379_1394566735044658139_n.jpg?oh=57414f3649e2f9a526776e8a6be6d521&oe=5AC94334"
+              text="Significant and relaxing and tranquil ... when I think of mum now, I always have these good feelings with it 🙂 ... Experiencing feelings I wouldn't have been able to find when thinking of them! So that's pretty revolutionary to me"
+              name="Julianne Barley, both parents died at early age"
+            />
             <Markdown
               className="tool-text"
               source={`

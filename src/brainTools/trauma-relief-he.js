@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Link from '../components/Link'
+import Testimony from '../components/Testimony'
 import FbShareLink from '../components/FbShareLink'
 import he from '../he'
 
@@ -24,6 +25,22 @@ export const initialState = {
 export const steps = [
   {
     title: 'מגדר',
+    preDescriptionHtml: (
+      <div>
+        <Testimony
+          isRtl
+          imgSrc="https://scontent.fmad3-4.fna.fbcdn.net/v/t1.0-1/c0.0.50.50/p50x50/21432798_1596784173712528_8021548721668961597_n.jpg?oh=5adc2e0e5eeebb9c76f9dba2b2d58924&oe=5AC7A069"
+          name="דורה טליאס, מאובחנת עם סרטן השד"
+          text="מדהים!!!
+כל כך פשוט ואפקטיבי.. תוך חצי שעה בערך מזכרון עצוב.. מאוכזב.. כועס.. הפך להיות לזכרון מצחיק ללא שום חשיבות ומשמעות..תנו לעצמכם את המתנה הזו.."
+        />
+        <Testimony
+          isRtl
+          imgSrc="https://scontent.fmad3-4.fna.fbcdn.net/v/t1.0-1/p50x50/23032652_1966225826726443_6316139551781794369_n.jpg?oh=07cdaa0939e6d3768164e5a630b1e273&oe=5A93A2C6"
+          text="יותר אפקטיבי מ8 שנים טיפול פסיכולוגי"
+          name="רותם אלישע, חוותה אונס במשך כמה שנים"
+        />
+      </div>),
     description: () => `
 אהלן! אדם כאן, אני ופרצופי איתך בכל שלב, ותמיד [כאן](FB_MESSAGE) לשאלות :)
 
