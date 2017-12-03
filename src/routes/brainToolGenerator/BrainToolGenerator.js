@@ -283,12 +283,14 @@ class BrainToolGenerator extends React.Component {
     this.setState({ steps: nextSteps })
   }
 
-  export = async () => {
+  export = () => {
     const state = { ...this.state }
     state.url = this.props.url
     cleanEmptyValues(state)
     addInputsToInitialState(state)
-    await axios.post('/api/tools/', state)
+    axios.post('/api/tools/', state)
+      .then(res => console.log('saved!', res.data))
+      .catch(err => console.error(err))
   }
 }
 
