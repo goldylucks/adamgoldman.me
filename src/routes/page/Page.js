@@ -10,6 +10,7 @@ import Ending from '../../components/Ending'
 import BreadCrumbs from '../../components/BreadCrumbs'
 import FbShareButton from '../../components/FbShareButton'
 import FbComments from '../../components/FbComments'
+import Tags from '../../components/Tags'
 
 type Props = {
   title: string,
@@ -36,15 +37,9 @@ Props) => (
         <FbShareButton />
       </div>
       <h1 className="main-title">{title}</h1>
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <p className="post-tags">{tags.join(', ')}</p>
-      </div>
+      <Tags tags={tags} />
       <Markdown className="post-text" source={body} />
-      {html && (
-        // eslint-disable-next-line react/no-danger
-        <div dangerouslySetInnerHTML={{ __html: html }} />
-      )}
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      {html}
       <FbPageBox style={{ display: 'block', textAlign: 'center' }} />
       <hr />
       <div style={{ marginBottom: 20 }}>
