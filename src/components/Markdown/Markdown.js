@@ -19,7 +19,7 @@ const Markdown = props => (
               return <FbReview review={linkProps.children} />
             }
 
-            if (linkProps.href.match(/adam|other/)) {
+            if (linkProps.href.match(/^adam$|^other$/)) {
               const href = linkProps.children[1]
               if (href && href.includes && href.includes('://')) {
                 return (
