@@ -20,7 +20,7 @@ As that echos through your mind, **get ready for** a healthy dose of **cognitive
 * [Avoid meetings like the plague](/blog/avoid-meetings-like-the-plague/)
 * [Teaching is intoxicating](/blog/my-teaching-history/)! My greatest passion for 20+ years
 * [Kiss and eat with the mouth, don't exhale](/blog/nose-breathers-unite/)
-* [Open source EVERYTHING](/post/open-source/)
+* [Open source EVERYTHING](/open-source/)
 * [Life long traumas](/blog/rachels-abusive-parody-theater/) and [bad habits](/blog/dan-the-venus-guy-part-1-2/) can be cleared faster than you think
 * Kids learn fast, and teach faster, but not [as fast as you will](/book-me/)
 * Bitcoin - [Claim your funds](/blog/bitcoin-first-steps/), or the bankers will do it for you.

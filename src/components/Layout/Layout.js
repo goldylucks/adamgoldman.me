@@ -4,11 +4,11 @@ import React from 'react'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
 
 import Footer from '../Footer'
+import Link from '../Link'
 import Menu from '../Menu'
 import Brand from '../Brand'
 import GlobalSearch from '../GlobalSearch'
 import MessengerFixed from '../MessengerFixed'
-import SidebarSignupForm from '../SidebarSignupForm'
 
 import s from './Layout.css'
 
@@ -27,7 +27,7 @@ const Layout = ({ children }: Props) => (
     <aside className={s.sidebar}>
       <Menu />
       <Brand />
-      <SidebarSignupForm />
+      <Link to="/stay-ahead" className={s.stayAhead}>Get cool stuff!</Link>
     </aside>
   </div>
 )
