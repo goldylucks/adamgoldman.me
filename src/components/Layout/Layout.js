@@ -27,7 +27,7 @@ const Layout = ({ children }: Props) => (
     <aside className={s.sidebar}>
       <Menu />
       <Brand />
-      <Link to="/stay-ahead" className={s.stayAhead}>Get cool stuff!</Link>
+      <Link to="/stay-ahead" className={s.stayAhead}>Stay Ahead</Link>
     </aside>
   </div>
 )
