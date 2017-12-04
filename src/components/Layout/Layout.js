@@ -9,6 +9,7 @@ import Menu from '../Menu'
 import Brand from '../Brand'
 import GlobalSearch from '../GlobalSearch'
 import MessengerFixed from '../MessengerFixed'
+import { BigScreen } from '../Responsive'
 
 import s from './Layout.css'
 
@@ -27,7 +28,9 @@ const Layout = ({ children }: Props) => (
     <aside className={s.sidebar}>
       <Menu />
       <Brand />
-      <Link to="/stay-ahead" className={s.stayAhead}>Stay Ahead</Link>
+      <BigScreen>
+        <Link to="/stay-ahead" className={s.stayAhead}>Stay Ahead</Link>
+      </BigScreen>
     </aside>
   </div>
 )
