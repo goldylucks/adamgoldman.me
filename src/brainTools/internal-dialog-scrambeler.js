@@ -7,7 +7,7 @@ import React from 'react'
 import Link from '../components/Link'
 import FbShareLink from '../components/FbShareLink'
 import Markdown from '../components/Markdown'
-import Answers from '../routes/brainTool/components/Answers'
+import AnswersV2 from '../routes/brainTool/components/Answers-v2'
 import HowItsGoingToWorkStep from '../routes/brainTool/components/HowItsGoingToWorkStep'
 import type { Props } from '../routes/brainTool/components/toolPageProps'
 
@@ -92,7 +92,7 @@ So there are some things you say to yourself over and over that don't make you f
 and before we turn this around you might wonder ...                 
             `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               noBack
               answers={[
@@ -116,7 +116,7 @@ and before we turn this around you might wonder ...
               />
               <button className="button">Let&apos;s continue</button>
             </form>
-            <Answers
+            <AnswersV2
               onNext={onNext}
             />
           </div>,
@@ -132,7 +132,7 @@ So the phrase you have said to yourself is,
 When you have said this to yourself, do you say it in your normal conversational speaking voice, or is it said at a faster tempo? 
             `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 { text: 'normal tempo', onClick: onNext },
@@ -158,7 +158,7 @@ say this phrase exactly as you have done to date and notice how you feel in resp
                 Done describing to date
               </button>
             </form>
-            <Answers
+            <AnswersV2
               onNext={onNext}
             />
           </div>,
@@ -195,7 +195,7 @@ ${doneFlashing
             <div
               style={doneFlashing ? { display: 'block' } : { display: 'none' }}
             >
-              <Answers
+              <AnswersV2
                 onNext={onNext}
                 answers={[
                   {
@@ -227,7 +227,7 @@ Describe the difference between the way you used to say it to yourself until now
                 Done describing the difference
               </button>
             </form>
-            <Answers
+            <AnswersV2
               onNext={onNext}
             />
           </div>,
@@ -266,7 +266,7 @@ ${doneFlashingSlower
                 doneFlashingSlower ? { display: 'block' } : { display: 'none' }
               }
             >
-              <Answers
+              <AnswersV2
                 onNext={onNext}
                 answers={[
                   { text: "that's even better", onClick: onNext },
@@ -294,7 +294,7 @@ Describe the difference between the way you used to say it to yourself until now
                 Done describing the difference
               </button>
             </form>
-            <Answers onNext={onNext} />
+            <AnswersV2 onNext={onNext} />
           </div>,
           <div>
             <Markdown
@@ -303,7 +303,7 @@ Describe the difference between the way you used to say it to yourself until now
 as you try now to think of this as you used to, what are you noticing that is different?
             `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 { text: "it's ridiculous now", onClick: onNext },
@@ -320,7 +320,7 @@ as you try now to think of this as you used to, what are you noticing that is di
 Isn't it interesting you can learn to learn to use your brain for a change you want so fast? 
             `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 <FbShareLink>

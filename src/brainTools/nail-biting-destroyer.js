@@ -7,7 +7,7 @@ import React from 'react'
 import Link from '../components/Link'
 import FbShareLink from '../components/FbShareLink'
 import Markdown from '../components/Markdown'
-import Answers from '../routes/brainTool/components/Answers'
+import AnswersV2 from '../routes/brainTool/components/Answers-v2'
 import type { Props } from '../routes/brainTool/components/toolPageProps'
 
 export const tags = ['Nail Biting']
@@ -51,7 +51,7 @@ So ...
 been biting your nails for too long eh?
             `}
             />
-            <Answers
+            <AnswersV2
               noBack
               onNext={onNext}
               answers={[
@@ -80,7 +80,7 @@ I know it might seem ridiculous,
 but this works extremely well if (and only if) you will not miss this old behavior.
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 {
@@ -136,7 +136,7 @@ We'll use it soon.
 `}
             />
 
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 { onClick: onNext, text: 'blah! me not like this image' },
@@ -161,7 +161,7 @@ but at the moment ${heShe} seems grounded, balanced, and happy.
 know what I'm talking about?
             `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 { onClick: onNext, text: 'yes I do!' },
@@ -184,7 +184,7 @@ to whom nail biting is no longer an issue
 Got it?
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 { onClick: onNext, text: 'yes, I see my evolved version' },
@@ -208,7 +208,7 @@ It's just you, without anything else in there.
 Got it?
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 {
@@ -234,7 +234,7 @@ so you feel DRAWN to that image of yourself
 Got it?
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 {
@@ -266,7 +266,7 @@ Got it?
 `}
             />
 
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 {
@@ -295,7 +295,7 @@ and place it somewhere conspicious you cannot miss.
 Got it?
           `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 {
@@ -345,7 +345,7 @@ Set ...
 Done?
           `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 { onClick: onNext, text: 'Yea this is cool!' },
@@ -379,7 +379,7 @@ GO!
 `}
             />
 
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 { onClick: onNext, text: "Wowwza that's trippy!" },
@@ -402,7 +402,7 @@ Ready?
 GO!
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 { onClick: onNext, text: 'done it 7+ times, this is cool!' },
@@ -422,7 +422,7 @@ and notice what's different than before,
 and if there's any trace of your old behavior.
           `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 {
@@ -453,7 +453,7 @@ now, I have to make sure ...
 Do you want me to revert you back to your old behavior?
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 {
@@ -495,7 +495,7 @@ Let me know when you're done, take your time, I can always work on my patience.
 Done?
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 <FbShareLink>

@@ -27,7 +27,7 @@ const shareWithAdam = () => {
   global.alert('sure, FB or email me!')
 }
 
-class BrainToolDEPRECATED extends React.Component {
+class BrainToolV1 extends React.Component {
   state = {
     currentStep: 0,
     age: '',
@@ -141,4 +141,4 @@ class BrainToolDEPRECATED extends React.Component {
   }
 }
 
-export default BrainToolDEPRECATED
+export default BrainToolV1

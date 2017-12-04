@@ -9,7 +9,7 @@ import Testimony from '../components/Testimony'
 import FbShareLink from '../components/FbShareLink'
 import Markdown from '../components/Markdown'
 import HowItsGoingToWorkStep from '../routes/brainTool/components/HowItsGoingToWorkStep'
-import Answers from '../routes/brainTool/components/Answers'
+import AnswersV2 from '../routes/brainTool/components/Answers-v2'
 import type { Props } from '../routes/brainTool/components/toolPageProps'
 
 const feelWorse = () => {
@@ -77,7 +77,7 @@ Some common examples are:
 In a moment I'll walk you thru a short process but first you're probably wondering ...
 `}
             />
-            <Answers
+            <AnswersV2
               noBack
               answers={[
                 { text: "so how's this going to work Adam?", onClick: onNext },
@@ -156,7 +156,7 @@ Like in youtube where you select the lowest resolution you know?
 Do it now, and let me know when you're done
 `}
             />
-            <Answers
+            <AnswersV2
               answers={[
                 { text: 'Done, ready to continue', onClick: onNext },
               ]}
@@ -180,7 +180,7 @@ So I want you to fast forward the past memory to a similar place, in which you c
 Now, know the sound of fast forwarding a cartoon?
 `}
             />
-            <Answers
+            <AnswersV2
               answers={[
                 {
                   onClick: onNext,
@@ -212,7 +212,7 @@ Great, so here's what I want you to do:
 do it now, and let me know when you're done
 `}
             />
-            <Answers
+            <AnswersV2
               answers={[
                 { onClick: onNext, text: "Done, let's continue" },
                 {
@@ -242,7 +242,7 @@ Soldiers would go back home, kiss their partners, hug their loved ones.
 Did you ever think of that?
 `}
             />
-            <Answers
+            <AnswersV2
               answers={[
                 {
                   onClick: onNext,
@@ -284,7 +284,7 @@ So here are the steps again:
 Close your eyes and do it now, let me know when you're done
 `}
             />
-            <Answers
+            <AnswersV2
               answers={[
                 { onClick: onNext, text: 'Done and done!' },
                 { onClick: onNext, text: 'I ran the memory in reverse' },
@@ -332,7 +332,7 @@ Pick one that makes you feel the best now and do it again like so:
 let me know when you're done, and you're at the beginning of the memory, perfectly safe
 `}
             />
-            <Answers
+            <AnswersV2
               answers={[
                 { onClick: onNext, text: 'Done and done!' },
                 { onClick: onNext, text: "It's even better with the tune!" },
@@ -353,7 +353,7 @@ now, did you ever think about what's bigger or a tree in twelve different colors
 Silly, I know, I just wanted to distract you from a moment before the next piece :)
 `}
             />
-            <Answers
+            <AnswersV2
               answers={[
                 { onClick: onNext, text: 'haha that was funny' },
                 { onClick: onNext, text: 'lol' },
@@ -375,7 +375,7 @@ U might be surprised to find it's not as easy anymore ;)
                 
 `}
             />
-            <Answers
+            <AnswersV2
               answers={[
                 { onClick: onNext, text: 'This is great! I feel good!' },
                 { onClick: feelWorse, text: 'I feel worse' },
@@ -414,7 +414,7 @@ Describe that feeling as vividly as you can
               className="textarea"
               placeholder="I feel good first in my ... and it's like ... and it spreads/flows to ... in the color of ..."
             />
-            <Answers
+            <AnswersV2
               answers={[
                 { onClick: onNext, text: "That's so interesting ..." },
                 {
@@ -438,7 +438,7 @@ Isn't it cool you can learn so fast? [know others](FB_SHARE) that can enjoy that
 or you want to do it again on another memory first?
                 `}
             />
-            <Answers
+            <AnswersV2
               answers={[
                 {
                   onClick: onRestart,

@@ -17,7 +17,7 @@ type Props = {
   onSetInput: Function,
 };
 
-const Answers = ({
+const AnswersV3 = ({
   answers, onNext, onGoToStepByTitle, noBack, isRtl, gender, onResetInputs, onSetInput,
 }:
 Props) => (
@@ -60,7 +60,7 @@ Props) => (
   </div>
 )
 
-Answers.defaultProps = {
+AnswersV3.defaultProps = {
   answers: [],
   gender: 'male',
 }
@@ -92,4 +92,4 @@ function renderDontUnderstand({ isRtl, gender }) {
   )
 }
 
-export default Answers
+export default AnswersV3

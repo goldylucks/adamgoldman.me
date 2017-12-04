@@ -4,9 +4,9 @@ import PropTypes from 'prop-types'
 import Markdown from '../../../components/Markdown'
 import { scrollToElem } from '../../../utils'
 
-import NewAnswers from './NewAnswers'
+import AnswersV2 from './Answers-v2'
 
-class Steps extends React.Component {
+class StepsV2 extends React.Component {
   static propTypes = {
     initialState: PropTypes.object,
     steps: PropTypes.array.isRequired,
@@ -32,51 +32,59 @@ class Steps extends React.Component {
         <h3 style={{ marginBottom: 60 }} className={!isRtl ? '' : 'rtl'}>
           {!isRtl ? 'Step' : 'צעד'} {currentStep}/{steps.length - 1}
         </h3>
-        {this.renderContent()}
-        {this.renderInput()}
-        {this.renderAnswers()}
+        {steps.map((step, idx) => (
+          <div
+            key={step.title}
+            style={
+              idx === currentStep ? { display: 'block' } : { display: 'none' }
+            }
+          >
+            {this.renderContent(step)}
+            {this.renderInput(step.input)}
+            {this.renderAnswers(step.answers, idx)}
+          </div>
+        ))}
       </div>
     )
   }
 
-  renderContent() {
-    const step = this.props.steps[this.state.currentStep]
+  renderContent(step) {
     return (
-      <Markdown
-        className={!this.props.isRtl ? '' : 'rtl'}
-        source={`
-${this.renderTitle()}
+      <div>
+        {step.preDescriptionHtml}
+        <Markdown
+          className={!this.props.isRtl ? '' : 'rtl'}
+          source={`
+${!step.title ? '' : `## ${step.title}`}
 
-${replaceVars(step.description, this.state)}
-`}
-      />
+${step.description(this.state)}
+            `}
+        />
+      </div>
     )
   }
 
-  renderTitle() {
-    const step = this.props.steps[this.state.currentStep]
-    if (!step.title) { return '' }
-    return `## ${replaceVars(step.title, this.state)}`
-  }
-
-  renderInput() {
-    const { inputId, inputPlaceholder } = this.props.steps[this.state.currentStep]
-    if (!inputId) {
+  renderInput(input) {
+    if (!input) {
       return null
     }
     return (
       <form
         onSubmit={(evt) => {
           evt.preventDefault()
+          if (input.onSubmit) {
+            input.onSubmit(this)
+            return
+          }
           this.next()
         }}
         className="tool-form"
       >
         <input
-          value={this.state[`${inputId}`]}
-          onChange={this.inputsChange(inputId)}
+          value={this.state[`input${input.id}`]}
+          onChange={this.inputsChange(input.id)}
           className={`input ${!this.props.isRtl ? '' : 'rtl'}`}
-          placeholder={replaceVars(inputPlaceholder, this.state)}
+          placeholder={typeof input.placeholder === 'function' ? input.placeholder(this.state) : input.placeholder}
           required
         />
         <button className="button">{!this.props.isRtl ? 'Let\'s continue' : 'בוא נמשיך'}</button>
@@ -84,23 +92,23 @@ ${replaceVars(step.description, this.state)}
     )
   }
 
-  renderAnswers() {
-    const answers = this.props.steps[this.state.currentStep].answers.map((answer) => {
-      if (answer.text) {
-        answer.text = replaceVars(answer.text, this.state)
-      }
-      return answer
-    })
+  renderAnswers(answers, idx) {
     return (
-      <NewAnswers
+      <AnswersV2
+        that={this}
         gender={this.state.gender}
         isRtl={this.props.isRtl}
-        answers={answers}
-        onGoToStepByTitle={this.goToStepByTitle}
-        onResetInputs={this.resetInputs}
-        onSetInput={this.setInput}
+        goToStepByTitle={this.goToStepByTitle}
+        answers={
+          typeof answers === 'function'
+            ? answers(this.state, {
+              goToStepByTitle: this.goToStepByTitle,
+              resetInputs: this.resetInputs,
+            })
+            : answers
+        }
         onNext={this.next}
-        noBack={this.state.currentStep === 0}
+        noBack={idx === 0}
       />
     )
   }
@@ -123,16 +131,10 @@ ${replaceVars(step.description, this.state)}
     })
   };
 
-  inputsChange = id => evt => this.setState({ [id]: evt.target.value })
+  inputsChange = id => evt => this.setState({ [`input${id}`]: evt.target.value })
 
-  resetInputs = inputIdsToReset => inputIdsToReset.forEach(id => this.setState({ [id]: '' }))
-
-  setInput = (id, value) => {
-    this.setState({ [id]: value })
+  resetInputs = (...inputIdsToReset) => {
+    inputIdsToReset.forEach(id => this.setState({ [`input${id}`]: '' }))
   }
 }
-export default Steps
-
-function replaceVars(str, state) {
-  return str.replace(/\${(.*?)}/g, (...args) => state[args[1]])
-}
+export default StepsV2

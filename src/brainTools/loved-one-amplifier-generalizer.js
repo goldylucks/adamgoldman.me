@@ -5,7 +5,7 @@
 import React from 'react'
 
 import Markdown from '../components/Markdown'
-import Answers from '../routes/brainTool/components/Answers'
+import AnswersV2 from '../routes/brainTool/components/Answers-v2'
 import ToolsIntro from '../routes/brainTool/components/ToolsIntro'
 import type { Props } from '../routes/brainTool/components/toolPageProps'
 
@@ -35,7 +35,7 @@ Welcome back!
 I am about to show you how to generalize what you've experienced in the [loved ones amplifier](/tools/loved-ones-amplifier/), so if you haven't done it on at least 2 people, [do that first](/tools/loved-ones-amplifier/) and only then come back here.
 `}
             />
-            <Answers
+            <AnswersV2
               noBack
               onNext={onNext}
               answers={[

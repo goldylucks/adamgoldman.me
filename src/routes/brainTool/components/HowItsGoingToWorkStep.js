@@ -3,7 +3,7 @@
 import React from 'react'
 
 import HowItsGoingToWork from './HowItsGoingToWork'
-import Answers from './Answers'
+import AnswersV2 from './Answers-v2'
 
 type Props = {
   onNext: Function,
@@ -12,7 +12,7 @@ type Props = {
 const HowItsGoingToWorkStep = ({ onNext }: Props) => (
   <div>
     <HowItsGoingToWork />
-    <Answers
+    <AnswersV2
       onNext={onNext}
       answers={[
         { text: "Good indeed, let's continue.", onClick: onNext },

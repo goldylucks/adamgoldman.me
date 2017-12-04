@@ -7,7 +7,7 @@ import React from 'react'
 import Link from '../components/Link'
 import FbShareLink from '../components/FbShareLink'
 import Markdown from '../components/Markdown'
-import Answers from '../routes/brainTool/components/Answers'
+import AnswersV2 from '../routes/brainTool/components/Answers-v2'
 import ToolsIntro from '../routes/brainTool/components/ToolsIntro'
 import type { Props } from '../routes/brainTool/components/toolPageProps'
 
@@ -77,7 +77,7 @@ Imagine you could get a certain dose of ecstasy and good feelings as a side effe
 How awesome would that be?
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               noBack
               answers={[
@@ -147,7 +147,7 @@ Now, you know those people you just love to have around?
 Like their mere prenence fills you up with good feelings, sometimes without saying a word, and sometimes with. And at times it's the way they just "are", you know?
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 { text: 'Of course I love those people!', onClick: onNext },
@@ -196,7 +196,7 @@ Great,
 As you think of ${lovedOneHimHer}, do you see ${lovedOneHimHer} looking at you?
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 { text: 'Yes', onClick: onNext },
@@ -213,7 +213,7 @@ As you think of ${lovedOneHimHer}, do you see ${lovedOneHimHer} looking at you?
 Notice how bright is the image of ${lovedOneHimHer} in your mind, and see what happens as you brighten it up a bit, like in a old TV, pressing the button to increase brightness.
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 {
@@ -238,7 +238,7 @@ Brilliant.
 Now go all the way brighter until it's a bit blinding, and then start decreasing it until it's as shiny as it can be without hurting.
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 { text: 'my eyes, my eyes!', onClick: onNext },
@@ -256,7 +256,7 @@ Fantastic.
 Now go the other way around and make it darker, and see what happens. Then make it brighter again, so you find the sweetspot which you feel good the most.
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 { text: 'Sweet spot? Check!', onClick: onNext },
@@ -279,7 +279,7 @@ Great.
 As you look at ${lovedOneHimHer} with this brightness, do you see ${lovedOneHimHer} in B&W or in color?
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 { text: `I see ${lovedOneName} in color`, onClick: onNext },
@@ -298,7 +298,7 @@ Awesome.
 Make the colors richer and as vivid as you can. Just like brightness, go full in, and increase the vividness until it becomes absord, and then start decreasing it.
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 {
@@ -324,7 +324,7 @@ Good.
 Now go the other way around and decrease the colors until it's grayscale / B&W, and then introduce colors again and make them rich and vivid. Like brightness, find the sweetspot for good feelings.
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 {
@@ -350,7 +350,7 @@ You might experienced sometimes watching a video on Youtube or a screen, and hal
 Now look at ${lovedOneName} and increase the quality of the image, set it to maximum quality, so it's crisper and sharper, like the best screen you can imagine.
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 {
@@ -377,7 +377,7 @@ Magnificent.
 Now decrease the resolution and quality all the way down until you can barely recognize ${lovedOneName}, then increase it all the way up again. You might find the maximum quality is now higher than before.
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 {
@@ -401,7 +401,7 @@ Usually it's something in between. Now push the image away all the way into the 
 
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 {
@@ -427,7 +427,7 @@ Usually it's something in between. Now push the image away all the way into the 
 Do you see ${lovedOneName} in a flat image or in 3d?
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 {
@@ -451,7 +451,7 @@ Do you see ${lovedOneName} in a flat image or in 3d?
 Add more and more depth, so you make ${lovedOneName}'s representation as deep and as 3d as you can.
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 {
@@ -478,7 +478,7 @@ Now start decreasing it until it's a flat image, and start adding more and more 
 (yes, you guessed it, find the sweetspot of good emotions. Aren't you intuitive? ;) )
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[letsContinue]}
             />
@@ -495,7 +495,7 @@ Great.
 Now make the image clearer and more focused, as much as you can.
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 {
@@ -522,7 +522,7 @@ Beautiful.
 Now start defocusing and blurrying it until you can barely recognize it's ${lovedOneName}, then increase the focus and clarity again to the max.
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 { text: 'Found the focus sweetspot!', onClick: onNext },
@@ -543,7 +543,7 @@ Is ${lovedOneName} moving as you look at ${lovedOneHimHer} now, or is it a still
 If it's not yet a movie, "press play" so you see ${lovedOneHimHer} moving, and notice if and how much you feel good even more.
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 { text: 'It was already a movie', onClick: onNext },
@@ -567,7 +567,7 @@ Now that it's a movie, do you hear ${lovedOneName} talking to you yet?
 Hear what ${lovedOneHeShe}'s saying and more importantly HOW ${lovedOneHeShe}'s saying it, the tone of ${lovedOneHisHer} voice and the way ${lovedOneHeShe} talks to you.
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 {
@@ -598,7 +598,7 @@ Now try this ...
 As ${lovedOneHeShe} speaks, hear ${lovedOneHimHer} as if the sound would come from all around you, like a sorround effect in a cinema, if there were high quality speakers from all around.
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 { text: "that's so cool!", onClick: onNext },
@@ -619,7 +619,7 @@ Now play with the volume of the experience. Make everything louder, until it's t
 (sweetspot anyone?)
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 {
@@ -648,7 +648,7 @@ Do you like that smell?
 If there's no smell already, add it in and notice if you feel good in a better way with the smell.
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 {
@@ -686,7 +686,7 @@ But don't rush into it! If you only done this on ${lovedOneName}, please hear me
 I will wait for you either way. Promise!
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 {

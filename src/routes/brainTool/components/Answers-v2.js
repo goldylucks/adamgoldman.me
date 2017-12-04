@@ -14,7 +14,7 @@ type Props = {
   that: any,
 };
 
-const Answers = ({
+const AnswersV2 = ({
   answers, onNext, goToStepByTitle, that, noBack, isRtl, gender,
 }:
 Props) => (
@@ -48,7 +48,7 @@ Props) => (
   </div>
 )
 
-Answers.defaultProps = {
+AnswersV2.defaultProps = {
   answers: [],
   gender: 'male',
 }
@@ -80,4 +80,4 @@ function renderDontUnderstand({ isRtl, gender }) {
   )
 }
 
-export default Answers
+export default AnswersV2

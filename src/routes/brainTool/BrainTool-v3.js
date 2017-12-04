@@ -8,13 +8,13 @@ import BreadCrumbs from '../../components/BreadCrumbs'
 import FbShareButton from '../../components/FbShareButton'
 import FbComments from '../../components/FbComments'
 
-import NewSteps from './components/NewSteps'
+import StepsV3 from './components/Steps-v3'
 
 type Props = {
   tool: Object,
 };
 
-const BrainToolNew = ({ tool }: Props) => (
+const BrainToolV3 = ({ tool }: Props) => (
   <div>
     <div className="main-layout tool-page">
       <div
@@ -34,7 +34,7 @@ const BrainToolNew = ({ tool }: Props) => (
         <FbShareButton />
       </div>
       <h1 className="main-title">{tool.title}</h1>
-      <NewSteps {...tool} />
+      <StepsV3 {...tool} />
       <hr />
       <Markdown source={tool.credits} className={`tool-credits ${!tool.isRtl ? '' : 'rtl'}`} />
       <FbShareButton style={{ marginBottom: 10 }} />
@@ -45,4 +45,4 @@ const BrainToolNew = ({ tool }: Props) => (
   </div>
 )
 
-export default BrainToolNew
+export default BrainToolV3

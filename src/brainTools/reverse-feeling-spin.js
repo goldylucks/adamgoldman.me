@@ -9,7 +9,7 @@ import Link from '../components/Link'
 import FbShareLink from '../components/FbShareLink'
 import Markdown from '../components/Markdown'
 import HowItsGoingToWorkStep from '../routes/brainTool/components/HowItsGoingToWorkStep'
-import Answers from '../routes/brainTool/components/Answers'
+import AnswersV2 from '../routes/brainTool/components/Answers-v2'
 import type { Props } from '../routes/brainTool/components/toolPageProps'
 
 export const tags = ['Anxiety', 'Panic Attack', 'Depression']
@@ -65,7 +65,7 @@ and explore some new possibilities,
 and if this is first time your using any of my tools, you're probably wondering ...
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               noBack
               answers={[
@@ -89,7 +89,7 @@ Bring one of these times to mind now,
 and tell me...
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 { text: 'tell you what Adam?', onClick: onNext },
@@ -161,7 +161,7 @@ be as specific as you can, especially note:
                 value={badFeelingDescription}
                 onChange={this.badFeelingDescriptionChange}
                 className="textarea"
-                placeholder="I first feel it in my ... and it\'s like ... it moves to ... it spirals like ..."
+                placeholder="I first feel it in my ... and it's like ... it moves to ... it spirals like ..."
               />
               <button className="button">Done. Let&apos;s continue</button>
             </form>
@@ -208,7 +208,7 @@ close your eyes,
 and do it now
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 {
@@ -230,7 +230,7 @@ anything still left from the old feeling of ${badFeeling},
 and how much better do you feel now?
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 { text: 'This is amazing! No more Anxiety!', onClick: onNext },
@@ -260,7 +260,7 @@ u will be surprised how much more is yet to come as
 u open to more and more possibilties now...
 `}
             />
-            <Answers
+            <AnswersV2
               onNext={onNext}
               answers={[
                 <FbShareLink>

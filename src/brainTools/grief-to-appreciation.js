@@ -7,7 +7,7 @@ import Link from '../components/Link'
 import Testimony from '../components/Testimony'
 import FbShareLink from '../components/FbShareLink'
 import Markdown from '../components/Markdown'
-import Answers from '../routes/brainTool/components/Answers'
+import AnswersV2 from '../routes/brainTool/components/Answers-v2'
 import HowItsGoingToWorkStep from '../routes/brainTool/components/HowItsGoingToWorkStep'
 import type { Props } from '../routes/brainTool/components/toolPageProps'
 
@@ -88,7 +88,7 @@ but still feel the old feelings of loss,
 and before we turn this around you might wonder ...
               `}
             />
-            <Answers
+            <AnswersV2
               noBack
               onNext={onNext}
               answers={[
@@ -134,7 +134,7 @@ I want you to quickly share with me the following:
               </select>
               <button className="button">Let&apos;s continue</button>
             </form>
-            <Answers onNext={onNext} />
+            <AnswersV2 onNext={onNext} />
           </div>,
           <div>
             <Markdown
@@ -188,7 +188,7 @@ as you think of that person, share the following:
               </div>
               <button className="button">Let&apos;s continue</button>
             </form>
-            <Answers onNext={onNext} />
+            <AnswersV2 onNext={onNext} />
           </div>,
           <div>
             <Markdown
@@ -238,7 +238,7 @@ and describe this good feeling vivdly in as much detail as humanly possible,
               placeholder="the more you share the better you will feel"
               style={{ marginBottom: 40 }}
             />
-            <Answers
+            <AnswersV2
               answers={[
                 { text: "Good indeed, let's continue.", onClick: onNext },
                 {
@@ -279,7 +279,7 @@ and you might notice you can notice the good feeling intensifies,
 and how good do you feel now as you see ${lossPersonName} in this way?
 `}
             />
-            <Answers
+            <AnswersV2
               answers={[
                 { text: "Good indeed, let's continue.", onClick: onNext },
                 {
@@ -322,7 +322,7 @@ u might end up stuck in good feelings only,
 for the rest of your life (and then some ...)
 `}
             />
-            <Answers
+            <AnswersV2
               answers={[
                 { text: "Good indeed, let's continue.", onClick: onNext },
                 {
@@ -355,7 +355,7 @@ continue to enjoy what you have learned and [give back](/i-dont-charge-i-accept/
 and take the next action to further improve your life!
 `}
             />
-            <Answers
+            <AnswersV2
               answers={[
                 {
                   onClick: onRestart,

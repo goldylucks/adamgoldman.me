@@ -8,14 +8,14 @@ import BreadCrumbs from '../../components/BreadCrumbs'
 import FbShareButton from '../../components/FbShareButton'
 import FbComments from '../../components/FbComments'
 
-import Steps from './components/Steps'
+import StepsV2 from './components/Steps-v2'
 
 type Props = {
   tool: Object,
 };
 
 // eslint-disable-next-line react/prefer-stateless-function
-class BrainToolPage extends React.Component {
+class BrainToolV2 extends React.Component {
   props: Props;
 
   render() {
@@ -39,8 +39,8 @@ class BrainToolPage extends React.Component {
             />
             <FbShareButton />
           </div>
-          <h1 className="main-title">{tool.title}</h1>
-          <Steps {...this.props.tool} />
+          <h1 className={`main-title ${!tool.isRtl ? '' : 'rtl'}`}>{tool.title}</h1>
+          <StepsV2 {...this.props.tool} />
           <hr />
           <Markdown source={tool.credits} className={`tool-credits ${!tool.isRtl ? '' : 'rtl'}`} />
           <FbShareButton style={{ marginBottom: 10 }} />
@@ -53,4 +53,4 @@ class BrainToolPage extends React.Component {
   }
 }
 
-export default BrainToolPage
+export default BrainToolV2
