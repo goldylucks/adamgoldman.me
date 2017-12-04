@@ -46,12 +46,15 @@
   .appWrapper {
     flex-direction: column-reverse;
     min-height: 100vh;
+    padding-top: 75px;
     height: auto;
   }
 
   .sidebar {
     width: 100%;
-    position: static;
+    position: fixed;
+    top: 0;
+    height: 75px;
   }
   
   .mainContent {
