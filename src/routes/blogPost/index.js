@@ -17,7 +17,7 @@ async function action({ params }) {
 
   return {
     title: post.title,
-    path: `/blog/${params.post}`,
+    path: `/blog/${params.post}/`,
     description: post.description,
     component: <Comp {...post} />,
   }
