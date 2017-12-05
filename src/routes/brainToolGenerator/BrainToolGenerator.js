@@ -50,7 +50,7 @@ class BrainToolGenerator extends React.Component {
         <a onClick={this.addStep}>+ Step</a>
 
         <div className={s.controls}>
-          <a className={s.control} onClick={this.export}>+</a>
+          <a className={s.control} onClick={this.save}>Save</a>
         </div>
       </div>
     )
@@ -283,7 +283,7 @@ class BrainToolGenerator extends React.Component {
     this.setState({ steps: nextSteps })
   }
 
-  export = () => {
+  save = () => {
     const state = { ...this.state }
     state.url = this.props.url
     cleanEmptyValues(state)
