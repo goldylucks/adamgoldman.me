@@ -39,7 +39,7 @@ Props) => (
       <h1 className="main-title">{title}</h1>
       <Tags tags={tags} />
       <Markdown className="post-text" source={body} />
-      {html}
+      {html && <div style={{ marginBottom: 40 }}>{html}</div>}
       <FbPageBox style={{ display: 'block', textAlign: 'center' }} />
       <hr />
       <div style={{ marginBottom: 20 }}>
