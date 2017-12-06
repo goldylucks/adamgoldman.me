@@ -33,7 +33,7 @@ async function action({ params }) {
     return {
       title: data.title,
       description: data.description,
-      path: `/tools/${params.tool}`,
+      path: getPath(params.tool),
       component: <BrainToolV3 tool={data} />,
     }
   }
@@ -43,7 +43,7 @@ async function action({ params }) {
     return {
       title: data.title,
       description: data.description,
-      path: `/tools/${params.tool}`,
+      path: getPath(params.tool),
       component: <BrainToolV3 tool={data} />,
     }
   }
@@ -64,9 +64,15 @@ async function action({ params }) {
   return {
     title: tool.title,
     description: tool.description,
-    path: `/tools/${params.tool}`,
+    path: getPath(params.tool),
     component: <Comp tool={tool} />,
   }
 }
 
 export default action
+
+function getPath(tool) {
+  return tool.match(/trauma-relief-he|coming-to-wholeness|reverse-feeling-spin|internal-dialog-scrambeler|reverse-feeling-spin/)
+    ? `/tools/${tool}`
+    : `/tools/${tool}/`
+}

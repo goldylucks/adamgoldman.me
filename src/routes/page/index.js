@@ -15,9 +15,15 @@ async function action({ params }) {
   return {
     title: page.title,
     description: page.description,
-    path: `/${params.page}`,
+    path: getPath(params.page),
     component: <Page pathname={`/${params.page}`} {...page} />,
   }
 }
 
 export default action
+
+function getPath(page) {
+  return page.match(/pricing|tools/)
+    ? `/${page}`
+    : `/${page}/`
+}

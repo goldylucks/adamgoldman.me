@@ -3,6 +3,7 @@
 import React from 'react'
 
 import { DOMAIN } from '../../constants'
+import history from '../../history'
 import { isProd, noop } from '../../utils'
 
 type Props = {
@@ -17,6 +18,11 @@ class FbShareButton extends React.Component {
 
   componentDidMount() {
     this.reloadFB()
+    if (!this.props.urlProp) {
+      history.listen(() => {
+        this.reloadFB()
+      })
+    }
   }
 
   shouldComponentUpdate(nextProps, nextState) {

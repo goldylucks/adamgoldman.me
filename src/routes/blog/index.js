@@ -8,7 +8,7 @@ function action() {
   return {
     chunks: ['blog'],
     title,
-    path: '/blog',
+    path: '/blog/',
     description: 'A blog with my humble thoughts and diabolical schemes',
     component: (
       <Blog />
