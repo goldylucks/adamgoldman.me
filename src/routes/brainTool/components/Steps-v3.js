@@ -134,5 +134,16 @@ ${replaceVars(step.description, this.state)}
 export default StepsV3
 
 function replaceVars(str, state) {
-  return str.replace(/\${(.*?)}/g, (...args) => state[args[1]])
+  return str.replace(/\${(.*?)}/g, (...args) => {
+    const key = args[1]
+    if (key.indexOf('heShe') === 0) {
+      const genderKey = key.replace('heShe(', '').replace(')', '')
+      return state[genderKey] === 'male' ? 'he' : 'she'
+    }
+    if (key.indexOf('hisHer') === 0) {
+      const genderKey = key.replace('hisHer(', '').replace(')', '')
+      return state[genderKey] === 'male' ? 'his' : 'her'
+    }
+    return state[key]
+  })
 }
