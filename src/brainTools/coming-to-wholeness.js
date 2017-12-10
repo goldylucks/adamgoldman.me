@@ -164,7 +164,7 @@ And when you feel *${stepsState.inputFeel}*, **where is this feeling** of *${ste
     description: stepsState => `
 And *${stepsState.inputFeelingLocation}* ...
 
-And when it's *${stepsState.inputFeelingLocation}*, and it's a ${stepsState.inputFeel} feeling, **notice it's size & shape**, when it's *${stepsState.inputFeelingLocation}*, and it's a ${stepsState.inputFeel} feeling.
+And when it's a *${stepsState.inputFeel}* feeling, and it's *${stepsState.inputFeelingLocation}*, **notice it's size & shape**, when it's a *${stepsState.inputFeel}* feeling, and it's *${stepsState.inputFeelingLocation}*
 
 (E.g. “It’s sort of round and the size of an orange.”)    
 `,
@@ -177,9 +177,9 @@ And when it's *${stepsState.inputFeelingLocation}*, and it's a ${stepsState.inpu
   {
     title: 'Initial Feeling - Sensation Quality',
     description: stepsState => `
-And ${stepsState.inputFeelingSizeShape} ...
+And *${stepsState.inputFeelingSizeShape}* ...
 
-And when it's ${stepsState.inputFeelingSizeShape}, and it's ${stepsState.inputFeelingLocation}, **what's it's sensation quality?**
+And when it's *${stepsState.inputFeelingLocation}*, and it's *${stepsState.inputFeelingSizeShape}*,**what's it's sensation quality?**
 
 (E.g. “It’s fuzzy and a bit prickly.”)
     `,
@@ -192,11 +192,11 @@ And when it's ${stepsState.inputFeelingSizeShape}, and it's ${stepsState.inputFe
   {
     title: 'Noticing Awareness',
     description: stepsState => `
-And ${stepsState.inputFeelingSensationQuality}....
+And *${stepsState.inputFeelingSensationQuality}* ...
 
-And when it's ${stepsState.inputFeelingSensationQuality}, you can recognize,
+And when it's *${stepsState.inputFeelingSensationQuality}*, you can recognize,
 
-*I am aware of this ${stepsState.inputFeelingSensationQuality} sensation, so awareness is present.*
+*I am aware of this *${stepsState.inputFeelingSensationQuality}* sensation, so awareness is present.*
   `,
     answers: [
       { text: 'Indeed I can' },
@@ -293,7 +293,7 @@ And when it's *${stepsState.inputILocation}*, **what is the size & shape of this
 
 And *${stepsState.inputISizeShape}* ...
 
-And when it's *${stepsState.inputISizeShape}*, and it's *${stepsState.inputILocation}*, **what's the sensation quality** of this *${stepsState.inputISizeShape}*, that’s *${stepsState.inputILocation}*?
+And when it's *${stepsState.inputILocation}*, and it's *${stepsState.inputISizeShape}*, **what's the sensation quality** of this *${stepsState.inputISizeShape}*?
 
 E.g foggy, clear, dense, or empty, heavy, light, vibrating, still, etc.
 `,
@@ -339,8 +339,7 @@ It matters less if the answer is ‘Yes’ or ‘No’, It just tells us what to
     description: stepsState => `
 And no ...
 
-And you just noticed the sensation here - ***${lastI(stepsState)
-    .location}*** - doesn’t welcome the invitation to open and relax, right?
+And you just noticed the sensation here - ***${lastI(stepsState).location}*** - doesn’t welcome the invitation to open and relax, right?
 `,
     answers: [
       { text: 'Correct', onClickThat: confirmDecline },
