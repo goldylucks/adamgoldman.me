@@ -96,7 +96,7 @@ export const steps = [
         <Testimony
           imgSrc="https://scontent.fmad3-4.fna.fbcdn.net/v/t1.0-1/p50x50/21761536_1549692695090122_4419204185971223288_n.jpg?oh=5196db6b63c2ebe986e404a8a2e471a7&oe=5ACD560E"
           text="Man! Just completed two rounds of this WHOLENESS process and I'm FLYING! The frustration turned into a soft sensation, and I can keep on going!"
-          name="Tomy Gorden, hypnothist"
+          name="Tommy Gorden, hypnothist"
         />
       </div>
     ),
