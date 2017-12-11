@@ -2,6 +2,7 @@
 
 import React from 'react'
 
+import Link from '../../components/Link'
 import Markdown from '../../components/Markdown'
 import FbPageBox from '../../components/FbPageBox'
 import Ending from '../../components/Ending'
@@ -181,7 +182,8 @@ Pretty please?`}
           )
         })}
           </article>
-
+          <hr />
+          <p style={{ fontSize: 25 }}>Liked this post? <Link to="/stay-ahead">Click here to stay updated!</Link></p>
           <FbPageBox style={{ display: 'block', textAlign: 'center' }} />
           <hr />
           <div style={{ marginBottom: 20 }}>
