@@ -94,37 +94,39 @@ class BrainToolV1 extends React.Component {
           <h3 style={{ marginBottom: 60 }}>
             Step {currentStep}/{tool.stepCount}
           </h3>
-          <tool.default
-            {...this.props}
-            onDontUnderstandStep={dontUnderstandStep}
-            onRestart={this.restart}
-            onFeelTheSame={feelTheSame}
-            onShareWithAdam={shareWithAdam}
-            onGoToStep={this.goToStep}
-            onGenderChange={this.genderChange}
-            onAgeChange={this.ageChange}
-            onNameChange={this.nameChange}
-            onUserInputSubmit={this.userInputSubmit}
-            onBack={this.back}
-            onNext={this.next}
-            currentStep={currentStep}
-            Step={Step}
-            renderStep={this.renderStep}
-            dontUnderstand={{
-              text: "I don't understand",
-              onClick: dontUnderstandStep,
-            }}
-            back={{ text: 'back', onClick: this.back }}
-            letsContinue={{ text: "Done, let's continue", onClick: this.next }}
-            gender={gender}
-            name={name}
-            age={age}
-            Next={({ children }) => <a onClick={this.next}>{children}</a>}
-            heShe={gender === 'male' ? 'he' : 'she'}
-            hisHer={gender === 'male' ? 'his' : 'her'}
-            himHer={gender === 'male' ? 'him' : 'her'}
-            myManLady={gender === 'male' ? 'my man' : "m'lady"}
-          />
+          <div>
+            <tool.default
+              {...this.props}
+              onDontUnderstandStep={dontUnderstandStep}
+              onRestart={this.restart}
+              onFeelTheSame={feelTheSame}
+              onShareWithAdam={shareWithAdam}
+              onGoToStep={this.goToStep}
+              onGenderChange={this.genderChange}
+              onAgeChange={this.ageChange}
+              onNameChange={this.nameChange}
+              onUserInputSubmit={this.userInputSubmit}
+              onBack={this.back}
+              onNext={this.next}
+              currentStep={currentStep}
+              Step={Step}
+              renderStep={this.renderStep}
+              dontUnderstand={{
+                text: "I don't understand",
+                onClick: dontUnderstandStep,
+              }}
+              back={{ text: 'back', onClick: this.back }}
+              letsContinue={{ text: "Done, let's continue", onClick: this.next }}
+              gender={gender}
+              name={name}
+              age={age}
+              Next={({ children }) => <a onClick={this.next}>{children}</a>}
+              heShe={gender === 'male' ? 'he' : 'she'}
+              hisHer={gender === 'male' ? 'his' : 'her'}
+              himHer={gender === 'male' ? 'him' : 'her'}
+              myManLady={gender === 'male' ? 'my man' : "m'lady"}
+            />
+          </div>
           <hr />
           <FbShareButton style={{ marginBottom: 10 }} />
           <Markdown source="
