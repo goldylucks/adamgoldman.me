@@ -7,7 +7,6 @@ import BrainToolV3 from './BrainTool-v3'
 
 const toolsV1 = [
   'smoking-destroyer',
-  'grief-to-appreciation',
   'nail-biting-destroyer',
   'trauma-relief',
   'internal-dialog-scrambeler',
@@ -24,6 +23,8 @@ const toolsV3 = [
   'feel-good-generator',
   'perfect-day',
   'recurring-time-distortion',
+  'grief-to-appreciation',
+  'judgement',
 ]
 
 async function action({ params }) {
