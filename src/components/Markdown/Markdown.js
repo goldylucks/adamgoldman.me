@@ -117,6 +117,18 @@ const Markdown = props => (
               )
             }
 
+            if (linkProps.href.match(/NEW$/)) {
+              return (
+                <a
+                  href={linkProps.href.replace(/NEW$/, '')}
+                  target="_blank"
+                  rel="nofollow noreferrer noopener"
+                >
+                  {linkProps.children}
+                </a>
+              )
+            }
+
             return <Link to={linkProps.href}>{linkProps.children}</Link>
           },
         }}
