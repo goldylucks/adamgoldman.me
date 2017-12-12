@@ -189,6 +189,12 @@ class BrainToolGenerator extends React.Component {
                 { a.isLink && <input placeholder="path" value={a.link} onChange={this.changeAnswerKey('link', idx, aIdx)} /> }
               </div>
 
+              <div>
+                <input type="checkbox" id={`step-${idx}-answer-${aIdx}-isLinkNew`} value={a.isLinkNew} checked={a.isLinkNew} onChange={this.toggleAnswerKey('isLinkNew', idx, aIdx)} />
+                <label htmlFor={`step-${idx}-answer-${aIdx}-isLinkNew`}>Link New tab</label>
+                { a.isLinkNew && <input placeholder="path" value={a.linkNew} onChange={this.changeAnswerKey('linkNew', idx, aIdx)} /> }
+              </div>
+
             </div>
             { step.answers.length - 1 > aIdx && <hr className={s.answersHr} />}
           </div>
@@ -273,6 +279,8 @@ class BrainToolGenerator extends React.Component {
       isFbShare: false,
       isLink: false,
       link: '',
+      isLinkNew: false,
+      linkNew: '',
     })
     this.setState({ steps: nextSteps })
   }

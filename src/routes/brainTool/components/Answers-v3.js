@@ -28,6 +28,15 @@ Props) => (
         html = <FbShareLink>I want more to experience this</FbShareLink>
       } else if (answer.link) {
         html = <Link to={answer.link}>{answer.text}</Link>
+      } else if (answer.linkNew) {
+        html = (
+          <a
+            href={answer.linkNew}
+            target="_blank"
+            rel="nofollow noreferrer noopener"
+          >{answer.text}
+          </a>
+        )
       } else {
         html = (
           <a onClick={() => {
