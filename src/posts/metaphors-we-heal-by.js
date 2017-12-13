@@ -15,6 +15,10 @@ I want to add more details about this course by Mr. David, tho life has a tenden
 
 ---
 
+[rape and violence](explicitWarning)
+
+---
+
 # Introduction, concepts, structure
 [3nOUFVnsIiE](YtEmbedd)
   

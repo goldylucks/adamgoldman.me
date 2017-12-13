@@ -66,20 +66,20 @@ If you or someone you know have any of the symptoms, or have been diagnosed with
 ---
 
 # Symptoms cleared
-- Bruising on leg/ankles. 
+- Bruising on leg/ankles 
 - Water retention 
 - Aching legs 
-- Sore joints and muscles. 
+- Sore joints and muscles 
 - Painful hips and SI joint 
 - Feet and legs roll outwards 
-- Difficulty passing urine without conscious relaxation. 
+- Difficulty passing urine without conscious relaxation 
 - Pain down back of buttocks and thighs 
 - Pain between shoulder blades and over 
 - Severe thoracic back pain 
 - Stiff joints especially morning 
 - Pain in hands and long bones 
 - Night sweats 
-- Waking feeling sick with racing heart rate. Sweating and feeling unwell. 
+- Waking feeling sick with racing heart rate, sweating and feeling unwell 
 - Severely painful back spasms in night 
 - Fatigue 
 - Weekness in arms and hands 
@@ -115,6 +115,8 @@ I will write a dedicated post for frame control later on, but for now just notic
 This is something I'm harping on with many of my students and colleagues. The client needs to KNOW and feel ONE HUNDRED PERCENT that there's just no way I'm going to let her stay the same way. It's just not an option.
 
 Let's begin ...
+
+[rape, violence and abuse](explicitWarning)
 
 Right out the gate she preframes our work for me:  
 **JB**: *My dad once said to me as a child the mind has great control over the body when I was poorly as a youngster. I'm willing to try anything.*

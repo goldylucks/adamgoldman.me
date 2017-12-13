@@ -6,15 +6,21 @@ import FbShareLink from '../FbShareLink'
 import Link from '../Link'
 import FbReview from '../FbReview'
 import YtEmbedd from '../YtEmbedd'
+import ExplicitWarning from '../ExplicitWarning'
 
 const Markdown = props => (
   <ReactMarkdown
     {...props}
     renderers={{
           Link: (linkProps) => {
+            if (linkProps.href === 'explicitWarning') {
+              return <ExplicitWarning explicitContent={linkProps.children} />
+            }
+
             if (linkProps.href === 'YtEmbedd') {
               return <YtEmbedd src={linkProps.children} />
             }
+
             if (linkProps.href === 'iframe') {
               return <FbReview review={linkProps.children} />
             }
