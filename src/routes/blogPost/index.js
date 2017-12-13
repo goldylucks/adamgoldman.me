@@ -17,10 +17,16 @@ async function action({ params }) {
 
   return {
     title: post.title,
-    path: `/blog/${params.post}/`,
+    path: getPath(params.post),
     description: post.description,
     component: <Comp {...post} />,
   }
 }
 
 export default action
+
+function getPath(post) {
+  return post.match(/healing-metaphors-water-slime|dora-talias-cancer/)
+    ? `/blog/${post}`
+    : `/blog/${post}/`
+}
