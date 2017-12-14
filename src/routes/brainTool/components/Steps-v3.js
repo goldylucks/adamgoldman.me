@@ -156,6 +156,10 @@ function replaceVars(str, state) {
       const genderKey = key.replace('hisHer(', '').replace(')', '')
       return state[genderKey] === 'male' ? 'his' : 'her'
     }
+    if (key.indexOf('himHer') === 0) {
+      const genderKey = key.replace('himHer(', '').replace(')', '')
+      return state[genderKey] === 'male' ? 'him' : 'her'
+    }
     return state[key]
   })
 }
