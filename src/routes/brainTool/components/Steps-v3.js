@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Markdown from '../../../components/Markdown'
+import SignupFormToolFollowup from '../../../components/SignupFormToolFollowup'
 import { scrollToElem } from '../../../utils'
 
 import AnswersV3 from './Answers-v3'
@@ -34,6 +35,7 @@ class StepsV3 extends React.Component {
         </h3>
         {this.renderContent()}
         {this.renderInput()}
+        {this.renderSignup()}
         {this.renderAnswers()}
       </div>
     )
@@ -81,6 +83,16 @@ ${replaceVars(step.description, this.state)}
         />
         <button className="button">{!this.props.isRtl ? 'Let\'s continue' : 'בוא נמשיך'}</button>
       </form>
+    )
+  }
+
+  renderSignup() {
+    const { listId } = this.props.steps[this.state.currentStep]
+    if (!listId) {
+      return null
+    }
+    return (
+      <SignupFormToolFollowup listId={listId} onNext={this.next} />
     )
   }
 

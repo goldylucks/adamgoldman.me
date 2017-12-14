@@ -147,6 +147,16 @@ class BrainToolGenerator extends React.Component {
             )}
         </div>
 
+        <div className={s.stepSection}>
+          <input type="checkbox" id={`signupStep${idx}`} value={step.hasSignup} checked={step.hasSignup} onChange={this.toggleStepKey('hasSignup', idx)} />
+          <label className={s.inputLabel} htmlFor={`signupStep${idx}`}>Signup</label>
+          {step.hasSignup && (
+          <div>
+            <input className={`input ${s.input} ${s.inputHalf}`} value={step.listId} placeholder="List Id" onChange={this.changeStepKey('listId', idx)} />
+          </div>
+            )}
+        </div>
+
         <div className={s.stepHeader}>
           <label>Answers</label>
           <a onClick={this.addAnswer(idx)}>+ answer</a>
@@ -236,6 +246,8 @@ class BrainToolGenerator extends React.Component {
       hasInput: false,
       inputId: '',
       inputPlaceholder: '',
+      hasSignup: false,
+      listId: '',
       answers: [],
     })
     this.setState({ steps: nextSteps })
@@ -308,8 +320,14 @@ function cleanEmptyValues(state) {
   if (!state.isRtl) { delete state.isRtl }
   // clear empty values
   state.steps = state.steps.map((step) => {
-    if (!step.inputId) { delete step.inputId }
-    if (!step.inputPlaceholder) { delete step.inputPlaceholder }
+    if (!step.hasInput) {
+      delete step.inputId
+      delete step.inputPlaceholder
+    }
+
+    if (!step.hasSignup) {
+      delete step.listId
+    }
 
     step.answers = step.answers.map((a) => {
       if (!a.text) { delete a.text }

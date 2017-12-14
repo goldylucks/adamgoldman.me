@@ -22,7 +22,7 @@ The only reason you have to put your email below, and click "keep me updated Ada
 - New study cases of people I've helped
 - My latest shenanigans
 `,
-  html: <SignupForm />,
+  html: <SignupForm list="general" />,
   ps: `No hidden catch, no strings attached, just ...
 
 [4uKQd2mWV8g](YtEmbedd)

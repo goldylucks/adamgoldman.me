@@ -5,10 +5,17 @@ import axios from 'axios'
 
 import { inputChange } from '../../forms'
 
+type Props = {
+  listId: string,
+  onNext: Function,
+}
+
 class SignupForm extends React.Component {
   state = {
     email: '',
   }
+
+  props: Props
 
   render() {
     return (
@@ -27,7 +34,7 @@ class SignupForm extends React.Component {
  fontWeight: 'bold', fontSize: 24, padding: 20, marginBottom: 30,
 }}
         >
-          keep me updated Adam
+          Follow up on me Adam
         </button>
       </form>
     )
@@ -35,15 +42,17 @@ class SignupForm extends React.Component {
 
   submit = (evt) => {
     evt.preventDefault()
-    axios.post('/api/mailChimp/13c6d60bb8/subscribe/', {
+    const { listId, onNext } = this.props
+    axios.post(`/api/mailChimp/${listId}/subscribe/`, {
       email_address: this.state.email,
       status: 'subscribed',
       merge_fields: {},
     })
       .then(({ data }) => {
         alert(`subscribed email: ${data.email_address} \n Please check your email! :)`)
+        onNext()
       })
-      .catch(err => alert(`there was an error: ${err.message}`))
+      .catch(err => alert(`there was an error: ${err.message}\n Please contact me!`))
   }
 }
 
