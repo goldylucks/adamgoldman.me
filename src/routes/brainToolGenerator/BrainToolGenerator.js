@@ -17,6 +17,9 @@ class BrainToolGenerator extends React.Component {
 
   state = {
     initialState: {},
+    testimony1Text: '',
+    testimony1Name: '',
+    testimony1Src: '',
     isDraft: false,
     title: '',
     description: '',
@@ -37,6 +40,10 @@ class BrainToolGenerator extends React.Component {
       <div className="main-layout relative">
         <h1>Details</h1>
         {this.renderDetails()}
+
+        <hr />
+
+        {this.renderTestimonials()}
 
         <hr />
 
@@ -77,6 +84,20 @@ class BrainToolGenerator extends React.Component {
       </div>
     )
   }
+
+  renderTestimonials() {
+    return (
+      <div className={s.stepSection}>
+        <h3>Testimonies</h3>
+        <div>
+          <input className="input" value={this.state.testimony1Text} placeholder="text" onChange={inputChange.call(this, 'testimony1Text')} />
+          <input className="input" value={this.state.testimony1Name} placeholder="name" onChange={inputChange.call(this, 'testimony1Name')} />
+          <input className="input" value={this.state.testimony1Src} placeholder="image src" onChange={inputChange.call(this, 'testimony1Src')} />
+        </div>
+      </div>
+    )
+  }
+
   renderStepsTOC() {
     const stepsCount = this.state.steps.length - 1
     return (

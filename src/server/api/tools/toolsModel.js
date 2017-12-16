@@ -48,6 +48,10 @@ function getSchema() {
       required: true,
     },
 
+    testimony1Text: String,
+    testimony1Name: String,
+    testimony1Src: String,
+
     steps: [],
     // steps: [getStepsSchema()],
 
