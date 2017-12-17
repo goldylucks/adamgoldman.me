@@ -9,10 +9,14 @@ type Props = {
 }
 
 const ExplicitWarning = ({ explicitContent }: Props) => (
-  <article style={{ border: '2px dotted #ff5656', padding: 20 }}>
-    <h1 style={{ color: '#ff5656' }}>Warning - Explicit content</h1>
-    <p>The following page may include some graphic descriptions of explicit content including {explicitContent}</p>
-  </article>
+  <span style={{ display: 'block', border: '2px dotted #ff5656', padding: 20 }}>
+    <span style={{
+ display: 'block', color: '#ff5656', fontSize: 38, lineHeight: '44px', fontWeight: 'bold',
+}}
+    >Warning - Explicit content
+    </span>
+    <span>The following page may include some graphic descriptions of explicit content including {explicitContent}</span>
+  </span>
 )
 
 export default ExplicitWarning
