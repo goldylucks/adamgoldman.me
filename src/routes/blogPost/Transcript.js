@@ -193,7 +193,6 @@ ${this.props.intro}
         <h1>Verbatim Transcript + Notes</h1>
 
         {this.renderWarning()}
-
         {this.props.transcript.map(({
       author, text, md, type, duration, html, style, isRtl, src, alt,
     }, idx) => {
@@ -204,6 +203,7 @@ ${this.props.intro}
       if (author === 'comment') {
         return !this.state.showComments ? null : <Markdown key={idx} className="transcript-comment" source={md} />
       }
+
       return (
         <div key={idx} className={`chat-message-container clearfix ${author} ${isRtl ? 'rtl' : ''}`}>
           <div className="chat-message">

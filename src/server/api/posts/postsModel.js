@@ -46,10 +46,12 @@ function getSchema() {
       default: [],
     },
 
-    // transcript stuff
+    // transcript specific stuff
     transcript: [],
     intro: String,
     age: String,
+    name: String,
+    date: String,
     fbReview: String,
     diagnosis: String,
     fbProfile: String,

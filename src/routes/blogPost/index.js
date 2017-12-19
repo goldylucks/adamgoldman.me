@@ -11,7 +11,6 @@ const dbPosts = [
 async function action({ params }) {
   if (dbPosts.includes(params.post)) {
     const { data } = await axios.get(`/api/posts/${params.post}`)
-    console.log('data', data)
     const Comp = data.transcript.length ? Transcript : BlogPost
     return {
       title: data.title,

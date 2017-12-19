@@ -16,7 +16,7 @@ export default {
     'Successes',
     'Fibromyalgia | C.F.S | M.E',
   ],
-  nick: 'this is some voodoo shit right here',
+  nick: 'David Grove',
   intro: `
 I've been working with Tamar for some time now, and we already cleared many traumas, nightmares, anxiety, PTSDs and many negative feelings (full case study up ahead - brace yourself)
 
