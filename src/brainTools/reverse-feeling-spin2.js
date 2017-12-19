@@ -254,10 +254,7 @@ and how much better do you feel now?
             <p>
               btw, if you feel exactly the same,{' '}
               <a onClick={onRestart}>run the process again</a> first, then try
-              the <Link to="/tools/reverse-feeling-spin/">
-                other version
-                  </Link>{' '}
-              of the reverse spin.
+              the <Link to="/tools/reverse-feeling-spin/">other version</Link> of the reverse spin.
             </p>
           </div>,
           <div>
