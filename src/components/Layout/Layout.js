@@ -21,7 +21,9 @@ const Layout = ({ children }: Props) => (
   <div className={s.appWrapper}>
     <div className={`${s.mainContent} main-content`} id="main-layout">
       <GlobalSearch />
-      {children}
+      <div>
+        {children}
+      </div>
       <Footer />
       <MessengerFixed />
     </div>

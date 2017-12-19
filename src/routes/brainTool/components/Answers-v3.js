@@ -28,6 +28,15 @@ Props) => (
         html = <FbShareLink>I want more to experience this</FbShareLink>
       } else if (answer.link) {
         html = <Link to={answer.link}>{answer.text}</Link>
+      } else if (answer.linkNew) {
+        html = (
+          <a
+            href={answer.linkNew}
+            target="_blank"
+            rel="nofollow noreferrer noopener"
+          >{answer.text}
+          </a>
+        )
       } else {
         html = (
           <a onClick={() => {
@@ -86,7 +95,7 @@ function renderDontUnderstand({ isRtl, gender }) {
         onClick={() =>
           global.alert(!isRtl ? "follow the steps as best you can now, and contact me when you're done" : `${he.taakov(gender)} אחר הצעדים הכי טוב ש${he.ata(gender)} ${he.yajol(gender)} עכשיו, ו${he.tsor(gender)} איתי קשר כש${he.ata(gender)} ${he.mesayem(gender)}`)}
       >
-        {!isRtl ? 'I dont understand' : `אני לא ${he.mevin(gender)}`}
+        {!isRtl ? 'I don\'t understand' : `אני לא ${he.mevin(gender)}`}
       </a>
     </div>
   )

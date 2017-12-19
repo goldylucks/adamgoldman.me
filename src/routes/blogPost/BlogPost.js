@@ -4,6 +4,7 @@
 import React from 'react'
 
 import Markdown from '../../components/Markdown'
+import Link from '../../components/Link'
 import FbPageBox from '../../components/FbPageBox'
 import Ending from '../../components/Ending'
 import FbShareButton from '../../components/FbShareButton'
@@ -58,10 +59,13 @@ const BlogPost = (
       <div style={{ direction: isBodyRtl ? 'rtl' : 'ltr' }}>
         <Markdown className="post-text" source={body} />
       </div>
+      <hr />
       {html && (
         // eslint-disable-next-line react/no-danger
         <div dangerouslySetInnerHTML={{ __html: html }} />
       )}
+      {html && <br />}
+      <p style={{ fontSize: 25 }}>Liked this post? <Link to="/stay-ahead">Click here to stay updated!</Link></p>
       <FbPageBox style={{ display: 'block', textAlign: 'center' }} />
       <hr />
       <div style={{ marginBottom: 20 }}>

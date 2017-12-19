@@ -40,7 +40,9 @@ class BrainToolV2 extends React.Component {
             <FbShareButton />
           </div>
           <h1 className={`main-title ${!tool.isRtl ? '' : 'rtl'}`}>{tool.title}</h1>
-          <StepsV2 {...this.props.tool} />
+          <div>
+            <StepsV2 {...this.props.tool} />
+          </div>
           <hr />
           <Markdown source={tool.credits} className={`tool-credits ${!tool.isRtl ? '' : 'rtl'}`} />
           <FbShareButton style={{ marginBottom: 10 }} />

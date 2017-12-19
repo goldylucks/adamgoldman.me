@@ -34,7 +34,9 @@ const BrainToolV3 = ({ tool }: Props) => (
         <FbShareButton />
       </div>
       <h1 className="main-title">{tool.title}</h1>
-      <StepsV3 {...tool} />
+      <div>
+        <StepsV3 {...tool} />
+      </div>
       <hr />
       <Markdown source={tool.credits} className={`tool-credits ${!tool.isRtl ? '' : 'rtl'}`} />
       <FbShareButton style={{ marginBottom: 10 }} />

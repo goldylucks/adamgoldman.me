@@ -22,11 +22,11 @@ I've been working with Tamar for some time now, and we already cleared many trau
 
 This particular session was solely on her feelings from this morning, following a really intense disturbing vivid dream she woke up from.
 
-I'm using pure clean language and metaphors, which will seem pretty freakin' WHACKY to you, if this is your first experience with this kind of work.
+I'm using pure [clean language and metaphors](/blog/metaphors-we-heal-by/), which will seem pretty freakin' WHACKY to you, if this is your first experience with this kind of work.
 
 Proceed ONLY with an open mind about what your mind is capable of.  
 
-Special thanks to the late David Grov for giving life to this field.  
+Special thanks to the late David Grove for giving life to this field.  
 
 Let's begin ...
 `,

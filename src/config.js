@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 /**
  * React Starter Kit (https://www.reactstarterkit.com/)
  *
@@ -28,6 +30,7 @@ module.exports = {
   },
 
   adminPass: process.env.ADMIN_PASS || 'foo',
+  mailChimpApiKy: process.env.MAILCHIMP_API_KEY,
 
   dbUrl: process.env.MONGODB_URI || 'mongodb://localhost/adamgoldman',
   // Web analytics

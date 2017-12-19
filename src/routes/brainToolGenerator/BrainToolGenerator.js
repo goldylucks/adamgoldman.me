@@ -17,6 +17,9 @@ class BrainToolGenerator extends React.Component {
 
   state = {
     initialState: {},
+    testimony1Text: '',
+    testimony1Name: '',
+    testimony1Src: '',
     isDraft: false,
     title: '',
     description: '',
@@ -37,6 +40,10 @@ class BrainToolGenerator extends React.Component {
       <div className="main-layout relative">
         <h1>Details</h1>
         {this.renderDetails()}
+
+        <hr />
+
+        {this.renderTestimonials()}
 
         <hr />
 
@@ -77,6 +84,20 @@ class BrainToolGenerator extends React.Component {
       </div>
     )
   }
+
+  renderTestimonials() {
+    return (
+      <div className={s.stepSection}>
+        <h3>Testimonies</h3>
+        <div>
+          <input className="input" value={this.state.testimony1Text} placeholder="text" onChange={inputChange.call(this, 'testimony1Text')} />
+          <input className="input" value={this.state.testimony1Name} placeholder="name" onChange={inputChange.call(this, 'testimony1Name')} />
+          <input className="input" value={this.state.testimony1Src} placeholder="image src" onChange={inputChange.call(this, 'testimony1Src')} />
+        </div>
+      </div>
+    )
+  }
+
   renderStepsTOC() {
     const stepsCount = this.state.steps.length - 1
     return (
@@ -147,6 +168,16 @@ class BrainToolGenerator extends React.Component {
             )}
         </div>
 
+        <div className={s.stepSection}>
+          <input type="checkbox" id={`signupStep${idx}`} value={step.hasSignup} checked={step.hasSignup} onChange={this.toggleStepKey('hasSignup', idx)} />
+          <label className={s.inputLabel} htmlFor={`signupStep${idx}`}>Signup</label>
+          {step.hasSignup && (
+          <div>
+            <input className={`input ${s.input} ${s.inputHalf}`} value={step.listId} placeholder="List Id" onChange={this.changeStepKey('listId', idx)} />
+          </div>
+            )}
+        </div>
+
         <div className={s.stepHeader}>
           <label>Answers</label>
           <a onClick={this.addAnswer(idx)}>+ answer</a>
@@ -187,6 +218,12 @@ class BrainToolGenerator extends React.Component {
                 <input type="checkbox" id={`step-${idx}-answer-${aIdx}-isLink`} value={a.isLink} checked={a.isLink} onChange={this.toggleAnswerKey('isLink', idx, aIdx)} />
                 <label htmlFor={`step-${idx}-answer-${aIdx}-isLink`}>Link</label>
                 { a.isLink && <input placeholder="path" value={a.link} onChange={this.changeAnswerKey('link', idx, aIdx)} /> }
+              </div>
+
+              <div>
+                <input type="checkbox" id={`step-${idx}-answer-${aIdx}-isLinkNew`} value={a.isLinkNew} checked={a.isLinkNew} onChange={this.toggleAnswerKey('isLinkNew', idx, aIdx)} />
+                <label htmlFor={`step-${idx}-answer-${aIdx}-isLinkNew`}>Link New tab</label>
+                { a.isLinkNew && <input placeholder="path" value={a.linkNew} onChange={this.changeAnswerKey('linkNew', idx, aIdx)} /> }
               </div>
 
             </div>
@@ -230,6 +267,8 @@ class BrainToolGenerator extends React.Component {
       hasInput: false,
       inputId: '',
       inputPlaceholder: '',
+      hasSignup: false,
+      listId: '',
       answers: [],
     })
     this.setState({ steps: nextSteps })
@@ -273,6 +312,8 @@ class BrainToolGenerator extends React.Component {
       isFbShare: false,
       isLink: false,
       link: '',
+      isLinkNew: false,
+      linkNew: '',
     })
     this.setState({ steps: nextSteps })
   }
@@ -300,8 +341,14 @@ function cleanEmptyValues(state) {
   if (!state.isRtl) { delete state.isRtl }
   // clear empty values
   state.steps = state.steps.map((step) => {
-    if (!step.inputId) { delete step.inputId }
-    if (!step.inputPlaceholder) { delete step.inputPlaceholder }
+    if (!step.hasInput) {
+      delete step.inputId
+      delete step.inputPlaceholder
+    }
+
+    if (!step.hasSignup) {
+      delete step.listId
+    }
 
     step.answers = step.answers.map((a) => {
       if (!a.text) { delete a.text }

@@ -6,39 +6,52 @@ export default {
 [%2Fjulianne.barley%2Fposts%2F10154923498533379%3A0](iframe)
 
 # TOC
-- ### Intro
-- ### Symptoms cleared (3 days in)
+- ### Details
+- ### Before/after pictures
+- ### Diagnosis
+- ### Memories cleared
+- ### Symptoms cleared
 - ### Notes from the session
 - ### Verbatim transcript
 
 ---
 
-# Intro
+# Details
 Date of first session: AUG 19th, 2017  
 Client's Name: [Julianne Barley](https://www.facebook.com/julianne.barley)  
 D.O.B. - May 1979  
 Age: 38  
 Medium of communication: Facebook chat  
 
-### Diagnosis:
+---
+
+# Before/after pictures
+##### Before: July 2017
+
+
+##### After: September 2017
+
+---
+
+# Diagnosis
 1995, age 18 - CFS  
 2009, age 30 - Fibromyalgia, Scoliosis and Disc compression  
 2016, age 37 - Anxiety and Depression  
 2017, age 38 - Pernicious Anemia  
 
-### Major life events
+---
+
+# Memories Cleared
 - 1987-1991, ages 8-12 - Abused by God Father
 - 1989-1993, ages 10-14 - Bullied in school
 - 1994 - age 15 - Raped, followed by being judged and "asking for it"
 - 1997-2006, ages 18-27 - Domestic abuse from partner
-- 1998 - Birth of Franklyn
 - 2000 - age 21 - Father died
 - 2003 - age 24 - Finding God Father dead while caring for him
-- 2003 Oct - Birth of Oli
 - 2010 - age 31 - Mother died
 - 2011 - age 32 - Birth of lily, learning she has CF
-- 2015 - age 36 - son (Oli) has breakdown from blood, develops blood phobia and intrusive thoughts
-- 2016 - age 37 - son () punching her face, angry from her enforcing a rule
+- 2015 - age 36 - son has breakdown from blood, develops blood phobia and intrusive thoughts
+- 2016 - age 37 - son punching her face, angry from her enforcing a rule
 
 I'm still in touch with Julianne, and she's getting better with every passing day.
 
@@ -48,48 +61,47 @@ As you'll see below, within 3 days into the first intervention most of her sympt
 
 I'll post a followup in a month or so with her progress and more processes we've done.
 
-If you or someone you know have any of the symptoms, do [contact](/lets-talk/) me and we'll start gearing you towards a brighter future ASAP.
+If you or someone you know have any of the symptoms, or have been diagnosed with Fibro/CFS/ME, do [contact](/lets-talk/) me and we'll start gearing you towards a brighter future ASAP.
 
 ---
 
-# Symptoms cleared (3 days in)
-(X meaning the symptom is gone)
-- Bruising on leg/ankles. 
-- X Water retention 
-- X Aching legs 
-- Sore joints and muscles. 
-- X Painful hips and SI joint 
+# Symptoms cleared
+- Bruising on leg/ankles 
+- Water retention 
+- Aching legs 
+- Sore joints and muscles 
+- Painful hips and SI joint 
 - Feet and legs roll outwards 
-- X Difficulty passing urine without conscious relaxation. 
+- Difficulty passing urine without conscious relaxation 
 - Pain down back of buttocks and thighs 
 - Pain between shoulder blades and over 
-- X (not so severe) Severe thoracic back pain 
+- Severe thoracic back pain 
 - Stiff joints especially morning 
 - Pain in hands and long bones 
-- X Night sweats 
-- X Waking feeling sick with racing heart rate. Sweating and feeling unwell. 
+- Night sweats 
+- Waking feeling sick with racing heart rate, sweating and feeling unwell 
 - Severely painful back spasms in night 
-- X (much better but still a problem) Fatigue 
+- Fatigue 
 - Weekness in arms and hands 
 - Head aches 
-- X Sinus pain 
-- X (No hair loss when last washed it) Significant hair loss and thining 
-- X Vertigo 
+- Sinus pain 
+- Significant hair loss and thining 
+- Vertigo 
 - Malaise 
-- X Chills and fevers 
+- Chills and fevers 
 - Palpitations 
-- X Hot and sweaty surges seeming to come from upper back 
-- X Breathlessness 
-- X Rib pain 
-- X Chest pain 
-- X (maybe a little foggy still) Comfusion 
-- X (Memory improving) Memory loss 
-- X Poor concentration 
+- Hot and sweaty surges seeming to come from upper back 
+- Breathlessness 
+- Rib pain 
+- Chest pain 
+- Cofusion 
+- Memory loss / forgetting everyday things
+- Poor concentration 
 - Shakes 
-- X (Weight loss this week) Weight gain 
+- Weight gain 
 - Cold feet and hands 
 - Clumsiness and accidents several times a day 
-- X (feeling high!) Feeling low 
+- (feeling high now!) Feeling low 
 
 ---
 
@@ -103,6 +115,8 @@ I will write a dedicated post for frame control later on, but for now just notic
 This is something I'm harping on with many of my students and colleagues. The client needs to KNOW and feel ONE HUNDRED PERCENT that there's just no way I'm going to let her stay the same way. It's just not an option.
 
 Let's begin ...
+
+[rape, violence and abuse](explicitWarning)
 
 Right out the gate she preframes our work for me:  
 **JB**: *My dad once said to me as a child the mind has great control over the body when I was poorly as a youngster. I'm willing to try anything.*

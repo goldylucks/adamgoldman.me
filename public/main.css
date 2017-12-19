@@ -153,6 +153,10 @@ ol {
   margin-bottom: 40px;
 }
 
+.no-margin-bottom {
+  margin-bottom: 0 !important;
+}
+
 .input,
 .textarea,
 .select {

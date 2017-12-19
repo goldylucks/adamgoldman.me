@@ -2,6 +2,7 @@ import React from 'react'
 
 import Link from '../components/Link'
 import FbShareLink from '../components/FbShareLink'
+import Testimony from '../components/Testimony'
 
 export const title = 'Coming To Wholeness'
 export const nick = 'whole'
@@ -85,6 +86,20 @@ export const mockState = {
 export const steps = [
   {
     title: 'Background',
+    preDescriptionHtml: (
+      <div>
+        <Testimony
+          imgSrc="https://scontent.fmad3-4.fna.fbcdn.net/v/t1.0-1/p50x50/22852018_10155160350728379_1394566735044658139_n.jpg?oh=57414f3649e2f9a526776e8a6be6d521&oe=5AC94334"
+          text="I feel like that resolved the memory even more and equipped me with a tool I can tap into in a similar situation in the future. That exercise makes me feel much more aware and accepting of myself and what's inside my head, it's incredibly helpful."
+          name="Julianne Barley, cleared all Fibromyalgia symptoms"
+        />
+        <Testimony
+          imgSrc="https://scontent.fmad3-4.fna.fbcdn.net/v/t1.0-1/p50x50/21761536_1549692695090122_4419204185971223288_n.jpg?oh=5196db6b63c2ebe986e404a8a2e471a7&oe=5ACD560E"
+          text="Man! Just completed two rounds of this WHOLENESS process and I'm FLYING! The frustration turned into a soft sensation, and I can keep on going!"
+          name="Tommy Gorden, hypnotist"
+        />
+      </div>
+    ),
     description: () => `
 *"enlightment is easy, you just surrender your ego and become a vast self like all the gurus tell you to"* - said no human being, EVER.
 
@@ -164,7 +179,7 @@ And when you feel *${stepsState.inputFeel}*, **where is this feeling** of *${ste
     description: stepsState => `
 And *${stepsState.inputFeelingLocation}* ...
 
-And when it's *${stepsState.inputFeelingLocation}*, and it's a ${stepsState.inputFeel} feeling, **notice it's size & shape**, when it's *${stepsState.inputFeelingLocation}*, and it's a ${stepsState.inputFeel} feeling.
+And when it's a *${stepsState.inputFeel}* feeling, and it's *${stepsState.inputFeelingLocation}*, **notice it's size & shape**, when it's a *${stepsState.inputFeel}* feeling, and it's *${stepsState.inputFeelingLocation}*
 
 (E.g. “It’s sort of round and the size of an orange.”)    
 `,
@@ -177,9 +192,9 @@ And when it's *${stepsState.inputFeelingLocation}*, and it's a ${stepsState.inpu
   {
     title: 'Initial Feeling - Sensation Quality',
     description: stepsState => `
-And ${stepsState.inputFeelingSizeShape} ...
+And *${stepsState.inputFeelingSizeShape}* ...
 
-And when it's ${stepsState.inputFeelingSizeShape}, and it's ${stepsState.inputFeelingLocation}, **what's it's sensation quality?**
+And when it's *${stepsState.inputFeelingLocation}*, and it's *${stepsState.inputFeelingSizeShape}*, **what's it's sensation quality**, when it's *${stepsState.inputFeelingLocation}*, and it's *${stepsState.inputFeelingSizeShape}*?
 
 (E.g. “It’s fuzzy and a bit prickly.”)
     `,
@@ -192,11 +207,11 @@ And when it's ${stepsState.inputFeelingSizeShape}, and it's ${stepsState.inputFe
   {
     title: 'Noticing Awareness',
     description: stepsState => `
-And ${stepsState.inputFeelingSensationQuality}....
+And *${stepsState.inputFeelingSensationQuality}* ...
 
-And when it's ${stepsState.inputFeelingSensationQuality}, you can recognize,
+And when it's *${stepsState.inputFeelingSensationQuality}*, you can recognize,
 
-*I am aware of this ${stepsState.inputFeelingSensationQuality} sensation, so awareness is present.*
+*I am aware of this *${stepsState.inputFeelingSensationQuality}* sensation, so awareness is present.*
   `,
     answers: [
       { text: 'Indeed I can' },
@@ -293,7 +308,7 @@ And when it's *${stepsState.inputILocation}*, **what is the size & shape of this
 
 And *${stepsState.inputISizeShape}* ...
 
-And when it's *${stepsState.inputISizeShape}*, and it's *${stepsState.inputILocation}*, **what's the sensation quality** of this *${stepsState.inputISizeShape}*, that’s *${stepsState.inputILocation}*?
+And when it's *${stepsState.inputILocation}*, and it's *${stepsState.inputISizeShape}*, **what's the sensation quality** of this *${stepsState.inputISizeShape}*?
 
 E.g foggy, clear, dense, or empty, heavy, light, vibrating, still, etc.
 `,
@@ -339,8 +354,7 @@ It matters less if the answer is ‘Yes’ or ‘No’, It just tells us what to
     description: stepsState => `
 And no ...
 
-And you just noticed the sensation here - ***${lastI(stepsState)
-    .location}*** - doesn’t welcome the invitation to open and relax, right?
+And you just noticed the sensation here - ***${lastI(stepsState).location}*** - doesn’t welcome the invitation to open and relax, right?
 `,
     answers: [
       { text: 'Correct', onClickThat: confirmDecline },

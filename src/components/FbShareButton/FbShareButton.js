@@ -3,6 +3,7 @@
 import React from 'react'
 
 import { DOMAIN } from '../../constants'
+import history from '../../history'
 import { isProd, noop } from '../../utils'
 
 type Props = {
@@ -11,16 +12,17 @@ type Props = {
 
 class FbShareButton extends React.Component {
   state = {
-    href: '',
+    pathname: '',
     rendered: false,
   };
 
   componentDidMount() {
     this.reloadFB()
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return nextState.rendered !== this.state.rendered
+    if (!this.props.urlProp) {
+      history.listen(() => {
+        this.reloadFB()
+      })
+    }
   }
 
   componentWillUnmount() {
@@ -60,7 +62,7 @@ class FbShareButton extends React.Component {
   timeoutFbRender = null;
 
   urlToShare() {
-    return this.props.urlProp ? DOMAIN + this.props.urlProp : this.state.href
+    return DOMAIN + (this.props.urlProp ? this.props.urlProp : this.state.pathname)
   }
 
   encodedUrlToShare() {
@@ -72,7 +74,7 @@ class FbShareButton extends React.Component {
       this.timeoutFb = setTimeout(this.reloadFB, 500)
       return
     }
-    this.setState({ href: window.location.href }, () => {
+    this.setState({ pathname: window.location.pathname }, () => {
       global.FB.XFBML.parse(this.elem, () => {
         this.timeoutFbRender = setTimeout(() => {
           this.setState({ rendered: true })
