@@ -5,7 +5,7 @@ import BlogPost from './BlogPost'
 import Transcript from './Transcript'
 
 const dbPosts = [
-  'foo',
+  'healing-metaphors-water-slime',
 ]
 
 async function action({ params }) {
@@ -15,7 +15,7 @@ async function action({ params }) {
     return {
       title: data.title,
       description: data.description,
-      path: `/posts/${params.post}`,
+      path: getPath(params.post),
       component: <Comp {...data} />,
     }
   }
