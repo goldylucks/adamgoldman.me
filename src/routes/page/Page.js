@@ -22,7 +22,8 @@ type Props = {
 };
 
 const Page = ({
-  title, tags, body, html, nick, ps }:
+  title, tags, body, html, nick, ps,
+}:
 Props) => (
   <div>
     <div className="main-layout post-page">

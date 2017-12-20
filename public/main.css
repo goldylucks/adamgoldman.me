@@ -215,15 +215,6 @@ ol {
   margin-bottom: 80px;
 }
 
-.transcript-comment {
-  padding: 10px 20px;
-  background: rgba(255,255,255, 0.3);
-  font-size: 18px;
-  line-height: 1.4;
-  margin: 20px;
-  border-radius: 10px;
-}
-
 .main-content a {
   text-decoration: underline;
   color: #96c7ff;

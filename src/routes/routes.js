@@ -27,6 +27,10 @@ const routes = {
       load: () => import(/* webpackChunkName: 'blogPost' */ './blogPost'),
     },
     {
+      path: '/posts-generator/:post',
+      load: () => import(/* webpackChunkName: 'postsGenerator' */ './postsGenerator'),
+    },
+    {
       path: '/tags',
       load: () => import(/* webpackChunkName: 'tags' */ './tags'),
     },

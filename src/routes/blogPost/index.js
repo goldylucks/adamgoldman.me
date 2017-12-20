@@ -1,9 +1,25 @@
 import React from 'react'
+import axios from 'axios'
 
 import BlogPost from './BlogPost'
 import Transcript from './Transcript'
 
+const dbPosts = [
+  'healing-metaphors-water-slime',
+]
+
 async function action({ params }) {
+  if (dbPosts.includes(params.post)) {
+    const { data } = await axios.get(`/api/posts/${params.post}`)
+    const Comp = data.transcript.length ? Transcript : BlogPost
+    return {
+      title: data.title,
+      description: data.description,
+      path: getPath(params.post),
+      component: <Comp {...data} />,
+    }
+  }
+
   const post = await import(`../../posts/${params.post}.js`)
     .then(module => module.default) // use an object from `export default`
     .catch((error) => {

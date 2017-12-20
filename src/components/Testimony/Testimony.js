@@ -10,7 +10,8 @@ type Props = {
 }
 
 const Testimony = ({
-  imgSrc, text, name, isRtl }:
+  imgSrc, text, name, isRtl,
+}:
 Props) => (
   <div style={{
  background: '#fff', padding: 10, borderRadius: 5, marginBottom: 10, direction: !isRtl ? 'ltr' : 'rtl',

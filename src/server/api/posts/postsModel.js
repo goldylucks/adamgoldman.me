@@ -1,16 +1,16 @@
 import mongoose from 'mongoose'
 
 const { Schema } = mongoose
-const ToolsSchema = getSchema()
+const PostsSchema = getSchema()
 
-export default (function toolsModel() {
-  let tools
+export default (function postsModel() {
+  let posts
   try {
-    tools = mongoose.model('tools')
+    posts = mongoose.model('posts')
   } catch (error) {
-    tools = mongoose.model('tools', ToolsSchema)
+    posts = mongoose.model('posts', PostsSchema)
   }
-  return tools
+  return posts
 }())
 
 function getSchema() {
@@ -41,20 +41,23 @@ function getSchema() {
       required: true,
     },
 
-    credits: String,
-
-    initialState: {
-      type: Object,
-      required: true,
+    tags: {
+      type: [],
+      default: [],
     },
 
-    testimony1Text: String,
-    testimony1Name: String,
-    testimony1Src: String,
+    // transcript specific stuff
+    transcript: [],
+    intro: String,
+    age: String,
+    name: String,
+    date: String,
+    fbReview: String,
+    diagnosis: String,
+    fbProfile: String,
+    ps: String,
 
-    steps: [],
-
-    isRtl: {
+    isBodyRtl: {
       type: Boolean,
       default: false,
     },

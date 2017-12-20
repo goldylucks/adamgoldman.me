@@ -1,3 +1,5 @@
+/* eslint-disable react/prefer-stateless-function */
+
 import React from 'react'
 import PropTypes from 'prop-types'
 import serialize from 'serialize-javascript'

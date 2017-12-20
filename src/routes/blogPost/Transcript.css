@@ -1,0 +1,43 @@
+.chatMessageActions {
+  display: none;
+}
+
+.chatMessageActions > a {
+  margin: 10px;
+}
+
+.chatMessageContainerAdmin:hover {
+  border: 1px solid black;
+}
+
+.chatMessageContainerAdmin:hover .chatMessageActions {
+  display: block;
+}
+
+.transcriptComment {
+  padding: 10px 20px;
+  background: rgba(255,255,255, 0.3);
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.controls {
+  position: fixed;
+  bottom: 20px;
+  right: 39%;
+  display: flex;
+  flex-direction: row;
+}
+
+.control {
+  border: 1px solid #1a7ced;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 50%;
+}
