@@ -38,8 +38,8 @@ global.navigator.userAgent = global.navigator.userAgent || 'all'
 app.use(express.static(path.resolve(__dirname, 'public')))
 app.use(cookieParser())
 app.use(cors())
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }))
+app.use(bodyParser.json({ limit: '50mb' }))
 
 if (__DEV__) { // eslint-disable-line no-undef
   app.enable('trust proxy')
