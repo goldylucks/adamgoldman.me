@@ -24,6 +24,7 @@ const toolsV3 = [
   'perfect-day',
   'recurring-time-distortion',
   'grief-to-appreciation',
+  'grief-to-appreciation-he',
   'judgement',
 ]
 
