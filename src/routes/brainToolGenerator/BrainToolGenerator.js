@@ -210,6 +210,12 @@ class BrainToolGenerator extends React.Component {
               </div>
 
               <div>
+                <input type="checkbox" id={`step-${idx}-answer-${aIdx}-hasAlert`} value={a.hasAlert} checked={a.hasAlert} onChange={this.toggleAnswerKey('hasAlert', idx, aIdx)} />
+                <label htmlFor={`step-${idx}-answer-${aIdx}-alert`}>Alert</label>
+                { a.hasAlert && <input placeholder="Inputs to reset" value={a.alert} onChange={this.changeAnswerKey('alert', idx, aIdx)} /> }
+              </div>
+
+              <div>
                 <input type="checkbox" id={`step-${idx}-answer-${aIdx}-isFbShare`} value={a.isFbShare} checked={a.isFbShare} onChange={this.toggleAnswerKey('isFbShare', idx, aIdx)} />
                 <label htmlFor={`step-${idx}-answer-${aIdx}-isFbShare`}>FB Share</label>
               </div>
@@ -302,6 +308,8 @@ class BrainToolGenerator extends React.Component {
     const nextSteps = [...this.state.steps]
     nextSteps[idx].answers.push({
       text: '',
+      alert: '',
+      hasAlert: false,
       hasInput: false,
       inputId: '',
       inputValue: '',

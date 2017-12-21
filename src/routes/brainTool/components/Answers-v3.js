@@ -28,6 +28,8 @@ Props) => (
         html = <FbShareLink>I want more to experience this</FbShareLink>
       } else if (answer.link) {
         html = <Link to={answer.link}>{answer.text}</Link>
+      } else if (answer.alert) {
+        html = <a onClick={() => global.alert(answer.alert)}>{answer.text}</a>
       } else if (answer.linkNew) {
         html = (
           <a
