@@ -5,6 +5,7 @@ import { MESSENGER_LINK } from '../../constants'
 import FbShareLink from '../FbShareLink'
 import Link from '../Link'
 import FbReview from '../FbReview'
+import FbLink from '../FbLink'
 import YtEmbedd from '../YtEmbedd'
 import ExplicitWarning from '../ExplicitWarning'
 
@@ -87,15 +88,20 @@ const Markdown = props => (
             }
 
             if (linkProps.href.match('FB_PROFILE')) {
-              const newRef = 'https://www.facebook.com/adamgoldman47'
               return (
-                <a
-                  href={newRef}
-                  target="_blank"
-                  rel="nofollow noreferrer noopener"
-                >
-                  {linkProps.children}
-                </a>
+                <FbLink to="profile">{linkProps.children}</FbLink>
+              )
+            }
+
+            if (linkProps.href.match('FB_PAGE')) {
+              return (
+                <FbLink to="page">{linkProps.children}</FbLink>
+              )
+            }
+
+            if (linkProps.href.match('FB_PAGE_REVIEWS')) {
+              return (
+                <FbLink to="reviews">{linkProps.children}</FbLink>
               )
             }
 

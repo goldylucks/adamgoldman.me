@@ -234,7 +234,7 @@ all natural, learning to use your brain
 </div><div class="chat-message">You gave me all the answer I'm asking for 2years
 </div></div><div class="chat-message-container clearfix adam"><div class="chat-message">I'm very very glad
 </div></div><div class="chat-message-container clearfix other"><div class="chat-message">I need to step forward now, erase all the bad memories in the fast and stay in the present picture
-</div></div><div class="chat-message-container clearfix adam"><div class="chat-message">u can make me even happier and leave me a review <img alt="🙂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/z4c/1/16/1f642.png"></div><div class="chat-message"><a href="https://www.facebook.com/adamgoldman.me/reviews/" target="_blank" rel="nofollow noreferrer noopener">https://www.facebook.com/adamgoldman.me/reviews/</a>
+</div></div><div class="chat-message-container clearfix adam"><div class="chat-message">u can make me even happier and leave me a review <img alt="🙂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/z4c/1/16/1f642.png"></div><div class="chat-message"><a href="https://www.fb.com/adamgoldman.me/reviews/" target="_blank" rel="nofollow noreferrer noopener">https://www.fb.com/adamgoldman.me/reviews/</a>
 </div></div><div class="chat-message-container clearfix other"><div class="chat-message">Sure thing
 </div></div><div class="chat-message-container clearfix adam"><div class="chat-message">and like the page for an extra dose of good karma <img alt="😉" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/z57/1/16/1f609.png"></div><div class="chat-message">also
 </div><div class="chat-message">tonight your going to have some wild dreams

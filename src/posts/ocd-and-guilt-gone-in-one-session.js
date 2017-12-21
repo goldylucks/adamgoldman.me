@@ -921,7 +921,7 @@ Then had her think about the next time she sees her sister that had the accident
   </div><div class="chat-message">I can't thank you enough I feel relief
   </div><div class="chat-message">I'll do my very best in every situation with my yellow chuckle Gucci sparkle
   </div></div><div class="chat-message-container clearfix adam"><div class="chat-message">if you enjoyed
-  </div><div class="chat-message"><a href="https://www.facebook.com/adamgoldman.me/reviews/" target="_blank" rel="nofollow noreferrer noopener">https://www.facebook.com/adamgoldman.me/reviews/</a>
+  </div><div class="chat-message"><a href="https://www.fb.com/adamgoldman.me/reviews/" target="_blank" rel="nofollow noreferrer noopener">https://www.fb.com/adamgoldman.me/reviews/</a>
   </div><div class="chat-message"><div class="chat-message-image" role="presentation" data-testid="0" style="background-image: url(&quot;https://scontent.fskg1-1.fna.fbcdn.net/v/t35.0-0/p480x480/21170930_1448938695182356_660365176_o.png?oh=94a9bcc7e9338861a21464a8dd6b4b1e&amp;oe=59AE1938&quot;);">
   <img class="_52mr _5pf5 img" alt="" src="https://scontent.fskg1-1.fna.fbcdn.net/v/t35.0-0/p480x480/21170930_1448938695182356_660365176_o.png?oh=94a9bcc7e9338861a21464a8dd6b4b1e&amp;oe=59AE1938" style="max-width: 100%; width: 100%;" />
   </div></div><div class="chat-message">leave a review so others could learn from your success 

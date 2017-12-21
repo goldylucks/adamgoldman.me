@@ -11,6 +11,10 @@ const routes = {
       load: () => import(/* webpackChunkName: 'home' */ './home'),
     },
     {
+      path: '/fb-redirect/:to',
+      load: () => import(/* webpackChunkName: 'fbRedirect' */ './fbRedirect'),
+    },
+    {
       path: '/successes',
       load: () => import(/* webpackChunkName: 'successes' */ './successes'),
     },

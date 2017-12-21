@@ -76,7 +76,7 @@ Peeps who got a PayPal usually use this to give back, since it's so easy and con
 
 That's perfectly fine, I have a bit of savings and I don't spend too much. There are many ways you could contribute!
 
-[Share](FB_SHARE) this page, [leave a review](https://www.facebook.com/adamgoldman.me/reviews/) (and like!), tell your friends, and [let me know](/lets-talk/) what skills do you have that might be useful. There are many areas I could use help in order to reach more people and refine everything that I do. I appreciate every act of kindness! :)
+[Share](FB_SHARE) this page, [leave a review](FB_PAGE_REVIEWS) (and like!), tell your friends, and [let me know](/lets-talk/) what skills do you have that might be useful. There are many areas I could use help in order to reach more people and refine everything that I do. I appreciate every act of kindness! :)
 
 ---
 
