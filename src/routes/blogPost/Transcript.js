@@ -157,7 +157,7 @@ class Transcript extends React.Component {
 # Details
 
 ${!date ? '' : `- Date of session: ${date}  `}
-${!fbProfile ? `- Name: ${name}` : `- Name: [${name}](${fbProfile})  `}
+${!fbProfile ? `- Name: ${name}` : `- Name: [${name}](https://www.fb.com/${fbProfile})  `}
 ${!age ? '' : `- Age: ${age}  `}
 ${!diagnosis ? '' : `- Diagnosis: ${diagnosis}  `}
 - Medium of communication: Facebook chat
