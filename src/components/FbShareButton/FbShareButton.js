@@ -19,13 +19,16 @@ class FbShareButton extends React.Component {
   componentDidMount() {
     this.reloadFB()
     if (!this.props.urlProp) {
-      history.listen(() => {
+      this.unlisten = history.listen(() => {
         this.reloadFB()
       })
     }
   }
 
   componentWillUnmount() {
+    if (this.unlisten) {
+      this.unlisten()
+    }
     clearTimeout(this.timeoutFb)
     clearTimeout(this.timeoutFbRender)
   }

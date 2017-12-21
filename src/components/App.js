@@ -50,29 +50,23 @@ const ContextType = {
  */
 
 /* eslint-disable */
-const initDrip = () => {
-  var _dcq = _dcq || [];
-  var _dcs = _dcs || {};
-  _dcs.account = '3809371';
-  const dc = document.createElement('script');
-  dc.type = 'text/javascript';
-  dc.async = true;
-  dc.src = '//tag.getdrip.com/3809371.js';
-  const s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(dc, s);
-};
-
 const initFbSdk = () => {
-  (function(d, s, id) {
-    let js,
-      fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s);
-    js.id = id;
-    js.src =
-      `//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=${FB_APP_ID}`;
-    fjs.parentNode.insertBefore(js, fjs);
-  })(document, 'script', 'facebook-jssdk');
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : FB_APP_ID,
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v2.11'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
 };
 /* eslint-enable */
 
@@ -93,7 +87,6 @@ class App extends React.PureComponent {
   }
 
   componentDidMount() {
-    initDrip()
     initFbSdk()
     setAdminPass()
   }
