@@ -43,7 +43,7 @@ class Menu extends React.Component {
           {[
             { to: '', text: 'Start Here' },
             { to: 'i-dont-charge-i-accept', text: 'Pricing' },
-            { to: 'who-am-i-anyway', text: 'who Am I Anyway' },
+            { to: 'who-am-i-anyway', text: 'Who Am I Anyway?' },
             { to: 'tools', text: 'Brain Hacking Tools' },
             { to: 'successes', text: 'Successes' },
             { to: 'tags', text: 'Tags' },
