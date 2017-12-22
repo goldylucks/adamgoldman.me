@@ -7,7 +7,7 @@ import Ending from '../../components/Ending'
 import BreadCrumbs from '../../components/BreadCrumbs'
 import FbShareButton from '../../components/FbShareButton'
 import FbComments from '../../components/FbComments'
-import { scrollToElem } from '../../utils'
+import { scrollToElem, isMobile } from '../../utils'
 
 import Step from './components/Step'
 
@@ -47,7 +47,7 @@ class BrainToolV1 extends React.Component {
     this.goToStep(this.state.currentStep + (typeof n === 'number' ? n : 1));
 
   goToStep = (step) => {
-    scrollToElem(document.querySelector('#main-layout'), 0, 300)
+    scrollTop()
     this.setState({ currentStep: step })
   };
 
@@ -144,3 +144,9 @@ class BrainToolV1 extends React.Component {
 }
 
 export default BrainToolV1
+
+function scrollTop() {
+  return isMobile()
+    ? scrollToElem(document.querySelector('html'), 0, 300)
+    : scrollToElem(document.querySelector('#main-layout'), 0, 300)
+}

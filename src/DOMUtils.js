@@ -7,6 +7,8 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
+import { isMobile } from './utils'
+
 export function updateTag(tagName, keyName, keyValue, attrName, attrValue) {
   const node = document.head.querySelector(`${tagName}[${keyName}="${keyValue}"]`)
   if (node && node.getAttribute(attrName) === attrValue) return
@@ -36,5 +38,7 @@ export function updateLink(rel, href) {
 }
 
 export function scrollElem() {
-  return document.querySelector('#main-layout')
+  return isMobile
+    ? document.querySelector('html')
+    : document.querySelector('#main-layout')
 }

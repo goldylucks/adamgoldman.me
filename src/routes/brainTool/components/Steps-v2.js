@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Markdown from '../../../components/Markdown'
-import { scrollToElem } from '../../../utils'
+import { scrollToElem, isMobile } from '../../../utils'
 
 import AnswersV2 from './Answers-v2'
 
@@ -119,13 +119,13 @@ ${step.description(this.state)}
     this.goToStep(this.state.currentStep + (typeof n === 'number' ? n : 1));
 
   goToStep = (step) => {
-    scrollToElem(document.querySelector('#main-layout'), 0, 300)
+    scrollTop()
     this.setState({ currentStep: step })
   };
 
   goToStepByTitle = (title) => {
     const { steps } = this.props
-    scrollToElem(document.querySelector('#main-layout'), 0, 300)
+    scrollTop()
     this.setState({
       currentStep: steps.indexOf(steps.find(s => s.title === title)),
     })
@@ -138,3 +138,9 @@ ${step.description(this.state)}
   }
 }
 export default StepsV2
+
+function scrollTop() {
+  return isMobile()
+    ? scrollToElem(document.querySelector('html'), 0, 300)
+    : scrollToElem(document.querySelector('#main-layout'), 0, 300)
+}

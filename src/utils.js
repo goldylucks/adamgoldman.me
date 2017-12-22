@@ -103,3 +103,5 @@ export const reorder = (list, startIndex, endIndex) => {
 
   return result
 }
+
+export const isMobile = () => window.innerWidth <= 800

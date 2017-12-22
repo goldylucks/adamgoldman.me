@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import Markdown from '../../../components/Markdown'
 import Testimony from '../../../components/Testimony'
 import SignupFormToolFollowup from '../../../components/SignupFormToolFollowup'
-import { scrollToElem } from '../../../utils'
+import { scrollToElem, isMobile } from '../../../utils'
 
 import AnswersV3 from './Answers-v3'
 
@@ -152,13 +152,13 @@ class StepsV3 extends React.Component {
     this.goToStep(this.state.currentStep + (typeof n === 'number' ? n : 1));
 
   goToStep = (step) => {
-    scrollToElem(document.querySelector('#main-layout'), 0, 300)
+    scrollTop()
     this.setState({ currentStep: step })
   };
 
   goToStepByTitle = (title) => {
     const { steps } = this.props
-    scrollToElem(document.querySelector('#main-layout'), 0, 300)
+    scrollTop()
     this.setState({
       currentStep: steps.indexOf(steps.find(s => s.title === title)),
     })
@@ -191,4 +191,10 @@ function replaceVars(str, state) {
     }
     return state[key]
   })
+}
+
+function scrollTop() {
+  return isMobile()
+    ? scrollToElem(document.querySelector('html'), 0, 300)
+    : scrollToElem(document.querySelector('#main-layout'), 0, 300)
 }
