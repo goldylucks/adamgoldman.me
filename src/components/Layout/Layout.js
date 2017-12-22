@@ -31,7 +31,7 @@ const Layout = ({ children }: Props) => (
       <Menu />
       <Brand />
       <BigScreen>
-        <Link to="/stay-ahead" className={s.stayAhead}>Stay Ahead</Link>
+        <Link to="/stay-ahead" className={s.stayAhead}>Latest Developments</Link>
       </BigScreen>
     </aside>
   </div>
