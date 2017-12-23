@@ -1,5 +1,6 @@
 .chatMessageActions {
   display: none;
+  clear: both;
 }
 
 .chatMessageActions > a {

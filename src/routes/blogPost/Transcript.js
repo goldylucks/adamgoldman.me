@@ -59,6 +59,13 @@ class Transcript extends React.Component {
   componentDidMount() {
     if (localStorage.isAdmin) {
       this.setState({ isAdmin: true }) // eslint-disable-line react/no-did-mount-set-state
+      document.addEventListener('keydown', this.commentHotkey)
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.isAdmin) {
+      document.addEventListener('keydown', this.commentHotkey)
     }
   }
 
@@ -303,13 +310,17 @@ Pretty please?`}
     if (idx !== this.state.messageEditableIdx) {
       return null
     }
+    /* eslint-disable jsx-a11y/no-autofocus */
     return (
       <textarea
         className="input"
+        style={{ height: 400 }}
+        autoFocus
         value={this.state.messageEditableValue}
         onChange={evt => this.setState({ messageEditableValue: evt.target.value })}
       />
     )
+    /* eslint-enable jsx-a11y/no-autofocus */
   }
 
   renderComment({ idx, md }) {
@@ -341,7 +352,11 @@ Pretty please?`}
   deleteMessage(idx) {
     const nextTranscript = [...this.state.transcript]
     nextTranscript.splice(idx, 1)
-    this.setState({ transcript: nextTranscript })
+    this.setState({
+      transcript: nextTranscript,
+      messageEditableIdx: '',
+      messageEditableValue: '',
+    })
   }
 
   editMessage(idx) {
@@ -361,6 +376,11 @@ Pretty please?`}
   }
 
   uneditMessage() {
+    if (this.state.messageEditableValue === '') {
+      const nextTranscript = [...this.state.transcript]
+      nextTranscript.splice(this.state.messageEditableIdx, 1)
+      this.setState({ transcript: nextTranscript })
+    }
     this.setState({
       messageEditableIdx: '',
       messageEditableValue: '',
@@ -378,6 +398,7 @@ Pretty please?`}
     }
     this.setState({
       messageEditableIdx: '',
+      messageEditableValue: '',
       transcript: nextTranscript,
     })
   }
@@ -400,7 +421,7 @@ Pretty please?`}
     nextTranscript.splice(idx + 1, 0, comment())
     this.setState({
       transcript: nextTranscript,
-      messageEditableIdx: idx,
+      messageEditableIdx: idx + 1,
     })
   }
 
@@ -408,6 +429,17 @@ Pretty please?`}
     axios.put(`/api/posts/${this.props.url}/transcript`, this.state.transcript)
       .then(res => console.log('saved!', res.data)) // eslint-disable-line no-console
       .catch(err => console.error(err)) // eslint-disable-line no-console
+  }
+
+  commentHotkey = (evt) => {
+    if (this.state.messageEditableIdx) {
+      if (evt.key === 'Enter' && evt.ctrlKey) {
+        this.saveMessage(this.state.messageEditableIdx)
+      }
+      if (evt.key === 'Escape') {
+        this.uneditMessage()
+      }
+    }
   }
 }
 
