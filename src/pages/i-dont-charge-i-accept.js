@@ -32,7 +32,7 @@ One lady came to me after 30 years of therapy, twice a week, $30 each session.
 
 That's a LOT of time and money she spent for NOT solving her problem.
 
-[We did more progress in 2 hours than the previous 30 years combined](/rachels-abusive-parody-theater/).
+[We did more progress in 2 hours than the previous 30 years combined](/blog/rachel-turns-family-trauma-to-parody).
 
 U can imagine she was more than happy to give back ...
 
@@ -41,7 +41,7 @@ U can imagine she was more than happy to give back ...
 <h1 style="text-align: center; font-style: italic; margin: 40px 0;">So how can I give back?</h1>
 
 #### Bitcoin
-My favorite way of moving value around without giving a cut to the banksters and people in suits in the ivory tower. I made a dedicated page for that to make it easier for you. [Start here](/first-steps-with-bitcoin-real-money/).
+My favorite way of moving value around without giving a cut to the banksters and people in suits in the ivory tower. I made a dedicated page for that to make it easier for you. [Start here](/blog/bitcoin-first-steps/).
 
 #### Card
 The easiest way most people choose to give back. Click on the select field below, choose the amount you'd be happy to give, and click the "buy now" button. Oh and ... Get ready for a dose of good karma ;)
