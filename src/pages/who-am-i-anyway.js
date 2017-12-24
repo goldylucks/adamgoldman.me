@@ -6,45 +6,30 @@ export default {
   body: `
 [Adam doesn't like to talk about himself in third person so he will stop now](STRIKE)
 
-*"If I'd write a book that everybody enjoys, and understood, I wouldn't be telling anything new. Think about that ..."*
+<br />
 
-That's a very interesting guy citing Arthur C. Clark, during a [reality shattering talk](/blog/men-cant-think-or-reason) in 1999, attempting to reach out to the next generation's minds.
+> *"If I'd write a book that everybody enjoys, and understood, I wouldn't be telling anything new"* - Arthur C. Clark
 
-As that echos through your mind, **get ready for** a healthy dose of **cognitive dissonance** and you, like me, might enjoy getting the big picture first before we dive into [the details](TITLE_How_else_are_we_to_find_the_evil_red_dude_and_his_pointy_trident?_;\\)).
+If you haven't experienced fast change already, you might not yet understand some of the things that I do like ...
 
-## Me in a nutshell
-* No permanent address for 3 years now
-* That's me up there, without a degree or credentials, teaching the [IT faculty](https://www.facebook.com/pg/adamgoldman.me/photos/?tab=album&album_id=1747980051883158) of Palawan State University how to teach their kids.
-* [I don't charge, I accept](/i-dont-charge-i-accept/)
-* [Feed at night](/blog/why-i-feed-only-at-nights/), drink water [tea](/blog/tea/) and [coffee](/blog/coffee/) at day
-* [Avoid meetings like the plague](/blog/avoid-meetings-like-the-plague/)
-* [Teaching is intoxicating](/blog/my-teaching-history/)! My greatest passion for 20+ years
-* [Kiss and eat with the mouth, don't exhale](/blog/nose-breathers-unite/)
-* [Open source EVERYTHING](/open-source/)
-* [Life long traumas](/blog/rachels-abusive-parody-theater/) and [bad habits](/blog/dan-the-venus-guy-part-1-2/) can be cleared faster than you think
-* Kids learn fast, and teach faster, but not [as fast as you will](/book-me/)
-* Bitcoin - [Claim your funds](/blog/bitcoin-first-steps/), or the bankers will do it for you.
-* [Dumb rituals](/blog/my-dumb-rituals/) takes me further than [intelligence](TITLE_which_is_highly_overrated_anywayz)
-* [Your mind should be like water](/blog/mind-like-water-tartar-sauce/), not a storage unit
-* [Install the information](/book-me/), don't puke it on the audience
+- How Jennifer "broke" her [OCD](/blog/ocd-and-guilt-gone-in-one-session/) in one session
+- How Julianne cleared all her [Fybromialgia](/blog/fibromyalgia-0-julianne-1/) symptoms, a condition considered uncurable
+- How many others cleared their [traumas](/tags/trauma), [guilt](/blog/ocd-and-guilt-gone-in-one-session/), [grief](/tags/grief), [phobias](/blog/aprils-bus-phobia), [depression](/blog/depression-and-betrayal-gone-in-minutes), [anxiety and panic attacks](/blog/panic-attacks-a-broken-heart/), usually in one session
 
-Now that you got to know me, let's move to the most important part ...
+If you are like most people, reading what you just read made you squint and stirred up some "what da ..." feelings inside.
 
-## I want to get to know u
-Since I'm very intuitive I can sense some of what you just read made you squint and stirred up some "what da ..." feelings inside.
-
-That's GOOD.
+That's GOOD.  
 That's the feeling of exposure to stuff outside your model of the world.
 
-I can also sense some things holding you back, many things you know you"should" do but don't, and the other way around.
+I can also sense some things holding you back, many things you know you "should" do but don't, and the other way around.
 
 That's only you btw, no one else experiences this ;)
 
-So what are **YOUR biggest pain points**?
-What do you REALLY want to have happen?
+So what are **YOUR biggest pain points**?  
+What do you REALLY want to have happen?  
 What are your **itchiest scratches**?
 
-Most people never stop to wonder **what would make life FANTASTIC**. What would make them shoot up out of bed and face the next day with full power.
+Most people never stop to wonder [**what would make life FANTASTIC**](/tools/perfect-day). What would make them shoot up out of bed and face the next day with full power.
 
 Most **people choose between "not bad" and "OK."**
 
@@ -54,6 +39,14 @@ So **welcome to my humble virtual space**!
 
 I've just finished tidying up there so please **check your shoes and formalities at the door**, poke around a bit, and when you are ready, [let me know how you want to improve your life](/lets-talk/).
 
-Talk soon,  
+## Me in a nutshell
+* Got no permanent address for 3 years now
+* Without credentials or a degree, I taught the [IT faculty](https://www.facebook.com/pg/adamgoldman.me/photos/?tab=album&album_id=1747980051883158) of Palawan State University how to teach their students in new innovatie ways.
+* [I don't charge, I accept](/i-dont-charge-i-accept/)
+* [Started teaching at age 6](/blog/my-teaching-history/), my greatest passion for 20+ years
+
+Now that you got to know me, let's move to the most important part ... Let me get to know you!
+
+So [what can I do you for](/lets-talk) my [friend](FB_PROFILE)?
 `,
 }
