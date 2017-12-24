@@ -24,12 +24,12 @@ class SignupForm extends React.Component {
           value={this.state.email}
           onChange={inputChange.call(this, 'email')}
           required
-          className="input"
+          className="form-control"
           type="email"
           placeholder="My best email is ..."
         />
         <button
-          className="button"
+          className="btn btn-primary"
           style={{
  fontWeight: 'bold', fontSize: 24, padding: 20, marginBottom: 30,
 }}

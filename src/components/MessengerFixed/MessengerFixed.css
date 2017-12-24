@@ -6,16 +6,10 @@
   display: block;
   transition: 0.5s opacity;
   border-bottom: none !important;
-  opacity: 0.5;
-}
-
-.container:hover {
-  opacity: 1;
 }
 
 @media (max-width: 800px) {
   .container {
-    opacity: 1;
     bottom: 10px;
     right: 10px;
     left: auto;

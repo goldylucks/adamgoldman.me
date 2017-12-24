@@ -3,7 +3,7 @@ export default {
   tags: ['Places'],
   nick: 'not Israeli',
   body: `
-NOTE: [Yours truly](/who-am-i-anyway/) haven’t been to Israel for a year, so check online before you make plans!
+NOTE: [Yours truly](/about/) haven’t been to Israel for a year, so check online before you make plans!
 
 # Tel Aviv
 

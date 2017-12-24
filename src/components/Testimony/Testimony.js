@@ -1,36 +1,42 @@
 // @flow
 
 import React from 'react'
+import cx from 'classnames'
+import withStyles from 'isomorphic-style-loader/lib/withStyles'
+
+import s from './Testimony.css'
 
 type Props = {
   imgSrc?: string,
   text: string,
   name: string,
+  nameMeta?: string,
   isRtl?: boolean,
 }
 
 const Testimony = ({
-  imgSrc, text, name, isRtl,
+  imgSrc, text, name, nameMeta, isRtl,
 }:
 Props) => (
-  <div style={{
- background: '#fff', padding: 10, borderRadius: 5, marginBottom: 10, direction: !isRtl ? 'ltr' : 'rtl',
-}}>
-    {imgSrc && <img
-      src={imgSrc}
-      style={{
- borderRadius: '50%', border: '3px solid #fff', float: !isRtl ? 'left' : 'right', [!isRtl ? 'marginRight' : 'marginLeft']: 10,
-}}
-      alt={`${name}'s testimoniaol'`}
-    />}
-    <p style={{ color: '#777', fontStyle: 'italic' }}>{text}</p>
-    <p style={{ color: '#000', marginBottom: 0 }}>- {name}</p>
-  </div>
+  <article className="clearfix">
+    <blockquote className={cx('card-text', { rtl: isRtl })}>{text}</blockquote>
+    <div className="clearfix">
+      <div className={cx('avatar-with-text', { rtl: isRtl })}>
+        {imgSrc && <img alt={`${name}'s testimonial'`} src={imgSrc} className="avatar" />}
+      </div>
+      <div className={cx('avatar-with-text', { rtl: isRtl })}>
+        <strong>{name}</strong>
+        {nameMeta && <p><small>{nameMeta}</small></p>}
+      </div>
+    </div>
+    <hr />
+  </article>
 )
 
 Testimony.defaultProps = {
   imgSrc: '',
+  nameMeta: '',
   isRtl: false,
 }
 
-export default Testimony
+export default withStyles(s)(Testimony)

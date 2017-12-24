@@ -7,7 +7,6 @@ import s from './MessengerFixed.css'
 
 const MessengerFixed = () => (
   <a
-    data-title="No don't click me!"
     className={s.container}
     href={MESSENGER_LINK}
     target="_blank"

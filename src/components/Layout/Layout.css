@@ -1,64 +1,6 @@
-.appWrapper {
-  height: 100vh;
-  display: flex;
-}
-
 .mainContent {
-  overflow-y: scroll;
-  width: 75%;
-  background: #1a7ced;
-  position: relative;
-  padding: 10px;
-}
-
-.sidebar {
-  width: 25%;
-  background: #302f37;
-  position: fixed;
-  right: 0;
-  height: 100%;
-}
-
-.stayAhead {
-  text-align: center;
+  max-width: 740px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin: 0 auto;
-  border-radius: 4px;
-  display: block;
-  background: #1a7ced;
-  color: #fff;
-  font-size: 30px;
-  position: absolute;
-  left: 0;
-  padding: 10px 0;
-  right: 0;
-  width: 80%;
-  bottom: 20px;
-  transition: 0.5s ease-in-out;
-}
-
-.stayAhead:hover {
-  background: #fff;
-  color: #1a7ced;
-}
-
-/* mobile */
-@media (max-width: 800px) {
-  .appWrapper {
-    flex-direction: column-reverse;
-    min-height: 100vh;
-    padding-top: 75px;
-    height: auto;
-  }
-
-  .sidebar {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    height: 75px;
-  }
-  
-  .mainContent {
-    width: 100%;
-    overflow-y: visible;
-  }
 }

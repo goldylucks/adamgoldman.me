@@ -3,33 +3,23 @@
 import React from 'react'
 
 import Link from '../Link'
-import { cloudImg } from '../../utils'
+import Avatar from '../Avatar'
 
 type Props = {
   nick?: string,
 };
 
 const Ending = ({ nick, ...restProps }: Props) => (
-  <section {...restProps}>
-    <Link to="/">
-      <img
-        className="ending-avatar"
-        style={{
-          borderRadius: '50%',
-          display: 'block',
-          width: 150,
-          marginBottom: 20,
-        }}
-        src={cloudImg('adamgoldman.me/profile-smiling')}
-        alt={`Adam Goldman ${nick}`}
-      />
+  <section {...restProps} className="clearfix">
+    <Link to="/" className="avatar-with-text">
+      <Avatar alt={`Adam Goldman ${nick}`} />
     </Link>
-    -{' '}
-    <Link to="/">
-      <strong style={{ fontSize: 20 }}>
-        Adam {nick && `“${nick}”`} Goldman
-      </strong>
-    </Link>
+    <div className="avatar-text">
+      <Link to="/" style={{ color: 'inherit' }}>
+        <strong>Adam {nick && `“${nick}”`} Goldman</strong>
+      </Link>
+      <p><small>Relax, it&apos;s just life ...</small></p>
+    </div>
   </section>
 )
 

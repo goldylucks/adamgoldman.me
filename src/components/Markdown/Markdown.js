@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 
-import { MESSENGER_LINK } from '../../constants'
+import { MESSENGER_LINK, FB_PROFILE, FB_REVIEWS, EMAIL } from '../../constants'
 import FbShareLink from '../FbShareLink'
 import Link from '../Link'
 import FbReview from '../FbReview'
@@ -70,10 +70,9 @@ const Markdown = props => (
             }
 
             if (linkProps.href.match('EMAIL')) {
-              const newRef = 'mailto:goldy@adamgoldman.me'
               return (
                 <a
-                  href={newRef}
+                  href={`mailto:${EMAIL}`}
                   target="_blank"
                   rel="nofollow noreferrer noopener"
                 >
@@ -87,10 +86,9 @@ const Markdown = props => (
             }
 
             if (linkProps.href.match('FB_PROFILE')) {
-              const newRef = 'https://www.facebook.com/adamgoldman47'
               return (
                 <a
-                  href={newRef}
+                  href={FB_PROFILE}
                   target="_blank"
                   rel="nofollow noreferrer noopener"
                 >
@@ -103,6 +101,18 @@ const Markdown = props => (
               return (
                 <a
                   href={MESSENGER_LINK}
+                  target="_blank"
+                  rel="nofollow noreferrer noopener"
+                >
+                  {linkProps.children}
+                </a>
+              )
+            }
+
+            if (linkProps.href.match('FB_REVIEWS')) {
+              return (
+                <a
+                  href={FB_REVIEWS}
                   target="_blank"
                   rel="nofollow noreferrer noopener"
                 >

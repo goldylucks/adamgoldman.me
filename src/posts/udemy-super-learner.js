@@ -98,7 +98,7 @@ Many people who read this page tell me it's sounds good BUT they will never make
 
 Should you [buy it](https://www.udemy.com/become-a-superlearner-2-speed-reading-memory-accelerated-learning/)? If some of those concepts are new to you, and you prefer to save time researching them yourself, I'd say go ahead and buy it. I got very limited benefits from this course but I've been into speed learning for years now, so if your new, check it out.
 
-The dude presenting the course seems sweet and genuine, trying to be professional and "human" at the same time, which always gets a giggle out of me (u know by now [how "professional" and "serious" I can get](/who-am-i-anyway/) at times ...)
+The dude presenting the course seems sweet and genuine, trying to be professional and "human" at the same time, which always gets a giggle out of me (u know by now [how "professional" and "serious" I can get](/about/) at times ...)
 `,
   ps: `
 **PS**. once you're done, [contact me](/lets-talk/) to get your skills to the next level

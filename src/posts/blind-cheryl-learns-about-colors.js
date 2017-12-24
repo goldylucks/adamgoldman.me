@@ -9,7 +9,7 @@ BUT ...
 
 and that's a BIG but
 
-(Like mine, which is [my](/who-am-i-anyway/) least favorite body part btw, we do not get along ...)
+(Like mine, which is [my](/about/) least favorite body part btw, we do not get along ...)
 
 do not try to UNDERSTAND before you EXPERIENCE how your about to change, as
 

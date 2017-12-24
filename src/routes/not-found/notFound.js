@@ -16,7 +16,7 @@ I'm so sorry to have led you astray.
 
 would you find it in your heart to forgive me?
 
-on the bright side, this is a great opportunity for you to [talk to me](/lets-talk/), try some of my [brain hacking tools](/tools/), read some [quotes](/quotes/), [books](/books/), [reviews](/reviews/), and [success stories](/successes/).
+on the bright side, this is a great opportunity for you to [talk to me](/lets-talk/), try some of my [brain hacking tools](/tools/), read some [quotes](/quotes/), [books](/books/), [reviews](FB_REVIEWS), and [success stories](/transcripts/).
 `,
   ps: `> *caminante no hay camino,*  
 > *se hace camino al andar* - **Manuel Serrat**  

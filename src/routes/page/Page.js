@@ -4,60 +4,44 @@
 
 import React from 'react'
 
+import Share from '../../components/Share'
 import Markdown from '../../components/Markdown'
-import FbPageBox from '../../components/FbPageBox'
 import Ending from '../../components/Ending'
-import BreadCrumbs from '../../components/BreadCrumbs'
-import FbShareButton from '../../components/FbShareButton'
-import FbComments from '../../components/FbComments'
-import Tags from '../../components/Tags'
+import BottomSection from '../../components/BottomSection'
 
 type Props = {
   title: string,
-  tags: Array<string>,
   body: string,
   html: string,
+  path: string,
   nick: string,
-  ps?: string, // eslint-disable-line react/require-default-props
+  ps: string,
 };
 
 const Page = ({
-  title, tags, body, html, nick, ps,
+  title, body, html, path, nick, ps,
 }:
 Props) => (
   <div>
-    <div className="main-layout post-page">
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-        }}
-      >
-        <BreadCrumbs crumbs={[{ text: title }]} style={{ marginBottom: 10 }} />
-        <FbShareButton />
+    <div className="container">
+      <div className="row">
+        <div className="col-md-2 col-xs-12">
+          <Share path={path} title={title} />
+        </div>
+        <div className="col-md-8 col-xs-12">
+          <div className="mainheading">
+            <h1 className="posttitle">{title}</h1>
+          </div>
+          <div className="article-post">
+            <Markdown source={body} />
+            {html && <div style={{ marginBottom: 40 }}>{html}</div>}
+          </div>
+          <Ending nick={nick} />
+          {ps && <Markdown source={ps} />}
+        </div>
       </div>
-      <h1 className="main-title">{title}</h1>
-      <Tags tags={tags} />
-      <Markdown className="post-text" source={body} />
-      {html && <div style={{ marginBottom: 40 }}>{html}</div>}
-      <FbPageBox style={{ display: 'block', textAlign: 'center' }} />
-      <hr />
-      <div style={{ marginBottom: 20 }}>
-        <FbShareButton />
-      </div>
-      <Ending nick={nick} />
-      {ps && (
-        <Markdown
-          className="post-text"
-          containerProps={{
-            style: { marginTop: 40 },
-          }}
-          source={ps}
-        />
-      )}
-      <FbComments style={{ marginTop: 10 }} />
     </div>
+    <BottomSection />
   </div>
 )
 

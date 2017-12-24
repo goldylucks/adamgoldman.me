@@ -131,7 +131,7 @@ Keep me posted on your progress!
 
 #### Final words?
 
-Please, please, (pretty please?) if any question or comment about our work together pops up, [shoot](/lets-talk/) it [my](/who-am-i-anyway/) way. If anything is bugging you, I NEED TO KNOW so I could best help you. Okie dokie?
+Please, please, (pretty please?) if any question or comment about our work together pops up, [shoot](/lets-talk/) it [my](/about/) way. If anything is bugging you, I NEED TO KNOW so I could best help you. Okie dokie?
 
 Real glad to have you on board, and I’m curious to see how fast u’ll be amazed from your progress and the cool projects you will help bring to life.
 

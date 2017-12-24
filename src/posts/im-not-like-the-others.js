@@ -28,7 +28,7 @@ I'm getting this so often that I've actually took the time to dedicate a whole p
 
 Here's the thing ...
 
-[We](/who-am-i-anyway/) all want to think we are a special snowflake, and that there's just something about us that's just different, and there is!
+[We](/about/) all want to think we are a special snowflake, and that there's just something about us that's just different, and there is!
 
 Your [life experiences](/blog/sort-out-your-past/) are yours and yours alone.
 
@@ -88,9 +88,9 @@ And that's the level in which we'll do most of the learning and work.
 [This is NOT therapy](/blog/what-we-are-not-doing).
 I ain't gonna bore you to death about what your behaviors "mean" and "why" you are so screwed up.
 
-What we do works, and [it works FAST](/successes).
+What we do works, and [it works FAST](/transcripts).
 
-So when you are ready to [join the others](/successes) and learn to operate your brain better, [talk to me](/lets-talk) and let's do this.
+So when you are ready to [join the others](/transcripts) and learn to operate your brain better, [talk to me](/lets-talk) and let's do this.
 
 `,
 }

@@ -9,7 +9,7 @@ All my content is, and always will be, **100% [free](/i-dont-charge-i-accept/), 
 
 By open sourced I mean anyone can [clone the code](https://github.com/goldylucks/adamgoldman.me) of this site, improve it, build upon it, and draw ideas and inspiration from it.
 
-I'm building a ["problem-solving" bot](/tools/) that can teach humans to [let go of the past](/tools/trauma-relief/), [process grief](/tools/grief-to-appreciation/), [stop bad habits](/tools/smoking-destroyer/), and [much more](/successes/).
+I'm building a ["problem-solving" bot](/tools/) that can teach humans to [let go of the past](/tools/trauma-relief/), [process grief](/tools/grief-to-appreciation/), [stop bad habits](/tools/smoking-destroyer/), and [much more](/transcripts/).
 
 If you want to help, great!
 

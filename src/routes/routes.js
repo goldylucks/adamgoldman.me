@@ -11,12 +11,8 @@ const routes = {
       load: () => import(/* webpackChunkName: 'home' */ './home'),
     },
     {
-      path: '/successes',
-      load: () => import(/* webpackChunkName: 'successes' */ './successes'),
-    },
-    {
-      path: '/reviews',
-      load: () => import(/* webpackChunkName: 'reviews' */ './reviews'),
+      path: '/transcripts',
+      load: () => import(/* webpackChunkName: 'transcripts' */ './transcripts'),
     },
     {
       path: '/blog',
@@ -31,24 +27,16 @@ const routes = {
       load: () => import(/* webpackChunkName: 'postsGenerator' */ './postsGenerator'),
     },
     {
-      path: '/tags',
-      load: () => import(/* webpackChunkName: 'tags' */ './tags'),
-    },
-    {
-      path: '/tags/:tag',
-      load: () => import(/* webpackChunkName: 'tag' */ './tag'),
-    },
-    {
       path: '/tools',
-      load: () => import(/* webpackChunkName: 'brainTools' */ './brainTools'),
+      load: () => import(/* webpackChunkName: 'tutorials' */ './tutorials'),
     },
     {
-      path: '/tool-generator/:tool',
-      load: () => import(/* webpackChunkName: 'brainToolGenerator' */ './brainToolGenerator'),
+      path: '/tutorial-generator/:tool',
+      load: () => import(/* webpackChunkName: 'tutorialGenerator' */ './tutorialGenerator'),
     },
     {
       path: '/tools/:tool',
-      load: () => import(/* webpackChunkName: 'brainTool' */ './brainTool'),
+      load: () => import(/* webpackChunkName: 'tutorial' */ './tutorial'),
     },
     {
       path: '/:page',

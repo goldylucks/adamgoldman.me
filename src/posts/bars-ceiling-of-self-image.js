@@ -9,7 +9,7 @@ After quitting that unholy practice, he had no motivation to do pretty much anyt
 
 If you ever wished you had more time at a day, be glad your not at the other end of the spectrum like Bar here.
 
-If memory serves, he [contacted](lets-talk/) online and queried if [I](/who-am-i-anyway/) could help him get some life into his life.
+If memory serves, he [contacted](lets-talk/) online and queried if [I](/about/) could help him get some life into his life.
 
 I went through similar episodes back in the day, so invited him to my apartment in Tel Aviv to see what we could do.
 

@@ -4,7 +4,7 @@ export default {
   description: 'Quotes I Love',
   tags: [],
   body: `
-> *"The journey of 1k steps begins with a cup o' coffee."* - **[Some bald dude](/who-am-i-anyway/) with a weird beard**
+> *"The journey of 1k steps begins with a cup o' coffee."* - **[Some bald dude](/about/) with a weird beard**
 
 ---
 
