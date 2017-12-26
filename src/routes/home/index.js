@@ -16,7 +16,7 @@ const tutorials = [
   },
   {
     title: 'Loved One Amplifier',
-    description: 'Inteisify the good feelings from the people you enjoy in your life',
+    description: 'Intensify the good feelings from the people you enjoy in your life',
     url: 'loved-one-amplifier',
   },
 ]
