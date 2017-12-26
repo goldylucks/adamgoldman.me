@@ -31,7 +31,7 @@ If you have any experience with any of these or recommendation of others [let me
 ---
 
 - **Metaphors of movement** - Andrew T. Austin
-  - Even tho I rarely use this specific method, I learned a lot of tricks and insights I incorporated to my [life](/who-am-i-anyway/) and [teachings](/teaching-is-intoxicating-my-greatest-passion-for-20-years/)
+  - Even tho I rarely use this specific method, I learned a lot of tricks and insights I incorporated to my [life](/about/) and [teachings](/teaching-is-intoxicating-my-greatest-passion-for-20-years/)
 
 
 - **Integral Eye Movement Therapy** (AMT 2009) - Andrew T. Austin

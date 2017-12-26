@@ -3,6 +3,7 @@ import React from 'react'
 import Page from './Page'
 
 async function action({ params }) {
+  const path = getPath(params.page)
   const page = await import(`../../pages/${params.page}.js`)
     .then(module => module.default) // use an object from `export default`
     .catch((error) => {
@@ -15,8 +16,8 @@ async function action({ params }) {
   return {
     title: page.title,
     description: page.description,
-    path: getPath(params.page),
-    component: <Page pathname={`/${params.page}`} {...page} />,
+    path,
+    component: <Page path={path} {...page} />,
   }
 }
 

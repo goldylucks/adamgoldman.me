@@ -1,7 +1,13 @@
 import Tools from './toolsModel'
 
 export default {
-  getByUrl, updateOrCreate,
+  getAll, getByUrl, updateOrCreate,
+}
+
+function getAll(req, res, next) {
+  Tools.find()
+    .then(tools => res.json(tools))
+    .catch(next)
 }
 
 function getByUrl(req, res, next) {

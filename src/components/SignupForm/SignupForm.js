@@ -13,19 +13,18 @@ class SignupForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.submit}>
-        <input
-          value={this.state.email}
-          onChange={inputChange.call(this, 'email')}
-          required
-          className="input"
-          type="email"
-          placeholder="My best email is ..."
-        />
+        <div className="form-group">
+          <input
+            value={this.state.email}
+            onChange={inputChange.call(this, 'email')}
+            required
+            className="form-control"
+            type="email"
+            placeholder="My best email is ..."
+          />
+        </div>
         <button
-          className="button"
-          style={{
- fontWeight: 'bold', fontSize: 24, padding: 20, marginBottom: 30,
-}}
+          className="btn btn-primary"
         >
           keep me updated Adam
         </button>

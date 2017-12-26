@@ -109,6 +109,6 @@ Now break each one of those to the [tiniest](TITLE_No_such_thing_as_too_small,_t
 Talk soon,
 `,
   ps: `
-**PS.** Works from my own experience AND [people I've helped](/successes/). Even tho [I have faster ways](/tools/) to induce learnings and desire results, this is still very powerful. **Do it!**
+**PS.** Works from my own experience AND [people I've helped](/transcripts/). Even tho [I have faster ways](/tools/) to induce learnings and desire results, this is still very powerful. **Do it!**
 `,
 }

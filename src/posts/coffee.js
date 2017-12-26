@@ -5,9 +5,7 @@ export default {
   tags: ['Optimize Performance', 'Coffee', 'Common Misconceptions', 'Health'],
   nick: "cup o' joe",
   body: `
-  I'm used to seeing stacks of black bottomed mugs as I walk around different offices, especially around startups and high tech peeps.
-
-<br />
+I'm used to seeing stacks of black bottomed mugs as I walk around different offices, especially around startups and high tech peeps.
 
 For most humans who go crazy for this brown nectar it's a guilty pleasure cuz like many [misconceptions](/blog/common-misconceptions/) that still float around, it's "common knowledge" that **coffee is bad right**?
 

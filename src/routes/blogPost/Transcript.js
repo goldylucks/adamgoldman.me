@@ -4,13 +4,10 @@ import React from 'react'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
 import axios from 'axios'
 
-import Link from '../../components/Link'
 import Markdown from '../../components/Markdown'
-import FbPageBox from '../../components/FbPageBox'
+import Share from '../../components/Share'
+import BottomSection from '../../components/BottomSection'
 import Ending from '../../components/Ending'
-import FbShareButton from '../../components/FbShareButton'
-import BreadCrumbs from '../../components/BreadCrumbs'
-import FbComments from '../../components/FbComments'
 import Tags from '../../components/Tags'
 import StopWarning from '../../components/StopWarning'
 import FbReview from '../../components/FbReview'
@@ -75,62 +72,38 @@ class Transcript extends React.Component {
     const {
       title,
       tags,
-      isBodyRtl,
       fbReview,
       nick,
       ps,
     } = this.props
     return (
       <div>
-        <div className="main-layout post-page">
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-            }}
-          >
-            <BreadCrumbs
-              crumbs={[{ text: 'Blog', path: '/blog' }, { text: title }]}
-            />
-            <FbShareButton />
+        <div className="container">
+          <div className="row">
+            <div className="col-md-2 col-xs-12">
+              <Share />
+            </div>
+
+            <div className="col-md-8 col-xs-12">
+              <div className="mainheading">
+                <h1 className="posttitle">{title}</h1>
+              </div>
+              {fbReview && <FbReview review={fbReview} />}
+              <div className="article-post">
+                {this.renderTOC()}
+                {this.renderDetails()}
+                {this.renderIntro()}
+                {this.renderLegend()}
+                {this.renderTranscript()}
+                {this.renderAdminSave()}
+              </div>
+              <Ending nick={nick} />
+              <Tags tags={tags} />
+              {ps && <Markdown source={ps} />}
+            </div>
           </div>
-          <h1
-            className="main-title"
-            style={{ direction: isBodyRtl ? 'rtl' : 'ltr' }}
-          >
-            {title}
-          </h1>
-          <Tags tags={tags} />
-
-          {fbReview && <FbReview review={fbReview} />}
-
-          {this.renderTOC()}
-          {this.renderDetails()}
-          {this.renderIntro()}
-          {this.renderLegend()}
-          {this.renderTranscript()}
-          {this.renderAdminSave()}
-
-          <hr />
-          <p style={{ fontSize: 25 }}>Liked this post? <Link to="/stay-ahead">Click here to stay updated!</Link></p>
-          <FbPageBox style={{ display: 'block', textAlign: 'center' }} />
-          <hr />
-          <div style={{ marginBottom: 20 }}>
-            <FbShareButton />
-          </div>
-          <Ending nick={nick} />
-          {ps && (
-            <Markdown
-              className="post-text"
-              containerProps={{
-                style: { marginTop: 40 },
-              }}
-              source={ps}
-            />
-          )}
-          <FbComments style={{ marginTop: 10 }} />
         </div>
+        <BottomSection />
       </div>
     )
   }
@@ -139,7 +112,6 @@ class Transcript extends React.Component {
   renderTOC() {
     return (
       <Markdown
-        className="post-text no-margin-bottom"
         source={`
 # TOC
 - Details
@@ -159,14 +131,12 @@ class Transcript extends React.Component {
     } = this.props
     return (
       <Markdown
-        className="post-text no-margin-bottom"
         source={`
 # Details
-
-${!date ? '' : `- Date of session: ${date}  `}
-${!fbProfile ? `- Name: ${name}` : `- Name: [${name}](https://www.fb.com/${fbProfile})  `}
-${!age ? '' : `- Age: ${age}  `}
-${!diagnosis ? '' : `- Diagnosis: ${diagnosis}  `}
+${!date ? '&nbsp;' : `- Date of session: ${date}`}
+${!fbProfile ? `- Name: ${name}` : `- Name: [${name}](https://www.fb.com/${fbProfile})`}
+${!age ? '' : `- Age: ${age}`}
+${!diagnosis ? '&nbsp;' : `- Diagnosis: ${diagnosis}`}
 - Medium of communication: Facebook chat
 
 ---
@@ -178,7 +148,7 @@ ${!diagnosis ? '' : `- Diagnosis: ${diagnosis}  `}
   renderIntro() {
     return (
       <Markdown
-        className="post-text no-margin-bottom"
+
         source={`
 # Intro
 
@@ -313,7 +283,7 @@ Pretty please?`}
     /* eslint-disable jsx-a11y/no-autofocus */
     return (
       <textarea
-        className="input"
+        className="form-control"
         style={{ height: 400 }}
         autoFocus
         value={this.state.messageEditableValue}

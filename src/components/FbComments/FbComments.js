@@ -3,7 +3,6 @@
 import React from 'react'
 
 import { DOMAIN } from '../../constants'
-import { isProd, noop } from '../../utils'
 
 class FbComments extends React.Component {
   state = {
@@ -31,8 +30,7 @@ class FbComments extends React.Component {
     const opacity = this.state.rendered ? 1 : 0
 
     return (
-      <section {...restProps}>
-        <hr />
+      <section {...restProps} id="comments">
         <h1 style={{ textAlign: 'center' }}>Join the conversation!</h1>
         <div
           style={{
@@ -87,5 +85,4 @@ class FbComments extends React.Component {
     };
 }
 
-export default isProd ? FbComments : noop
-
+export default FbComments

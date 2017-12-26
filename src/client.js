@@ -1,3 +1,4 @@
+/* eslint-disable */
 /**
  * React Starter Kit (https://www.reactstarterkit.com/)
  *
@@ -10,16 +11,14 @@
 import 'whatwg-fetch'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import deepForceUpdate from 'react-deep-force-update' // eslint-disable-line import/no-extraneous-dependencies
+import deepForceUpdate from 'react-deep-force-update'
 import queryString from 'query-string'
 import { createPath } from 'history/PathUtils'
-
 import App from './components/App'
 import createFetch from './createFetch'
 import history from './history'
+import { updateMeta } from './DOMUtils'
 import router from './router'
-import { updateMeta, updateCustomMeta, scrollElem } from './DOMUtils'
-import { DOMAIN } from './constants'
 
 // Global (context) variables that can be easily accessed from any React component
 // https://facebook.github.io/react/docs/context.html
@@ -54,14 +53,13 @@ if (window.history && 'scrollRestoration' in window.history) {
 async function onLocationChange(location, action) {
   // Remember the latest scroll position for the previous location
   scrollPositionsHistory[currentLocation.key] = {
-    scrollX: scrollElem().scrollTop,
-    scrollY: scrollElem().scrollLeft,
+    scrollX: window.pageXOffset,
+    scrollY: window.pageYOffset,
   }
   // Delete stored scroll position for next page if any
   if (action === 'PUSH') {
     delete scrollPositionsHistory[location.key]
   }
-
   currentLocation = location
 
   const isInitialRender = !action
@@ -97,24 +95,27 @@ async function onLocationChange(location, action) {
         }
 
         document.title = route.title
+
         updateMeta('description', route.description)
-        updateMeta('url', DOMAIN + route.path)
-        updateCustomMeta('og:url', DOMAIN + route.path)
-        updateCustomMeta('og:description', route.description)
-        updateCustomMeta('og:title', route.title)
+        // Update necessary tags in <head> at runtime here, ie:
+        // updateMeta('keywords', route.keywords);
+        // updateCustomMeta('og:url', route.canonicalUrl);
+        // updateCustomMeta('og:image', route.imageUrl);
+        // updateLink('canonical', route.canonicalUrl);
+        // etc.
+
         let scrollX = 0
         let scrollY = 0
         const pos = scrollPositionsHistory[location.key]
         if (pos) {
-          scrollX = pos.scrollX // eslint-disable-line prefer-destructuring
-          scrollY = pos.scrollY // eslint-disable-line prefer-destructuring
+          scrollX = pos.scrollX
+          scrollY = pos.scrollY
         } else {
           const targetHash = location.hash.substr(1)
           if (targetHash) {
             const target = document.getElementById(targetHash)
             if (target) {
-              scrollY =
-                scrollElem().pageYOffset + target.getBoundingClientRect().top
+              scrollY = window.pageYOffset + target.getBoundingClientRect().top
             }
           }
         }
@@ -122,8 +123,7 @@ async function onLocationChange(location, action) {
         // Restore the scroll position if it was saved into the state
         // or scroll to the given #hash anchor
         // or scroll to top of the page
-        scrollElem().scrollTop = scrollX
-        scrollElem().scrollLeft = scrollY
+        window.scrollTo(scrollX, scrollY)
 
         // Google Analytics tracking. Don't send 'pageview' event after
         // the initial rendering, as it was already sent
@@ -133,11 +133,11 @@ async function onLocationChange(location, action) {
       },
     )
   } catch (error) {
-    if (__DEV__) { // eslint-disable-line no-undef
+    if (__DEV__) {
       throw error
     }
 
-    console.error(error) // eslint-disable-line no-console
+    console.error(error)
 
     // Do a full page reload if error occurs during client-side navigation
     if (!isInitialRender && currentLocation.key === location.key) {

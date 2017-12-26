@@ -7,6 +7,7 @@ import Transcript from './Transcript'
 const dbPosts = [
   'healing-metaphors-water-slime',
   'ocd-and-guilt-gone-in-one-session',
+  'resolving-cramps-with-metaphors',
 ]
 
 async function action({ params }) {

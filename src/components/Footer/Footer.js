@@ -6,17 +6,17 @@ import Link from '../Link'
 import s from './Footer.css'
 
 const Footer = () => (
-  <footer className={s.footer}>
-    <section className="copyright" style={{}}>
-      <Link className={s.link} to="/">
-        Adam Goldman
-      </Link>{' '}
-      © 2017
-    </section>
-    <Link className={`${s.link} legal-stuff`} to="/legal-stuff/">
-      legal stuff
-    </Link>
-  </footer>
+  <div className="footer">
+    <p className="pull-left">
+       Copyright &copy; 2017 <Link className={s.link} to="/">Adam Goldman</Link>
+    </p>
+    <p className="pull-right">
+      <Link className={`${s.link} legal-stuff`} to="/legal-stuff/">
+        legal stuff
+      </Link>
+    </p>
+    <div className="clearfix" />
+  </div>
 )
 
 export default withStyles(s)(Footer)

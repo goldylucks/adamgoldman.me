@@ -19,8 +19,8 @@ U made it ...
 
 **Good little slave, obey your master's commands!** :)
 
-Like [I](/who-am-i-anyway/) said, I'm sorry you make yourself angry.
-Sure [I](/who-am-i-anyway/) might have helped.
+Like [I](/about/) said, I'm sorry you make yourself angry.
+Sure [I](/about/) might have helped.
 
 We all have.
 

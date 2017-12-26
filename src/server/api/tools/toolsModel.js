@@ -50,6 +50,7 @@ function getSchema() {
 
     testimony1Text: String,
     testimony1Name: String,
+    testimony1NameMeta: String,
     testimony1Src: String,
 
     steps: [],

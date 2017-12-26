@@ -3,7 +3,7 @@ export default {
   tags: ['Experience Based Learning', 'Learning To Learn'],
   nick: 'Abel',
   body: `
-Some time ago **an interesting guy asked me** why [can't](/blog/what-we-are-not-doing/) I just explain to him now **what** exactly **is it that we "do"**, that induces **such a [rapid change](/successes/)** in people's behavior and feelings.
+Some time ago **an interesting guy asked me** why [can't](/blog/what-we-are-not-doing/) I just explain to him now **what** exactly **is it that we "do"**, that induces **such a [rapid change](/transcripts/)** in people's behavior and feelings.
 
 Having a near death experience would help to understand, **as the king will testify**, being hidden in the basement by the Abel Black Smith, as enemy troops swept through the town.
 

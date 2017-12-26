@@ -3,7 +3,7 @@ import fs from 'fs'
 
 import postsData from '../src/routes/blog/postsData'
 import pagesData from '../src/routes/page/pagesData'
-import brainToolsData from '../src/routes/brainTools/brainToolsData'
+import tutorialsData from '../src/routes/tutorials/tutorialsData'
 
 /* eslint-disable no-console */
 console.log('\n*******************')
@@ -43,7 +43,7 @@ const dataIterator = (data, type) => {
 
 dataIterator(postsData, 'blog')
 dataIterator(pagesData, 'page')
-dataIterator(brainToolsData, 'tools')
+dataIterator(tutorialsData, 'tools')
 
 fs.writeFileSync(
   pathToWriteFile,

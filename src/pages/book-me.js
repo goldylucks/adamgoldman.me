@@ -31,7 +31,7 @@ Might sound very demanding and that's only because it is!
 
 And we should not demand any less, from either side.
 
-[%2Fchibee.patag%2Fposts%2F1918330311525896%3A0](iframe) width="500" height="362" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+[%2Fchibee.patag%2Fposts%2F1918330311525896%3A0](iframe) width="500" height="362" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
 
 When talking to an audience, I'm there to INSTALL the information so YOU won't have to make an effort enjoying learning as the thrill it naturally once was for you.
 

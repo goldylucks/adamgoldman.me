@@ -22,7 +22,7 @@ const fileToWrite = [
   'books.js',
   'legal-stuff.js',
   'quotes.js',
-  'who-am-i-anyway.js',
+  'about.js',
 ].map(fileNameToObject)
 
 fs.writeFileSync(

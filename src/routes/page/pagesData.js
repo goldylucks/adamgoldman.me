@@ -52,6 +52,6 @@
     "title": "Who am I anyway?",
     "description": "Who am I anyway?",
     "tags": [],
-    "url": "who-am-i-anyway"
+    "url": "about"
   }
 ]

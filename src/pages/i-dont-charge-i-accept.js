@@ -48,8 +48,8 @@ The easiest way most people choose to give back. Click on the select field below
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="margin-bottom: 40px;">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="L73XBAVRMGQ6S">
-<div class="select-container">
-<select name="os0" class="select">
+<div class="form-group">
+<select name="os0" class="form-control">
 <option value="10">$10 USD</option>
 <option value="30">$30 USD</option>
 <option value="70">$70 USD</option>
@@ -74,7 +74,7 @@ Peeps who got a PayPal usually use this to give back, since it's so easy and con
 
 <h1 style="text-align: center; font-style: italic; margin: 40px 0;">What if I don't have even $10 to spare?</h1>
 
-That's perfectly fine, I have a bit of savings and I don't spend too much. There are many ways you could contribute!
+That's perfectly fine, there are many ways you can contribute!
 
 [Share](FB_SHARE) this page, [leave a review](https://www.facebook.com/adamgoldman.me/reviews/) (and like!), tell your friends, and [let me know](/lets-talk/) what skills do you have that might be useful. There are many areas I could use help in order to reach more people and refine everything that I do. I appreciate every act of kindness! :)
 

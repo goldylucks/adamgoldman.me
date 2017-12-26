@@ -3,29 +3,51 @@
 import React from 'react'
 
 import Markdown from '../../components/Markdown'
-import FbPageBox from '../../components/FbPageBox'
+import Card from '../../components/Card'
 import Ending from '../../components/Ending'
-import FbShareButton from '../../components/FbShareButton'
-import FbComments from '../../components/FbComments'
 
-const Home = () => (
+type Props = {
+  transcripts: [],
+  tutorials: [],
+}
+
+const Home = ({ transcripts, tutorials }: Props) => (
   <div>
-    <div className="main-layout post-page">
-      <FbShareButton />
-      <h1 className="main-title">Welcome to my (virtual) home!</h1>
-      <Markdown
-        className="post-text"
-        source="
-Until I sort out my homepage, try one of the [brain hacking tools](/tools/), read some [reviews](/reviews), be my [friend](FB_PROFILE) and [lets talk!](/lets-talk/)
+    <div className="container">
+      <div className="mainheading">
+        <h1 className="sitetitle">Adam Goldman</h1>
+        <small>Relax, it&apos;s just life ...</small>
+        <Markdown
+          className="lead"
+          source="
+Book a [session](/book), try a [tutorial](/tools), [learn](/transcripts) what's possible, and [read](/FB_REVIEWS) what others have to say.
 "
-      />
-      <FbPageBox style={{ display: 'block', textAlign: 'center' }} />
-      <hr />
-      <div style={{ marginBottom: 20 }}>
-        <FbShareButton />
+        />
       </div>
-      <Ending nick="mi case tu casa" />
-      <FbComments style={{ marginTop: 10 }} />
+      <section className="recent-posts">
+        <div className="section-title">
+          <h2><span>Featured Transcripts</span></h2>
+        </div>
+        <div className="card-columns card-columns-three listrecent">
+          {transcripts
+            .map(t => (
+              <Card {...t} url={`/blog/${t.url}`} key={t.url} />
+            ))}
+        </div>
+      </section>
+      <section className="recent-posts">
+        <div className="section-title">
+          <h2><span>Featured Tutorials</span></h2>
+        </div>
+        <div className="card-columns card-columns-three listrecent">
+          {tutorials
+            .map(t => (
+              <Card {...t} url={`/tools/${t.url}`} key={t.url} />
+            ))}
+        </div>
+      </section>
+      <hr />
+      <Ending nick="mi casa, su casa" />
     </div>
   </div>
 )

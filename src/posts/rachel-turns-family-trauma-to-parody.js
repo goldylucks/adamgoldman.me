@@ -35,7 +35,7 @@ Instead of being immersed in the experience and relieving it from her 6 years ol
 
 Talk about creativity!
 
-I’ve done hundreds of [sessions](/successes/) with people, and witnessed hundreds more done by others, and this is one of the most wackiest original crazy over the top transformations I’ve ever seen.
+I’ve done hundreds of [sessions](/transcripts/) with people, and witnessed hundreds more done by others, and this is one of the most wackiest original crazy over the top transformations I’ve ever seen.
 
 About a month later, Rachel reported waking up with a smile again, going for walks outside, started writing again (turns out she published a book in the past!), and was seeing someone new!
 
