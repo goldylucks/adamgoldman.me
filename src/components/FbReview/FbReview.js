@@ -18,10 +18,9 @@ const FbReview = ({ review }: Props) => (
         }}
         src={`https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com${review}&width=100%`}
         width="100%"
-        height="392"
+        height="435"
         scrolling="no"
         frameBorder="0"
-        allowTransparency="true"
       />
     </SmallScreen>
     <BigScreen>
@@ -35,7 +34,6 @@ const FbReview = ({ review }: Props) => (
         height="392"
         scrolling="no"
         frameBorder="0"
-        allowTransparency="true"
       />
     </BigScreen>
   </div>
