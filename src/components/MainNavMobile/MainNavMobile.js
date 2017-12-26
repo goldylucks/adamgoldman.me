@@ -50,8 +50,8 @@ class MainNavMobile extends React.Component {
             <h3 className={s.mobileMenuHeadline}>Adam Goldman</h3>
             <ul className="navbar-nav">
               {
-                this.props.navItems.map(({ to, text }) => (
-                  <li className={cx('nav-item', { active: to.includes(this.props.basePath) })} key={to}>
+                [{ to: '/', text: 'Home' }].concat(this.props.navItems).map(({ to, text }) => (
+                  <li className={cx('nav-item', { active: to.substr(1) === this.props.basePath })} key={to}>
                     <Link className={cx('nav-link', s.navLink)} to={to}>{text}</Link>
                   </li>
                 ))
