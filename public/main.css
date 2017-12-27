@@ -18,10 +18,13 @@ a {
 a,a:hover {
 	transition:all 0.2s;
 }
+label[for] {
+  cursor: pointer;
+}
 button: {
   cursor: pointer;
 }  
-input[type="image"] {
+input[type="image"], input[type="checkbox"] {
   cursor: pointer;
 }
 .btn-primary {

@@ -158,105 +158,99 @@ class TutorialGenerator extends React.Component {
   }
 
   renderSteps() {
-    return this.state.steps.map((step, idx) => (
-      <div key={idx} id={`step-${idx}`}>
-        <div className={s.stepHeader}>
-          <h2>Step {idx}</h2>
-          <a onClick={this.removeStep(idx)}>X</a>
+    return this.state.steps.map((step, sIdx) => (
+      <div key={sIdx} id={`step-${sIdx}`}>
+        <div className="row">
+          <div className="col"><h2>Step {sIdx}</h2></div>
+          <div className="col">
+            <input type="checkbox" id={`inputStep${sIdx}`} value={step.hasInput} checked={step.hasInput} onChange={this.toggleStepKey('hasInput', sIdx)} />
+            <label className={s.inputLabel} htmlFor={`inputStep${sIdx}`}>Input</label>
+          </div>
+          <div className="col">
+            <input type="checkbox" id={`signupStep${sIdx}`} value={step.hasSignup} checked={step.hasSignup} onChange={this.toggleStepKey('hasSignup', sIdx)} />
+            <label className={s.inputLabel} htmlFor={`signupStep${sIdx}`}>Signup</label>
+          </div>
+          <div className="col"><a onClick={this.removeStep(sIdx)}>X</a></div>
         </div>
-
-        <div className="form-group">
-          <label>Title</label>
-          <input className="form-control" placeholder="title" value={step.title} onChange={this.changeStepKey('title', idx)} />
+        <div className="form-group row">
+          <label htmlFor={`step-${sIdx}-title`} className="col-sm-2 col-form-label">Title</label>
+          <div className="col-sm-10">
+            <input className="form-control" id={`step-${sIdx}-title`} placeholder="Title" value={step.title} onChange={this.changeStepKey('title', sIdx)} />
+          </div>
         </div>
-
-        <div className="form-group">
-          <label>Description</label>
-          <textarea required className="form-control" placeholder="description ..." value={step.description} onChange={this.changeStepKey('description', idx)} />
+        <div className="form-group row">
+          <label htmlFor={`step-${sIdx}-description`} className="col-sm-2 col-form-label">Description</label>
+          <div className="col-sm-10">
+            <textarea style={{ minHeight: 200 }} id={`step-${sIdx}-description`} required className="form-control" placeholder="Description" value={step.description} onChange={this.changeStepKey('description', sIdx)} />
+          </div>
         </div>
-
         <div className="form-group">
-          <input type="checkbox" id={`inputStep${idx}`} value={step.hasInput} checked={step.hasInput} onChange={this.toggleStepKey('hasInput', idx)} />
-          <label className={s.inputLabel} htmlFor={`inputStep${idx}`}>Input</label>
           {step.hasInput && (
           <div>
-            <input className={`form-control ${s.inputHalf}`} value={step.inputId} placeholder="Id" onChange={this.changeStepKey('inputId', idx)} />
-            <input className={`form-control ${s.inputHalf}`} value={step.inputPlaceholder} placeholder="Placeholder" onChange={this.changeStepKey('inputPlaceholder', idx)} />
+            <input className={`form-control ${s.inputHalf}`} value={step.inputId} placeholder="Id" onChange={this.changeStepKey('inputId', sIdx)} />
+            <input className={`form-control ${s.inputHalf}`} value={step.inputPlaceholder} placeholder="Placeholder" onChange={this.changeStepKey('inputPlaceholder', sIdx)} />
           </div>
             )}
         </div>
 
         <div className="form-group">
-          <input type="checkbox" id={`signupStep${idx}`} value={step.hasSignup} checked={step.hasSignup} onChange={this.toggleStepKey('hasSignup', idx)} />
-          <label className={s.inputLabel} htmlFor={`signupStep${idx}`}>Signup</label>
           {step.hasSignup && (
           <div>
-            <input className={`form-control ${s.inputHalf}`} value={step.listId} placeholder="List Id" onChange={this.changeStepKey('listId', idx)} />
+            <input className={`form-control ${s.inputHalf}`} value={step.listId} placeholder="List Id" onChange={this.changeStepKey('listId', sIdx)} />
           </div>
             )}
         </div>
 
         <div className={s.stepHeader}>
-          <label>Answers</label>
-          <a onClick={this.addAnswer(idx)}>+ answer</a>
+          <h4>Answers</h4>
+          <a onClick={this.addAnswer(sIdx)}>+ answer</a>
         </div>
 
         {step.answers.map((a, aIdx) => (
           <div style={{ marginLeft: 10 }}>
-            <div className={s.stepHeader}>
-              <h4>Answer {aIdx}</h4>
-              <a onClick={this.removeAnswer(idx, aIdx)}>X</a>
+            <div className="form-row">
+              <div className="col-auto">
+                <label htmlFor={`step-${sIdx}-answer-${aIdx}`} className="col-form-label"><strong>Answer {aIdx}</strong></label>
+              </div>
+              <div className="col-8">
+                <input id={`step-${sIdx}-answer-${aIdx}`} className="form-control" placeholder={`answer #${aIdx}`} value={a.text} onChange={this.changeAnswerKey('text', sIdx, aIdx)} />
+              </div>
+              <div className="col-auto">
+                <a onClick={this.removeAnswer(sIdx, aIdx)}>X</a>
+              </div>
             </div>
-            <div style={{ marginLeft: 10 }}>
-              <div className="form-group">
-                <input className="form-control" placeholder={`answer #${aIdx}`} value={a.text} onChange={this.changeAnswerKey('text', idx, aIdx)} />
-              </div>
-              <div className="form-group">
-                <input type="checkbox" id={`step-${idx}-answer-${aIdx}-input`} value={a.hasInput} checked={a.hasInput} onChange={this.toggleAnswerKey('hasInput', idx, aIdx)} />
-                <label htmlFor={`step-${idx}-answer-${aIdx}-input`}>Has Input</label>
-                { a.hasInput && <input placeholder="id" value={a.inputId} onChange={this.changeAnswerKey('inputId', idx, aIdx)} /> }
-                { a.hasInput && <input placeholder="value" value={a.inputValue} onChange={this.changeAnswerKey('inputValue', idx, aIdx)} /> }
-              </div>
-              <div className="form-group">
-                <input type="checkbox" id={`step-${idx}-answer-${aIdx}-hasGoToStepByTitle`} value={a.hasGoToStepByTitle} checked={a.hasGoToStepByTitle} onChange={this.toggleAnswerKey('hasGoToStepByTitle', idx, aIdx)} />
-                <label htmlFor={`step-${idx}-answer-${aIdx}-hasGoToStepByTitle`}>Go To Step By Title</label>
-                { a.hasGoToStepByTitle && <input placeholder="title" value={a.goToStepByTitle} onChange={this.changeAnswerKey('goToStepByTitle', idx, aIdx)} /> }
-              </div>
-
-              <div className="form-group">
-                <input type="checkbox" id={`step-${idx}-answer-${aIdx}-hasResetInputs`} value={a.hasResetInputs} checked={a.hasResetInputs} onChange={this.toggleAnswerKey('hasResetInputs', idx, aIdx)} />
-                <label htmlFor={`step-${idx}-answer-${aIdx}-hasResetInputs`}>Reset Inputs</label>
-                { a.hasResetInputs && <input placeholder="Inputs to reset" value={a.resetInputs} onChange={this.changeAnswerKey('resetInputs', idx, aIdx)} /> }
-              </div>
-
-              <div className="form-group">
-                <input type="checkbox" id={`step-${idx}-answer-${aIdx}-hasAlert`} value={a.hasAlert} checked={a.hasAlert} onChange={this.toggleAnswerKey('hasAlert', idx, aIdx)} />
-                <label htmlFor={`step-${idx}-answer-${aIdx}-alert`}>Alert</label>
-                { a.hasAlert && <input placeholder="Alert message" value={a.alert} onChange={this.changeAnswerKey('alert', idx, aIdx)} /> }
-              </div>
-
-              <div className="form-group">
-                <input type="checkbox" id={`step-${idx}-answer-${aIdx}-isFbShare`} value={a.isFbShare} checked={a.isFbShare} onChange={this.toggleAnswerKey('isFbShare', idx, aIdx)} />
-                <label htmlFor={`step-${idx}-answer-${aIdx}-isFbShare`}>FB Share</label>
-              </div>
-
-              <div className="form-group">
-                <input type="checkbox" id={`step-${idx}-answer-${aIdx}-isLink`} value={a.isLink} checked={a.isLink} onChange={this.toggleAnswerKey('isLink', idx, aIdx)} />
-                <label htmlFor={`step-${idx}-answer-${aIdx}-isLink`}>Link</label>
-                { a.isLink && <input placeholder="path" value={a.link} onChange={this.changeAnswerKey('link', idx, aIdx)} /> }
-              </div>
-
-              <div className="form-group">
-                <input type="checkbox" id={`step-${idx}-answer-${aIdx}-isLinkNew`} value={a.isLinkNew} checked={a.isLinkNew} onChange={this.toggleAnswerKey('isLinkNew', idx, aIdx)} />
-                <label htmlFor={`step-${idx}-answer-${aIdx}-isLinkNew`}>Link New tab</label>
-                { a.isLinkNew && <input placeholder="path" value={a.linkNew} onChange={this.changeAnswerKey('linkNew', idx, aIdx)} /> }
-              </div>
-
+            {['hasInput', 'hasGoToStep', 'hasResetInputs', 'isFbShare', 'isLink', 'isLinkNew']
+              .map(aOption => (
+                <div className="form-check form-check-inline">
+                  <label htmlFor={`step-${sIdx}-answer-${aIdx}-${aOption}`} className="form-check-label">
+                    <input type="checkbox" className="form-check-input" id={`step-${sIdx}-answer-${aIdx}-${aOption}`} value={a[aOption]} checked={a[aOption]} onChange={this.toggleAnswerKey(aOption, sIdx, aIdx)} />
+                    {aOption}
+                  </label>
+                </div>
+                ))}
+            <div className="form-group">
+              { a.hasInput && <input placeholder="id" value={a.inputId} onChange={this.changeAnswerKey('inputId', sIdx, aIdx)} /> }
+              { a.hasInput && <input placeholder="value" value={a.inputValue} onChange={this.changeAnswerKey('inputValue', sIdx, aIdx)} /> }
+            </div>
+            <div className="form-group">
+              { a.hasGoToStep && <input placeholder="title" value={a.goToStepByTitle} onChange={this.changeAnswerKey('goToStepByTitle', sIdx, aIdx)} /> }
+            </div>
+            <div className="form-group">
+              { a.hasResetInputs && <input placeholder="Inputs to reset" value={a.resetInputs} onChange={this.changeAnswerKey('resetInputs', sIdx, aIdx)} /> }
+            </div>
+            <div className="form-group">
+              { a.hasAlert && <input placeholder="Alert message" value={a.alert} onChange={this.changeAnswerKey('alert', sIdx, aIdx)} /> }
+            </div>
+            <div className="form-group">
+              { a.isLink && <input placeholder="path" value={a.link} onChange={this.changeAnswerKey('link', sIdx, aIdx)} /> }
+            </div>
+            <div className="form-group">
+              { a.isLinkNew && <input placeholder="path" value={a.linkNew} onChange={this.changeAnswerKey('linkNew', sIdx, aIdx)} /> }
             </div>
             { step.answers.length - 1 > aIdx && <hr className={s.answersHr} />}
           </div>
           ))}
-        <hr />
+        <hr style={{ borderTopWidth: 10, marginBottom: 40 }} />
       </div>
     ),
     )
@@ -335,7 +329,7 @@ class TutorialGenerator extends React.Component {
       inputValue: '',
       hasResetInputs: '',
       resetInputs: '',
-      hasGoToStepByTitle: false,
+      hasGoToStep: false,
       goToStepByTitle: '',
       isFbShare: false,
       isLink: false,
@@ -358,8 +352,14 @@ class TutorialGenerator extends React.Component {
     cleanEmptyValues(state)
     addInputsToInitialState(state)
     axios.post('/api/tools/', state)
-      .then(res => console.log('saved!', res.data))
-      .catch(err => console.error(err))
+      .then((res) => {
+        console.log('saved!', res.data)
+        alert('saved!')
+      })
+      .catch((err) => {
+        console.error(err)
+        alert(err.message)
+      })
   }
 }
 
@@ -385,7 +385,7 @@ function cleanEmptyValues(state) {
       if (!a.inputValue) { delete a.inputValue }
       if (!a.hasResetInputs) { delete a.hasResetInputs }
       if (!a.resetInputs) { delete a.resetInputs }
-      if (!a.hasGoToStepByTitle) { delete a.hasGoToStepByTitle }
+      if (!a.hasGoToStep) { delete a.hasGoToStep }
       if (!a.goToStepByTitle) { delete a.goToStepByTitle }
       if (!a.isFbShare) { delete a.isFbShare }
       if (!a.isLink) { delete a.isLink }
