@@ -41,7 +41,10 @@ class PostsGenerator extends React.Component {
   render() {
     return (
       <div className="container">
-        <h1>Details</h1>
+        <div className="mainheading">
+          <h1 className="posttitle">Posts Generator</h1>
+        </div>
+
         {this.renderDetails()}
 
         <hr />
@@ -72,6 +75,7 @@ class PostsGenerator extends React.Component {
     } = this.state
     return (
       <div>
+        <h2>Details</h2>
         <div className="form-group">
         Title
           <input className="form-control" placeholder="title" value={title} onChange={inputChange.call(this, 'title')} />

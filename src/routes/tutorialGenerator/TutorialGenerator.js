@@ -38,8 +38,12 @@ class TutorialGenerator extends React.Component {
 
   render() {
     return (
-      <div className="main-layout relative">
-        <h1>Details</h1>
+      <div className="container">
+        <div className="mainheading">
+          <h1 className="posttitle">Tutorial Generator</h1>
+        </div>
+
+        <h2>Details</h2>
         {this.renderDetails()}
 
         <hr />
@@ -48,7 +52,7 @@ class TutorialGenerator extends React.Component {
 
         <hr />
 
-        <h1>Steps</h1>
+        <h2>Steps</h2>
         {this.renderStepsTOC()}
 
         <hr />
@@ -70,15 +74,27 @@ class TutorialGenerator extends React.Component {
     } = this.state
     return (
       <div>
-        <input className="form-control" placeholder="title" value={title} onChange={inputChange.call(this, 'title')} />
-        <input className="form-control" placeholder="nick" value={nick} onChange={inputChange.call(this, 'nick')} />
-        <input className="form-control" placeholder="description" value={description} onChange={inputChange.call(this, 'description')} />
-        <input className="form-control" placeholder="credits" value={credits} onChange={inputChange.call(this, 'credits')} />
-        <div>
+        <div className="form-group">
+          Title
+          <input className="form-control" placeholder="Title" value={title} onChange={inputChange.call(this, 'title')} />
+        </div>
+        <div className="form-group">
+          Nick
+          <input className="form-control" placeholder="Nick" value={nick} onChange={inputChange.call(this, 'nick')} />
+        </div>
+        <div className="form-group">
+          Description
+          <input className="form-control" placeholder="Description" value={description} onChange={inputChange.call(this, 'description')} />
+        </div>
+        <div className="form-group">
+          Credits
+          <input className="form-control" placeholder="Credits" value={credits} onChange={inputChange.call(this, 'credits')} />
+        </div>
+        <div className="form-group">
           <input type="checkbox" id="isRtl" value={isRtl} checked={isRtl} onChange={inputToggle.call(this, 'isRtl')} />
           <label htmlFor="isRtl">RTL</label>
         </div>
-        <div>
+        <div className="form-group">
           <input type="checkbox" id="isDraft" value={isDraft} checked={isDraft} onChange={inputToggle.call(this, 'isDraft')} />
           <label htmlFor="isDraft">Draft</label>
         </div>
@@ -88,7 +104,7 @@ class TutorialGenerator extends React.Component {
 
   renderTestimonials() {
     return (
-      <div className={s.stepSection}>
+      <div className="form-group">
         <h3>Testimonies</h3>
         <div>
           <input className="form-control" value={this.state.testimony1Text} placeholder="text" onChange={inputChange.call(this, 'testimony1Text')} />
@@ -125,7 +141,7 @@ class TutorialGenerator extends React.Component {
                           )}
                           {...providedInner.dragHandleProps}
                         >
-                          - <a onClick={evt => evt.stopPropagation()} href={`#step-${idx}`}>Step {(idx <= 9 && stepsCount > 9) ? `0${idx}` : idx}/{stepsCount}</a> - {title}
+                          <a onClick={evt => evt.stopPropagation()} href={`#step-${idx}`}>Step {(idx <= 9 && stepsCount > 9) ? `0${idx}` : idx}/{stepsCount}</a> - {title}
                         </div>
                         {providedInner.placeholder}
                       </div>
@@ -149,33 +165,33 @@ class TutorialGenerator extends React.Component {
           <a onClick={this.removeStep(idx)}>X</a>
         </div>
 
-        <div className={s.stepSection}>
+        <div className="form-group">
           <label>Title</label>
-          <input className={`input ${s.input}`} placeholder="title" value={step.title} onChange={this.changeStepKey('title', idx)} />
+          <input className="form-control" placeholder="title" value={step.title} onChange={this.changeStepKey('title', idx)} />
         </div>
 
-        <div className={s.stepSection}>
+        <div className="form-group">
           <label>Description</label>
-          <textarea required className={`textarea ${s.input}`} placeholder="description ..." value={step.description} onChange={this.changeStepKey('description', idx)} />
+          <textarea required className="form-control" placeholder="description ..." value={step.description} onChange={this.changeStepKey('description', idx)} />
         </div>
 
-        <div className={s.stepSection}>
+        <div className="form-group">
           <input type="checkbox" id={`inputStep${idx}`} value={step.hasInput} checked={step.hasInput} onChange={this.toggleStepKey('hasInput', idx)} />
           <label className={s.inputLabel} htmlFor={`inputStep${idx}`}>Input</label>
           {step.hasInput && (
           <div>
-            <input className={`input ${s.input} ${s.inputHalf}`} value={step.inputId} placeholder="Id" onChange={this.changeStepKey('inputId', idx)} />
-            <input className={`input ${s.input} ${s.inputHalf}`} value={step.inputPlaceholder} placeholder="Placeholder" onChange={this.changeStepKey('inputPlaceholder', idx)} />
+            <input className={`form-control ${s.inputHalf}`} value={step.inputId} placeholder="Id" onChange={this.changeStepKey('inputId', idx)} />
+            <input className={`form-control ${s.inputHalf}`} value={step.inputPlaceholder} placeholder="Placeholder" onChange={this.changeStepKey('inputPlaceholder', idx)} />
           </div>
             )}
         </div>
 
-        <div className={s.stepSection}>
+        <div className="form-group">
           <input type="checkbox" id={`signupStep${idx}`} value={step.hasSignup} checked={step.hasSignup} onChange={this.toggleStepKey('hasSignup', idx)} />
           <label className={s.inputLabel} htmlFor={`signupStep${idx}`}>Signup</label>
           {step.hasSignup && (
           <div>
-            <input className={`input ${s.input} ${s.inputHalf}`} value={step.listId} placeholder="List Id" onChange={this.changeStepKey('listId', idx)} />
+            <input className={`form-control ${s.inputHalf}`} value={step.listId} placeholder="List Id" onChange={this.changeStepKey('listId', idx)} />
           </div>
             )}
         </div>
@@ -192,43 +208,45 @@ class TutorialGenerator extends React.Component {
               <a onClick={this.removeAnswer(idx, aIdx)}>X</a>
             </div>
             <div style={{ marginLeft: 10 }}>
-              <input className={`input ${s.input}`} placeholder={`answer #${aIdx}`} value={a.text} onChange={this.changeAnswerKey('text', idx, aIdx)} />
-              <div>
+              <div className="form-group">
+                <input className="form-control" placeholder={`answer #${aIdx}`} value={a.text} onChange={this.changeAnswerKey('text', idx, aIdx)} />
+              </div>
+              <div className="form-group">
                 <input type="checkbox" id={`step-${idx}-answer-${aIdx}-input`} value={a.hasInput} checked={a.hasInput} onChange={this.toggleAnswerKey('hasInput', idx, aIdx)} />
                 <label htmlFor={`step-${idx}-answer-${aIdx}-input`}>Has Input</label>
                 { a.hasInput && <input placeholder="id" value={a.inputId} onChange={this.changeAnswerKey('inputId', idx, aIdx)} /> }
                 { a.hasInput && <input placeholder="value" value={a.inputValue} onChange={this.changeAnswerKey('inputValue', idx, aIdx)} /> }
               </div>
-              <div>
+              <div className="form-group">
                 <input type="checkbox" id={`step-${idx}-answer-${aIdx}-hasGoToStepByTitle`} value={a.hasGoToStepByTitle} checked={a.hasGoToStepByTitle} onChange={this.toggleAnswerKey('hasGoToStepByTitle', idx, aIdx)} />
                 <label htmlFor={`step-${idx}-answer-${aIdx}-hasGoToStepByTitle`}>Go To Step By Title</label>
                 { a.hasGoToStepByTitle && <input placeholder="title" value={a.goToStepByTitle} onChange={this.changeAnswerKey('goToStepByTitle', idx, aIdx)} /> }
               </div>
 
-              <div>
+              <div className="form-group">
                 <input type="checkbox" id={`step-${idx}-answer-${aIdx}-hasResetInputs`} value={a.hasResetInputs} checked={a.hasResetInputs} onChange={this.toggleAnswerKey('hasResetInputs', idx, aIdx)} />
                 <label htmlFor={`step-${idx}-answer-${aIdx}-hasResetInputs`}>Reset Inputs</label>
                 { a.hasResetInputs && <input placeholder="Inputs to reset" value={a.resetInputs} onChange={this.changeAnswerKey('resetInputs', idx, aIdx)} /> }
               </div>
 
-              <div>
+              <div className="form-group">
                 <input type="checkbox" id={`step-${idx}-answer-${aIdx}-hasAlert`} value={a.hasAlert} checked={a.hasAlert} onChange={this.toggleAnswerKey('hasAlert', idx, aIdx)} />
                 <label htmlFor={`step-${idx}-answer-${aIdx}-alert`}>Alert</label>
-                { a.hasAlert && <input placeholder="Inputs to reset" value={a.alert} onChange={this.changeAnswerKey('alert', idx, aIdx)} /> }
+                { a.hasAlert && <input placeholder="Alert message" value={a.alert} onChange={this.changeAnswerKey('alert', idx, aIdx)} /> }
               </div>
 
-              <div>
+              <div className="form-group">
                 <input type="checkbox" id={`step-${idx}-answer-${aIdx}-isFbShare`} value={a.isFbShare} checked={a.isFbShare} onChange={this.toggleAnswerKey('isFbShare', idx, aIdx)} />
                 <label htmlFor={`step-${idx}-answer-${aIdx}-isFbShare`}>FB Share</label>
               </div>
 
-              <div>
+              <div className="form-group">
                 <input type="checkbox" id={`step-${idx}-answer-${aIdx}-isLink`} value={a.isLink} checked={a.isLink} onChange={this.toggleAnswerKey('isLink', idx, aIdx)} />
                 <label htmlFor={`step-${idx}-answer-${aIdx}-isLink`}>Link</label>
                 { a.isLink && <input placeholder="path" value={a.link} onChange={this.changeAnswerKey('link', idx, aIdx)} /> }
               </div>
 
-              <div>
+              <div className="form-group">
                 <input type="checkbox" id={`step-${idx}-answer-${aIdx}-isLinkNew`} value={a.isLinkNew} checked={a.isLinkNew} onChange={this.toggleAnswerKey('isLinkNew', idx, aIdx)} />
                 <label htmlFor={`step-${idx}-answer-${aIdx}-isLinkNew`}>Link New tab</label>
                 { a.isLinkNew && <input placeholder="path" value={a.linkNew} onChange={this.changeAnswerKey('linkNew', idx, aIdx)} /> }
@@ -391,7 +409,8 @@ function getItemStyle(draggableStyle, isDragging) {
     padding: grid * 2,
     margin: `0 0 ${grid}px 0`,
     // change background colour if dragging
-    background: isDragging ? 'lightgreen' : 'grey',
+    background: isDragging ? 'lightgreen' : '',
+    border: '1px solid #000',
     // styles we need to apply on draggables
     ...draggableStyle,
   }
