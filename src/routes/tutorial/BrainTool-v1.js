@@ -10,6 +10,7 @@ import Step from './components/Step'
 
 type Props = {
   tool: Object,
+  path: string,
 };
 
 const feelTheSame = () => {
@@ -67,13 +68,13 @@ class BrainToolV1 extends React.Component {
     const {
       gender, name, age, currentStep,
     } = this.state
-    const { tool } = this.props
+    const { tool, path } = this.props
     return (
       <div>
         <div className="container">
           <div className="row">
             <div className="col-md-2 col-xs-12">
-              <Share />
+              <Share path={path} title={tool.title} />
             </div>
             <div className="col-md-8 col-xs-12">
               <div className="mainheading">

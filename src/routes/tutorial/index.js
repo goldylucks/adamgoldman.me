@@ -24,14 +24,15 @@ const toolsV3 = [
 ]
 
 async function action({ params }) {
+  const path = getPath(params.tool)
   // to test new v3 tools
   if (params.tool.match(/EXP/)) {
     const { data } = await axios.get(`/api/tools/${params.tool.replace('EXP', '')}`)
     return {
       title: data.title,
       description: data.description,
-      path: getPath(params.tool),
-      component: <BrainToolV3 tool={data} />,
+      path,
+      component: <BrainToolV3 tool={data} path={path} />,
     }
   }
 
@@ -40,8 +41,8 @@ async function action({ params }) {
     return {
       title: data.title,
       description: data.description,
-      path: getPath(params.tool),
-      component: <BrainToolV3 tool={data} />,
+      path,
+      component: <BrainToolV3 tool={data} path={path} />,
     }
   }
 
@@ -61,8 +62,8 @@ async function action({ params }) {
   return {
     title: tool.title,
     description: tool.description,
-    path: getPath(params.tool),
-    component: <Comp tool={tool} />,
+    path,
+    component: <Comp tool={tool} path={path} />,
   }
 }
 
