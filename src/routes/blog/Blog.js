@@ -2,49 +2,34 @@
 
 import React from 'react'
 
-import Link from '../../components/Link'
 import Ending from '../../components/Ending'
-import Tags from '../../components/Tags'
-import FbPageBox from '../../components/FbPageBox'
-import FbShareButton from '../../components/FbShareButton'
-import BreadCrumbs from '../../components/BreadCrumbs'
-import FbComments from '../../components/FbComments'
+import Card from '../../components/Card'
 import { filterDrafts } from '../../utils'
 
 import posts from './postsData'
 
 const Blog = () => (
-  <article className="main-layout">
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-      }}
-    >
-      <BreadCrumbs crumbs={[{ text: 'Blog' }]} />
-      <FbShareButton />
+  <div>
+    <div className="container">
+      <div className="mainheading">
+        <h1 className="sitetitle">My Humble Blog</h1>
+        <p className="lead">With my humble thoughts and diabolical schemes</p>
+      </div>
+      <section className="recent-posts">
+        <div className="section-title">
+          <h2><span>All Posts</span></h2>
+        </div>
+        <div className="card-columns listrecent">
+          {posts.filter(filterDrafts)
+            .map(t => (
+              <Card {...t} url={`/blog/${t.url}`} key={t.url} />
+            ))}
+        </div>
+      </section>
+      <hr />
+      <Ending nick="non blogger" />
     </div>
-    <header className="main-title-margin">
-      <h1 className="main-title">My Humble Blog</h1>
-      <h2>With my humble thoughts and diabolical schemes</h2>
-    </header>
-    <div>
-      {posts.filter(filterDrafts).map(p => (
-        <article key={p.url}>
-          <h1>
-            <Link to={`/blog/${p.url}/`}>{p.title}</Link>
-          </h1>
-          <Tags tags={p.tags} />
-          <p>{p.description}</p>
-          <hr />
-        </article>
-      ))}
-    </div>
-    <FbPageBox style={{ display: 'block', textAlign: 'center' }} />
-    <Ending nick="non blogger" />
-    <FbComments style={{ marginTop: 10 }} />
-  </article>
+  </div>
 )
 
 export default Blog
