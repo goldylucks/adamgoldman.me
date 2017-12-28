@@ -59,7 +59,9 @@ class StopWarning extends React.Component {
           src={`${cloudImg('adamgoldman.me/boots')}`}
         />
         <Markdown source={text} />
-        <a onClick={this.dismiss} style={{ fontStyle: 'italic' }}>{dismissText}</a>
+        <button className="btn btn-block" onClick={this.dismiss} style={{ fontStyle: 'italic' }}>
+          {dismissText}
+        </button>
       </article>
     )
   }
