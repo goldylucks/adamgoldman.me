@@ -488,6 +488,9 @@ ul.tags li a:hover {
   line-height: 1.28;
   text-rendering: optimizeLegibility;
 }
+.chat-message img {
+  margin: 0;
+}
 .adam > .chat-message {
   background-color: #0084ff;
   color: #fff;

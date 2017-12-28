@@ -198,6 +198,7 @@ ${this.props.intro}
       }
 
       if (author === 'comment') {
+        if (!this.state.showComments) { return null }
         return (
           <div key={idx} className={`clearfix ${!this.state.isAdmin ? '' : s.chatMessageContainerAdmin}`}>
             {this.renderComment({ idx, md })}
