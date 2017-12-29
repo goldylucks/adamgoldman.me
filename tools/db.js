@@ -19,7 +19,7 @@ const dbAddressLocal = '127.0.0.1:27017'
 const collections = ['tools', 'posts']
 
 if (!collections.includes(collection)) {
-  console.log(`collection ${collection} doesn't exist. Pass third parameter from: ${collections} `)
+  global.console.log(`collection ${collection} doesn't exist. Pass third parameter from: ${collections} `)
   process.exit(1)
 }
 
