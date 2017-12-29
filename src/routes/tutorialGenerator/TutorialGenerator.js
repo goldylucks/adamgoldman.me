@@ -353,12 +353,12 @@ class TutorialGenerator extends React.Component {
     addInputsToInitialState(state)
     axios.post('/api/tools/', state)
       .then((res) => {
-        console.log('saved!', res.data)
-        alert('saved!')
+        global.console.log('saved!', res.data)
+        global.alert('saved!')
       })
       .catch((err) => {
-        console.error(err)
-        alert(err.message)
+        global.console.error(err)
+        global.alert(err.message)
       })
   }
 }

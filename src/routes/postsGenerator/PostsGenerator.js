@@ -157,8 +157,14 @@ class PostsGenerator extends React.Component {
     state.transcript = eval(state.transcript) // eslint-disable-line no-eval
     state.tags = state.tags.split(', ')
     axios.post('/api/posts/', state)
-      .then(res => console.log('saved!', res.data))
-      .catch(err => console.error(err))
+      .then((res) => {
+        global.console.log('saved!', res.data)
+        global.alert('saved!')
+      })
+      .catch((err) => {
+        global.console.error(err)
+        global.alert(err.message)
+      })
   }
 }
 
