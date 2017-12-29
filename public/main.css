@@ -510,6 +510,17 @@ ul.tags li a:hover {
   padding: 0 3px;
   max-width: 100%;
 }
+.transcript-headline {
+  margin-bottom: 30px;
+}
+.transcript-comment {
+  padding: 10px 20px;
+  background: rgba(183,38,38, 0.3);
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 20px;
+  border-radius: 10px;
+}
 /* tools */
 .tool-answer a {
   color: #00ab6b !important;

@@ -12,6 +12,9 @@ import Tags from '../../components/Tags'
 import StopWarning from '../../components/StopWarning'
 import FbReview from '../../components/FbReview'
 
+import Legend from './components/Legend'
+import TOC from './components/TOC'
+import Details from './components/Details'
 import s from './Transcript.css'
 
 type Props = {
@@ -54,14 +57,14 @@ class Transcript extends React.Component {
   }
 
   componentDidMount() {
-    if (localStorage.isAdmin) {
+    if (localStorage.adminPass) {
       this.setState({ isAdmin: true }) // eslint-disable-line react/no-did-mount-set-state
       document.addEventListener('keydown', this.commentHotkey)
     }
   }
 
   componentWillUnmount() {
-    if (this.isAdmin) {
+    if (this.state.isAdmin) {
       document.addEventListener('keydown', this.commentHotkey)
     }
   }
@@ -90,10 +93,14 @@ class Transcript extends React.Component {
               </div>
               {fbReview && <FbReview review={fbReview} />}
               <div className="article-post">
-                {this.renderTOC()}
+                <TOC />
+                <hr />
                 {this.renderDetails()}
+                <hr />
                 {this.renderIntro()}
-                {this.renderLegend()}
+                <hr />
+                <Legend name={this.props.name} isBodyRtl={this.props.isBodyRtl} />
+                <hr />
                 {this.renderTranscript()}
                 {this.renderAdminSave()}
               </div>
@@ -107,80 +114,24 @@ class Transcript extends React.Component {
       </div>
     )
   }
-  /* eslint-disable react/jsx-curly-brace-presence */
-  /* eslint-disable class-methods-use-this */
-  renderTOC() {
-    return (
-      <Markdown
-        source={`
-# TOC
-- Details
-- Intro
-- Legend
-- Verbatim Transcript + Notes
-
----
-`}
-      />
-    )
-  }
 
   renderDetails() {
     const {
       date, fbProfile, name, age, diagnosis,
     } = this.props
     return (
-      <Markdown
-        source={`
-# Details
-${!date ? '&nbsp;' : `- Date of session: ${date}`}
-${!fbProfile ? `- Name: ${name}` : `- Name: [${name}](https://www.fb.com/${fbProfile})`}
-${!age ? '' : `- Age: ${age}`}
-${!diagnosis ? '&nbsp;' : `- Diagnosis: ${diagnosis}`}
-- Medium of communication: Facebook chat
-
----
-`}
-      />
+      <Details date={date} fbProfile={fbProfile} name={name} age={age} diagnosis={diagnosis} />
     )
   }
 
   renderIntro() {
     return (
       <Markdown
-
-        source={`
-# Intro
+        source={`# Intro
 
 ${this.props.intro}
-
----
 `}
       />
-    )
-  }
-
-  renderLegend() {
-    return (
-      <article>
-        <h1>Legend</h1>
-
-        <div className={`chat-message-container clearfix other ${this.props.isBodyRtl ? 'rtl' : ''}`}>
-          <div className="chat-message">
-        This is an example of {this.props.name} message from our conversation
-          </div>
-        </div>
-
-        <div className={`chat-message-container clearfix adam ${this.props.isBodyRtl ? 'rtl' : ''}`}>
-          <div className="chat-message">
-        This is an example of my messages from our conversation
-          </div>
-        </div>
-
-        <Markdown className={s.transcriptComment} source="This is an example of my comment ABOUT the conversation" />
-
-        <hr />
-      </article>
     )
   }
 
@@ -211,6 +162,7 @@ ${this.props.intro}
       if (author === 'headline') {
         return (
           <div key={idx} className={`clearfix ${!this.state.isAdmin ? '' : s.chatMessageContainerAdmin}`}>
+            <div className={s.sectionDivider} />
             {this.renderHeadline({ idx, source })}
             {this.renderMessageEditable(idx)}
             {this.renderMessageActions(idx)}
@@ -308,7 +260,7 @@ Pretty please?`}
     if (idx === this.state.messageEditableIdx) {
       return null
     }
-    return <h2 className={s.transcriptHeadline}>{source}</h2>
+    return <h2 className="transcript-headline">{source}</h2>
   }
 
   renderComment({ idx, source }) {
@@ -349,18 +301,9 @@ Pretty please?`}
   }
 
   editMessage(idx) {
-    const { type, author } = this.state.transcript[idx]
-    let messageEditableValue
-    if (type === 'text') {
-      messageEditableValue = this.state.transcript[idx].source
-    } else if (author === 'comment') {
-      messageEditableValue = this.state.transcript[idx].source
-    } else {
-      messageEditableValue = this.state.transcript[idx].source
-    }
     this.setState({
       messageEditableIdx: idx,
-      messageEditableValue,
+      messageEditableValue: this.state.transcript[idx].source,
     })
   }
 
@@ -378,13 +321,7 @@ Pretty please?`}
 
   saveMessage(idx) {
     const nextTranscript = [...this.state.transcript]
-    if (nextTranscript[idx].type === 'text') {
-      nextTranscript[idx].source = this.state.messageEditableValue
-    } else if (nextTranscript[idx].author === 'comment') {
-      nextTranscript[idx].source = this.state.messageEditableValue
-    } else {
-      nextTranscript[idx].source = this.state.messageEditableValue
-    }
+    nextTranscript[idx].source = this.state.messageEditableValue
     this.setState({
       messageEditableIdx: '',
       messageEditableValue: '',

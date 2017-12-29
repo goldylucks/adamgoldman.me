@@ -1,3 +1,18 @@
+.sectionDivider {
+  margin-top: 52px;
+  margin-bottom: 42px;
+  text-align: center;
+}
+
+.sectionDivider:before {
+  content: '...';
+  font-family: medium-content-slab-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 30px;
+  letter-spacing: .6em;
+}
+
 .chatMessageActions {
   display: none;
   clear: both;
@@ -13,15 +28,6 @@
 
 .chatMessageContainerAdmin:hover .chatMessageActions {
   display: block;
-}
-
-.transcriptComment {
-  padding: 10px 20px;
-  background: rgba(183,38,38, 0.3);
-  font-size: 18px;
-  line-height: 1.4;
-  margin: 20px;
-  border-radius: 10px;
 }
 
 .controls {
