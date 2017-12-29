@@ -191,17 +191,27 @@ ${this.props.intro}
 
         {this.renderWarning()}
         {this.state.transcript.map(({
-      author, text, md, type, duration, html, style, isRtl, src, alt,
+      author, source, type, duration, style, isRtl, src, alt,
     }, idx) => {
       if (author === 'time') {
-        return <div key={idx} className="chat-message-time">{text}</div>
+        return <div key={idx} className="chat-message-time">{source}</div>
       }
 
       if (author === 'comment') {
         if (!this.state.showComments) { return null }
         return (
           <div key={idx} className={`clearfix ${!this.state.isAdmin ? '' : s.chatMessageContainerAdmin}`}>
-            {this.renderComment({ idx, md })}
+            {this.renderComment({ idx, source })}
+            {this.renderMessageEditable(idx)}
+            {this.renderMessageActions(idx)}
+          </div>
+        )
+      }
+
+      if (author === 'headline') {
+        return (
+          <div key={idx} className={`clearfix ${!this.state.isAdmin ? '' : s.chatMessageContainerAdmin}`}>
+            {this.renderHeadline({ idx, source })}
             {this.renderMessageEditable(idx)}
             {this.renderMessageActions(idx)}
           </div>
@@ -211,7 +221,7 @@ ${this.props.intro}
       return (
         <div key={idx} className={`chat-message-container clearfix ${!this.state.isAdmin ? '' : s.chatMessageContainerAdmin} ${author} ${isRtl ? 'rtl' : ''}`}>
           {this.renderMessage({
-            idx, type, duration, html, style, src, alt, text,
+            idx, type, duration, source, style, src, alt,
           })}
           {this.renderMessageEditable(idx)}
           {this.renderMessageActions(idx)}
@@ -257,7 +267,7 @@ Pretty please?`}
   }
 
   renderMessage({
-    idx, type, duration, html, style, src, alt, text,
+    idx, type, duration, source, style, src, alt,
   }) {
     if (idx === this.state.messageEditableIdx) {
       return null
@@ -268,8 +278,8 @@ Pretty please?`}
         { type === 'sticker' && <div style={style} /> }
         { type.match(/emoticon|image/) && <img alt={alt} src={src} /> }
         { type === 'likeSticker' && '{LIKE}' }
-        { type.match(/textWithEmoticon|textWithHtml/) && <div dangerouslySetInnerHTML={{ __html: html }} /> }
-        { type === 'text' && <div dangerouslySetInnerHTML={{ __html: text.replace('\n', '<br />') }} /> }
+        { type.match(/textWithEmoticon|textWithHtml/) && <div dangerouslySetInnerHTML={{ __html: source }} /> }
+        { type === 'text' && <div dangerouslySetInnerHTML={{ __html: source.replace('\n', '<br />') }} /> }
       </div>
     )
   }
@@ -294,13 +304,20 @@ Pretty please?`}
     /* eslint-enable jsx-a11y/no-autofocus */
   }
 
-  renderComment({ idx, md }) {
+  renderHeadline({ idx, source }) {
+    if (idx === this.state.messageEditableIdx) {
+      return null
+    }
+    return <h2 className={s.transcriptHeadline}>{source}</h2>
+  }
+
+  renderComment({ idx, source }) {
     if (idx === this.state.messageEditableIdx) {
       return null
     }
     return !this.state.showComments
       ? null
-      : <Markdown className={s.transcriptComment} source={md} />
+      : <Markdown className={s.transcriptComment} source={source} />
   }
 
   renderMessageActions(idx) {
@@ -311,6 +328,7 @@ Pretty please?`}
     return (
       <div className={s.chatMessageActions}>
         <a onClick={() => this.deleteMessage(idx)}>Delete</a>
+        <a onClick={() => this.addHeadlineBeforeMessage(idx)}>Headline</a>
         <a onClick={() => this.addCommentBeforeMessage(idx)}>Comment Before</a>
         <a onClick={() => this.addCommentAfterMessage(idx)}>Comment After</a>
         { !isEdited && <a onClick={() => this.editMessage(idx)}>Edit</a> }
@@ -334,11 +352,11 @@ Pretty please?`}
     const { type, author } = this.state.transcript[idx]
     let messageEditableValue
     if (type === 'text') {
-      messageEditableValue = this.state.transcript[idx].text
+      messageEditableValue = this.state.transcript[idx].source
     } else if (author === 'comment') {
-      messageEditableValue = this.state.transcript[idx].md
+      messageEditableValue = this.state.transcript[idx].source
     } else {
-      messageEditableValue = this.state.transcript[idx].html
+      messageEditableValue = this.state.transcript[idx].source
     }
     this.setState({
       messageEditableIdx: idx,
@@ -361,16 +379,29 @@ Pretty please?`}
   saveMessage(idx) {
     const nextTranscript = [...this.state.transcript]
     if (nextTranscript[idx].type === 'text') {
-      nextTranscript[idx].text = this.state.messageEditableValue
+      nextTranscript[idx].source = this.state.messageEditableValue
     } else if (nextTranscript[idx].author === 'comment') {
-      nextTranscript[idx].md = this.state.messageEditableValue
+      nextTranscript[idx].source = this.state.messageEditableValue
     } else {
-      nextTranscript[idx].html = this.state.messageEditableValue
+      nextTranscript[idx].source = this.state.messageEditableValue
     }
     this.setState({
       messageEditableIdx: '',
       messageEditableValue: '',
       transcript: nextTranscript,
+    })
+  }
+
+  addHeadlineBeforeMessage(idx) {
+    const nextTranscript = [...this.state.transcript]
+    if (idx === 0) {
+      nextTranscript.unshift(headline())
+    } else {
+      nextTranscript.splice(idx, 0, headline())
+    }
+    this.setState({
+      transcript: nextTranscript,
+      messageEditableIdx: idx,
     })
   }
 
@@ -398,8 +429,14 @@ Pretty please?`}
 
   savePost = () => {
     axios.put(`/api/posts/${this.props.url}/transcript`, this.state.transcript)
-      .then(res => console.log('saved!', res.data)) // eslint-disable-line no-console
-      .catch(err => console.error(err)) // eslint-disable-line no-console
+      .then((res) => {
+        global.console.log('saved!', res.data)
+        global.alert('saved!')
+      })
+      .catch((err) => {
+        global.console.error(err)
+        global.alert(err.message)
+      })
   }
 
   commentHotkey = (evt) => {
@@ -417,5 +454,8 @@ Pretty please?`}
 export default withStyles(s)(Transcript)
 
 function comment() {
-  return { author: 'comment', md: '' }
+  return { author: 'comment', source: '' }
+}
+function headline() {
+  return { author: 'headline', source: '' }
 }
