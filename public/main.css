@@ -21,7 +21,7 @@ a,a:hover {
 label[for] {
   cursor: pointer;
 }
-button: {
+button {
   cursor: pointer;
 }  
 input[type="image"], input[type="checkbox"] {
