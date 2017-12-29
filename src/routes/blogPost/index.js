@@ -8,6 +8,7 @@ const dbPosts = [
   'healing-metaphors-water-slime',
   'ocd-and-guilt-gone-in-one-session',
   'resolving-cramps-with-metaphors',
+  'oliver-anxiety-ocd',
 ]
 
 async function action({ params }) {
