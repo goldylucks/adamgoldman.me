@@ -7,7 +7,7 @@ import history from '../../history'
 const navItems = [
   { to: '/transcripts', text: 'Transcripts' },
   { to: '/tools', text: 'Tutorials' },
-  { to: '/i-dont-charge-i-accept', text: 'Pricing' },
+  { to: '/i-dont-charge-i-accept', text: 'Donate' },
   { to: '/about', text: 'About' },
   { to: '/lets-talk', text: 'Contact' },
 ]
