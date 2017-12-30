@@ -2,8 +2,9 @@ import Mailchimp from 'mailchimp-api-v3'
 
 import config from '../../../config'
 
-const mailchimp = new Mailchimp(config.mailChimpApiKy)
-
+const mailchimp = !__DEV__ // eslint-disable-line no-undef
+  ? new Mailchimp(config.mailChimpApiKy)
+  : { request: (req, res) => res.send('dev dummy response') }
 
 export default {
   subscribe,
