@@ -3,9 +3,6 @@
 import React from 'react'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
 
-import Link from '../Link'
-// import { titleToSlug } from '../../utils'
-
 import s from './Tags.css'
 
 type Props = {
@@ -13,9 +10,9 @@ type Props = {
 };
 
 const Tags = ({ tags }: Props) => (
-  <ul className="tags">
+  <ul className={s.tags}>
     {tags.map(t => (
-      <li><Link to={`/tags/${t}`}>{t}</Link></li>
+      <li><span>{t}</span></li>
     ))}
   </ul>
 )
