@@ -9,6 +9,7 @@ export default {
 - [**Influence: The Psychology of Persuasion**](http://amzn.to/2uM3kDY) - Robert Cialdini
   - This is a master piece! I've read it twice and will make a proper book review when I'll get around to it. It's full of crazy experiments that blew my mind.
 - [**Introducing NLP**](http://amzn.to/2uAImcF) - Joseph O'Connor, John Seymour
+- [**Heart of Mind**](http://amzn.to/2CfrEVT) - Steve and Connirae Andreas
 - [**Transforming Negative Self-Talk: Practical, Effective Exercises**](http://amzn.to/2eVCSno) - Steve Andreas
 - [**Tricks Of The Mind**](http://amzn.to/2vkFa5g) - Derren Brown
   - Read it many years ago, now going over it again. If you get fascinated now by how your brain tricks not only others, you will enjoy this!
