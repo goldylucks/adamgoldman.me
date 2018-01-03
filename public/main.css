@@ -73,6 +73,7 @@ section {
 	.card-columns-three {
 		display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 	}
   .card-columns-three .card {
     width: 30%;
