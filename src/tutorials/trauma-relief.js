@@ -86,11 +86,6 @@ In a moment I'll walk you thru a short process but first you're probably wonderi
                 { text: "so how's this going to work Adam?", onClick: onNext },
               ]}
             />
-            <p>
-              (NOTE: if this about missing someone, or memory about the loss of
-              a loved one,{' '}
-              <Link to="/tools/grief-to-appreciation/">do this</Link> instead)
-            </p>
           </div>,
 
           <HowItsGoingToWorkStep onNext={onNext} />,
