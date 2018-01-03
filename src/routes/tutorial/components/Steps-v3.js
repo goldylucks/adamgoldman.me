@@ -14,6 +14,7 @@ class StepsV3 extends React.Component {
     testimony1Text: PropTypes.string,
     testimony1Src: PropTypes.string,
     testimony1Name: PropTypes.string,
+    testimony1NameMeta: PropTypes.string,
     steps: PropTypes.array.isRequired,
     isRtl: PropTypes.boolean,
   }
@@ -24,6 +25,7 @@ class StepsV3 extends React.Component {
     testimony1Text: '',
     testimony1Src: '',
     testimony1Name: '',
+    testimony1NameMeta: '',
   }
 
   state = {
@@ -63,7 +65,7 @@ class StepsV3 extends React.Component {
 
   renderTestimonials() {
     const {
-      testimony1Text, testimony1Src, testimony1Name,
+      testimony1Text, testimony1Src, testimony1Name, testimony1NameMeta,
     } = this.props
     if (this.state.currentStep !== 0) {
       return null
@@ -76,6 +78,7 @@ class StepsV3 extends React.Component {
         imgSrc={testimony1Src}
         text={testimony1Text}
         name={testimony1Name}
+        nameMeta={testimony1NameMeta}
       />
     )
   }
