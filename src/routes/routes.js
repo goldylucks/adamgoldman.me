@@ -23,6 +23,14 @@ const routes = {
       load: () => import(/* webpackChunkName: 'blogPost' */ './blogPost'),
     },
     {
+      path: '/loss',
+      load: () => import(/* webpackChunkName: 'loss' */ './loss'),
+    },
+    {
+      path: '/loss/:section',
+      load: () => import(/* webpackChunkName: 'lossSection' */ './lossSection'),
+    },
+    {
       path: '/posts-generator/:post',
       load: () => import(/* webpackChunkName: 'postsGenerator' */ './postsGenerator'),
     },

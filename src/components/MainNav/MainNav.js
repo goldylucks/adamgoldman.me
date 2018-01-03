@@ -5,6 +5,7 @@ import MainNavMobile from '../MainNavMobile'
 import history from '../../history'
 
 const navItems = [
+  { to: '/loss', text: 'Loss' },
   { to: '/transcripts', text: 'Transcripts' },
   { to: '/tools', text: 'Tutorials' },
   { to: '/i-dont-charge-i-accept', text: 'Donate' },

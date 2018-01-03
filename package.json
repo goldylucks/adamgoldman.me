@@ -65,6 +65,7 @@
     "react-autosuggest": "^9.3.2",
     "react-beautiful-dnd": "^3.0.0",
     "react-click-outside": "tj/react-click-outside",
+    "react-collapsible": "^2.0.3",
     "react-dom": "^16.0.0",
     "react-fontawesome": "^1.6.1",
     "react-markdown": "^2.5.0",

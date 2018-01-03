@@ -517,3 +517,26 @@ blockquote.rtl {
   direction: rtl !important;
   text-align: right !important;
 }
+/* collapsable */
+.Collapsible__trigger {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.Collapsible__trigger:before {
+  font-family: 'FontAwesome';
+  content: '\f067';
+  display: block;
+  float: left;
+  margin-right: 10px;
+  position: relative;
+  top: 3px;
+}
+
+.Collapsible__trigger.is-open:before {
+  content: '\f068';
+}
+.Collapsible__contentOuter {
+  margin-left: 20px;
+}
