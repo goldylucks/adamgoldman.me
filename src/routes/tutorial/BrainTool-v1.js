@@ -3,7 +3,7 @@
 import React from 'react'
 
 import Share from '../../components/Share'
-import BottomSection from '../../components/BottomSection'
+import Ending from '../../components/Ending'
 import { scrollToElem } from '../../utils'
 
 import Step from './components/Step'
@@ -118,10 +118,11 @@ class BrainToolV1 extends React.Component {
                   />
                 </div>
               </div>
+              <hr />
+              <Ending />
             </div>
           </div>
         </div>
-        <BottomSection />
       </div>
     )
   }

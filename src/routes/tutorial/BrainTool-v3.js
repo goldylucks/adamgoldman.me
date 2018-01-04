@@ -3,7 +3,7 @@
 import React from 'react'
 
 import Tags from '../../components/Tags'
-import BottomSection from '../../components/BottomSection'
+import Ending from '../../components/Ending'
 import Share from '../../components/Share'
 
 import StepsV3 from './components/Steps-v3'
@@ -37,10 +37,11 @@ const BrainToolV3 = ({ tool, path }: Props) => (
           }
           </div>
           <Tags tags={tool.tags} />
+          <hr />
+          <Ending />
         </div>
       </div>
     </div>
-    <BottomSection />
   </div>
 )
 
