@@ -139,15 +139,15 @@ what was ${name}'s age in that past memory?
             <Markdown
               className="tool-text"
               source={`
-Now in a moment I'll ask you to freeze the memory in a moment BEFORE anything had happened, so you see ${age} years old ${name} in a still image, perfectly safe like I was before my accident:
+Now in a moment I'll ask you to freeze the memory in a moment BEFORE anything had happened, so you see ${age} years old ${name} in a still image, perfectly ok like I was before my accident:
 
 My brother had an accident long ago with his motorcycle, while yours truly here was riding in the back.
 
 (u can imagine how much my father appreciated his son, my brother, having a motorcycle ...)
 
-A few seconds BEFORE the accident, there was no sign of any danger, and both me and my brother were perfectly safe.
+A few seconds BEFORE the accident, there was no sign of any danger, and both me and my brother were perfectly ok.
 
-So I want you to see ${age} years old ${name} in a still black & white image, perfectly safe, in a small muted screen far far away, and make the image slightly out of focus and low resolution.
+So I want you to see ${age} years old ${name} in a still black & white image, perfectly ok, in a small muted screen far far away, and make the image slightly out of focus and low resolution.
 
 Like in youtube where you select the lowest resolution you know?
 
@@ -165,15 +165,15 @@ Do it now, and let me know when you're done
             <Markdown
               className="tool-text"
               source={`
-Now in a moment I'll ask you to see ${age} years old ${name} in the small still picture far far away, fast forward it and freeze it at the end of the memory, after everything is over, and you see ${age} years old ${name} there perfectly safe.
+Now in a moment I'll ask you to see ${age} years old ${name} in the small still picture far far away, fast forward it and freeze it at the end of the memory, after everything is over, and you see ${age} years old ${name} there perfectly ok.
 
 A few seconds before our accident, me and my brother on the bike were just cruisin along, a pretty natural scene.
 
 Then the driver cut us off, there was the moment of the hit, some moments of confusion and stress, and after that we pulled over and exchanged details with the driver.
 
-My leg wasn't 100% healed yet, but the accident itself was over, and both me and my brother were perfectly safe.
+My leg wasn't 100% healed yet, but the accident itself was over, and both me and my brother were perfectly ok.
 
-So I want you to fast forward the past memory to a similar place, in which you can see ${age} years old ${name} after everything that has happened, perfectly safe, in the next neutral or positive moment.
+So I want you to fast forward the past memory to a similar place, in which you can see ${age} years old ${name} after everything that has happened, perfectly ok, in the next neutral or positive moment.
 
 Now, know the sound of fast forwarding a cartoon?
 `}
@@ -195,7 +195,7 @@ Now, know the sound of fast forwarding a cartoon?
               source={`
 Great, so here's what I want you to do:
 
-1. see ${age} years old ${name}, in a small screen far far away, frozen in time, at the beginning of the memory, before anything had happened, perfectly safe
+1. see ${age} years old ${name}, in a small screen far far away, frozen in time, at the beginning of the memory, before anything had happened, perfectly ok
 
 2. Make the image black & white, out of focus a little bit, and decrease the resolution
 
@@ -215,7 +215,7 @@ do it now, and let me know when you're done
                 { onClick: onNext, text: "Done, let's continue" },
                 {
                   onClick: onNext,
-                  text: `OK. I fast forwarded the memory, and I see ${age} years old ${name} perfectly safe after the end`,
+                  text: `OK. I fast forwarded the memory, and I see ${age} years old ${name} perfectly ok after the end`,
                 },
               ]}
             />
@@ -225,7 +225,7 @@ do it now, and let me know when you're done
             <Markdown
               className="tool-text"
               source={`
-Now, as you see ${age} years old ${name} in the small still picture far far away, perfectly safe, after the end, did you ever think what does a war movie turns into, when you run it in reverse?
+Now, as you see ${age} years old ${name} in the small still picture far far away, perfectly ok, after the end, did you ever think what does a war movie turns into, when you run it in reverse?
 
 [diihWjg0lAM](YtEmbedd)
 
@@ -258,9 +258,9 @@ Did you ever think of that?
               source={`
 now in a moment I'll ask you do to something interesting, and don't do it until I tell you to, ok?
 
-I will want you to step inside the end of the memory, into your own body at ${age} years old, perfectly safe, so you see what you saw at the time, hear what you heard and ...
+I will want you to step inside the end of the memory, into your own body at ${age} years old, perfectly ok, so you see what you saw at the time, hear what you heard and ...
 
-run the memory in reverse as fast as you can, all the way to before the beginning, where your perfectly safe again.
+run the memory in reverse as fast as you can, all the way to before the beginning, where your perfectly ok again.
 
 so you hear everyone talking backwards, see everything and everyone moving backwards in reverse, as fast as you can.
 
@@ -271,11 +271,11 @@ We gonna do it this way one time, then add some nice decorations :)
 So here are the steps again:
 
 
-1. step inside the end of the memory, into your own body at ${age} years old, perfectly safe
+1. step inside the end of the memory, into your own body at ${age} years old, perfectly ok
 
 2. see what you saw at the time, hear what you heard
 
-3. run the memory in reverse as fast as you can, hear everyone talking backwards, see everything and moving backwards in reverse, as fast as you can, like a cartoon, all the way to before the beginning, where your perfectly safe again
+3. run the memory in reverse as fast as you can, hear everyone talking backwards, see everything and moving backwards in reverse, as fast as you can, like a cartoon, all the way to before the beginning, where you're perfectly ok again
 
 <br />
 
@@ -317,17 +317,17 @@ And of course there's always laughter :)
 Pick one that makes you feel the best now and do it again like so:
 
 
-1. step inside the end of the memory, into your own body at ${age} years old, perfectly safe
+1. step inside the end of the memory, into your own body at ${age} years old, perfectly ok
 
 2. see what you saw at the time, hear what you heard
 
 3. start the circus music or any other tune you picked
 
-4. run the memory in reverse as fast as you can, hear everyone talking backwards (yes you guessed it, like a cartoon), see everything and everyone moving backwards in reverse, as fast as you can, like a cartoon, all the way to before the beginning, where your perfectly safe again
+4. run the memory in reverse as fast as you can, hear everyone talking backwards (yes you guessed it, like a cartoon), see everything and everyone moving backwards in reverse, as fast as you can, like a cartoon, all the way to before the beginning, where you're perfectly ok again
 
 <br />
 
-let me know when you're done, and you're at the beginning of the memory, perfectly safe
+let me know when you're done, and you're at the beginning of the memory, perfectly ok
 `}
             />
             <AnswersV2
