@@ -116,7 +116,7 @@ In every relationship there are some moments that are better than others. This i
           ].map(renderCollapsible)}
       </Collapsible>
       <Collapsible trigger={<h2>Part 3: Reengaging the future</h2>}>
-        <p>This part is derived from the most effective strategies for getting over a loss, and makes sure that the participant will actively seek out appropriate new nourishing experiences in the future.</p>
+        <p>This part is derived from the most effective strategies for responding resourcefully to a loss, and makes sure that the participant will actively seek out appropriate new nourishing experiences in the future.</p>
         {[
             {
               title: 'Identify values/outcomes',

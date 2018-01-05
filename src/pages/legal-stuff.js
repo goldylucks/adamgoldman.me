@@ -4,15 +4,18 @@ export default {
   description: 'The meaningless legal part of Mr. Adam Goldman site',
   tags: [],
   body: `
-[I'm](/about/) just a bald dude with a weird beard, and [I](/about/) have no idea what [I'm](/about/) talking about, or even thinking.
+No information on [this site](/) is medical nor professional advice, and is offered "as is", on your own responsibility.
 
-[I](/about/) should not be allowed to talk to humans (or any other organisms for that matter) and you should not listen or [do](/tools/) anything I'm saying.
+I am not licensed in any way, nor do I consider myself a "therapist" of any kind.
 
-All the information on [this site](/) is to be used "as is", on your own responsibility.
+[I](/about/) only share [things](/tools/) that have helped me and [others](/transcripts/) I've interacted with over the years.
 
-[I](/about/) only share [things](/tools/) that have helped me and [others](/transcripts/) I've interacted with.
+I only offer things to try to have more freedom and choices in life. YOUR LIFE.
 
-No information on [this site](/) is medical nor professional advice.
+It is YOUR LIFE, YOUR BODY, YOUR EMOTIONS, and YOUR CONTROL.
+
+If you are not sure about anything you read here, and have concerns, please [contact me](FB_MESSAGE) before going forward.
+
 `,
   ps: `
 > If all the insects would dissapear tmrw,  
