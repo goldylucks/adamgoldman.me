@@ -7,7 +7,6 @@ import React from 'react'
 import Share from '../../components/Share'
 import Markdown from '../../components/Markdown'
 import Ending from '../../components/Ending'
-import BottomSection from '../../components/BottomSection'
 
 type Props = {
   title: string,
@@ -41,7 +40,6 @@ Props) => (
         </div>
       </div>
     </div>
-    <BottomSection />
   </div>
 )
 
