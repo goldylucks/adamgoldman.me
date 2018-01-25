@@ -151,7 +151,7 @@ ${this.props.intro}
       if (author === 'comment') {
         if (!this.state.showComments) { return null }
         return (
-          <div key={idx} className={`clearfix ${!this.state.isAdmin ? '' : s.chatMessageContainerAdmin}`}>
+          <div key={idx} className={`clearfix transcript-comment ${!this.state.isAdmin ? '' : s.chatMessageContainerAdmin}`}>
             {this.renderComment({ idx, source })}
             {this.renderMessageEditable(idx)}
             {this.renderMessageActions(idx)}
