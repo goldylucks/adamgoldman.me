@@ -2,6 +2,7 @@
 
 import React from 'react'
 
+import { filterDrafts } from '../../utils'
 import BottomSection from '../../components/BottomSection'
 import Card from '../../components/Card'
 
@@ -24,6 +25,7 @@ const ToolsListPage = ({ title, description, tutorials }: Props) => (
         </div>
         <div className="card-columns listrecent">
           {tutorials
+            .filter(filterDrafts)
             .map(t => (
               <Card {...t} url={`/tools/${t.url}`} key={t.url} />
             ))}

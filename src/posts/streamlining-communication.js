@@ -1,6 +1,6 @@
 export default {
   title: 'Streamlining communication',
-  IS_DRAFT: true,
+  isDraft: true,
   nick: 'communication outwards is speaking, communication inwards is thinking',
   description: 'Some tricks for saying more (impact) with less',
   tags: ['Adam Goldman'],

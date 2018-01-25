@@ -74,10 +74,10 @@ fs.writeFileSync(
 
 function fileNameToObject(fileName) {
   const {
-    title, description, tags, IS_DRAFT,
+    title, description, tags, isDraft,
     // eslint-disable-next-line global-require,import/no-dynamic-require
   } = require(path.resolve(dirToReadPath, fileName)).default
   return {
-    title, description, tags, IS_DRAFT, url: fileName.split('.js')[0],
+    title, description, tags, isDraft, url: fileName.split('.js')[0],
   }
 }

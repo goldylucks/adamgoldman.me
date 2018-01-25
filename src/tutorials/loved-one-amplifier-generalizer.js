@@ -15,7 +15,7 @@ export const title = 'Loved Ones Amplifier (Generalizer)'
 export const description = 'Leverage what you\'ve learned in the loved one amplifier'
 export const nick = 'generalizer'
 
-export const IS_DRAFT = true
+export const isDraft = true
 
 // eslint-disable-next-line react/prefer-stateless-function
 class LovedOneAmplifierGeneralizer extends React.Component {

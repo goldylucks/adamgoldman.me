@@ -31,7 +31,7 @@ export const scrollToElem = (element, to, duration) => {
   }, 10)
 }
 
-export const filterDrafts = item => !item.IS_DRAFT
+export const filterDrafts = item => !item.isDraft
 
 export const titleToSlug = title => title.toLowerCase().replace(/ /g, '-')
 

@@ -348,7 +348,7 @@
     "tags": [
       "Adam Goldman"
     ],
-    "IS_DRAFT": true,
+    "isDraft": true,
     "url": "streamlining-communication"
   },
   {
