@@ -45,7 +45,7 @@ Now for the important part …
 
 #### I need to get to know YOU
 
-[Message](FB_PROFILE) me the after you’ve completed this [form](https://goo.gl/forms/fwtHQ08yWjyGJ0hu1).
+[Message](FB_MESSAGE) me the after you’ve completed this [form](https://goo.gl/forms/fwtHQ08yWjyGJ0hu1).
 
 Now that we know each other, it’s time to …
 
