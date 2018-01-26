@@ -50,7 +50,7 @@ The easiest way most people choose to give back. Click on the select field below
 <input type="hidden" name="hosted_button_id" value="L73XBAVRMGQ6S">
 <div class="form-group">
 <select name="os0" class="form-control">
-<option value="10">$10 USD</option>
+<option value="23">$23 USD</option>
 <option value="30">$30 USD</option>
 <option value="70">$70 USD</option>
 <option value="140">$140 USD</option>
