@@ -1,4 +1,6 @@
 import React from 'react'
+import FA from 'react-fontawesome'
+import cx from 'classnames'
 
 import Link from '../Link'
 import MainNavMobile from '../MainNavMobile'
@@ -8,9 +10,9 @@ const navItems = [
   { to: '/loss', text: 'Loss' },
   { to: '/transcripts', text: 'Transcripts' },
   { to: '/tools', text: 'Tutorials' },
-  { to: '/i-dont-charge-i-accept', text: 'Donate' },
   { to: '/about', text: 'About' },
   { to: '/lets-talk', text: 'Contact' },
+  { to: '/i-dont-charge-i-accept', text: <span><FA name="heart" style={{ color: 'red', marginRight: 5 }} /> Donate</span> },
 ]
 
 class MainNav extends React.Component {
@@ -38,7 +40,7 @@ class MainNav extends React.Component {
             <ul className="navbar-nav ml-auto">
               {
             navItems.map(({ to, text }) => (
-              <li className="nav-item" key={to}>
+              <li className={cx('nav-item', { active: to.substr(1) === this.state.basePath })} key={to}>
                 <Link className="nav-link" to={to}>{text}</Link>
               </li>
             ))
