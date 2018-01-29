@@ -52,7 +52,7 @@ The easiest way most people choose to give back. Click on the select field below
 <select name="os0" class="form-control">
 <option value="23">$23 USD</option>
 <option value="30">$30 USD</option>
-<option value="70">$70 USD</option>
+<option selected value="70">$70 USD</option>
 <option value="140">$140 USD</option>
 <option value="350">$350 USD</option>
 <option value="600">$600 USD</option>
