@@ -144,7 +144,7 @@ And your name ${myManLady}?
 Great.
 Now, you know those people you just love to have around?
 
-Like their mere prenence fills you up with good feelings, sometimes without saying a word, and sometimes with. And at times it's the way they just "are", you know?
+Like their mere presence fills you up with good feelings, sometimes without saying a word, and sometimes with. And at times it's the way they just "are", you know?
 `}
             />
             <AnswersV2
@@ -678,12 +678,6 @@ Pretty cool right?
 And it only "cost" you a few minutes of brain exploration.
 
 If this is your first time doing this, I suggest you do it with a few more people until you feel you get the hang of it.
-
-Then, I will show you how to leverage this learning and multiply it by ... well ... you will see :)
-
-But don't rush into it! If you only done this on ${lovedOneName}, please hear me out here and do it again on at least one more person first.
-
-I will wait for you either way. Promise!
 `}
             />
             <AnswersV2
@@ -693,9 +687,6 @@ I will wait for you either way. Promise!
                   text: "I'm ready to do it on the next person!",
                   onClick: this.anotherPerson,
                 },
-                <Link to="/tools/loved-ones-amplifier-generalizer/">
-                  I got the hang of it, show me how to leverage this Adam!
-                </Link>,
                 <FbShareLink>
                   This is cool and I want more to experince this
                 </FbShareLink>,
