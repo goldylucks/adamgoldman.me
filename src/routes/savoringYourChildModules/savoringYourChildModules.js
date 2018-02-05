@@ -13,7 +13,7 @@ const modules = [
   { title: 'Relationship Consolidation', description: 'Soften bad experiences & intensify positive onces', url: 'relationship-consolidation' },
 ]
 
-const Blog = () => (
+const SavoringYourChildModules = () => (
   <div>
     <div className="container">
       <div className="mainheading">
@@ -32,4 +32,4 @@ const Blog = () => (
   </div>
 )
 
-export default Blog
+export default SavoringYourChildModules
