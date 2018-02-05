@@ -60,12 +60,14 @@ The easiest way most people choose to give back. Click on the select field below
 Peeps who got a PayPal usually use this to give back, since it's so easy and convenient. [Click here](https://www.paypal.me/goldylucks/0usd)
 
 #### Bitcoin & Cryptocurrency
-**BTC** 3BjHBihAL3KpQsiJ6qup5gHiEnTtYbBQFK  
-**BCH** 1JjF3o1jj3cdYJw78hYXCUnE1s5uUrQkcL  
-**BTG** ATLVA6eG7TAt9p2ubL4emRLeid6f37H1Fe  
-**DASH** XyqnPYuAeLwzLdx3BDBG5tAgn7GWpqY5uS  
-**LTC** MDRZNuJGi9eqAGRdUMuqjCDwqj49eVTdJF  
-**ZEC** t1dG5TgkC2CeRrPimYgtVdmyoE3uHR2S1rG 
+<div>
+<strong>BTC</strong> <br class="d-md-none" />  <small>3BjHBihAL3KpQsiJ6qup5gHiEnTtYbBQFK</small><br />
+<strong>BCH</strong> <br class="d-md-none" /> <small>1JjF3o1jj3cdYJw78hYXCUnE1s5uUrQkcL</small><br />
+<strong>BTG</strong> <br class="d-md-none" /> <small>ATLVA6eG7TAt9p2ubL4emRLeid6f37H1Fe</small><br />
+<strong>DASH</strong> <br class="d-md-none" /> <small>XyqnPYuAeLwzLdx3BDBG5tAgn7GWpqY5uS</small><br />
+<strong>LTC</strong> <br class="d-md-none" /> <small>MDRZNuJGi9eqAGRdUMuqjCDwqj49eVTdJF</small><br />
+<strong>ZEC</strong> <br class="d-md-none" /> <small>t1dG5TgkC2CeRrPimYgtVdmyoE3uHR2S1rG</small>
+</div>
 
 ---
 
