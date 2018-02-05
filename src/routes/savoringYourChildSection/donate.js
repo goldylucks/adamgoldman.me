@@ -1,4 +1,4 @@
-import { cloudImg } from '../utils'
+import { cloudImg } from '../../utils'
 
 export default {
   title: "I don't charge I accept",
@@ -12,7 +12,7 @@ So you want to give back? How awesome are you!
 
 **All my content is**, and always will be, **100% free and open sourced**. FOREVER.
 
-**I still need to eat tho**, so for my time I do accept something in return, but I don't charge for it.
+**I still need to eat tho**, so for my time I do accept something in return, but I don't charge you for it.
 
 ![Boromir Charges money](${cloudImg('adamgoldman.me/boromir-charge.jpg')})
 
@@ -27,14 +27,6 @@ First of all, I ain't afraid of anything ;)
 So far no one has "taken advantage". **Some give less, some give more**, some really can't spare a dime so they work more passionately to refer me future clients.
 
 ![Yoda give more](${cloudImg('adamgoldman.me/yoda-give.jpg')})
-
-One lady came to me after 30 years of therapy, twice a week, $30 each session.
-
-That's a LOT of time and money she spent for NOT solving her problem.
-
-[We did more progress in 2 hours than the previous 30 years combined](/blog/rachel-turns-family-trauma-to-parody).
-
-You can imagine she was more than happy to give back ...
 
 ---
 
@@ -79,14 +71,10 @@ Peeps who got a PayPal usually use this to give back, since it's so easy and con
 
 ---
 
-<h1 style="text-align: center; font-style: italic; margin: 40px 0;">What if I don't have even $10 to spare?</h1>
+<h1 style="text-align: center; font-style: italic; margin: 40px 0;">What if I don't have even $23 to spare?</h1>
 
 That's perfectly fine, there are many ways you can contribute!
 
-[Share](FB_SHARE) this page, [leave a review](https://www.facebook.com/adamgoldman.me/reviews/) (and like!), tell your friends, and [let me know](/lets-talk/) what skills do you have that might be useful. There are many areas I could use help in order to reach more people and refine everything that I do. I appreciate every act of kindness! :)
-
----
-
-If we haven't done [anything](/tools/) together [yet](/lets-talk/), **what can I do you for my friend?**
+[Share](FB_SHARE) this page, [leave a review](https://www.facebook.com/adamgoldman.me/reviews/) (and like!), tell your friends, and [let me know](FB_MESSAGE) what skills do you have that might be useful. There are many areas I could use help in order to reach more people and refine everything that I do. I appreciate every act of kindness! :)
 `,
 }

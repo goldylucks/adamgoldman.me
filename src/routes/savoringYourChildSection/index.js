@@ -2,10 +2,10 @@ import React from 'react'
 
 import Layout from '../../components/Layout'
 
-import GriefSection from './GriefSection'
+import SavoringYourChildSection from './SavoringYourChildSection'
 
 async function action({ params }) {
-  const path = `/grief/${params.section}`
+  const path = `/savoring-your-child/${params.section}`
   const section = await import(`./${params.section}.js`)
     .then(module => module.default) // use an object from `export default`
     .catch((error) => {
@@ -21,7 +21,7 @@ async function action({ params }) {
     path,
     component: (
       <Layout path={path}>
-        <GriefSection path={path} {...section} />
+        <SavoringYourChildSection path={path} {...section} />
       </Layout>
     ),
   }

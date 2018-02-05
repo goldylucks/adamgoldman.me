@@ -1,20 +1,25 @@
 import React from 'react'
 import axios from 'axios'
 
+import Layout from '../../components/Layout'
+
 import Transcripts from './Transcripts'
 
 const title = 'Transcripts'
 const description = 'Transcripts and notes of sessions with "clients"'
+const path = '/transcripts'
 
 async function action() {
   const { data } = await axios.get('/api/posts/transcripts')
   return {
     chunks: ['transcripts'],
     title,
+    path,
     description,
-    path: '/transcripts',
     component: (
-      <Transcripts transcripts={data} title={title} description={description} />
+      <Layout path={path}>
+        <Transcripts transcripts={data} title={title} description={description} />
+      </Layout>
     ),
   }
 }

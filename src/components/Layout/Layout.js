@@ -11,11 +11,12 @@ import s from './Layout.css'
 
 type Props = {
   children: any,
+  path: string,
 }
 
-const Layout = ({ children }: Props) => (
+const Layout = ({ children, path }: Props) => (
   <div>
-    <MainNav />
+    <MainNav path={path} />
     <div>
       {children}
     </div>

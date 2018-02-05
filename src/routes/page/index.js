@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Layout from '../../components/Layout'
+
 import Page from './Page'
 
 async function action({ params }) {
@@ -17,7 +19,11 @@ async function action({ params }) {
     title: page.title,
     description: page.description,
     path,
-    component: <Page path={path} {...page} />,
+    component: (
+      <Layout path={path}>
+        <Page path={path} {...page} />
+      </Layout>
+    ),
   }
 }
 

@@ -14,8 +14,6 @@ import axios from 'axios'
 import { isProd, isMobile } from '../utils'
 import { FB_APP_ID } from '../constants'
 
-import Layout from './Layout'
-
 axios.defaults.baseURL = isProd ? 'http://www.adamgoldman.me' : 'http://localhost:3000'
 
 const ContextType = {
@@ -95,7 +93,7 @@ class App extends React.PureComponent {
   render() {
     // NOTE: If you need to add or modify header, footer etc. of the app,
     // please do that inside the Layout component.
-    return React.Children.only(<Layout>{this.props.children}</Layout>)
+    return React.Children.only(this.props.children)
   }
 }
 

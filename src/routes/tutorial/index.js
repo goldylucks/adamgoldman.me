@@ -1,6 +1,8 @@
 import React from 'react'
 import axios from 'axios'
 
+import Layout from '../../components/Layout'
+
 import BrainToolV1 from './BrainTool-v1'
 import BrainToolV3 from './BrainTool-v3'
 
@@ -32,7 +34,11 @@ async function action({ params }) {
       title: data.title,
       description: data.description,
       path,
-      component: <BrainToolV3 tool={data} path={path} />,
+      component: (
+        <Layout path={path}>
+          <BrainToolV3 tool={data} path={path} />
+        </Layout>
+      ),
     }
   }
 
@@ -42,7 +48,11 @@ async function action({ params }) {
       title: data.title,
       description: data.description,
       path,
-      component: <BrainToolV3 tool={data} path={path} />,
+      component: (
+        <Layout path={path}>
+          <BrainToolV3 tool={data} path={path} />
+        </Layout>
+      ),
     }
   }
 
@@ -63,7 +73,11 @@ async function action({ params }) {
     title: tool.title,
     description: tool.description,
     path,
-    component: <Comp tool={tool} path={path} />,
+    component: (
+      <Layout path={path}>
+        <Comp tool={tool} path={path} />
+      </Layout>
+    ),
   }
 }
 
