@@ -11,7 +11,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import axios from 'axios'
 
-import { isProd } from '../utils'
+import { isProd, isMobile } from '../utils'
 import { FB_APP_ID } from '../constants'
 
 axios.defaults.baseURL = isProd ? 'http://www.adamgoldman.me' : 'http://localhost:3000'
@@ -87,6 +87,7 @@ class App extends React.PureComponent {
   componentDidMount() {
     initFbSdk()
     setAdminPass()
+    axios.defaults.headers.common['is-mobile'] = isMobile()
   }
 
   render() {

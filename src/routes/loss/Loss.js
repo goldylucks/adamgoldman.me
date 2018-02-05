@@ -1,9 +1,13 @@
 // @flow
 
 import React from 'react'
+import withStyles from 'isomorphic-style-loader/lib/withStyles'
 
+import FbLogin from '../../components/FbLogin'
 import Card from '../../components/Card'
 import Link from '../../components/Link'
+
+import s from './Loss.css'
 
 type Props = {
   sections: [],
@@ -17,11 +21,12 @@ const Loss = ({ sections, title }: Props) => (
         <h1 className="sitetitle">{title}</h1>
         <p className="lead">Proven <Link to="/loss/protocol">protocol</Link> to experience a more peacful, <Link to="/loss/resourceful-response">resourceful response</Link> to loss</p>
       </div>
+      <FbLogin onLogin={onLogin} className={s.fbLogin} />
       <section>
         <div className="card-columns card-columns-three listrecent">
           {sections
-            .map(s => (
-              <Card {...s} url={`/loss/${s.url}`} key={s.url} />
+            .map(section => (
+              <Card {...section} url={`/loss/${section.url}`} key={section.url} />
             ))}
         </div>
       </section>
@@ -29,4 +34,8 @@ const Loss = ({ sections, title }: Props) => (
   </div>
 )
 
-export default Loss
+export default withStyles(s)(Loss)
+
+function onLogin() {
+  console.log('onLogin')
+}
