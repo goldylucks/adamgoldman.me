@@ -4,7 +4,6 @@
 
 import React from 'react'
 
-import Link from '../components/Link'
 import FbShareLink from '../components/FbShareLink'
 import Markdown from '../components/Markdown'
 import AnswersV2 from '../routes/tutorial/components/Answers-v2'
