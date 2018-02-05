@@ -1,6 +1,8 @@
 import React from 'react'
 import axios from 'axios'
 
+import Layout from '../../components/Layout'
+
 import BlogPost from './BlogPost'
 import Transcript from './Transcript'
 
@@ -12,14 +14,19 @@ const dbPosts = [
 ]
 
 async function action({ params }) {
+  const path = getPath(params.post)
   if (dbPosts.includes(params.post)) {
     const { data } = await axios.get(`/api/posts/${params.post}`)
     const Comp = data.transcript.length ? Transcript : BlogPost
     return {
       title: data.title,
       description: data.description,
-      path: getPath(params.post),
-      component: <Comp {...data} />,
+      path,
+      component: (
+        <Layout path={path}>
+          <Comp {...data} />
+        </Layout>
+      ),
     }
   }
 
@@ -36,9 +43,13 @@ async function action({ params }) {
 
   return {
     title: post.title,
-    path: getPath(params.post),
+    path,
     description: post.description,
-    component: <Comp {...post} />,
+    component: (
+      <Layout path={path}>
+        <Comp {...post} />
+      </Layout>
+    ),
   }
 }
 

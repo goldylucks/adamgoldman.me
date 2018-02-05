@@ -1,6 +1,8 @@
 import React from 'react'
 import axios from 'axios'
 
+import Layout from '../../components/Layout'
+
 import Home from './Home'
 
 const tutorials = [
@@ -21,18 +23,22 @@ const tutorials = [
   },
 ]
 
+const path = '/'
+
 async function action() {
   const { data } = await axios.get('/api/posts/transcripts')
   return {
     chunks: ['home'],
     title: 'My Virtual Home',
-    path: '/',
+    path,
     description: "Relax, it's just life",
     component: (
-      <Home
-        transcripts={data}
-        tutorials={tutorials}
-      />
+      <Layout path={path}>
+        <Home
+          transcripts={data}
+          tutorials={tutorials}
+        />
+      </Layout>
     ),
   }
 }

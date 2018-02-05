@@ -23,6 +23,14 @@ const routes = {
       load: () => import(/* webpackChunkName: 'blogPost' */ './blogPost'),
     },
     {
+      path: '/savoring-your-child',
+      load: () => import(/* webpackChunkName: 'savoringYourChild' */ './savoringYourChild'),
+    },
+    {
+      path: '/savoring-your-child/:section',
+      load: () => import(/* webpackChunkName: 'savoringYourChildSection' */ './savoringYourChildSection'),
+    },
+    {
       path: '/loss',
       load: () => import(/* webpackChunkName: 'loss' */ './loss'),
     },

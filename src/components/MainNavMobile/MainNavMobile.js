@@ -13,7 +13,10 @@ import s from './MainNavMobile.css'
 
 type Props = {
   navItems: [],
+  title: '',
+  logoLink: '',
   basePath: '',
+  isSavoring: Boolean,
 }
 
 class MainNavMobile extends React.Component {
@@ -47,17 +50,20 @@ class MainNavMobile extends React.Component {
           }
         >
           <nav>
-            <h3 className={s.mobileMenuHeadline}>Adam Goldman</h3>
+            <h3 className={s.mobileMenuHeadline}>{this.props.title}</h3>
             <ul className="navbar-nav">
               {
-                [{ to: '/', text: 'Home' }].concat(this.props.navItems).map(({ to, text }) => (
+                [{ to: this.props.logoLink, text: 'Home' }].concat(this.props.navItems).map(({ to, text }) => (
                   <li className={cx('nav-item', { active: to.substr(1) === this.props.basePath })} key={to}>
                     <Link className={cx('nav-link', s.navLink)} to={to}>{text}</Link>
                   </li>
                 ))
               }
               <li className="nav-item" style={{ marginTop: 20 }}>
-                <Link className="nav-link btn btn-primary btn-block" to="/book">Book a session</Link>
+                { !this.props.isSavoring
+                  ? <Link className="nav-link btn btn-primary btn-block" to="/book">Book a session</Link>
+                  : <span className="nav-link btn btn-primary btn-sm"><FA name="facebook" /> Login</span>
+                }
               </li>
             </ul>
           </nav>

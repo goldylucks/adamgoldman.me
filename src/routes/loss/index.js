@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Layout from '../../components/Layout'
+
 import Loss from './Loss'
 
 const props = {
@@ -13,7 +15,9 @@ async function action() {
     chunks: ['loss'],
     ...props,
     component: (
-      <Loss sections={sections()} {...props} />
+      <Layout path={props.path}>
+        <Loss sections={sections()} {...props} />
+      </Layout>
     ),
   }
 }

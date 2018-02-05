@@ -9,12 +9,21 @@
 
 import React from 'react'
 
+import Layout from '../../components/Layout'
+
 import ErrorPage from './ErrorPage'
+
+const path = '/error'
 
 function action() {
   return {
     title: 'Demo Error',
-    component: <ErrorPage />,
+    path,
+    component: (
+      <Layout path={path}>
+        <ErrorPage />
+      </Layout>
+    ),
   }
 }
 
