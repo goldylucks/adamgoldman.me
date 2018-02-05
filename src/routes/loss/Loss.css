@@ -1,0 +1,12 @@
+.fbLogin {
+  font-size: 40px;
+  width: 100%;
+  background: blue;
+  color: #fff;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.fbLogin i {
+  margin-right: 10px;
+}
