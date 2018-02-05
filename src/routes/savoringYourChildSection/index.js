@@ -2,7 +2,9 @@ import React from 'react'
 
 import Layout from '../../components/Layout'
 
-import SavoringYourChildSection from './SavoringYourChildSection'
+import SavoringYourChildSectionInfo from './savoringYourChildSectionInfo'
+import SavoringYourChildSectionForm from './savoringYourChildSectionForm'
+
 
 async function action({ params }) {
   const path = `/savoring-your-child/${params.section}`
@@ -15,13 +17,16 @@ async function action({ params }) {
       throw error // loading chunk failed (render error page)
     })
   if (!section) return null // go to next route (or render 404)
+  const Comp = params.section.includes('donate')
+    ? SavoringYourChildSectionInfo
+    : SavoringYourChildSectionForm
   return {
     title: section.title,
     description: section.description,
     path,
     component: (
       <Layout path={path}>
-        <SavoringYourChildSection path={path} {...section} />
+        <Comp path={path} {...section} />
       </Layout>
     ),
   }

@@ -27,6 +27,10 @@ const routes = {
       load: () => import(/* webpackChunkName: 'savoringYourChild' */ './savoringYourChild'),
     },
     {
+      path: '/savoring-your-child/modules',
+      load: () => import(/* webpackChunkName: 'savoringYourChildModules' */ './savoringYourChildModules'),
+    },
+    {
       path: '/savoring-your-child/:section',
       load: () => import(/* webpackChunkName: 'savoringYourChildSection' */ './savoringYourChildSection'),
     },
