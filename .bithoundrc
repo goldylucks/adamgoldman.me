@@ -1,0 +1,21 @@
+{
+	"ignore": [
+		"**/deps/**",
+	    "**/node_modules/**",
+	    "**/thirdparty/**",
+	    "**/third_party/**",
+	    "**/tools/**",
+	    "**/src/tutorials/**",
+	    "**/src/blotPost/**",
+	    "**/src/components/FbLogin/**",
+	    "**/src/components/SignupForm/**",
+	    "**/src/blotPost/**",
+	    "**/src/routes/tutorial/**",
+	],
+	"test": [
+		"**/test/**",
+    	"**/tests/**",
+    	"**/spec/**",
+    	"**/specs/**"
+    ]
+}
