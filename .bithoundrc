@@ -6,11 +6,12 @@
 	    "**/third_party/**",
 	    "**/tools/**",
 	    "**/src/tutorials/**",
-	    "**/src/blotPost/**",
 	    "**/src/components/FbLogin/**",
 	    "**/src/components/SignupForm/**",
-	    "**/src/blotPost/**",
+	    "**/src/blogPost/**",
 	    "**/src/routes/tutorial/**",
+	    "**/src/posts/**",
+	    "tools/**"
 	],
 	"test": [
 		"**/test/**",
