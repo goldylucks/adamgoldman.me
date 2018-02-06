@@ -4,7 +4,7 @@
 	    "**/node_modules/**",
 	    "**/thirdparty/**",
 	    "**/third_party/**",
-	    "**/tools/**",
+	    "**/tools**",
 	    "**/src/tutorials/**",
 	    "**/src/components/FbLogin/**",
 	    "**/src/components/SignupForm/**",
@@ -18,5 +18,11 @@
     	"**/tests/**",
     	"**/spec/**",
     	"**/specs/**"
-    ]
+    ],
+    "critics": {
+    	"wc": { "limit": 5000 }
+	},
+    "dependencies": {
+    	"unused-ignores": []
+    }
 }
