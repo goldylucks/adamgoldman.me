@@ -5,9 +5,8 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles'
 import FA from 'react-fontawesome'
 
 import { MESSENGER_LINK } from '../../constants'
-
-import GetStarted from '../../components/GetStarted'
 import Testimonial from '../../components/Testimonial'
+import GetStarted from '../../components/GetStarted'
 
 import FAQContainer from './FAQContainer'
 import s from './SavoringYourChild.css'
