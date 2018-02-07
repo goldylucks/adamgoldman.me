@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react'
 
 import { scrollToElem } from '../../utils'
@@ -8,10 +10,6 @@ type Props = {
 }
 
 class GetStarted extends React.Component {
-  goToElement = () => {
-    scrollTop()
-  }
-
   props: Props
 
   render() {
@@ -25,6 +23,9 @@ class GetStarted extends React.Component {
         </a>
       </div>
     )
+  }
+  goToElement = () => {
+    scrollTop()
   }
 }
 
