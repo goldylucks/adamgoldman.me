@@ -4,7 +4,7 @@ import React from 'react'
 
 import FAQ from '../../components/FAQ'
 
-import { logistics, loss_grief} from './data';
+import { logistics, lossGrief } from './data';
 
 const FAQContainer = () => (
   <div>
@@ -18,7 +18,7 @@ const FAQContainer = () => (
         <hr />
         <h4>Loss / grief</h4>
         <FAQ
-          faqs={loss_grief}
+          faqs={lossGrief}
         />
       </div>
     </div>

@@ -5,10 +5,10 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles'
 import FA from 'react-fontawesome'
 
 import { MESSENGER_LINK } from '../../constants'
-
 import Testimonial from '../../components/Testimonial'
-
 import FAQContainer from './FAQContainer'
+import GetStarted from '../../components/GetStarted'
+
 import s from './SavoringYourChild.css'
 
 import { testimonials } from './data'
@@ -28,7 +28,9 @@ const SavoringYourChild = () => (
           testimonials={testimonials}
         />
       </section>
-      <a href="#typeform" className={`btn btn-primary ${s.ctaButton}`}>GET STARTED</a>
+      <section id="get-started">
+        <GetStarted text="Get Started" style={s.ctaButton} />
+      </section>
       <hr className={s.hr} />
       <h1 className="text-center">What will I learn?</h1>
       <div className="row justify-content-md-center">
@@ -45,7 +47,9 @@ const SavoringYourChild = () => (
         <FAQContainer />
       </section>
       <hr className={s.hr} />
-      <a href="#typeform" className={`btn btn-primary ${s.ctaButton}`}>GET STARTED</a>
+      <section id="get-started">
+        <GetStarted text="Get Started" style={s.ctaButton} />
+      </section>
       <hr className={s.hr} />
       <div className="text-center">
         <h1>Still got questions?</h1>
