@@ -22,4 +22,4 @@ const Testimonial = ({ testimonials }: Props) => (
   </div>
 )
 
-export default Testimonial
+export default  Testimonial
