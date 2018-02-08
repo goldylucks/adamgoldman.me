@@ -11,7 +11,7 @@ type Props = {
   path: string,
 };
 
-const savoringYourChildSectionInfo = ({
+const savoringYourChildSectionSection = ({
   title, body, path,
 }:
 Props) => (
@@ -34,4 +34,4 @@ Props) => (
   </div>
 )
 
-export default savoringYourChildSectionInfo
+export default savoringYourChildSectionSection
