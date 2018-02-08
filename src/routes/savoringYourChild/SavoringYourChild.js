@@ -6,7 +6,7 @@ import FA from 'react-fontawesome'
 
 import { MESSENGER_LINK } from '../../constants'
 import Testimonial from '../../components/Testimonial'
-import GetStarted from '../../components/GetStarted'
+import GetStarted from '../../components/GetStartedButton'
 
 import FAQContainer from './FAQContainer'
 import s from './SavoringYourChild.css'
@@ -21,15 +21,11 @@ const SavoringYourChild = () => (
       </div>
       <div id="typeform">Typeform goes here ...</div>
       <hr className={s.hr} />
-      <section id="testimonial">
+      <section>
         <h1 className="text-center">Parents share ...</h1>
-        <Testimonial
-          testimonials={testimonials}
-        />
+        <Testimonial testimonials={testimonials} />
       </section>
-      <section id="get-started">
-        <GetStarted text="Get Started" style={s.ctaButton} />
-      </section>
+      <GetStarted text="Get Started" />
       <hr className={s.hr} />
       <h1 className="text-center">What will I learn?</h1>
       <div className="row justify-content-md-center">
@@ -42,13 +38,11 @@ const SavoringYourChild = () => (
         </div>
       </div>
       <hr className={s.hr} />
-      <section id="faq">
+      <section>
         <FAQContainer />
       </section>
       <hr className={s.hr} />
-      <section id="get-started">
-        <GetStarted text="Get Started" style={s.ctaButton} />
-      </section>
+      <GetStarted text="Get Started" />
       <hr className={s.hr} />
       <div className="text-center">
         <h1>Still got questions?</h1>

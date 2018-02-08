@@ -4,7 +4,7 @@ import React from 'react'
 
 import FAQ from '../../components/FAQ'
 
-import { logistics, lossGrief } from './data';
+import { logistics, lossGrief } from './data'
 
 const FAQContainer = () => (
   <div>
