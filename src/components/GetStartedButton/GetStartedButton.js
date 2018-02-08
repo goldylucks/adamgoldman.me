@@ -17,10 +17,7 @@ class GetStartedButton extends React.Component {
   render() {
     return (
       <div>
-        <a
-          onClick={this.goToElement}
-          className={`btn btn-primary ${s.ctaButton}`}
-        >
+        <a onClick={this.goToElement} className={`btn btn-primary ${s.ctaButton}`} >
           {this.props.text}
         </a>
       </div>
