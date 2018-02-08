@@ -7,8 +7,8 @@ import SavoringYourChildSectionForm from './savoringYourChildSectionForm'
 
 
 async function action({ params }) {
-  const path = `/savoring-your-child/${params.section}`
-  const section = await import(`./${params.section}.js`)
+  const path = `/savoring-your-child/modules/${params.section}`
+  const section = await import(`./modules/${params.section}.js`)
     .then(module => module.default) // use an object from `export default`
     .catch((error) => {
       if (error.message.startsWith('Cannot find module')) {
