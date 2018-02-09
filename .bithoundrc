@@ -58,7 +58,8 @@
     	"**/specs/**"
     ],
     "critics": {
-    	"lint": {"engine": "standard"}
+    	"lint": {"engine": "none"},
+    	"wc": { "limit": 5000 }
 	},
     "dependencies": {
     	"unused-ignores": [
