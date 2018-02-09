@@ -4,9 +4,9 @@ import React from 'react'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
 import FA from 'react-fontawesome'
 
-import { MESSENGER_LINK } from '../../constants'
 import Testimonial from '../../components/Testimonial'
 import GetStarted from '../../components/GetStartedButton'
+import MessageMe from '../../components/MessageMe'
 
 import FAQContainer from './FAQContainer'
 import s from './SavoringYourChild.css'
@@ -44,24 +44,7 @@ const SavoringYourChild = () => (
       <hr className={s.hr} />
       <GetStarted text="Get Started" />
       <hr className={s.hr} />
-      <div className="text-center">
-        <h1>Still got questions?</h1>
-        <a
-          href={MESSENGER_LINK}
-          target="_blank"
-          rel="nofollow noreferrer noopener"
-        >
-          <img
-            src="http://dnjuvu1aivgsx.cloudfront.net/blog/Feedback/message-me.png"
-            style={{ maxWidth: '100%' }}
-            alt="Message Me"
-          />
-          <img
-            src="https://cdn.supple.com.au/wp-content/themes/supple/img/msg.png"
-            alt="Messenger Link"
-          />
-        </a>
-      </div>
+      <MessageMe />
     </div>
   </div>
 )
