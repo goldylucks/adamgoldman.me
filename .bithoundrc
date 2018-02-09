@@ -62,7 +62,9 @@
 	},
     "dependencies": {
     	"unused-ignores": [
-    		"eslint"
+    		"eslint",
+    		"shelljs",
+    		"browser-sync"
     	]
     }
 }
