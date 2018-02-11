@@ -4,6 +4,7 @@ import React from 'react'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
 import FA from 'react-fontawesome'
 
+import Typeform from '../../components/Typeform'
 import Testimonial from '../../components/Testimonial'
 import GetStarted from '../../components/GetStartedButton'
 import MessageMe from '../../components/MessageMe'
@@ -19,7 +20,11 @@ const SavoringYourChild = () => (
         <h1 className="sitetitle text-center">How to honor your child&apos;s memory after the transition</h1>
         <p className="lead text-center">And appreciate the relationship you had in a resourceful way</p>
       </div>
-      <div id="typeform">Typeform goes here ...</div>
+      <Typeform
+        data-url="https://adamgoldman.typeform.com/to/VHYYNS"
+        style={{ width: '100%', height: 500 }}
+        onSubmit={() => console.log('submit!')}
+      />
       <hr className={s.hr} />
       <section>
         <h1 className="text-center">Parents share ...</h1>
