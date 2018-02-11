@@ -12,14 +12,10 @@ const FAQContainer = () => (
     <div className="row justify-content-md-center">
       <div className="col col-lg-8">
         <h4>Logistics</h4>
-        <FAQ
-          faqs={logistics}
-        />
+        <FAQ faqs={logistics} />
         <hr />
         <h4>Loss / grief</h4>
-        <FAQ
-          faqs={lossGrief}
-        />
+        <FAQ faqs={lossGrief} />
       </div>
     </div>
   </div>
