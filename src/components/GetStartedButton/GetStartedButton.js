@@ -8,10 +8,14 @@ import { scrollToElem } from '../../utils'
 import s from './GetStartedButton.css'
 
 type Props = {
-  text: string,
+  text?: string,
 }
 
 class GetStartedButton extends React.Component {
+  static defaultProps = {
+    text: 'Get Started',
+  }
+
   props: Props
 
   render() {
