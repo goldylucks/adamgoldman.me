@@ -13,15 +13,24 @@ import FAQContainer from './FAQContainer'
 import s from './SavoringYourChild.css'
 import { testimonials } from './data'
 
-const SavoringYourChild = () => (
+type Props = {
+  user: Object,
+  typeformUserId: Object,
+}
+
+const SavoringYourChild = ({ user, typeformUserId }: Props) => (
   <div>
     <div className="container">
       <div className="mainheading">
         <h1 className="sitetitle text-center">How to honor your child&apos;s memory after the transition</h1>
         <p className="lead text-center">And appreciate the relationship you had in a resourceful way</p>
       </div>
+      <div>
+        <div>typeformUserId: {typeformUserId},</div>
+        <div>User ID {user._id},</div>
+      </div>
       <Typeform
-        data-url="https://adamgoldman.typeform.com/to/VHYYNS"
+        data-url={`https://adamgoldman.typeform.com/to/VHYYNS?typeformUserId=${typeformUserId}`}
         style={{ width: '100%', height: 500 }}
         onSubmit={() => console.log('submit!')}
       />
