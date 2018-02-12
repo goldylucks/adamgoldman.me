@@ -33,7 +33,7 @@ class FbLogin extends React.Component {
         fields="name,picture"
         callback={this.responseFacebook}
         icon="fa-facebook"
-        textButton="Click To Get Started"
+        textButton=" Login"
         cssClass={this.props.className}
       />
     )
@@ -44,7 +44,10 @@ class FbLogin extends React.Component {
       response.fbPictureUrl = response.picture.data.url
     }
     axios.post('/api/users/fbAuth', response)
-      .then(serverRes => console.log('serverRes', serverRes))
+      .then((serverRes) => {
+        console.log('serverRes', serverRes)
+        localStorage.setItem('fbUserId', serverRes.data.fbUserId)
+      })
       .catch((err) => {
         console.error(err)
         alert('there was an error, please contact me')

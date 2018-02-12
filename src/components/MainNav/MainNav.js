@@ -6,6 +6,7 @@ import cx from 'classnames'
 
 import Link from '../Link'
 import MainNavMobile from '../MainNavMobile'
+import FbLoginbutton from '../FbLoginButton/'
 
 type Props = {
   path: string,
@@ -38,7 +39,7 @@ class MainNav extends React.Component {
               <li className="nav-item" style={{ marginLeft: 10 }}>
                 { !this.isSavoring()
                 ? <Link className="nav-link btn btn-primary btn-sm" to="/book">Book a session</Link>
-                : <span className="nav-link btn btn-primary btn-sm"><FA name="facebook" /> Login</span>
+                : <FbLoginbutton />
             }
               </li>
             </ul>
