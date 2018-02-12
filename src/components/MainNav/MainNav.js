@@ -6,16 +6,20 @@ import cx from 'classnames'
 
 import Link from '../Link'
 import MainNavMobile from '../MainNavMobile'
-import FbLoginbutton from '../FbLoginButton/'
+import FbLoginbutton from '../FbLoginButton'
 
 type Props = {
   path: string,
+  user: Object,
+  onLogin: Function,
+  onLogout: Function,
 }
 
 class MainNav extends React.Component {
   props: Props
 
   render() {
+    const { onLogin, onLogout, user } = this.props
     return (
       <nav className="navbar navbar-expand-lg fixed-top main-nav navbar-light">
         <div className="container">
@@ -39,14 +43,14 @@ class MainNav extends React.Component {
               <li className="nav-item" style={{ marginLeft: 10 }}>
                 { !this.isSavoring()
                 ? <Link className="nav-link btn btn-primary btn-sm" to="/book">Book a session</Link>
-                : <FbLoginbutton />
+                : <span className="nav-link btn btn-primary btn-sm"><FbLoginbutton onLogin={onLogin} onLogout={onLogout} user={user} /></span>
             }
               </li>
             </ul>
           </div>
           { !this.isSavoring()
             ? <Link className="nav-link btn btn-primary btn-sm d-sm-block d-md-none" to="/book">Book a session</Link>
-            : <span className="nav-link btn btn-primary btn-sm d-sm-block d-md-none"><FA name="facebook" /> Login</span>
+            : <span className="nav-link btn btn-primary btn-sm d-sm-block d-md-none"><FbLoginbutton onLogin={onLogin} onLogout={onLogout} user={user} /></span>
           }
         </div>
       </nav>

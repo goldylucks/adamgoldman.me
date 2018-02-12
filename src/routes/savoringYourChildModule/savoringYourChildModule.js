@@ -14,10 +14,12 @@ type Props = {
   typeform: string,
   faq: [],
   testimonials: [],
+  user: Object,
+  typeformUserId: '',
 };
 
 const savoringYourChildSectionForm = ({
-  title, path, typeform, faq, testimonials,
+  title, path, typeform, faq, testimonials, user, typeformUserId,
 }:
 Props) => (
   <div>
@@ -30,11 +32,20 @@ Props) => (
           <div className="mainheading">
             <h1 className="posttitle">{title}</h1>
           </div>
-          <Typeform
-            data-url={typeform}
-            style={{ width: '100%', height: 800 }}
-            onSubmit={() => console.log('submit!')}
-          />
+          <div>
+            <div>User typeform ID: {typeformUserId},</div>
+            <div>User ID {user._id},</div>
+          </div>
+          {user._id
+            ? (
+              <Typeform
+                data-url={typeform}
+                style={{ width: '100%', height: 800 }}
+                onSubmit={() => console.log('submit!')}
+              />
+          ) :
+              <div>Please login</div>
+        }
           <hr />
           { !testimonials.length
         ? null

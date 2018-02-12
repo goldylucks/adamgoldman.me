@@ -46,13 +46,12 @@ class FbLogin extends React.Component {
     axios.post('/api/users/fbAuth', response)
       .then((serverRes) => {
         console.log('serverRes', serverRes)
-        localStorage.setItem('fbUserId', serverRes.data.fbUserId)
+        this.props.onLogin(serverRes.data)
       })
       .catch((err) => {
         console.error(err)
         alert('there was an error, please contact me')
       })
-    this.props.onLogin()
   }
 }
 
