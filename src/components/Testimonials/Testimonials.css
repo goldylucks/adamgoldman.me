@@ -78,6 +78,9 @@
 .quote {
   margin-top:10px;
 }
+.quote p{
+  text-indent: 10px;
+}
 .quote:before{
   content: "\201C";
   font-family: Georgia, serif;
@@ -85,7 +88,7 @@
   color: #007bff;
   position: absolute;
   left: 10px;
-  top:34px;
+  top:31px;
 }
 .avatar {
   border-radius: 50%;

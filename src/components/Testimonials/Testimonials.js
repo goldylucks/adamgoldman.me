@@ -9,7 +9,7 @@ import TestimonialItems from './TestimonialItems'
 import s from './Testimonials.css'
 
 type Props = {
-  testimonials?: Array<string>,
+  testimonials?: Array<Object>,
 }
 
 const Testimonials = ({ testimonials }: Props) => {
@@ -55,7 +55,7 @@ const Testimonials = ({ testimonials }: Props) => {
   return (
     <div className={`container ${s.testimonial} `}>
       <Slider {...settings}>
-        {testimonials.length && testimonials.map((item, key) => (
+        {testimonials.map((item, key) => (
           <div className={`col-md-3 ${s.item} `}>
             <TestimonialItems key={key} item={item} />
           </div>

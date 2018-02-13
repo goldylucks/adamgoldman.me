@@ -13,10 +13,10 @@ type Props = {
 const TestimonialItems = ({ item, key }: Props) => (
   <div data-index={key} key={key}>
     <h3>{item.title}</h3>
-    <small className={` ${s.quote} `} >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{item.text}</small>
+    <small className={` ${s.quote} `} ><p>{item.text}</p></small>
     <div className={`${s.alignBottom}`}>
       <div className={` ${s.testimonialImage} `} >
-        <img src={item.imgSrc} alt="" className={`${s.avatar}`} />
+        <img src={item.imgSrc} alt={item.name} className={`${s.avatar}`} />
       </div>
       <div className={` ${s.description} `}>
         <p>{item.name}</p>
