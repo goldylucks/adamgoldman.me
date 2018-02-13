@@ -32,7 +32,7 @@ const SavoringYourChild = ({ user, typeformUserId }: Props) => (
       <Typeform
         data-url={`https://adamgoldman.typeform.com/to/VHYYNS?typeformUserId=${typeformUserId}`}
         style={{ width: '100%', height: 500 }}
-        onSubmit={() => console.log('submit!')}
+        onSubmit={() => { window.location.href = '/savoring-your-child/peaceful-ending' }}
       />
       <hr className={s.hr} />
       <section>
