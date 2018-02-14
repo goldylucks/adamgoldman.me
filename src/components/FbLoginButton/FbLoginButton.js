@@ -26,7 +26,7 @@ class FbLoginButton extends React.Component {
   }
 
   login = () => {
-    global.FB.login(this.responseFacebook, { scope: 'email,public_profile' })
+    global.FB.login(this.responseApi, { scope: 'email,public_profile' })
   }
 
   responseFacebook = (response) => {
@@ -42,6 +42,14 @@ class FbLoginButton extends React.Component {
         global.console.error(err)
         global.alert('there was an error, please contact me')
       })
+  }
+
+  responseApi = () => {
+    global.FB.api('/me?fields=id,name,picture',
+      (response) => {
+        this.responseFacebook({ userID: response.id, ...response })
+      },
+    )
   }
 }
 
