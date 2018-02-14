@@ -1,10 +1,8 @@
 // @flow
 
 import React from 'react'
-import FacebookLogin from 'react-facebook-login'
+import FA from 'react-fontawesome'
 import axios from 'axios'
-
-import { FB_APP_ID } from '../../constants'
 
 type Props = {
   onLogin: Function,
@@ -25,18 +23,18 @@ class FbLogin extends React.Component {
   render() {
     // workaround for SSR, react-facebook-login doesn't support it
     if (!this.state.isMounted) {
-      return <div style={{ height: 104 }} />
+      return <div > <FA name="facebook" /> Login </div>
     }
     return (
-      <FacebookLogin
-        appId={FB_APP_ID}
-        fields="name,picture"
-        callback={this.responseFacebook}
-        icon="fa-facebook"
-        textButton=" Login"
-        cssClass={this.props.className}
-      />
+      <div onClick={this.login} className={this.props.className} style={{ cursor: 'pointer' }}>
+        <FA name="facebook" /> Login
+      </div>
     )
+  }
+
+  login = () => {
+    /* global FB */
+    FB.login(this.responseFacebook, { scope: 'email,public_profile' })
   }
 
   responseFacebook = (response) => {
