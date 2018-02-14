@@ -4,6 +4,7 @@ import React from 'react'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
 import FA from 'react-fontawesome'
 
+import history from '../../history'
 import Typeform from '../../components/Typeform'
 import Testimonial from '../../components/Testimonial'
 import GetStarted from '../../components/GetStartedButton'
@@ -32,7 +33,7 @@ const SavoringYourChild = ({ user, typeformUserId }: Props) => (
       <Typeform
         data-url={`https://adamgoldman.typeform.com/to/VHYYNS?typeformUserId=${typeformUserId}`}
         style={{ width: '100%', height: 500 }}
-        onSubmit={() => { window.location.href = '/savoring-your-child/peaceful-ending' }}
+        onSubmit={() => { history.push('/savoring-your-child/peaceful-ending') }}
       />
       <hr className={s.hr} />
       <section>
