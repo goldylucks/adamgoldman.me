@@ -49,9 +49,7 @@
 	    "**/src/blogPost/**",
 	    "**/src/routes/tutorial/**",
 	    "**/src/posts/**",
-	    "tools/**",
-	    "**/shelljs",
-	    "**/browser-sync"
+	    "tools/**"
 	],
 	"test": [
 		"**/test/**",
@@ -66,6 +64,10 @@
     "dependencies": {
     	"unused-ignores": [
     		"eslint"
-    	]
+    	],
+    	"mute": [
+    		"shelljs",
+    		"browser-sync"
+      	]
     }
 }
