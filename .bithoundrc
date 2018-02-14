@@ -58,12 +58,14 @@
     	"**/specs/**"
     ],
     "critics": {
-    	"lint": {"engine": "none"},
+    	"lint": {"engine": "eslint"},
     	"wc": { "limit": 5000 }
 	},
     "dependencies": {
     	"unused-ignores": [
-    		"eslint"
+    		"eslint",
+    		"shelljs",
+    		"browser-sync"
     	]
     }
 }
