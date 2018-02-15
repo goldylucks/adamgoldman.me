@@ -64,10 +64,6 @@
     "dependencies": {
     	"unused-ignores": [
     		"eslint"
-    	],
-    	"mute": [
-    		"shelljs",
-    		"browser-sync"
-      	]
+    	]
     }
 }
