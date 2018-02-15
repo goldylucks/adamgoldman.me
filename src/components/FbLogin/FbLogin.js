@@ -1,42 +1,32 @@
 // @flow
 
 import React from 'react'
-import FacebookLogin from 'react-facebook-login'
+import FA from 'react-fontawesome'
 import axios from 'axios'
-
-import { FB_APP_ID } from '../../constants'
 
 type Props = {
   onLogin: Function,
-  className: String,
+  onLogout: Function,
+  user: Object,
 }
 
 class FbLogin extends React.Component {
-  state = {
-    isMounted: false,
-  }
-
-  componentDidMount() {
-    this.setState({ isMounted: true }) // eslint-disable-line react/no-did-mount-set-state
-  }
-
   props: Props
 
   render() {
-    // workaround for SSR, react-facebook-login doesn't support it
-    if (!this.state.isMounted) {
-      return <div style={{ height: 104 }} />
+    const { user, onLogout } = this.props
+    if (user._id) {
+      return <a onClick={onLogout}>Logout</a>
     }
     return (
-      <FacebookLogin
-        appId={FB_APP_ID}
-        fields="name,picture"
-        callback={this.responseFacebook}
-        icon="fa-facebook"
-        textButton=" Login"
-        cssClass={this.props.className}
-      />
+      <div onClick={this.login} style={{ cursor: 'pointer' }}>
+        <FA name="facebook" /> Login
+      </div>
     )
+  }
+
+  login = () => {
+    global.FB.login(this.responseFacebook, { scope: 'email,public_profile' })
   }
 
   responseFacebook = (response) => {
@@ -45,12 +35,12 @@ class FbLogin extends React.Component {
     }
     axios.post('/api/users/fbAuth', response)
       .then((serverRes) => {
-        console.log('serverRes', serverRes)
+        global.console.log('serverRes', serverRes)
         this.props.onLogin(serverRes.data)
       })
       .catch((err) => {
-        console.error(err)
-        alert('there was an error, please contact me')
+        global.console.error(err)
+        global.alert('there was an error, please contact me')
       })
   }
 }
