@@ -1,0 +1,78 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css');
+
+:global {
+  .slick-prev:before, .slick-next:before {
+    opacity: 1;
+    color: #007bff;
+    font-size: 30px;
+  }
+  .slick-next {
+    right: -36px;
+  }
+  .slick-prev {
+    left: -41px;
+  }
+  .slick-slide {
+    position: relative;
+  }
+  .slick-track {
+    display: flex;
+    margin-top: 10px;
+    .slick-slide {
+      display: flex;
+      height: auto;
+    }
+  }
+}
+.item {
+  border-radius: 10px;
+  border: 2px solid #007bff;
+  margin: 10px;
+}
+.item h3 {
+  padding-top:10px;
+  text-align: center;
+}
+.itemText:before{
+  content: "\201C";
+  font-family: Georgia, serif;
+  font-size: 60px;
+  color: #007bff;
+  position:absolute;
+  left: 10px;
+  top:-4px;
+}
+.itemText {
+  position:relative;
+  padding:15px;
+}
+.itemText p {
+  text-indent: 25px;
+}
+.testimonialImage img {
+  display: block;
+  margin: 0 auto;
+}
+.avatar {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+.userTitle {
+  text-align: center;
+  padding: 10px;
+}
+.userDetails {
+  padding-top: 10px;
+}
+@media only screen and (max-width : 768px) {
+  :global {
+    .slick-next {
+      right: -20px;
+    }
+    .slick-prev {
+      left: -25px;
+    }
+  }
+}

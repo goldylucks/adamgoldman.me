@@ -4,7 +4,7 @@ import React from 'react'
 
 import Typeform from '../../components/Typeform'
 import MessageMe from '../../components/MessageMe'
-import Testimonial from '../../components/Testimonial'
+import Testimonial from '../../components/Testimonials'
 import Share from '../../components/Share'
 import FAQ from '../../components/FAQ'
 
