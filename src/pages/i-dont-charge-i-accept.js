@@ -79,7 +79,7 @@ Peeps who got a PayPal usually use this to give back, since it's so easy and con
 
 ---
 
-<h1 style="text-align: center; font-style: italic; margin: 40px 0;">What if I don't have even $10 to spare?</h1>
+<h1 style="text-align: center; font-style: italic; margin: 40px 0;">What if I don't have even $23 to spare?</h1>
 
 That's perfectly fine, there are many ways you can contribute!
 

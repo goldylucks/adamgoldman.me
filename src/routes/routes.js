@@ -31,8 +31,13 @@ const routes = {
       load: () => import(/* webpackChunkName: 'savoringYourChildModules' */ './savoringYourChildModules'),
     },
     {
-      path: '/savoring-your-child/:section',
+      // using array because soon we will add more sections
+      path: ['donate'].map(s => `/savoring-your-child/${s}`),
       load: () => import(/* webpackChunkName: 'savoringYourChildSection' */ './savoringYourChildSection'),
+    },
+    {
+      path: '/savoring-your-child/:module',
+      load: () => import(/* webpackChunkName: 'savoringYourChildModule' */ './savoringYourChildModule'),
     },
     {
       path: '/loss',
