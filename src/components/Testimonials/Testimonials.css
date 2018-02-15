@@ -5,7 +5,7 @@
   .slick-prev:before, .slick-next:before {
     opacity: 1;
     color: #007bff;
-    font-size: 25px;
+    font-size: 30px;
   }
   .slick-next {
     right: -36px;
@@ -13,89 +13,59 @@
   .slick-prev {
     left: -41px;
   }
-  .slick-slide img {
-    display: inline-block;
-  }
   .slick-slide {
     position: relative;
   }
-  .slick-track{
+  .slick-track {
     display: flex;
-    .slick-slide{
+    margin-top: 10px;
+    .slick-slide {
       display: flex;
-      min-height: 460px;
-      height: 100%;
-      flex: 0 1 328px;
+      height: auto;
     }
   }
 }
-
-* {
-  min-height: 0;
-  min-width: 0;
-}
-.alignBottom {
-  position:absolute;
-  bottom:10px;
-  margin: auto;
-  left: 0;
-  right: 0;
-}
-.testimonial{
-  display: -ms-flex;
-  display: -webkit-flex;
-  display: flex;
-  width: 100%;
-  margin-top: 20px;
-  position: relative;
-}
 .item {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  text-align: center;
-  flex: 0 1 240px;
-  margin-left: 25px;
-  margin-bottom: 20px;
-  margin-top:20px;
-  border: 2px solid #007bff;
   border-radius: 10px;
+  border: 2px solid #007bff;
+  margin: 10px;
 }
 .item h3 {
-  font-size: 20px;
-  padding-top:20px;
+  padding-top:10px;
+  text-align: center;
 }
-.testimonialImage {
-  align-items: center;
-  margin-top:20px;
-}
-.slick-slide img{
-  display: inline-block !important;
-}
-.description small {
-  clear:both;
-}
-.quote {
-  margin-top:10px;
-}
-.quote p{
-  text-indent: 10px;
-}
-.quote:before{
+.itemText:before{
   content: "\201C";
   font-family: Georgia, serif;
   font-size: 60px;
   color: #007bff;
-  position: absolute;
+  position:absolute;
   left: 10px;
-  top:31px;
+  top:-4px;
+}
+.itemText {
+  position:relative;
+  padding:15px;
+}
+.itemText p {
+  text-indent: 25px;
+}
+.testimonialImage img {
+  display: block;
+  margin: 0 auto;
 }
 .avatar {
   border-radius: 50%;
   width: 150px;
   height: 150px;
 }
-
+.userTitle {
+  text-align: center;
+  padding: 10px;
+}
+.userDetails {
+  padding-top: 10px;
+}
 @media only screen and (max-width : 768px) {
   :global {
     .slick-next {

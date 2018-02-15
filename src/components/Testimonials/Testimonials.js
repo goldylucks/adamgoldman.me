@@ -1,11 +1,10 @@
 // @flow
 
 import React from 'react'
-import PropTypes from 'prop-types'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
 import Slider from 'react-slick'
 
-import TestimonialItems from './TestimonialItems'
+import TestimonialItem from './TestimonialItem'
 import s from './Testimonials.css'
 
 type Props = {
@@ -13,40 +12,30 @@ type Props = {
 }
 
 const Testimonials = ({ testimonials }: Props) => {
-  const countSlides = testimonials.length > 3
   const settings = {
     dots: false,
     infinite: false,
     speed: 500,
-    slidesToShow: 3.3,
+    arrows: testimonials.length > 3,
     slidesToScroll: 1,
-    focusOnSelect: true,
-    draggable: false,
-    arrows: countSlides,
-    nextArrow: <CustomNextArrow />,
-    prevArrow: <CustomPrevArrow />,
+    slidesToShow: 3,
     responsive: [
       {
-        breakpoint: 480,
+        breakpoint: 1024,
         settings: {
-          slidesToShow: 1.1,
-          arrows: true,
-          centerMode: true,
-          centerPadding: '10',
+          slidesToShow: 3,
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 990,
         settings: {
           slidesToShow: 2,
-          arrows: true,
         },
       },
       {
-        breakpoint: 992,
+        breakpoint: 764,
         settings: {
-          slideToShow: 2,
-          arrows: true,
+          slidesToShow: 1,
         },
       },
     ],
@@ -55,9 +44,9 @@ const Testimonials = ({ testimonials }: Props) => {
   return (
     <div className={`container ${s.testimonial} `}>
       <Slider {...settings}>
-        {testimonials.map((item, key) => (
-          <div className={`col-md-3 ${s.item} `}>
-            <TestimonialItems key={key} item={item} />
+        {testimonials.map(item => (
+          <div>
+            <TestimonialItem item={item} />
           </div>
         ))}
       </Slider>
@@ -70,25 +59,3 @@ Testimonials.defaultProps = {
 }
 
 export default withStyles(s)(Testimonials)
-
-function CustomNextArrow(props) {
-  const { className, style, onClick } = props
-  return <div className={className} style={{ ...style, display: 'block' }} onClick={onClick} />
-}
-
-CustomNextArrow.propTypes = {
-  className: PropTypes.string.isRequired,
-  style: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
-}
-
-function CustomPrevArrow(props) {
-  const { className, style, onClick } = props
-  return <div className={className} style={{ ...style, display: 'block' }} onClick={onClick} />
-}
-
-CustomPrevArrow.propTypes = {
-  className: PropTypes.string.isRequired,
-  style: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
-}
