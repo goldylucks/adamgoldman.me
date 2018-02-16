@@ -12,5 +12,5 @@
     "flow",
     "react",
   ],
-  "ignore": ["node_modules", "build", "tools"],
+  "ignore": ["node_modules", "build"],
 }
