@@ -6,7 +6,6 @@
   height: 100%;
   background-color: rgba(0, 0, 0, .50);
 }
-
 .FbGateKeeperButton {
   margin: 25% auto 0;
   width: 50%;
@@ -17,9 +16,20 @@
   color: #03a87c;
   font-size: 30px;
 }
-
 .FbGateKeeperButton:hover {
   background: #03a87c;
   color: #ffffff;
   cursor: pointer;
+}
+@media only screen and (max-width : 1198px) {
+  .FbGateKeeperButton {
+    font-size: 25px;
+    width:70%;
+  }
+}
+@media only screen and (max-width : 768px) {
+  .FbGateKeeperButton {
+    font-size: 20px;
+    width:80%;
+  }
 }
