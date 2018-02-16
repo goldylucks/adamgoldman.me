@@ -6,7 +6,7 @@ import FA from 'react-fontawesome'
 
 import history from '../../history'
 import Typeform from '../../components/Typeform'
-import Testimonial from '../../components/Testimonial'
+import Testimonials from '../../components/Testimonials'
 import GetStarted from '../../components/GetStartedButton'
 import MessageMe from '../../components/MessageMe'
 
@@ -38,7 +38,7 @@ const SavoringYourChild = ({ user, typeformUserId }: Props) => (
       <hr className={s.hr} />
       <section>
         <h1 className="text-center">Parents share ...</h1>
-        <Testimonial testimonials={testimonials} />
+        <Testimonials testimonials={testimonials} />
       </section>
       <GetStarted text="Get Started" />
       <hr className={s.hr} />
