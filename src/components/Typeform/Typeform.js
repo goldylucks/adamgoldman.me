@@ -26,6 +26,16 @@ class Typeform extends React.Component {
     window.removeEventListener('message', this.onWindowMessage)
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps['data-url'] !== this.props['data-url']) {
+      /* eslint-disable */
+      typeformEmbed.makeWidget(this.el, this.props['data-url'], {
+        hideHeaders: true,
+        hideFooter: true,
+      })
+    }
+  }
+
   props: Props
 
   render() {
