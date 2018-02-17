@@ -13,13 +13,14 @@
   padding: 15px 20px;
   border-radius: 10px;
   border: 1px solid #03a87c;
-  color: #03a87c;
   font-size: 30px;
-}
-.FbGateKeeperButton:hover {
   background: #03a87c;
   color: #ffffff;
-  cursor: pointer;
+  opacity: 1;
+  transition: 0.5s opacity;
+}
+.FbGateKeeperButton:hover {
+  opacity: 0.7;
 }
 @media only screen and (max-width : 1198px) {
   .FbGateKeeperButton {

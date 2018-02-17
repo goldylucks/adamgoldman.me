@@ -14,8 +14,8 @@ type Props = {
 }
 
 const FbGateKeeper = ({ onLogin, onLogout, user }: Props) => (
-  <div className={s.FbGateKeeperContainer} >
-    <div className={s.FbGateKeeperButton} >
+  <div className={s.FbGateKeeperContainer}>
+    <div className={s.FbGateKeeperButton}>
       <FbLoginbutton onLogin={onLogin} onLogout={onLogout} user={user} text="Click to Get Started" />
     </div>
   </div>
