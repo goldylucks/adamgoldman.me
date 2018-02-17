@@ -7,6 +7,7 @@ import MessageMe from '../../components/MessageMe'
 import Testimonial from '../../components/Testimonials'
 import Share from '../../components/Share'
 import FAQ from '../../components/FAQ'
+import FbGateKeeper from '../../components/FbGateKeeper'
 
 type Props = {
   title: string,
@@ -16,10 +17,11 @@ type Props = {
   testimonials: [],
   user: Object,
   typeformUserId: '',
+  onLogin: Function
 };
 
 const savoringYourChildSectionForm = ({
-  title, path, typeform, faq, testimonials, user, typeformUserId,
+  title, path, typeform, faq, testimonials, user, typeformUserId, onLogin,
 }:
 Props) => (
   <div>
@@ -36,16 +38,17 @@ Props) => (
             <div>User typeform ID: {typeformUserId},</div>
             <div>User ID {user._id},</div>
           </div>
-          {user._id
-            ? (
-              <Typeform
-                data-url={typeform}
-                style={{ width: '100%', height: 800 }}
-                onSubmit={() => console.log('submit!')}
-              />
-          ) :
-              <div>Please login</div>
-        }
+          <div style={{ position: 'relative' }}>
+            <Typeform
+              data-url={typeform}
+              style={{ width: '100%', height: 800 }}
+              onSubmit={() => console.log('submit!')}
+              user={user._id}
+            />
+            {!user._id &&
+              <FbGateKeeper onLogin={onLogin} user={user} />
+            }
+          </div>
           <hr />
           { !testimonials.length
         ? null

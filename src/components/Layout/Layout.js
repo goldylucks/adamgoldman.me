@@ -35,7 +35,7 @@ class Layout extends React.Component {
       <div>
         <MainNav path={path} user={user} onLogin={this.login} onLogout={this.logout} />
         <div>
-          {React.cloneElement(children, { user, typeformUserId })}
+          {React.cloneElement(children, { user, typeformUserId, onLogin: this.login })}
         </div>
         <div className="container">
           <Footer />
