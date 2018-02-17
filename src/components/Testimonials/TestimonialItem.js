@@ -20,7 +20,7 @@ const TestimonialItems = ({ item }: Props) => (
         <img src={item.imgSrc} alt={item.name} className={s.avatar} />
       </div>
       <div className={s.userTitle}>
-        <div>{item.name}</div>
+        <div><strong>{item.name}</strong></div>
         <div style={{ height: 40 }}><small>{item.nameMeta}</small></div>
       </div>
     </div>

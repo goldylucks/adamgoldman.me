@@ -10,7 +10,7 @@ const modules = [
   { title: 'Reunion', description: 'Reunite with your child\'s presence and valued relationship', url: 'reunion' },
   { title: 'Reengaging The Future', description: 'Let the qualities of your child propel you towards a brightening future', url: 'reengaging-the-future' },
   { title: 'Special Days', description: 'Birthdays, holidays, and transition days as an opportunity', url: 'special-days' },
-  { title: 'Relationship Consolidation', description: 'Soften bad experiences & intensify positive onces', url: 'relationship-consolidation' },
+  { title: 'Relationship Consolidation', description: 'Soften bad experiences & intensify positive ones', url: 'relationship-consolidation' },
 ]
 
 type Props = {
