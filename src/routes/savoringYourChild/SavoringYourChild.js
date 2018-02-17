@@ -30,7 +30,7 @@ const SavoringYourChild = ({ user, typeformUserId }: Props) => (
         <div>User ID {user._id},</div>
       </div>
       <Typeform
-        data-url={`https://adamgoldman.typeform.com/to/VHYYNS?typeformUserId=${typeformUserId}`}
+        data-url={`https://adamgoldman.typeform.com/to/VHYYNS?typeformuserid=${typeformUserId}`}
         style={{ width: '100%', height: 500 }}
         onSubmit={() => global.console.log('submit!')}
       />
