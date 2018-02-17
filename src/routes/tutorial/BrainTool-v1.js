@@ -35,35 +35,6 @@ class BrainToolV1 extends React.Component {
 
   props: Props;
 
-  restart = () => {
-    this.goToStep(0)
-  };
-
-  back = n =>
-    this.goToStep(this.state.currentStep - (typeof n === 'number' ? n : 1));
-  next = n =>
-    this.goToStep(this.state.currentStep + (typeof n === 'number' ? n : 1));
-
-  goToStep = (step) => {
-    scrollTop()
-    this.setState({ currentStep: step })
-  };
-
-  ageChange = evt => this.setState({ age: evt.target.value });
-  nameChange = evt => this.setState({ name: evt.target.value });
-  genderChange = evt => this.setState({ gender: evt.target.value });
-
-  userInputSubmit = (evt) => {
-    evt.preventDefault()
-    this.goToStep(this.state.currentStep + 1)
-  };
-
-  renderStep = (stepHtml, idx) => (
-    <Step step={idx} key={idx} currentStep={this.state.currentStep}>
-      {stepHtml}
-    </Step>
-  );
-
   render() {
     const {
       gender, name, age, currentStep,
@@ -126,6 +97,36 @@ class BrainToolV1 extends React.Component {
       </div>
     )
   }
+
+
+    restart = () => {
+      this.goToStep(0)
+    };
+
+    back = n =>
+      this.goToStep(this.state.currentStep - (typeof n === 'number' ? n : 1));
+    next = n =>
+      this.goToStep(this.state.currentStep + (typeof n === 'number' ? n : 1));
+
+    goToStep = (step) => {
+      scrollTop()
+      this.setState({ currentStep: step })
+    };
+
+    ageChange = evt => this.setState({ age: evt.target.value });
+    nameChange = evt => this.setState({ name: evt.target.value });
+    genderChange = evt => this.setState({ gender: evt.target.value });
+
+    userInputSubmit = (evt) => {
+      evt.preventDefault()
+      this.goToStep(this.state.currentStep + 1)
+    };
+
+    renderStep = (stepHtml, idx) => (
+      <Step step={idx} key={idx} currentStep={this.state.currentStep}>
+        {stepHtml}
+      </Step>
+    );
 }
 
 export default BrainToolV1

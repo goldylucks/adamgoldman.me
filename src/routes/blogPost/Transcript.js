@@ -224,6 +224,7 @@ Pretty please?`}
     if (idx === this.state.messageEditableIdx) {
       return null
     }
+    /* eslint-disable react/no-danger */
     return (
       <div className="chat-message">
         { type === 'voiceMsg' && `Voice msg - Duration: ${duration}` }
@@ -234,6 +235,7 @@ Pretty please?`}
         { type === 'text' && <div dangerouslySetInnerHTML={{ __html: source.replace('\n', '<br />') }} /> }
       </div>
     )
+    /* eslint-enable react/no-danger */
   }
 
   renderMessageEditable(idx) {
