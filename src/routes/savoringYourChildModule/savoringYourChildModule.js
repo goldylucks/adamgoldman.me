@@ -2,6 +2,7 @@
 
 import React from 'react'
 
+import history from '../../history'
 import Benefits from '../../components/Benefits'
 import Typeform from '../../components/Typeform'
 import MessageMe from '../../components/MessageMe'
@@ -37,12 +38,12 @@ Props) => (
         <Typeform
           data-url={typeform}
           style={{ width: '100%', height: 800 }}
-          onSubmit={() => console.log('submit!')}
+          onSubmit={() => { history.push('/savoring-your-child/modules') }}
           user={user._id}
         />
         {!user._id &&
-        <FbGateKeeper onLogin={onLogin} user={user} />
-            }
+          <FbGateKeeper onLogin={onLogin} user={user} />
+        }
       </div>
       <hr />
       { !testimonials.length

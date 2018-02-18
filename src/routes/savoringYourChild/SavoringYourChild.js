@@ -3,6 +3,7 @@
 import React from 'react'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
 
+import history from '../../history'
 import Benefits from '../../components/Benefits'
 import Typeform from '../../components/Typeform'
 import Testimonials from '../../components/Testimonials'
@@ -32,7 +33,7 @@ const SavoringYourChild = ({ user, typeformUserId }: Props) => (
       <Typeform
         data-url={`https://adamgoldman.typeform.com/to/VHYYNS?typeformuserid=${typeformUserId}`}
         style={{ width: '100%', height: 500 }}
-        onSubmit={() => global.console.log('submit!')}
+        onSubmit={() => { history.push('/savoring-your-child/peaceful-ending') }}
       />
       <hr className={s.hr} />
       <section>
