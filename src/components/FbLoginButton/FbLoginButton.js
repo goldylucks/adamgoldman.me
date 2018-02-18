@@ -8,19 +8,24 @@ type Props = {
   onLogin: Function,
   onLogout: Function,
   user: Object,
+  text?: string,
 }
 
 class FbLoginButton extends React.Component {
+  static defaultProps = {
+    text: 'Login',
+  }
+
   props: Props
 
   render() {
-    const { user, onLogout } = this.props
+    const { user, onLogout, text } = this.props
     if (user._id) {
       return <a onClick={onLogout}>Logout</a>
     }
     return (
       <div onClick={this.login} style={{ cursor: 'pointer' }}>
-        <FA name="facebook" /> Login
+        <FA name="facebook" /> {text}
       </div>
     )
   }

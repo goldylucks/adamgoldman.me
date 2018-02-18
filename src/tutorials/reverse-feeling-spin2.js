@@ -29,15 +29,6 @@ class SomeTool extends React.Component {
 
   props: Props;
 
-  badFeelingChange = (evt: Object) =>
-    this.setState({ badFeeling: evt.target.value });
-  badFeelingLocationChange = (evt: Object) =>
-    this.setState({ badFeelingLocation: evt.target.value });
-  badFeelingDescriptionChange = (evt: Object) =>
-    this.setState({ badFeelingDescription: evt.target.value });
-  badFeelingColorChange = (evt: Object) =>
-    this.setState({ badFeelingColor: evt.target.value });
-
   render() {
     const {
       renderStep,
@@ -308,6 +299,14 @@ Source: I've adapted this [tool](/tools/) from Bandler's reverse feeling spin pr
       </div>
     )
   }
+  badFeelingChange = (evt: Object) =>
+    this.setState({ badFeeling: evt.target.value });
+  badFeelingLocationChange = (evt: Object) =>
+    this.setState({ badFeelingLocation: evt.target.value });
+  badFeelingDescriptionChange = (evt: Object) =>
+    this.setState({ badFeelingDescription: evt.target.value });
+  badFeelingColorChange = (evt: Object) =>
+    this.setState({ badFeelingColor: evt.target.value });
 }
 
 export default SomeTool

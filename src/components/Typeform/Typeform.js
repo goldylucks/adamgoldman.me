@@ -24,22 +24,14 @@ class Typeform extends React.Component {
     window.addEventListener('message', this.onWindowMessage)
   }
 
-  componentWillUnmount() {
-    window.removeEventListener('message', this.onWindowMessage)
-  }
-
   componentWillReceiveProps(nextProps) {
     if (nextProps['data-url'] !== this.props['data-url'] && this.state.isMounted) {
       this.typeFormEbedd(nextProps['data-url'])
     }
   }
 
-  typeFormEbedd = (dataUrl) => {
-    /* eslint-disable */
-    typeformEmbed.makeWidget(this.el, dataUrl, {
-      hideHeaders: true,
-      hideFooter: true,
-    })
+  componentWillUnmount() {
+    window.removeEventListener('message', this.onWindowMessage)
   }
 
   props: Props
@@ -63,6 +55,15 @@ class Typeform extends React.Component {
     }
     this.props.onSubmit()
   }
+
+  typeFormEbedd = (dataUrl) => {
+    /* eslint-disable */
+    typeformEmbed.makeWidget(this.el, dataUrl, {
+      hideHeaders: true,
+      hideFooter: true,
+    })
+  }
+
 }
 
 export default Typeform

@@ -25,39 +25,7 @@ class InternalDialogScrambler extends React.Component {
     doneFlashingSlower: false,
   };
 
-  onPhraseChange = (evt: Object) => this.setState({ phrase: evt.target.value });
-
   props: Props;
-
-  flash = () => {
-    this.setState({ doneFlashing: false })
-    this.state.phrase.split(' ').forEach((w, idx, array) => {
-      setTimeout(() => {
-        this.setState({ flashingWord: w })
-        if (idx !== array.length - 1) {
-          return
-        }
-        setTimeout(() => {
-          this.setState({ doneFlashing: true, flashingWord: '' })
-        }, 3500)
-      }, idx * 3500)
-    })
-  };
-
-  flashSlower = () => {
-    this.setState({ doneFlashingSlower: false })
-    this.state.phrase.split(' ').forEach((w, idx, array) => {
-      setTimeout(() => {
-        this.setState({ flashingWord: w })
-        if (idx !== array.length - 1) {
-          return
-        }
-        setTimeout(() => {
-          this.setState({ doneFlashingSlower: true, flashingWord: '' })
-        }, 5500)
-      }, idx * 5500)
-    })
-  };
 
   render() {
     const {
@@ -352,6 +320,37 @@ Source: I've adapted this [tool](/tools/) from Nick Kemp's Internal Tempo Shift 
       </div>
     )
   }
+  onPhraseChange = (evt: Object) => this.setState({ phrase: evt.target.value });
+
+  flash = () => {
+    this.setState({ doneFlashing: false })
+    this.state.phrase.split(' ').forEach((w, idx, array) => {
+      setTimeout(() => {
+        this.setState({ flashingWord: w })
+        if (idx !== array.length - 1) {
+          return
+        }
+        setTimeout(() => {
+          this.setState({ doneFlashing: true, flashingWord: '' })
+        }, 3500)
+      }, idx * 3500)
+    })
+  };
+
+  flashSlower = () => {
+    this.setState({ doneFlashingSlower: false })
+    this.state.phrase.split(' ').forEach((w, idx, array) => {
+      setTimeout(() => {
+        this.setState({ flashingWord: w })
+        if (idx !== array.length - 1) {
+          return
+        }
+        setTimeout(() => {
+          this.setState({ doneFlashingSlower: true, flashingWord: '' })
+        }, 5500)
+      }, idx * 5500)
+    })
+  };
 }
 
 export default InternalDialogScrambler

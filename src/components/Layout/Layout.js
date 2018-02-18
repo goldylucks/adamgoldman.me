@@ -35,7 +35,7 @@ class Layout extends React.Component {
       <div>
         <MainNav path={path} user={user} onLogin={this.login} onLogout={this.logout} />
         <div>
-          {React.cloneElement(children, { user, typeformUserId })}
+          {React.cloneElement(children, { user, typeformUserId, onLogin: this.login })}
         </div>
         <div className="container">
           <Footer />
@@ -48,7 +48,7 @@ class Layout extends React.Component {
   syncUserFromLS() {
     const user = localStorage.getItem('user')
     if (user) {
-      console.log('user', user)
+      global.console.log('user', user)
       this.setState({ user: JSON.parse(user) })
     }
   }
@@ -65,7 +65,7 @@ class Layout extends React.Component {
   }
 
   login = (user) => {
-    console.log('user', user)
+    global.console.log('user', user)
     this.setState({ user })
     localStorage.setItem('user', JSON.stringify(user))
   }

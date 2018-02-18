@@ -27,23 +27,6 @@ class LovedOnesAmplifier extends React.Component {
 
   props: Props;
 
-  lovedOneNameChange = (evt: Object) =>
-    this.setState({ lovedOneName: evt.target.value });
-  lovedOneGenderChange = (evt: Object) =>
-    this.setState({
-      lovedOneGender: evt.target.value,
-      lovedOneHeShe: evt.target.value === 'male' ? 'he' : 'she',
-      lovedOneHimHer: evt.target.value === 'male' ? 'him' : 'her',
-      lovedOneHisHer: evt.target.value === 'male' ? 'his' : 'her',
-    });
-
-  anotherPerson = () => {
-    this.setState({
-      lovedOneName: '',
-      lovedOneGender: '',
-    })
-    this.props.onGoToStep(4)
-  };
   render() {
     const {
       renderStep,
@@ -702,6 +685,24 @@ Source: I've adapted this [tool](/tools/) from Bandler's processes, see [Using Y
       </div>
     )
   }
+
+    lovedOneNameChange = (evt: Object) =>
+      this.setState({ lovedOneName: evt.target.value });
+    lovedOneGenderChange = (evt: Object) =>
+      this.setState({
+        lovedOneGender: evt.target.value,
+        lovedOneHeShe: evt.target.value === 'male' ? 'he' : 'she',
+        lovedOneHimHer: evt.target.value === 'male' ? 'him' : 'her',
+        lovedOneHisHer: evt.target.value === 'male' ? 'his' : 'her',
+      });
+
+    anotherPerson = () => {
+      this.setState({
+        lovedOneName: '',
+        lovedOneGender: '',
+      })
+      this.props.onGoToStep(4)
+    };
 }
 
 export default LovedOnesAmplifier
