@@ -19,21 +19,6 @@ type Props = {
   typeformUserId: '',
 };
 
-const urlPaths = [
-  '/savoring-your-child/peaceful-ending',
-  '/savoring-your-child/savoring-the-future',
-  '/savoring-your-child/reunion',
-  '/savoring-your-child/reengaging-the-future',
-  '/savoring-your-child/special-days',
-  '/savoring-your-child/relationship-consolidation',
-]
-
-const moduleRedirect = (currPath) => {
-  const filteredUrl = urlPaths.filter(url => url !== currPath)
-  const getUrl = filteredUrl[Math.floor(Math.random() * 4)]
-  history.push(getUrl)
-}
-
 const savoringYourChildSectionForm = ({
   title, path, typeform, faq, testimonials, user, typeformUserId,
 }:
@@ -57,7 +42,7 @@ Props) => (
               <Typeform
                 data-url={typeform}
                 style={{ width: '100%', height: 800 }}
-                onSubmit={() => moduleRedirect(path)}
+                onSubmit={() => { history.push('/savoring-your-child/modules') }}
               />
             ) :
               <div>Please login</div>
