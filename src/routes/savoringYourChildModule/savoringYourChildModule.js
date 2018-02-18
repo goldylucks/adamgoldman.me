@@ -2,6 +2,7 @@
 
 import React from 'react'
 
+import Benefits from '../../components/Benefits'
 import Typeform from '../../components/Typeform'
 import MessageMe from '../../components/MessageMe'
 import Testimonial from '../../components/Testimonials'
@@ -13,13 +14,14 @@ type Props = {
   typeform: string,
   faq: [],
   testimonials: [],
+  benefits: Array<String>,
   user: Object,
   typeformUserId: '',
   onLogin: Function
 };
 
 const savoringYourChildSectionForm = ({
-  title, typeform, faq, testimonials, user, typeformUserId, onLogin,
+  title, typeform, faq, benefits, testimonials, user, typeformUserId, onLogin,
 }:
 Props) => (
   <div>
@@ -49,6 +51,19 @@ Props) => (
         <section>
           <h1 className="text-center">Parents Share</h1>
           <Testimonial testimonials={testimonials} />
+          <hr />
+        </section>
+      )}
+      { !benefits.length
+        ? null
+      : (
+        <section>
+          <h1 className="text-center">What will I learn?</h1>
+          <div className="row justify-content-md-center">
+            <div className="col col-lg-10">
+              <Benefits benefits={benefits} />
+            </div>
+          </div>
           <hr />
         </section>
       )}
