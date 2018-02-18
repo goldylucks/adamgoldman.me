@@ -33,6 +33,7 @@
 .item h3 {
   padding-top:10px;
   text-align: center;
+  height: 76px;
 }
 .itemText:before{
   content: "\201C";
