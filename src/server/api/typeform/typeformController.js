@@ -10,14 +10,10 @@ function userForm(req, res) {
   res.send(`test ${req.params.name}`)
 }
 
-async function get(req, res, next) {
+function get(req, res, next) {
   // variable typeFormId is not working ${typeFormId} :/
-  // please supply the type form api key below
-  try {
-    axios.get(`https://api.typeform.com/v1/form/${req.params.formId}?key=&completed=true`)
-      .then(response => res.json(response.data))
-      .catch(next)
-  } catch (error) {
-    global.console.log('Something went wrong...', error)
-  }
+  // please supply the type form api key below, i removed it
+  axios.get(`https://api.typeform.com/v1/form/${req.params.formId}?key=&completed=true`)
+    .then(response => res.json(response.data))
+    .catch(next)
 }
