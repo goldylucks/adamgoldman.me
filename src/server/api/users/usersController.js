@@ -37,12 +37,15 @@ function put(req, res, next) {
 
 function fbAuth(req, res, next) {
   const {
-    name, userID, fbPictureUrl, accessToken: fbClientAccessToken,
+    name, userID, fbPictureUrl, gender, childName, genderParent, accessToken: fbClientAccessToken,
   } = req.body
   const update = {
     name,
     fbUserId: userID,
     fbPictureUrl,
+    gender,
+    childName,
+    genderParent,
   }
   // Find or create user
   const options = { upsert: true, new: true, setDefaultsOnInsert: true }
