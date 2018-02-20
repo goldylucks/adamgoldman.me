@@ -77,8 +77,27 @@ class SavoringYourChild extends React.Component {
   }
 
   getTypeformData = () => {
-    const formData = axios.get('api/typeform/AV33h6')
-    global.console.log(formData, 'data')
+    axios.get('api/typeform/AV33h6').then(result => this.typeformResponse(result))
+  }
+
+  typeformResponse = (response) => {
+    /* eslint-disable max-len */
+    /* eslint object-curly-newline: */
+    const data = response.data.responses.filter((res, i) => res.hidden.typeformuserid === this.props.typeformUserId && i === 0)
+    const genderChoices = [
+      { choice: 'I’m a Mother grieving my son', gender: 'male', genderParent: 'female', param: 'his' },
+      { choise: 'I’m a Mother grieving my daughter', gender: 'female', genderParent: 'female', param: 'her' },
+      { choice: 'I’m a Father grieving my son', gender: 'male', genderParent: 'male', param: 'his' },
+      { choice: 'I’m a Father grieving my daughter', gender: 'female', genderParent: 'male', param: 'her' },
+    ]
+    const getGender = genderChoices.filter(i => i.choice === data[0].answers.list_oRQpeZftOGOJ_choice)
+    const typeformUserData = {
+      gender: getGender[0].gender,
+      childName: data[0].answers.textfield_gBIg1icFEszE,
+      genderParent: getGender[0].genderParent,
+      param: getGender[0].param,
+    }
+    localStorage.setItem('typeFormUserData', JSON.stringify(typeformUserData))
     history.push('/savoring-your-child/test1')
   }
 }
