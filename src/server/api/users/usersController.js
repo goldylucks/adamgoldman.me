@@ -6,7 +6,7 @@ import { signToken } from '../../auth'
 import Users from './usersModel'
 
 export default {
-  get, getOne, fbAuth, put,
+  get, getOne, fbAuth, updateUser,
 }
 
 function get(req, res, next) {
@@ -29,7 +29,7 @@ function getOne(req, res, next) {
     .catch(next)
 }
 
-function put(req, res, next) {
+function updateUser(req, res, next) {
   Users.update({ _id: req.params.id }, { $set: req.body })
     .then(DBres => res.json(DBres))
     .catch(next)

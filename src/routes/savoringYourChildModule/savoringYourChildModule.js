@@ -21,8 +21,7 @@ type Props = {
   onLogin: Function
 };
 
-const formData = JSON.parse(localStorage.getItem('typeFormUserData'))
-global.console.log(formData, 'typeform data')
+const formData = JSON.parse(localStorage.getItem('user'))
 
 const savoringYourChildSectionForm = ({
   title, typeform, faq, benefits, testimonials, user, typeformUserId, onLogin,

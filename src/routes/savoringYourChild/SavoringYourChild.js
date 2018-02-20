@@ -83,7 +83,8 @@ class SavoringYourChild extends React.Component {
   typeformResponse = (response) => {
     /* eslint-disable max-len */
     /* eslint object-curly-newline: */
-    const data = response.data.responses.filter((res, i) => res.hidden.typeformuserid === this.props.typeformUserId && i === 0)
+    const data = response.data.responses.filter(res => res.hidden.typeformuserid === this.props.typeformUserId)
+    global.console.log(data, 'data')
     const genderChoices = [
       { choice: 'I’m a Mother grieving my son', gender: 'male', genderParent: 'female', param: 'his' },
       { choise: 'I’m a Mother grieving my daughter', gender: 'female', genderParent: 'female', param: 'her' },
@@ -97,8 +98,19 @@ class SavoringYourChild extends React.Component {
       genderParent: getGender[0].genderParent,
       param: getGender[0].param,
     }
-    localStorage.setItem('typeFormUserData', JSON.stringify(typeformUserData))
-    history.push('/savoring-your-child/test1')
+    localStorage.setItem('typeForm', JSON.stringify(typeformUserData))
+    this.storeNewUserData(this.props.user._id, JSON.parse(localStorage.getItem('typeForm')))
+  }
+
+  storeNewUserData = (id, typeForm) => {
+    axios.put(`/api/users/${id}`, typeForm)
+      .then((res) => {
+        global.console.log('type form update', res)
+        history.push('/savoring-your-child/test1')
+      })
+      .catch((err) => {
+        global.console.error(err)
+      })
   }
 }
 
