@@ -12,13 +12,14 @@ type Props = {
 }
 
 const Testimonials = ({ testimonials }: Props) => {
+  const slides = (testimonials.length < 3) ? 2 : 3
   const settings = {
     dots: false,
     infinite: false,
     speed: 500,
     arrows: testimonials.length > 3,
     slidesToScroll: 1,
-    slidesToShow: 3,
+    slidesToShow: slides,
     responsive: [
       {
         breakpoint: 1024,
