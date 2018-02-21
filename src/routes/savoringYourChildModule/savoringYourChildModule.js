@@ -21,8 +21,6 @@ type Props = {
   onLogin: Function
 };
 
-const formData = JSON.parse(localStorage.getItem('user'))
-
 const savoringYourChildSectionForm = ({
   title, typeform, faq, benefits, testimonials, user, typeformUserId, onLogin,
 }:
@@ -38,7 +36,7 @@ const savoringYourChildSectionForm = ({
         </div>
         <div style={{ position: 'relative' }}>
           <Typeform
-            data-url={`${typeform}?typeformuserid=${typeformUserId}&name=${formData.childName}&his_her=${formData.param}`}
+            data-url={typeformUrl(typeform, typeformUserId)}
             style={{ width: '100%', height: 800 }}
             onSubmit={() => {
               history.push('/savoring-your-child/modules')
@@ -87,3 +85,18 @@ const savoringYourChildSectionForm = ({
 )
 
 export default savoringYourChildSectionForm
+
+function typeformUrl(typeform, typeformUserId) {
+  try {
+    const { gender, name } = JSON.parse(localStorage.getItem('savoringIntroForm'))
+    return `${typeform}?typeformuserid=${typeformUserId}
+    &name=${name}
+    &his_her=${gender === 'male' ? 'his' : 'her'}
+    &him_her=${gender === 'male' ? 'him' : 'her'}
+    &he_she=${gender === 'male' ? 'he' : 'she'}
+    `
+  } catch (err) {
+    global.console.error('err', err)
+    return ''
+  }
+}

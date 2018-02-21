@@ -39,7 +39,7 @@ class SavoringYourChild extends React.Component {
           <Typeform
             data-url={`https://adamgoldman.typeform.com/to/AV33h6?typeformuserid=${typeformUserId}`}
             style={{ width: '100%', height: 500 }}
-            onSubmit={() => this.getTypeformData()}
+            onSubmit={this.getTypeformData}
           />
           <hr className={s.hr} />
           <section>
@@ -77,40 +77,21 @@ class SavoringYourChild extends React.Component {
   }
 
   getTypeformData = () => {
-    axios.get('api/typeform/AV33h6').then(result => this.typeformResponse(result))
+    // TODO :: pass typeformUserId to typeorm's API here and get only the answers
+    // of this specific user for this specific form
+    axios.get('api/typeform/AV33h6').then(this.typeformResponse)
   }
 
-  typeformResponse = (response) => {
-    /* eslint-disable max-len */
-    /* eslint object-curly-newline: */
-    const data = response.data.responses.filter(res => res.hidden.typeformuserid === this.props.typeformUserId)
-    global.console.log(data, 'data')
-    const genderChoices = [
-      { choice: 'I’m a Mother grieving my son', gender: 'male', genderParent: 'female', param: 'his' },
-      { choise: 'I’m a Mother grieving my daughter', gender: 'female', genderParent: 'female', param: 'her' },
-      { choice: 'I’m a Father grieving my son', gender: 'male', genderParent: 'male', param: 'his' },
-      { choice: 'I’m a Father grieving my daughter', gender: 'female', genderParent: 'male', param: 'her' },
-    ]
-    const getGender = genderChoices.filter(i => i.choice === data[0].answers.list_oRQpeZftOGOJ_choice)
-    const typeformUserData = {
-      gender: getGender[0].gender,
-      childName: data[0].answers.textfield_gBIg1icFEszE,
-      genderParent: getGender[0].genderParent,
-      param: getGender[0].param,
-    }
-    localStorage.setItem('typeForm', JSON.stringify(typeformUserData))
-    this.storeNewUserData(this.props.user._id, JSON.parse(localStorage.getItem('typeForm')))
-  }
-
-  storeNewUserData = (id, typeForm) => {
-    axios.put(`/api/users/${id}`, typeForm)
-      .then((res) => {
-        global.console.log('type form update', res)
-        history.push('/savoring-your-child/test1')
-      })
-      .catch((err) => {
-        global.console.error(err)
-      })
+  typeformResponse = ({ data }) => {
+    const formData = data.responses.filter(res => res.hidden.typeformuserid === this.props.typeformUserId)[0].answers // eslint-disable-line max-len
+    global.console.log(formData, 'formData')
+    const gendersAnswer = formData.list_oRQpeZftOGOJ_choice
+    localStorage.setItem('savoringIntroForm', JSON.stringify({
+      gender: gendersAnswer.match(/daughter/i) ? 'female' : 'male', // child's gender
+      name: formData.textfield_gBIg1icFEszE, // child's name
+      genderParent: gendersAnswer.match(/mother/i) ? 'female' : 'male',
+    }))
+    history.push('/savoring-your-child/test1')
   }
 }
 
