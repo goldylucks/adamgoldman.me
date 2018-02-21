@@ -6,7 +6,7 @@ import { signToken } from '../../auth'
 import Users from './usersModel'
 
 export default {
-  get, getOne, fbAuth, updateUser,
+  get, getOne, fbAuth, updateUser, updateUserForm,
 }
 
 function get(req, res, next) {
@@ -26,6 +26,13 @@ function getOne(req, res, next) {
     })
     .then(prepareUser)
     .then(user => res.json(user))
+    .catch(next)
+}
+
+function updateUserForm(req, res, next) {
+  Users.update({ _id: req.params.id },
+    { $push: { form: req.body } })
+    .then(DBres => res.json(DBres))
     .catch(next)
 }
 

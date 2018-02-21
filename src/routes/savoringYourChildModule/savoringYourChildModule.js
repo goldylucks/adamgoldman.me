@@ -1,6 +1,7 @@
 // @flow
 
 import React from 'react'
+import axios from 'axios'
 
 import history from '../../history'
 import Benefits from '../../components/Benefits'
@@ -36,12 +37,9 @@ const savoringYourChildSectionForm = ({
         </div>
         <div style={{ position: 'relative' }}>
           <Typeform
-            data-url={typeformUrl(typeform, typeformUserId)}
+            data-url={typeformUrl(typeform, user._id)}
             style={{ width: '100%', height: 800 }}
-            onSubmit={() => {
-              history.push('/savoring-your-child/modules')
-            }}
-            user={user._id}
+            onSubmit={() => submitModule(typeform, user._id)}
           />
           {!user._id &&
           <FbGateKeeper onLogin={onLogin} user={user} />
@@ -86,11 +84,11 @@ const savoringYourChildSectionForm = ({
 
 export default savoringYourChildSectionForm
 
-function typeformUrl(typeform, typeformUserId) {
+function typeformUrl(typeform, userId) {
   try {
-    const { gender, name } = JSON.parse(localStorage.getItem('savoringIntroForm'))
-    return `${typeform}?typeformuserid=${typeformUserId}
-    &name=${name}
+    const { gender, childName } = JSON.parse(localStorage.getItem('savoringIntroForm'))
+    return `${typeform}?userid=${userId}
+    &name=${childName}
     &his_her=${gender === 'male' ? 'his' : 'her'}
     &him_her=${gender === 'male' ? 'him' : 'her'}
     &he_she=${gender === 'male' ? 'he' : 'she'}
@@ -99,4 +97,14 @@ function typeformUrl(typeform, typeformUserId) {
     global.console.error('err', err)
     return ''
   }
+}
+
+function submitModule(typeform, userId) {
+  const formId = typeform.split('/')[4]
+  axios.put(`/api/users/form/${userId}`, formId)
+    .then((res) => {
+      global.console.log('type form update', res)
+      history.push('/savoring-your-child/modules')
+    })
+    .catch(err => global.console.error(err))
 }

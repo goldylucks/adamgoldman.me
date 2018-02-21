@@ -1,6 +1,5 @@
 require('dotenv').config()
 
-console.log('config.js process.env.TYPEFORM_API_KEY', process.env.TYPEFORM_API_KEY)
 /**
  * React Starter Kit (https://www.reactstarterkit.com/)
  *

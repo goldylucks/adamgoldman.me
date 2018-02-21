@@ -10,6 +10,7 @@ import Typeform from '../../components/Typeform'
 import Testimonials from '../../components/Testimonials'
 import GetStarted from '../../components/GetStartedButton'
 import MessageMe from '../../components/MessageMe'
+import FbGateKeeper from '../../components/FbGateKeeper'
 
 import FAQContainer from './FAQContainer'
 import s from './SavoringYourChild.css'
@@ -18,13 +19,14 @@ import { testimonials } from './data'
 type Props = {
   user: Object,
   typeformUserId: Object,
+  onLogin: Function,
 }
 
 class SavoringYourChild extends React.Component {
   props: Props
 
   render() {
-    const { user, typeformUserId } = this.props
+    const { user, typeformUserId, onLogin } = this.props
     return (
       <div>
         <div className="container">
@@ -36,11 +38,16 @@ class SavoringYourChild extends React.Component {
             <div>typeformUserId: {typeformUserId},</div>
             <div>User ID {user._id},</div>
           </div>
-          <Typeform
-            data-url={`https://adamgoldman.typeform.com/to/AV33h6?typeformuserid=${typeformUserId}`}
-            style={{ width: '100%', height: 500 }}
-            onSubmit={this.getTypeformData}
-          />
+          <div style={{ position: 'relative' }}>
+            <Typeform
+              data-url={`https://adamgoldman.typeform.com/to/AV33h6?userid=${user._id}`}
+              style={{ width: '100%', height: 500 }}
+              onSubmit={this.getTypeformData}
+            />
+            {!user._id &&
+            <FbGateKeeper onLogin={onLogin} user={user} />
+            }
+          </div>
           <hr className={s.hr} />
           <section>
             <h1 className="text-center">Parents share ...</h1>
@@ -83,15 +90,24 @@ class SavoringYourChild extends React.Component {
   }
 
   typeformResponse = ({ data }) => {
-    const formData = data.responses.filter(res => res.hidden.typeformuserid === this.props.typeformUserId)[0].answers // eslint-disable-line max-len
+    const formData = data.responses.filter(res => res.hidden.userid === this.props.user._id)[0].answers // eslint-disable-line max-len
     global.console.log(formData, 'formData')
     const gendersAnswer = formData.list_oRQpeZftOGOJ_choice
     localStorage.setItem('savoringIntroForm', JSON.stringify({
       gender: gendersAnswer.match(/daughter/i) ? 'female' : 'male', // child's gender
-      name: formData.textfield_gBIg1icFEszE, // child's name
+      childName: formData.textfield_gBIg1icFEszE, // child's name
       genderParent: gendersAnswer.match(/mother/i) ? 'female' : 'male',
     }))
-    history.push('/savoring-your-child/test1')
+    this.updateUserDb()
+  }
+
+  updateUserDb = () => {
+    axios.put(`/api/users/${this.props.user._id}`, JSON.parse(localStorage.getItem('savoringIntroForm')))
+      .then((res) => {
+        global.console.log('type form update', res)
+        history.push('/savoring-your-child/test1')
+      })
+      .catch(err => global.console.error(err))
   }
 }
 

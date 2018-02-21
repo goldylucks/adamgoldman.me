@@ -12,4 +12,7 @@ router.route('/:id')
   .put(controller.updateUser)
 //   .get(auth.decodeToken, auth.isOwner, controller.getOne)
 
+router.route('/form/:id')
+  .put(controller.updateUserForm)
+
 export default router
