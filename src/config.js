@@ -38,7 +38,7 @@ module.exports = {
 
   dbUrl: process.env.MONGODB_URI || 'mongodb://localhost/adamgoldman',
 
-  typeFormId: process.env.TYPEFORM_API_KEY,
+  typeFormApiKey: process.env.TYPEFORM_API_KEY,
 
   // Web analytics
   analytics: {
