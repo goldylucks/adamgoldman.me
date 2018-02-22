@@ -44,7 +44,7 @@ export default {
       text: 'I guess I never realized I did not vision Aymen when I think about him. Just the epiphany that I wasn’t visualizing Aymen is amazing.',
       name: 'Tracy Soussi',
       nameMeta: 'Mother of Aymen, admin & facilitator for bereaved parents',
-      imgSrc: '',
+      imgSrc: 'https://scontent.fbkk5-6.fna.fbcdn.net/v/t1.0-9/26733326_10210388881990002_952210852032135504_n.jpg?oh=e5fbfeb7ff36b598ef156c4101ed26d6&oe=5B1DD6DF',
     },
   ],
   faq: [],

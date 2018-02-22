@@ -2,14 +2,6 @@
   export default [
   {
     "tags": [
-      "Smoking"
-    ],
-    "title": "Smoking Destroyer",
-    "description": "Convert your old smoking habit into a powerful image of yourself",
-    "url": "smoking-destroyer"
-  },
-  {
-    "tags": [
       "טראומה"
     ],
     "title": "שחרור מטראומה",
@@ -179,14 +171,6 @@
       }
     ],
     "url": "trauma-relief-he"
-  },
-  {
-    "tags": [
-      "Nail Biting"
-    ],
-    "title": "Nail Biting Destroyer",
-    "description": "Convert your old nail biting habit into a powerful image of yourself",
-    "url": "nail-biting-destroyer"
   },
   {
     "title": "Coming To Wholeness",

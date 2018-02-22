@@ -44,7 +44,7 @@ export default {
       text: 'This way is better than it was before. Better, much better. Thank you !!!',
       name: 'Tracy Soussi',
       nameMeta: 'Mother of Aymen, died from illness',
-      imgSrc: '',
+      imgSrc: 'https://scontent.fbkk5-6.fna.fbcdn.net/v/t1.0-9/26733326_10210388881990002_952210852032135504_n.jpg?oh=e5fbfeb7ff36b598ef156c4101ed26d6&oe=5B1DD6DF',
     },
     {
       title: 'Took me to a healthy Anthony',
