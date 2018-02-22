@@ -102,9 +102,6 @@ function typeformUrl(typeform, userId) {
 function submitModule(typeform, userId) {
   const formId = typeform.split('/')[4]
   axios.put(`/api/users/form/${userId}`, formId)
-    .then((res) => {
-      global.console.log('type form update', res)
-      history.push('/savoring-your-child/modules')
-    })
+    .then(history.push('/savoring-your-child/modules'))
     .catch(err => global.console.error(err))
 }

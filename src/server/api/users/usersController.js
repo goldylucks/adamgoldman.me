@@ -31,7 +31,7 @@ function getOne(req, res, next) {
 
 function updateUserForm(req, res, next) {
   Users.update({ _id: req.params.id },
-    { $push: { form: req.body } })
+    { $addToSet: { form: req.body } })
     .then(DBres => res.json(DBres))
     .catch(next)
 }
