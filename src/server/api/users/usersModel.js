@@ -25,6 +25,12 @@ function getSchema() {
     fbUserId: String,
     fbPictureUrl: String,
 
+    gender: String,
+    childName: String,
+    genderParent: String,
+
+    form: [],
+
     createdAt: {
       type: Date,
       default: Date.now,

@@ -2,7 +2,6 @@
 
 import React from 'react'
 
-import history from '../../history'
 import Benefits from '../../components/Benefits'
 import Typeform from '../../components/Typeform'
 import MessageMe from '../../components/MessageMe'
@@ -17,36 +16,31 @@ type Props = {
   testimonials: [],
   benefits: Array<String>,
   user: Object,
-  typeformUserId: '',
-  onLogin: Function
+  onLogin: Function,
+  onSubmitModule: Function,
 };
 
-const savoringYourChildSectionForm = ({
-  title, typeform, faq, benefits, testimonials, user, typeformUserId, onLogin,
+const savoringYourChildSectionModule = ({
+  title, typeform, faq, benefits, testimonials, user, onLogin, onSubmitModule,
 }:
-Props) => (
-  <div>
-    <div className="container">
-      <div className="mainheading">
-        <h1 className="posttitle">{title}</h1>
-      </div>
-      <div>
-        <div>User typeform ID: {typeformUserId},</div>
-        <div>User ID {user._id},</div>
-      </div>
-      <div style={{ position: 'relative' }}>
-        <Typeform
-          data-url={typeform}
-          style={{ width: '100%', height: 800 }}
-          onSubmit={() => { history.push('/savoring-your-child/modules') }}
-          user={user._id}
-        />
-        {!user._id &&
+  Props) => (
+    <div>
+      <div className="container">
+        <div className="mainheading">
+          <h1 className="posttitle">{title}</h1>
+        </div>
+        <div style={{ position: 'relative' }}>
+          <Typeform
+            data-url={typeformUrl(typeform, user)}
+            style={{ width: '100%', height: 800 }}
+            onSubmit={() => submitModule(typeform, onSubmitModule)}
+          />
+          {!user._id &&
           <FbGateKeeper onLogin={onLogin} user={user} />
         }
-      </div>
-      <hr />
-      { !testimonials.length
+        </div>
+        <hr />
+        { !testimonials.length
         ? null
       : (
         <section>
@@ -55,7 +49,7 @@ Props) => (
           <hr />
         </section>
       )}
-      { !benefits.length
+        { !benefits.length
         ? null
       : (
         <section>
@@ -68,7 +62,7 @@ Props) => (
           <hr />
         </section>
       )}
-      { !faq.length
+        { !faq.length
             ? null
             : (
               <section>
@@ -77,9 +71,37 @@ Props) => (
                 <hr />
               </section>
           )}
-      <MessageMe />
+        {!faq.length
+          ? null
+          : (
+            <section>
+              <h1 className="text-center">F.A.Q.</h1>
+              <FAQ faq={faq} />
+              <hr />
+            </section>
+          )}
+        <MessageMe />
+      </div>
     </div>
-  </div>
 )
 
-export default savoringYourChildSectionForm
+export default savoringYourChildSectionModule
+
+function typeformUrl(typeform, { _id, gender, childName }) {
+  try {
+    return `${typeform}?userid=${_id}
+    &name=${childName}
+    &his_her=${gender === 'male' ? 'his' : 'her'}
+    &him_her=${gender === 'male' ? 'him' : 'her'}
+    &he_she=${gender === 'male' ? 'he' : 'she'}
+    `
+  } catch (err) {
+    global.console.error('err', err)
+    return ''
+  }
+}
+
+function submitModule(typeform, onSubmitModule) {
+  const formId = typeform.split('/')[4]
+  onSubmitModule(formId)
+}

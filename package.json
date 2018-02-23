@@ -59,7 +59,6 @@
     "pretty-error": "^2.1.1",
     "prop-types": "^15.6.0",
     "query-string": "^5.0.0",
-    "randomstring": "^1.1.5",
     "react": "^16.0.0",
     "react-beautiful-dnd": "^4.0.1",
     "react-click-outside": "tj/react-click-outside",

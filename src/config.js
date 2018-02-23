@@ -38,6 +38,8 @@ module.exports = {
 
   dbUrl: process.env.MONGODB_URI || 'mongodb://localhost/adamgoldman',
 
+  typeFormApiKey: process.env.TYPEFORM_API_KEY,
+
   // Web analytics
   analytics: {
     // https://analytics.google.com/

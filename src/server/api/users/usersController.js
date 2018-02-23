@@ -6,7 +6,7 @@ import { signToken } from '../../auth'
 import Users from './usersModel'
 
 export default {
-  get, getOne, fbAuth, put,
+  get, getOne, fbAuth, updateUser, updateUserForm,
 }
 
 function get(req, res, next) {
@@ -29,7 +29,14 @@ function getOne(req, res, next) {
     .catch(next)
 }
 
-function put(req, res, next) {
+function updateUserForm(req, res, next) {
+  Users.update({ _id: req.params.id },
+    { $addToSet: { form: req.body } })
+    .then(DBres => res.json(DBres))
+    .catch(next)
+}
+
+function updateUser(req, res, next) {
   Users.update({ _id: req.params.id }, { $set: req.body })
     .then(DBres => res.json(DBres))
     .catch(next)
@@ -37,12 +44,15 @@ function put(req, res, next) {
 
 function fbAuth(req, res, next) {
   const {
-    name, userID, fbPictureUrl, accessToken: fbClientAccessToken,
+    name, userID, fbPictureUrl, gender, childName, genderParent, accessToken: fbClientAccessToken,
   } = req.body
   const update = {
     name,
     fbUserId: userID,
     fbPictureUrl,
+    gender,
+    childName,
+    genderParent,
   }
   // Find or create user
   const options = { upsert: true, new: true, setDefaultsOnInsert: true }
