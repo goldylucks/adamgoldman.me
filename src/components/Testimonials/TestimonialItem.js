@@ -9,7 +9,7 @@ type Props = {
   item: Object,
 }
 
-const TestimonialItems = ({ item }: Props) => (
+const TestimonialItem = ({ item }: Props) => (
   <div key={item.title} className={s.item}>
     <h3>{item.title}</h3>
     <div className={s.itemText}>
@@ -27,4 +27,4 @@ const TestimonialItems = ({ item }: Props) => (
   </div>
 )
 
-export default withStyles(s)(TestimonialItems)
+export default withStyles(s)(TestimonialItem)
