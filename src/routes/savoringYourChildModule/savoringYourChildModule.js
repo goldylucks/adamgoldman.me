@@ -18,22 +18,17 @@ type Props = {
   testimonials: [],
   benefits: Array<String>,
   user: Object,
-  typeformUserId: '',
   onLogin: Function
 };
 
 const savoringYourChildSectionModule = ({
-  title, typeform, faq, benefits, testimonials, user, typeformUserId, onLogin,
+  title, typeform, faq, benefits, testimonials, user, onLogin,
 }:
   Props) => (
     <div>
       <div className="container">
         <div className="mainheading">
           <h1 className="posttitle">{title}</h1>
-        </div>
-        <div>
-          <div>User typeform ID: {typeformUserId},</div>
-          <div>User ID {user._id},</div>
         </div>
         <div style={{ position: 'relative' }}>
           <Typeform

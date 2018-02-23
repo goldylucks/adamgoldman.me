@@ -13,20 +13,11 @@ const modules = [
   { title: 'Relationship Consolidation', description: 'Soften bad experiences & intensify positive ones', url: 'relationship-consolidation' },
 ]
 
-type Props = {
-  user: Object,
-  typeformUserId: '',
-};
-
-const SavoringYourChildModules = ({ user, typeformUserId }: Props) => (
+const SavoringYourChildModules = () => (
   <div>
     <div className="container">
       <div className="mainheading">
         <h1 className="sitetitle">Which module you want to explore next?</h1>
-        <div>
-          <div>User typeform ID: {typeformUserId},</div>
-          <div>User ID {user._id},</div>
-        </div>
       </div>
       <section className="recent-posts">
         <div className="card-columns listrecent">

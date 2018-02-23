@@ -2,7 +2,6 @@
 
 import React from 'react'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
-import randomstring from 'randomstring'
 
 import Footer from '../Footer'
 import MainNav from '../MainNav'
@@ -18,7 +17,6 @@ type Props = {
 class Layout extends React.Component {
   state = {
     user: {},
-    typeformUserId: '',
   }
 
   componentDidMount() {
@@ -30,12 +28,12 @@ class Layout extends React.Component {
 
   render() {
     const { children, path } = this.props
-    const { user, typeformUserId } = this.state
+    const { user } = this.state
     return (
       <div>
         <MainNav path={path} user={user} onLogin={this.login} onLogout={this.logout} />
         <div>
-          {React.cloneElement(children, { user, typeformUserId, onLogin: this.login })}
+          {React.cloneElement(children, { user, onLogin: this.login })}
         </div>
         <div className="container">
           <Footer />
@@ -50,17 +48,6 @@ class Layout extends React.Component {
     if (user) {
       global.console.log('user', user)
       this.setState({ user: JSON.parse(user) })
-    }
-  }
-
-  syncTypeformIdFromLS() {
-    const typeformUserId = localStorage.getItem('typeformUserId')
-    if (typeformUserId) {
-      this.setState({ typeformUserId })
-    } else {
-      const newTypeformUserId = randomstring.generate()
-      this.setState({ typeformUserId: newTypeformUserId })
-      localStorage.setItem('typeformUserId', newTypeformUserId)
     }
   }
 

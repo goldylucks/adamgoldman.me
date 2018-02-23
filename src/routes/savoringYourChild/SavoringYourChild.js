@@ -18,20 +18,15 @@ import { testimonials } from './data'
 
 type Props = {
   user: Object,
-  typeformUserId: Object,
   onLogin: Function,
 }
 
-const SavoringYourChild = ({ user, typeformUserId, onLogin }: Props) => (
+const SavoringYourChild = ({ user, onLogin }: Props) => (
   <div>
     <div className="container">
       <div className="mainheading">
         <h1 className="sitetitle text-center">How to honor your child&apos;s memory after the transition</h1>
         <p className="lead text-center">And appreciate the relationship you had in a resourceful way</p>
-      </div>
-      <div>
-        <div>typeformUserId: {typeformUserId},</div>
-        <div>User ID {user._id},</div>
       </div>
       <div style={{ position: 'relative' }}>
         <Typeform
@@ -80,8 +75,6 @@ const SavoringYourChild = ({ user, typeformUserId, onLogin }: Props) => (
 export default withStyles(s)(SavoringYourChild)
 
 function getTypeformData(userid) {
-  // TODO :: pass typeformUserId to typeorm's API here and get only the answers
-  // of this specific user for this specific form
   axios.get('api/typeform/AV33h6').then(data => typeformResponse(data, userid))
 }
 
