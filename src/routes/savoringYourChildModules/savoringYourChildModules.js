@@ -2,6 +2,7 @@
 
 import React from 'react'
 
+import MessageMe from '../../components/MessageMe'
 import Card from '../../components/Card'
 
 const modules = [
@@ -28,6 +29,7 @@ const SavoringYourChildModules = () => (
         </div>
       </section>
       <hr />
+      <MessageMe />
     </div>
   </div>
 )
