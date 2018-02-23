@@ -57,13 +57,11 @@ class Typeform extends React.Component {
   }
 
   typeFormEbedd = (dataUrl) => {
-    /* eslint-disable */
-    typeformEmbed.makeWidget(this.el, dataUrl, {
+    this.typeformEmbed.makeWidget(this.el, dataUrl, {
       hideHeaders: true,
       hideFooter: true,
     })
   }
-
 }
 
 export default Typeform
