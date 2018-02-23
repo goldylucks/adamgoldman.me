@@ -63,7 +63,8 @@
 	},
     "dependencies": {
     	"unused-ignores": [
-    		"eslint"
+    		"eslint",
+    		"shelljs"
     	]
     }
 }
