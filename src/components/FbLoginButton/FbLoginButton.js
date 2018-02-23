@@ -40,7 +40,6 @@ class FbLoginButton extends React.Component {
     }
     axios.post('/api/users/fbAuth', response)
       .then((serverRes) => {
-        global.console.log('serverRes', serverRes)
         this.props.onLogin(serverRes.data)
       })
       .catch((err) => {

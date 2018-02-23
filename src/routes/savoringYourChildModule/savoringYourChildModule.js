@@ -1,9 +1,7 @@
 // @flow
 
 import React from 'react'
-import axios from 'axios'
 
-import history from '../../history'
 import Benefits from '../../components/Benefits'
 import Typeform from '../../components/Typeform'
 import MessageMe from '../../components/MessageMe'
@@ -18,11 +16,12 @@ type Props = {
   testimonials: [],
   benefits: Array<String>,
   user: Object,
-  onLogin: Function
+  onLogin: Function,
+  onSubmitModule: Function,
 };
 
 const savoringYourChildSectionModule = ({
-  title, typeform, faq, benefits, testimonials, user, onLogin,
+  title, typeform, faq, benefits, testimonials, user, onLogin, onSubmitModule,
 }:
   Props) => (
     <div>
@@ -32,9 +31,9 @@ const savoringYourChildSectionModule = ({
         </div>
         <div style={{ position: 'relative' }}>
           <Typeform
-            data-url={typeformUrl(typeform, user._id)}
+            data-url={typeformUrl(typeform, user)}
             style={{ width: '100%', height: 800 }}
-            onSubmit={() => submitModule(typeform, user._id)}
+            onSubmit={() => submitModule(typeform, onSubmitModule)}
           />
           {!user._id &&
           <FbGateKeeper onLogin={onLogin} user={user} />
@@ -88,10 +87,9 @@ const savoringYourChildSectionModule = ({
 
 export default savoringYourChildSectionModule
 
-function typeformUrl(typeform, userId) {
+function typeformUrl(typeform, { _id, gender, childName }) {
   try {
-    const { gender, childName } = JSON.parse(localStorage.getItem('savoringIntroForm'))
-    return `${typeform}?userid=${userId}
+    return `${typeform}?userid=${_id}
     &name=${childName}
     &his_her=${gender === 'male' ? 'his' : 'her'}
     &him_her=${gender === 'male' ? 'him' : 'her'}
@@ -103,9 +101,7 @@ function typeformUrl(typeform, userId) {
   }
 }
 
-function submitModule(typeform, userId) {
+function submitModule(typeform, onSubmitModule) {
   const formId = typeform.split('/')[4]
-  axios.put(`/api/users/form/${userId}`, formId)
-    .then(history.push('/savoring-your-child/modules'))
-    .catch(err => global.console.error(err))
+  onSubmitModule(formId)
 }
