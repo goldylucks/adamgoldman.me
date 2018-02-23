@@ -2,7 +2,6 @@
 
 import React from 'react'
 
-import history from '../../history'
 import Benefits from '../../components/Benefits'
 import Typeform from '../../components/Typeform'
 import MessageMe from '../../components/MessageMe'
@@ -21,11 +20,8 @@ type Props = {
   onSubmitModule: Function,
 };
 
+// eslint-disable-next-line react/prefer-stateless-function
 class savoringYourChildSectionModule extends React.Component {
-  componentDidMount() {
-    this.validateUser()
-  }
-
   props: Props
 
   render() {
@@ -94,26 +90,13 @@ class savoringYourChildSectionModule extends React.Component {
       </div>
     )
   }
-
-  validateUser = () => {
-    const { user } = this.props
-    if (user.form && user.form.includes('VHYYNS')) {
-      return
-    }
-    history.push('/savoring-your-child')
-  }
 }
 
 export default savoringYourChildSectionModule
 
 function typeformUrl(typeform, { _id, gender, childName }) {
   try {
-    return `${typeform}?userid=${_id}
-    &name=${childName}
-    &his_her=${gender === 'male' ? 'his' : 'her'}
-    &him_her=${gender === 'male' ? 'him' : 'her'}
-    &he_she=${gender === 'male' ? 'he' : 'she'}
-    `
+    return `${typeform}?user_id=${_id}&name=${childName}&his_her=${gender === 'male' ? 'his' : 'her'}&him_her=${gender === 'male' ? 'him' : 'her'}&he_she=${gender === 'male' ? 'he' : 'she'}`
   } catch (err) {
     global.console.error('err', err)
     return ''

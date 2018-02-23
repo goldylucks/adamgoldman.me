@@ -22,7 +22,8 @@ class Layout extends React.Component {
   }
 
   componentDidMount() {
-    this.syncUserFromLS()
+    const user = this.syncUserFromLS()
+    this.gateKeeper(user)
   }
 
   props: Props
@@ -50,17 +51,17 @@ class Layout extends React.Component {
   }
 
   syncUserFromLS() {
-    const user = localStorage.getItem('user')
+    let user = localStorage.getItem('user')
     if (user) {
-      global.console.log('user logged in')
-      global.console.log(user)
-      this.setState({ user: JSON.parse(user) })
+      user = JSON.parse(user)
+      global.console.log('user logged in', user)
+      this.setState({ user })
     }
+    return user || {}
   }
 
   login = (user) => {
-    global.console.log('user login')
-    global.console.log(user)
+    global.console.log('user login', user)
     this.updateUser(user)
   }
 
@@ -72,13 +73,26 @@ class Layout extends React.Component {
       .catch(err => global.console.error(err))
   }
 
-  submitModule = (formId) => {
+  submitModule = async (formId) => {
+    global.console.log('submitted form', formId)
     const user = Object.assign({}, this.state.user)
     user.form.push(formId)
     this.updateUser(user)
     axios.put(`/api/users/form/${user._id}`, formId)
-      .then(history.push('/savoring-your-child/modules'))
       .catch(err => global.console.error(err))
+    try {
+      const formResponses = await axios.get(`api/typeform/${formId}`)
+      const formData = formResponses.data.responses.filter(res => res.hidden.user_id === user._id)[0].answers // eslint-disable-line max-len
+      global.console.log('formData', formData)
+    } catch (err) {
+      global.alert('there was an error, please contact me, sorry for this!')
+      global.console.error('err', err)
+    }
+    // if (objections) {
+    //   openMessengerBotSavoringConcern(formId)
+    //   return
+    // }
+    history.push('/savoring-your-child/modules')
   }
 
   logout = () => {
@@ -91,5 +105,27 @@ class Layout extends React.Component {
     this.setState({ user })
     localStorage.setItem('user', JSON.stringify(user))
   }
+
+  gateKeeper(user) {
+    if (!this.props.path.match(/peaceful-ending|reengaging-the-future|relationship-consolidation|reunion|savoring-the-future|special-days|test1|test2/)) {
+      return
+    }
+    if (user.form && user.form.includes('VHYYNS')) {
+      return
+    }
+    history.push('/savoring-your-child')
+  }
 }
+
 export default withStyles(s)(Layout)
+
+// function openMessengerBotSavoringConcern(formId) {
+//   let formName
+//   if (formId === 'Rwa8iu') { formName = 'peaceful-ending' }
+//   if (formId === 'A3Pjm8') { formName = 'reengaging-the-future' }
+//   if (formId === 'lDT9YI') { formName = 'relationship-consolidation' }
+//   if (formId === 'hcBBCM') { formName = 'reunion' }
+//   if (formId === 'UGn1TQ') { formName = 'savoring-the-future' }
+//   if (formId === 'kERZFQ') { formName = 'special-days' }
+//   window.open(`https://m.me/adamgoldman.me?ref=${formName}-concern`, '_newtab')
+// }

@@ -30,7 +30,7 @@ const SavoringYourChild = ({ user, onLogin, onSubmitIntro }: Props) => (
       </div>
       <div style={{ position: 'relative' }}>
         <Typeform
-          data-url={`https://adamgoldman.typeform.com/to/VHYYNS?userid=${user._id}`}
+          data-url={`https://adamgoldman.typeform.com/to/VHYYNS?user_id=${user._id}`}
           style={{ width: '100%', height: 500 }}
           onSubmit={() => submit(user._id, onSubmitIntro)}
         />
@@ -77,7 +77,7 @@ export default withStyles(s)(SavoringYourChild)
 async function submit(userid, onSubmitIntro) {
   try {
     const formResponses = await axios.get('api/typeform/AV33h6')
-    const formData = formResponses.data.responses.filter(res => res.hidden.userid === userid)[0].answers // eslint-disable-line max-len
+    const formData = formResponses.data.responses.filter(res => res.hidden.user_id === userid)[0].answers // eslint-disable-line max-len
     global.console.log('formData', formData)
     const gendersAnswer = formData.list_oRQpeZftOGOJ_choice
     onSubmitIntro({
