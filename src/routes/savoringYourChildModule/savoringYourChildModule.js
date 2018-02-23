@@ -22,7 +22,7 @@ type Props = {
   onLogin: Function
 };
 
-const savoringYourChildSectionForm = ({
+const savoringYourChildSectionModule = ({
   title, typeform, faq, benefits, testimonials, user, typeformUserId, onLogin,
 }:
   Props) => (
@@ -91,7 +91,7 @@ const savoringYourChildSectionForm = ({
     </div>
 )
 
-export default savoringYourChildSectionForm
+export default savoringYourChildSectionModule
 
 function typeformUrl(typeform, userId) {
   try {
