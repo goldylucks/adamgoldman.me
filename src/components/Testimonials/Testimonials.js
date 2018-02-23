@@ -18,7 +18,7 @@ const Testimonials = ({ testimonials }: Props) => {
     speed: 500,
     arrows: testimonials.length > 3,
     slidesToScroll: 1,
-    slidesToShow: 3,
+    slidesToShow: (testimonials.length < 3) ? 2 : 3,
     responsive: [
       {
         breakpoint: 1024,
@@ -30,22 +30,24 @@ const Testimonials = ({ testimonials }: Props) => {
         breakpoint: 990,
         settings: {
           slidesToShow: 2,
+          arrows: testimonials.length > 2,
         },
       },
       {
         breakpoint: 764,
         settings: {
           slidesToShow: 1,
+          arrows: testimonials.length > 1,
         },
       },
     ],
   }
-
+  const currentSlide = testimonials.length
   return (
-    <div className={`container ${s.testimonial} `}>
-      <Slider {...settings}>
+    <div className="container">
+      <Slider {...settings} className={`countSlide-${currentSlide}`}>
         {testimonials.map(item => (
-          <div>
+          <div className={`totalSlides-${testimonials.length}-${testimonials.length}`}>
             <TestimonialItem item={item} />
           </div>
         ))}

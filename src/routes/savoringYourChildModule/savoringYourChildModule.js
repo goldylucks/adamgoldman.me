@@ -6,7 +6,7 @@ import history from '../../history'
 import Benefits from '../../components/Benefits'
 import Typeform from '../../components/Typeform'
 import MessageMe from '../../components/MessageMe'
-import Testimonial from '../../components/Testimonials'
+import Testimonials from '../../components/Testimonials'
 import FAQ from '../../components/FAQ'
 import FbGateKeeper from '../../components/FbGateKeeper'
 
@@ -51,7 +51,7 @@ Props) => (
       : (
         <section>
           <h1 className="text-center">Parents Share</h1>
-          <Testimonial testimonials={testimonials} />
+          <Testimonials testimonials={testimonials} />
           <hr />
         </section>
       )}
