@@ -52,13 +52,15 @@ class Layout extends React.Component {
   syncUserFromLS() {
     const user = localStorage.getItem('user')
     if (user) {
-      global.console.log('user logged in', user)
+      global.console.log('user logged in')
+      global.console.log(user)
       this.setState({ user: JSON.parse(user) })
     }
   }
 
   login = (user) => {
-    global.console.log('user login', user)
+    global.console.log('user login')
+    global.console.log(user)
     this.updateUser(user)
   }
 
