@@ -11,10 +11,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import axios from 'axios'
 
-import { isProd, isMobile } from '../utils'
-import { FB_APP_ID } from '../constants'
+import { isMobile } from '../utils'
+import { FB_APP_ID, BASE_URL } from '../constants'
 
-axios.defaults.baseURL = isProd ? 'http://www.adamgoldman.me' : 'http://localhost:3000'
+axios.defaults.baseURL = BASE_URL
 
 const ContextType = {
   // Enables critical path CSS rendering

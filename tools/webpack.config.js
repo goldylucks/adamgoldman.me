@@ -18,6 +18,9 @@ import pkg from '../package.json'
 
 import overrideRules from './lib/overrideRules'
 
+const isStaging = process.env.ENV === 'staging'
+const isProduction = process.env.ENV === 'production'
+
 const isDebug = !process.argv.includes('--release')
 const isVerbose = process.argv.includes('--verbose')
 const isAnalyze =
@@ -305,12 +308,7 @@ const clientConfig = {
   plugins: [
     // Define free variables
     // https://webpack.js.org/plugins/define-plugin/
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': isDebug ? '"development"' : '"production"',
-      'process.env.BROWSER': true,
-      __DEV__: isDebug,
-    }),
-
+    webpackDefine('client'),
     // Emit a file with assets paths
     // https://github.com/sporto/assets-webpack-plugin#options
     new AssetsPlugin({
@@ -457,11 +455,7 @@ const serverConfig = {
   plugins: [
     // Define free variables
     // https://webpack.js.org/plugins/define-plugin/
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': isDebug ? '"development"' : '"production"',
-      'process.env.BROWSER': false,
-      __DEV__: isDebug,
-    }),
+    webpackDefine('server'),
 
     // Adds a banner to the top of each generated chunk
     // https://webpack.js.org/plugins/banner-plugin/
@@ -485,3 +479,25 @@ const serverConfig = {
 }
 
 export default [clientConfig, serverConfig]
+
+function fbAppId() {
+  if (isStaging) { return '"126555121502379"' }
+  if (isProduction) { return '"1957034857888787"' }
+  return '"1528149173950312"'
+}
+
+function baseUrl() {
+  if (isStaging) { return '"http://adamgoldman-staging.herokuapp.com"' }
+  if (isProduction) { return '"http://www.adamgoldman.me"' }
+  return '"http://localhost:3000"'
+}
+
+function webpackDefine(env) {
+  return new webpack.DefinePlugin({
+    'process.env.NODE_ENV': isDebug ? '"development"' : '"production"',
+    'process.env.FB_APP_ID': fbAppId(),
+    'process.env.BASE_URL': baseUrl(),
+    'process.env.BROWSER': env === 'client' ? true : 'false',
+    __DEV__: isDebug,
+  })
+}
