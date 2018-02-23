@@ -22,10 +22,6 @@ type Props = {
 };
 
 class savoringYourChildSectionModule extends React.Component {
-  state = {
-    introForm: 'VHYYNS',
-  }
-
   componentDidMount() {
     this.validateUser()
   }
@@ -100,15 +96,11 @@ class savoringYourChildSectionModule extends React.Component {
   }
 
   validateUser = () => {
-    const user = JSON.parse(localStorage.getItem('user'))
-    if (user) {
-      const findForm = user.form.includes(this.state.introForm)
-      if (!findForm) {
-        history.push('/savoring-your-child')
-      }
-    } else {
-      history.push('/savoring-your-child')
+    const { user } = this.props
+    if (user.form && user.form.includes('VHYYNS')) {
+      return
     }
+    history.push('/savoring-your-child')
   }
 }
 
