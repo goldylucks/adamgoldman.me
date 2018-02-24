@@ -45,7 +45,7 @@ class Layout extends React.Component {
         <div className="container">
           <Footer />
         </div>
-        <MessengerFixed />
+        <MessengerFixed path={path} />
       </div>
     )
   }

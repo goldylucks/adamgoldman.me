@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { MESSENGER_LINK_WELCOME } from '../constants'
 import Link from '../components/Link'
 import Testimony from '../components/Testimony'
 import FbShareLink from '../components/FbShareLink'
@@ -45,7 +46,7 @@ export const steps = [
         />
       </div>),
     description: () => `
-אהלן! אדם כאן, אני ופרצופי איתך בכל שלב, ותמיד [כאן](FB_MESSAGE) לשאלות :)
+אהלן! אדם כאן, אני ופרצופי איתך בכל שלב, ותמיד [כאן](${MESSENGER_LINK_WELCOME}) לשאלות :)
 
 עדיף לדבר אליך בלשון ... ?
 `,

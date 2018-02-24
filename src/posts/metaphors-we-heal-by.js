@@ -1,3 +1,5 @@
+import { MESSENGER_LINK_WELCOME } from '../constants'
+
 export default {
   title: 'Metaphors We Heal By: David Grove',
   tags: ['Metaphors', 'Clean Language'],
@@ -9,7 +11,7 @@ From all methods I've learned and practiced of effective personl change, this is
 I've used it many times with fantastic results, as you can read here:
  - [Healing Metaphors - Water & Slime](/blog/healing-metaphors-water-slime/)
 
-If you have any experience with this type of work, do [let me know](FB_MESSAGE) and add your comment below, so we can all learn from each other.
+If you have any experience with this type of work, do [let me know](${MESSENGER_LINK_WELCOME}) and add your comment below, so we can all learn from each other.
 
 I want to add more details about this course by Mr. David, tho life has a tendency of getting in the way, you know how it is ;)
 

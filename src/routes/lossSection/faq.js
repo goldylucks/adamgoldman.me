@@ -4,6 +4,7 @@
 import React from 'react'
 import Collapsible from 'react-collapsible'
 
+import { MESSENGER_LINK_WELCOME } from '../../constants'
 import Markdown from '../../components/Markdown'
 
 export default {
@@ -15,7 +16,7 @@ export default {
       {[
         {
           title: 'Is this in person?',
-          content: 'I work with people through [messenger](FB_MESSAGE), and you can follow the [protocol](/loss/protocol) from the comfort of your own home',
+          content: `I work with people through [messenger](${MESSENGER_LINK_WELCOME}), and you can follow the [protocol](/loss/protocol) from the comfort of your own home`,
         },
         {
           title: 'Do I need to pay anything?',
@@ -46,7 +47,7 @@ Sometimes the best option is to put a frown face with certain people at certain 
 
 However for many people, you can send them this page and let them read by themselves what is possible.
 
-If you have a real "hard case" or "skeptic" in your close enviornment, [messege me](FB_MESSAGE) and we'll think together how to "package" the information in a way they could digest easier.
+If you have a real "hard case" or "skeptic" in your close enviornment, [messege me](${MESSENGER_LINK_WELCOME}) and we'll think together how to "package" the information in a way they could digest easier.
 `,
         },
 

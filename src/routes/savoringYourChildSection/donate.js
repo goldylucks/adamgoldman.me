@@ -1,4 +1,5 @@
 import { cloudImg } from '../../utils'
+import { MESSENGER_LINK_WELCOME } from '../../constants'
 
 export default {
   title: "I don't charge I accept",
@@ -75,6 +76,6 @@ Peeps who got a PayPal usually use this to give back, since it's so easy and con
 
 That's perfectly fine, there are many ways you can contribute!
 
-[Share](FB_SHARE) this page, [leave a review](https://www.facebook.com/adamgoldman.me/reviews/) (and like!), tell your friends, and [let me know](FB_MESSAGE) what skills do you have that might be useful. There are many areas I could use help in order to reach more people and refine everything that I do. I appreciate every act of kindness! :)
+[Share](FB_SHARE) this page, [leave a review](https://www.facebook.com/adamgoldman.me/reviews/) (and like!), tell your friends, and [let me know](${MESSENGER_LINK_WELCOME}) what skills do you have that might be useful. There are many areas I could use help in order to reach more people and refine everything that I do. I appreciate every act of kindness! :)
 `,
 }

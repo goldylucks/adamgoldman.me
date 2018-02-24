@@ -2,13 +2,13 @@
 
 import React from 'react'
 
-import { MESSENGER_LINK } from '../../constants'
+import { MESSENGER_LINK_SAVORING_CONTACT } from '../../constants'
 
 const MessageMe = () => (
   <div className="text-center">
     <h1>Still got questions?</h1>
     <a
-      href={MESSENGER_LINK}
+      href={MESSENGER_LINK_SAVORING_CONTACT}
       target="_blank"
       rel="nofollow noreferrer noopener"
     >

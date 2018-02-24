@@ -2,6 +2,7 @@
 
 import React from 'react'
 
+import { MESSENGER_LINK_BOOK_SESSION } from '../../constants'
 import Markdown from '../../components/Markdown'
 import Card from '../../components/Card'
 import Ending from '../../components/Ending'
@@ -19,9 +20,9 @@ const Home = ({ transcripts, tutorials }: Props) => (
         <small>Relax, it&apos;s just life ...</small>
         <Markdown
           className="lead"
-          source="
-Book a [session](/book), try a [tutorial](/tools), [learn](/transcripts) what's possible, and [read](/FB_REVIEWS) what others have to say.
-"
+          source={`
+Book a [session](${MESSENGER_LINK_BOOK_SESSION}), try a [tutorial](/tools), [learn](/transcripts) what's possible, and [read](/FB_REVIEWS) what others have to say.
+`}
         />
       </div>
       <section className="recent-posts">

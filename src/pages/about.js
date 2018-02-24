@@ -1,3 +1,5 @@
+import { MESSENGER_LINK_WELCOME } from '../constants'
+
 export default {
   title: 'Who am I anyway?',
   nick: 'cognitive dissonance',
@@ -47,6 +49,6 @@ I've just finished tidying up there so please **check your shoes and formalities
 
 Now that you got to know me, let's move to the most important part ... Let me get to know you!
 
-So [what can I do you for](/lets-talk) my [friend](FB_MESSAGE)?
+So [what can I do you for](${MESSENGER_LINK_WELCOME}) my [friend](${MESSENGER_LINK_WELCOME})?
 `,
 }

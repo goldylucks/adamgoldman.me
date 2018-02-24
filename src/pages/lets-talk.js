@@ -1,3 +1,5 @@
+import { MESSENGER_LINK_WELCOME } from '../constants'
+
 export default {
   title: "Let's talk?",
   nick: "friend u've yet to meet",
@@ -8,7 +10,7 @@ What can I do you for my friend?
 
 [Iv8VWQlUq90](YtEmbedd)
 
-[Messege](FB_MESSAGE), [email](EMAIL), or contact me through the form below.
+[Messege](${MESSENGER_LINK_WELCOME}), [email](EMAIL), or contact me through the form below.
 
 <form action="http://formspree.io/goldy@adamgoldman.me" method="POST" style="margin-bottom: 60px;"> 
   <div class="form-group">
