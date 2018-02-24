@@ -32,7 +32,7 @@ const routes = {
     },
     {
       // using array because soon we will add more sections
-      path: ['donate'].map(s => `/savoring-your-child/${s}`),
+      path: ['pricing'].map(s => `/savoring-your-child/${s}`),
       load: () => import(/* webpackChunkName: 'savoringYourChildSection' */ './savoringYourChildSection'),
     },
     {

@@ -58,12 +58,12 @@ export const testimonials = [
 
 export const logistics = [
   {
-    title: 'Is this in person?',
-    content: `I work with people through [messenger](${MESSENGER_LINK_WELCOME}), and you can follow the process from the comfort of your own home`,
+    title: 'Do I need to physically go somewhere?',
+    content: `Nope! I work with parents directly through [messenger](${MESSENGER_LINK_WELCOME}), so you can follow the process from the comfort of your own home, or on the go`,
   },
   {
-    title: 'Do I need to pay anything?',
-    content: 'There are no costs involved. After we are done you can decide if and how much to [give back](/savoring-your-child/donate)',
+    title: 'Do I need to pay anything to experience benefits?',
+    content: 'After we are done you can decide if and how much you\'d love to [pay](/savoring-your-child/pricing) 💖',
   },
   {
     title: 'What about privacy?',

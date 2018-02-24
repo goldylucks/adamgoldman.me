@@ -3,7 +3,7 @@ import { cloudImg } from '../utils'
 export default {
   title: "I don't charge I accept",
   nick: "Give, then ask, don't take",
-  description: 'Wish to donate? Right this way!',
+  description: 'Value first pricing model 💖',
   tags: [],
   body: `
 **All my content is**, and always will be, **100% accessible and open sourced**. FOREVER.

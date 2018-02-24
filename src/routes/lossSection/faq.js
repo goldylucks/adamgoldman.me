@@ -20,7 +20,7 @@ export default {
         },
         {
           title: 'Do I need to pay anything?',
-          content: 'There are no costs involved. I do ask for open feedback through and after the [process](/loss/protocol), so I could improve and refine it for future [participants](/loss/participate). When we are done, and you learn a more [resourceful response](/loss/resourceful-response) to loss, you can [donate](/i-dont-charge-i-accept) if you wish',
+          content: 'When we are done, and you learn a more [resourceful response](/loss/resourceful-response) to loss, you can decide how much you\'d love to [pay](/i-dont-charge-i-accept) 💖',
         },
         {
           title: 'What about privacy?',
