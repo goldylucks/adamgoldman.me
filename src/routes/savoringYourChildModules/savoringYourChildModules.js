@@ -3,7 +3,7 @@
 import React from 'react'
 
 import MessageMe from '../../components/MessageMe'
-import Card from '../../components/Card'
+import SelectedCard from '../../components/SelectedCard'
 
 const modules = [
   { title: 'Peaceful Ending', description: 'Attach the moment of transition to your last happy memory', url: 'peaceful-ending' },
@@ -14,24 +14,31 @@ const modules = [
   { title: 'Relationship Consolidation', description: 'Soften bad experiences & intensify positive ones', url: 'relationship-consolidation' },
 ]
 
-const SavoringYourChildModules = () => (
-  <div>
-    <div className="container">
-      <div className="mainheading">
-        <h1 className="sitetitle">Which module you want to explore next?</h1>
-      </div>
-      <section className="recent-posts">
-        <div className="card-columns listrecent">
-          {modules
-            .map(m => (
-              <Card {...m} url={`/savoring-your-child/${m.url}`} key={m.url} />
-            ))}
+type Props = {
+  user: Object
+}
+
+const SavoringYourChildModules = ({ user }:Props) => {
+  global.console.log('user', user)
+  return (
+    <div>
+      <div className="container">
+        <div className="mainheading">
+          <h1 className="sitetitle">Which module you want to explore next?</h1>
         </div>
-      </section>
-      <hr />
-      <MessageMe />
+        <section className="recent-posts">
+          <div className="card-columns listrecent">
+            {modules
+              .map(m => (
+                <SelectedCard {...m} url={`/savoring-your-child/${m.url}`} key={m.url} />
+              ))}
+          </div>
+        </section>
+        <hr />
+        <MessageMe />
+      </div>
     </div>
-  </div>
-)
+  )
+}
 
 export default SavoringYourChildModules
