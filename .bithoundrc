@@ -67,7 +67,8 @@
     	], 
 	    "mute": [ 
 	        "shelljs", 
-	        "browser-sync" 
+	        "browser-sync",
+	        "react-markdown"
 	    ]
     }
 }
