@@ -2,7 +2,6 @@
 
 import React from 'react'
 
-import BottomSection from '../../components/BottomSection'
 import Card from '../../components/Card'
 
 type Props = {
@@ -30,7 +29,6 @@ const Transcripts = ({ title, description, transcripts }: Props) => (
         </div>
       </section>
     </div>
-    <BottomSection />
   </div>
 )
 
