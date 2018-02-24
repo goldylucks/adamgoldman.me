@@ -76,7 +76,7 @@ class MainNav extends React.Component {
   navItems() {
     return this.isSavoring()
       ? [
-        { to: '/savoring-your-child/donate', text: <span>Donate <FA name="heart" style={{ color: 'red', marginLeft: 5 }} /></span> },
+        { to: '/savoring-your-child/donate', text: <span>Pricing <FA name="heart" style={{ color: 'red', marginLeft: 5 }} /></span> },
       ]
       : [
         { to: '/loss', text: 'Loss' },
@@ -84,7 +84,7 @@ class MainNav extends React.Component {
         { to: '/tools', text: 'Tutorials' },
         { to: '/about', text: 'About' },
         { to: '/lets-talk', text: 'Contact' },
-        { to: '/i-dont-charge-i-accept', text: <span>Donate <FA name="heart" style={{ color: 'red', marginLeft: 5 }} /></span> },
+        { to: '/i-dont-charge-i-accept', text: <span>Pricing <FA name="heart" style={{ color: 'red', marginLeft: 5 }} /></span> },
       ]
   }
 }
