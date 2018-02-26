@@ -29,7 +29,7 @@ async function action() {
   const { data } = await axios.get('/api/posts/transcripts')
   return {
     chunks: ['home'],
-    title: 'My Virtual Home',
+    title: 'Adam Goldman\'s Virtual Home',
     path,
     description: "Relax, it's just life",
     component: (
