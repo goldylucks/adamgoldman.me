@@ -77,13 +77,13 @@ export default withStyles(s)(SavoringYourChild)
 
 async function submit(userid, onSubmitIntro) {
   try {
-    const formResponses = await axios.get('api/typeform/AV33h6')
+    const formResponses = await axios.get(`api/typeform/${TYPEFORM_ID_SAVORING_INTRO}`)
     const formData = formResponses.data.responses.filter(res => res.hidden.user_id === userid)[0].answers // eslint-disable-line max-len
     global.console.log('formData', formData)
-    const gendersAnswer = formData.list_oRQpeZftOGOJ_choice
+    const gendersAnswer = formData.list_zdzx5hGmBK40_choice
     onSubmitIntro({
       gender: gendersAnswer.match(/daughter/i) ? 'female' : 'male', // child's gender
-      childName: formData.textfield_gBIg1icFEszE, // child's name
+      childName: formData.textfield_zdCMkNErETQz, // child's name
       genderParent: gendersAnswer.match(/mother/i) ? 'female' : 'male',
     })
   } catch (err) {
