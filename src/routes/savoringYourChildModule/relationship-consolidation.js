@@ -17,7 +17,7 @@ export default {
       text: 'I can think about him and feel happy. I have been going through positive memories and they make me so happy and I feel so much love. My heart swells with love. you are awesome',
       name: 'Elizabeth West',
       nameMeta: 'Mother of Tyler, died of suicide',
-      imgSrc: cloudImg('users/elizabeth_west_with_child'),
+      imgSrc: cloudImg('users/elizabeth_west_avatar'),
     },
     {
       title: 'Grateful for all the memories',

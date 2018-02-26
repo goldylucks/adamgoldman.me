@@ -21,7 +21,7 @@ export default {
       text: 'Less heart-wrenching. Like a preserved memory. It feels good to see these events that didn’t happen. I feel him in my heart in a good way. Thank you very much.',
       name: 'Elizabeth West',
       nameMeta: 'Mother of Tyler, died of suicide',
-      imgSrc: cloudImg('users/elizabeth_west_with_child'),
+      imgSrc: cloudImg('users/elizabeth_west_avatar'),
     },
   ],
   faq: [],

@@ -23,14 +23,14 @@ export default {
       text: 'I feel happy looking at him laughing.  I think about how good that felt. Amazing.',
       name: 'Elizabeth West',
       nameMeta: 'Mother of Tyler, died of suicide',
-      imgSrc: cloudImg('users/elizabeth_west_with_child'),
+      imgSrc: cloudImg('users/elizabeth_west_avatar'),
     },
     {
       title: 'I feel closer to him again',
       text: 'Some therapists focus on "letting go", but this is different. I don\'t feel so sad or empty. I feel really good, like he is with me, where I need to be. Peaceful and satisfied.',
       name: 'Vita Steina',
       nameMeta: 'Mother of Ralph, died from illness after long period in the hospital',
-      imgSrc: cloudImg('users/vita_steina'),
+      imgSrc: cloudImg('users/vita_steina_avatar'),
     },
     {
       title: 'Love that concept!',

@@ -4,7 +4,7 @@ import Layout from '../../components/Layout'
 
 import SavoringYourChildModules from './savoringYourChildModules'
 
-const title = 'SavoringYourChildModules'
+const title = 'Savoring Your Child Modules'
 const path = '/savoring-your-child/modules'
 
 function action() {

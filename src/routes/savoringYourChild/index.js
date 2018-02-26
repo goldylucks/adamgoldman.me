@@ -9,7 +9,7 @@ const path = '/savoring-your-child'
 function action() {
   return {
     chunks: ['savoringYourChild'],
-    title: 'My Virtual SavoringYourChild',
+    title: 'Savoring Your Child',
     path,
     description: "Relax, it's just life",
     component: (
