@@ -4,6 +4,7 @@
 
 import React from 'react'
 
+import { MESSENGER_LINK_WELCOME } from '../constants'
 import Markdown from '../components/Markdown'
 import AnswersV2 from '../routes/tutorial/components/Answers-v2'
 import ToolsIntro from '../routes/tutorial/components/ToolsIntro'
@@ -61,7 +62,7 @@ Looks like you are faster than me ...
 
 I'm still working on this tool, come back in a few days when I'm done!
 
-In the meantime, try one of the other [brain hacking tools](/tools/), read some [reviews](/reviews), be my [friend](FB_MESSAGE) and [lets talk!](/lets-talk/)
+In the meantime, try one of the other [brain hacking tools](/tools/), read some [reviews](/reviews), be my [friend](${MESSENGER_LINK_WELCOME}) and [lets talk!](/lets-talk/)
 `}
             />
           </div>,

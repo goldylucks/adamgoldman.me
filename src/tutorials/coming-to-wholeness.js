@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { MESSENGER_LINK_WELCOME } from '../constants'
 import Link from '../components/Link'
 import FbShareLink from '../components/FbShareLink'
 import Testimony from '../components/Testimony'
@@ -109,7 +110,7 @@ export const steps = [
 
 If you, like me, are willing to ACTIVELY go after a more complete life, and feeling more "whole", I see no reason this process will not affect you in some memorable way.
 
-If you prefer to meditate until that complete life "arrives", this will not be for you, and you are welcome to [ask me why](FB_MESSAGE).
+If you prefer to meditate until that complete life "arrives", this will not be for you, and you are welcome to [ask me why](${MESSENGER_LINK_WELCOME}).
 
 So are we together on this my friend?`,
     answers: [

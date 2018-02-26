@@ -1,3 +1,5 @@
+import { MESSENGER_LINK_WELCOME } from '../constants'
+
 export default {
   title: "I'm not like the others, I'm different",
   tags: [],
@@ -20,7 +22,7 @@ Well ... How can I say this ...
 
 If you are here reading these lines, I've probably sent you here in one point of [our interaction](/lets-talk/).
 
-Maybe we were [talking 1x1](FB_MESSAGE), or you were trying one of the [brain hacking tools](/tools/), and you uttered or thought one of the above statements.
+Maybe we were [talking 1x1](${MESSENGER_LINK_WELCOME}), or you were trying one of the [brain hacking tools](/tools/), and you uttered or thought one of the above statements.
 
 Well ... How can I say this ...
 

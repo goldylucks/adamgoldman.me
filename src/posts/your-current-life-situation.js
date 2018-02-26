@@ -1,3 +1,5 @@
+import { MESSENGER_LINK_WELCOME } from '../constants'
+
 export default {
   title: 'Your Current Life Situation',
   tags: [],
@@ -31,6 +33,6 @@ If you catch your [internal dialog](/tools/internal-dialog-scrambeler/) going "I
 
 While it does provide a new perspective for many people I've shown this to, the main point of this is to gather and sort information so we will know where to intervene next to induce a stronger change.
 
-Now that you are ready, [talk to me](FB_MESSAGE) and let's begin
+Now that you are ready, [talk to me](${MESSENGER_LINK_WELCOME}) and let's begin
 `,
 }

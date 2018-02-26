@@ -4,6 +4,7 @@
 import React from 'react'
 import Collapsible from 'react-collapsible'
 
+import { MESSENGER_LINK_WELCOME } from '../../constants'
 import Markdown from '../../components/Markdown'
 
 export default {
@@ -15,11 +16,11 @@ export default {
       {[
         {
           title: 'Is this in person?',
-          content: 'I work with people through [messenger](FB_MESSAGE), and you can follow the [protocol](/loss/protocol) from the comfort of your own home',
+          content: `I work with people through [messenger](${MESSENGER_LINK_WELCOME}), and you can follow the [protocol](/loss/protocol) from the comfort of your own home`,
         },
         {
           title: 'Do I need to pay anything?',
-          content: 'There are no costs involved. I do ask for open feedback through and after the [process](/loss/protocol), so I could improve and refine it for future [participants](/loss/participate). When we are done, and you learn a more [resourceful response](/loss/resourceful-response) to loss, you can [donate](/i-dont-charge-i-accept) if you wish',
+          content: 'When we are done, and you learn a more [resourceful response](/loss/resourceful-response) to loss, you can decide how much you\'d love to [pay](/i-dont-charge-i-accept) 💖',
         },
         {
           title: 'What about privacy?',
@@ -46,7 +47,7 @@ Sometimes the best option is to put a frown face with certain people at certain 
 
 However for many people, you can send them this page and let them read by themselves what is possible.
 
-If you have a real "hard case" or "skeptic" in your close enviornment, [messege me](FB_MESSAGE) and we'll think together how to "package" the information in a way they could digest easier.
+If you have a real "hard case" or "skeptic" in your close enviornment, [messege me](${MESSENGER_LINK_WELCOME}) and we'll think together how to "package" the information in a way they could digest easier.
 `,
         },
 

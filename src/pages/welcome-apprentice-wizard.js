@@ -1,4 +1,5 @@
 import { cloudImg } from '../utils'
+import { MESSENGER_LINK_WELCOME } from '../constants'
 
 export default {
   title: 'Welcome Apprentice Wizard!',
@@ -45,7 +46,7 @@ Now for the important part …
 
 #### I need to get to know YOU
 
-[Message](FB_MESSAGE) me the after you’ve completed this [form](https://goo.gl/forms/fwtHQ08yWjyGJ0hu1).
+[Message](${MESSENGER_LINK_WELCOME}) me the after you’ve completed this [form](https://goo.gl/forms/fwtHQ08yWjyGJ0hu1).
 
 Now that we know each other, it’s time to …
 

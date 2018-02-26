@@ -4,6 +4,9 @@ import React from 'react'
 import FA from 'react-fontawesome'
 import cx from 'classnames'
 
+import { isSavoring } from '../../utils'
+import { MESSENGER_LINK_BOOK_SESSION, MESSENGER_LINK_WELCOME } from '../../constants'
+import ExternalA from '../ExternalA'
 import Link from '../Link'
 import MainNavMobile from '../MainNavMobile'
 import FbLoginbutton from '../FbLoginButton'
@@ -34,22 +37,25 @@ class MainNav extends React.Component {
           <div className="collapse navbar-collapse">
             <ul className="navbar-nav ml-auto">
               {
-            this.navItems().map(({ to, text }) => (
-              <li className={cx('nav-item', { active: to.substr(1) === this.basePath() })} key={to}>
-                <Link className="nav-link" to={to}>{text}</Link>
+            this.navItems().map(({ to, href, text }) => (
+              <li className={cx('nav-item', { active: to && to.substr(1) === this.basePath() })} key={to}>
+                { to
+                ? <Link className="nav-link" to={to}>{text}</Link>
+                : <ExternalA className="nav-link" href={href}>{text}</ExternalA>
+              }
               </li>
-            ))
+          ))
           }
               <li className="nav-item" style={{ marginLeft: 10 }}>
                 { !this.isSavoring()
-                ? <Link className="nav-link btn btn-primary btn-sm" to="/book">Book a session</Link>
+                ? <ExternalA className="nav-link btn btn-primary btn-sm" href={MESSENGER_LINK_BOOK_SESSION}>Book a session</ExternalA>
                 : <span className="nav-link btn btn-primary btn-sm"><FbLoginbutton onLogin={onLogin} onLogout={onLogout} user={user} /></span>
             }
               </li>
             </ul>
           </div>
           { !this.isSavoring()
-            ? <Link className="nav-link btn btn-primary btn-sm d-sm-block d-md-none" to="/book">Book a session</Link>
+            ? <ExternalA className="nav-link btn btn-primary btn-sm d-sm-block d-md-none" href={MESSENGER_LINK_BOOK_SESSION}>Book a session</ExternalA>
             : <span className="nav-link btn btn-primary btn-sm d-sm-block d-md-none"><FbLoginbutton onLogin={onLogin} onLogout={onLogout} user={user} /></span>
           }
         </div>
@@ -62,7 +68,7 @@ class MainNav extends React.Component {
   }
 
   isSavoring() {
-    return this.props.path.includes('savoring-your-child')
+    return isSavoring(this.props.path)
   }
 
   title() {
@@ -76,15 +82,14 @@ class MainNav extends React.Component {
   navItems() {
     return this.isSavoring()
       ? [
-        { to: '/savoring-your-child/donate', text: <span>Donate <FA name="heart" style={{ color: 'red', marginLeft: 5 }} /></span> },
+        { to: '/savoring-your-child/pricing', text: <span>Pricing <FA name="heart" style={{ color: 'red', marginLeft: 5 }} /></span> },
       ]
       : [
-        { to: '/loss', text: 'Loss' },
         { to: '/transcripts', text: 'Transcripts' },
         { to: '/tools', text: 'Tutorials' },
         { to: '/about', text: 'About' },
-        { to: '/lets-talk', text: 'Contact' },
-        { to: '/i-dont-charge-i-accept', text: <span>Donate <FA name="heart" style={{ color: 'red', marginLeft: 5 }} /></span> },
+        { href: MESSENGER_LINK_WELCOME, text: 'Contact' },
+        { to: '/i-dont-charge-i-accept', text: <span>Pricing <FA name="heart" style={{ color: 'red', marginLeft: 5 }} /></span> },
       ]
   }
 }

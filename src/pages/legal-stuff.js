@@ -1,3 +1,5 @@
+import { MESSENGER_LINK_WELCOME } from '../constants'
+
 export default {
   title: 'Legal (Yuck!) Stuff',
   nick: 'Johnny Cochran',
@@ -14,7 +16,7 @@ I only offer things to try to have more freedom and choices in life. YOUR LIFE.
 
 It is YOUR LIFE, YOUR BODY, YOUR EMOTIONS, and YOUR CONTROL.
 
-If you are not sure about anything you read here, and have concerns, please [contact me](FB_MESSAGE) before going forward.
+If you are not sure about anything you read here, and have concerns, please [contact me](${MESSENGER_LINK_WELCOME}) before going forward.
 
 `,
   ps: `

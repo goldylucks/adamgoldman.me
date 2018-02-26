@@ -105,3 +105,5 @@ export const reorder = (list, startIndex, endIndex) => {
 }
 
 export const isMobile = () => window.innerWidth <= 800
+
+export const isSavoring = path => path.includes('savoring-your-child')

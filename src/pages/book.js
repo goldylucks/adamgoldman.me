@@ -1,3 +1,5 @@
+import { MESSENGER_LINK_WELCOME } from '../constants'
+
 const description = 'Work on any past memories you want to clear, current problems you still have, and building an ever brightening future'
 
 export default {
@@ -8,7 +10,7 @@ export default {
   body: `
 <p class="lead">${description}</p>
 
-My preferred way of communicating is [Messenger](FB_MESSAGE), but you can also [email](EMAIL) or fill the form below.
+My preferred way of communicating is [Messenger](${MESSENGER_LINK_WELCOME}), but you can also [email](EMAIL) or fill the form below.
 
 <form class="form" action="http://formspree.io/goldy@adamgoldman.me" method="POST" style="margin-bottom: 60px">
   <div class="form-group">

@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-curly-brace-presence */
 /* eslint-disable max-len */
 
+import { MESSENGER_LINK_WELCOME } from '../../constants'
 import { cloudImg } from '../../utils'
 
 export const testimonials = [
@@ -57,12 +58,12 @@ export const testimonials = [
 
 export const logistics = [
   {
-    title: 'Is this in person?',
-    content: 'I work with people through [messenger](FB_MESSAGE), and you can follow the process from the comfort of your own home',
+    title: 'Do I need to physically go somewhere?',
+    content: `Nope! I work with parents directly through [messenger](${MESSENGER_LINK_WELCOME}), so you can follow the process from the comfort of your own home, or on the go`,
   },
   {
-    title: 'Do I need to pay anything?',
-    content: 'There are no costs involved. After we are done you can decide if and how much to [give back](/savoring-your-child/donate)',
+    title: 'Do I need to pay anything to experience benefits?',
+    content: 'After we are done you can decide if and how much you\'d love to [pay](/savoring-your-child/pricing) 💖',
   },
   {
     title: 'What about privacy?',
@@ -88,7 +89,7 @@ Sometimes the best option is to put a frown face with certain people at certain 
 
 However for many people, you can send them this page and let them read by themselves what is possible.
 
-If you have a real "hard case" or "skeptic" in your close enviornment, [messege me](FB_MESSAGE) and we'll think together how to "package" the information in a way they could digest easier.
+If you have a real "hard case" or "skeptic" in your close enviornment, [messege me](${MESSENGER_LINK_WELCOME}) and we'll think together how to "package" the information in a way they could digest easier.
 `,
   },
 

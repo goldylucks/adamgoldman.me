@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 
-import { MESSENGER_LINK, FB_REVIEWS, EMAIL } from '../../constants'
+import { FB_REVIEWS, EMAIL } from '../../constants'
 import FbShareLink from '../FbShareLink'
 import Link from '../Link'
 import FbReview from '../FbReview'
@@ -83,18 +83,6 @@ const Markdown = props => (
 
             if (linkProps.href.match('FB_SHARE')) {
               return <FbShareLink>{linkProps.children}</FbShareLink>
-            }
-
-            if (linkProps.href.match('FB_MESSAGE')) {
-              return (
-                <a
-                  href={MESSENGER_LINK}
-                  target="_blank"
-                  rel="nofollow noreferrer noopener"
-                >
-                  {linkProps.children}
-                </a>
-              )
             }
 
             if (linkProps.href.match('FB_REVIEWS')) {

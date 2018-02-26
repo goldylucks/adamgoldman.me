@@ -6,8 +6,10 @@ import FA from 'react-fontawesome'
 import cx from 'classnames'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
 
+import { MESSENGER_LINK_BOOK_SESSION } from '../../constants'
 import history from '../../history'
 import Link from '../Link'
+import ExternalA from '../ExternalA'
 
 import s from './MainNavMobile.css'
 
@@ -50,18 +52,21 @@ class MainNavMobile extends React.Component {
           }
         >
           <nav>
-            <h3 className={s.mobileMenuHeadline}>{this.props.title}</h3>
+            <h3 className={s.mobileMenuHeadline} onClick={this.toggle}>{this.props.title}</h3>
             <ul className="navbar-nav">
               {
-                [{ to: this.props.logoLink, text: 'Home' }].concat(this.props.navItems).map(({ to, text }) => (
-                  <li className={cx('nav-item', { active: to.substr(1) === this.props.basePath })} key={to}>
-                    <Link className={cx('nav-link', s.navLink)} to={to}>{text}</Link>
+                [{ to: this.props.logoLink, text: 'Home' }].concat(this.props.navItems).map(({ to, href, text }) => (
+                  <li className={cx('nav-item', { active: to && to.substr(1) === this.props.basePath })} key={to}>
+                    { to
+                      ? <Link className={cx('nav-link', s.navLink)} to={to}>{text}</Link>
+                      : <ExternalA className={cx('nav-link', s.navLink)} href={href}>{text}</ExternalA>
+                    }
                   </li>
                 ))
               }
               <li className="nav-item" style={{ marginTop: 20 }}>
                 { !this.props.isSavoring
-                  ? <Link className="nav-link btn btn-primary btn-block" to="/book">Book a session</Link>
+                  ? <ExternalA className="nav-link btn btn-primary btn-block" href={MESSENGER_LINK_BOOK_SESSION}>Book a session</ExternalA>
                   : <span className="nav-link btn btn-primary btn-sm"><FA name="facebook" /> Login</span>
                 }
               </li>

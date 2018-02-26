@@ -1,14 +1,21 @@
+// @flow
+
 import React from 'react'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
 
-import { MESSENGER_LINK } from '../../constants'
+import { MESSENGER_LINK_WELCOME, MESSENGER_LINK_SAVORING_CONTACT } from '../../constants'
+import { isSavoring } from '../../utils'
 
 import s from './MessengerFixed.css'
 
-const MessengerFixed = () => (
+type Props = {
+  path: string,
+}
+
+const MessengerFixed = ({ path }: Props) => (
   <a
     className={s.container}
-    href={MESSENGER_LINK}
+    href={!isSavoring(path) ? MESSENGER_LINK_WELCOME : MESSENGER_LINK_SAVORING_CONTACT}
     target="_blank"
     rel="nofollow noreferrer noopener"
   >

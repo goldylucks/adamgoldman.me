@@ -3,30 +3,27 @@ import { cloudImg } from '../utils'
 export default {
   title: "I don't charge I accept",
   nick: "Give, then ask, don't take",
-  description: 'Wish to donate? Right this way!',
+  description: 'Value first pricing model 💖',
   tags: [],
   body: `
-So you want to give back? How awesome are you!
-
-![Doantion Miracle](${cloudImg('adamgoldman.me/jesus-donate.jpg')})
-
-**All my content is**, and always will be, **100% free and open sourced**. FOREVER.
-
-**I still need to eat tho**, so for my time I do accept something in return, but I don't charge for it.
+**All my content is**, and always will be, **100% accessible and open sourced**. FOREVER.
 
 ![Boromir Charges money](${cloudImg('adamgoldman.me/boromir-charge.jpg')})
 
-Once you get immense value from our time together, **u decide** if and **how much you'd love to give**. I don't want to hold you hostage ahead of time.
+Once you get immense value from our time together, **you decide how much you'd love to pay**. I don't want to hold you hostage ahead of time.
 
-*"But Adam, aren't you afraid people will take advantage of you?"*
+![Doantion Miracle](${cloudImg('adamgoldman.me/kid-pay.jpg')})
 
-![Doantion Miracle](${cloudImg('adamgoldman.me/kid-charge.jpg')})
+<div>
+<h1 class="text-center italic">But Adam, aren't you afraid people will take advantage of you?</h1>
+<br />
+</div>
 
 First of all, I ain't afraid of anything ;)
 
-So far no one has "taken advantage". **Some give less, some give more**, some really can't spare a dime so they work more passionately to refer me future clients.
+So far no one has "taken advantage". **Some pay less, some pay more**, some really can't spare a dime so they work more passionately to refer me future clients.
 
-![Yoda give more](${cloudImg('adamgoldman.me/yoda-give.jpg')})
+![Yoda "pay less, pay more, feel better, you will"](${cloudImg('adamgoldman.me/yoda-pay.jpg')})
 
 One lady came to me after 30 years of therapy, twice a week, $30 each session.
 
@@ -34,14 +31,14 @@ That's a LOT of time and money she spent for NOT solving her problem.
 
 [We did more progress in 2 hours than the previous 30 years combined](/blog/rachel-turns-family-trauma-to-parody).
 
-You can imagine she was more than happy to give back ...
+You can imagine she was more than happy to pay ...
 
 ---
 
-<h1 style="text-align: center; font-style: italic; margin: 40px 0;">So how can I give back?</h1>
+<h1 style="text-align: center; font-style: italic; margin: 40px 0;">So how do I pay?</h1>
 
 #### Card
-The easiest way most people choose to give back. Click on the select field below, choose the amount you'd be happy to give, and click the "buy now" button. Oh and ... Get ready for a dose of good karma ;)
+The easiest way most people choose to pay. Click on the select field below, choose the amount you'd be happy to pay, and click the "buy now" button. Oh and ... Get ready for a dose of good karma ;)
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="margin-bottom: 40px;">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="L73XBAVRMGQ6S">
@@ -65,7 +62,7 @@ The easiest way most people choose to give back. Click on the select field below
 </form>
 
 #### PayPal
-Peeps who got a PayPal usually use this to give back, since it's so easy and convenient. [Click here](https://www.paypal.me/goldylucks/0usd)
+Peeps who got a PayPal usually use this, since it's so easy and convenient. [Click here](https://www.paypal.me/goldylucks/0usd)
 
 #### Bitcoin & Cryptocurrency
 <div>
