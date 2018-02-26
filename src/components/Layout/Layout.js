@@ -4,6 +4,15 @@ import React from 'react'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
 import axios from 'axios'
 
+import {
+  TYPEFORM_ID_SAVORING_INTRO,
+  // TYPEFORM_ID_SAVORING_PEACEFUL_ENDING,
+  // TYPEFORM_ID_SAVORING_REENGAGING_THE_FUTURE,
+  // TYPEFORM_ID_SAVORING_RELATIONSHIP_CONSOLIDATION,
+  // TYPEFORM_ID_SAVORING_REUNION,
+  // TYPEFORM_ID_SAVORING_SAVORING_THE_FUTURE,
+  // TYPEFORM_ID_SAVORING_SPECIAL_DAYS,
+} from '../../constants'
 import history from '../../history'
 import Footer from '../Footer'
 import MainNav from '../MainNav'
@@ -66,7 +75,12 @@ class Layout extends React.Component {
   }
 
   submitIntro = ({ gender, childName, genderParent }) => {
-    const user = Object.assign({}, this.state.user, { gender, childName, genderParent }, { form: ['VHYYNS'] })
+    const user = Object.assign(
+      {},
+      this.state.user,
+      { gender, childName, genderParent },
+      { form: [TYPEFORM_ID_SAVORING_INTRO] },
+    )
     this.updateUser(user)
     axios.put(`/api/users/${user._id}`, user)
       .then(history.push('/savoring-your-child/test1'))
@@ -110,7 +124,7 @@ class Layout extends React.Component {
     if (!this.props.path.match(/peaceful-ending|reengaging-the-future|relationship-consolidation|reunion|savoring-the-future|special-days|test1|test2/)) {
       return
     }
-    if (user.form && user.form.includes('VHYYNS')) {
+    if (user.form && user.form.includes(TYPEFORM_ID_SAVORING_INTRO)) {
       return
     }
     history.push('/savoring-your-child')
@@ -119,13 +133,15 @@ class Layout extends React.Component {
 
 export default withStyles(s)(Layout)
 
+/* eslint-disable max-len */
 // function openMessengerBotSavoringConcern(formId) {
 //   let formName
-//   if (formId === 'Rwa8iu') { formName = 'peaceful-ending' }
-//   if (formId === 'A3Pjm8') { formName = 'reengaging-the-future' }
-//   if (formId === 'lDT9YI') { formName = 'relationship-consolidation' }
-//   if (formId === 'hcBBCM') { formName = 'reunion' }
-//   if (formId === 'UGn1TQ') { formName = 'savoring-the-future' }
-//   if (formId === 'kERZFQ') { formName = 'special-days' }
+//   if (formId === TYPEFORM_ID_SAVORING_PEACEFUL_ENDING) { formName = 'peaceful-ending' }
+//   if (formId === TYPEFORM_ID_SAVORING_REENGAGING_THE_FUTURE) { formName = 'reengaging-the-future' }
+//   if (formId === TYPEFORM_ID_SAVORING_RELATIONSHIP_CONSOLIDATION) { formName = 'relationship-consolidation' }
+//   if (formId === TYPEFORM_ID_SAVORING_REUNION) { formName = 'reunion' }
+//   if (formId === TYPEFORM_ID_SAVORING_SAVORING_THE_FUTURE) { formName = 'savoring-the-future' }
+//   if (formId === TYPEFORM_ID_SAVORING_SPECIAL_DAYS) { formName = 'special-days' }
 //   window.open(`https://m.me/adamgoldman.me?ref=${formName}-concern`, '_newtab')
 // }
+/* eslint-enable max-len */
