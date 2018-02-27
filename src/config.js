@@ -40,6 +40,8 @@ module.exports = {
 
   typeFormApiKey: process.env.TYPEFORM_API_KEY,
 
+  fbPageId: process.env.FACEBOOK_PAGE_ID,
+
   // Web analytics
   analytics: {
     // https://analytics.google.com/

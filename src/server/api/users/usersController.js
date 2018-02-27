@@ -6,7 +6,7 @@ import { signToken } from '../../auth'
 import Users from './usersModel'
 
 export default {
-  get, getOne, fbAuth, updateUser, updateUserForm,
+  get, getOne, fbAuth, updateUser, updateUserForm, generateToken,
 }
 
 function get(req, res, next) {
@@ -39,6 +39,12 @@ function updateUserForm(req, res, next) {
 function updateUser(req, res, next) {
   Users.update({ _id: req.params.id }, { $set: req.body })
     .then(DBres => res.json(DBres))
+    .catch(next)
+}
+
+function generateToken(req, res, next) {
+  axios.get(`https://graph.facebook.com/oauth/access_token?client_id=${fbId}&client_secret=${fbSecret}&grant_type=client_credentials`)
+    .then(response => res.json(response.data))
     .catch(next)
 }
 
