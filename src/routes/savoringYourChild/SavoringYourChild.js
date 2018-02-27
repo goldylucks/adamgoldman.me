@@ -11,6 +11,7 @@ import Testimonials from '../../components/Testimonials'
 import GetStarted from '../../components/GetStartedButton'
 import MessageMe from '../../components/MessageMe'
 import FbGateKeeper from '../../components/FbGateKeeper'
+import SavoringYourChildModulesComponent from '../../components/SavoringYourChildModulesComponent'
 
 import FAQContainer from './FAQContainer'
 import s from './SavoringYourChild.css'
@@ -30,11 +31,15 @@ const SavoringYourChild = ({ user, onLogin, onSubmitIntro }: Props) => (
         <p className="lead text-center">And appreciate the relationship you had in a resourceful way</p>
       </div>
       <div style={{ position: 'relative' }}>
-        <Typeform
-          data-url={`https://adamgoldman.typeform.com/to/${TYPEFORM_ID_SAVORING_INTRO}?user_id=${user._id}`}
-          style={{ width: '100%', height: 500 }}
-          onSubmit={() => submit(user._id, onSubmitIntro)}
-        />
+        {user.form && user.form.includes(TYPEFORM_ID_SAVORING_INTRO) ?
+          <SavoringYourChildModulesComponent />
+          :
+          <Typeform
+            data-url={`https://adamgoldman.typeform.com/to/${TYPEFORM_ID_SAVORING_INTRO}?user_id=${user._id}`}
+            style={{ width: '100%', height: 500 }}
+            onSubmit={() => submit(user._id, onSubmitIntro)}
+          />
+        }
         {!user._id &&
         <FbGateKeeper onLogin={onLogin} user={user} />
         }
