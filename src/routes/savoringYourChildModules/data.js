@@ -7,7 +7,7 @@ import {
   TYPEFORM_ID_SAVORING_SPECIAL_DAYS,
 } from '../../constants'
 
-
+// eslint-disable-next-line import/prefer-default-export
 export const modules = [
   {
     title: 'Peaceful Ending', description: 'Attach the moment of transition to your last happy memory', url: 'peaceful-ending', formId: TYPEFORM_ID_SAVORING_PEACEFUL_ENDING,
