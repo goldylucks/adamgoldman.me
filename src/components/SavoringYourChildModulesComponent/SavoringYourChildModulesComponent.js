@@ -3,9 +3,10 @@
 import React from 'react'
 
 import Card from '../Card'
+import { didUserFillForm } from '../../utils'
 
 type Props = {
-  modules: string,
+  modules: Object,
   user: Object,
 }
 
@@ -15,7 +16,7 @@ const SavoringYourChildModulesComponent = ({ modules, user }:Props) => (
       <div className="card-columns listrecent">
         {modules
           .map(m => (
-            <Card {...m} url={`/savoring-your-child/${m.url}`} key={m.url} user={user} />
+            <Card {...m} url={`/savoring-your-child/${m.url}`} key={m.url} isDone={didUserFillForm(user, m.formId)} />
           ))}
       </div>
     </section>
