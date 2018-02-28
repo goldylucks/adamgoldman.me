@@ -5,13 +5,19 @@ import React from 'react'
 import MessageMe from '../../components/MessageMe'
 import SavoringYourChildModulesComponent from '../../components/SavoringYourChildModulesComponent'
 
-const SavoringYourChildModules = () => (
+import { modules } from './data'
+
+type Props = {
+  user: Object,
+}
+
+const SavoringYourChildModules = ({ user }:Props) => (
   <div>
     <div className="container">
       <div className="mainheading">
         <h1 className="sitetitle">Which module you want to explore next?</h1>
       </div>
-      <SavoringYourChildModulesComponent />
+      <SavoringYourChildModulesComponent modules={modules} user={user} />
       <hr />
       <MessageMe />
     </div>
