@@ -12,6 +12,8 @@ import GetStarted from '../../components/GetStartedButton'
 import MessageMe from '../../components/MessageMe'
 import FbGateKeeper from '../../components/FbGateKeeper'
 import SavoringYourChildModulesComponent from '../../components/SavoringYourChildModulesComponent'
+import { modules } from '../savoringYourChildModules/data'
+
 
 import FAQContainer from './FAQContainer'
 import s from './SavoringYourChild.css'
@@ -32,7 +34,7 @@ const SavoringYourChild = ({ user, onLogin, onSubmitIntro }: Props) => (
       </div>
       <div style={{ position: 'relative' }}>
         {user.form && user.form.includes(TYPEFORM_ID_SAVORING_INTRO) ?
-          <SavoringYourChildModulesComponent />
+          <SavoringYourChildModulesComponent modules={modules} user={user} />
           :
           <Typeform
             data-url={`https://adamgoldman.typeform.com/to/${TYPEFORM_ID_SAVORING_INTRO}?user_id=${user._id}`}
