@@ -24,14 +24,30 @@ class FbLoginButton extends React.Component {
       return <a onClick={onLogout}>Logout</a>
     }
     return (
-      <div onClick={this.login} style={{ cursor: 'pointer' }}>
+      <div onClick={this.loginHandler} style={{ cursor: 'pointer' }}>
         <FA name="facebook" /> {text}
       </div>
     )
   }
 
-  login = () => {
-    global.FB.login(this.responseApi, { scope: 'email,public_profile' })
+  loginHandler = () => {
+    global.FB.login(this.checkLoginState, { scope: 'email,public_profile' })
+  }
+
+  checkLoginState = (response) => {
+    if (response.authResponse) {
+      this.responseApi(response.authResponse)
+    } else {
+      global.console.log('Login error')
+    }
+  }
+
+  responseApi = () => {
+    global.FB.api('/me?fields=id,name,picture',
+      (response) => {
+        this.responseFacebook({ userID: response.id, ...response })
+      },
+    )
   }
 
   responseFacebook = (response) => {
@@ -46,14 +62,6 @@ class FbLoginButton extends React.Component {
         global.console.error(err)
         global.alert('there was an error, please contact me')
       })
-  }
-
-  responseApi = () => {
-    global.FB.api('/me?fields=id,name,picture',
-      (response) => {
-        this.responseFacebook({ userID: response.id, ...response })
-      },
-    )
   }
 }
 
