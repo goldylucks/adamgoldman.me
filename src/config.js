@@ -42,6 +42,8 @@ module.exports = {
 
   fbPageId: process.env.FACEBOOK_PAGE_ID,
 
+  fbPageAccessToken: process.env.FB_PAGE_ACCESS_TOKEN,
+
   // Web analytics
   analytics: {
     // https://analytics.google.com/

@@ -15,7 +15,7 @@ router.route('/:id')
 router.route('/form/:id')
   .put(controller.updateUserForm)
 
-router.route('/fbAccessToken')
-  .get(controller.generateToken)
+router.route('/getFbReviews')
+  .get(controller.getFBPageReviews)
 
 export default router
