@@ -31,8 +31,6 @@ function getSchema() {
 
     form: [],
 
-    fbReview: String,
-
     createdAt: {
       type: Date,
       default: Date.now,

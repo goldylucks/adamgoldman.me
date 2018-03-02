@@ -40,7 +40,7 @@ module.exports = {
 
   typeFormApiKey: process.env.TYPEFORM_API_KEY,
 
-  fbPageId: process.env.FACEBOOK_PAGE_ID,
+  fbPageId: '1589876824360149',
 
   fbPageAccessToken: process.env.FB_PAGE_ACCESS_TOKEN,
 
