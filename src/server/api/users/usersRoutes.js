@@ -15,4 +15,7 @@ router.route('/:id')
 router.route('/form/:id')
   .put(controller.updateUserForm)
 
+router.route('/getFbReviews')
+  .get(controller.getFBPageReviews)
+
 export default router

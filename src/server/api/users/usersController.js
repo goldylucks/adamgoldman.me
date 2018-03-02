@@ -1,12 +1,12 @@
 import axios from 'axios'
 
-import { fbId, fbSecret } from '../../../config'
+import { fbId, fbSecret, fbPageId, fbPageAccessToken } from '../../../config'
 import { signToken } from '../../auth'
 
 import Users from './usersModel'
 
 export default {
-  get, getOne, fbAuth, updateUser, updateUserForm,
+  get, getOne, fbAuth, updateUser, updateUserForm, getFBPageReviews,
 }
 
 function get(req, res, next) {
@@ -76,4 +76,10 @@ function prepareUser(user) {
   delete user.password
   user.token = signToken(user._id)
   return user
+}
+
+function getFBPageReviews(req, res, next) {
+  axios.get(`https://graph.facebook.com/${fbPageId}/ratings?access_token=${fbPageAccessToken}`)
+    .then(response => res.json(response.data))
+    .catch(next)
 }
