@@ -67,6 +67,10 @@ const routes = {
       path: '/:page',
       load: () => import(/* webpackChunkName: 'page' */ './page'),
     },
+    {
+      path: '/admin-typeform',
+      load: () => import(/* webpackChunkName: 'adminTypeform' */ './adminTypeform'),
+    },
     // Wildcard routes, e.g. { path: '(.*)', ... } (must go last)
     {
       path: '(.*)',
