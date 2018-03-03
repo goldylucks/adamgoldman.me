@@ -80,7 +80,7 @@ class Layout extends React.Component {
     )
     this.updateUser(user)
     axios.put(`/api/users/${user._id}`, user)
-      .then(history.push('/savoring-your-child/test1'))
+      .then(history.push('/savoring-your-child/peaceful-ending'))
       .catch(err => global.console.error(err))
   }
 
