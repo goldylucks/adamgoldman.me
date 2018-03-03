@@ -3,11 +3,7 @@ import axios from 'axios'
 import { typeFormApiKey } from '../../../config'
 
 export default {
-  get, userForm,
-}
-
-function userForm(req, res) {
-  res.send(`test ${req.params.name}`)
+  get,
 }
 
 function get(req, res, next) {
