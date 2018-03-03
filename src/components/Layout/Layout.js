@@ -1,6 +1,5 @@
-// @flow
-
 import React from 'react'
+import PropTypes from 'prop-types'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
 import axios from 'axios'
 
@@ -20,12 +19,12 @@ import MessengerFixed from '../MessengerFixed'
 
 import s from './Layout.css'
 
-type Props = {
-  children: any,
-  path: string,
-}
-
 class Layout extends React.Component {
+  static propTypes = {
+    children: PropTypes.any.isRequired,
+    path: PropTypes.string.isRequired,
+  }
+
   state = {
     user: {},
   }
@@ -34,8 +33,6 @@ class Layout extends React.Component {
     const user = this.syncUserFromLS()
     this.gateKeeper(user)
   }
-
-  props: Props
 
   render() {
     const { children, path } = this.props
