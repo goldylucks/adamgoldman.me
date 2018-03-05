@@ -39,7 +39,7 @@ Most of the work I do is content free, and you get to choose how much you want t
       <h2>Questions about loss</h2>
       {[
         {
-          title: 'Wouldn\'t pepole think I don\'t care for the person if I\'m not in pain?',
+          title: 'Wouldn\'t people think I don\'t care for the person if I\'m not in pain?',
           content: `
 That depends on the people around you.
 
