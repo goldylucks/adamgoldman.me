@@ -73,7 +73,7 @@ good for beginners in the field of how to learn, especially for math and science
 ## Taking tests
 - Scan entire test, start with hardest question, pull away to an easy question the moment you get stuck. This will get your difuse mode thinking working on the hard task in the background, as you work yoru way through the easy questions. I've never thought about that personally, it sounds like a nifty little tricks indeed! This can be applied to any task, at the office or in our personal lives.
 - Panic and anxiety - Move THROUGH the sensations instead of fighting them, and turn your attention inwards, to your breathing and your body. Acknowledge what's going on PHYSICALLY, i.e. "my palms are sweaty, my heart is beating a bit faster". That's better than "OMG what's happening to my body", which is generating a fear OF the fear, and then your screwed ;)
-- Study in the same place or at least a similar enviornment as the place you will take the test.
+- Study in the same place or at least a similar environment as the place you will take the test.
 - Bonus: [Talk to me](/lets-talk/), I have some mind tricks up my sleeve :)
 - Doube check your answers in random order, not sequentially front to back, so you "catch you brain" ungaurd and process the information differently.
 - Write any negative thought immediately before the test.

@@ -85,11 +85,11 @@ export const lossGrief = [
     content: `
 That depends on the people around you.
 
-Sometimes the best option is to put a frown face with certain people at certain situations, even though your own response is already resourceful.
+Sometimes you have to be very careful with what you say with certain people at certain situations, even though your own response is already more peaceful.
 
 However for many people, you can send them this page and let them read by themselves what is possible.
 
-If you have a real "hard case" or "skeptic" in your close enviornment, [messege me](${MESSENGER_LINK_WELCOME}) and we'll think together how to "package" the information in a way they could digest easier.
+If you have a real "hard case" or "skeptic" in your close environment, [message me](${MESSENGER_LINK_WELCOME}) and we'll think together how to "package" the information in a way they could digest in a softer way.
 `,
   },
 
@@ -118,9 +118,9 @@ So in a way, you will be with them more and feel them more.
   {
     title: 'Shouldn\'t loss be painful?',
     content: `
-To a certain extent, yes, and I would be very suspicious if a parent would feel ZERO pain whatsoever about losing their child.
+Absolutely. I would be very suspicious if a parent would feel ZERO pain whatsoever about losing their child.
 
-I haven't lost any children, but I've done this process myself with many other loved ones I've lost, and of course I wish some of them would still be here with me.
+I haven't lost any children, but I've done this process myself with many other loved ones I've lost, and of course I wish some of them were still here with me.
 
 BUT ...
 
@@ -128,15 +128,15 @@ I can fully feel their presence, appreciate our good times, and all that I have 
 
 When I think about any of them I smile. I get a rush of good feelings.
 
-It propells me and draws me even more towards the future, and that is what I want to offer you as well.
+It propels me and draws me even more towards the future, and that is what I want to offer you as well.
 `,
   },
   {
-    title: 'Isn\'t grieving a way to honor the dead?',
+    title: 'Isn\'t grieving a way to honor your child?',
     content: `
 Indeed, if there was nothing valuable lost, there would be no need to grieve in the first place.
 
-The fact that you are grieving is a clear sign you honor your child.
+The fact that you are grieving is a clear sign that you honor & love your child.
 
 And I'd like to offer you a way to honor them even MORE, by expriencing their presence more fully, and have their memory propel you forward towards a brigther future.
 

@@ -30,7 +30,7 @@ const SavoringYourChild = ({ user, onLogin, onSubmitIntro }: Props) => (
     <div className="container">
       <div className="mainheading">
         <h1 className="sitetitle text-center">How to honor your child&apos;s memory after the transition</h1>
-        <p className="lead text-center">And appreciate the relationship you had in a resourceful way</p>
+        <p className="lead text-center">And appreciate the relationship you had in a healing way</p>
       </div>
       <div style={{ position: 'relative' }}>
         {user.form && user.form.includes(TYPEFORM_ID_SAVORING_INTRO) ?
@@ -54,15 +54,15 @@ const SavoringYourChild = ({ user, onLogin, onSubmitIntro }: Props) => (
       <GetStarted text="Get Started" />
       <hr className={s.hr} />
       <section>
-        <h1 className="text-center">What will I learn?</h1>
+        <h1 className="text-center">Learn how to ...</h1>
         <div className="row justify-content-md-center">
           <div className="col col-lg-10">
             <Benefits benefits={[
-              'How to enjoy thinking about your child',
-              'How to focus on the good experiences',
-              'How to look forward to your future',
-              'How to increase the peace, love & acceptance in your life',
-              'How to feel your child\'s presence even more',
+              'Enjoy thinking about your child again',
+              'Focus on the good experiences',
+              'Feel your child\'s presence even more',
+              'Enjoy looking forward to your future',
+              'Increase the peace & love in your life',
             ]}
             />
           </div>

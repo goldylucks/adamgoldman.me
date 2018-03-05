@@ -65,7 +65,7 @@ Here's the gist of it:
 - **State based learning**
 [oYgN-m8Q5yE](YtEmbedd)
 
-  - If u'll have a test in a noisy place, study in a noisy enviornment
+  - If u'll have a test in a noisy place, study in a noisy environment
   
 - [Coffee](/blog/coffee/) is okay!
 

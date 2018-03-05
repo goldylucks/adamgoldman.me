@@ -47,7 +47,7 @@ Sometimes the best option is to put a frown face with certain people at certain 
 
 However for many people, you can send them this page and let them read by themselves what is possible.
 
-If you have a real "hard case" or "skeptic" in your close enviornment, [messege me](${MESSENGER_LINK_WELCOME}) and we'll think together how to "package" the information in a way they could digest easier.
+If you have a real "hard case" or "skeptic" in your close environment, [message me](${MESSENGER_LINK_WELCOME}) and we'll think together how to "package" the information in a way they could digest easier.
 `,
         },
 
@@ -90,7 +90,7 @@ I am offering you a [proven protocol](/loss/protocol) to proactively design some
             content: `
 To a certain extent, yes, and I would be very suspicious if there was NO pain whatsoever.
 
-I've done this [process](/loss/protocol) myself regarding many people I've lost, and of course I wish some of them would still be here with me.
+I've done this [process](/loss/protocol) myself regarding many people I've lost, and of course I wish some of them were still here with me.
 
 BUT ...
 
@@ -98,7 +98,7 @@ I can fully [feel their presence](/loss/resourceful-response), appreciate our go
 
 When I think about any of them I smile. I get a rush of good feelings.
 
-It propells me and draws me even more towards the future, and [that is what I want to offer you](/loss/participate) as well.
+It propels me and draws me even more towards the future, and [that is what I want to offer you](/loss/participate) as well.
 `,
           },
           {
