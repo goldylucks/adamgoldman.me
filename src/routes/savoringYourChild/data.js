@@ -21,7 +21,7 @@ export const testimonials = [
   },
   {
     title: 'My heart swells with love',
-    text: 'I can think about him and feel happy. I have been going through positive memories and they make me so happy. My heart swells with love. you are awesome. I know I have a purpose. I know Tyler will live in my heart as long as I am here on earth.',
+    text: 'I can think about him and feel happy. I have been going through positive memories and they make me so happy. My heart swells with love. You are awesome. I know I have a purpose. I know Tyler will live in my heart as long as I am here on earth.',
     name: 'Elizabeth West',
     nameMeta: 'Mother of Tyler, died of suicide',
     imgSrc: cloudImg('users/elizabeth_west_avatar'),
