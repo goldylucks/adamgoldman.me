@@ -96,7 +96,7 @@ class Layout extends React.Component {
       const formResponses = await axios.get(`api/typeform/${formId}`)
       const formData = formResponses.data.responses.filter(res => res.hidden.user_id === user._id)[0].answers // eslint-disable-line max-len
       global.console.log('formData', formData)
-      if (formData.rating_i8cl728cKMFg <= 2 || !formData.rating_i8cl728cKMFg.length) {
+      if (formData.rating_i8cl728cKMFg <= 2 || !formData.rating_i8cl728cKMFg) {
         openMessengerBotSavoringConcern(formId)
         return
       }
