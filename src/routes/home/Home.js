@@ -21,29 +21,29 @@ const Home = ({ transcripts, tutorials }: Props) => (
         <Markdown
           className="lead"
           source={`
-Book a [session](${MESSENGER_LINK_BOOK_SESSION}), try a [tutorial](/tools), [learn](/transcripts) what's possible, and [read](/FB_REVIEWS) what others have to say.
+Book a [session](${MESSENGER_LINK_BOOK_SESSION}), hack your [mind](/tools), [learn](/transcripts) what's possible, and [read](/FB_REVIEWS) what others have to say.
 `}
         />
       </div>
       <section className="recent-posts">
         <div className="section-title">
-          <h2><span>Featured Transcripts</span></h2>
-        </div>
-        <div className="card-columns card-columns-three listrecent">
-          {transcripts
-            .map(t => (
-              <Card {...t} url={`/blog/${t.url}`} key={t.url} />
-            ))}
-        </div>
-      </section>
-      <section className="recent-posts">
-        <div className="section-title">
-          <h2><span>Featured Tutorials</span></h2>
+          <h2><span>Hack Your Mind</span></h2>
         </div>
         <div className="card-columns card-columns-three listrecent">
           {tutorials
             .map(t => (
               <Card {...t} url={`/tools/${t.url}`} key={t.url} />
+            ))}
+        </div>
+      </section>
+      <section className="recent-posts">
+        <div className="section-title">
+          <h2><span>Mind Hacking Sessions Transcripts</span></h2>
+        </div>
+        <div className="card-columns card-columns-three listrecent">
+          {transcripts
+            .map(t => (
+              <Card {...t} url={`/blog/${t.url}`} key={t.url} />
             ))}
         </div>
       </section>
