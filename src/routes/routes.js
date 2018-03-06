@@ -71,6 +71,10 @@ const routes = {
       path: '/admin-typeform',
       load: () => import(/* webpackChunkName: 'adminTypeform' */ './adminTypeform'),
     },
+    {
+      path: '/customer-chat',
+      load: () => import(/* webpackChunkName: 'customerChat' */ './customerChat'),
+    },
     // Wildcard routes, e.g. { path: '(.*)', ... } (must go last)
     {
       path: '(.*)',
