@@ -5,12 +5,13 @@ import axios from 'axios'
 
 import {
   TYPEFORM_ID_SAVORING_INTRO,
-  // TYPEFORM_ID_SAVORING_PEACEFUL_ENDING,
-  // TYPEFORM_ID_SAVORING_REENGAGING_THE_FUTURE,
-  // TYPEFORM_ID_SAVORING_RELATIONSHIP_CONSOLIDATION,
-  // TYPEFORM_ID_SAVORING_REUNION,
-  // TYPEFORM_ID_SAVORING_SAVORING_THE_FUTURE,
-  // TYPEFORM_ID_SAVORING_SPECIAL_DAYS,
+  TYPEFORM_ID_SAVORING_PEACEFUL_ENDING,
+  TYPEFORM_ID_SAVORING_REENGAGING_THE_FUTURE,
+  TYPEFORM_ID_SAVORING_RELATIONSHIP_CONSOLIDATION,
+  TYPEFORM_ID_SAVORING_REUNION,
+  TYPEFORM_ID_SAVORING_SAVORING_THE_FUTURE,
+  TYPEFORM_ID_SAVORING_SPECIAL_DAYS,
+  TYPEFORM_ID_SAVORING_REVIEW_TEST,
 } from '../../constants'
 import history from '../../history'
 import Footer from '../Footer'
@@ -95,14 +96,14 @@ class Layout extends React.Component {
       const formResponses = await axios.get(`api/typeform/${formId}`)
       const formData = formResponses.data.responses.filter(res => res.hidden.user_id === user._id)[0].answers // eslint-disable-line max-len
       global.console.log('formData', formData)
+      if (formData.rating_i8cl728cKMFg <= 2 || !formData.rating_i8cl728cKMFg.length) {
+        openMessengerBotSavoringConcern(formId)
+        return
+      }
     } catch (err) {
       global.alert('there was an error, please contact me, sorry for this!')
       global.console.error('err', err)
     }
-    // if (objections) {
-    //   openMessengerBotSavoringConcern(formId)
-    //   return
-    // }
     history.push('/savoring-your-child/modules')
   }
 
@@ -131,14 +132,15 @@ class Layout extends React.Component {
 export default withStyles(s)(Layout)
 
 /* eslint-disable max-len */
-// function openMessengerBotSavoringConcern(formId) {
-//   let formName
-//   if (formId === TYPEFORM_ID_SAVORING_PEACEFUL_ENDING) { formName = 'peaceful-ending' }
-//   if (formId === TYPEFORM_ID_SAVORING_REENGAGING_THE_FUTURE) { formName = 'reengaging-the-future' }
-//   if (formId === TYPEFORM_ID_SAVORING_RELATIONSHIP_CONSOLIDATION) { formName = 'relationship-consolidation' }
-//   if (formId === TYPEFORM_ID_SAVORING_REUNION) { formName = 'reunion' }
-//   if (formId === TYPEFORM_ID_SAVORING_SAVORING_THE_FUTURE) { formName = 'savoring-the-future' }
-//   if (formId === TYPEFORM_ID_SAVORING_SPECIAL_DAYS) { formName = 'special-days' }
-//   window.open(`https://m.me/adamgoldman.me?ref=${formName}-concern`, '_newtab')
-// }
+function openMessengerBotSavoringConcern(formId) {
+  let formName
+  if (formId === TYPEFORM_ID_SAVORING_PEACEFUL_ENDING) { formName = 'peaceful-ending' }
+  if (formId === TYPEFORM_ID_SAVORING_REENGAGING_THE_FUTURE) { formName = 'reengaging-the-future' }
+  if (formId === TYPEFORM_ID_SAVORING_RELATIONSHIP_CONSOLIDATION) { formName = 'relationship-consolidation' }
+  if (formId === TYPEFORM_ID_SAVORING_REUNION) { formName = 'reunion' }
+  if (formId === TYPEFORM_ID_SAVORING_SAVORING_THE_FUTURE) { formName = 'savoring-the-future' }
+  if (formId === TYPEFORM_ID_SAVORING_SPECIAL_DAYS) { formName = 'special-days' }
+  if (formId === TYPEFORM_ID_SAVORING_REVIEW_TEST) { formName = 'review-test' }
+  window.open(`https://m.me/adamgoldman.me?ref=${formName}-concern`, '_newtab')
+}
 /* eslint-enable max-len */
