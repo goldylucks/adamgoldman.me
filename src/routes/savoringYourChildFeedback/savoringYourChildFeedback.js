@@ -50,6 +50,12 @@ const SavoringYourChildFeedback = () => (
         ])}
       </section>
       <hr />
+      <section>
+        <h1 className="text-center">Affiliations</h1>
+        {RenderComments([
+          { path: 'groups', headline: 'Groups', description: 'Which online groups are you a member of? Are you an admin/mod of the group, or you know the admins?' },
+        ])}
+      </section>
       <MessageMe />
     </div>
   </FacebookProvider>
