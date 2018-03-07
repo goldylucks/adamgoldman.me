@@ -16,6 +16,12 @@ const SavoringYourChildFeedback = () => (
         <h1 className="sitetitle">Collaborative feedback</h1>
       </div>
       <section>
+        <h1 className="text-center">Annual parents conference</h1>
+        {RenderComments([
+          { path: 'attend', headline: 'Attend', description: 'You think I (Adam) should attend or give a talk at the conference?' },
+        ])}
+      </section>
+      <section>
         <h1 className="text-center">About the site</h1>
         {RenderComments([
           { path: 'name', headline: 'Name', description: 'How would you call the site?' },
