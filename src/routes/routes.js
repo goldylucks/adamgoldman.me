@@ -31,6 +31,10 @@ const routes = {
       load: () => import(/* webpackChunkName: 'savoringYourChildModules' */ './savoringYourChildModules'),
     },
     {
+      path: '/savoring-your-child/feedback',
+      load: () => import(/* webpackChunkName: 'savoringYourChildFeedback' */ './savoringYourChildFeedback'),
+    },
+    {
       // using array because soon we will add more sections
       path: ['pricing'].map(s => `/savoring-your-child/${s}`),
       load: () => import(/* webpackChunkName: 'savoringYourChildSection' */ './savoringYourChildSection'),

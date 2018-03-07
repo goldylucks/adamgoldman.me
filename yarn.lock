@@ -7809,6 +7809,16 @@ react-error-overlay@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-4.0.0.tgz#d198408a85b4070937a98667f500c832f86bd5d4"
 
+react-facebook@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/react-facebook/-/react-facebook-4.2.1.tgz#c4462574347ac3678662248e9f6526995bd6eb48"
+  dependencies:
+    babel-runtime "^6.26.0"
+    can-use-dom "^0.1.0"
+    debug "^3.1.0"
+    prop-types "^15.6.0"
+    react-spinner-children "^1.0.8"
+
 react-fontawesome@^1.6.1:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/react-fontawesome/-/react-fontawesome-1.6.1.tgz#eddce17e7dc731aa09fd4a186688a61793a16c5c"
@@ -7862,6 +7872,13 @@ react-slick@^0.18.0:
     json2mq "^0.2.0"
     object-assign "^4.1.0"
     opencollective "^1.0.3"
+
+react-spinner-children@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/react-spinner-children/-/react-spinner-children-1.0.8.tgz#6fdd6a89593c5f233bb56f4deccb812382e6ca74"
+  dependencies:
+    prop-types "^15.6.0"
+    spin.js "^2.3.2"
 
 react-test-renderer@^16.0.0:
   version "16.2.0"
@@ -8830,6 +8847,10 @@ spdx-license-ids@^1.0.2:
 specificity@^0.3.1:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/specificity/-/specificity-0.3.2.tgz#99e6511eceef0f8d9b57924937aac2cb13d13c42"
+
+spin.js@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/spin.js/-/spin.js-2.3.2.tgz#6caa56d520673450fd5cfbc6971e6d0772c37a1a"
 
 split-string@^3.0.1, split-string@^3.0.2:
   version "3.1.0"
