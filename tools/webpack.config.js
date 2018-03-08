@@ -487,7 +487,7 @@ function fbAppId() {
 }
 
 function baseUrl() {
-  if (isStaging) { return '"http://adamgoldman-staging.herokuapp.com"' }
+  if (isStaging) { return '"https://adamgoldman-staging.herokuapp.com"' }
   if (isProduction) { return '"http://www.adamgoldman.me"' }
   return '"http://localhost:3000"'
 }
