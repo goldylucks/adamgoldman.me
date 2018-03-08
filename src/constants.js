@@ -8,9 +8,9 @@ export const EMAIL = 'goldy@adamgoldman.me'
 export const DOMAIN = 'http://www.adamgoldman.me'
 export const FB_REVIEWS = 'https://www.facebook.com/adamgoldman.me/reviews/'
 export const MESSENGER_LINK = 'https://m.me/adamgoldman.me'
-export const MESSENGER_LINK_BOOK_SESSION = `${MESSENGER_LINK}?ref=book-session`
-export const MESSENGER_LINK_WELCOME = `${MESSENGER_LINK}?ref=welcome`
-export const MESSENGER_LINK_SAVORING_CONTACT = `${MESSENGER_LINK}?ref=savoring-contact-button`
+export const MESSENGER_LINK_BOOK_SESSION = `${DOMAIN}/book-session`
+export const MESSENGER_LINK_WELCOME = `${DOMAIN}/contact`
+export const MESSENGER_LINK_SAVORING_CONTACT = `${DOMAIN}/savoring-your-child/contact`
 export const TWITTER_HANDLE = 'adamthegoldman'
 
 export const TYPEFORM_ID_SAVORING_INTRO = 'VHYYNS'

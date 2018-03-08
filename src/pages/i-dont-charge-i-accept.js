@@ -1,4 +1,5 @@
 import { cloudImg } from '../utils'
+import { MESSENGER_LINK_WELCOME } from '../constants'
 
 export default {
   title: "I don't charge I accept",
@@ -84,6 +85,6 @@ That's perfectly fine, there are many ways you can contribute!
 
 ---
 
-If we haven't done [anything](/tools/) together [yet](/lets-talk/), **what can I do you for my friend?**
+If we haven't done [anything together yet](/tools/), **[what can I do you for my friend](${MESSENGER_LINK_WELCOME})?**
 `,
 }

@@ -45,6 +45,18 @@ if (__DEV__) { // eslint-disable-line no-undef
   app.enable('trust proxy')
 }
 
+app.get('/book-session', (req, res) => {
+  res.status(301).redirect('https://m.me/adamgoldman.me?ref=book-session')
+})
+
+app.get('/contact', (req, res) => {
+  res.status(301).redirect('https://m.me/adamgoldman.me?ref=welcome')
+})
+
+app.get('/savoring-your-child/contact', (req, res) => {
+  res.status(301).redirect('https://m.me/adamgoldman.me?ref=savoring-contact-button')
+})
+
 //
 // Register API
 //
