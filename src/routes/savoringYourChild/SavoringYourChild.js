@@ -30,7 +30,7 @@ const SavoringYourChild = ({ user, onLogin, onSubmitIntro }: Props) => (
     <div className="container">
       <div className="mainheading">
         <h1 className="sitetitle text-center">How to honor your child&apos;s memory after the transition</h1>
-        <p className="lead text-center">And appreciate the relationship you had in a healing way</p>
+        <p className="lead text-center">And savor the relationship in a healing way</p>
       </div>
       <div style={{ position: 'relative' }}>
         {user.form && user.form.includes(TYPEFORM_ID_SAVORING_INTRO) ?
