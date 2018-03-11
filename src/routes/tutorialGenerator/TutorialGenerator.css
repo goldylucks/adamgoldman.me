@@ -1,26 +1,7 @@
-.stepHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.inputHalf {
-  width: 50%;
-  display: inline-block;
-}
-
-.stepSection {
-  margin-bottom: 20px;
-}
-
-.answersHr {
-  margin: 15px 5px !important;
-}
-
 .controls {
   position: fixed;
   bottom: 20px;
-  right: 39%;
+  right: 10px;
   display: flex;
   flex-direction: row;
 }
@@ -34,6 +15,29 @@
   align-items: center;
   background: #fff;
   border-radius: 50%;
+  color: inherit;
+  text-decoration: none !important;
 }
 
+.answerActions {
+  transition: 0.5s opacity;
+  opacity: 0;
+}
 
+.answerActions > * {
+  cursor: pointer;
+}
+
+.answer:hover .answerActions{
+  opacity: 1;
+}
+
+.answerSettingsToggle {
+  margin-right: 20px;
+  transition: 0.5s opacity;
+  opacity: 0.5;
+}
+
+.answerSettingsToggle.isActive {
+  opacity: 1;
+}

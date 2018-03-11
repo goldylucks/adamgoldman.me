@@ -1,8 +1,6 @@
 import React from 'react'
 import axios from 'axios'
 
-import Layout from '../../components/Layout'
-
 import TutorialGenerator from './TutorialGenerator'
 
 const title = 'Brain Hacking Automation Tools Generator'
@@ -17,9 +15,7 @@ async function action({ params }) {
     description:
       'Create a brain tool',
     component: (
-      <Layout path={path}>
-        <TutorialGenerator data={data} url={params.tool} />
-      </Layout>
+      <TutorialGenerator data={data} url={params.tool} />
     ),
   }
 }
