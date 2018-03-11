@@ -1,7 +1,9 @@
 // @flow
 
 import React from 'react'
-import FA from 'react-fontawesome'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import handPointsLeft from '@fortawesome/fontawesome-free-regular/faHandPointLeft'
+import handPointsRight from '@fortawesome/fontawesome-free-regular/faHandPointRight'
 
 type Props = {
   children: any,
@@ -11,8 +13,8 @@ type Props = {
 const Answer = ({ children, isRtl }: Props) => (
   <div className={`tool-answer ${!isRtl ? '' : 'rtl'}`}>
     {isRtl
-      ? <FA name="hand-o-left" style={{ marginLeft: 10 }} />
-      : <FA name="hand-o-right" style={{ marginRight: 10 }} />}
+      ? <FontAwesomeIcon icon={handPointsLeft} style={{ marginLeft: 10 }} />
+    : <FontAwesomeIcon icon={handPointsRight} style={{ marginRight: 10 }} />}
     {children}
   </div>
 )

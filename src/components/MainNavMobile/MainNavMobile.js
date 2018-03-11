@@ -2,7 +2,9 @@
 
 import React from 'react'
 import ClickOutside from 'react-click-outside'
-import FA from 'react-fontawesome'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import faBars from '@fortawesome/fontawesome-free-solid/faBars'
+import faFacebook from '@fortawesome/fontawesome-free-brands/faFacebook'
 import cx from 'classnames'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
 
@@ -42,7 +44,7 @@ class MainNavMobile extends React.Component {
         onClickOutside={this.close}
         className="clearfix d-sm-block d-md-none"
       >
-        <FA name="bars" style={{ marginRight: 10 }} onClick={this.toggle} />
+        <FontAwesomeIcon icon={faBars} style={{ marginRight: 10 }} onClick={this.toggle} />
         <div
           className={
             cx(
@@ -67,7 +69,7 @@ class MainNavMobile extends React.Component {
               <li className="nav-item" style={{ marginTop: 20 }}>
                 { !this.props.isSavoring
                   ? <ExternalA className="nav-link btn btn-primary btn-block" href={MESSENGER_LINK_BOOK_SESSION}>Book a session</ExternalA>
-                  : <span className="nav-link btn btn-primary btn-sm"><FA name="facebook" /> Login</span>
+                  : <span className="nav-link btn btn-primary btn-sm"><FontAwesomeIcon icon={faFacebook} /> Login</span>
                 }
               </li>
             </ul>

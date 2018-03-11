@@ -1,7 +1,8 @@
 // @flow
 
 import React from 'react'
-import FA from 'react-fontawesome'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import faFacebookF from '@fortawesome/fontawesome-free-brands/faFacebookF'
 import axios from 'axios'
 
 type Props = {
@@ -25,39 +26,36 @@ class FbLoginButton extends React.Component {
     }
     return (
       <div onClick={this.loginHandler} style={{ cursor: 'pointer' }}>
-        <FA name="facebook" /> {text}
+        <FontAwesomeIcon icon={faFacebookF} /> {text}
       </div>
     )
   }
 
   loginHandler = () => {
-    global.FB.login(this.checkLoginState, { scope: 'email,public_profile' })
+    global.FB.login(this.fbLogin, { scope: 'email,public_profile' })
   }
 
-  checkLoginState = (response) => {
-    if (response.authResponse) {
-      this.responseApi(response.authResponse)
-    } else {
-      global.console.log('Login error')
+  fbLogin = (response) => {
+    if (response.status !== 'connected') {
+      global.alert('please authorize login to continue')
+      return
     }
-  }
-
-  responseApi = () => {
+    const { accessToken, userID } = response.authResponse
     global.FB.api('/me?fields=id,name,picture',
-      (response) => {
-        this.responseFacebook({ userID: response.id, ...response })
+      ({ name, picture }) => {
+        this.userServerLogin({
+          fbUserId: userID, fbClientAccessToken: accessToken, name, picture,
+        })
       },
     )
   }
 
-  responseFacebook = (response) => {
-    if (response.picture && response.picture.data && response.picture.data.url) {
-      response.fbPictureUrl = response.picture.data.url
+  userServerLogin = (user) => {
+    if (user.picture && user.picture.data && user.picture.data.url) {
+      user.fbPictureUrl = user.picture.data.url
     }
-    axios.post('/api/users/fbAuth', response)
-      .then((serverRes) => {
-        this.props.onLogin(serverRes.data)
-      })
+    axios.post('/api/users/fbAuth', user)
+      .then((serverRes) => { this.props.onLogin(serverRes.data) })
       .catch((err) => {
         global.console.error(err)
         global.alert('there was an error, please contact me')

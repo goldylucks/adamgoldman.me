@@ -1,7 +1,7 @@
 .benefit {
   font-size: 30px;
 }
-.benefit span {
+.benefit > * {
   color: green;
   margin-right: 10px;
 }
