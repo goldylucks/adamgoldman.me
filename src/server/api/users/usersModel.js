@@ -24,6 +24,7 @@ function getSchema() {
 
     fbUserId: String,
     fbPictureUrl: String,
+    fbServerAccessToken: String,
 
     gender: String,
     childName: String,

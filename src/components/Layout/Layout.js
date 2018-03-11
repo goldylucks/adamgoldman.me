@@ -24,27 +24,27 @@ class Layout extends React.Component {
   static propTypes = {
     children: PropTypes.any.isRequired,
     path: PropTypes.string.isRequired,
-  }
-
-  state = {
-    user: {},
+    user: PropTypes.Object.isRequired,
+    onLogin: PropTypes.function.isRequired,
+    onLogout: PropTypes.function.isRequired,
+    onUpdateUser: PropTypes.function.isRequired,
   }
 
   componentDidMount() {
-    const user = this.syncUserFromLS()
-    this.gateKeeper(user)
+    this.gateKeeper(this.props.user)
   }
 
   render() {
-    const { children, path } = this.props
-    const { user } = this.state
+    const {
+      children, path, onLogin, onLogout, user,
+    } = this.props
     return (
-      <div>
-        <MainNav path={path} user={user} onLogin={this.login} onLogout={this.logout} />
+      <div className={s.container}>
+        <MainNav path={path} user={user} onLogin={onLogin} onLogout={onLogout} />
         <div>
           {React.cloneElement(children, {
             user,
-            onLogin: this.login,
+            onLogin,
             onSubmitIntro: this.submitIntro,
             onSubmitModule: this.submitModule,
           })}
@@ -57,29 +57,14 @@ class Layout extends React.Component {
     )
   }
 
-  syncUserFromLS() {
-    let user = localStorage.getItem('user')
-    if (user) {
-      user = JSON.parse(user)
-      global.console.log('user logged in', user)
-      this.setState({ user })
-    }
-    return user || {}
-  }
-
-  login = (user) => {
-    global.console.log('user login', user)
-    this.updateUser(user)
-  }
-
   submitIntro = ({ gender, childName, genderParent }) => {
     const user = Object.assign(
       {},
-      this.state.user,
+      this.props.user,
       { gender, childName, genderParent },
       { form: [TYPEFORM_ID_SAVORING_INTRO] },
     )
-    this.updateUser(user)
+    this.props.onUpdateUser(user)
     axios.put(`/api/users/${user._id}`, user)
       .then(history.push('/savoring-your-child/peaceful-ending'))
       .catch(err => global.console.error(err))
@@ -87,9 +72,9 @@ class Layout extends React.Component {
 
   submitModule = async (formId) => {
     global.console.log('submitted form', formId)
-    const user = Object.assign({}, this.state.user)
+    const user = Object.assign({}, this.props.user)
     user.form.push(formId)
-    this.updateUser(user)
+    this.props.onUpdateUser(user)
     axios.put(`/api/users/form/${user._id}`, formId)
       .catch(err => global.console.error(err))
     try {
@@ -105,17 +90,6 @@ class Layout extends React.Component {
       global.console.error('err', err)
     }
     history.push('/savoring-your-child/modules')
-  }
-
-  logout = () => {
-    global.console.log('user logout')
-    localStorage.removeItem('user')
-    this.setState({ user: {} })
-  }
-
-  updateUser(user) {
-    this.setState({ user })
-    localStorage.setItem('user', JSON.stringify(user))
   }
 
   gateKeeper(user) {

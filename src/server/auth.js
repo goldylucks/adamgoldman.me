@@ -1,16 +1,17 @@
 import jwt from 'jsonwebtoken'
 import expressJwt from 'express-jwt'
 
-import { adminPass, jwtSecret } from '../config'
+import { jwtSecret } from '../config'
+
+import User from './api/users/usersModel'
 
 const checkToken = expressJwt({ secret: jwtSecret })
 
 export function isAdmin(req, res, next) {
-  if (req.headers['admin-pass'] !== adminPass) {
-    res.status(401).send('turn away slowly. No questions asked.')
+  if (!req.user.isAdmin) {
+    res.status(401).send('Only admins can do this operation!')
     return
   }
-
   next()
 }
 
@@ -37,4 +38,17 @@ export function isOwner(req, res, next) {
   }
 
   next()
+}
+
+export function getFreshUser(req, res, next) {
+  User.findById(req.user._id)
+    .then((user) => {
+      if (!user) {
+        res.status(401).send("token didn't match any user")
+        return
+      }
+      req.user = user
+      next()
+    })
+    .catch(next)
 }

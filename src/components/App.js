@@ -13,6 +13,7 @@ import axios from 'axios'
 
 import { isMobile } from '../utils'
 import { FB_APP_ID, BASE_URL } from '../constants'
+import LoadingSite from '../components/LoadingSite'
 
 axios.defaults.baseURL = BASE_URL
 
@@ -68,10 +69,6 @@ const initFbSdk = () => {
 };
 /* eslint-enable */
 
-const setAdminPass = () => {
-  axios.defaults.headers.common['admin-pass'] = localStorage.getItem('adminPass')
-}
-
 class App extends React.PureComponent {
   static propTypes = {
     context: PropTypes.shape(ContextType).isRequired,
@@ -80,21 +77,78 @@ class App extends React.PureComponent {
 
   static childContextTypes = ContextType;
 
+  state = {
+    user: {},
+    isUiReady: false,
+  }
+
   getChildContext() {
     return this.props.context
   }
 
   componentDidMount() {
     initFbSdk()
-    setAdminPass()
     axios.defaults.headers.common['is-mobile'] = isMobile()
+    this.syncUserFromLS()
   }
 
   render() {
     // NOTE: If you need to add or modify header, footer etc. of the app,
     // please do that inside the Layout component.
-    return React.Children.only(this.props.children)
+    if (!this.state.isUiReady) {
+      return <LoadingSite />
+    }
+    return React.Children.only(React.cloneElement(this.props.children, {
+      user: this.state.user,
+      onLogin: this.login,
+      onLogout: this.logout,
+      onUpdateUser: this.updateUser,
+    }))
+  }
+
+  login = (user) => {
+    global.console.log('user login', user)
+    setAuthHeader(user.token)
+    this.updateUser(user)
+  }
+
+  logout = () => {
+    global.console.log('user logout')
+    localStorage.removeItem('user')
+    delete axios.defaults.headers.common.authorization // TODO :: check if this works
+    this.setState({ user: {} })
+  }
+
+  updateUser = (user) => {
+    this.setState({ user })
+    localStorage.setItem('user', JSON.stringify(user))
+  }
+
+  syncUserFromLS() {
+    let user = localStorage.getItem('user')
+    if (user) {
+      user = JSON.parse(user)
+      this.setState({ user })
+      setAuthHeader(user.token)
+      axios.get(`/api/users/${user._id}`)
+        .then(({ data }) => {
+          global.console.log('[user logged in]', user)
+          this.updateUser(data)
+          this.setState({ isUiReady: true })
+        })
+        .catch((err) => {
+          this.setState({ isUiReady: true })
+          global.alert('there was an error logging you on, I will look into it and get back at you')
+          global.console.error(err)
+        })
+    } else {
+      this.setState({ isUiReady: true })
+    }
   }
 }
 
 export default App
+
+function setAuthHeader(token) {
+  axios.defaults.headers.common.authorization = `Bearer ${token}`
+}

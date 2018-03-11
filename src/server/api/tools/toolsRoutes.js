@@ -1,11 +1,11 @@
-import { isAdmin } from '../../auth'
+import { isAdmin, decodeToken, getFreshUser } from '../../auth'
 
 import controller from './toolsController'
 
 const router = require('express').Router()
 
 router.route('/')
-  .post(isAdmin, controller.updateOrCreate)
+  .post(decodeToken, getFreshUser, isAdmin, controller.updateOrCreate)
 
 router.route('/all')
   .get(controller.getAll)
