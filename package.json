@@ -62,7 +62,7 @@
     "mongoose": "^5.0.5",
     "node-fetch": "^2.0.0",
     "pretty-error": "^2.1.1",
-    "prop-types": "^15.6.0",
+    "prop-types": "^15.6.1",
     "query-string": "^5.0.0",
     "react": "^16.0.0",
     "react-autosize-textarea": "^3.0.2",
