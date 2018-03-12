@@ -266,7 +266,7 @@ class TutorialGenerator extends React.Component {
 
               { a.isSetInput && (
                 <label htmlFor={`step-${sIdx}-answer-${aIdx}-test`} className="form-check-label">
-                  <input type="radio" className="form-check-input" id={`step-${sIdx}-answer-${aIdx}-test`} onChange={() => console.log('unselect all the others')} />
+                  <input type="radio" className="form-check-input" id={`step-${sIdx}-answer-${aIdx}-test`} onChange={() => console.log('unselect all the others!')} />
                   Set for test
                 </label>
               )
