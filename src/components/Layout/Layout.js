@@ -24,10 +24,10 @@ class Layout extends React.Component {
   static propTypes = {
     children: PropTypes.any.isRequired,
     path: PropTypes.string.isRequired,
-    user: PropTypes.Object.isRequired,
-    onLogin: PropTypes.function.isRequired,
-    onLogout: PropTypes.function.isRequired,
-    onUpdateUser: PropTypes.function.isRequired,
+    user: PropTypes.object.isRequired,
+    onLogin: PropTypes.func.isRequired,
+    onLogout: PropTypes.func.isRequired,
+    onUpdateUser: PropTypes.func.isRequired,
   }
 
   componentDidMount() {
