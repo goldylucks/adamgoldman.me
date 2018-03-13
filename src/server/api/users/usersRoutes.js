@@ -14,6 +14,9 @@ router.route('/:id')
 router.route('/form/:id')
   .put(decodeToken, isOwner, controller.updateUserForm)
 
+router.route('/:id/make-admin')
+  .put(decodeToken, isOwner, controller.makeAdmin)
+
 // router.route('/getFbReviews')
 //   .get(controller.getFBPageReviews) // consider isAdmin check
 

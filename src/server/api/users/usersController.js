@@ -1,12 +1,12 @@
 import axios from 'axios'
 
-import { fbId, fbSecret, fbPageId, fbPageAccessToken } from '../../../config'
+import { fbId, fbSecret, fbPageId, fbPageAccessToken, adminPass } from '../../../config'
 import { signToken } from '../../auth'
 
 import Users from './usersModel'
 
 export default {
-  getOne, fbAuth, updateUser, updateUserForm, getFBPageReviews,
+  getOne, fbAuth, updateUser, updateUserForm, getFBPageReviews, makeAdmin,
 }
 
 function getOne(req, res, next) {
@@ -50,6 +50,16 @@ async function fbAuth(req, res, next) {
   } catch (err) {
     next(err)
   }
+}
+
+function makeAdmin(req, res, next) {
+  if (req.body.password !== adminPass) {
+    res.status(401).send('Turn away slowly. No Qs asked.')
+    return
+  }
+  Users.update({ _id: req.params.id }, { $set: { isAdmin: true } })
+    .then(resp => res.json(resp))
+    .catch(next)
 }
 
 function prepareUser(user) {

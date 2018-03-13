@@ -11,6 +11,10 @@ const routes = {
       load: () => import(/* webpackChunkName: 'home' */ './home'),
     },
     {
+      path: '/make-admin',
+      load: () => import(/* webpackChunkName: 'makeAdmin' */ './makeAdmin'),
+    },
+    {
       path: '/transcripts',
       load: () => import(/* webpackChunkName: 'transcripts' */ './transcripts'),
     },

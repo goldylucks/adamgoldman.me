@@ -27,10 +27,7 @@ function getSchema() {
     fbServerAccessToken: String,
 
     gender: String,
-    childName: String,
-    genderParent: String,
-
-    form: [],
+    savoring: Object,
 
     createdAt: {
       type: Date,
@@ -38,5 +35,6 @@ function getSchema() {
       required: true,
     },
 
+    isAdmin: Boolean,
   }, { minimize: false })
 }
