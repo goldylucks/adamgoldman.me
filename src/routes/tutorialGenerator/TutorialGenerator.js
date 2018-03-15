@@ -5,11 +5,9 @@ import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd'
 import axios from 'axios'
 import cx from 'classnames'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import faKeyboard from '@fortawesome/fontawesome-free-regular/faKeyboard'
 import faPaperPlane from '@fortawesome/fontawesome-free-regular/faPaperPlane'
 import faTrashAlt from '@fortawesome/fontawesome-free-regular/faTrashAlt'
 import faSave from '@fortawesome/fontawesome-free-regular/faSave'
-import faEraser from '@fortawesome/fontawesome-free-solid/faEraser'
 import faLink from '@fortawesome/fontawesome-free-solid/faLink'
 import faCog from '@fortawesome/fontawesome-free-solid/faCog'
 import faExternalLinkAlt from '@fortawesome/fontawesome-free-solid/faExternalLinkAlt'
@@ -29,11 +27,9 @@ class TutorialGenerator extends React.Component {
   }
 
   state = {
-    initialState: {},
     isDraft: false,
     title: '',
     description: '',
-    nick: '',
     credits: '',
     steps: [stepInitialState()],
     hiddenFields: [],
@@ -51,7 +47,7 @@ class TutorialGenerator extends React.Component {
         <div className="clearfix" style={{ width: '60%', float: 'left' }}>
           {this.renderDetails()}
           <hr />
-          <h1 id="steps" className="text-center">Steps</h1>
+          <h1 className="text-center">Steps</h1>
           {this.renderSteps()}
           <a onClick={this.addStepAtEnd}>+ Step</a>
           <div className={s.controls}>
@@ -67,20 +63,9 @@ class TutorialGenerator extends React.Component {
     )
   }
 
-  promptVariable = (evt) => {
-    if (evt.key !== '@') {
-      return
-    }
-    // todo ::  http://jsfiddle.net/dandv/aFPA7/
-    this.setState({
-      inputLeft: this.widthMeasureElem.offsetWidth,
-      inputTop: 0,
-    })
-  }
-
   renderDetails() {
     const {
-      title, nick, description, credits, isDraft,
+      title, description, credits, isDraft,
     } = this.state
     return (
       <div>
@@ -90,26 +75,9 @@ class TutorialGenerator extends React.Component {
           <input className="form-control" placeholder="Title" value={title} onChange={inputChange.call(this, 'title')} />
         </div>
         <div className="form-group">
-          Nick
-          <input className="form-control" placeholder="Nick" value={nick} onChange={inputChange.call(this, 'nick')} />
-        </div>
-        <div className="form-group">
           Description
           <div style={{ position: 'relative' }}>
-            <input onKeyPress={this.promptVariable} className="form-control" placeholder="Description" value={description} onChange={inputChange.call(this, 'description')} />
-            <div ref={(el) => { this.widthMeasureElem = el }} className="form-control" style={{ color: 'blue', display: 'inline-block', width: 'auto' }}>{description}</div>
-            <div
-              ref={(el) => { this.variableFiller = el }}
-              style={{
-                left: this.state.inputLeft,
-                top: this.state.inputTop,
-                position: 'absolute',
-                padding: '.375rem 0',
-                fontSize: '1rem',
-                lineHeight: 1.5,
-              }}
-            >name
-            </div>
+            <input className="form-control" placeholder="Description" value={description} onChange={inputChange.call(this, 'description')} />
           </div>
         </div>
         <div className="form-group">
@@ -251,7 +219,7 @@ class TutorialGenerator extends React.Component {
                 <FontAwesomeIcon onClick={this.removeAnswer(sIdx, aIdx)} icon={faTrashAlt} />
               </div>
             </div>
-            {a.showSettings && [{ id: 'hasGoToStep', icon: faPaperPlane }, { id: 'isSetInput', icon: faKeyboard }, { id: 'hasResetInputs', icon: faEraser }, { id: 'isLink', icon: faLink }, { id: 'link', icon: faExternalLinkAlt }]
+            {a.showSettings && [{ id: 'hasGoToStep', icon: faPaperPlane }, { id: 'isLink', icon: faLink }, { id: 'isLinkNew', icon: faExternalLinkAlt }]
               .map(({ id, icon }) => (
                 <div className="form-check form-check-inline">
                   <label htmlFor={`step-${sIdx}-answer-${aIdx}-${id}`} className="form-check-label">
@@ -261,31 +229,13 @@ class TutorialGenerator extends React.Component {
                 </div>
                 ))}
             <div className="form-group">
-              { a.isSetInput && <input placeholder="Input id" value={a.inputId} onChange={this.changeAnswerKey('inputId', sIdx, aIdx)} /> }
-              { a.isSetInput && <input placeholder="Input value" value={a.inputValue} onChange={this.changeAnswerKey('inputValue', sIdx, aIdx)} /> }
-
-              { a.isSetInput && (
-                <label htmlFor={`step-${sIdx}-answer-${aIdx}-test`} className="form-check-label">
-                  <input type="radio" className="form-check-input" id={`step-${sIdx}-answer-${aIdx}-test`} onChange={() => console.log('unselect all the others!')} />
-                  Set for test
-                </label>
-              )
-              }
+              { a.hasGoToStep && <input placeholder="title" value={a.goToStepByNum} onChange={this.changeAnswerKey('goToStepByNum', sIdx, aIdx)} /> }
             </div>
             <div className="form-group">
-              { a.hasGoToStep && <input placeholder="title" value={a.goToStepByTitle} onChange={this.changeAnswerKey('goToStepByTitle', sIdx, aIdx)} /> }
+              { a.isLink && <input placeholder="Internal link path" value={a.link} onChange={this.changeAnswerKey('link', sIdx, aIdx)} /> }
             </div>
             <div className="form-group">
-              { a.hasResetInputs && <input placeholder="Inputs to reset" value={a.resetInputs} onChange={this.changeAnswerKey('resetInputs', sIdx, aIdx)} /> }
-            </div>
-            <div className="form-group">
-              { a.hasAlert && <input placeholder="Alert message" value={a.alert} onChange={this.changeAnswerKey('alert', sIdx, aIdx)} /> }
-            </div>
-            <div className="form-group">
-              { a.isLink && <input placeholder="path" value={a.link} onChange={this.changeAnswerKey('link', sIdx, aIdx)} /> }
-            </div>
-            <div className="form-group">
-              { a.isLinkNew && <input placeholder="path" value={a.linkNew} onChange={this.changeAnswerKey('linkNew', sIdx, aIdx)} /> }
+              { a.isLinkNew && <input placeholder="External link path" value={a.linkNew} onChange={this.changeAnswerKey('linkNew', sIdx, aIdx)} /> }
             </div>
           </div>
           ))}
@@ -299,16 +249,8 @@ class TutorialGenerator extends React.Component {
     if (!result.destination) {
       return
     }
-
-    const steps = reorder(
-      this.state.steps,
-      result.source.index,
-      result.destination.index,
-    )
-
-    this.setState({
-      steps,
-    })
+    const steps = reorder(this.state.steps, result.source.index, result.destination.index)
+    this.setState({ steps })
   }
 
   removeStep = sIdx => () => {
@@ -388,7 +330,6 @@ class TutorialGenerator extends React.Component {
     const state = { ...this.state }
     state.url = this.props.url
     cleanEmptyValues(state)
-    addInputsToInitialState(state)
     axios.post('/api/tools/', state)
       .then((res) => {
         global.console.log('saved!', res.data)
@@ -428,24 +369,14 @@ function cleanEmptyValues(state) {
   state.steps = state.steps.map((step) => {
     step.answers = step.answers.map((a) => {
       if (!a.text) { delete a.text }
-      if (!a.isSetInput) { delete a.isSetInput }
-      if (!a.inputId) { delete a.inputId }
-      if (!a.inputValue) { delete a.inputValue }
-      if (!a.hasResetInputs) { delete a.hasResetInputs }
-      if (!a.resetInputs) { delete a.resetInputs }
       if (!a.hasGoToStep) { delete a.hasGoToStep }
-      if (!a.goToStepByTitle) { delete a.goToStepByTitle }
-      if (!a.isFbShare) { delete a.isFbShare }
+      if (!a.goToStepByNum) { delete a.goToStepByNum }
       if (!a.isLink) { delete a.isLink }
       if (!a.link) { delete a.link }
       return a
     })
     return step
   })
-}
-
-function addInputsToInitialState(state) {
-  state.steps.filter(step => step.inputId).forEach((step) => { state.initialState[step.inputId] = '' })
 }
 
 const grid = 2
@@ -476,7 +407,6 @@ function stepInitialState() {
     title: '',
     description: '',
     type: 'radio',
-    inputId: '',
     inputPlaceholder: '',
     answers: [answerInitialState()],
   }
@@ -486,16 +416,8 @@ function answerInitialState() {
   return {
     showSettings: false,
     text: '',
-    alert: '',
-    hasAlert: false,
-    isSetInput: false,
-    inputId: '',
-    inputValue: '',
-    hasResetInputs: '',
-    resetInputs: '',
     hasGoToStep: false,
-    goToStepByTitle: '',
-    isFbShare: false,
+    goToStepByNum: '',
     isLink: false,
     link: '',
     isLinkNew: false,
