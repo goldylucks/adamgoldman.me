@@ -43,15 +43,7 @@ function getSchema() {
 
     credits: String,
 
-    initialState: {
-      type: Object,
-      required: true,
-    },
-
-    testimony1Text: String,
-    testimony1Name: String,
-    testimony1NameMeta: String,
-    testimony1Src: String,
+    hiddenFields: [],
 
     steps: [],
 
