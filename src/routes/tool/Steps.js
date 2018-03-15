@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Markdown from '../../components/Markdown'
-import { scrollToElem, isMobile, nn } from '../../utils'
+import { scrollToElem, isMobile } from '../../utils'
 
 import Answers from './Answers'
 
@@ -57,7 +57,7 @@ class Steps extends React.Component {
       >
         <div className="form-group">
           <input
-            value={this.state.answerByStep[nn(this.state.currentStep)]}
+            value={this.state.answerByStep[this.state.currentStep]}
             onChange={this.stepInputChange}
             placeholder={this.replaceVars(inputPlaceholder)}
             required
@@ -85,7 +85,7 @@ class Steps extends React.Component {
       >
         <div className="form-group">
           <textarea
-            value={this.state.answerByStep[nn(this.state.currentStep)]}
+            value={this.state.answerByStep[this.state.currentStep]}
             onChange={this.stepInputChange}
             placeholder={this.replaceVars(inputPlaceholder)}
             required
@@ -126,7 +126,7 @@ class Steps extends React.Component {
   submitMultipleChoiceAnswer = (aIdx) => {
     const answerByStep = { ...this.state.answerByStep }
     const { text, goToStepByNum } = this.getAnswerByAidx(aIdx)
-    answerByStep[nn(this.state.currentStep)] = text
+    answerByStep[this.state.currentStep] = text
     this.setState({ answerByStep })
     if (goToStepByNum) {
       this.goToStep(Number(goToStepByNum), { resetPreviousAnswers: Number(goToStepByNum) < this.state.currentStep }) // eslint-disable-line max-len
@@ -137,7 +137,7 @@ class Steps extends React.Component {
 
   submitMultipleChoiceOtherAnswer = (text) => {
     const answerByStep = { ...this.state.answerByStep }
-    answerByStep[nn(this.state.currentStep)] = text
+    answerByStep[this.state.currentStep] = text
     this.setState({ answerByStep })
     this.next()
   }
@@ -149,7 +149,7 @@ class Steps extends React.Component {
   populateAnswersState() {
     const answerByStep = { ...this.state.answerByStep }
     for (let i = 0; i < this.props.steps.length; i += 1) {
-      answerByStep[nn(i)] = ''
+      answerByStep[i] = ''
     }
     this.setState({ answerByStep })
   }
@@ -168,14 +168,14 @@ class Steps extends React.Component {
   resetPreviousAnswers(step) {
     const answerByStep = { ...this.state.answerByStep }
     for (let i = this.state.currentStep; i >= step; i -= 1) {
-      delete answerByStep[nn(i)]
+      delete answerByStep[i]
     }
     this.setState({ answerByStep })
   }
 
   stepInputChange = (evt) => {
     const answerByStep = { ...this.state.answerByStep }
-    answerByStep[nn(this.state.currentStep)] = evt.target.value
+    answerByStep[this.state.currentStep] = evt.target.value
     this.setState({ answerByStep })
   }
 
@@ -191,7 +191,7 @@ class Steps extends React.Component {
     return str.replace(/\${(.*?)}/g, (...args) => {
       const key = args[1]
       if (key === 'echo') {
-        return this.state.answerByStep[nn(this.state.currentStep - 1)]
+        return this.state.answerByStep[this.state.currentStep - 1]
       }
       if (key.indexOf('he') === 0) {
         return this.state.answerByStep[key.slice(2)].match(/female/i) ? 'she' : 'he'
