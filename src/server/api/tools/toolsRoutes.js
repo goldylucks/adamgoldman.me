@@ -12,5 +12,6 @@ router.route('/all')
 
 router.route('/:url')
   .get(controller.getByUrl)
+  .delete(decodeToken, getFreshUser, isAdmin, controller.delByUrl)
 
 export default router

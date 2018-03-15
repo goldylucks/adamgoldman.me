@@ -1,7 +1,7 @@
 import Tools from './toolsModel'
 
 export default {
-  getAll, getByUrl, updateOrCreate,
+  getAll, getByUrl, updateOrCreate, delByUrl,
 }
 
 function getAll(req, res, next) {
@@ -13,6 +13,12 @@ function getAll(req, res, next) {
 function getByUrl(req, res, next) {
   const { url } = req.params
   Tools.findOne({ url })
+    .then(tool => res.json(tool))
+    .catch(next)
+}
+
+function delByUrl(req, res, next) {
+  Tools.deleteOne({ url: req.params.url })
     .then(tool => res.json(tool))
     .catch(next)
 }

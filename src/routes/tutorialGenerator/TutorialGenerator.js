@@ -404,7 +404,7 @@ class TutorialGenerator extends React.Component {
     if (!global.confirm('Sure you want to delete this tool?')) {
       return
     }
-    axios.post('/api/tools/', { url: this.props.url })
+    axios.delete(`/api/tools/${this.props.url}`)
       .then((res) => {
         global.console.log('deleted!', res.data)
         global.alert('deleted!')
