@@ -254,10 +254,11 @@ class TutorialGenerator extends React.Component {
   }
 
   removeStep = sIdx => () => {
-    if (!global.confirm(`really delete step ${this.state.steps.title}?`)) {
+    if (!global.confirm(`really delete step ${sIdx}?`)) {
       return
     }
-    const nextSteps = [...this.state.steps]
+    let nextSteps = [...this.state.steps]
+    nextSteps = updateLogicalJumpsAfterRemoveStep(sIdx, nextSteps)
     nextSteps.splice(sIdx, 1)
     this.setState({ steps: nextSteps })
   }
@@ -433,32 +434,68 @@ function answerInitialState() {
 function updateLogicalJumpsAfterAddStep(sIdx, nextSteps) {
   return nextSteps.map((step) => {
     if (step.title) {
-      step.title = updateVariableReferences(step.title, sIdx)
+      step.title = updateVariableReferencesAfterAddStep(step.title, sIdx)
     }
     if (step.description) {
-      step.description = updateVariableReferences(step.description, sIdx)
+      step.description = updateVariableReferencesAfterAddStep(step.description, sIdx)
     }
     if (step.inputPlaceholder) {
-      step.inputPlaceholder = updateVariableReferences(step.inputPlaceholder, sIdx)
+      step.inputPlaceholder = updateVariableReferencesAfterAddStep(step.inputPlaceholder, sIdx)
     }
     step.answers = step.answers.map((a) => {
       if (a.hasGoToStep && (a.goToStepByNum > sIdx)) {
         a.goToStepByNum = String(Number(a.goToStepByNum) + 1)
       }
-      a.text = updateVariableReferences(a.text, sIdx)
+      a.text = updateVariableReferencesAfterAddStep(a.text, sIdx)
       return a
     })
     return step
   })
 }
 
-function updateVariableReferences(str, sIdx) {
+function updateLogicalJumpsAfterRemoveStep(sIdx, nextSteps) {
+  return nextSteps.map((step) => {
+    if (step.title) {
+      step.title = updateVariableReferencesAfterRemoveStep(step.title, sIdx)
+    }
+    if (step.description) {
+      step.description = updateVariableReferencesAfterRemoveStep(step.description, sIdx)
+    }
+    if (step.inputPlaceholder) {
+      step.inputPlaceholder = updateVariableReferencesAfterRemoveStep(step.inputPlaceholder, sIdx)
+    }
+    step.answers = step.answers.map((a) => {
+      if (a.hasGoToStep && (a.goToStepByNum > sIdx)) {
+        a.goToStepByNum = String(Number(a.goToStepByNum) - 1)
+      }
+      a.text = updateVariableReferencesAfterRemoveStep(a.text, sIdx)
+      return a
+    })
+    return step
+  })
+}
+
+function updateVariableReferencesAfterAddStep(str, sIdx) {
   return str.replace(/\${(.*?)}/g, (...args) => {
     const key = args[1]
     if (key[0] === 's') {
       const step = Number(key.slice(1))
       if (step > sIdx) {
         return '${' + `s${step + 1}` + '}' // eslint-disable-line no-useless-concat
+      }
+    }
+    return '${' + key + '}' // eslint-disable-line prefer-template
+  })
+}
+
+function updateVariableReferencesAfterRemoveStep(str, sIdx) {
+  return str.replace(/\${(.*?)}/g, (...args) => {
+    const key = args[1]
+    console.log('key', key, 'sIdx', sIdx, 'str', str)
+    if (key[0] === 's') {
+      const step = Number(key.slice(1))
+      if (step > sIdx) {
+        return '${' + `s${step - 1}` + '}' // eslint-disable-line no-useless-concat
       }
     }
     return '${' + key + '}' // eslint-disable-line prefer-template
