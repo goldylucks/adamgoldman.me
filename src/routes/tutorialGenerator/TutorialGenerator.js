@@ -218,24 +218,30 @@ class TutorialGenerator extends React.Component {
                 />
                 <FontAwesomeIcon onClick={this.removeAnswer(sIdx, aIdx)} icon={faTrashAlt} />
               </div>
-            </div>
-            {a.showSettings && [{ id: 'hasGoToStep', icon: faPaperPlane }, { id: 'isLink', icon: faLink }, { id: 'isLinkNew', icon: faExternalLinkAlt }]
-              .map(({ id, icon }) => (
-                <div className="form-check form-check-inline">
-                  <label htmlFor={`step-${sIdx}-answer-${aIdx}-${id}`} className="form-check-label">
-                    <input type="checkbox" className="form-check-input" id={`step-${sIdx}-answer-${aIdx}-${id}`} value={a[id]} checked={a[id]} onChange={this.toggleAnswerKey(id, sIdx, aIdx)} />
+              {a.showSettings && (
+              <div className={cx('col-10', s.answerOptionCol)}>
+
+                {[{ toggleId: 'hasGoToStep', icon: faPaperPlane, fieldId: 'goToStepByNum' }, { toggleId: 'isLink', icon: faLink, fieldId: 'link' }, { toggleId: 'isLinkNew', icon: faExternalLinkAlt, fieldId: 'linkNew' }]
+              .map(({ toggleId, icon, fieldId }) => (
+                <div className={s.answerOption}>
+                  <div
+                    className={s.answerOptionToggle}
+                    onClick={this.toggleAnswerKey(toggleId, sIdx, aIdx)}
+                  >
                     <FontAwesomeIcon icon={icon} />
-                  </label>
+                  </div>
+                  <input
+                    type="text"
+                    className={cx(s.answerOptionField, { [s.isVisible]: a[toggleId] })}
+                    id={fieldId}
+                    placeholder={fieldId}
+                    value={a[fieldId]}
+                    onChange={this.changeAnswerKey(fieldId, sIdx, aIdx)}
+                  />
                 </div>
-                ))}
-            <div className="form-group">
-              { a.hasGoToStep && <input type="number" placeholder="Step number" min={0} max={99} value={a.goToStepByNum} onChange={this.changeAnswerKey('goToStepByNum', sIdx, aIdx)} /> }
-            </div>
-            <div className="form-group">
-              { a.isLink && <input placeholder="Internal link path" value={a.link} onChange={this.changeAnswerKey('link', sIdx, aIdx)} /> }
-            </div>
-            <div className="form-group">
-              { a.isLinkNew && <input placeholder="External link path" value={a.linkNew} onChange={this.changeAnswerKey('linkNew', sIdx, aIdx)} /> }
+              ))}
+              </div>
+            )}
             </div>
           </div>
           ))}
@@ -379,10 +385,9 @@ function cleanEmptyValues(state) {
     }
     step.answers = step.answers.map((a) => {
       if (!a.text) { delete a.text }
-      if (!a.hasGoToStep) { delete a.hasGoToStep }
-      if (!a.goToStepByNum) { delete a.goToStepByNum }
-      if (!a.isLink) { delete a.isLink }
-      if (!a.link) { delete a.link }
+      if (!a.hasGoToStep) { delete a.hasGoToStep; delete a.goToStepByNum }
+      if (!a.isLink) { delete a.isLink; delete a.link }
+      if (!a.isLinkNew) { delete a.linkNew }
       return a
     })
     return step

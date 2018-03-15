@@ -19,6 +19,10 @@
   text-decoration: none !important;
 }
 
+.answer {
+  margin-bottom: 10px;
+}
+
 .answerActions {
   transition: 0.5s opacity;
   opacity: 0;
@@ -40,4 +44,38 @@
 
 .answerSettingsToggle.isActive {
   opacity: 1;
+}
+.answerOptionCol {
+  height: 0px;
+  position: relative;
+  top: -4px;
+  margin-bottom: -1px;
+}
+.answerOption {
+  float: left;
+  margin-right: 5px;
+}
+
+.answerOptionToggle {
+  float: left;
+  margin-right: 3px;
+}
+.answerOptionToggle svg {
+  width: 10px;
+  height: 10px;
+  position: relative;
+  top: -5px;
+}
+
+.answerOptionField {
+  transition: width 0.5s;
+  width: 0px;
+  height: 10px;
+  font-size: 10px;
+  border: none;
+  position: relative;
+  top: -5px;
+}
+.answerOptionField.isVisible {
+  width: 30px;
 }
