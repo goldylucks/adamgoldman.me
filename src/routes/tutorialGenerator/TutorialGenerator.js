@@ -258,9 +258,13 @@ class TutorialGenerator extends React.Component {
       return
     }
     let nextSteps = [...this.state.steps]
-    nextSteps = updateLogicalJumpsAfterRemoveStep(sIdx, nextSteps)
-    nextSteps.splice(sIdx, 1)
-    this.setState({ steps: nextSteps })
+    try {
+      nextSteps = updateLogicalJumpsAfterRemoveStep(sIdx, nextSteps)
+      nextSteps.splice(sIdx, 1)
+      this.setState({ steps: nextSteps })
+    } catch (err) {
+      global.alert(err)
+    }
   }
 
   addStep = (sIdx) => {
@@ -443,7 +447,7 @@ function updateLogicalJumpsAfterAddStep(sIdx, nextSteps) {
       step.inputPlaceholder = updateVariableReferencesAfterAddStep(step.inputPlaceholder, sIdx)
     }
     step.answers = step.answers.map((a) => {
-      if (a.hasGoToStep && (a.goToStepByNum > sIdx)) {
+      if (a.hasGoToStep && (Number(a.goToStepByNum) > sIdx)) {
         a.goToStepByNum = String(Number(a.goToStepByNum) + 1)
       }
       a.text = updateVariableReferencesAfterAddStep(a.text, sIdx)
@@ -465,8 +469,11 @@ function updateLogicalJumpsAfterRemoveStep(sIdx, nextSteps) {
       step.inputPlaceholder = updateVariableReferencesAfterRemoveStep(step.inputPlaceholder, sIdx)
     }
     step.answers = step.answers.map((a) => {
-      if (a.hasGoToStep && (a.goToStepByNum > sIdx)) {
+      if (a.hasGoToStep && (Number(a.goToStepByNum) > sIdx)) {
         a.goToStepByNum = String(Number(a.goToStepByNum) - 1)
+      }
+      if (a.hasGoToStep && (Number(a.goToStepByNum) === sIdx)) {
+        throw new Error('cant remove step that has dependencies')
       }
       a.text = updateVariableReferencesAfterRemoveStep(a.text, sIdx)
       return a
@@ -479,9 +486,9 @@ function updateVariableReferencesAfterAddStep(str, sIdx) {
   return str.replace(/\${(.*?)}/g, (...args) => {
     const key = args[1]
     if (key[0] === 's') {
-      const step = Number(key.slice(1))
-      if (step > sIdx) {
-        return '${' + `s${step + 1}` + '}' // eslint-disable-line no-useless-concat
+      const stepNum = Number(key.slice(1))
+      if (stepNum > sIdx) {
+        return '${' + `s${stepNum + 1}` + '}' // eslint-disable-line no-useless-concat
       }
     }
     return '${' + key + '}' // eslint-disable-line prefer-template
@@ -491,11 +498,13 @@ function updateVariableReferencesAfterAddStep(str, sIdx) {
 function updateVariableReferencesAfterRemoveStep(str, sIdx) {
   return str.replace(/\${(.*?)}/g, (...args) => {
     const key = args[1]
-    console.log('key', key, 'sIdx', sIdx, 'str', str)
     if (key[0] === 's') {
-      const step = Number(key.slice(1))
-      if (step > sIdx) {
-        return '${' + `s${step - 1}` + '}' // eslint-disable-line no-useless-concat
+      const stepNum = Number(key.slice(1))
+      if (stepNum === sIdx) {
+        throw new Error('cant remove step that has dependencies')
+      }
+      if (stepNum > sIdx) {
+        return '${' + `s${stepNum - 1}` + '}' // eslint-disable-line no-useless-concat
       }
     }
     return '${' + key + '}' // eslint-disable-line prefer-template
