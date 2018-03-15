@@ -15,6 +15,10 @@ const routes = {
       load: () => import(/* webpackChunkName: 'makeAdmin' */ './makeAdmin'),
     },
     {
+      path: ['/resolving-shame'],
+      load: () => import(/* webpackChunkName: 'tool' */ './tool'),
+    },
+    {
       path: '/transcripts',
       load: () => import(/* webpackChunkName: 'transcripts' */ './transcripts'),
     },
