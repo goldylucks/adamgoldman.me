@@ -263,7 +263,8 @@ class TutorialGenerator extends React.Component {
   }
 
   addStep = (sIdx) => {
-    const nextSteps = [...this.state.steps]
+    let nextSteps = [...this.state.steps]
+    nextSteps = updateLogicalJumpsAfterAddStep(sIdx, nextSteps)
     nextSteps.splice(sIdx + 1, 0, stepInitialState())
     this.setState({ steps: nextSteps })
   }
@@ -427,4 +428,39 @@ function answerInitialState() {
     isLinkNew: false,
     linkNew: '',
   }
+}
+
+function updateLogicalJumpsAfterAddStep(sIdx, nextSteps) {
+  return nextSteps.map((step) => {
+    if (step.title) {
+      step.title = updateVariableReferences(step.title, sIdx)
+    }
+    if (step.description) {
+      step.description = updateVariableReferences(step.description, sIdx)
+    }
+    if (step.inputPlaceholder) {
+      step.inputPlaceholder = updateVariableReferences(step.inputPlaceholder, sIdx)
+    }
+    step.answers = step.answers.map((a) => {
+      if (a.hasGoToStep && (a.goToStepByNum > sIdx)) {
+        a.goToStepByNum = String(Number(a.goToStepByNum) + 1)
+      }
+      a.text = updateVariableReferences(a.text, sIdx)
+      return a
+    })
+    return step
+  })
+}
+
+function updateVariableReferences(str, sIdx) {
+  return str.replace(/\${(.*?)}/g, (...args) => {
+    const key = args[1]
+    if (key[0] === 's') {
+      const step = Number(key.slice(1))
+      if (step > sIdx) {
+        return '${' + `s${step + 1}` + '}' // eslint-disable-line no-useless-concat
+      }
+    }
+    return '${' + key + '}' // eslint-disable-line prefer-template
+  })
 }
