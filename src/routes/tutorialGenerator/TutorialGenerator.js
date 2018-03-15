@@ -229,7 +229,7 @@ class TutorialGenerator extends React.Component {
                 </div>
                 ))}
             <div className="form-group">
-              { a.hasGoToStep && <input placeholder="title" value={a.goToStepByNum} onChange={this.changeAnswerKey('goToStepByNum', sIdx, aIdx)} /> }
+              { a.hasGoToStep && <input type="number" placeholder="Step number" min={0} max={99} value={a.goToStepByNum} onChange={this.changeAnswerKey('goToStepByNum', sIdx, aIdx)} /> }
             </div>
             <div className="form-group">
               { a.isLink && <input placeholder="Internal link path" value={a.link} onChange={this.changeAnswerKey('link', sIdx, aIdx)} /> }
@@ -367,6 +367,10 @@ export default withStyles(s)(TutorialGenerator)
 function cleanEmptyValues(state) {
   // clear empty values
   state.steps = state.steps.map((step) => {
+    if (!step.type.match(/radio|checkbox/)) {
+      step.answers = []
+      return step
+    }
     step.answers = step.answers.map((a) => {
       if (!a.text) { delete a.text }
       if (!a.hasGoToStep) { delete a.hasGoToStep }

@@ -45,8 +45,8 @@ class Steps extends React.Component {
   }
 
   renderInput() {
-    const { type, placeholder } = this.currentStep()
-    if (type !== 'input') {
+    const { type, inputPlaceholder } = this.currentStep()
+    if (type !== 'short') {
       return null
     }
     return (
@@ -59,7 +59,7 @@ class Steps extends React.Component {
           <input
             value={this.state.answerByStep[nn(this.state.currentStep)]}
             onChange={this.stepInputChange}
-            placeholder={this.replaceVars(placeholder)}
+            placeholder={this.replaceVars(inputPlaceholder)}
             required
             autoFocus={!isMobile()}
             className="form-control"
@@ -73,8 +73,8 @@ class Steps extends React.Component {
   }
 
   renderTextarea() {
-    const { type, placeholder } = this.currentStep()
-    if (type !== 'textarea') {
+    const { type, inputPlaceholder } = this.currentStep()
+    if (type !== 'long') {
       return null
     }
     return (
@@ -87,7 +87,7 @@ class Steps extends React.Component {
           <textarea
             value={this.state.answerByStep[nn(this.state.currentStep)]}
             onChange={this.stepInputChange}
-            placeholder={this.replaceVars(placeholder)}
+            placeholder={this.replaceVars(inputPlaceholder)}
             required
             autoFocus={!isMobile()}
             className="form-control"
@@ -101,6 +101,9 @@ class Steps extends React.Component {
   }
 
   renderAnswers() {
+    if (!this.currentStep().answers) {
+      return null
+    }
     const answers = this.currentStep().answers.map((answer) => {
       if (answer.text) { answer.text = this.replaceVars(answer.text) }
       return answer
@@ -122,18 +125,17 @@ class Steps extends React.Component {
 
   submitMultipleChoiceAnswer = (aIdx) => {
     const answerByStep = { ...this.state.answerByStep }
-    const { text, goToStep } = this.getAnswerByAidx(aIdx)
+    const { text, goToStepByNum } = this.getAnswerByAidx(aIdx)
     answerByStep[nn(this.state.currentStep)] = text
     this.setState({ answerByStep })
-    if (goToStep) {
-      this.goToStep(goToStep)
+    if (goToStepByNum) {
+      this.goToStep(Number(goToStepByNum), { resetPreviousAnswers: Number(goToStepByNum) < this.state.currentStep }) // eslint-disable-line max-len
     } else {
       this.next()
     }
   }
 
   submitMultipleChoiceOtherAnswer = (text) => {
-    console.log('text', text)
     const answerByStep = { ...this.state.answerByStep }
     answerByStep[nn(this.state.currentStep)] = text
     this.setState({ answerByStep })
@@ -155,13 +157,20 @@ class Steps extends React.Component {
   back = () => this.goToStep(this.state.currentStep - 1)
   next = () => this.goToStep(this.state.currentStep + 1)
 
-  goToStep = (step) => {
-    // @TODO
-    // if (step < this.state.currentStep) {
-    //  reset chosen answers of all steps in between
-    // }
+  goToStep = (step, { resetPreviousAnswers } = {}) => {
+    if (resetPreviousAnswers) {
+      this.resetPreviousAnswers(step)
+    }
     this.setState({ currentStep: step })
     scrollTop()
+  }
+
+  resetPreviousAnswers(step) {
+    const answerByStep = { ...this.state.answerByStep }
+    for (let i = this.state.currentStep; i >= step; i -= 1) {
+      delete answerByStep[nn(i)]
+    }
+    this.setState({ answerByStep })
   }
 
   stepInputChange = (evt) => {
@@ -175,6 +184,10 @@ class Steps extends React.Component {
   }
 
   replaceVars(str) {
+    if (!str) {
+      global.console.warn('replaceVars called on empty value')
+      return str
+    }
     return str.replace(/\${(.*?)}/g, (...args) => {
       const key = args[1]
       if (key === 'echo') {

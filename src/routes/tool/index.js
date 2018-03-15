@@ -1,16 +1,15 @@
 import React from 'react'
-// import axios from 'axios'
+import axios from 'axios'
 
 import Layout from '../../components/Layout'
 
-import mockShame from './mockShame'
 import Tool from './Tool'
 
-async function action({ params }) {
-  const path = `/tools/${params.tool}/`
+async function action({ pathname }) {
+  const path = `/tools/${pathname}/`
 
-  // const { data } = await axios.get(`/api/tools/${params.tool}`)
-  const data = mockShame
+  const { data } = await axios.get(`/api/tools/${pathname}`)
+  console.log('data', data)
   return {
     title: data.title,
     description: data.description,
