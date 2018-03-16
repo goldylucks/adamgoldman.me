@@ -36,20 +36,17 @@
   opacity: 1;
 }
 
-.answerSettingsToggle {
-  margin-right: 20px;
-  transition: 0.5s opacity;
-  opacity: 0.5;
-}
-
-.answerSettingsToggle.isActive {
-  opacity: 1;
-}
 .answerOptionCol {
+  transition: opacity 0.5s;
+  opacity: 0;
   height: 0px;
   position: relative;
   top: -4px;
   margin-bottom: -1px;
+}
+.answer:hover .answerOptionCol,
+.answerOptionCol.isVisible {
+  opacity: 1;
 }
 .answerOption {
   float: left;
@@ -59,6 +56,7 @@
 .answerOptionToggle {
   float: left;
   margin-right: 3px;
+  cursor: pointer;
 }
 .answerOptionToggle svg {
   width: 10px;
@@ -74,7 +72,7 @@
   font-size: 10px;
   border: none;
   position: relative;
-  top: -5px;
+  top: -4px;
 }
 .answerOptionField.isVisible {
   width: 30px;

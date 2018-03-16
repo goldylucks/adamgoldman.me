@@ -9,7 +9,6 @@ import faPaperPlane from '@fortawesome/fontawesome-free-regular/faPaperPlane'
 import faTrashAlt from '@fortawesome/fontawesome-free-regular/faTrashAlt'
 import faSave from '@fortawesome/fontawesome-free-regular/faSave'
 import faLink from '@fortawesome/fontawesome-free-solid/faLink'
-import faCog from '@fortawesome/fontawesome-free-solid/faCog'
 import faExternalLinkAlt from '@fortawesome/fontawesome-free-solid/faExternalLinkAlt'
 import faEye from '@fortawesome/fontawesome-free-solid/faEye'
 import TextareaAutosize from 'react-autosize-textarea'
@@ -211,15 +210,9 @@ class TutorialGenerator extends React.Component {
                 />
               </div>
               <div className={cx('col-2 text-right', s.answerActions)}>
-                <FontAwesomeIcon
-                  onClick={this.toggleAnswerSettings(sIdx, aIdx)}
-                  icon={faCog}
-                  className={cx(s.answerSettingsToggle, { [s.isActive]: a.showSettings })}
-                />
                 <FontAwesomeIcon onClick={this.removeAnswer(sIdx, aIdx)} icon={faTrashAlt} />
               </div>
-              {a.showSettings && (
-              <div className={cx('col-10', s.answerOptionCol)}>
+              <div className={cx('col-10', s.answerOptionCol, { [s.isVisible]: a.hasGoToStep || a.isLink || a.isLinkNew })}>
 
                 {[{ toggleId: 'hasGoToStep', icon: faPaperPlane, fieldId: 'goToStepByNum' }, { toggleId: 'isLink', icon: faLink, fieldId: 'link' }, { toggleId: 'isLinkNew', icon: faExternalLinkAlt, fieldId: 'linkNew' }]
               .map(({ toggleId, icon, fieldId }) => (
@@ -241,7 +234,6 @@ class TutorialGenerator extends React.Component {
                 </div>
               ))}
               </div>
-            )}
             </div>
           </div>
           ))}
@@ -319,12 +311,6 @@ class TutorialGenerator extends React.Component {
   removeAnswer = (sIdx, aIdx) => () => {
     const nextSteps = [...this.state.steps]
     nextSteps[sIdx].answers.splice(aIdx, 1)
-    this.setState({ steps: nextSteps })
-  }
-
-  toggleAnswerSettings = (sIdx, aIdx) => () => {
-    const nextSteps = [...this.state.steps]
-    nextSteps[sIdx].answers[aIdx].showSettings = !nextSteps[sIdx].answers[aIdx].showSettings
     this.setState({ steps: nextSteps })
   }
 
@@ -429,7 +415,6 @@ function stepInitialState() {
 
 function answerInitialState() {
   return {
-    showSettings: false,
     text: '',
     hasGoToStep: false,
     goToStepByNum: '',
