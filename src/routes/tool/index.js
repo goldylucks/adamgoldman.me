@@ -5,11 +5,8 @@ import Layout from '../../components/Layout'
 
 import Tool from './Tool'
 
-async function action({ pathname }) {
-  const path = `/tools/${pathname}/`
-
-  const { data } = await axios.get(`/api/tools/${pathname}`)
-  console.log('data', data)
+async function action({ path }) {
+  const { data } = await axios.get(`/api${path}`)
   return {
     title: data.title,
     description: data.description,

@@ -15,10 +15,6 @@ const routes = {
       load: () => import(/* webpackChunkName: 'makeAdmin' */ './makeAdmin'),
     },
     {
-      path: ['/resolving-shame'],
-      load: () => import(/* webpackChunkName: 'tool' */ './tool'),
-    },
-    {
       path: '/transcripts',
       load: () => import(/* webpackChunkName: 'transcripts' */ './transcripts'),
     },
@@ -66,6 +62,10 @@ const routes = {
     {
       path: '/tools',
       load: () => import(/* webpackChunkName: 'tutorials' */ './tutorials'),
+    },
+    {
+      path: ['resolving-feelings'].map(p => `/tools/${p}`),
+      load: () => import(/* webpackChunkName: 'tool' */ './tool'),
     },
     {
       path: '/tutorial-generator/:tool',
