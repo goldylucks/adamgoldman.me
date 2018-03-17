@@ -57,8 +57,10 @@ class ToolEditor extends React.Component {
           <hr />
           <h1 className="text-center">Steps</h1>
           {this.renderSteps()}
-          <a onClick={this.addStepAtEnd} style={{ marginRight: 20 }}>+ Step</a>
-          <a onClick={this.duplicateStepAtEnd}>+ Duplicate Step</a>
+          <div style={{ padding: 20 }}>
+            <a onClick={this.addStepAtEnd} style={{ marginRight: 20, fontSize: 20 }}>+ Step</a>
+            <a onClick={this.duplicateStepAtEnd} style={{ fontSize: 20 }}>+ Duplicate Step</a>
+          </div>
           <div className={s.controls}>
             <a className={s.control} href={`/tools/${this.props.url}`} target="_blank"><FontAwesomeIcon icon={faEye} /></a>
             <a className={s.control} onClick={this.save}><FontAwesomeIcon icon={faSave} /></a>
@@ -247,6 +249,10 @@ class ToolEditor extends React.Component {
             </div>
           </div>
           ))}
+        <div className="form-check">
+          <input type="checkbox" className="form-check-input" id={`step-${sIdx}-other-toggle`} checked={this.stepHasOtherAnswer(sIdx)} onChange={() => this.toggleStepHasOtherAnswer(sIdx)} />
+          <label className="form-check-label" forhtml={`step-${sIdx}-other-toggle`}>Other</label>
+        </div>
         <a onClick={this.addAnswer(sIdx)}>+ answer</a>
       </div>
     )
@@ -390,6 +396,24 @@ class ToolEditor extends React.Component {
       this.duplicateStepAtEnd()
     }
   }
+
+  stepHasOtherAnswer(sIdx) {
+    if (!this.state.steps[sIdx].answers) {
+      global.console.warn('missing answers on step ', sIdx)
+      return false
+    }
+    return !!this.state.steps[sIdx].answers.find(a => a.isOther)
+  }
+
+  toggleStepHasOtherAnswer(sIdx) {
+    const nextSteps = [...this.state.steps]
+    if (this.stepHasOtherAnswer(sIdx)) {
+      nextSteps[sIdx].answers.pop()
+    } else {
+      nextSteps[sIdx].answers.push(Object.assign(answerInitialState(), { isOther: true, text: 'Other' }))
+    }
+    this.setState({ steps: nextSteps })
+  }
 }
 
 export default withStyles(s)(ToolEditor)
@@ -447,6 +471,7 @@ function stepInitialState() {
 
 function answerInitialState() {
   return {
+    isOther: false,
     text: '',
     hasGoToStep: false,
     goToStepByNum: '',

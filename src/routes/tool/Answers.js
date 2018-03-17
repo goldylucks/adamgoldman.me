@@ -28,7 +28,7 @@ class AnswersV4 extends React.Component {
             html = <Link className="btn btn-primary" to={answer.link}>{answer.text}</Link>
           } else if (answer.linkNew) {
             html = <ExternalA className="btn btn-primary" href={answer.linkNew}>{answer.text}</ExternalA>
-          } else if (answer.other) {
+          } else if (answer.isOther) {
             html = (
               <form onSubmit={(evt) => {
                   evt.preventDefault()
