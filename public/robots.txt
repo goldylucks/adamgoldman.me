@@ -4,3 +4,4 @@
 User-agent: *
 Disallow: /admin/
 Disallow: /make-admin
+Disallow: /tool-editor/

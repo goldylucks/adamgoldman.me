@@ -18,9 +18,9 @@ import cloneDeep from 'lodash.clonedeep'
 import { inputChange, inputToggle } from '../../forms'
 import { reorder, scrollToElem } from '../../utils'
 
-import s from './TutorialGenerator.css'
+import s from './ToolEditor.css'
 
-class TutorialGenerator extends React.Component {
+class ToolEditor extends React.Component {
   static propTypes = {
     data: PropTypes.any.isRequired,
     url: PropTypes.string.isRequired,
@@ -392,7 +392,7 @@ class TutorialGenerator extends React.Component {
   }
 }
 
-export default withStyles(s)(TutorialGenerator)
+export default withStyles(s)(ToolEditor)
 
 function cleanEmptyValues(state) {
   // clear empty values

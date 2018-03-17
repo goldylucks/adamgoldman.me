@@ -1,21 +1,21 @@
 import React from 'react'
 import axios from 'axios'
 
-import TutorialGenerator from './TutorialGenerator'
+import ToolEditor from './ToolEditor'
 
 const title = 'Brain Hacking Automation Tools Generator'
 
 async function action({ params }) {
   const { data } = await axios.get(`/api/tools/${params.tool}`)
-  const path = `/tutorial-generator/${params.tool}`
+  const path = `/tool-editor/${params.tool}`
   return {
-    chunks: ['tutorialGenerator'],
+    chunks: ['toolEditor'],
     title,
     path,
     description:
       'Create a brain tool',
     component: (
-      <TutorialGenerator data={data} url={params.tool} />
+      <ToolEditor data={data} url={params.tool} />
     ),
   }
 }

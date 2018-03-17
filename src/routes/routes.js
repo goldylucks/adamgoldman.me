@@ -68,8 +68,8 @@ const routes = {
       load: () => import(/* webpackChunkName: 'tool' */ './tool'),
     },
     {
-      path: '/tutorial-generator/:tool',
-      load: () => import(/* webpackChunkName: 'tutorialGenerator' */ './tutorialGenerator'),
+      path: '/tool-editor/:tool',
+      load: () => import(/* webpackChunkName: 'toolEditor' */ './toolEditor'),
     },
     {
       path: '/tools/:tool',
