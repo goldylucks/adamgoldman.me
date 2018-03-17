@@ -59,6 +59,7 @@
     "history": "^4.7.2",
     "isomorphic-style-loader": "^4.0.0",
     "jsonwebtoken": "^8.1.1",
+    "lodash.clonedeep": "^4.5.0",
     "mailchimp-api-v3": "^1.8.0",
     "mongoose": "^5.0.5",
     "node-fetch": "^2.0.0",

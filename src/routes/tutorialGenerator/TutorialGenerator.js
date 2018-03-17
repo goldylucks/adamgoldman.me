@@ -13,6 +13,7 @@ import faExternalLinkAlt from '@fortawesome/fontawesome-free-solid/faExternalLin
 import faEye from '@fortawesome/fontawesome-free-solid/faEye'
 import TextareaAutosize from 'react-autosize-textarea'
 import { Typeahead } from 'react-bootstrap-typeahead'
+import cloneDeep from 'lodash.clonedeep'
 
 import { inputChange, inputToggle } from '../../forms'
 import { reorder, scrollToElem } from '../../utils'
@@ -40,6 +41,14 @@ class TutorialGenerator extends React.Component {
     }
   }
 
+  componentDidMount() {
+    window.addEventListener('keydown', this.setupHotkeys, false)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this.setupHotkeys, false)
+  }
+
   render() {
     return (
       <div style={{ padding: 10 }}>
@@ -48,7 +57,8 @@ class TutorialGenerator extends React.Component {
           <hr />
           <h1 className="text-center">Steps</h1>
           {this.renderSteps()}
-          <a onClick={this.addStepAtEnd}>+ Step</a>
+          <a onClick={this.addStepAtEnd} style={{ marginRight: 20 }}>+ Step</a>
+          <a onClick={this.duplicateStepAtEnd}>+ Duplicate Step</a>
           <div className={s.controls}>
             <a className={s.control} href={`/tools/${this.props.url}`} target="_blank"><FontAwesomeIcon icon={faEye} /></a>
             <a className={s.control} onClick={this.save}><FontAwesomeIcon icon={faSave} /></a>
@@ -147,7 +157,7 @@ class TutorialGenerator extends React.Component {
       <div key={sIdx} id={`step-${sIdx}`}>
         <div className="row">
           <div className="col-10">
-            <input style={{ width: '100%', border: 0 }} className="h2" placeholder="Step title" value={step.title} onChange={this.changeStepKey('title', sIdx)} />
+            <input style={{ width: '100%', border: 0 }} ref={(el) => { this.elems[`${sIdx}-title`] = el }} className="h2" placeholder="Step title" value={step.title} onChange={this.changeStepKey('title', sIdx)} />
             <TextareaAutosize style={{ width: '100%', border: 0 }} required className="form-control" placeholder="Step description" value={step.description} onChange={this.changeStepKey('description', sIdx)} />
           </div>
           <div className="col-2">
@@ -242,6 +252,8 @@ class TutorialGenerator extends React.Component {
     )
   }
 
+  elems = {}
+
   onDragEnd = (result) => {
     // dropped outside the list
     if (!result.destination) {
@@ -275,7 +287,13 @@ class TutorialGenerator extends React.Component {
   addStepAtEnd = () => {
     const nextSteps = [...this.state.steps]
     nextSteps.push(stepInitialState())
-    this.setState({ steps: nextSteps })
+    this.setState({ steps: nextSteps }, () => this.elems[`${this.state.steps.length - 1}-title`].focus())
+  }
+
+  duplicateStepAtEnd = () => {
+    const nextSteps = [...this.state.steps]
+    nextSteps.push(cloneDeep(this.state.steps[this.state.steps.length - 1]))
+    this.setState({ steps: nextSteps }, () => this.elems[`${this.state.steps.length - 1}-title`].focus())
   }
 
   changeStepKey = (key, sIdx) => (evt) => {
@@ -357,6 +375,20 @@ class TutorialGenerator extends React.Component {
   updateHiddenFields = (hiddenFields) => {
     // TODO :: if an existing field is changed or removed, check if it's used, and prompt warning
     this.setState({ hiddenFields })
+  }
+
+  setupHotkeys = (evt) => {
+    if (evt.key === 'S' && evt.ctrlKey && evt.shiftKey) {
+      this.save()
+    }
+    if (evt.key === 's' && evt.ctrlKey) {
+      evt.preventDefault()
+      this.addStepAtEnd()
+    }
+    if (evt.key === 's' && evt.altKey) {
+      evt.preventDefault()
+      this.duplicateStepAtEnd()
+    }
   }
 }
 
