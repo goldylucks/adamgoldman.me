@@ -306,6 +306,12 @@ class ToolEditor extends React.Component {
     this.setState({ steps: nextSteps }, () => this.elems[`${this.state.steps.length - 1}-title`].focus())
   }
 
+  duplicateStepAtEndTitleOnly = () => {
+    const nextSteps = [...this.state.steps]
+    nextSteps.push(freshStep({ title: this.state.steps[this.state.steps.length - 1].title }))
+    this.setState({ steps: nextSteps }, () => this.elems[`${this.state.steps.length - 1}-title`].focus())
+  }
+
   changeStepKey = (key, sIdx) => (evt) => {
     const nextSteps = [...this.state.steps]
     nextSteps[sIdx][key] = evt.target.value
@@ -399,6 +405,10 @@ class ToolEditor extends React.Component {
       evt.preventDefault()
       this.duplicateStepAtEnd()
     }
+    if (evt.key === 'S' && evt.altKey && evt.shiftKey) {
+      evt.preventDefault()
+      this.duplicateStepAtEndTitleOnly()
+    }
   }
 
   stepHasOtherAnswer(sIdx) {
@@ -477,14 +487,14 @@ function getListStyle(isDraggingOver) {
   }
 }
 
-function freshStep() {
-  return {
+function freshStep(opts) {
+  return Object.assign({
     title: '',
     description: '',
     type: 'radio',
     inputPlaceholder: '',
     answers: [freshAnswer()],
-  }
+  }, opts)
 }
 
 function freshAnswer(opts) {
