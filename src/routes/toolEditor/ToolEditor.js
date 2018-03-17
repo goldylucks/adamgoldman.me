@@ -32,7 +32,7 @@ class ToolEditor extends React.Component {
     title: '',
     description: '',
     credits: '',
-    steps: [stepInitialState()],
+    steps: [freshStep()],
     hiddenFields: [],
   }
 
@@ -157,16 +157,16 @@ class ToolEditor extends React.Component {
 
   renderSteps() {
     return this.state.steps.map((step, sIdx) => (
-      <div key={sIdx} id={`step-${sIdx}`}>
-        <div className="row">
+      <div key={sIdx} id={`step-${sIdx}`} className={s.step}>
+        <div className="row" style={{ marginBottom: 20 }}>
           <div className="col-10">
-            <input style={{ width: '100%', border: 0 }} ref={(el) => { this.elems[`${sIdx}-title`] = el }} className="h2" placeholder="Step title" value={step.title} onChange={this.changeStepKey('title', sIdx)} />
+            <input style={{ width: '100%', border: 0, marginBottom: 20 }} ref={(el) => { this.elems[`${sIdx}-title`] = el }} className="h2" placeholder="Step title" value={step.title} onChange={this.changeStepKey('title', sIdx)} />
             <TextareaAutosize style={{ width: '100%', border: 0 }} required className="form-control" placeholder="Step description" value={step.description} onChange={this.changeStepKey('description', sIdx)} />
           </div>
           <div className="col-2">
-            <p className="text-right">{sIdx}/{this.state.steps.length - 1} <a onClick={this.removeStep(sIdx)}><FontAwesomeIcon icon={faTrashAlt} /></a></p>
+            <p className="text-right">{sIdx}/{this.state.steps.length - 1} <a onClick={this.removeStep(sIdx)} className={s.stepRevealable}><FontAwesomeIcon icon={faTrashAlt} /></a></p>
             <select
-              className="select"
+              className={cx('select', s.stepRevealable)}
               style={{ marginRight: 5 }}
               value={step.type}
               onChange={this.changeStepKey('type', sIdx)}
@@ -189,9 +189,9 @@ class ToolEditor extends React.Component {
         </div>)}
 
         {this.renderMultipleAnswers(sIdx)}
-        <a onClick={() => this.addStep(sIdx)} className="pull-right">+ Step</a>
+        <a onClick={() => this.addStep(sIdx)} className={cx('pull-right', s.stepRevealable)}>+ Step</a>
         <hr style={{
- borderTopWidth: 1, marginBottom: 10, marginTop: 10, clear: 'both',
+ borderTopWidth: 1, marginBottom: 70, marginTop: 70, clear: 'both',
 }}
         />
       </div>
@@ -227,7 +227,7 @@ class ToolEditor extends React.Component {
               </div>
               <div className={cx('col-10', s.answerOptionCol, { [s.isVisible]: a.hasGoToStep || a.isLink || a.isLinkNew || a.isConcern })}>
 
-                {[{ toggleId: 'hasGoToStep', icon: faPaperPlane, fieldId: 'goToStepByNum' }, { toggleId: 'isLink', icon: faLink, fieldId: 'link' }, { toggleId: 'isLinkNew', icon: faExternalLinkAlt, fieldId: 'linkNew' }, { toggleId: 'isConcern', icon: faExclamation }]
+                {[{ toggleId: 'hasGoToStep', icon: faPaperPlane, fieldId: 'goToStepByNum' }, { toggleId: 'isLink', icon: faLink, fieldId: 'link' }, { toggleId: 'isLinkNew', icon: faExternalLinkAlt, fieldId: 'linkNew' }, { toggleId: 'isConcern', icon: faExclamation, fieldId: 'concern' }]
               .map(({ toggleId, icon, fieldId }) => (
                 <div className={s.answerOption}>
                   <div
@@ -250,11 +250,14 @@ class ToolEditor extends React.Component {
             </div>
           </div>
           ))}
-        <div className="form-check">
-          <input type="checkbox" className="form-check-input" id={`step-${sIdx}-other-toggle`} checked={this.stepHasOtherAnswer(sIdx)} onChange={() => this.toggleStepHasOtherAnswer(sIdx)} />
-          <label className="form-check-label" forhtml={`step-${sIdx}-other-toggle`}>Other</label>
+        <div className={cx('col-10', s.stepRevealable)} style={{ display: 'flex', justifyContent: 'space-between', marginTop: 15 }}>
+          <div className="form-check">
+            <input type="checkbox" className="form-check-input" id={`step-${sIdx}-other-toggle`} checked={this.stepHasOtherAnswer(sIdx)} onChange={() => this.toggleStepHasOtherAnswer(sIdx)} />
+            <label className="form-check-label" forhtml={`step-${sIdx}-other-toggle`}>Other</label>
+          </div>
+          <a onClick={() => this.setAnswersTemplate(sIdx)}>Template A</a>
+          <a onClick={this.addAnswer(sIdx)}>+ answer</a>
         </div>
-        <a onClick={this.addAnswer(sIdx)}>+ answer</a>
       </div>
     )
   }
@@ -287,13 +290,13 @@ class ToolEditor extends React.Component {
   addStep = (sIdx) => {
     let nextSteps = [...this.state.steps]
     nextSteps = updateLogicalJumpsAfterAddStep(sIdx, nextSteps)
-    nextSteps.splice(sIdx + 1, 0, stepInitialState())
+    nextSteps.splice(sIdx + 1, 0, freshStep())
     this.setState({ steps: nextSteps })
   }
 
   addStepAtEnd = () => {
     const nextSteps = [...this.state.steps]
-    nextSteps.push(stepInitialState())
+    nextSteps.push(freshStep())
     this.setState({ steps: nextSteps }, () => this.elems[`${this.state.steps.length - 1}-title`].focus())
   }
 
@@ -329,7 +332,7 @@ class ToolEditor extends React.Component {
 
   addAnswer = sIdx => () => {
     const nextSteps = [...this.state.steps]
-    nextSteps[sIdx].answers.push(answerInitialState())
+    nextSteps[sIdx].answers.push(freshAnswer())
     this.setState({ steps: nextSteps })
   }
 
@@ -344,7 +347,7 @@ class ToolEditor extends React.Component {
       return
     }
     const nextSteps = [...this.state.steps]
-    nextSteps[sIdx].answers.splice(aIdx + 1, 0, answerInitialState())
+    nextSteps[sIdx].answers.splice(aIdx + 1, 0, freshAnswer())
     evt.preventDefault()
     this.setState({ steps: nextSteps }, () => this[`step-${sIdx}-answer-${aIdx + 1}`].focus())
   }
@@ -411,8 +414,22 @@ class ToolEditor extends React.Component {
     if (this.stepHasOtherAnswer(sIdx)) {
       nextSteps[sIdx].answers.pop()
     } else {
-      nextSteps[sIdx].answers.push(Object.assign(answerInitialState(), { isOther: true, text: 'Other' }))
+      nextSteps[sIdx].answers.push(freshAnswer({ isOther: true, text: 'Other' }))
     }
+    this.setState({ steps: nextSteps })
+  }
+
+  setAnswersTemplate(sIdx) {
+    if (!global.confirm('set answers template?')) {
+      return
+    }
+    const nextSteps = [...this.state.steps]
+    nextSteps[sIdx].answers = [
+      freshAnswer({ text: 'I feel MUCH better' }),
+      freshAnswer({ text: 'I feel better' }),
+      freshAnswer({ text: 'I don’t feel a change in this step' }),
+      freshAnswer({ text: 'I feel worse', isConcern: true, concern: 'feel worse' }),
+    ]
     this.setState({ steps: nextSteps })
   }
 }
@@ -460,18 +477,18 @@ function getListStyle(isDraggingOver) {
   }
 }
 
-function stepInitialState() {
+function freshStep() {
   return {
     title: '',
     description: '',
     type: 'radio',
     inputPlaceholder: '',
-    answers: [answerInitialState()],
+    answers: [freshAnswer()],
   }
 }
 
-function answerInitialState() {
-  return {
+function freshAnswer(opts) {
+  return Object.assign({
     isOther: false,
     text: '',
     hasGoToStep: false,
@@ -481,7 +498,8 @@ function answerInitialState() {
     isLinkNew: false,
     linkNew: '',
     isConcern: false,
-  }
+    concern: '',
+  }, opts)
 }
 
 function updateLogicalJumpsAfterAddStep(sIdx, nextSteps) {
