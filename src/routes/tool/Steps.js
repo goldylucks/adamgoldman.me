@@ -59,7 +59,7 @@ class Steps extends React.Component {
           <input
             value={this.state.answerByStep[this.state.currentStep]}
             onChange={this.stepInputChange}
-            placeholder={this.replaceVars(inputPlaceholder)}
+            placeholder={this.replaceVars(inputPlaceholder || 'write your answer here')}
             required
             autoFocus={!isMobile()}
             className="form-control"
@@ -87,7 +87,7 @@ class Steps extends React.Component {
           <textarea
             value={this.state.answerByStep[this.state.currentStep]}
             onChange={this.stepInputChange}
-            placeholder={this.replaceVars(inputPlaceholder)}
+            placeholder={this.replaceVars(inputPlaceholder || 'write your answer here')}
             required
             autoFocus={!isMobile()}
             className="form-control"
@@ -120,7 +120,7 @@ class Steps extends React.Component {
   }
 
   renderBack() {
-    return this.state.currentStep === 0 ? null : <a onClick={this.back}>Back</a>
+    return this.state.currentStep === 0 ? null : <button className="btn btn-secondary btn-sm" onClick={this.back}>Back</button>
   }
 
   submitMultipleChoiceAnswer = (aIdx) => {
