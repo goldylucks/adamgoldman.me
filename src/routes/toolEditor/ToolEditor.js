@@ -11,6 +11,7 @@ import faSave from '@fortawesome/fontawesome-free-regular/faSave'
 import faLink from '@fortawesome/fontawesome-free-solid/faLink'
 import faExternalLinkAlt from '@fortawesome/fontawesome-free-solid/faExternalLinkAlt'
 import faEye from '@fortawesome/fontawesome-free-solid/faEye'
+import faExclamation from '@fortawesome/fontawesome-free-solid/faExclamation'
 import TextareaAutosize from 'react-autosize-textarea'
 import { Typeahead } from 'react-bootstrap-typeahead'
 import cloneDeep from 'lodash.clonedeep'
@@ -224,9 +225,9 @@ class ToolEditor extends React.Component {
               <div className={cx('col-2 text-right', s.answerActions)}>
                 <FontAwesomeIcon onClick={this.removeAnswer(sIdx, aIdx)} icon={faTrashAlt} />
               </div>
-              <div className={cx('col-10', s.answerOptionCol, { [s.isVisible]: a.hasGoToStep || a.isLink || a.isLinkNew })}>
+              <div className={cx('col-10', s.answerOptionCol, { [s.isVisible]: a.hasGoToStep || a.isLink || a.isLinkNew || a.isConcern })}>
 
-                {[{ toggleId: 'hasGoToStep', icon: faPaperPlane, fieldId: 'goToStepByNum' }, { toggleId: 'isLink', icon: faLink, fieldId: 'link' }, { toggleId: 'isLinkNew', icon: faExternalLinkAlt, fieldId: 'linkNew' }]
+                {[{ toggleId: 'hasGoToStep', icon: faPaperPlane, fieldId: 'goToStepByNum' }, { toggleId: 'isLink', icon: faLink, fieldId: 'link' }, { toggleId: 'isLinkNew', icon: faExternalLinkAlt, fieldId: 'linkNew' }, { toggleId: 'isConcern', icon: faExclamation }]
               .map(({ toggleId, icon, fieldId }) => (
                 <div className={s.answerOption}>
                   <div
@@ -479,6 +480,7 @@ function answerInitialState() {
     link: '',
     isLinkNew: false,
     linkNew: '',
+    isConcern: false,
   }
 }
 
