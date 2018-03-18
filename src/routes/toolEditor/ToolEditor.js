@@ -1,24 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
-import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd'
 import axios from 'axios'
 import cx from 'classnames'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import faPaperPlane from '@fortawesome/fontawesome-free-regular/faPaperPlane'
 import faTrashAlt from '@fortawesome/fontawesome-free-regular/faTrashAlt'
 import faSave from '@fortawesome/fontawesome-free-regular/faSave'
-import faLink from '@fortawesome/fontawesome-free-solid/faLink'
-import faExternalLinkAlt from '@fortawesome/fontawesome-free-solid/faExternalLinkAlt'
 import faEye from '@fortawesome/fontawesome-free-solid/faEye'
-import faExclamation from '@fortawesome/fontawesome-free-solid/faExclamation'
 import TextareaAutosize from 'react-autosize-textarea'
 import { Typeahead } from 'react-bootstrap-typeahead'
 import _ from 'lodash'
 
 import { inputChange, inputToggle } from '../../forms'
-import { reorder, scrollToElem } from '../../utils'
 
+import { freshStep } from './toolEditorUtils'
+import Toc from './Toc'
+import Answers from './Answers'
 import s from './ToolEditor.css'
 
 class ToolEditor extends React.Component {
@@ -69,7 +66,7 @@ class ToolEditor extends React.Component {
           </div>
         </div>
         <div className="clearfix" style={{ width: '35%', right: 0, position: 'fixed' }}>
-          {this.renderTOC()}
+          <Toc steps={this.state.steps} onReorderSteps={this.reorderSteps} />
         </div>
       </div>
     )
@@ -113,48 +110,6 @@ class ToolEditor extends React.Component {
     )
   }
 
-  renderTOC() {
-    const stepsCount = this.state.steps.length - 1
-    return (
-      <div style={{ maxHeight: '90vh', overflowY: 'scroll' }}>
-        <h2>TOC</h2>
-        <a onClick={() => scrollToElem(document.querySelector('html'), 0, 300)}>Details</a>
-        <DragDropContext onDragEnd={this.onDragEnd}>
-          <Droppable droppableId="droppable">
-            {(provided, snapshot) => (
-              <div
-                ref={provided.innerRef}
-                style={getListStyle(snapshot.isDraggingOver)}
-              >
-                {this.state.steps.map(({ title }, sIdx) => (
-                  <Draggable key={sIdx} draggableId={sIdx}>
-                    {(providedInner, snapshotInner) => (
-                      <div>
-                        <div
-                          key={sIdx}
-                          ref={providedInner.innerRef}
-                          style={getItemStyle(
-                            providedInner.draggableStyle,
-                            snapshotInner.isDragging,
-                          )}
-                          {...providedInner.dragHandleProps}
-                        >
-                          <a onClick={() => scrollToElem(document.querySelector('html'), document.querySelector(`#step-${sIdx}`).getBoundingClientRect().top - document.body.getBoundingClientRect().top, 300)}>{(sIdx <= 9 && stepsCount > 9) ? `0${sIdx}` : sIdx}/{stepsCount}</a> - {title}
-                        </div>
-                        {providedInner.placeholder}
-                      </div>
-                    )}
-                  </Draggable>
-                ))}
-                {provided.placeholder}
-              </div>
-            )}
-          </Droppable>
-        </DragDropContext>
-      </div>
-    )
-  }
-
   renderSteps() {
     return this.state.steps.map((step, sIdx) => (
       <div key={sIdx} id={`step-${sIdx}`} className={s.step}>
@@ -191,8 +146,12 @@ class ToolEditor extends React.Component {
         <div className="form-group">
           <textarea className="form-control" value={step.inputPlaceholder} placeholder="Long answer placeholder" onChange={this.changeStepKey('inputPlaceholder', sIdx)} />
         </div>)}
-
-        {this.renderMultipleAnswers(sIdx)}
+        <Answers
+          onNewStepAnswers={this.newStepAnswers}
+          sIdx={sIdx}
+          type={step.type}
+          answers={step.answers}
+        />
         <a onClick={() => this.addStep(sIdx)} className={cx('pull-right', s.stepRevealable)}>+ Step</a>
         <hr style={{
  borderTopWidth: 1, marginBottom: 70, marginTop: 70, clear: 'both',
@@ -203,79 +162,7 @@ class ToolEditor extends React.Component {
     )
   }
 
-  renderMultipleAnswers(sIdx) {
-    const step = this.state.steps[sIdx]
-    if (!step.type) {
-      return null
-    }
-    if (!step.type.match(/radio|checkbox/)) {
-      return null
-    }
-    return (
-      <div>
-        {step.answers.map((a, aIdx) => (
-          <div>
-            <div className={cx('row', s.answer)}>
-              <div className="col-10">
-                <input
-                  onKeyPress={(evt) => { this.answerKeyPress(evt, sIdx, aIdx) }}
-                  ref={(el) => { this[`step-${sIdx}-answer-${aIdx}`] = el }}
-                  className="btn btn-primary btn-block text-left"
-                  placeholder={`answer #${aIdx}`}
-                  value={a.text}
-                  onChange={this.changeAnswerKey('text', sIdx, aIdx)}
-                />
-              </div>
-              <div className={cx('col-2 text-right', s.answerActions)}>
-                <FontAwesomeIcon onClick={this.removeAnswer(sIdx, aIdx)} icon={faTrashAlt} />
-              </div>
-              <div className={cx('col-10', s.answerOptionCol, { [s.isVisible]: a.hasGoToStep || a.isLink || a.isLinkNew || a.isConcern })}>
-
-                {[{ toggleId: 'hasGoToStep', icon: faPaperPlane, fieldId: 'goToStepByNum' }, { toggleId: 'isLink', icon: faLink, fieldId: 'link' }, { toggleId: 'isLinkNew', icon: faExternalLinkAlt, fieldId: 'linkNew' }, { toggleId: 'isConcern', icon: faExclamation, fieldId: 'concern' }]
-              .map(({ toggleId, icon, fieldId }) => (
-                <div className={s.answerOption}>
-                  <div
-                    className={s.answerOptionToggle}
-                    onClick={this.toggleAnswerKey(toggleId, sIdx, aIdx)}
-                  >
-                    <FontAwesomeIcon icon={icon} />
-                  </div>
-                  <input
-                    type="text"
-                    className={cx(s.answerOptionField, { [s.isVisible]: a[toggleId] })}
-                    id={fieldId}
-                    placeholder={fieldId}
-                    value={a[fieldId]}
-                    onChange={this.changeAnswerKey(fieldId, sIdx, aIdx)}
-                  />
-                </div>
-              ))}
-              </div>
-            </div>
-          </div>
-          ))}
-        <div className={cx('col-10', s.stepRevealable)} style={{ display: 'flex', justifyContent: 'space-between', marginTop: 15 }}>
-          <div className="form-check">
-            <input type="checkbox" className="form-check-input" id={`step-${sIdx}-other-toggle`} checked={this.stepHasOtherAnswer(sIdx)} onChange={() => this.toggleStepHasOtherAnswer(sIdx)} />
-            <label className="form-check-label" htmlFor={`step-${sIdx}-other-toggle`}>Other</label>
-          </div>
-          <a onClick={() => this.setAnswersTemplate(sIdx)}>Template A</a>
-          <a onClick={this.addAnswer(sIdx)}>+ answer</a>
-        </div>
-      </div>
-    )
-  }
-
   elems = {}
-
-  onDragEnd = (result) => {
-    // dropped outside the list
-    if (!result.destination) {
-      return
-    }
-    const steps = reorder(this.state.steps, result.source.index, result.destination.index)
-    this.setState({ steps })
-  }
 
   removeStep = sIdx => () => {
     if (!global.confirm(`really delete step ${sIdx}?`)) {
@@ -324,40 +211,6 @@ class ToolEditor extends React.Component {
     const nextSteps = [...this.state.steps]
     nextSteps[sIdx][key] = !nextSteps[sIdx][key]
     this.setState({ steps: nextSteps })
-  }
-
-  changeAnswerKey = (key, sIdx, aIdx) => (evt) => {
-    const nextSteps = [...this.state.steps]
-    nextSteps[sIdx].answers[aIdx][key] = evt.target.value
-    this.setState({ steps: nextSteps })
-  }
-
-  toggleAnswerKey = (key, sIdx, aIdx) => () => {
-    const nextSteps = [...this.state.steps]
-    nextSteps[sIdx].answers[aIdx][key] = !nextSteps[sIdx].answers[aIdx][key]
-    this.setState({ steps: nextSteps })
-  }
-
-  addAnswer = sIdx => () => {
-    const nextSteps = [...this.state.steps]
-    nextSteps[sIdx].answers.push(freshAnswer())
-    this.setState({ steps: nextSteps })
-  }
-
-  removeAnswer = (sIdx, aIdx) => () => {
-    const nextSteps = [...this.state.steps]
-    nextSteps[sIdx].answers.splice(aIdx, 1)
-    this.setState({ steps: nextSteps })
-  }
-
-  answerKeyPress = (evt, sIdx, aIdx) => {
-    if (evt.key !== 'Enter') {
-      return
-    }
-    const nextSteps = [...this.state.steps]
-    nextSteps[sIdx].answers.splice(aIdx + 1, 0, freshAnswer())
-    evt.preventDefault()
-    this.setState({ steps: nextSteps }, () => this[`step-${sIdx}-answer-${aIdx + 1}`].focus())
   }
 
   save = () => {
@@ -412,37 +265,16 @@ class ToolEditor extends React.Component {
     }
   }
 
-  stepHasOtherAnswer(sIdx) {
-    if (!this.state.steps[sIdx].answers) {
-      global.console.warn('missing answers on step ', sIdx)
-      return false
-    }
-    return !!this.state.steps[sIdx].answers.find(a => a.isOther)
-  }
-
-  toggleStepHasOtherAnswer(sIdx) {
-    const nextSteps = [...this.state.steps]
-    this.stepHasOtherAnswer(sIdx) // eslint-disable-line no-unused-expressions
-      ? nextSteps[sIdx].answers.pop()
-      : nextSteps[sIdx].answers.push(freshAnswer({ isOther: true, text: 'Other' }))
-    this.setState({ steps: nextSteps })
-  }
-
-  setAnswersTemplate(sIdx) {
-    if (!global.confirm('set answers template?')) {
-      return
-    }
-    const nextSteps = [...this.state.steps]
-    nextSteps[sIdx].answers = [
-      freshAnswer({ text: 'I feel MUCH better' }),
-      freshAnswer({ text: 'I feel better' }),
-      freshAnswer({ text: 'I don’t feel a change in this step' }),
-      freshAnswer({ text: 'I feel worse', isConcern: true, concern: 'feel worse' }),
-    ]
-    this.setState({ steps: nextSteps })
-  }
-
   focusLastTitle = () => this.elems[`${this.state.steps.length - 1}-title`].focus()
+
+  reorderSteps = steps => this.setState({ steps })
+
+  newStepAnswers = (sIdx, answers, cb) => {
+    this.setState(({ steps }) => {
+      steps[sIdx].answers = answers
+      return { steps }
+    }, () => cb && cb())
+  }
 }
 
 export default withStyles(s)(ToolEditor)
@@ -463,56 +295,6 @@ function cleanEmptyValues(state) {
     })
     return step
   })
-}
-
-const grid = 2
-
-function getItemStyle(draggableStyle, isDragging) {
-  return {
-    // some basic styles to make the items look a bit nicer
-    userSelect: 'none',
-    padding: grid * 2,
-    margin: `0 0 ${grid}px 0`,
-    // change background colour if dragging
-    background: isDragging ? 'lightgreen' : '',
-    border: '1px solid #000',
-    // styles we need to apply on draggables
-    ...draggableStyle,
-  }
-}
-
-function getListStyle(isDraggingOver) {
-  return {
-    background: isDraggingOver ? 'lightblue' : 'lightgrey',
-    padding: grid,
-  }
-}
-
-function freshStep(opts) {
-  return {
-    title: '',
-    description: '',
-    type: 'radio',
-    inputPlaceholder: '',
-    answers: [freshAnswer()],
-    ...opts,
-  }
-}
-
-function freshAnswer(opts) {
-  return {
-    isOther: false,
-    text: '',
-    hasGoToStep: false,
-    goToStepByNum: '',
-    isLink: false,
-    link: '',
-    isLinkNew: false,
-    linkNew: '',
-    isConcern: false,
-    concern: '',
-    ...opts,
-  }
 }
 
 function updateLogicalJumpsAfterAddStep(sIdx, nextSteps) {
