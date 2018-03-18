@@ -160,8 +160,12 @@ class ToolEditor extends React.Component {
       <div key={sIdx} id={`step-${sIdx}`} className={s.step}>
         <div className="row" style={{ marginBottom: 20 }}>
           <div className="col-10">
-            <input style={{ width: '100%', border: 0, marginBottom: 20 }} ref={(el) => { this.elems[`${sIdx}-title`] = el }} className="h2" placeholder="Step title" value={step.title} onChange={this.changeStepKey('title', sIdx)} />
-            <TextareaAutosize style={{ width: '100%', border: 0 }} required className="form-control" placeholder="Step description" value={step.description} onChange={this.changeStepKey('description', sIdx)} />
+            <div>
+              <input style={{ width: '100%', border: 0, marginBottom: 20 }} ref={(el) => { this.elems[`${sIdx}-title`] = el }} className="h2" placeholder="Step title" value={step.title} onChange={this.changeStepKey('title', sIdx)} />
+            </div>
+            <div>
+              <TextareaAutosize style={{ width: '100%', border: 0 }} required className="form-control" placeholder="Step description" value={step.description} onChange={this.changeStepKey('description', sIdx)} />
+            </div>
           </div>
           <div className="col-2">
             <p className="text-right">{sIdx}/{this.state.steps.length - 1} <a onClick={this.removeStep(sIdx)} className={s.stepRevealable}><FontAwesomeIcon icon={faTrashAlt} /></a></p>
