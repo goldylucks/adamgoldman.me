@@ -14,39 +14,39 @@ import { pure } from 'recompose'
 import { freshAnswer } from './toolEditorUtils'
 import s from './ToolEditor.css'
 
-const changeAnswerKey = (key, answers, sIdx, aIdx, onNewStepAnswers) => (evt) => {
+const changeAnswerKey = (key, answers, sIdx, aIdx, onUpdateStepAnswers) => (evt) => {
   answers = _.cloneDeep(answers)
   answers[aIdx][key] = evt.target.value
-  onNewStepAnswers(sIdx, answers)
+  onUpdateStepAnswers(answers)
 }
 
-const toggleAnswerOption = (key, answers, sIdx, aIdx, onNewStepAnswers) => () => {
+const toggleAnswerOption = (key, answers, sIdx, aIdx, onUpdateStepAnswers) => () => {
   answers = _.cloneDeep(answers)
   answers[aIdx][key] = !answers[aIdx][key]
-  onNewStepAnswers(sIdx, answers)
+  onUpdateStepAnswers(answers)
 }
 
-const addAnswer = (sIdx, answers, onNewStepAnswers) => () => {
-  onNewStepAnswers(sIdx, answers.concat(freshAnswer()))
+const addAnswer = (sIdx, answers, onUpdateStepAnswers) => () => {
+  onUpdateStepAnswers(answers.concat(freshAnswer()))
 }
 
-const removeAnswer = (sIdx, answers, aIdx, onNewStepAnswers) => () => {
+const removeAnswer = (sIdx, answers, aIdx, onUpdateStepAnswers) => () => {
   answers = _.cloneDeep(answers)
   answers.splice(aIdx, 1)
-  onNewStepAnswers(sIdx, answers)
+  onUpdateStepAnswers(answers)
 }
 
-const answerKeyPress = (sIdx, answers, aIdx, onNewStepAnswers) => (evt) => {
+const answerKeyPress = (sIdx, answers, aIdx, onUpdateStepAnswers) => (evt) => {
   if (evt.key !== 'Enter') {
     return
   }
   evt.preventDefault()
   answers = _.cloneDeep(answers)
   answers.splice(aIdx + 1, 0, freshAnswer())
-  onNewStepAnswers(sIdx, answers)
+  onUpdateStepAnswers(answers)
 }
 
-const setAnswersTemplate = (sIdx, onNewStepAnswers) => () => {
+const setAnswersTemplate = (sIdx, onUpdateStepAnswers) => () => {
   if (!global.confirm('set answers template?')) {
     return
   }
@@ -56,7 +56,7 @@ const setAnswersTemplate = (sIdx, onNewStepAnswers) => () => {
     freshAnswer({ text: 'I don’t feel a change in this step' }),
     freshAnswer({ text: 'I feel worse', isConcern: true, concern: 'feel worse' }),
   ]
-  onNewStepAnswers(sIdx, answers)
+  onUpdateStepAnswers(answers)
 }
 
 const hasOtherAnswer = (sIdx, answers) => {
@@ -67,16 +67,16 @@ const hasOtherAnswer = (sIdx, answers) => {
   return !!answers.find(a => a.isOther)
 }
 
-const toggleHasOtherAnswer = (sIdx, answers, onNewStepAnswers) => () => {
+const toggleHasOtherAnswer = (sIdx, answers, onUpdateStepAnswers) => () => {
   answers = _.cloneDeep(answers)
   hasOtherAnswer(sIdx) // eslint-disable-line no-unused-expressions
     ? answers.pop()
     : answers.push(freshAnswer({ isOther: true, text: 'Other' }))
-  onNewStepAnswers(sIdx, answers)
+  onUpdateStepAnswers(answers)
 }
 
 const Answers = ({
-  type, answers, sIdx, onNewStepAnswers,
+  type, answers, sIdx, onUpdateStepAnswers,
 }) => {
   const elems = {}
   if (!type) {
@@ -92,17 +92,17 @@ const Answers = ({
           <div className={cx('row', s.answer)}>
             <div className="col-10">
               <input
-                onKeyPress={answerKeyPress(sIdx, answers, aIdx, onNewStepAnswers)}
+                onKeyPress={answerKeyPress(sIdx, answers, aIdx, onUpdateStepAnswers)}
                 ref={(el) => { elems[`answer-${aIdx}`] = el }}
                 className="btn btn-primary btn-block text-left"
                 placeholder={`answer #${aIdx}`}
                 value={a.text}
-                onChange={changeAnswerKey('text', answers, sIdx, aIdx, onNewStepAnswers)}
+                onChange={changeAnswerKey('text', answers, sIdx, aIdx, onUpdateStepAnswers)}
               />
             </div>
             <div className={cx('col-2 text-right', s.answerActions)}>
               <FontAwesomeIcon
-                onClick={removeAnswer(sIdx, answers, aIdx, onNewStepAnswers)}
+                onClick={removeAnswer(sIdx, answers, aIdx, onUpdateStepAnswers)}
                 icon={faTrashAlt}
               />
             </div>
@@ -112,7 +112,7 @@ const Answers = ({
               <div className={s.answerOption}>
                 <div
                   className={s.answerOptionToggle}
-                  onClick={toggleAnswerOption(toggleId, answers, sIdx, aIdx, onNewStepAnswers)}
+                  onClick={toggleAnswerOption(toggleId, answers, sIdx, aIdx, onUpdateStepAnswers)}
                 >
                   <FontAwesomeIcon icon={icon} />
                 </div>
@@ -122,7 +122,7 @@ const Answers = ({
                   id={fieldId}
                   placeholder={fieldId}
                   value={a[fieldId]}
-                  onChange={changeAnswerKey(fieldId, sIdx, aIdx, onNewStepAnswers)}
+                  onChange={changeAnswerKey(fieldId, sIdx, aIdx, onUpdateStepAnswers)}
                 />
               </div>
             ))}
@@ -135,8 +135,8 @@ const Answers = ({
           <input type="checkbox" className="form-check-input" id={`step-${sIdx}-other-toggle`} checked={hasOtherAnswer(sIdx, answers)} onChange={toggleHasOtherAnswer(sIdx)} />
           <label className="form-check-label" htmlFor={`step-${sIdx}-other-toggle`}>Other</label>
         </div>
-        <a onClick={setAnswersTemplate(sIdx, onNewStepAnswers)}>Template A</a>
-        <a onClick={addAnswer(sIdx, answers, onNewStepAnswers)}>+ answer</a>
+        <a onClick={setAnswersTemplate(sIdx, onUpdateStepAnswers)}>Template A</a>
+        <a onClick={addAnswer(sIdx, answers, onUpdateStepAnswers)}>+ answer</a>
       </div>
     </div>
   )
@@ -146,7 +146,7 @@ Answers.propTypes = {
   type: PropTypes.string.isRequired,
   answers: PropTypes.array.isRequired,
   sIdx: PropTypes.number.isRequired,
-  onNewStepAnswers: PropTypes.func.isRequired,
+  onUpdateStepAnswers: PropTypes.func.isRequired,
 }
 
 export default withStyles(s)(pure(Answers))
