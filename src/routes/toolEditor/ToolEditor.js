@@ -14,7 +14,7 @@ import faEye from '@fortawesome/fontawesome-free-solid/faEye'
 import faExclamation from '@fortawesome/fontawesome-free-solid/faExclamation'
 import TextareaAutosize from 'react-autosize-textarea'
 import { Typeahead } from 'react-bootstrap-typeahead'
-import cloneDeep from 'lodash.clonedeep'
+import _ from 'lodash'
 
 import { inputChange, inputToggle } from '../../forms'
 import { reorder, scrollToElem } from '../../utils'
@@ -253,7 +253,7 @@ class ToolEditor extends React.Component {
         <div className={cx('col-10', s.stepRevealable)} style={{ display: 'flex', justifyContent: 'space-between', marginTop: 15 }}>
           <div className="form-check">
             <input type="checkbox" className="form-check-input" id={`step-${sIdx}-other-toggle`} checked={this.stepHasOtherAnswer(sIdx)} onChange={() => this.toggleStepHasOtherAnswer(sIdx)} />
-            <label className="form-check-label" forhtml={`step-${sIdx}-other-toggle`}>Other</label>
+            <label className="form-check-label" htmlFor={`step-${sIdx}-other-toggle`}>Other</label>
           </div>
           <a onClick={() => this.setAnswersTemplate(sIdx)}>Template A</a>
           <a onClick={this.addAnswer(sIdx)}>+ answer</a>
@@ -277,9 +277,9 @@ class ToolEditor extends React.Component {
     if (!global.confirm(`really delete step ${sIdx}?`)) {
       return
     }
-    let nextSteps = [...this.state.steps]
+    // throws eror if step is involved in logical jumps or variables
     try {
-      nextSteps = updateLogicalJumpsAfterRemoveStep(sIdx, nextSteps)
+      const nextSteps = updateLogicalJumpsAfterRemoveStep(sIdx, [...this.state.steps])
       nextSteps.splice(sIdx, 1)
       this.setState({ steps: nextSteps })
     } catch (err) {
@@ -288,28 +288,26 @@ class ToolEditor extends React.Component {
   }
 
   addStep = (sIdx) => {
-    let nextSteps = [...this.state.steps]
-    nextSteps = updateLogicalJumpsAfterAddStep(sIdx, nextSteps)
+    const nextSteps = updateLogicalJumpsAfterAddStep(sIdx, [...this.state.steps])
     nextSteps.splice(sIdx + 1, 0, freshStep())
     this.setState({ steps: nextSteps })
   }
 
   addStepAtEnd = () => {
-    const nextSteps = [...this.state.steps]
-    nextSteps.push(freshStep())
-    this.setState({ steps: nextSteps }, () => this.elems[`${this.state.steps.length - 1}-title`].focus())
+    const nextSteps = [...this.state.steps].concat(freshStep())
+    this.setState({ steps: nextSteps }, this.focusLastTitle)
   }
 
   duplicateStepAtEnd = () => {
-    const nextSteps = [...this.state.steps]
-    nextSteps.push(cloneDeep(this.state.steps[this.state.steps.length - 1]))
-    this.setState({ steps: nextSteps }, () => this.elems[`${this.state.steps.length - 1}-title`].focus())
+    this.setState(({ steps }) => ({
+      steps: steps.concat(_.cloneDeep(_.last(this.state.steps))),
+    }), this.focusLastTitle)
   }
 
   duplicateStepAtEndTitleOnly = () => {
-    const nextSteps = [...this.state.steps]
-    nextSteps.push(freshStep({ title: this.state.steps[this.state.steps.length - 1].title }))
-    this.setState({ steps: nextSteps }, () => this.elems[`${this.state.steps.length - 1}-title`].focus())
+    this.setState(({ steps }) => ({
+      steps: steps.concat(freshStep({ title: _.last(this.state.steps).title })),
+    }), this.focusLastTitle)
   }
 
   changeStepKey = (key, sIdx) => (evt) => {
@@ -359,8 +357,7 @@ class ToolEditor extends React.Component {
   }
 
   save = () => {
-    const state = { ...this.state }
-    state.url = this.props.url
+    const state = { ...this.state, url: this.props.url }
     cleanEmptyValues(state)
     axios.post('/api/tools/', state)
       .then((res) => {
@@ -421,11 +418,9 @@ class ToolEditor extends React.Component {
 
   toggleStepHasOtherAnswer(sIdx) {
     const nextSteps = [...this.state.steps]
-    if (this.stepHasOtherAnswer(sIdx)) {
-      nextSteps[sIdx].answers.pop()
-    } else {
-      nextSteps[sIdx].answers.push(freshAnswer({ isOther: true, text: 'Other' }))
-    }
+    this.stepHasOtherAnswer(sIdx) // eslint-disable-line no-unused-expressions
+      ? nextSteps[sIdx].answers.pop()
+      : nextSteps[sIdx].answers.push(freshAnswer({ isOther: true, text: 'Other' }))
     this.setState({ steps: nextSteps })
   }
 
@@ -442,6 +437,8 @@ class ToolEditor extends React.Component {
     ]
     this.setState({ steps: nextSteps })
   }
+
+  focusLastTitle = () => this.elems[`${this.state.steps.length - 1}-title`].focus()
 }
 
 export default withStyles(s)(ToolEditor)
@@ -488,17 +485,18 @@ function getListStyle(isDraggingOver) {
 }
 
 function freshStep(opts) {
-  return Object.assign({
+  return {
     title: '',
     description: '',
     type: 'radio',
     inputPlaceholder: '',
     answers: [freshAnswer()],
-  }, opts)
+    ...opts,
+  }
 }
 
 function freshAnswer(opts) {
-  return Object.assign({
+  return {
     isOther: false,
     text: '',
     hasGoToStep: false,
@@ -509,7 +507,8 @@ function freshAnswer(opts) {
     linkNew: '',
     isConcern: false,
     concern: '',
-  }, opts)
+    ...opts,
+  }
 }
 
 function updateLogicalJumpsAfterAddStep(sIdx, nextSteps) {
