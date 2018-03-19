@@ -1,14 +1,21 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import _ from 'lodash'
 
 import { freshStep } from './toolEditorUtils'
 import Step from './Step'
 
-class Steps extends React.PureComponent {
+class Steps extends Component {
   static propTypes = {
     steps: PropTypes.array.isRequired,
     onUpdateSteps: PropTypes.func.isRequired,
+  }
+
+  shouldComponentUpdate(nextProps) {
+    if (this.props.steps !== nextProps.steps) {
+      return true
+    }
+    return false
   }
 
   componentDidMount() {

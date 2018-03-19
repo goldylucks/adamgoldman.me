@@ -5,7 +5,7 @@ import controller from './toolsController'
 const router = require('express').Router()
 
 router.route('/')
-  .post(decodeToken, getFreshUser, isAdmin, controller.updateOrCreate)
+  .post(controller.updateOrCreate)
 
 router.route('/all')
   .get(controller.getAll)
