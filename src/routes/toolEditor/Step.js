@@ -4,11 +4,13 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles'
 import cx from 'classnames'
 import TextareaAutosize from 'react-autosize-textarea'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import faPaperPlane from '@fortawesome/fontawesome-free-regular/faPaperPlane'
 import faTrashAlt from '@fortawesome/fontawesome-free-regular/faTrashAlt'
 import _ from 'lodash'
 
 import s from './ToolEditor.css'
 import Answers from './Answers'
+import AnswerOption from './AnswerOption'
 
 class Step extends Component {
   static propTypes = {
@@ -56,12 +58,34 @@ class Step extends Component {
           </div>
         </div>
         {step.type === 'short' && (
-        <div className="form-group">
+        <div className={cx('form-group', s.answer)}>
           <input className="form-control" value={step.inputPlaceholder} placeholder="Short answer placeholder" onChange={this.changeStepKey('inputPlaceholder')} />
+          <div className={cx('col-10', s.answerOptionCol, { [s.isVisible]: step.hasGoToStep })}>
+            <AnswerOption
+              icon={faPaperPlane}
+              toggleId="hasGoToStep"
+              toggleValue={step.hasGoToStep}
+              fieldId="goToStepByNum"
+              fieldValue={step.goToStepByNum}
+              onToggle={this.toggleStepKey('hasGoToStep')}
+              onFieldChange={this.changeStepKey('goToStepByNum')}
+            />
+          </div>
         </div>)}
         {step.type === 'long' && (
-        <div className="form-group">
+        <div className={cx('form-group', s.answer)}>
           <textarea className="form-control" value={step.inputPlaceholder} placeholder="Long answer placeholder" onChange={this.changeStepKey('inputPlaceholder')} />
+          <div className={cx('col-10', s.answerOptionCol, { [s.isVisible]: step.hasGoToStep })}>
+            <AnswerOption
+              icon={faPaperPlane}
+              toggleId="hasGoToStep"
+              toggleValue={step.hasGoToStep}
+              fieldId="goToStepByNum"
+              fieldValue={step.goToStepByNum}
+              onToggle={this.toggleStepKey('hasGoToStep')}
+              onFieldChange={this.changeStepKey('goToStepByNum')}
+            />
+          </div>
         </div>)}
         <Answers
           onUpdateStepAnswers={this.updateStepAnswers}
@@ -84,6 +108,10 @@ class Step extends Component {
     this.props.onUpdateStep(this.props.sIdx, { ...this.props.step, [key]: evt.target.value })
   }
 
+  toggleStepKey = key => () => {
+    this.props.onUpdateStep(this.props.sIdx, { ...this.props.step, [key]: !this.props.step[key] })
+  }
+
   removeStep = () => {
     if (!global.confirm(`really delete step ${this.props.sIdx}?`)) {
       return
@@ -91,8 +119,8 @@ class Step extends Component {
     this.props.onRemoveStep(this.props.sIdx)
   }
 
-  addStep = (sIdx) => {
-    this.props.onAddStep(sIdx)
+  addStep = () => {
+    this.props.onAddStep(this.props.sIdx)
   }
 
   updateStepAnswers = (answers) => {
