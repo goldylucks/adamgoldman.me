@@ -8,6 +8,7 @@ export const EMAIL = 'goldy@adamgoldman.me'
 export const DOMAIN = 'http://www.adamgoldman.me'
 export const FB_REVIEWS = 'https://www.facebook.com/adamgoldman.me/reviews/'
 export const MESSENGER_LINK = 'https://m.me/adamgoldman.me'
+export const MESSENGER_LINK_TOOL_CONCERN = `${MESSENGER_LINK}?ref=tool-concern-generic-entry`
 export const MESSENGER_LINK_BOOK_SESSION = `${DOMAIN}/book-session`
 export const MESSENGER_LINK_WELCOME = `${DOMAIN}/contact`
 export const MESSENGER_LINK_SAVORING_CONTACT = `${DOMAIN}/savoring-your-child/contact`

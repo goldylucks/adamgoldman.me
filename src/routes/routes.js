@@ -64,7 +64,7 @@ const routes = {
       load: () => import(/* webpackChunkName: 'tutorials' */ './tutorials'),
     },
     {
-      path: ['resolving-feelings'].map(p => `/tools/${p}`),
+      path: ['resolving-feelings', 'test'].map(p => `/tools/${p}`),
       load: () => import(/* webpackChunkName: 'tool' */ './tool'),
     },
     {
