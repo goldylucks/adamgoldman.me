@@ -144,7 +144,7 @@ class Answers extends React.Component {
                   id={fieldId}
                   placeholder={fieldId}
                   value={a[fieldId]}
-                  onChange={changeAnswerKey(fieldId, aIdx, onUpdateStepAnswers)}
+                  onChange={changeAnswerKey(fieldId, answers, aIdx, onUpdateStepAnswers)}
                 />
               </div>
             ))}
