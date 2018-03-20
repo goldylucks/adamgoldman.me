@@ -16,8 +16,7 @@ const Home = ({ transcripts, tutorials }: Props) => (
   <div>
     <div className="container">
       <div className="mainheading">
-        <h1 className="sitetitle">Adam Goldman</h1>
-        <small>Relax, it&apos;s just life ...</small>
+        <h1 className="sitetitle">Relax, it&apos;s just life ...</h1>
         <Markdown
           className="lead"
           source={`

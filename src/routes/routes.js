@@ -7,7 +7,7 @@ const routes = {
   // Keep in mind, routes are evaluated in order
   children: [
     {
-      path: '',
+      path: '/',
       load: () => import(/* webpackChunkName: 'home' */ './home'),
     },
     {
