@@ -5,6 +5,7 @@ import cx from 'classnames'
 import TextareaAutosize from 'react-autosize-textarea'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faTrashAlt from '@fortawesome/fontawesome-free-regular/faTrashAlt'
+import _ from 'lodash'
 
 import s from './ToolEditor.css'
 import Answers from './Answers'
@@ -20,10 +21,9 @@ class Step extends Component {
   }
 
   shouldComponentUpdate(nextProps) {
-    if (this.props.step !== nextProps.step) {
-      return true
-    }
-    return false
+    return !_.isEqual(this.props.step, nextProps.step)
+    || this.props.sIdx !== nextProps.sIdx
+    || this.props.stepCount !== nextProps.stepCount
   }
 
   render() {

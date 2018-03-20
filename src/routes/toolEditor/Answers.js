@@ -9,7 +9,6 @@ import faExclamation from '@fortawesome/fontawesome-free-solid/faExclamation'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faTrashAlt from '@fortawesome/fontawesome-free-regular/faTrashAlt'
 import _ from 'lodash'
-// import { pure } from 'recompose'
 
 import { freshAnswer } from './toolEditorUtils'
 import s from './ToolEditor.css'
