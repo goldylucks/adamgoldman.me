@@ -11,15 +11,15 @@ class Steps extends Component {
     onUpdateSteps: PropTypes.func.isRequired,
   }
 
+  componentDidMount() {
+    window.addEventListener('keydown', this.setupHotkeys, false)
+  }
+
   shouldComponentUpdate(nextProps) {
     if (this.props.steps !== nextProps.steps) {
       return true
     }
     return false
-  }
-
-  componentDidMount() {
-    window.addEventListener('keydown', this.setupHotkeys, false)
   }
 
   componentWillUnmount() {
