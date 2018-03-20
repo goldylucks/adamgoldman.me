@@ -1,10 +1,9 @@
 import cloudinary from 'cloudinary-core'
 
-/* eslint-disable no-extend-native,func-names */
-String.prototype.capitalize = function () {
-  return this[0].toUpperCase() + this.substr(1).toLowerCase()
-}
+import { DOMAIN } from './constants'
 
+
+/* eslint-disable no-extend-native,func-names */
 Array.prototype.last = function () {
   return this[this.length - 1]
 }
@@ -13,6 +12,8 @@ Array.prototype.last = function () {
 const cloudinaryCore = new cloudinary.Cloudinary({ cloud_name: 'goldylucks' })
 
 export const cloudImg = imgName => cloudinaryCore.url(imgName)
+
+export const PROFILE_IMG = cloudImg('adamgoldman.me/profile-smiling')
 
 export const noop = () => null
 
@@ -111,3 +112,5 @@ export const isSavoring = path => path.includes('savoring-your-child')
 export const didUserFillForm = (user, formId) => user.form && user.form.includes(formId)
 
 export const nn = n => (n < 10 ? `0${n}` : `${n}`)
+
+export const getFbShareUrl = path => `https://www.facebook.com/sharer/sharer.php?u=${DOMAIN}${path}`

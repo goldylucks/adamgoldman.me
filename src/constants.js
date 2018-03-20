@@ -1,9 +1,6 @@
 // @flow
 
-import { cloudImg } from './utils'
-
 export const APP_NAME = 'Adam Goldman'
-export const PROFILE_IMG = cloudImg('adamgoldman.me/profile-smiling')
 export const EMAIL = 'goldy@adamgoldman.me'
 export const DOMAIN = 'http://www.adamgoldman.me'
 export const FB_REVIEWS = 'https://www.facebook.com/adamgoldman.me/reviews/'

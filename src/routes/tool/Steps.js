@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import ReactStars from 'react-stars'
 
+import { MESSENGER_LINK_TOOL_CONCERN } from '../../constants'
 import Markdown from '../../components/Markdown'
 import { scrollToElem, isMobile } from '../../utils'
 
@@ -10,6 +12,7 @@ class Steps extends React.Component {
   static propTypes = {
     steps: PropTypes.array.isRequired,
     hiddenFields: PropTypes.object.isRequired,
+    path: PropTypes.string.isRequired,
   }
 
   state = {
@@ -29,6 +32,7 @@ class Steps extends React.Component {
         {this.renderInput()}
         {this.renderTextarea()}
         {this.renderAnswers()}
+        {this.renderStars()}
         {this.renderBack()}
       </div>
     )
@@ -111,6 +115,7 @@ class Steps extends React.Component {
     return (
       <div style={{ marginTop: 20, marginBottom: 20 }}>
         <Answers
+          path={this.props.path}
           answers={answers}
           onSubmit={this.submitMultipleChoiceAnswer}
           onSubmitOther={this.submitMultipleChoiceOtherAnswer}
@@ -119,17 +124,28 @@ class Steps extends React.Component {
     )
   }
 
+  renderStars() {
+    if (this.currentStep().type !== 'stars-review') {
+      return null
+    }
+    return <ReactStars half={false} count={5} onChange={this.onStarReviewRating} size={60} />
+  }
+
   renderBack() {
     return this.state.currentStep === 0 ? null : <button className="btn btn-secondary btn-sm" onClick={this.back}>Back</button>
   }
 
+  stepsStack = []
+
   submitMultipleChoiceAnswer = (aIdx) => {
     const answerByStep = { ...this.state.answerByStep }
-    const { text, goToStepByNum } = this.getAnswerByAidx(aIdx)
+    const { text, goToStepByNum, isRepeatProcess } = this.getAnswerByAidx(aIdx)
     answerByStep[this.state.currentStep] = text
     this.setState({ answerByStep })
     if (goToStepByNum) {
       this.goToStep(Number(goToStepByNum), { resetPreviousAnswers: Number(goToStepByNum) < this.state.currentStep }) // eslint-disable-line max-len
+    } else if (isRepeatProcess) {
+      this.goToStep(Number(0), { resetPreviousAnswers: true })
     } else {
       this.next()
     }
@@ -154,19 +170,24 @@ class Steps extends React.Component {
     this.setState({ answerByStep })
   }
 
-  back = () => this.goToStep(this.state.currentStep - 1)
+  back = () => {
+    this.setState({ currentStep: this.stepsStack.pop() })
+    scrollTop()
+  }
   next = () => this.goToStep(this.state.currentStep + 1)
 
   goToStep = (step, { resetPreviousAnswers } = {}) => {
     if (resetPreviousAnswers) {
       this.resetPreviousAnswers(step)
     }
+    this.stepsStack.push(this.state.currentStep)
     this.setState({ currentStep: step })
     scrollTop()
   }
 
   resetPreviousAnswers(step) {
     const answerByStep = { ...this.state.answerByStep }
+    this.stepsStack = this.stepsStack.filter(stepNumber => stepNumber >= step)
     for (let i = this.state.currentStep; i >= step; i -= 1) {
       delete answerByStep[i]
     }
@@ -211,6 +232,27 @@ class Steps extends React.Component {
       return args[1]
     })
   }
+
+  onStarReviewRating = (rating) => {
+    const answerByStep = { ...this.state.answerByStep }
+    answerByStep[this.state.currentStep] = rating
+    if (rating <= 2) {
+      if (global.confirm('Glad you are being honest with me and yourself. \nI\'d like to hear how I can help you with this and what didn\'t you like.\n\n click "ok" to start a conversation with me on messenger')) {
+        window.open(MESSENGER_LINK_TOOL_CONCERN)
+      }
+      this.goToStepById('finalComments')
+    } else if (rating === 3) {
+      this.goToStepById('finalComments')
+    } else {
+      this.goToStepById('payment')
+    }
+  }
+
+  goToStepById = (id) => {
+    this.goToStep(this.stepNumById(id))
+  }
+
+  stepNumById = id => this.props.steps.findIndex(s => s.id === id)
 }
 export default Steps
 

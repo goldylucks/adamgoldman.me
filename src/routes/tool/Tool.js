@@ -23,7 +23,7 @@ const Tool = ({ tool, path }: Props) => (
             <h1 className="posttitle">{tool.title}</h1>
           </div>
           <div className="article-post">
-            <Steps {...tool} />
+            <Steps {...tool} path={path} />
           </div>
         </div>
       </div>

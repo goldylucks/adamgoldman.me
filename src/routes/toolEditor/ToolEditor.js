@@ -23,6 +23,7 @@ class ToolEditor extends React.Component {
 
   state = {
     isDraft: false,
+    hasReview: false,
     title: '',
     description: '',
     credits: '',
@@ -67,7 +68,7 @@ class ToolEditor extends React.Component {
 
   renderDetails() {
     const {
-      title, description, credits, isDraft,
+      title, description, credits, isDraft, hasReview,
     } = this.state
     return (
       <div>
@@ -89,6 +90,10 @@ class ToolEditor extends React.Component {
         <div className="form-group">
           <input style={{ marginRight: 10 }} type="checkbox" id="isDraft" value={isDraft} checked={isDraft} onChange={inputToggle.call(this, 'isDraft')} />
           <label htmlFor="isDraft">Draft</label>
+        </div>
+        <div className="form-group">
+          <input style={{ marginRight: 10 }} type="checkbox" id="hasReview" value={hasReview} checked={hasReview} onChange={inputToggle.call(this, 'hasReview')} />
+          <label htmlFor="hasReview">Has review</label>
         </div>
         <Typeahead
           allowNew

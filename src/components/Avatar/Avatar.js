@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-import { PROFILE_IMG } from '../../constants'
+import { PROFILE_IMG } from '../../utils'
 
 type Props = {
   imgSrc?: string,

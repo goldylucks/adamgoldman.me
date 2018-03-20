@@ -45,7 +45,7 @@ class Steps extends Component {
     ))
   }
 
-  removeStep = sIdx => () => {
+  removeStep = (sIdx) => {
     const steps = _.cloneDeep(this.props.steps)
     steps.splice(sIdx, 1)
     this.props.onUpdateSteps(steps)

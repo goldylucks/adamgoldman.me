@@ -3831,7 +3831,7 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "^2.0.0"
 
-fbjs@^0.8.1, fbjs@^0.8.16, fbjs@^0.8.4, fbjs@^0.8.9:
+fbjs@^0.8.1, fbjs@^0.8.16, fbjs@^0.8.9:
   version "0.8.16"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.16.tgz#5e67432f550dc41b572bf55847b8aca64e5337db"
   dependencies:
@@ -7828,13 +7828,6 @@ rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-addons-perf@^15.4.2:
-  version "15.4.2"
-  resolved "https://registry.yarnpkg.com/react-addons-perf/-/react-addons-perf-15.4.2.tgz#110bdcf5c459c4f77cb85ed634bcd3397536383b"
-  dependencies:
-    fbjs "^0.8.4"
-    object-assign "^4.1.0"
-
 react-autosize-textarea@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/react-autosize-textarea/-/react-autosize-textarea-3.0.2.tgz#2b6840a69f7138719abcea5a429ecf7301768c07"
@@ -7999,6 +7992,10 @@ react-spinner-children@^1.0.8:
   dependencies:
     prop-types "^15.6.0"
     spin.js "^2.3.2"
+
+react-stars@^2.2.5:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/react-stars/-/react-stars-2.2.5.tgz#911852018e1574a0f9a2c1dfa4f0bc9af071b921"
 
 react-test-renderer@^16.0.0:
   version "16.2.0"

@@ -26,6 +26,11 @@ function getSchema() {
       required: true,
     },
 
+    hasReview: {
+      type: Boolean,
+      required: true,
+    },
+
     title: {
       type: String,
       required: true,
