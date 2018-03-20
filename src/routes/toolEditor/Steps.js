@@ -27,22 +27,24 @@ class Steps extends Component {
   }
 
   render() {
-    return this.props.steps.map((step, sIdx) => (
+    return (
       <div>
-        <Step
-          step={step}
-          sIdx={sIdx}
-          stepCount={this.props.steps.length - 1}
-          onUpdateStep={this.updateStep}
-          onRemoveStep={this.removeStep}
-          onAddStep={this.addStep}
-        />
+        {this.props.steps.map((step, sIdx) => (
+          <Step
+            step={step}
+            sIdx={sIdx}
+            stepCount={this.props.steps.length - 1}
+            onUpdateStep={this.updateStep}
+            onRemoveStep={this.removeStep}
+            onAddStep={this.addStep}
+          />
+        ))}
         <div style={{ padding: 20 }}>
           <a onClick={this.addStepAtEnd} style={{ marginRight: 20, fontSize: 20 }}>+ Step</a>
           <a onClick={this.duplicateStepAtEnd} style={{ fontSize: 20 }}>+ Duplicate Step</a>
         </div>
       </div>
-    ))
+    )
   }
 
   removeStep = (sIdx) => {
