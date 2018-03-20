@@ -1,9 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd'
+import { DragDropContext, Droppable } from 'react-beautiful-dnd'
 import { pure } from 'recompose'
 
-import { reorder, scrollToElem, nn } from '../../utils'
+import { reorder, scrollToElem } from '../../utils'
+
+import Draggable from './Draggable'
+
 
 const Toc = ({ steps, onReorderSteps }) => (
   <div style={{ maxHeight: '90vh', overflowY: 'scroll' }}>
@@ -17,24 +20,7 @@ const Toc = ({ steps, onReorderSteps }) => (
             style={getListStyle(snapshot.isDraggingOver)}
           >
             {steps.map(({ title }, sIdx) => (
-              <Draggable key={sIdx} draggableId={sIdx}>
-                {(providedInner, snapshotInner) => (
-                  <div>
-                    <div
-                      key={sIdx}
-                      ref={providedInner.innerRef}
-                      style={getItemStyle(
-                          providedInner.draggableStyle,
-                          snapshotInner.isDragging,
-                        )}
-                      {...providedInner.dragHandleProps}
-                    >
-                      <a onClick={() => scrollToElem(document.querySelector('html'), document.querySelector(`#step-${sIdx}`).getBoundingClientRect().top - document.body.getBoundingClientRect().top, 300)}>{nn(sIdx)}</a> - {title}
-                    </div>
-                    {providedInner.placeholder}
-                  </div>
-                  )}
-              </Draggable>
+              <Draggable sIdx={sIdx} title={title} />
               ))}
             {provided.placeholder}
           </div>
@@ -61,19 +47,19 @@ function onDragEnd(result, steps, onReorderSteps) {
 
 const grid = 2
 
-function getItemStyle(draggableStyle, isDragging) {
-  return {
-    // some basic styles to make the items look a bit nicer
-    userSelect: 'none',
-    padding: grid * 2,
-    margin: `0 0 ${grid}px 0`,
-    // change background colour if dragging
-    background: isDragging ? 'lightgreen' : '',
-    border: '1px solid #000',
-    // styles we need to apply on draggables
-    ...draggableStyle,
-  }
-}
+// function getItemStyle(draggableStyle, isDragging) {
+//   return {
+//     // some basic styles to make the items look a bit nicer
+//     userSelect: 'none',
+//     padding: grid * 2,
+//     margin: `0 0 ${grid}px 0`,
+//     // change background colour if dragging
+//     background: isDragging ? 'lightgreen' : '',
+//     border: '1px solid #000',
+//     // styles we need to apply on draggables
+//     ...draggableStyle,
+//   }
+// }
 
 function getListStyle(isDraggingOver) {
   return {

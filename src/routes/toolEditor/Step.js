@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
 import cx from 'classnames'
@@ -9,7 +9,7 @@ import faTrashAlt from '@fortawesome/fontawesome-free-regular/faTrashAlt'
 import s from './ToolEditor.css'
 import Answers from './Answers'
 
-class Step extends React.PureComponent {
+class Step extends Component {
   static propTypes = {
     sIdx: PropTypes.number.isRequired,
     step: PropTypes.object.isRequired,
@@ -17,6 +17,13 @@ class Step extends React.PureComponent {
     onUpdateStep: PropTypes.func.isRequired,
     onRemoveStep: PropTypes.func.isRequired,
     onAddStep: PropTypes.func.isRequired,
+  }
+
+  shouldComponentUpdate(nextProps) {
+    if (this.props.step !== nextProps.step) {
+      return true
+    }
+    return false
   }
 
   render() {
