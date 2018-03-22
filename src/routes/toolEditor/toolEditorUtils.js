@@ -60,7 +60,9 @@ export const updateLogicalJumpsAfterAddStep = (sIdx, nextSteps) => nextSteps.map
     if (a.hasGoToStep && (Number(a.goToStepByNum) > sIdx)) {
       a.goToStepByNum = String(Number(a.goToStepByNum) + 1)
     }
-    a.text = updateVariableReferencesAfterAddStep(a.text, sIdx)
+    if (a.text) {
+      a.text = updateVariableReferencesAfterAddStep(a.text, sIdx)
+    }
     return a
   })
   return step
@@ -83,7 +85,9 @@ export const updateLogicalJumpsAfterRemoveStep = (sIdx, nextSteps) => nextSteps.
     if (a.hasGoToStep && (Number(a.goToStepByNum) === sIdx)) {
       throw new Error('cant remove step that has dependencies')
     }
-    a.text = updateVariableReferencesAfterRemoveStep(a.text, sIdx)
+    if (a.text) {
+      a.text = updateVariableReferencesAfterRemoveStep(a.text, sIdx)
+    }
     return a
   })
   return step

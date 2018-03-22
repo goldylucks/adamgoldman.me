@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import _ from 'lodash'
 
-import { freshStep } from './toolEditorUtils'
+import { freshStep, updateLogicalJumpsAfterAddStep, updateLogicalJumpsAfterRemoveStep } from './toolEditorUtils'
 import Step from './Step'
 
 class Steps extends Component {
@@ -48,13 +48,17 @@ class Steps extends Component {
   }
 
   removeStep = (sIdx) => {
-    const steps = _.cloneDeep(this.props.steps)
-    steps.splice(sIdx, 1)
-    this.props.onUpdateSteps(steps)
+    try {
+      const steps = updateLogicalJumpsAfterRemoveStep(sIdx, _.cloneDeep(this.props.steps))
+      steps.splice(sIdx, 1)
+      this.props.onUpdateSteps(steps)
+    } catch (err) {
+      global.alert(err)
+    }
   }
 
   addStep = (sIdx) => {
-    const steps = _.cloneDeep(this.props.steps)
+    const steps = updateLogicalJumpsAfterAddStep(sIdx, _.cloneDeep(this.props.steps))
     steps.splice(sIdx + 1, 0, freshStep())
     this.props.onUpdateSteps(steps)
   }
