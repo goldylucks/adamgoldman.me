@@ -19,7 +19,6 @@ class ToolJsonEditor extends React.Component {
     )
   }
   save = () => {
-    console.log(this.state.json.trim())
     try {
       axios.post('/api/tools/', JSON.parse((this.state.json.trim())))
         .then((res) => {
@@ -31,7 +30,7 @@ class ToolJsonEditor extends React.Component {
           global.alert(err.message)
         })
     } catch (err) {
-      alert(err.message)
+      global.alert(err.message)
     }
   }
 }
