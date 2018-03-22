@@ -43,7 +43,9 @@ app.use(bodyParser.json({ limit: '50mb' }))
 
 if (__DEV__) { // eslint-disable-line no-undef
   app.enable('trust proxy')
-  require('./server/seedDb') // eslint-disable-line global-require
+  if (process.argv.includes('--seed')) {
+    require('./server/seedDb') // eslint-disable-line global-require
+  }
 }
 
 app.get('/book-session', (req, res) => {
