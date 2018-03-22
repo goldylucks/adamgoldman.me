@@ -72,6 +72,10 @@ const routes = {
       load: () => import(/* webpackChunkName: 'toolEditor' */ './toolEditor'),
     },
     {
+      path: '/tool-json-editor',
+      load: () => import(/* webpackChunkName: 'toolJsonEditor' */ './toolJsonEditor'),
+    },
+    {
       path: '/tools/:tool',
       load: () => import(/* webpackChunkName: 'tutorial' */ './tutorial'),
     },
