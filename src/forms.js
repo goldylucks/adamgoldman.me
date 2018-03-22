@@ -6,6 +6,6 @@ export const inputChange = function inputChange(key) {
 
 export const inputToggle = function inputToggle(key) {
   return function inputToggleInner() {
-    this.setState({ [key]: !this.key })
+    this.setState({ [key]: !this.state[key] })
   }.bind(this)
 }
