@@ -27,7 +27,9 @@ class Steps extends React.Component {
   render() {
     return (
       <div>
-        {this.renderTitle()}
+        <div style={{ marginBottom: 30 }}>
+          {this.renderTitle()}
+        </div>
         {this.renderDescription()}
         {this.renderInput()}
         {this.renderTextarea()}
