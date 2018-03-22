@@ -40,6 +40,9 @@ class Step extends Component {
             <div>
               <TextareaAutosize style={{ width: '100%', border: 0 }} required className="form-control" placeholder="Step description" value={step.description} onChange={this.changeStepKey('description')} />
             </div>
+            <div>
+              <TextareaAutosize style={{ width: '100%', border: 0 }} required className="form-control text-muted tool-note" placeholder="Step notes" value={step.notes} onChange={this.changeStepKey('notes')} />
+            </div>
           </div>
           <div className="col-2">
             <p className="text-right">{sIdx}/{stepCount} <a onClick={this.removeStep} className={s.stepRevealable}><FontAwesomeIcon icon={faTrashAlt} /></a></p>

@@ -31,6 +31,7 @@ class Steps extends React.Component {
           {this.renderTitle()}
         </div>
         {this.renderDescription()}
+        {this.renderNotes()}
         {this.renderInput()}
         {this.renderTextarea()}
         {this.renderAnswers()}
@@ -47,7 +48,15 @@ class Steps extends React.Component {
   }
 
   renderDescription() {
-    return <Markdown source={this.replaceVars(this.currentStep().description)} />
+    const { description } = this.currentStep()
+    if (!description) { return null }
+    return <Markdown source={this.replaceVars(description)} />
+  }
+
+  renderNotes() {
+    const { notes } = this.currentStep()
+    if (!notes) { return null }
+    return <Markdown className="text-muted tool-note" source={this.replaceVars(notes)} />
   }
 
   renderInput() {

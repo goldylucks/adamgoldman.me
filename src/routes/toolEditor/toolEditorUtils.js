@@ -15,6 +15,7 @@ export const freshAnswer = opts => ({
 export const freshStep = opts => ({
   title: '',
   description: '',
+  notes: '',
   type: 'radio',
   inputPlaceholder: '',
   answers: [freshAnswer()],
