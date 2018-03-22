@@ -37,7 +37,9 @@ function updateUser(req, res, next) {
 }
 
 async function fbAuth(req, res, next) {
-  const options = { upsert: true, new: true, setDefaultsOnInsert: true }
+  const options = {
+    upsert: true, new: true, setDefaultsOnInsert: true, runValidators: true,
+  }
   const userToCreate = { ...req.body }
   try {
     userToCreate.fbServerAccessToken = req.headers['is-mobile']

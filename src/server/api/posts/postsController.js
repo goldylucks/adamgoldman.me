@@ -13,7 +13,9 @@ function getByUrl(req, res, next) {
 function updateOrCreate(req, res, next) {
   const query = { url: req.body.url }
   const update = req.body
-  const options = { upsert: true, new: true, setDefaultsOnInsert: true }
+  const options = {
+    upsert: true, new: true, setDefaultsOnInsert: true, runValidators: true,
+  }
   Posts.findOneAndUpdate(query, update, options)
     .then(post => res.json(post))
     .catch(next)

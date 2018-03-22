@@ -6,6 +6,7 @@ const router = require('express').Router()
 
 router.route('/')
   .post(decodeToken, getFreshUser, isAdmin, controller.updateOrCreate)
+  // .post(controller.updateOrCreate) // uncomment for dev
 
 router.route('/all')
   .get(controller.getAll)

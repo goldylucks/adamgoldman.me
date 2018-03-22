@@ -24,11 +24,13 @@ function getSchema() {
     isDraft: {
       type: Boolean,
       required: true,
+      default: false,
     },
 
     hasReview: {
       type: Boolean,
       required: true,
+      default: false,
     },
 
     title: {
@@ -38,12 +40,10 @@ function getSchema() {
 
     description: {
       type: String,
-      required: true,
     },
 
     nick: {
       type: String,
-      required: true,
     },
 
     credits: String,
