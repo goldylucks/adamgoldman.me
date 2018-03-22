@@ -27,6 +27,12 @@ function getSchema() {
       default: false,
     },
 
+    isSavoring: {
+      type: Boolean,
+      required: true,
+      default: false,
+    },
+
     hasReview: {
       type: Boolean,
       required: true,
