@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 
-import { MESSENGER_LINK, MESSENGER_LINK_BOOK_SESSION } from '../../constants'
+import { MESSENGER_LINK_WELCOME, MESSENGER_LINK_BOOK_SESSION } from '../../constants'
 
 export default [
 //   {
@@ -64,7 +64,7 @@ export default [
       { text: 'Try another process', isLink: true, link: '/tools' },
       { text: 'Repeat this process again', isRepeatProcess: true },
       { text: 'Share this process', isFbShare: true },
-      { text: 'Talk to me (Adam)', isLinkNew: true, linkNew: MESSENGER_LINK },
+      { text: 'Talk to me (Adam)', isLinkNew: true, linkNew: MESSENGER_LINK_WELCOME },
       { text: 'Book a session', isLinkNew: true, linkNew: MESSENGER_LINK_BOOK_SESSION },
     ],
   },
