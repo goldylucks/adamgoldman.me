@@ -117,7 +117,7 @@ export default {
         }, 
         {
             "title" : "Corrective action", 
-            "description" : "Is there some corrective action you can take to “improve the situation” or “make amends”, or what’s left is just to release the emotion/feeling of {0}?\n\n Maybe you already did this, or there’s nothing else to physically “do”, and you know logically it’s “over”, and what’s left is for your emotions to sort of catch up with your logic. ", 
+            "description" : "Is there some corrective action you can take to “improve the situation” or “make amends”, or what’s left is just to release the emotion/feeling of ${s0}?\n\n Maybe you already did this, or there’s nothing else to physically “do”, and you know logically it’s “over”, and what’s left is for your emotions to sort of catch up with your logic. ", 
             "type" : "radio", 
             "inputPlaceholder" : "", 
             "answers" : [
@@ -196,7 +196,7 @@ export default {
         }, 
         {
             "title" : "Eliciting resource", 
-            "description" : "Now think of something that you used to feel {0} about in the past, but as you think of it now, it’s ok, and you are at peace with it.\n\nSomething that used to bother you in a similar way, but now as you think of it it’s like *“eh, no biggie / it’s in the past / etc”*. Come people like to call it “resolved {0}” ", 
+            "description" : "Now think of something that you used to feel ${s0} about in the past, but as you think of it now, it’s ok, and you are at peace with it.\n\nSomething that used to bother you in a similar way, but now as you think of it it’s like *“eh, no biggie / it’s in the past / etc”*. Come people like to call it “resolved ${s0}” ", 
             "type" : "radio", 
             "inputPlaceholder" : "", 
             "answers" : [
@@ -214,7 +214,7 @@ export default {
         }, 
         {
             "title" : "Eliciting resource - give yourself a break", 
-            "description" : "***“Nothing comes to mind”***\n\nUsually this happens because people set the bar too high, like looking for that one grandiose past experience of {0}, which is now resolved. So give yourself a little break ;)\n\nAnd go for something smaller / less significant. Think back through your early days, the different episodes in your life, different places you’ve been, things you’ve done, people you’ve met, relationships you had, activities you’ve done.\n\nRemember everything we do is reversible, we are just exploring, and we can always do this again with a different experience. Whatever comes to mind now, go with it. At the end, if you won’t come to a full resolution, we’ll talk about it. Promise :) ", 
+            "description" : "***“Nothing comes to mind”***\n\nUsually this happens because people set the bar too high, like looking for that one grandiose past experience of ${s0}, which is now resolved. So give yourself a little break ;)\n\nAnd go for something smaller / less significant. Think back through your early days, the different episodes in your life, different places you’ve been, things you’ve done, people you’ve met, relationships you had, activities you’ve done.\n\nRemember everything we do is reversible, we are just exploring, and we can always do this again with a different experience. Whatever comes to mind now, go with it. At the end, if you won’t come to a full resolution, we’ll talk about it. Promise :) ", 
             "type" : "radio", 
             "inputPlaceholder" : "", 
             "answers" : [
@@ -239,7 +239,7 @@ export default {
         }, 
         {
             "title" : "Eliciting resource - validating", 
-            "description" : "***\"${echo}\"***\n\nAnd as you think about that now, you can remember feeling {0} about it, but it’s okay now?\n\nIt’s in the past, you have come to terms with it, etc ", 
+            "description" : "***\"${echo}\"***\n\nAnd as you think about that now, you can remember feeling ${s0} about it, but it’s okay now?\n\nIt’s in the past, you have come to terms with it, etc ", 
             "type" : "radio", 
             "inputPlaceholder" : "", 
             "answers" : [
