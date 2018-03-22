@@ -10,7 +10,7 @@ import { Typeahead } from 'react-bootstrap-typeahead'
 
 import { inputChange, inputToggle } from '../../forms'
 
-import { freshStep } from './toolEditorUtils'
+import { freshStep, getValidationWarnings, cleanEmptyValues } from './toolEditorUtils'
 import Steps from './Steps'
 import Toc from './Toc'
 import s from './ToolEditor.css'
@@ -116,8 +116,12 @@ class ToolEditor extends React.Component {
   elems = {}
 
   save = () => {
-    const state = { ...this.state, url: this.props.url }
-    cleanEmptyValues(state)
+    const state = cleanEmptyValues({ ...this.state, url: this.props.url })
+    const warnings = getValidationWarnings(state)
+    if (warnings.length) {
+      global.alert('validation warnings')
+      global.console.log('[validation warnings]', warnings)
+    }
     axios.post('/api/tools/', state)
       .then((res) => {
         global.console.log('saved!', res.data)
@@ -162,20 +166,3 @@ class ToolEditor extends React.Component {
 
 export default withStyles(s)(ToolEditor)
 
-function cleanEmptyValues(state) {
-  // clear empty values
-  state.steps = state.steps.map((step) => {
-    if (!step.type.match(/radio|checkbox/)) {
-      step.answers = []
-      return step
-    }
-    step.answers = step.answers.map((a) => {
-      if (!a.text) { delete a.text }
-      if (!a.hasGoToStep) { delete a.hasGoToStep; delete a.goToStepByNum }
-      if (!a.isLink) { delete a.isLink; delete a.link }
-      if (!a.isLinkNew) { delete a.linkNew }
-      return a
-    })
-    return step
-  })
-}

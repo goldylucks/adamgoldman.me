@@ -102,3 +102,34 @@ export const updateLogicalJumpsAfterRemoveStep = (sIdx, nextSteps) => nextSteps.
   }
   return step
 })
+
+export const getValidationWarnings = state => [].concat(
+  ...state.steps.reduce((acc, step) => acc.concat(
+    step.title && strToValidationErrors(step.title),
+    step.description && strToValidationErrors(step.description),
+    step.notes && strToValidationErrors(step.notes),
+    step.inputPlaceholder && strToValidationErrors(step.inputPlaceholder),
+    step.answers && step.answers.map(a => a.text && strToValidationErrors(a.text)),
+  ), []).filter(i => i),
+)
+
+export const strToValidationErrors = str => str.match(/\${[^(s|echo|he|him|his|h)](.*?)}/g)
+
+export const cleanEmptyValues = (state) => {
+  // clear empty values
+  state.steps = state.steps.map((step) => {
+    if (!step.type.match(/radio|checkbox/)) {
+      step.answers = []
+      return step
+    }
+    step.answers = step.answers.map((a) => {
+      if (!a.text) { delete a.text }
+      if (!a.hasGoToStep) { delete a.hasGoToStep; delete a.goToStepByNum }
+      if (!a.isLink) { delete a.isLink; delete a.link }
+      if (!a.isLinkNew) { delete a.linkNew }
+      return a
+    })
+    return step
+  })
+  return state
+}
