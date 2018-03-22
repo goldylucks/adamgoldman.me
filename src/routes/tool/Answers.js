@@ -41,7 +41,7 @@ class AnswersV4 extends React.Component {
             html = (
               <form onSubmit={(evt) => {
                   evt.preventDefault()
-                  onSubmitOther(this.state.other)
+                  onSubmitOther(idx, this.state.other)
                 }}
               >
                 <input

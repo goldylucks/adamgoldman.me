@@ -151,11 +151,16 @@ class Steps extends React.Component {
     }
   }
 
-  submitMultipleChoiceOtherAnswer = (text) => {
+  submitMultipleChoiceOtherAnswer = (aIdx, text) => {
     const answerByStep = { ...this.state.answerByStep }
+    const { goToStepByNum } = this.getAnswerByAidx(aIdx)
     answerByStep[this.state.currentStep] = text
     this.setState({ answerByStep })
-    this.next()
+    if (goToStepByNum) {
+      this.goToStep(Number(goToStepByNum), { resetPreviousAnswers: Number(goToStepByNum) < this.state.currentStep }) // eslint-disable-line max-len
+    } else {
+      this.next()
+    }
   }
 
   getAnswerByAidx(aIdx) {
