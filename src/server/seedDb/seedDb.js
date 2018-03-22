@@ -7,9 +7,10 @@ import { signToken } from '../auth'
 
 // data
 import seedDbResolvingFeelingsToolData from './seedDbResolvingFeelingsToolData'
+import toolHasWithReview from './seedDbToolHasReviewData'
 import users from './seedDbUsersData'
 
-const tools = [seedDbResolvingFeelingsToolData]
+const tools = [seedDbResolvingFeelingsToolData, toolHasWithReview]
 const Models = [Tools, Users]
 
 // init
