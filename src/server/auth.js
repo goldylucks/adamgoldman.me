@@ -52,3 +52,9 @@ export function getFreshUser(req, res, next) {
     })
     .catch(next)
 }
+
+export const isAdminMiddlewares = !__DEV__ // eslint-disable-line no-undef
+  ? [decodeToken, getFreshUser, isAdmin]
+  : [function noopMiddleware(req, res, next) {
+    next()
+  }]
