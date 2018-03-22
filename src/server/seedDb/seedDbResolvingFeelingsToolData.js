@@ -62,7 +62,7 @@ export default {
     },
     {
       title: 'Eliciting ${s0} - background',
-      description: 'In all your years on this odd planet, you had some experiences that you felt ${0} about, some more than others, correct?',
+      description: 'In all your years on this odd planet, you had some experiences that you felt ${s0} about, some more than others, correct?',
       type: 'radio',
       inputPlaceholder: '',
       answers: [
@@ -275,7 +275,7 @@ export default {
     },
     {
       title: 'Congruence check',
-      description: 'So you have the resource:\n*“${s11}”*\n\nAnd the cue:\n*“${3}”*\n\nDo you have any objections to experience the cue, in the same way you experience the resource?\n\nI.e. with more peace/resolution, coming to terms with it, etc\n\n**Note**: we will cover safety mechanisms for the future after we’ll transform/soften this experience, to make sure you know how to better avoid this situation in the future.',
+      description: 'So you have the resource:\n*“${s11}”*\n\nAnd the cue:\n*“${s3}”*\n\nDo you have any objections to experience the cue, in the same way you experience the resource?\n\nI.e. with more peace/resolution, coming to terms with it, etc\n\n**Note**: we will cover safety mechanisms for the future after we’ll transform/soften this experience, to make sure you know how to better avoid this situation in the future.',
       type: 'radio',
       inputPlaceholder: '',
       answers: [
@@ -322,7 +322,7 @@ export default {
     },
     {
       title: 'Content distortions - self',
-      description: 'As you look at the cue experience:\n*“${3}”*\n\nAre you in regular life size in that experience?\n\nSometimes people would see themselves smaller or larger than life size in experiences like these, or they would be smaller / larger than life size.',
+      description: 'As you look at the cue experience:\n*“${s3}”*\n\nAre you in regular life size in that experience?\n\nSometimes people would see themselves smaller or larger than life size in experiences like these, or they would be smaller / larger than life size.',
       type: 'radio',
       inputPlaceholder: '',
       answers: [
@@ -516,7 +516,7 @@ export default {
     },
     {
       title: 'Contrastive Analysis',
-      description: 'Now as you think about both of these at the same time:\n\n**The resource:**\n${11}\n\n**And the cue:**\n${3}\n\nAttend to the differences in how you see, hear, and experience them in your mind.\n\nAs you go back and forth between the two a few times, notice the visual, auditory, and tactile differences between the way you experience them.\n\nWhat are the main differences you see, hear, and feel between the two? Write down all differences you can already notice.',
+      description: 'Now as you think about both of these at the same time:\n\n**The resource:**\n${s11}\n\n**And the cue:**\n${s3}\n\nAttend to the differences in how you see, hear, and experience them in your mind.\n\nAs you go back and forth between the two a few times, notice the visual, auditory, and tactile differences between the way you experience them.\n\nWhat are the main differences you see, hear, and feel between the two? Write down all differences you can already notice.',
       type: 'long',
       inputPlaceholder: 'The differences I already notice are ...',
       answers: [
@@ -585,7 +585,7 @@ export default {
     },
     {
       title: 'Contrastive Analysis - location & distance',
-      description: '***“The images are in the exact same place”***\n\nWhile it does happen that the images are in the same place and distance to begin with, it is very rare, so I just want to be thorough here, with your permission.\n\nI want you to look again at the **resource image** again:\n*${11}*\n\nThen at the **cue image** again:\n*${3}*\n\nAnd go back and forth between the two a few times. Then close your eyes and point at the location you see each of them.\n\nAre you pointing to the **exact same place**, and the images are the **exact same distance** from you?',
+      description: '***“The images are in the exact same place”***\n\nWhile it does happen that the images are in the same place and distance to begin with, it is very rare, so I just want to be thorough here, with your permission.\n\nI want you to look again at the **resource image** again:\n*${s11}*\n\nThen at the **cue image** again:\n*${s3}*\n\nAnd go back and forth between the two a few times. Then close your eyes and point at the location you see each of them.\n\nAre you pointing to the **exact same place**, and the images are the **exact same distance** from you?',
       type: 'radio',
       inputPlaceholder: '',
       answers: [
@@ -1071,7 +1071,7 @@ export default {
     },
     {
       title: 'Mapping Across - remaining differences',
-      description: "Remaining differences\n\nNow go back and forth between both images and scan for remaining differences.\n\nIs there anything else in the way you experience the resource, which you'd like to apply to the cue?\n\n**Resource:**\n*\"${11}\"*\n\n**Cue:**\n*\"${3}\"*",
+      description: "Remaining differences\n\nNow go back and forth between both images and scan for remaining differences.\n\nIs there anything else in the way you experience the resource, which you'd like to apply to the cue?\n\n**Resource:**\n*\"${s11}\"*\n\n**Cue:**\n*\"${s3}\"*",
       type: 'radio',
       inputPlaceholder: '',
       answers: [
@@ -1149,7 +1149,7 @@ export default {
     },
     {
       title: 'Increasing peace & acceptance - color',
-      description: 'As you think of this experience you just transformed now:\n\n*${3}*\n\nTry making it B&W/grayscale, and decrease the colorfulness, and notice how much it increases the peace and acceptance',
+      description: 'As you think of this experience you just transformed now:\n\n*${s3}*\n\nTry making it B&W/grayscale, and decrease the colorfulness, and notice how much it increases the peace and acceptance',
       type: 'radio',
       inputPlaceholder: '',
       answers: [
@@ -1621,7 +1621,7 @@ export default {
     },
     {
       title: 'Learnings & insights',
-      description: 'Looking back at the experience you just transformed:\n\n*${3}*\n\nAre there any learnings you can pick up from it now? Any insights? Spontaneous realizations?\n\nSometimes our emotions get in the way of our logic & thinking, and it’s easier to learn from a situation once it’s softer and more resolved. So examine that experience again now:\n\n*${3}*\n\nAnd get a sense if there’s some value or learnings you can adopt to your future behavior.',
+      description: 'Looking back at the experience you just transformed:\n\n*${s3}*\n\nAre there any learnings you can pick up from it now? Any insights? Spontaneous realizations?\n\nSometimes our emotions get in the way of our logic & thinking, and it’s easier to learn from a situation once it’s softer and more resolved. So examine that experience again now:\n\n*${s3}*\n\nAnd get a sense if there’s some value or learnings you can adopt to your future behavior.',
       type: 'radio',
       inputPlaceholder: '',
       answers: [
@@ -1672,7 +1672,7 @@ export default {
     },
     {
       title: 'Congruence Check',
-      description: 'Looking back at the experience you just transformed:\n\n*${3}*\n\nDo you have any objections being this way, experiencing it like that?',
+      description: 'Looking back at the experience you just transformed:\n\n*${s3}*\n\nDo you have any objections being this way, experiencing it like that?',
       type: 'radio',
       inputPlaceholder: '',
       answers: [
