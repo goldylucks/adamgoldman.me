@@ -7666,6 +7666,10 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
+prompt-sync@^4.1.6:
+  version "4.1.6"
+  resolved "https://registry.yarnpkg.com/prompt-sync/-/prompt-sync-4.1.6.tgz#416ee21d92a95601d421a582d7cbf38cf7b53ff7"
+
 prop-types-extra@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/prop-types-extra/-/prop-types-extra-1.0.1.tgz#a57bd4810e82d27a3ff4317ecc1b4ad005f79a82"

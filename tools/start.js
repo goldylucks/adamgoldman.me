@@ -14,9 +14,17 @@ import webpack from 'webpack'
 import webpackDevMiddleware from 'webpack-dev-middleware'
 import webpackHotMiddleware from 'webpack-hot-middleware'
 import errorOverlayMiddleware from 'react-dev-utils/errorOverlayMiddleware'
+import prompt from 'prompt-sync'
+
 import webpackConfig from './webpack.config'
 import run, { format } from './run'
 import clean from './clean'
+
+if (process.argv.includes('--seed') && prompt()('Seed DB? (type yes to prcoeed)') !== 'yes') {
+  process.exit(0)
+}
+
+console.log('after prompt')
 
 const isDebug = !process.argv.includes('--release')
 
