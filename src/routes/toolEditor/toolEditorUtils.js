@@ -65,6 +65,9 @@ export const updateLogicalJumpsAfterAddStep = (sIdx, nextSteps) => nextSteps.map
     }
     return a
   })
+  if (step.hasGoToStep && (Number(step.goToStepByNum) > sIdx)) {
+    step.goToStepByNum = String(Number(step.goToStepByNum) + 1)
+  }
   return step
 })
 
@@ -90,5 +93,11 @@ export const updateLogicalJumpsAfterRemoveStep = (sIdx, nextSteps) => nextSteps.
     }
     return a
   })
+  if (step.hasGoToStep && (Number(step.goToStepByNum) > sIdx)) {
+    step.goToStepByNum = String(Number(step.goToStepByNum) - 1)
+  }
+  if (step.hasGoToStep && (Number(step.goToStepByNum) === sIdx)) {
+    throw new Error('cant remove step that has dependencies')
+  }
   return step
 })
