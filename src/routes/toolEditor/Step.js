@@ -37,7 +37,7 @@ class Step extends Component {
             <div>
               <input style={{ width: '100%', border: 0, marginBottom: 20 }} ref={(el) => { this.elems[`${sIdx}-title`] = el }} className="h2" placeholder="Step title" value={step.title} onChange={this.changeStepKey('title')} />
             </div>
-            <div>
+            <div style={{ marginBottom: 10 }}>
               <TextareaAutosize style={{ width: '100%', border: 0 }} required className="form-control" placeholder="Step description" value={step.description} onChange={this.changeStepKey('description')} />
             </div>
             <div>
