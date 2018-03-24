@@ -48,7 +48,7 @@ class AnswersV4 extends React.Component {
                   onChange={(evt) => { this.setState({ other: evt.target.value }) }}
                   placeholder="Other"
                   value={this.state.other}
-                  className="btn btn-primary"
+                  className="btn btn-primary text-left"
                 />
                 <button>Submit</button>
               </form>
