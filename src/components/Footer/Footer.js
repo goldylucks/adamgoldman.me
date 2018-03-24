@@ -11,9 +11,8 @@ const Footer = () => (
        Copyright &copy; 2017 <Link className={s.link} to="/">Adam Goldman</Link>
     </p>
     <p className="pull-right">
-      <Link className={`${s.link} legal-stuff`} to="/legal-stuff/">
-        legal stuff
-      </Link>
+      <Link className={`${s.link}`} to="/legal-stuff/">legal stuff</Link>
+      <Link className={`${s.link}`} to="/privacy/">Privacy</Link>
     </p>
     <div className="clearfix" />
   </div>

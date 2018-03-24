@@ -4,6 +4,7 @@ import ReactStars from 'react-stars'
 
 import { MESSENGER_LINK_TOOL_CONCERN } from '../../constants'
 import Markdown from '../../components/Markdown'
+import ExternalA from '../../components/ExternalA'
 import { scrollToElem, isMobile } from '../../utils'
 
 import Answers from './Answers'
@@ -80,7 +81,7 @@ class Steps extends React.Component {
             className="form-control"
             aria-describedby="inputHelp"
           />
-          <small id="inputHelp" className="form-text text-muted">Privacy is sacred. Your data is safe.</small>
+          <small id="inputHelp" className="form-text text-muted"><ExternalA href="/privacy" target="_blank">Privacy is sacred. Your data is safe.</ExternalA></small>
         </div>
         <button type="submit" className="btn btn-primary">Press Enter or click to Continue</button>
       </form>
@@ -108,7 +109,7 @@ class Steps extends React.Component {
             className="form-control"
             aria-describedby="inputHelp"
           />
-          <small id="inputHelp" className="form-text text-muted">Privacy is sacred. Your data is safe.</small>
+          <small id="inputHelp" className="form-text text-muted"><ExternalA href="/privacy" target="_blank">Privacy is sacred. Your data is safe.</ExternalA></small>
         </div>
         <button type="submit" className="btn btn-primary">Continue</button>
       </form>
