@@ -228,7 +228,7 @@ class Steps extends React.Component {
     return str.replace(/\${(.*?)}/g, (...args) => {
       const key = args[1]
       if (key === 'echo') {
-        return this.state.answerByStep[this.state.currentStep - 1]
+        return `***“${this.state.answerByStep[this.state.currentStep - 1]}”***`
       }
       if (key.indexOf('he') === 0) {
         return this.state.answerByStep[key.slice(2)].match(/female/i) ? 'she' : 'he'
