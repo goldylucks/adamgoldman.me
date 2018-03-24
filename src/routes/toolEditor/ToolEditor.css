@@ -3,6 +3,7 @@
   transition: 0.5s opacity;
 }
 
+.stepRevealable.isVisible,
 .step:hover .stepRevealable {
   opacity: 1;
 }

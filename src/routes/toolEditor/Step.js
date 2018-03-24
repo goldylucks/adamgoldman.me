@@ -40,7 +40,7 @@ class Step extends Component {
             <div style={{ marginBottom: 10 }}>
               <TextareaAutosize style={{ width: '100%', border: 0 }} required className="form-control" placeholder="Step description" value={step.description} onChange={this.changeStepKey('description')} />
             </div>
-            <div>
+            <div className={cx(s.stepRevealable, { [s.isVisible]: step.notes })}>
               <TextareaAutosize style={{ width: '100%', border: 0 }} required className="form-control text-muted tool-note" placeholder="Step notes" value={step.notes} onChange={this.changeStepKey('notes')} />
             </div>
           </div>
