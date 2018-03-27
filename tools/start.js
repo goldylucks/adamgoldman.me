@@ -24,8 +24,6 @@ if (process.argv.includes('--seed') && prompt()('Seed DB? (type yes to prcoeed)'
   process.exit(0)
 }
 
-console.log('after prompt')
-
 const isDebug = !process.argv.includes('--release')
 
 // https://webpack.js.org/configuration/watch/#watchoptions
