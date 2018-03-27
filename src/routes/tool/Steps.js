@@ -68,11 +68,7 @@ class Steps extends React.Component {
       return null
     }
     return (
-      <form onSubmit={(evt) => {
-        evt.preventDefault()
-        this.next()
-      }}
-      >
+      <form onSubmit={this.onInputSubmit}>
         <div className="form-group">
           <input
             value={this.state.answerByStep[this.state.currentStep]}
@@ -96,11 +92,7 @@ class Steps extends React.Component {
       return null
     }
     return (
-      <form onSubmit={(evt) => {
-        evt.preventDefault()
-        this.next()
-      }}
-      >
+      <form onSubmit={this.onInputSubmit}>
         <div className="form-group">
           <textarea
             value={this.state.answerByStep[this.state.currentStep]}
@@ -179,6 +171,16 @@ class Steps extends React.Component {
   }
 
   stepsStack = []
+
+  onInputSubmit = (evt) => {
+    evt.preventDefault()
+    const { goToStepByNum } = this.currentStep()
+    if (goToStepByNum) {
+      this.goToStep(Number(goToStepByNum), { resetPreviousAnswers: Number(goToStepByNum) < this.state.currentStep }) // eslint-disable-line max-len
+    } else {
+      this.next()
+    }
+  }
 
   submitMultipleChoiceAnswer = (aIdx) => {
     const answerByStep = { ...this.state.answerByStep }
