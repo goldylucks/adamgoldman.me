@@ -19,6 +19,7 @@ class Steps extends React.Component {
   state = {
     currentStep: 0,
     answerByStep: {},
+    price: 0,
   }
 
   componentWillMount() {
@@ -35,6 +36,7 @@ class Steps extends React.Component {
         {this.renderNotes()}
         {this.renderInput()}
         {this.renderTextarea()}
+        {this.renderPaymentForm()}
         {this.renderAnswers()}
         {this.renderStars()}
         {this.renderBack()}
@@ -116,6 +118,35 @@ class Steps extends React.Component {
     )
   }
 
+  renderPaymentForm() {
+    if (this.currentStep().type !== 'payment') {
+      return null
+    }
+    const { price } = this.state
+    return (
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_s-xclick" />
+        <input type="hidden" name="hosted_button_id" value="L73XBAVRMGQ6S" />
+        <div className="form-group">
+          <select name="os0" className="form-control" value={price} onChange={(evt) => { this.setState({ price: evt.target.value }) }}>
+            <option value="7">$7 USD</option>
+            <option value="9">$9 USD</option>
+            <option value="23">$23 USD</option>
+            <option value="30">$30 USD</option>
+            <option value="70">$70 USD</option>
+            <option value="140">$140 USD</option>
+            <option value="350">$350 USD</option>
+            <option value="600">$600 USD</option>
+            <option value="970">$970 USD</option>
+          </select>
+        </div>
+        <input type="hidden" name="currency_code" value="USD" />
+        <input type="image" style={{ width: 'auto' }} src="https://www.paypalobjects.com/en_US/IL/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+        <img style={{ display: 'none' }} alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+      </form>
+    )
+  }
+
   renderAnswers() {
     if (!this.currentStep().answers) {
       return null
@@ -151,11 +182,18 @@ class Steps extends React.Component {
 
   submitMultipleChoiceAnswer = (aIdx) => {
     const answerByStep = { ...this.state.answerByStep }
-    const { text, goToStepByNum, isRepeatProcess } = this.getAnswerByAidx(aIdx)
+    const {
+      text, goToStepByNum, isRepeatProcess, price, goToStepById,
+    } = this.getAnswerByAidx(aIdx)
     answerByStep[this.state.currentStep] = text
     this.setState({ answerByStep })
+    if (price) {
+      this.setState({ price })
+    }
     if (goToStepByNum) {
       this.goToStep(Number(goToStepByNum), { resetPreviousAnswers: Number(goToStepByNum) < this.state.currentStep }) // eslint-disable-line max-len
+    } else if (goToStepById) {
+      this.goToStepById(goToStepById)
     } else if (isRepeatProcess) {
       this.goToStep(Number(0), { resetPreviousAnswers: true })
     } else {
@@ -261,7 +299,7 @@ class Steps extends React.Component {
     } else if (rating === 3) {
       this.goToStepById('finalComments')
     } else {
-      this.goToStepById('payment')
+      this.goToStepById('choose-payment-amount')
     }
   }
 

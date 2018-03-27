@@ -37,6 +37,8 @@ The easiest way most people choose. Click on the select field below, choose the 
 <input type="hidden" name="hosted_button_id" value="L73XBAVRMGQ6S">
 <div class="form-group">
 <select name="os0" class="form-control">
+<option value="7">$7 USD</option>
+<option value="9">$9 USD</option>
 <option value="23">$23 USD</option>
 <option value="30">$30 USD</option>
 <option selected value="70">$70 USD</option>
@@ -44,9 +46,6 @@ The easiest way most people choose. Click on the select field below, choose the 
 <option value="350">$350 USD</option>
 <option value="600">$600 USD</option>
 <option value="970">$970 USD</option>
-<option value="1500">$1,500 USD</option>
-<option value="4000">$4,000 USD</option>
-<option value="7000">$7,000 USD</option>
 </select>
 </div>
 <input type="hidden" name="currency_code" value="USD">
