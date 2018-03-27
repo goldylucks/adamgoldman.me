@@ -1,5 +1,4 @@
-/* eslint-disable */
-export default { 
+{ 
     "url" : "trauma-relief", 
     "isRtl" : false, 
     "hiddenFields" : [

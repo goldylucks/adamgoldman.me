@@ -1,5 +1,4 @@
-/* eslint-disable */
-export default { 
+{ 
     "url" : "resolving-feelings", 
     "isRtl" : false, 
     "hiddenFields" : [
@@ -75,6 +74,31 @@ export default {
             ]
         }, 
         {
+            "title" : "Eliciting ${s0} - background", 
+            "description" : "So think of something that happened in the past, which you still feel ${s0} about", 
+            "notes" : "", 
+            "type" : "radio", 
+            "inputPlaceholder" : "", 
+            "answers" : [
+                {
+                    "isOther" : false, 
+                    "text" : "Got one", 
+                    "hasGoToStep" : true, 
+                    "goToStepByNum" : "4", 
+                    "isLinkNew" : false, 
+                    "isConcern" : false, 
+                    "concern" : ""
+                }, 
+                {
+                    "isOther" : false, 
+                    "text" : "One? I have plenty!", 
+                    "isLinkNew" : false, 
+                    "isConcern" : false, 
+                    "concern" : ""
+                }
+            ]
+        }, 
+        {
             "title" : "Eliciting ${s0} - the chosen one", 
             "description" : "***“One? I have plenty!”***\n\nGreat! So the change would be more impactful for you. Pick the one that still bothers you the most, or still has the most “sting” to it.", 
             "type" : "radio", 
@@ -101,7 +125,7 @@ export default {
         }, 
         {
             "title" : "Eliciting ${s0}", 
-            "description" : "***“${echo}”***\n\nOK, we’ll call that the “cue”. Now you can put that cue experience aside for now, we’ll use it soon.", 
+            "description" : "${echo}\n\nOK, we’ll call that the “cue”. Now you can put that cue experience aside for now, we’ll use it soon.", 
             "type" : "radio", 
             "inputPlaceholder" : "OK, I've put it aside", 
             "answers" : [
@@ -129,7 +153,7 @@ export default {
                     "text" : "I just want to release the feeling", 
                     "isLinkNew" : false, 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "9"
+                    "goToStepByNum" : "10"
                 }
             ]
         }, 
@@ -144,7 +168,7 @@ export default {
         }, 
         {
             "title" : "Corrective action - time", 
-            "description" : "***“${echo}”***\n\nAnd when would be an appropriate time to take this corrective action?", 
+            "description" : "${echo}\n\nAnd when would be an appropriate time to take this corrective action?", 
             "type" : "short", 
             "inputPlaceholder" : "", 
             "answers" : [
@@ -153,7 +177,7 @@ export default {
         }, 
         {
             "title" : "Corrective action - future pacing", 
-            "description" : "Run that in your mind now, doing that corrective action:\n*“${s6}”*\n\nIn that time:\n*“${s7}”*\n\nAnd notice what do you feel experiencing it", 
+            "description" : "Run that in your mind now, doing that corrective action:\n*“${s7}”*\n\nIn that time:\n*“${s8}”*\n\nAnd notice what do you feel experiencing it", 
             "type" : "radio", 
             "inputPlaceholder" : "", 
             "answers" : [
@@ -204,7 +228,7 @@ export default {
                     "text" : "OK, I got one now", 
                     "isLinkNew" : false, 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "11"
+                    "goToStepByNum" : "12"
                 }, 
                 {
                     "text" : "Nothing comes to mind", 
@@ -239,7 +263,7 @@ export default {
         }, 
         {
             "title" : "Eliciting resource - validating", 
-            "description" : "***\"${echo}\"***\n\nAnd as you think about that now, you can remember feeling ${s0} about it, but it’s okay now?\n\nIt’s in the past, you have come to terms with it, etc ", 
+            "description" : "${echo}\n\nAnd as you think about that now, you can remember feeling ${s0} about it, but it’s okay now?\n\nIt’s in the past, you have come to terms with it, etc ", 
             "type" : "radio", 
             "inputPlaceholder" : "", 
             "answers" : [
@@ -251,7 +275,7 @@ export default {
                     "text" : "Actually, let me choose another one", 
                     "isLinkNew" : false, 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "9"
+                    "goToStepByNum" : "10"
                 }
             ]
         }, 
@@ -273,7 +297,7 @@ export default {
         }, 
         {
             "title" : "Congruence check", 
-            "description" : "So you have the resource:\n*“${s11}”*\n\nAnd the cue:\n*“${s3}”*\n\nDo you have any objections to experience the cue, in the same way you experience the resource?\n\nI.e. with more peace/resolution, coming to terms with it, etc\n\n**Note**: we will cover safety mechanisms for the future after we’ll transform/soften this experience, to make sure you know how to better avoid this situation in the future.", 
+            "description" : "So you have the resource:\n*“${s12}”*\n\nAnd the cue:\n*“${s4}”*\n\nDo you have any objections to experience the cue, in the same way you experience the resource?\n\nI.e. with more peace/resolution, coming to terms with it, etc\n\n**Note**: we will cover safety mechanisms for the future after we’ll transform/soften this experience, to make sure you know how to better avoid this situation in the future.", 
             "type" : "radio", 
             "inputPlaceholder" : "", 
             "answers" : [
@@ -289,7 +313,7 @@ export default {
                     "text" : "Let me pick another resource", 
                     "isLinkNew" : false, 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "9"
+                    "goToStepByNum" : "10"
                 }, 
                 {
                     "text" : "Yes I have an objection", 
@@ -300,7 +324,7 @@ export default {
         }, 
         {
             "title" : "Congruence check", 
-            "description" : "***“${echo}”***\n\nGreat. That’s usually the case, let’s proceed then", 
+            "description" : "${echo}\n\nGreat. That’s usually the case, let’s proceed then", 
             "type" : "radio", 
             "inputPlaceholder" : "", 
             "answers" : [
@@ -320,7 +344,7 @@ export default {
         }, 
         {
             "title" : "Content distortions - self", 
-            "description" : "As you look at the cue experience:\n*“${s3}”*\n\nAre you in regular life size in that experience?\n\nSometimes people would see themselves smaller or larger than life size in experiences like these, or they would be smaller / larger than life size.", 
+            "description" : "As you look at the cue experience:\n*“${s4}”*\n\nAre you in regular life size in that experience?\n\nSometimes people would see themselves smaller or larger than life size in experiences like these, or they would be smaller / larger than life size.", 
             "type" : "radio", 
             "inputPlaceholder" : "", 
             "answers" : [
@@ -328,7 +352,7 @@ export default {
                     "text" : "I'm life size", 
                     "isLinkNew" : false, 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "18"
+                    "goToStepByNum" : "19"
                 }, 
                 {
                     "text" : "I'm bigger than life size", 
@@ -342,7 +366,7 @@ export default {
         }, 
         {
             "title" : "Content distortions", 
-            "description" : "***\"${echo}\"***\n\nOK, now notice what happens as you allow yourself to get back to regular life size", 
+            "description" : "${echo}\n\nOK, now notice what happens as you allow yourself to get back to regular life size", 
             "type" : "radio", 
             "inputPlaceholder" : "", 
             "answers" : [
@@ -389,7 +413,7 @@ export default {
                     "isConcern" : false, 
                     "concern" : "", 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "20"
+                    "goToStepByNum" : "21"
                 }, 
                 {
                     "isOther" : false, 
@@ -398,7 +422,7 @@ export default {
                     "isConcern" : false, 
                     "concern" : "", 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "20"
+                    "goToStepByNum" : "21"
                 }, 
                 {
                     "isOther" : false, 
@@ -418,7 +442,7 @@ export default {
         }, 
         {
             "title" : "Content distortions - others", 
-            "description" : "***“${echo}”***\n\nOK, now notice what happens as you allow whoever is involved, to get back to regular life size", 
+            "description" : "${echo}\n\nOK, now notice what happens as you allow whoever is involved, to get back to regular life size", 
             "type" : "radio", 
             "inputPlaceholder" : "", 
             "answers" : [
@@ -465,7 +489,7 @@ export default {
                     "isConcern" : false, 
                     "concern" : "", 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "22"
+                    "goToStepByNum" : "23"
                 }, 
                 {
                     "isOther" : false, 
@@ -514,7 +538,7 @@ export default {
         }, 
         {
             "title" : "Contrastive Analysis", 
-            "description" : "Now as you think about both of these at the same time:\n\n**The resource:**\n${s11}\n\n**And the cue:**\n${s3}\n\nAttend to the differences in how you see, hear, and experience them in your mind.\n\nAs you go back and forth between the two a few times, notice the visual, auditory, and tactile differences between the way you experience them.\n\nWhat are the main differences you see, hear, and feel between the two? Write down all differences you can already notice.", 
+            "description" : "Now as you think about both of these at the same time:\n\n**The resource:**\n${s12}\n\n**And the cue:**\n${s4}\n\nAttend to the differences in how you see, hear, and experience them in your mind.\n\nAs you go back and forth between the two a few times, notice the visual, auditory, and tactile differences between the way you experience them.\n\nWhat are the main differences you see, hear, and feel between the two? Write down all differences you can already notice.", 
             "type" : "long", 
             "inputPlaceholder" : "The differences I already notice are ...", 
             "answers" : [
@@ -534,7 +558,7 @@ export default {
                     "isConcern" : false, 
                     "concern" : "", 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "25"
+                    "goToStepByNum" : "26"
                 }, 
                 {
                     "isOther" : false, 
@@ -543,7 +567,7 @@ export default {
                     "isConcern" : false, 
                     "concern" : "", 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "25"
+                    "goToStepByNum" : "26"
                 }, 
                 {
                     "isOther" : false, 
@@ -552,7 +576,7 @@ export default {
                     "isConcern" : false, 
                     "concern" : "", 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "25"
+                    "goToStepByNum" : "26"
                 }, 
                 {
                     "isOther" : false, 
@@ -561,7 +585,7 @@ export default {
                     "isConcern" : false, 
                     "concern" : "", 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "25"
+                    "goToStepByNum" : "26"
                 }, 
                 {
                     "isOther" : false, 
@@ -577,13 +601,13 @@ export default {
                     "isConcern" : false, 
                     "concern" : "", 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "25"
+                    "goToStepByNum" : "26"
                 }
             ]
         }, 
         {
             "title" : "Contrastive Analysis - location & distance", 
-            "description" : "***“The images are in the exact same place”***\n\nWhile it does happen that the images are in the same place and distance to begin with, it is very rare, so I just want to be thorough here, with your permission.\n\nI want you to look again at the **resource image** again:\n*${s11}*\n\nThen at the **cue image** again:\n*${s3}*\n\nAnd go back and forth between the two a few times. Then close your eyes and point at the location you see each of them.\n\nAre you pointing to the **exact same place**, and the images are the **exact same distance** from you?", 
+            "description" : "***“The images are in the exact same place”***\n\nWhile it does happen that the images are in the same place and distance to begin with, it is very rare, so I just want to be thorough here, with your permission.\n\nI want you to look again at the **resource image** again:\n*${s12}*\n\nThen at the **cue image** again:\n*${s4}*\n\nAnd go back and forth between the two a few times. Then close your eyes and point at the location you see each of them.\n\nAre you pointing to the **exact same place**, and the images are the **exact same distance** from you?", 
             "type" : "radio", 
             "inputPlaceholder" : "", 
             "answers" : [
@@ -594,7 +618,7 @@ export default {
                     "isConcern" : false, 
                     "concern" : "", 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "26"
+                    "goToStepByNum" : "27"
                 }, 
                 {
                     "isOther" : false, 
@@ -769,7 +793,7 @@ export default {
                     "isConcern" : false, 
                     "concern" : "", 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "33"
+                    "goToStepByNum" : "34"
                 }, 
                 {
                     "isOther" : false, 
@@ -778,7 +802,7 @@ export default {
                     "isConcern" : false, 
                     "concern" : "", 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "31"
+                    "goToStepByNum" : "32"
                 }, 
                 {
                     "isOther" : false, 
@@ -787,7 +811,7 @@ export default {
                     "isConcern" : true, 
                     "concern" : "feel worse", 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "32"
+                    "goToStepByNum" : "33"
                 }
             ]
         }, 
@@ -840,7 +864,7 @@ export default {
                     "isConcern" : false, 
                     "concern" : "", 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "33"
+                    "goToStepByNum" : "34"
                 }, 
                 {
                     "isOther" : false, 
@@ -849,7 +873,7 @@ export default {
                     "isConcern" : false, 
                     "concern" : "", 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "33"
+                    "goToStepByNum" : "34"
                 }, 
                 {
                     "isOther" : false, 
@@ -858,7 +882,7 @@ export default {
                     "isConcern" : false, 
                     "concern" : "", 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "33"
+                    "goToStepByNum" : "34"
                 }, 
                 {
                     "isOther" : false, 
@@ -925,7 +949,7 @@ export default {
                     "isConcern" : false, 
                     "concern" : "", 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "37"
+                    "goToStepByNum" : "38"
                 }, 
                 {
                     "isOther" : false, 
@@ -934,7 +958,7 @@ export default {
                     "isConcern" : false, 
                     "concern" : "", 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "35"
+                    "goToStepByNum" : "36"
                 }, 
                 {
                     "isOther" : false, 
@@ -943,7 +967,7 @@ export default {
                     "isConcern" : true, 
                     "concern" : "feel worse", 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "36"
+                    "goToStepByNum" : "37"
                 }
             ]
         }, 
@@ -960,7 +984,7 @@ export default {
                     "isConcern" : false, 
                     "concern" : "", 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "37"
+                    "goToStepByNum" : "38"
                 }, 
                 {
                     "isOther" : false, 
@@ -969,7 +993,7 @@ export default {
                     "isConcern" : false, 
                     "concern" : "", 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "37"
+                    "goToStepByNum" : "38"
                 }, 
                 {
                     "isOther" : false, 
@@ -978,7 +1002,7 @@ export default {
                     "isConcern" : false, 
                     "concern" : "", 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "37"
+                    "goToStepByNum" : "38"
                 }, 
                 {
                     "isOther" : false, 
@@ -1002,7 +1026,7 @@ export default {
                     "isConcern" : false, 
                     "concern" : "", 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "37"
+                    "goToStepByNum" : "38"
                 }, 
                 {
                     "isOther" : false, 
@@ -1011,7 +1035,7 @@ export default {
                     "isConcern" : false, 
                     "concern" : "", 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "37"
+                    "goToStepByNum" : "38"
                 }, 
                 {
                     "isOther" : false, 
@@ -1020,7 +1044,7 @@ export default {
                     "isConcern" : false, 
                     "concern" : "", 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "37"
+                    "goToStepByNum" : "38"
                 }, 
                 {
                     "isOther" : false, 
@@ -1069,7 +1093,7 @@ export default {
         }, 
         {
             "title" : "Mapping Across - remaining differences", 
-            "description" : "Remaining differences\n\nNow go back and forth between both images and scan for remaining differences.\n\nIs there anything else in the way you experience the resource, which you'd like to apply to the cue?\n\n**Resource:**\n*\"${s11}\"*\n\n**Cue:**\n*\"${s3}\"*", 
+            "description" : "Remaining differences\n\nNow go back and forth between both images and scan for remaining differences.\n\nIs there anything else in the way you experience the resource, which you'd like to apply to the cue?\n\n**Resource:**\n*\"${s12}\"*\n\n**Cue:**\n*\"${s4}\"*", 
             "type" : "radio", 
             "inputPlaceholder" : "", 
             "answers" : [
@@ -1080,7 +1104,7 @@ export default {
                     "isConcern" : false, 
                     "concern" : "", 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "40"
+                    "goToStepByNum" : "41"
                 }, 
                 {
                     "isOther" : false, 
@@ -1096,7 +1120,7 @@ export default {
                     "isConcern" : false, 
                     "concern" : "", 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "40"
+                    "goToStepByNum" : "41"
                 }
             ]
         }, 
@@ -1111,7 +1135,7 @@ export default {
         }, 
         {
             "title" : "Mapping Across - remaining differences", 
-            "description" : "***${echo}***\n\nApply them as well now and notice what happens", 
+            "description" : "${echo}\n\nApply them as well now and notice what happens", 
             "type" : "radio", 
             "inputPlaceholder" : "", 
             "answers" : [
@@ -1147,7 +1171,7 @@ export default {
         }, 
         {
             "title" : "Increasing peace & acceptance - color", 
-            "description" : "As you think of this experience you just transformed now:\n\n*${s3}*\n\nTry making it B&W/grayscale, and decrease the colorfulness, and notice how much it increases the peace and acceptance", 
+            "description" : "As you think of this experience you just transformed now:\n\n*${s4}*\n\nTry making it B&W/grayscale, and decrease the colorfulness, and notice how much it increases the peace and acceptance", 
             "type" : "radio", 
             "inputPlaceholder" : "", 
             "answers" : [
@@ -1554,7 +1578,7 @@ export default {
                     "isConcern" : false, 
                     "concern" : "", 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "54"
+                    "goToStepByNum" : "55"
                 }, 
                 {
                     "isOther" : false, 
@@ -1574,7 +1598,7 @@ export default {
         }, 
         {
             "title" : "Increasing peace & acceptance - Additional changes", 
-            "description" : "***${echo}***\n\nGreat, what is it?\n\nYou don’t have to share, but … If something works for you, it might help many other parents as well, so anything you share is VERY appreciated. If you want to keep it to yourself, just write something for reference.", 
+            "description" : "${echo}\n\nGreat, what is it?\n\nYou don’t have to share, but … If something works for you, it might help many other parents as well, so anything you share is VERY appreciated. If you want to keep it to yourself, just write something for reference.", 
             "type" : "long", 
             "inputPlaceholder" : "", 
             "answers" : [
@@ -1583,7 +1607,7 @@ export default {
         }, 
         {
             "title" : "Increasing peace & acceptance - Additional changes", 
-            "description" : "***${echo}***\n\nNow notice what happens as you allow that change to take place now.", 
+            "description" : "${echo}\n\nNow notice what happens as you allow that change to take place now.", 
             "type" : "radio", 
             "inputPlaceholder" : "", 
             "answers" : [
@@ -1619,7 +1643,7 @@ export default {
         }, 
         {
             "title" : "Learnings & insights", 
-            "description" : "Looking back at the experience you just transformed:\n\n*${s3}*\n\nAre there any learnings you can pick up from it now? Any insights? Spontaneous realizations?\n\nSometimes our emotions get in the way of our logic & thinking, and it’s easier to learn from a situation once it’s softer and more resolved. So examine that experience again now:\n\n*${s3}*\n\nAnd get a sense if there’s some value or learnings you can adopt to your future behavior.", 
+            "description" : "Looking back at the experience you just transformed:\n\n*${s4}*\n\nAre there any learnings you can pick up from it now? Any insights? Spontaneous realizations?\n\nSometimes our emotions get in the way of our logic & thinking, and it’s easier to learn from a situation once it’s softer and more resolved. So examine that experience again now:\n\n*${s4}*\n\nAnd get a sense if there’s some value or learnings you can adopt to your future behavior.", 
             "type" : "radio", 
             "inputPlaceholder" : "", 
             "answers" : [
@@ -1644,7 +1668,7 @@ export default {
                     "isConcern" : false, 
                     "concern" : "", 
                     "hasGoToStep" : true, 
-                    "goToStepByNum" : "56"
+                    "goToStepByNum" : "57"
                 }
             ]
         }, 
@@ -1657,7 +1681,7 @@ export default {
 
             ], 
             "hasGoToStep" : true, 
-            "goToStepByNum" : "57"
+            "goToStepByNum" : "58"
         }, 
         {
             "title" : "Learnings & insights", 
@@ -1670,7 +1694,7 @@ export default {
         }, 
         {
             "title" : "Congruence Check", 
-            "description" : "Looking back at the experience you just transformed:\n\n*${s3}*\n\nDo you have any objections being this way, experiencing it like that?", 
+            "description" : "Looking back at the experience you just transformed:\n\n*${s4}*\n\nDo you have any objections being this way, experiencing it like that?", 
             "type" : "radio", 
             "inputPlaceholder" : "", 
             "answers" : [
@@ -1693,20 +1717,6 @@ export default {
                     "text" : "Yes I have an objection", 
                     "isLinkNew" : false, 
                     "isConcern" : true, 
-                    "concern" : ""
-                }
-            ]
-        }, 
-        {
-            "title" : "", 
-            "description" : "", 
-            "type" : "radio", 
-            "inputPlaceholder" : "", 
-            "answers" : [
-                {
-                    "isOther" : false, 
-                    "isLinkNew" : false, 
-                    "isConcern" : false, 
                     "concern" : ""
                 }
             ]

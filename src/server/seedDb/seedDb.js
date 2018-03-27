@@ -6,9 +6,9 @@ import Users from '../api/users/usersModel'
 import { signToken } from '../auth'
 
 // data
-import seedDbTraumaReliefToolData from './seedDbTraumaReliefToolData'
-import seedDbResolvingFeelingsToolData from './seedDbResolvingFeelingsToolData'
-import toolHasWithReview from './seedDbToolHasReviewData'
+import seedDbTraumaReliefToolData from './seedDbTraumaReliefToolData.json'
+import seedDbResolvingFeelingsToolData from './seedDbResolvingFeelingsToolData.json'
+import toolHasWithReview from './seedDbToolHasReviewData.json'
 import users from './seedDbUsersData'
 
 const tools = [seedDbTraumaReliefToolData, seedDbResolvingFeelingsToolData, toolHasWithReview]
