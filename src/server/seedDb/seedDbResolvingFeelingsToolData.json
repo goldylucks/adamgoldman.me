@@ -1727,5 +1727,5 @@
     "title" : "Resolving Feelings", 
     "isDraft" : false, 
     "isSavoring" : false, 
-    "hasReview" : false
+    "hasReview" : true
 }
