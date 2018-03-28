@@ -1,9 +1,9 @@
 import { cloudImg } from '../../utils'
 
 export default {
+  slug: 'savoring-the-future',
   title: 'Savoring The Future',
   description: 'Savor the future plans & dreams for your child',
-  typeform: 'https://adamgoldman.typeform.com/to/UGn1TQ',
   benefits: [
     'Increase acceptance and peace towards things that won\'t happen',
     'Savor future plans you had for & with your child',

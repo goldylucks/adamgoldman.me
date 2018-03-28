@@ -1,6 +1,7 @@
 import { cloudImg } from '../../utils'
 
 export default {
+  slug: 'special-days',
   title: 'Special Days',
   description: 'Birthdays, holidays, and transition days as an opportunity',
   typeform: 'https://adamgoldman.typeform.com/to/kERZFQ',

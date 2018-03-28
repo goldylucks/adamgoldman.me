@@ -1,32 +1,41 @@
 // @flow
 
 import React from 'react'
+import axios from 'axios'
 
 import Benefits from '../../components/Benefits'
-import Typeform from '../../components/Typeform'
 import MessageMe from '../../components/MessageMe'
 import Testimonials from '../../components/Testimonials'
 import FAQ from '../../components/FAQ'
 import FbGateKeeper from '../../components/FbGateKeeper'
+import Steps from '../../routes/tool/Steps'
 
 type Props = {
   title: string,
-  typeform: string,
+  slug: string,
+  path: string,
   faq: [],
   testimonials: [],
   benefits: Array<String>,
   user: Object,
   onLogin: Function,
-  onSubmitModule: Function,
+  // onSubmitModule: Function,
 };
 
-// eslint-disable-next-line react/prefer-stateless-function
 class savoringYourChildSectionModule extends React.Component {
+  state = {
+    tool: null,
+  }
+
+  componentWillMount() {
+    this.fetchTool()
+  }
+
   props: Props
 
   render() {
     const {
-      title, typeform, faq, benefits, testimonials, user, onLogin, onSubmitModule,
+      title, faq, benefits, testimonials, user, onLogin, path,
     } = this.props
     return (
       <div>
@@ -35,11 +44,7 @@ class savoringYourChildSectionModule extends React.Component {
             <h1 className="posttitle">{title}</h1>
           </div>
           <div style={{ position: 'relative' }}>
-            <Typeform
-              data-url={typeformUrl(typeform, user)}
-              style={{ width: '100%', height: 800 }}
-              onSubmit={() => submitModule(typeform, onSubmitModule)}
-            />
+            { this.state.tool && <Steps {...this.state.tool} path={path} /> }
             {!user._id &&
             <FbGateKeeper onLogin={onLogin} user={user} />
             }
@@ -90,20 +95,19 @@ class savoringYourChildSectionModule extends React.Component {
       </div>
     )
   }
-}
 
-export default savoringYourChildSectionModule
-
-function typeformUrl(typeform, { _id, gender, childName }) {
-  try {
-    return `${typeform}?user_id=${_id}&name=${childName}&his_her=${gender === 'male' ? 'his' : 'her'}&him_her=${gender === 'male' ? 'him' : 'her'}&he_she=${gender === 'male' ? 'he' : 'she'}`
-  } catch (err) {
-    global.console.error('err', err)
-    return ''
+  fetchTool() {
+    axios.get(`/api/tools/${this.props.slug}`)
+      .then(({ data }) => {
+        this.setState({
+          tool: data,
+        })
+      })
+      .catch((err) => {
+        global.alert('there was an error')
+        global.console.error(err)
+      })
   }
 }
 
-function submitModule(typeform, onSubmitModule) {
-  const formId = typeform.split('/')[4]
-  onSubmitModule(formId)
-}
+export default savoringYourChildSectionModule

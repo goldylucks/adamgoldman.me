@@ -1,9 +1,9 @@
 import { cloudImg } from '../../utils'
 
 export default {
+  slug: 'relationship-consolidation',
   title: 'Savoring The Future',
   description: 'Savor the future plans & dreams for your child',
-  typeform: 'https://adamgoldman.typeform.com/to/lDT9YI',
   benefits: [
     'Reclaim good experiences with your child',
     'Intensify good feelings and memories',

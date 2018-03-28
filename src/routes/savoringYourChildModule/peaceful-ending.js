@@ -1,9 +1,9 @@
 import { cloudImg } from '../../utils'
 
 export default {
+  slug: 'peaceful-ending',
   title: 'Peaceful Ending',
   description: 'This process will help soften the unpleasantness and negative feelings regarding the moment of transition, and the events regarding the transition, like the funeral and related things you might went through.',
-  typeform: 'https://adamgoldman.typeform.com/to/Rwa8iu',
   benefits: [
     'Soften the moment of getting the news',
     'Focus on the happy times with your child',

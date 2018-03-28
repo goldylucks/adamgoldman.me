@@ -1,9 +1,9 @@
 import { cloudImg } from '../../utils'
 
 export default {
+  slug: 'reunion',
   title: 'Reunion',
   description: 'Reunite with your child\'s presence and valued relationship',
-  typeform: 'https://adamgoldman.typeform.com/to/hcBBCM',
   benefits: [
     'Reunite with the warmth, presence and appreciation of your child',
     'Increase the love you already feel',
