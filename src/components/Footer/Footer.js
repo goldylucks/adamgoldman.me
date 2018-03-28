@@ -12,7 +12,7 @@ const Footer = () => (
     </p>
     <p className="pull-right">
       <Link className={`${s.link}`} to="/legal-stuff/">legal stuff</Link>
-      <Link className={`${s.link}`} to="/privacy/">Privacy</Link>
+      <Link className={`${s.link}`} style={{ marginLeft: 10 }} to="/privacy/">Privacy</Link>
     </p>
     <div className="clearfix" />
   </div>
