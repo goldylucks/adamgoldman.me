@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 
-import { MESSENGER_LINK_WELCOME, MESSENGER_LINK_BOOK_SESSION } from '../../constants'
+import { MESSENGER_LINK_WELCOME, MESSENGER_LINK_BOOK_SESSION, MESSENGER_LINK_INNER_CIRCLE } from '../../constants'
 
 export default [
   {
@@ -72,6 +72,7 @@ Please don’t hold back. I take everything as constructive feedback.`,
     title: 'Next steps',
     description: 'What would you like to do next?',
     answers: [
+      { text: 'Get cutting edge tools', isLinkNew: true, linkNew: MESSENGER_LINK_INNER_CIRCLE },
       { text: 'Try another process', isLink: true, link: '/tools' },
       { text: 'Repeat this process again', isRepeatProcess: true },
       { text: 'Share this process', isFbShare: true },

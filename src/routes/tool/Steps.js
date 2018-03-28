@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ReactStars from 'react-stars'
 
-import { MESSENGER_LINK_TOOL_CONCERN } from '../../constants'
+import { MESSENGER_LINK_TOOL_CONCERN, MESSENGER_LINK_INNER_CIRCLE } from '../../constants'
 import Markdown from '../../components/Markdown'
 import ExternalA from '../../components/ExternalA'
 import { scrollToElem, isMobile } from '../../utils'
@@ -40,6 +40,7 @@ class Steps extends React.Component {
         {this.renderAnswers()}
         {this.renderStars()}
         {this.renderBack()}
+        {this.renderSubscribe()}
       </div>
     )
   }
@@ -167,7 +168,12 @@ class Steps extends React.Component {
   }
 
   renderBack() {
-    return this.state.currentStep === 0 ? null : <button className="btn btn-secondary btn-sm" onClick={this.back}>Back</button>
+    return this.state.currentStep === 0 ? null : <button className="btn btn-secondary btn-sm" style={{ display: 'block', marginBottom: 10 }} onClick={this.back}>Back</button>
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  renderSubscribe() {
+    return <ExternalA href={MESSENGER_LINK_INNER_CIRCLE} className="btn btn-secondary btn-sm">Subscribe to future tools</ExternalA>
   }
 
   stepsStack = []
