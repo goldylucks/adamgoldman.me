@@ -7,9 +7,6 @@ import BrainToolV1 from './BrainTool-v1'
 import BrainToolV3 from './BrainTool-v3'
 
 const toolsV1 = [
-  'smoking-destroyer',
-  'nail-biting-destroyer',
-  'trauma-relief',
   'internal-dialog-scrambeler',
   'loved-one-amplifier',
   'reverse-feeling-spin',
@@ -17,7 +14,6 @@ const toolsV1 = [
 ]
 
 const toolsV3 = [
-  'feel-good-generator',
   'perfect-day',
   'recurring-time-distortion',
   'grief-to-appreciation',
