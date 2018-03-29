@@ -12,5 +12,5 @@
     "title" : "Has Review test", 
     "isSavoring" : false, 
     "hasReview" : true, 
-    "isDraft" : false
+    "isDraft" : true
 }
