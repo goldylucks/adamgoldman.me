@@ -389,14 +389,4 @@
     "description": "Enjoy people you like like never before",
     "url": "loved-one-amplifier"
   },
-  {
-    "tags": [
-      "Anxiety",
-      "Panic Attack",
-      "Depression"
-    ],
-    "title": "Reverse Feeling Spin v2",
-    "description": "A slight alteration for the reverse spin, used for the same things",
-    "url": "reverse-feeling-spin2"
-  }
 ]

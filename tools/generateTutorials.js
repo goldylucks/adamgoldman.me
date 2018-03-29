@@ -18,7 +18,6 @@ const fileToWrite = [
   'coming-to-wholeness',
   'internal-dialog-scrambeler',
   'loved-one-amplifier',
-  'reverse-feeling-spin2',
 ].map(fileNameToObject)
 
 // write file tutorials.js
