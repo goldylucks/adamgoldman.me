@@ -9,7 +9,6 @@ import BrainToolV3 from './BrainTool-v3'
 const toolsV1 = [
   'internal-dialog-scrambeler',
   'loved-one-amplifier',
-  'reverse-feeling-spin',
   'reverse-feeling-spin2',
 ]
 

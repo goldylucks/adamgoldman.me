@@ -395,16 +395,6 @@
       "Panic Attack",
       "Depression"
     ],
-    "title": "Reverse Feeling Spin",
-    "description": "Turn anxiety, pain, depression, and any unwanted feeling to something new",
-    "url": "reverse-feeling-spin"
-  },
-  {
-    "tags": [
-      "Anxiety",
-      "Panic Attack",
-      "Depression"
-    ],
     "title": "Reverse Feeling Spin v2",
     "description": "A slight alteration for the reverse spin, used for the same things",
     "url": "reverse-feeling-spin2"

@@ -14,14 +14,10 @@ const dirToReadPath = path.resolve(__dirname, '..', 'src', 'tutorials')
 
 // tools by rendering order
 const fileToWrite = [
-  'smoking-destroyer',
   'trauma-relief-he',
-  'nail-biting-destroyer',
   'coming-to-wholeness',
-  'trauma-relief',
   'internal-dialog-scrambeler',
   'loved-one-amplifier',
-  'reverse-feeling-spin',
   'reverse-feeling-spin2',
 ].map(fileNameToObject)
 
