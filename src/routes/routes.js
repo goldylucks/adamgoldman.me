@@ -64,7 +64,7 @@ const routes = {
       load: () => import(/* webpackChunkName: 'tutorials' */ './tutorials'),
     },
     {
-      path: ['judgement-to-preference', 'feel-good-generator', 'trauma-relief', 'resolving-feelings', 'test', 'has-review'].map(p => `/tools/${p}`),
+      path: ['reverse-feeling-spin', 'judgement-to-preference', 'feel-good-generator', 'trauma-relief', 'resolving-feelings', 'test', 'has-review'].map(p => `/tools/${p}`),
       load: () => import(/* webpackChunkName: 'tool' */ './tool'),
     },
     {
