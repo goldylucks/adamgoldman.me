@@ -15,4 +15,7 @@ router.route('/:url')
   .get(controller.getByUrl)
   .delete(decodeToken, getFreshUser, isAdmin, controller.delByUrl)
 
+router.route('/export')
+  .post(...isAdminMiddlewares, controller.exportTool)
+
 export default router

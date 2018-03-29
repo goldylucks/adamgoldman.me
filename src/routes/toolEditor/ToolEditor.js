@@ -6,6 +6,7 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faTrashAlt from '@fortawesome/fontawesome-free-regular/faTrashAlt'
 import faSave from '@fortawesome/fontawesome-free-regular/faSave'
 import faEye from '@fortawesome/fontawesome-free-solid/faEye'
+import faDatabase from '@fortawesome/fontawesome-free-solid/faDatabase'
 import { Typeahead } from 'react-bootstrap-typeahead'
 
 import { inputChange, inputToggle } from '../../forms'
@@ -58,6 +59,7 @@ class ToolEditor extends React.Component {
             <a className={s.control} href={`/tools/${this.props.url}`} target="_blank"><FontAwesomeIcon icon={faEye} /></a>
             <a className={s.control} onClick={this.save}><FontAwesomeIcon icon={faSave} /></a>
             <a className={s.control} onClick={this.del}><FontAwesomeIcon icon={faTrashAlt} /></a>
+            <a className={s.control} onClick={this.export}><FontAwesomeIcon icon={faDatabase} /></a>
           </div>
         </div>
         <div className="clearfix" style={{ width: '35%', right: 0, position: 'fixed' }}>
@@ -141,6 +143,21 @@ class ToolEditor extends React.Component {
       .then((res) => {
         global.console.log('deleted!', res.data)
         global.alert('deleted!')
+      })
+      .catch((err) => {
+        global.console.error(err)
+        global.alert(err.message)
+      })
+  }
+
+  export = () => {
+    const state = cleanEmptyValues({ ...this.state, url: this.props.url })
+    delete state.__v
+    delete state._id
+    axios.post('/api/tools/export', state)
+      .then((res) => {
+        global.console.log(res.data)
+        global.alert(res.data)
       })
       .catch((err) => {
         global.console.error(err)
