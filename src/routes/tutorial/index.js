@@ -18,7 +18,6 @@ const toolsV3 = [
   'recurring-time-distortion',
   'grief-to-appreciation',
   'grief-to-appreciation-he',
-  'judgement',
 ]
 
 async function action({ params }) {
