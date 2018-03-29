@@ -6,12 +6,18 @@ import Users from '../api/users/usersModel'
 import { signToken } from '../auth'
 
 // data
+import seedDbFeelGoodGeneratorToolData from './seedDbFeelGoodGeneratorToolData.json'
 import seedDbTraumaReliefToolData from './seedDbTraumaReliefToolData.json'
 import seedDbResolvingFeelingsToolData from './seedDbResolvingFeelingsToolData.json'
 import toolHasWithReview from './seedDbToolHasReviewData.json'
 import users from './seedDbUsersData'
 
-const tools = [seedDbTraumaReliefToolData, seedDbResolvingFeelingsToolData, toolHasWithReview]
+const tools = [
+  seedDbFeelGoodGeneratorToolData,
+  seedDbTraumaReliefToolData,
+  seedDbResolvingFeelingsToolData,
+  toolHasWithReview,
+]
 const Models = [Tools, Users]
 
 // init
