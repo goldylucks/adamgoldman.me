@@ -1,18 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
-import axios from 'axios'
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import faTrashAlt from '@fortawesome/fontawesome-free-regular/faTrashAlt'
-import faSave from '@fortawesome/fontawesome-free-regular/faSave'
-import faEye from '@fortawesome/fontawesome-free-solid/faEye'
-import faDatabase from '@fortawesome/fontawesome-free-solid/faDatabase'
 import { Typeahead } from 'react-bootstrap-typeahead'
 
 import { inputChange, inputToggle } from '../../forms'
 
-import { freshStep, getValidationWarnings, cleanEmptyValues } from './toolEditorUtils'
+import { freshStep } from './toolEditorUtils'
 import Steps from './Steps'
+import Controls from './Controls'
 import Toc from './Toc'
 import s from './ToolEditor.css'
 
@@ -39,14 +34,6 @@ class ToolEditor extends React.Component {
     }
   }
 
-  componentDidMount() {
-    window.addEventListener('keydown', this.setupHotkeys, false)
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('keydown', this.setupHotkeys, false)
-  }
-
   render() {
     return (
       <div style={{ padding: 10 }}>
@@ -55,12 +42,7 @@ class ToolEditor extends React.Component {
           <hr />
           <h1 className="text-center">Steps</h1>
           <Steps steps={this.state.steps} onUpdateSteps={this.updateSteps} />
-          <div className={s.controls}>
-            <a className={s.control} href={`/tools/${this.props.url}`} target="_blank"><FontAwesomeIcon icon={faEye} /></a>
-            <a className={s.control} onClick={this.save}><FontAwesomeIcon icon={faSave} /></a>
-            <a className={s.control} onClick={this.del}><FontAwesomeIcon icon={faTrashAlt} /></a>
-            <a className={s.control} onClick={this.export}><FontAwesomeIcon icon={faDatabase} /></a>
-          </div>
+          <Controls tool={{ ...this.state, url: this.props.url }} />
         </div>
         <div className="clearfix" style={{ width: '35%', right: 0, position: 'fixed' }}>
           <Toc steps={this.state.steps} onReorderSteps={this.updateSteps} />
@@ -117,63 +99,9 @@ class ToolEditor extends React.Component {
 
   elems = {}
 
-  save = () => {
-    const state = cleanEmptyValues({ ...this.state, url: this.props.url })
-    const warnings = getValidationWarnings(state)
-    if (warnings.length) {
-      global.alert('validation warnings')
-      global.console.log('[validation warnings]', warnings)
-    }
-    axios.post('/api/tools/', state)
-      .then((res) => {
-        global.console.log('saved!', res.data)
-        global.alert('saved!')
-      })
-      .catch((err) => {
-        global.console.error(err)
-        global.alert(err.message)
-      })
-  }
-
-  del = () => {
-    if (!global.confirm('Sure you want to delete this tool?')) {
-      return
-    }
-    axios.delete(`/api/tools/${this.props.url}`)
-      .then((res) => {
-        global.console.log('deleted!', res.data)
-        global.alert('deleted!')
-      })
-      .catch((err) => {
-        global.console.error(err)
-        global.alert(err.message)
-      })
-  }
-
-  export = () => {
-    const state = cleanEmptyValues({ ...this.state, url: this.props.url })
-    delete state.__v
-    delete state._id
-    axios.post('/api/tools/export', state)
-      .then((res) => {
-        global.console.log(res.data)
-        global.alert(res.data)
-      })
-      .catch((err) => {
-        global.console.error(err)
-        global.alert(err.message)
-      })
-  }
-
   updateHiddenFields = (hiddenFields) => {
     // TODO :: if an existing field is changed or removed, check if it's used, and prompt warning
     this.setState({ hiddenFields })
-  }
-
-  setupHotkeys = (evt) => {
-    if (evt.key === 'S' && evt.ctrlKey && evt.shiftKey) {
-      this.save()
-    }
   }
 
   focusNewStepTitle = (sIdx = this.state.steps.length - 1) => this.elems[`${sIdx}-title`].focus()
@@ -182,4 +110,3 @@ class ToolEditor extends React.Component {
 }
 
 export default withStyles(s)(ToolEditor)
-
