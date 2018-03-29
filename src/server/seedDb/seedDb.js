@@ -1,24 +1,15 @@
 import deasync from 'deasync'
+import prompt from 'prompt-sync' // eslint-disable-line import/no-extraneous-dependencies
 
-// models
 import Tools from '../api/tools/toolsModel'
-import Users from '../api/users/usersModel'
-import { signToken } from '../auth'
 
-// data
-import seedDbFeelGoodGeneratorToolData from './seedDbFeelGoodGeneratorToolData.json'
-import seedDbTraumaReliefToolData from './seedDbTraumaReliefToolData.json'
-import seedDbResolvingFeelingsToolData from './seedDbResolvingFeelingsToolData.json'
-import toolHasWithReview from './seedDbToolHasReviewData.json'
-import users from './seedDbUsersData'
+import { tools } from './seedDbData'
 
-const tools = [
-  seedDbFeelGoodGeneratorToolData,
-  seedDbTraumaReliefToolData,
-  seedDbResolvingFeelingsToolData,
-  toolHasWithReview,
-]
-const Models = [Tools, Users]
+const ModelsToCleanDb = [Tools]
+
+if (prompt()('Seed DB? (type yes to prcoeed)') !== 'yes') {
+  process.exit(0)
+}
 
 // init
 global.console.log('Seeding DB ...')
@@ -28,13 +19,11 @@ export default run()
 function run() {
   let ready // eslint-disable-line no-unmodified-loop-condition
   cleanDB()
-    .then(seedUsers)
     .then(seedTools)
     .then(onSeedSuccess)
     .catch(onSeedError)
     .then(() => { ready = true })
-
-  // make seed sync so test won't run before it is completed
+    // make seed sync so test won't run before it is completed
   while (ready === undefined) { // eslint-disable-line no-unmodified-loop-condition
     deasync.sleep(100)
   }
@@ -42,15 +31,8 @@ function run() {
 
 function cleanDB() {
   global.console.log('Cleaning the DB ...')
-  const promises = Models.map(model => model.remove().exec())
+  const promises = ModelsToCleanDb.map(model => model.remove().exec())
   return Promise.all(promises)
-}
-
-function seedUsers() {
-  global.console.log('Seeding users ...')
-  const promises = users.map(p => Users.create(p))
-  return Promise.all(promises)
-    .then(attachTokenToUsers)
 }
 
 function seedTools() {
@@ -65,11 +47,4 @@ function onSeedSuccess() {
 
 function onSeedError(err) {
   global.console.error('error seeding DB:', err)
-}
-
-function attachTokenToUsers() {
-  users.map((u) => {
-    u.token = signToken(u._id)
-    return u
-  })
 }
