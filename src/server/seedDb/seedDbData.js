@@ -1,3 +1,4 @@
+import seedDbSessionIntroToolData from './seedDbSessionIntroToolData.json'
 import seedDbReengagingTheFutureToolData from './seedDbReengagingTheFutureToolData.json'
 import seedDbReunionToolData from './seedDbReunionToolData.json'
 import seedDbFeelGoodGeneratorToolData from './seedDbFeelGoodGeneratorToolData.json'
@@ -12,6 +13,7 @@ import toolHasWithReview from './seedDbToolHasReviewData.json'
 
 // eslint-disable-next-line import/prefer-default-export
 export const tools = [
+  seedDbSessionIntroToolData,
   seedDbReengagingTheFutureToolData,
   seedDbReunionToolData,
   seedDbLovedOneAmplifierToolData,

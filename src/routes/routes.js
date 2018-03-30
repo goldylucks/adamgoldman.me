@@ -64,7 +64,7 @@ const routes = {
       load: () => import(/* webpackChunkName: 'tutorials' */ './tutorials'),
     },
     {
-      path: ['reengaging-the-future', 'reunion', 'loved-one-amplifier', 'recurring-time-distortion', 'perfect-day', 'reverse-feeling-spin', 'judgement-to-preference', 'feel-good-generator', 'trauma-relief', 'resolving-feelings', 'test', 'has-review'].map(p => `/tools/${p}`),
+      path: ['session-intro', 'reengaging-the-future', 'reunion', 'loved-one-amplifier', 'recurring-time-distortion', 'perfect-day', 'reverse-feeling-spin', 'judgement-to-preference', 'feel-good-generator', 'trauma-relief', 'resolving-feelings', 'test', 'has-review'].map(p => `/tools/${p}`),
       load: () => import(/* webpackChunkName: 'tool' */ './tool'),
     },
     {
