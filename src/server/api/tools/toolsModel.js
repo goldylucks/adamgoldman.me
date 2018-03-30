@@ -33,6 +33,12 @@ function getSchema() {
       default: false,
     },
 
+    isGrief: {
+      type: Boolean,
+      required: true,
+      default: false,
+    },
+
     hasReview: {
       type: Boolean,
       required: true,
