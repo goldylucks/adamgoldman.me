@@ -104,12 +104,12 @@ export const updateLogicalJumpsAfterRemoveStep = (sIdx, nextSteps) => nextSteps.
 })
 
 export const getValidationWarnings = state => [].concat(
-  ...state.steps.reduce((acc, step) => acc.concat(
+  ...state.steps.reduce((acc, step, sIdx) => acc.concat(
     step.title && strToValidationErrors(step.title),
     step.description && strToValidationErrors(step.description),
     step.notes && strToValidationErrors(step.notes),
     step.inputPlaceholder && strToValidationErrors(step.inputPlaceholder),
-    step.answers && step.answers.map(a => a.text && strToValidationErrors(a.text)),
+    step.answers && step.answers.map(a => validateAnswer(a, sIdx)),
   ), []).filter(i => i),
 )
 
@@ -132,4 +132,11 @@ export const cleanEmptyValues = (state) => {
     return step
   })
   return state
+}
+
+function validateAnswer(a, sIdx) {
+  if (!a.text) {
+    return `[step ${sIdx}] - answer without text`
+  }
+  return strToValidationErrors(a.text)
 }
