@@ -1,8 +1,5 @@
 import cloudinary from 'cloudinary-core'
 
-import { DOMAIN } from './constants'
-
-
 /* eslint-disable no-extend-native,func-names */
 Array.prototype.last = function () {
   return this[this.length - 1]
@@ -112,5 +109,3 @@ export const isSavoring = path => path.includes('savoring-your-child')
 export const didUserFillForm = (user, formId) => user.form && user.form.includes(formId)
 
 export const nn = n => (n < 10 ? `0${n}` : `${n}`)
-
-export const getFbShareUrl = path => `https://www.facebook.com/sharer/sharer.php?u=${DOMAIN}${path}`

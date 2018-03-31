@@ -8,15 +8,14 @@ import FbLoginbutton from '../FbLoginButton'
 import s from './FbGateKeeper.css'
 
 type Props = {
-  user: Object,
   onLogin: Function,
   onLogout: Function,
 }
 
-const FbGateKeeper = ({ onLogin, onLogout, user }: Props) => (
+const FbGateKeeper = ({ onLogin, onLogout }: Props) => (
   <div className={s.FbGateKeeperContainer}>
     <div className={s.FbGateKeeperButton}>
-      <FbLoginbutton onLogin={onLogin} onLogout={onLogout} user={user} text="Click to Get Started" />
+      <FbLoginbutton onLogin={onLogin} onLogout={onLogout} text="Click to Get Started" />
     </div>
   </div>
 )

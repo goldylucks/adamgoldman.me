@@ -1,4 +1,4 @@
-import { decodeToken, isOwner } from '../../auth'
+import { decodeToken, isUserOwner } from '../../auth'
 
 import controller from './usersController'
 
@@ -8,14 +8,14 @@ router.route('/fbAuth')
   .post(controller.fbAuth)
 
 router.route('/:id')
-  .put(decodeToken, isOwner, controller.updateUser)
-  .get(decodeToken, isOwner, controller.getOne)
+  .put(decodeToken, isUserOwner, controller.updateUser)
+  .get(decodeToken, isUserOwner, controller.getOne)
 
 router.route('/form/:id')
-  .put(decodeToken, isOwner, controller.updateUserForm)
+  .put(decodeToken, isUserOwner, controller.updateUserForm)
 
 router.route('/:id/make-admin')
-  .put(decodeToken, isOwner, controller.makeAdmin)
+  .put(decodeToken, isUserOwner, controller.makeAdmin)
 
 // router.route('/getFbReviews')
 //   .get(controller.getFBPageReviews) // consider isAdmin check

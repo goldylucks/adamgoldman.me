@@ -4,7 +4,7 @@ import React from 'react'
 
 import ExternalA from '../ExternalA'
 import { TWITTER_HANDLE, DOMAIN } from '../../constants'
-import { getFbShareUrl } from '../../utils'
+import { getFbShareUrl } from '../../utils/fbUtils'
 
 type Props = {
   title: '',

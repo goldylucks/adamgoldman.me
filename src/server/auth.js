@@ -31,13 +31,19 @@ export function decodeToken(req, res, next) {
   checkToken(req, res, next)
 }
 
-export function isOwner(req, res, next) {
+export function isUserOwner(req, res, next) {
   if (req.user._id !== req.params.id) {
     res.status(401).send('Only the owner can do this operation!')
     return
   }
-
   next()
+}
+
+export const validateOwner = userId => (item) => {
+  if (!item.userId.equals(userId)) {
+    throw Error('item don\'t exist or you are not the owner')
+  }
+  return item
 }
 
 export function getFreshUser(req, res, next) {

@@ -5,7 +5,7 @@ import React from 'react'
 import Link from '../../components/Link'
 import ExternalA from '../../components/ExternalA'
 import { MESSENGER_LINK_TOOL_CONCERN } from '../../constants'
-import { getFbShareUrl } from '../../utils'
+import { getFbShareUrl } from '../../utils/fbUtils'
 
 type Props = {
   answers: Array<any>,

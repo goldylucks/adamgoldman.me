@@ -9,6 +9,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/server'
 import PrettyError from 'pretty-error'
 import cors from 'cors'
+import morgan from 'morgan'
 
 import api from './server/api'
 import App from './components/App'
@@ -42,6 +43,7 @@ app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }))
 app.use(bodyParser.json({ limit: '50mb' }))
 
 if (__DEV__) { // eslint-disable-line no-undef
+  app.use(morgan('tiny'))
   app.enable('trust proxy')
   if (process.argv.includes('--seed')) {
     require('./server/seedDb') // eslint-disable-line global-require

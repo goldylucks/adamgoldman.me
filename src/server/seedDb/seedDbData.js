@@ -9,7 +9,8 @@ import seedDbLovedOneAmplifierToolData from './seedDbLovedOneAmplifierToolData.j
 import seedDbPerfectDayToolData from './seedDbPerfectDayToolData.json'
 import seedDbRecurringTimeDistortionToolData from './seedDbRecurringTimeDistortionToolData.json'
 import seedDbReverseFeelingSpinToolData from './seedDbReverseFeelingSpinToolData.json'
-import toolHasWithReview from './seedDbToolHasReviewData.json'
+import toolHasReviewTest from './seedDbToolHasReviewTestData.json'
+import toolTestShort from './seedDbToolTestShortData.json'
 
 // eslint-disable-next-line import/prefer-default-export
 export const tools = [
@@ -24,5 +25,6 @@ export const tools = [
   seedDbJudgementToPreferenceToolData,
   seedDbTraumaReliefToolData,
   seedDbResolvingFeelingsToolData,
-  toolHasWithReview,
+  toolHasReviewTest,
+  toolTestShort,
 ]

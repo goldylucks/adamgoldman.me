@@ -14,16 +14,26 @@ class Steps extends React.Component {
     steps: PropTypes.array.isRequired,
     hiddenFields: PropTypes.object.isRequired,
     path: PropTypes.string.isRequired,
+    onUpdateProgress: PropTypes.func.isRequired,
+    currentStep: PropTypes.number.isRequired,
+    answerByStep: PropTypes.object.isRequired,
+    price: PropTypes.number.isRequired,
+    stepsStack: PropTypes.array.isRequired,
   }
 
   state = {
     currentStep: 0,
     answerByStep: {},
     price: 0,
+    stepsStack: [], // eslint-disable-line react/no-unused-state
   }
 
   componentWillMount() {
-    this.populateAnswersState()
+    this.populateStateFromProps()
+  }
+
+  componentWillUpdate(nextProps, nextState) {
+    this.props.onUpdateProgress(nextState)
   }
 
   render() {
@@ -176,8 +186,6 @@ class Steps extends React.Component {
     return <ExternalA href={MESSENGER_LINK_INNER_CIRCLE} className="btn btn-secondary btn-sm">Subscribe to future tools</ExternalA>
   }
 
-  stepsStack = []
-
   onInputSubmit = (evt) => {
     evt.preventDefault()
     const { goToStepByNum } = this.currentStep()
@@ -225,36 +233,64 @@ class Steps extends React.Component {
     return this.props.steps[this.state.currentStep].answers[aIdx]
   }
 
+  populateStateFromProps() {
+    const {
+      currentStep, answerByStep, price, stepsStack,
+    } = this.props
+    this.setState({
+      currentStep,
+      answerByStep,
+      price,
+      stepsStack, // eslint-disable-line react/no-unused-state
+    })
+  }
+
   populateAnswersState() {
     const answerByStep = { ...this.state.answerByStep }
-    for (let i = 0; i < this.props.steps.length; i += 1) {
+    for (let i = this.props.currentStep; i < this.props.steps.length; i += 1) {
       answerByStep[i] = ''
     }
     this.setState({ answerByStep })
   }
 
   back = () => {
-    this.setState({ currentStep: this.stepsStack.pop() })
+    this.setState(({ stepsStack }) => {
+      const currentStep = stepsStack.pop()
+      return { currentStep, stepsStack }
+    })
     scrollTop()
   }
-  next = () => this.goToStep(this.state.currentStep + 1)
+  next = () => {
+    const nextStep = this.state.currentStep + 1
+    if (nextStep === this.props.steps.length - 1) {
+      // update tool on backend, mark tool as completed
+    } else {
+      // update tool on backend
+    }
+    // consider: delegate updating server to utils
+    // utils will decide if to mark tool as completed or not
+    this.goToStep(nextStep)
+  }
 
   goToStep = (step, { resetPreviousAnswers } = {}) => {
     if (resetPreviousAnswers) {
       this.resetPreviousAnswers(step)
     }
-    this.stepsStack.push(this.state.currentStep)
-    this.setState({ currentStep: step })
+    this.setState(state => ({
+      currentStep: step,
+      stepsStack: state.stepsStack.concat(this.state.currentStep),
+    }))
     scrollTop()
   }
 
   resetPreviousAnswers(step) {
-    const answerByStep = { ...this.state.answerByStep }
-    this.stepsStack = this.stepsStack.filter(stepNumber => stepNumber >= step)
-    for (let i = this.state.currentStep; i >= step; i -= 1) {
-      delete answerByStep[i]
-    }
-    this.setState({ answerByStep })
+    this.setState(({ answerByStep, stepsStack }) => {
+      for (let i = this.state.currentStep; i >= step; i -= 1) {
+        delete answerByStep[i]
+      }
+      stepsStack = stepsStack.filter(stepNumber => stepNumber >= step)
+      return { answerByStep, stepsStack }
+    })
   }
 
   stepInputChange = (evt) => {
@@ -264,6 +300,7 @@ class Steps extends React.Component {
   }
 
   currentStep() {
+    // console.log('this.props.steps', this.props.steps)
     return this.props.steps[this.state.currentStep]
   }
 
