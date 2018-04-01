@@ -1,3 +1,4 @@
+import seedDbSpecialDaysToolData from './seedDbSpecialDaysToolData.json'
 import seedDbSessionIntroToolData from './seedDbSessionIntroToolData.json'
 import seedDbReengagingTheFutureToolData from './seedDbReengagingTheFutureToolData.json'
 import seedDbReunionToolData from './seedDbReunionToolData.json'
@@ -14,6 +15,7 @@ import toolTestShort from './seedDbToolTestShortData.json'
 
 // eslint-disable-next-line import/prefer-default-export
 export const tools = [
+  seedDbSpecialDaysToolData,
   seedDbSessionIntroToolData,
   seedDbReengagingTheFutureToolData,
   seedDbReunionToolData,
