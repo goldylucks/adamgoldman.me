@@ -25,6 +25,7 @@
     "generate-posts": "babel-node tools/generatePosts",
     "generate-pages": "babel-node tools/generatePages",
     "db-backup": "babel-node tools/db backupProd",
+    "release": "tools/release.sh",
     "db-import-prod-to-local": "babel-node tools/db importProdToLocal",
     "db-export-local-to-prod": "babel-node tools/db exportLocalToProd",
     "seed": "yarn start --seed",
