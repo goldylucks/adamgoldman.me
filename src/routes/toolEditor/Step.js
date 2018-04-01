@@ -133,7 +133,7 @@ class Step extends Component {
     return (
       <div>
         <div className="form-row align-items-center">
-          <div className="col-auto">
+          <div className="col col-6">
             <label className="sr-only" htmlFor={`flash-step-${sIdx}`}>Flash Step</label>
             <div className="input-group mb-2">
               <div className="input-group-prepend">
@@ -149,7 +149,7 @@ class Step extends Component {
               />
             </div>
           </div>
-          <div className="col-auto">
+          <div className="col col-6">
             <label className="sr-only" htmlFor={`flash-speed-${sIdx}`}>Flash speed</label>
             <div className="input-group mb-2">
               <div className="input-group-prepend">
