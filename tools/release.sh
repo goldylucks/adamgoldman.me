@@ -13,11 +13,9 @@ fi
 
 echo "pushing master"
 git push
-echo "checking out release branch"
 git checkout release
 echo "resetting release branch to master"
 git reset --hard master
 echo "pushing release branch"
 git push -f --no-verify
-echo "back to master"
 git checkout master
