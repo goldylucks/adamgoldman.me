@@ -57,39 +57,13 @@ class Step extends Component {
               <option value="checkbox">Checkbox</option>
               <option value="short">Short</option>
               <option value="long">Long</option>
+              <option value="flash">flash</option>
             </select>
           </div>
         </div>
-        {step.type === 'short' && (
-        <div className={cx('form-group', s.answer)}>
-          <input className="form-control" value={step.inputPlaceholder} placeholder="Short answer placeholder" onChange={this.changeStepKey('inputPlaceholder')} />
-          <div className={cx('col-10', s.answerOptionCol, { [s.isVisible]: step.hasGoToStep })}>
-            <AnswerOption
-              icon={faPaperPlane}
-              toggleId="hasGoToStep"
-              toggleValue={step.hasGoToStep}
-              fieldId="goToStepByNum"
-              fieldValue={step.goToStepByNum}
-              onToggle={this.toggleStepKey('hasGoToStep')}
-              onFieldChange={this.changeStepKey('goToStepByNum')}
-            />
-          </div>
-        </div>)}
-        {step.type === 'long' && (
-        <div className={cx('form-group', s.answer)}>
-          <textarea className="form-control" value={step.inputPlaceholder} placeholder="Long answer placeholder" onChange={this.changeStepKey('inputPlaceholder')} />
-          <div className={cx('col-10', s.answerOptionCol, { [s.isVisible]: step.hasGoToStep })}>
-            <AnswerOption
-              icon={faPaperPlane}
-              toggleId="hasGoToStep"
-              toggleValue={step.hasGoToStep}
-              fieldId="goToStepByNum"
-              fieldValue={step.goToStepByNum}
-              onToggle={this.toggleStepKey('hasGoToStep')}
-              onFieldChange={this.changeStepKey('goToStepByNum')}
-            />
-          </div>
-        </div>)}
+        {this.renderShortAnswer()}
+        {this.renderLongAnswer()}
+        {this.renderFlashAnswer()}
         <Answers
           onUpdateStepAnswers={this.updateStepAnswers}
           sIdx={sIdx}
@@ -101,6 +75,97 @@ class Step extends Component {
     borderTopWidth: 1, marginBottom: 70, marginTop: 70, clear: 'both',
     }}
         />
+      </div>
+    )
+  }
+
+  renderShortAnswer() {
+    const { step } = this.props
+    if (step.type !== 'short') {
+      return null
+    }
+    return (
+      <div className={cx('form-group', s.answer)}>
+        <input className="form-control" value={step.inputPlaceholder} placeholder="Short answer placeholder" onChange={this.changeStepKey('inputPlaceholder')} />
+        <div className={cx('col-10', s.answerOptionCol, { [s.isVisible]: step.hasGoToStep })}>
+          <AnswerOption
+            icon={faPaperPlane}
+            toggleId="hasGoToStep"
+            toggleValue={step.hasGoToStep}
+            fieldId="goToStepByNum"
+            fieldValue={step.goToStepByNum}
+            onToggle={this.toggleStepKey('hasGoToStep')}
+            onFieldChange={this.changeStepKey('goToStepByNum')}
+          />
+        </div>
+      </div>
+    )
+  }
+
+  renderLongAnswer() {
+    const { step } = this.props
+    if (step.type !== 'long') {
+      return null
+    }
+    return (
+      <div className={cx('form-group', s.answer)}>
+        <textarea className="form-control" value={step.inputPlaceholder} placeholder="Long answer placeholder" onChange={this.changeStepKey('inputPlaceholder')} />
+        <div className={cx('col-10', s.answerOptionCol, { [s.isVisible]: step.hasGoToStep })}>
+          <AnswerOption
+            icon={faPaperPlane}
+            toggleId="hasGoToStep"
+            toggleValue={step.hasGoToStep}
+            fieldId="goToStepByNum"
+            fieldValue={step.goToStepByNum}
+            onToggle={this.toggleStepKey('hasGoToStep')}
+            onFieldChange={this.changeStepKey('goToStepByNum')}
+          />
+        </div>
+      </div>
+    )
+  }
+
+  renderFlashAnswer() {
+    const { step, sIdx } = this.props
+    if (step.type !== 'flash') {
+      return null
+    }
+    return (
+      <div>
+        <div className="form-row align-items-center">
+          <div className="col-auto">
+            <label className="sr-only" htmlFor={`flash-step-${sIdx}`}>Flash Step</label>
+            <div className="input-group mb-2">
+              <div className="input-group-prepend">
+                <div className="input-group-text">Flash Step</div>
+              </div>
+              <input
+                type="text"
+                className="form-control"
+                id={`flash-step-${sIdx}`}
+                placeholder="Flash Step"
+                value={step.flashStepNum}
+                onChange={this.changeStepKey('flashStepNum')}
+              />
+            </div>
+          </div>
+          <div className="col-auto">
+            <label className="sr-only" htmlFor={`flash-speed-${sIdx}`}>Flash speed</label>
+            <div className="input-group mb-2">
+              <div className="input-group-prepend">
+                <div className="input-group-text">Flash speed</div>
+              </div>
+              <input
+                type="text"
+                className="form-control"
+                id={`flash-speed-${sIdx}`}
+                placeholder="Flash speed"
+                value={step.flashSpeed}
+                onChange={this.changeStepKey('flashSpeed')}
+              />
+            </div>
+          </div>
+        </div>
       </div>
     )
   }

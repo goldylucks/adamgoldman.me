@@ -26,6 +26,8 @@ class Steps extends React.Component {
     answerByStep: {},
     price: 0,
     stepsStack: [], // eslint-disable-line react/no-unused-state
+    flashedIdx: 0,
+    isFlashing: false,
   }
 
   componentWillMount() {
@@ -34,6 +36,10 @@ class Steps extends React.Component {
 
   componentWillUpdate(nextProps, nextState) {
     this.props.onUpdateProgress(nextState)
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this.flashTimeout)
   }
 
   render() {
@@ -46,6 +52,7 @@ class Steps extends React.Component {
         {this.renderNotes()}
         {this.renderInput()}
         {this.renderTextarea()}
+        {this.renderFlash()}
         {this.renderPaymentForm()}
         {this.renderAnswers()}
         {this.renderStars()}
@@ -118,6 +125,18 @@ class Steps extends React.Component {
         </div>
         <button type="submit" className="btn btn-primary">Continue</button>
       </form>
+    )
+  }
+
+  renderFlash() {
+    if (this.currentStep().type !== 'flash') {
+      return null
+    }
+    return (
+      <div>
+        <button onClick={this.initFlash}>Flash me!</button>
+        <p>{this.state.isFlashing && this.flashPhrase()[[this.state.flashedIdx]]}</p>
+      </div>
     )
   }
 
@@ -230,7 +249,28 @@ class Steps extends React.Component {
   }
 
   getAnswerByAidx(aIdx) {
-    return this.props.steps[this.state.currentStep].answers[aIdx]
+    return this.currentStep().answers[aIdx]
+  }
+
+  initFlash = () => {
+    this.setState({ isFlashing: true }, this.setFlashTimeout)
+  }
+
+  setFlashTimeout = () => {
+    this.flashTimeout = setTimeout(this.incFlashIdx, this.currentStep().flashSpeed)
+  }
+
+  incFlashIdx = () => {
+    const { flashedIdx } = this.state
+    if (flashedIdx === this.flashPhrase().length - 1) {
+      this.setState({ isFlashing: false, flashedIdx: 0 })
+      return
+    }
+    this.setState({ flashedIdx: flashedIdx + 1 }, this.setFlashTimeout)
+  }
+
+  flashPhrase() {
+    return this.state.answerByStep[this.currentStep().flashStepNum].split(' ')
   }
 
   populateStateFromProps() {
@@ -256,19 +296,12 @@ class Steps extends React.Component {
   back = () => {
     this.setState(({ stepsStack }) => {
       const currentStep = stepsStack.pop()
-      return { currentStep, stepsStack }
+      return { currentStep, stepsStack, flashedIdx: 0 }
     })
     scrollTop()
   }
   next = () => {
     const nextStep = this.state.currentStep + 1
-    if (nextStep === this.props.steps.length - 1) {
-      // update tool on backend, mark tool as completed
-    } else {
-      // update tool on backend
-    }
-    // consider: delegate updating server to utils
-    // utils will decide if to mark tool as completed or not
     this.goToStep(nextStep)
   }
 
@@ -279,6 +312,7 @@ class Steps extends React.Component {
     this.setState(state => ({
       currentStep: step,
       stepsStack: state.stepsStack.concat(this.state.currentStep),
+      flashedIdx: 0,
     }))
     scrollTop()
   }
@@ -300,7 +334,6 @@ class Steps extends React.Component {
   }
 
   currentStep() {
-    // console.log('this.props.steps', this.props.steps)
     return this.props.steps[this.state.currentStep]
   }
 

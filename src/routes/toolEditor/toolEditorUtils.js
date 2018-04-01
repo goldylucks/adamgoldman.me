@@ -19,6 +19,8 @@ export const freshStep = opts => ({
   type: 'radio',
   inputPlaceholder: '',
   answers: [freshAnswer()],
+  flashSpeed: '',
+  flashStepNum: '',
   ...opts,
 })
 
@@ -118,7 +120,7 @@ export const strToValidationErrors = str => str.match(/\${[^(s|echo|he|him|his|h
 export const cleanEmptyValues = (state) => {
   // clear empty values
   state.steps = state.steps.map((step) => {
-    if (!step.type.match(/radio|checkbox/)) {
+    if (!step.type.match(/radio|checkbox|flash/)) {
       step.answers = []
       return step
     }

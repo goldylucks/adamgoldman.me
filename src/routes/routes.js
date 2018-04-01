@@ -64,11 +64,11 @@ const routes = {
       load: () => import(/* webpackChunkName: 'tutorials' */ './tutorials'),
     },
     {
-      path: ['session-intro', 'reengaging-the-future', 'reunion', 'loved-one-amplifier', 'recurring-time-distortion', 'perfect-day', 'reverse-feeling-spin', 'judgement-to-preference', 'feel-good-generator', 'trauma-relief', 'resolving-feelings', 'test', 'has-review'].map(t => `/tools/${t}`),
+      path: ['internal-dialog-scrambler', 'session-intro', 'reengaging-the-future', 'reunion', 'loved-one-amplifier', 'recurring-time-distortion', 'perfect-day', 'reverse-feeling-spin', 'judgement-to-preference', 'feel-good-generator', 'trauma-relief', 'resolving-feelings', 'test', 'has-review'].map(t => `/tools/${t}`),
       load: () => import(/* webpackChunkName: 'tool' */ './tool'),
     },
     {
-      path: ['session-intro', 'reengaging-the-future', 'reunion', 'loved-one-amplifier', 'recurring-time-distortion', 'perfect-day', 'reverse-feeling-spin', 'judgement-to-preference', 'feel-good-generator', 'trauma-relief', 'resolving-feelings', 'test', 'has-review'].map(t => `/tools/${t}/:historyId`),
+      path: ['internal-dialog-scrambler', 'session-intro', 'reengaging-the-future', 'reunion', 'loved-one-amplifier', 'recurring-time-distortion', 'perfect-day', 'reverse-feeling-spin', 'judgement-to-preference', 'feel-good-generator', 'trauma-relief', 'resolving-feelings', 'test', 'has-review'].map(t => `/tools/${t}/:historyId`),
       load: () => import(/* webpackChunkName: 'toolByHistoryId' */ './toolByHistoryId'),
     },
     {

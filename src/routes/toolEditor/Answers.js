@@ -101,7 +101,7 @@ class Answers extends React.Component {
     if (!type) {
       return null
     }
-    if (!type.match(/radio|checkbox/)) {
+    if (!type.match(/radio|checkbox|flash/)) {
       return null
     }
 
