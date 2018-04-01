@@ -1,5 +1,4 @@
 import React from 'react'
-import axios from 'axios'
 
 import Layout from '../../components/Layout'
 
@@ -10,41 +9,8 @@ const toolsV1 = [
   'internal-dialog-scrambeler',
 ]
 
-const toolsV3 = [
-  'grief-to-appreciation',
-  'grief-to-appreciation-he',
-]
-
 async function action({ params }) {
   const path = getPath(params.tool)
-  // to test new v3 tools
-  if (params.tool.match(/EXP/)) {
-    const { data } = await axios.get(`/api/tools/${params.tool.replace('EXP', '')}`)
-    return {
-      title: data.title,
-      description: data.description,
-      path,
-      component: (
-        <Layout path={path}>
-          <BrainToolV3 tool={data} path={path} />
-        </Layout>
-      ),
-    }
-  }
-
-  if (toolsV3.includes(params.tool)) {
-    const { data } = await axios.get(`/api/tools/${params.tool}`)
-    return {
-      title: data.title,
-      description: data.description,
-      path,
-      component: (
-        <Layout path={path}>
-          <BrainToolV3 tool={data} path={path} />
-        </Layout>
-      ),
-    }
-  }
 
   const tool = await import(`../../tutorials/${params.tool}.js`)
     .catch((error) => {

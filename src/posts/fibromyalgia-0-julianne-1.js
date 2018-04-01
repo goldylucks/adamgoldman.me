@@ -495,7 +495,7 @@ I elicited an "in the zone" state, added all the good feelings we've been buildi
 ### Intervention #15 - Turning parents' loss into health resource + future pacing
 Julliane is really something else, she actually started doing this with her mother in her dreams.
 
-I had her use the [grief to appreciation](/tools/grief-to-appreciation/) [tool](/tools/) to further feel her mother's presence, future pace it, and same with her father.
+I had her use the grief [tools](/tools/) to further feel her mother's presence, future pace it, and same with her father.
 
 ### Intervention #16 - Enjoying social situations
 Since she was demonstrating such an ability to learn quickly, I wanted her to experience a deep trance phenomena, [time distortion](/tools/recurring-time-distortion/), to open up her brain and senses even more.
@@ -1379,7 +1379,7 @@ and not enough of them have responded
 </div></div><div class="chat-message-container clearfix adam"><div class="chat-message">that will always be available for u
 </div><div class="chat-message">
 Grief to Appreciation <br />
-<a href="/tools/grief-to-appreciation/">www.adamgoldman.me/tools/grief-to-appreciation/</a>
+<a href="/tools">www.adamgoldman.me/tools</a>
 </div></div><div class="chat-message-container clearfix other"><div class="chat-message">That would be amazing
 </div></div><div class="chat-message-container clearfix adam"><div class="chat-message">I'm right here with u
 </div><div class="chat-message">every step of the way

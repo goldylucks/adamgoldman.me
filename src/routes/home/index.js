@@ -12,9 +12,9 @@ const tutorials = [
     url: 'trauma-relief',
   },
   {
-    title: 'Grief To Appreciation',
-    description: 'Experience your lost loves ones in a more resourceful way',
-    url: 'grief-to-appreciation',
+    title: 'Resolving Feelings',
+    description: 'Resolve shame, guilt, anger, and more',
+    url: 'resolving-feelings',
   },
   {
     title: 'Loved One Amplifier',
