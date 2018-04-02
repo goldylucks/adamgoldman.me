@@ -5,7 +5,7 @@ export default {
   tags: [],
   body: `
 - [**Getting Things Done**](http://amzn.to/2uLA6Fe) - David Allen
-  - How to get [mind like water](/blog/mind-like-water-tartar-sauce/) states
+  - How to get [mind like water](/blog/mind-like-water-tartar-sauce) states
 - [**Influence: The Psychology of Persuasion**](http://amzn.to/2uM3kDY) - Robert Cialdini
   - This is a master piece! I've read it twice and will make a proper book review when I'll get around to it. It's full of crazy experiments that blew my mind.
 - [**Introducing NLP**](http://amzn.to/2uAImcF) - Joseph O'Connor, John Seymour
@@ -17,7 +17,7 @@ export default {
 - [**Predictably irrational**](http://amzn.to/2uLuryY) - Dan Ariely
 - [**The 7 Habits of Highly Effective People**](http://amzn.to/2v6l9jy) - Steven Covey
 - [**The Complete Guide To Fasting**](http://amzn.to/2vT48ad) - Dr. Jason Fung
-- [**Panic Away**](/blog/panic-away-insiders-view/) - Barry McDonagh
+- [**Panic Away**](/blog/panic-away-insiders-view) - Barry McDonagh
 - [**Adventures of Anybody**](http://amzn.to/2uLypYt) - Richard Bandler
   - An amazing experience based intro to NLP, how I got started
 - [**Mastering Your Hidden Self: A Guide to the Huna Way**](http://amzn.to/2hbxAVK) - Serge Kahili King 
@@ -64,15 +64,15 @@ export default {
 - [**The Best That Money Can't Buy**](http://amzn.to/2hbWDI0) - Jacque Fresco
 - [**The Definitive Book of Body Language**](http://amzn.to/2uItkSl) - Barbara Pease, Allan Pease
 - [**The Irresistible Offer: How to Sell Your Product or Service in 3 Seconds or Less**](http://amzn.to/2v6H36t) - Mark Joyner
-- [**Presell Mastery**](http://www.presellmastery.com/book/) - Paul Hancox
+- [**Presell Mastery**](http://www.presellmastery.com/book) - Paul Hancox
 - [**The Tao of Pooh**](http://amzn.to/2v6MkuO) - Benjamin Hoff
   - Adorable book that sneaks happiness under your radar. Be happy for no reason :)
 - [**Habit stacking**](http://amzn.to/2eVDqJY) - S.J. Scott
 - [**Come Again**](http://amzn.to/2x4JJhI) - my man Nate ;)
 - [**Secrets of Mental Math**](http://amzn.to/2wvXvel) - Arthur Benjamin
   - Growing up I was often beating people with calculators, and got called "the faster than calculator" kid (which landed me extremely popular and many girlfriends as you can not imagine). This book will show you how to do just that.
-- [**A Mind for Numbers - How to Excel at Math and Science**](/a-mind-for-numbers/) - Barbara Oakley
-  - [Read my summary here](/a-mind-for-numbers/)
+- [**A Mind for Numbers - How to Excel at Math and Science**](/a-mind-for-numbers) - Barbara Oakley
+  - [Read my summary here](/a-mind-for-numbers)
 - [**Thinking In Numbers: On Life, Love, Meaning, and Math**](http://amzn.to/2voH1EN) - Daniel Tammet
   - Am halfway through this, having watched "[the boy with the incredible mind](https://www.youtube.com/watch?v=PPySn3slfXI)" (which is fucking awesome), but the book is, umm, not what I expected. I was looking for mental strategies to think in math, but it's more of a novel autobiography about Daniel's life, a rare savant.
 - [**Metaphors We Live By**](http://amzn.to/2vyYBrd) - George Lakoff and Mark Johnson

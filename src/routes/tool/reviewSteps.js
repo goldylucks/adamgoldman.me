@@ -20,7 +20,7 @@ export default [
     description: `Great!
 I’m glad you’ve found value in our time together.
 
-Like I said in the beginning, I work with a [value first biz model](/i-dont-charge-i-accept/NEW), so you get to decide how much you want to pay back for the benefits you got from this process.`,
+Like I said in the beginning, I work with a [value first biz model](/i-dont-charge-i-acceptNEW), so you get to decide how much you want to pay back for the benefits you got from this process.`,
     type: 'radio',
     answers: [
       { text: 'I got some good insights - $9', price: 9, goToStepById: 'payment' },

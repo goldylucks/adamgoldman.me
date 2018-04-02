@@ -7,9 +7,9 @@ export default {
 
 A full session, raw, unedited, with a (now former) sufferer from panic attacks and nasty breakup.
 
-If you still have anxiety, like many before you, after you read these sessions you might feel tremendous relief now, even before you [contact me](/lets-talk/)
+If you still have anxiety, like many before you, after you read these sessions you might feel tremendous relief now, even before you [contact me](/contactNEW)
 
-[I'm waiting for you on the other side](/lets-talk/).
+[I'm waiting for you on the other side](/contactNEW).
 `,
   html: `
 <div>

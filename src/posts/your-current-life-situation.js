@@ -29,7 +29,7 @@ Life was still shit, but it was a bit more organised shit, you know?
 
 Remember we are still in GATHERING INFORMATION phase.
 
-If you catch your [internal dialog](/tools/internal-dialog-scrambeler/) going "I don't understand how this will make me feel better", that's your brain tricking you the stay in what's familiar, instead of [experiencing](/blind-cheryl-learns-about-colors/) something new and wonderful first, and THEN understand.
+If you catch your [internal dialog](/tools/internal-dialog-scrambler) going "I don't understand how this will make me feel better", that's your brain tricking you the stay in what's familiar, instead of [experiencing](/blind-cheryl-learns-about-colors/) something new and wonderful first, and THEN understand.
 
 While it does provide a new perspective for many people I've shown this to, the main point of this is to gather and sort information so we will know where to intervene next to induce a stronger change.
 

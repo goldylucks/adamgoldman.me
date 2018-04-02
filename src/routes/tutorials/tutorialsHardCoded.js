@@ -3,7 +3,7 @@
   {
     "title": "Coming To Wholeness",
     "description": "A PRACTICAL step by step tool for non \"enlightment\"",
-    "credits": "Source: I've adapted this [tool](/tools/) from Connirae's [Wholeness Process](http://andreasnlptrainings.com/wholeness/).",
+    "credits": "Source: I've adapted this [tool](/tools) from Connirae's [Wholeness Process](http://andreasnlptrainings.com/wholeness/).",
     "initialState": {
       "Is": [],
       "inputExperience": "",
@@ -352,7 +352,7 @@
             "key": null,
             "ref": null,
             "props": {
-              "to": "/i-dont-charge-i-accept/",
+              "to": "/i-dont-charge-i-accept",
               "children": "This is great and I want to give back",
               "onClick": null
             },
@@ -382,6 +382,6 @@
   {
     "title": "Internal Dialog Scrambeler",
     "description": "Stop recurring intrusive thoughts and limiting beliefs. Perfect for \"what if's, \"I'm not good enough\", and all that lovely things we said to ourselves",
-    "url": "internal-dialog-scrambeler"
+    "url": "internal-dialog-scrambler"
   },
 ]

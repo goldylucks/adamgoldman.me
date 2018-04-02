@@ -70,7 +70,7 @@ And the more they apply the [whole methodology](http://amzn.to/2uMAYZa), the str
 
 It's real thing of beauty when it works ;)
 
-The fastest way to transition yourself to a mind like water state is with [personal guidance](/lets-talk/), and you, like me, might want to [take a swing at it on your own](http://amzn.to/2tKX01m) first.
+The fastest way to transition yourself to a mind like water state is with [personal guidance](/contactNEW), and you, like me, might want to [take a swing at it on your own](http://amzn.to/2tKX01m) first.
 
 Most importantly, don't **forget the tartar sauce**!
 `,

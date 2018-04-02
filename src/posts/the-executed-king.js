@@ -3,13 +3,13 @@ export default {
   tags: ['Experience Based Learning', 'Learning To Learn'],
   nick: 'Abel',
   body: `
-Some time ago **an interesting guy asked me** why [can't](/blog/what-we-are-not-doing/) I just explain to him now **what** exactly **is it that we "do"**, that induces **such a [rapid change](/transcripts/)** in people's behavior and feelings.
+Some time ago **an interesting guy asked me** why [can't](/blog/what-we-are-not-doing/) I just explain to him now **what** exactly **is it that we "do"**, that induces **such a [rapid change](/transcripts)** in people's behavior and feelings.
 
 Having a near death experience would help to understand, **as the king will testify**, being hidden in the basement by the Abel Black Smith, as enemy troops swept through the town.
 
 As they searched through the house, he knew his time has come, and "**Well, this is it**, said the voice inside.
 
-It could have been [better](/tools/feel-good-generator/), but it matters not now.
+It could have been [better](/tools/feel-good-generator), but it matters not now.
 
 Your moments in this dimension are numbered and quickly fading.
 

@@ -87,7 +87,7 @@ There are some things I want you to do:
 
 1. Read the installation instructions carefully again
 2. Copy paste the error your getting to google and follow the trail of crumbs
-3. Read [how to ask good questions](/blog/how-to-ask-a-good-programming-question/).
+3. Read [how to ask good questions](/blog/how-to-ask-a-good-programming-question).
 4. Ask around with your friends (keep in mind note 3 …)
 5. Ask me (keep in mind note 3 …)
 
@@ -105,7 +105,7 @@ Now that we got the right tools and mindset in place, let the games begin!
 1. From this point on, whenever you are around a computer, you NEVER write anything on paper for future reference. You have a computer. Use it! Use a google doc or a simple text document. Heavy programs like word are NOT recommended.
 2. Don’t hesitate to ask me ANYTHING. The only stupid question is one that you have on your mind and don’t ask ;)
 3. Feel free (and even encouraged) to challenge what you are learning and come up with your own solutions. I’m more experienced than you but it doesn’t mean my solution is the best one.
-4. When asking me something, **please** quickly go over "[how to ask...](/blog/how-to-ask-a-good-programming-question/)" again
+4. When asking me something, **please** quickly go over "[how to ask...](/blog/how-to-ask-a-good-programming-question)" again
 5. My goal is to make you as self sufficient as possible as fast as possible. Therefor I will often answer your questions with a link or a search query that will lead you to the solution. I’ve found this to be an incredibly powerful way to improve your solving problems, FAST.
 6. when you run into a problem, try solving it on your own first, but don't get to the point you are frustrated. contact me before your emotional batteries will determine our success for your growth as a programmer, so pay close attention to them.
 7. Remember you learn best when you have fun, so that’s always the #1 goal!
@@ -132,7 +132,7 @@ Keep me posted on your progress!
 
 #### Final words?
 
-Please, please, (pretty please?) if any question or comment about our work together pops up, [shoot](/lets-talk/) it [my](/about/) way. If anything is bugging you, I NEED TO KNOW so I could best help you. Okie dokie?
+Please, please, (pretty please?) if any question or comment about our work together pops up, [shoot](/contactNEW) it [my](/about) way. If anything is bugging you, I NEED TO KNOW so I could best help you. Okie dokie?
 
 Real glad to have you on board, and I’m curious to see how fast u’ll be amazed from your progress and the cool projects you will help bring to life.
 

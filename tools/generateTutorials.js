@@ -16,7 +16,7 @@ const dirToReadPath = path.resolve(__dirname, '..', 'src', 'tutorials')
 const fileToWrite = [
   'trauma-relief-he',
   'coming-to-wholeness',
-  'internal-dialog-scrambeler',
+  'internal-dialog-scrambler',
 ].map(fileNameToObject)
 
 // write file tutorials.js

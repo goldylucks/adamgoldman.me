@@ -55,7 +55,7 @@ Add the daily piece to the morning journal.
 
 Sneak in some dance moves.
 
-Do some [teaching](/reviews/), [personal projects](/tools/), [train](/trainings/), while sipping some [tea](/blog/tea/), with short breaks of juggling, guitar fingering,
+Do some [teaching](/reviews/), [personal projects](/tools), [train](/trainings/), while sipping some [tea](/blog/tea/), with short breaks of juggling, guitar fingering,
 
 Send someone a love message.
 
@@ -113,7 +113,7 @@ One last self suggestion for the night and...
 
 Aaaaaaand that's a wrap everybody!
 
-Hope you enjoyed my (perhaps miserable) experience with script writing, and if you didn't (or did you?), [let's talk about it](/lets-talk/)?
+Hope you enjoyed my (perhaps miserable) experience with script writing, and if you didn't (or did you?), [let's talk about it](/contactNEW)?
 
 ## Habit List
 ###### As I Wake up

@@ -9,7 +9,7 @@ const title = 'Transcripts'
 const description = 'Transcripts and notes of sessions with "clients"'
 
 async function action({ path }) {
-  const { data } = await axios.get('/api/posts/transcripts/')
+  const { data } = await axios.get('/api/posts/transcripts')
   return {
     chunks: ['transcripts'],
     title,

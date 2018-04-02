@@ -13,7 +13,7 @@ In anyway these are old behaviors and feelings you are about to [learn](/tags/ex
 
 In all your XX years on our odd little planet, you had many experiences, some more meaningful, some more [positive](/tools/feel-good-generator) than others.
 
-I want you now to open your favorite notepad and list all the big events you had in your life, ones that make you [feel good](/tools/feel-good-generator) and the ones which made you [feel bad in the past](/tools/trauma-relief/), and list them in chronological order, like this example:
+I want you now to open your favorite notepad and list all the big events you had in your life, ones that make you [feel good](/tools/feel-good-generator) and the ones which made you [feel bad in the past](/tools/trauma-relief), and list them in chronological order, like this example:
 
 - age 5 - Fabulous memory of my mom playing with me and singing (happiness, love)
 - age 6 - big fight with a family member (anger, frustration)
@@ -59,6 +59,6 @@ Now that you got the past sorted, it's time to get a hold of your [current life 
 
 You can do this,  
 and more,  
-[I've got your back](/lets-talk/)
+[I've got your back](/contactNEW)
 `,
 }

@@ -10,7 +10,7 @@ No information on [this site](/) is medical nor professional advice, and is offe
 
 I am not licensed in any way, nor do I consider myself a "therapist" of any kind.
 
-[I](/about/) only share [things](/tools/) that have helped me and [others](/transcripts/) I've interacted with over the years.
+[I](/about) only share [things](/tools) that have helped me and [others](/transcripts) I've interacted with over the years.
 
 I only offer things to try to have more freedom and choices in life. YOUR LIFE.
 

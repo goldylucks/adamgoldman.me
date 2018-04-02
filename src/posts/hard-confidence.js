@@ -13,7 +13,7 @@ As much as I don't like those terms, they seem to find me over and over again th
 
 The following is a recursive process I've been using for some good years now and it's working devastatingly well for me and others.
 
-Even tho I can help you [shorten this tremendously](/lets-talk/), **I** really have the **urge** to urge **you** to **do it now** first, as you gain more control over your "self" and life.
+Even tho I can help you [shorten this tremendously](/contactNEW), **I** really have the **urge** to urge **you** to **do it now** first, as you gain more control over your "self" and life.
 
 ---
 
@@ -104,11 +104,11 @@ Now break each one of those to the [tiniest](TITLE_No_such_thing_as_too_small,_t
 
  - Smile, ask, comment, and add a question or statement of your own, with 10 people, for 4 days
 
-9. As you feel good with each step you take, your desire will grow now for more learnings that enrich your life, and if you are not careful you might end up at one of my [advanced courses](/book-me/) ;)
+9. As you feel good with each step you take, your desire will grow now for more learnings that enrich your life, and if you are not careful you might end up at one of my [advanced courses](/book-me) ;)
 
 Talk soon,
 `,
   ps: `
-**PS.** Works from my own experience AND [people I've helped](/transcripts/). Even tho [I have faster ways](/tools/) to induce learnings and desire results, this is still very powerful. **Do it!**
+**PS.** Works from my own experience AND [people I've helped](/transcripts). Even tho [I have faster ways](/tools) to induce learnings and desire results, this is still very powerful. **Do it!**
 `,
 }

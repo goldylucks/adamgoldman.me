@@ -367,7 +367,7 @@ Pretty please?`}
   }
 
   savePost = () => {
-    axios.put(`/api/posts/${this.props.url}/transcript/`, this.state.transcript)
+    axios.put(`/api/posts/${this.props.url}/transcript`, this.state.transcript)
       .then((res) => {
         global.console.log('saved!', res.data)
         global.alert('saved!')

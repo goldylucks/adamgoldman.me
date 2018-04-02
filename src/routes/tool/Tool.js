@@ -75,7 +75,7 @@ class Tool extends React.Component {
         {historyItems.map(item => (
           <ul className="list-group">
             <li className="list-group-item">
-              <Link to={`${path}${item._id}/`} className="d-flex justify-content-between align-items-center">
+              <Link to={`${path}/${item._id}`} className="d-flex justify-content-between align-items-center">
                 {item.createdAt}
                 <span className="badge badge-primary badge-pill">{item.status}</span>
               </Link>
@@ -94,10 +94,10 @@ class Tool extends React.Component {
       ...tool,
     }
     delete data._id
-    axios.post('/api/toolsHistory/', data)
+    axios.post('/api/toolsHistory', data)
       .then((res) => {
         global.console.log(res)
-        history.push(`${path}${res.data._id}/`)
+        history.push(`${path}/${res.data._id}`)
       })
       .catch((err) => {
         global.alert(err.message)

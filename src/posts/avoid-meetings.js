@@ -65,7 +65,7 @@ Debby is in charge of that yes?*
  
 As annoying as Matt can be, he IS the boss (for now...), so how about we **set up an easy "system" for him to access EVERYTHING** he needs or wants to know, 24/7, and leave us the hell alone so we could all move on with our sad miserable lives?
 
-[Let me know](/lets-talk/) when your ready streamline the communication in your company and get Matt and his friends off your back.
+[Let me know](/contactNEW) when your ready streamline the communication in your company and get Matt and his friends off your back.
 
 Yours in efficiency,
 `,

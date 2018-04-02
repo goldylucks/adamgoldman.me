@@ -26,7 +26,7 @@ const tutorials = [
 const path = '/'
 
 async function action() {
-  const { data } = await axios.get('/api/posts/transcripts/')
+  const { data } = await axios.get('/api/posts/transcripts')
   return {
     chunks: ['home'],
     title: 'Adam Goldman\'s Virtual Home',

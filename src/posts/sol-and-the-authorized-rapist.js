@@ -11,11 +11,11 @@ A very religious student, came to see me at her 20’s. First time she was raped
  
 She didn’t have a specific “thing” she wanted to do or work on. She just said her life is a mess, and her mind is cluttered all the time.
  
-First thing we’ve done was to [clean the trauma](/tools/trauma-relief/) and re-encode all those experiences in a less tense way.
+First thing we’ve done was to [clean the trauma](/tools/trauma-relief) and re-encode all those experiences in a less tense way.
  
 Then we connected the experience to feelings of hope, possibility, and self confidence (*“now that u’ve got over that, there’s no telling what you could do!“*).
  
-Lastly, we tied it up with [beliefs](/tools/internal-dialog-scrambler/) and behaviors of self worth, so people would stop walking all over her, which apparently happened constantly in her life.
+Lastly, we tied it up with [beliefs](/tools/internal-dialog-scrambler) and behaviors of self worth, so people would stop walking all over her, which apparently happened constantly in her life.
  
 In total we’ve done 5-6 sessions, which resulted in …
  
@@ -29,6 +29,6 @@ Sol: *“It’s crazy … I know I’ve been through some rough times, but i had
 *I’m finally sleeping through the WHOLE night, my grades are up, people keep telling me how much pleasant it is to be around me, and I feel like I can THINK again. Thank you!”*
 `,
   ps: `
-If you know anyone who's still controlled by her past, [contact me](/lets-talk/) and we'll get her some relief as soon as possible.
+If you know anyone who's still controlled by her past, [contact me](/contactNEW) and we'll get her some relief as soon as possible.
 `,
 }

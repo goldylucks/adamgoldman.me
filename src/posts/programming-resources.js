@@ -5,9 +5,9 @@ export default {
   body: `
 Welcome!
 
-The following are tools and resources that helped [me](/) tremendously which I (very) often share with my [apprentices](/welcome-apprentice-wizard/), [students](https://www.facebook.com/pg/adamgoldman.me/reviews/) and [clients](/book-me/).
+The following are tools and resources that helped [me](/) tremendously which I (very) often share with my [apprentices](/welcome-apprentice-wizard/), [students](https://www.facebook.com/pg/adamgoldman.me/reviews/) and [clients](/book-me).
 
-It’s by NO MEANS an exhaustive all-u-will-ever-need list. Feel free to [message](/lets-talk/) me with feedback / Qs / Ideas.
+It’s by NO MEANS an exhaustive all-u-will-ever-need list. Feel free to [message](/contactNEW) me with feedback / Qs / Ideas.
 
 * **Clipboard manager**  
   * I use [Parcellite](http://parcellite.sourceforge.net/). Whatever you use, make sure it ...
@@ -39,7 +39,7 @@ It’s by NO MEANS an exhaustive all-u-will-ever-need list. Feel free to [messag
   * [TravisCI](https://travis-ci.org/) - free for OS projects
 * **Productivity, focus, mental clarity**
   * [**GTD** - getting things done](http://amzn.to/2sCaSYd), David Allen.
-   I [go over this](/blog/mind-like-water-tartar-sauce/) with ALL my [students](/reviews/), friends, [clients](/book-me/), and fellow humans. It’s too amazing to ignore.
+   I [go over this](/blog/mind-like-water-tartar-sauce/) with ALL my [students](/reviews/), friends, [clients](/book-me), and fellow humans. It’s too amazing to ignore.
   * My GTD app, [Nirvana](https://www.nirvanahq.com/)
 * **Micro breaks**
   * [Safeeyes](https://github.com/slgobinath/SafeEyes) - great software by a great guy, for badass linux users

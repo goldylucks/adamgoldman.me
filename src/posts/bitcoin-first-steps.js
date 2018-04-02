@@ -12,7 +12,7 @@ and the supply of that money is regulated by business man with fat paychecks tha
 
 One of the ways we can reclaim ownership is to use cryptocurrency, like bitcoin, or BTC.
 
-U might be here because you want to [give back](/i-dont-charge-i-accept/), or you want to get your hands wet in the currency of the future.
+U might be here because you want to [give back](/i-dont-charge-i-accept), or you want to get your hands wet in the currency of the future.
 
 Whatever it is, here's how you get going:
 
@@ -29,6 +29,6 @@ Yours in rebellion,
 
 `,
   ps: `
-**PS**. I love moving people over to "our" side. If you have any questions, [contact me](/lets-talk/)!
+**PS**. I love moving people over to "our" side. If you have any questions, [contact me](/contactNEW)!
 `,
 }

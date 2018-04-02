@@ -34,6 +34,6 @@ What can I do you for my friend?
 </form>
 
 Talk soon,`,
-  ps: `**PS**. If your not ready to contact me yet, go through some [results](/transcripts/) and [feedbacks](FB_REVIEWS) first. I'm not going anywhere.
+  ps: `**PS**. If your not ready to contact me yet, go through some [results](/transcripts) and [feedbacks](FB_REVIEWS) first. I'm not going anywhere.
 `,
 }

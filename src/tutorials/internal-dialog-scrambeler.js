@@ -304,7 +304,7 @@ Isn't it interesting you can learn to learn to use your brain for a change you w
                     "This is highly useful, let's do it again on a different phrase",
                   onClick: onRestart,
                 },
-                <Link to="/i-dont-charge-i-accept/">
+                <Link to="/i-dont-charge-i-accept">
                   I feel much better and want to give back
                 </Link>,
               ]}
@@ -312,7 +312,7 @@ Isn't it interesting you can learn to learn to use your brain for a change you w
             <Markdown
               className="tool-source"
               source={`
-Source: I've adapted this [tool](/tools/) from Nick Kemp's Internal Tempo Shift process, see [this article](http://realpeoplepress.com/blog/some-great-new-methods) for more info.
+Source: I've adapted this [tool](/tools) from Nick Kemp's Internal Tempo Shift process, see [this article](http://realpeoplepress.com/blog/some-great-new-methods) for more info.
                 `}
             />
           </div>,

@@ -13,6 +13,6 @@ A week after she reported feeling a sense of liberation, as well as “letting g
 
 If you have lost a loved one(s), like many before you, go through [these steps](/tools) and turn it into appreciation and presence.
 
-[I'm waiting for you on the other side](/lets-talk/).
+[I'm waiting for you on the other side](/contactNEW).
 `,
 }

@@ -84,6 +84,6 @@ That's perfectly fine, there are many ways you can contribute!
 
 ---
 
-If we haven't done [anything together yet](/tools/), **[what can I do you for my friend](${MESSENGER_LINK_WELCOME})?**
+If we haven't done [anything together yet](/tools), **[what can I do you for my friend](${MESSENGER_LINK_WELCOME})?**
 `,
 }

@@ -11,7 +11,7 @@ const description = 'Rewire your brain step by step tutorials'
 
 
 async function action({ path }) {
-  const { data } = await axios.get('/api/tools/all/')
+  const { data } = await axios.get('/api/tools/all')
   return {
     chunks: ['tutorials'],
     title,

@@ -71,7 +71,7 @@ Choose [one](TITLE_for_now_;\\)) of these talks and workshops I usually do that 
 Talk soon,
 `,
   ps: `
-**PS.** Have you seen the [other form](/lets-talk/) yet?
-Curious to see which of the buttons you prefer to [press first](/lets-talk/)
+**PS.** Have you seen the [other form](/contactNEW) yet?
+Curious to see which of the buttons you prefer to [press first](/contactNEW)
 `,
 }

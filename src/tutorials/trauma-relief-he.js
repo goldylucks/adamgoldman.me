@@ -15,7 +15,7 @@ export const description = 'איך להפוך חויה שלילית, ריבים,
 
 export const isRtl = true
 
-export const credits = 'בניתי את ה[כלי](/tools/) הזה על בסיס תהליך הטראומה של באנדלר, פרטים נוספים בספר [Heart of the Mind](http://amzn.to/2xFE4yX) פרק 7'
+export const credits = 'בניתי את ה[כלי](/tools) הזה על בסיס תהליך הטראומה של באנדלר, פרטים נוספים בספר [Heart of the Mind](http://amzn.to/2xFE4yX) פרק 7'
 
 export const initialState = {
   gender: '',
@@ -359,7 +359,7 @@ ${he.makir(gender)} [אחרים](FB_SHARE) ש${he.yajol(gender)}ים להנות 
         },
       },
       <FbShareLink>אני רוצה שעוד יחוו את זה</FbShareLink>,
-      <Link to="/i-dont-charge-i-accept/">למדתי הרבה ואני רוצה לתת חזרה</Link>,
+      <Link to="/i-dont-charge-i-accept">למדתי הרבה ואני רוצה לתת חזרה</Link>,
     ],
   },
 

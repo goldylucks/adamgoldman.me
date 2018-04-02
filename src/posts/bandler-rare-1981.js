@@ -3,7 +3,7 @@ export default {
   tags: ['Richard Bandler', 'Trainings'],
   nick: 'rare',
   body: `
-I'm not sure if and where you can get this training anymore, this is more of a note for myself, feel free to [ask me](/lets-talk/) anything regarding :)
+I'm not sure if and where you can get this training anymore, this is more of a note for myself, feel free to [ask me](/contactNEW) anything regarding :)
 
 Some time you drive and suddenly you get alerted, and there's someone driving in the next lane at the same speed. and you need to get out in the next intersection so you speed up to bypass him, and he speeds up. you slow down and he slows down.
 

@@ -10,7 +10,7 @@ import ReactDOM from 'react-dom/server'
 import PrettyError from 'pretty-error'
 import cors from 'cors'
 import morgan from 'morgan'
-import slash from 'connect-slashes'
+// import slash from 'connect-slashes'
 
 import api from './server/api'
 import App from './components/App'
@@ -46,7 +46,7 @@ app.use(cookieParser())
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }))
 app.use(bodyParser.json({ limit: '50mb' }))
-app.use(slash(false))
+// app.use(slash(false))
 
 if (__DEV__) { // eslint-disable-line no-undef
   app.use(morgan('tiny'))

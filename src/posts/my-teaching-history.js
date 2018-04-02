@@ -56,6 +56,6 @@ I’ll show you some good framing (and reframing) examples next time we meet.
 Keep sneaking in magic whenever you pass on knowledge. We might not have our own phoenix, but we can still give Dumbledore a run for his money ;)
 `,
   ps: `
-**P.S.** Do you want to [communicate more](/book-me/) in less time AND [enjoy installing more information in your unsuspecting audiences](/book-me/)? It takes some practice, but [I got your back](/lets-talk/) ;)
+**P.S.** Do you want to [communicate more](/book-me) in less time AND [enjoy installing more information in your unsuspecting audiences](/book-me)? It takes some practice, but [I got your back](/contactNEW) ;)
 `,
 }

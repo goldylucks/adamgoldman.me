@@ -10,7 +10,7 @@ export const nick = 'whole'
 // eslint-disable-next-line prettier/prettier
 export const description = 'A PRACTICAL step by step tool for non "enlightment"'
 
-export const credits = 'Source: I\'ve adapted this [tool](/tools/) from Connirae\'s [Wholeness Process](http://andreasnlptrainings.com/wholeness/).'
+export const credits = 'Source: I\'ve adapted this [tool](/tools) from Connirae\'s [Wholeness Process](http://andreasnlptrainings.com/wholeness/).'
 
 export const url = 'coming-to-wholeness'
 
@@ -648,10 +648,10 @@ or you want to do it again on another issue / experience first?
         text: 'I want to do it again on a different experience',
       },
       <FbShareLink>I want more to experience this!</FbShareLink>,
-      <Link to="/i-dont-charge-i-accept/">
+      <Link to="/i-dont-charge-i-accept">
         This is great and I want to give back
       </Link>,
-      <Link to="/tools/">Cool! what other brain hacks can you teach me?</Link>,
+      <Link to="/tools">Cool! what other brain hacks can you teach me?</Link>,
       {
         text: 'Thank you Adam, can I share with you my experience?',
         onClick: 'onShareWithAdam',

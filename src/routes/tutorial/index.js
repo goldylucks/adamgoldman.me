@@ -6,7 +6,7 @@ import BrainToolV1 from './BrainTool-v1'
 import BrainToolV3 from './BrainTool-v3'
 
 const toolsV1 = [
-  'internal-dialog-scrambeler',
+  'internal-dialog-scrambler',
 ]
 
 async function action({ params, path }) {

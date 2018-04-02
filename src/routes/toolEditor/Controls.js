@@ -8,6 +8,8 @@ import faSave from '@fortawesome/fontawesome-free-regular/faSave'
 import faEye from '@fortawesome/fontawesome-free-solid/faEye'
 import faDatabase from '@fortawesome/fontawesome-free-solid/faDatabase'
 
+import Link from '../../components/Link'
+
 import s from './ToolEditor.css'
 import { getValidationWarnings, cleanEmptyValues } from './toolEditorUtils'
 
@@ -31,7 +33,7 @@ class Controls extends React.Component {
   render() {
     return (
       <div className={s.controls}>
-        <a className={s.control} href={`/tools/${this.props.tool.url}/`} target="_blank"><FontAwesomeIcon icon={faEye} /></a>
+        <Link className={s.control} to={`/tools/${this.props.tool.url}`} target="_blank"><FontAwesomeIcon icon={faEye} /></Link>
         <a className={s.control} onClick={this.save}><FontAwesomeIcon icon={faSave} /></a>
         <a className={s.control} onClick={this.del}><FontAwesomeIcon icon={faTrashAlt} /></a>
         <a className={s.control} onClick={this.export}><FontAwesomeIcon icon={faDatabase} /></a>
@@ -45,7 +47,7 @@ class Controls extends React.Component {
       global.alert('validation warnings')
       global.console.log('[validation warnings]', warnings)
     }
-    axios.post('/api/tools/', state)
+    axios.post('/api/tools', state)
       .then((res) => {
         global.console.log('saved!', res.data)
         global.alert('saved!')

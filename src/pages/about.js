@@ -14,9 +14,9 @@ export default {
 
 If you haven't experienced fast change already, you might not yet understand some of the things that I do like ...
 
-- How Jennifer "broke" her [OCD](/blog/ocd-and-guilt-gone-in-one-session/) in one session
-- How Julianne cleared all her [Fybromialgia](/blog/fibromyalgia-0-julianne-1/) symptoms, a condition considered uncurable
-- How many others cleared their [traumas](/tags/trauma), [guilt](/blog/ocd-and-guilt-gone-in-one-session/), [grief](/tags/grief), [phobias](/blog/aprils-bus-phobia), [depression](/blog/depression-and-betrayal-gone-in-minutes), [anxiety and panic attacks](/blog/panic-attacks-a-broken-heart/), usually in one session
+- How Jennifer "broke" her [OCD](/blog/ocd-and-guilt-gone-in-one-session) in one session
+- How Julianne cleared all her [Fybromialgia](/blog/fibromyalgia-0-julianne-1) symptoms, a condition considered uncurable
+- How many others cleared their [traumas](/tools/trauma-relief), [guilt](/blog/ocd-and-guilt-gone-in-one-session), grief, [phobias](/blog/aprils-bus-phobia), [depression](/blog/depression-and-betrayal-gone-in-minutes), [anxiety and panic attacks](/blog/panic-attacks-a-broken-heart), usually in one session
 
 If you are like most people, reading what you just read made you squint and stirred up some "what da ..." feelings inside.
 
@@ -39,13 +39,13 @@ But you don't strike me as most people, otherwise you wouldn't be here reading t
 
 So **welcome to my humble virtual space**!
 
-I've just finished tidying up there so please **check your shoes and formalities at the door**, poke around a bit, and when you are ready, [let me know how you want to improve your life](/lets-talk/).
+I've just finished tidying up there so please **check your shoes and formalities at the door**, poke around a bit, and when you are ready, [let me know how you want to improve your life](/contactNEW).
 
 ## Me in a nutshell
 * Got no permanent address for 3 years now
 * Without credentials or a degree, I taught the [IT faculty](https://www.facebook.com/pg/adamgoldman.me/photos/?tab=album&album_id=1747980051883158) of Palawan State University how to teach their students in new innovatie ways.
-* [I don't charge, I accept](/i-dont-charge-i-accept/)
-* [Started teaching at age 6](/blog/my-teaching-history/), my greatest passion for 20+ years
+* [I don't charge, I accept](/i-dont-charge-i-accept)
+* [Started teaching at age 6](/blog/my-teaching-history), my greatest passion for 20+ years
 
 Now that you got to know me, let's move to the most important part ... Let me get to know you!
 

@@ -27,7 +27,7 @@ class MakeAdmin extends React.Component {
 
   submit = (evt) => {
     evt.preventDefault()
-    axios.put(`/api/users/${this.props.user._id}/make-admin/`, { password: this.state.password })
+    axios.put(`/api/users/${this.props.user._id}/make-admin`, { password: this.state.password })
       .then((res) => {
         global.alert('welcome to management.')
         global.console.log(res)

@@ -19,8 +19,8 @@ U made it ...
 
 **Good little slave, obey your master's commands!** :)
 
-Like [I](/about/) said, I'm sorry you make yourself angry.
-Sure [I](/about/) might have helped.
+Like [I](/about) said, I'm sorry you make yourself angry.
+Sure [I](/about) might have helped.
 
 We all have.
 
@@ -83,6 +83,6 @@ Goodbye, slave.
 **PS**. Which other words would you like to have less of an emotional response to?
 (*ahhm ahm comment below ahhm*)
 
-**PSS**. If you want to [free yourself](/lets-talk/) from the tyranny of words faster, you know where to [find me](/lets-talk/) ;)
+**PSS**. If you want to [free yourself](/contactNEW) from the tyranny of words faster, you know where to [find me](/contactNEW) ;)
 `,
 }

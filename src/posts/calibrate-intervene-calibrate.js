@@ -25,28 +25,28 @@ and you might **get angry** because "**the fuck is this nonsense** about noticin
 
 As this [quote](/quotes/) is such key point to why we **first gather and sort information that's relevant for YOU**, and only **THEN** intervene and **make the change** in a precise powerfully lasting way.
 
-The main reason what we do works so [devastatingly well](/transcripts/) is
+The main reason what we do works so [devastatingly well](/transcripts) is
 exactly because giving advice and shoving "techniques" down your throat** is only a small part of what [I do NOT do](/what-we-are-not-doing/).
 
-I spend most of the time gathering and sorting information in a very specific way, and I play with you as we explore YOUR brain, not [MINE](/about/) (we can do that later if you dare ...)
+I spend most of the time gathering and sorting information in a very specific way, and I play with you as we explore YOUR brain, not [MINE](/about) (we can do that later if you dare ...)
 
-The biggest mistake people do as they [go over some of past transcripts](/transcripts/), they try out something I did with someone else, and then disappoint themselves saying
+The biggest mistake people do as they [go over some of past transcripts](/transcripts), they try out something I did with someone else, and then disappoint themselves saying
 
 *"u see these things worked for others but I tried them and I'm still a mess, I knew I'm beyond help and that's just more proof!"*
 
 as you can learn to get depressed and phobic in 100 different ways,
 
 and it's not until we sort the processes that's going on inside of YOU,
-so that we make the smallest most [precise change](/transcripts/),
+so that we make the smallest most [precise change](/transcripts),
 the little difference that makes the difference.
 
-The way [Rachel got over a lifetime of depression](/blog/rachels-abusive-parody-theater/) worked for her and when you[do the same process](/tools/trauma-relief/) it might work for you the same way, as you also may find other things to be more useful.
+The way [Rachel got over a lifetime of depression](/blog/rachels-abusive-parody-theater/) worked for her and when you[do the same process](/tools/trauma-relief) it might work for you the same way, as you also may find other things to be more useful.
 
-I encourage you to [go over others' transcripts](/transcripts/) and try the processes on yourself from the perspective of a curious wanderer as you get excited to utilize your brain in new ways you did not know were possible.
+I encourage you to [go over others' transcripts](/transcripts) and try the processes on yourself from the perspective of a curious wanderer as you get excited to utilize your brain in new ways you did not know were possible.
 
 We all have fun and process information in different ways, and making ALL of us play the same game is not a good recipe for a flourishing society.
 `,
   ps: `
-**PS**. do you have something that still bothers you? or a good feeling you want to intensify?you know where to [find me](/lets-talk/) ;)  
+**PS**. do you have something that still bothers you? or a good feeling you want to intensify?you know where to [find me](/contactNEW) ;)  
 `,
 }

@@ -8,7 +8,7 @@ These are some of the trainings I've done and courses I've learned from the past
 
 The list is still scrambled, and I will add more to it and more details about each product.
 
-If you have any experience with any of these or recommendation of others [let me know](/lets-talk/)!
+If you have any experience with any of these or recommendation of others [let me know](/contactNEW)!
 
 ---
 
@@ -20,18 +20,18 @@ If you have any experience with any of these or recommendation of others [let me
 
 - [**Conversational Hypnosis**](http://adamgold.cohypnosis.hop.clickbank.net) - Igor Ledochowski
   - If your adventurous and want to gain some easy powerful skills, this is an amazing course. Igor at his finest.
-- [**Self Hypnosis Course**](https://hypnosistrainingacademy.com/beyond-self-hypnosis/) - Igor Ledochowski
+- [**Self Hypnosis Course**](https://hypnosistrainingacademy.com/beyond-self-hypnosis) - Igor Ledochowski
   - If your taking your first hypnosis steps, and want to experience by yourself, this is a good start.
 
 ---
 
-- [**Udemy - Become a Super Learner Learn Speed Reading And Advanced Memory**](/blog/udemy-super-learner/)
-  - [Read my notes here](/blog/udemy-super-learner/)
+- [**Udemy - Become a Super Learner Learn Speed Reading And Advanced Memory**](/blog/udemy-super-learner)
+  - [Read my notes here](/blog/udemy-super-learner)
 
 ---
 
 - **Metaphors of movement** - Andrew T. Austin
-  - Even tho I rarely use this specific method, I learned a lot of tricks and insights I incorporated to my [life](/about/) and [teachings](/teaching-is-intoxicating-my-greatest-passion-for-20-years/)
+  - Even tho I rarely use this specific method, I learned a lot of tricks and insights I incorporated to my [life](/about) and [teachings](/teaching-is-intoxicating-my-greatest-passion-for-20-years)
 
 
 - **Integral Eye Movement Therapy** (AMT 2009) - Andrew T. Austin
@@ -43,7 +43,7 @@ If you have any experience with any of these or recommendation of others [let me
 ---
 
 - **Epistemological Metaphors & Clean Language** - David Grove
-  - This is pure gold, and it's as wacky as it gets, but sadly I cannot find the course anywhere :( If you find a way to get it, [let me know](/lets-talk/)!
+  - This is pure gold, and it's as wacky as it gets, but sadly I cannot find the course anywhere :( If you find a way to get it, [let me know](/contactNEW)!
 
 ---
 
@@ -51,7 +51,7 @@ If you have any experience with any of these or recommendation of others [let me
 
 ---
 
-- **[Provocative Change](http://provocativechangeworks.com/products/)** - Nick Kemp
+- **[Provocative Change](http://provocativechangeworks.com/products)** - Nick Kemp
   - I've done the course a long time ago. It's pretty cool, you will gain a lot by modeling him. Will add to your ferocious attitude which I hope you are cultivating.
 
 ---
@@ -59,11 +59,11 @@ If you have any experience with any of these or recommendation of others [let me
 - [**Sleight of Mouth**](https://www.youtube.com/watch?v=8_DxQ10VBhg&list=PLnxyuZyRlNTTo6ssAfJDDh5mt8FszNyKA) - Robert Dilts
   - Absrob's Robert's charisma and learn a powerful skill at the same time. At the moment it's open on youtube so might as well watch it :)
 - **Double bind** - Robert Dilts
-  - Don't remember where I've seen these videos, but I can't find them now. If you do find them [let me](/lets-talk/) know and I'll add the links here.
+  - Don't remember where I've seen these videos, but I can't find them now. If you do find them [let me](/contactNEW) know and I'll add the links here.
 - **Strategies of Genius** - Robert Dilts
   - If your new to modeling and unconscious assimilation, this will be a good place to start.
   - If your a bit advanced, use your skills to unconsciously model Robert in these videos. See how much of his calming presence you can adopt by merely watching.
-  - [Let me know](/lets-talk/) if you find it. I've watched this long time ago and did not find it now.
+  - [Let me know](/contactNEW) if you find it. I've watched this long time ago and did not find it now.
 - **The Hero's Journey and the 5 Rhythms** - Robert Dilts & Stephen Giligian
   - It's cute abstract knowledge to paint the background of your inner adventure.
   - Was slow for me to listen, but there's a really high benefit of absorbing the way these guys talk AND complement each other.
@@ -86,7 +86,7 @@ If you have any experience with any of these or recommendation of others [let me
 
 ---
 
-- [**NLP Practitioner home study program**](http://www.nlpco.com/practitioner-home-study/) - NLP Comprehensive
+- [**NLP Practitioner home study program**](http://www.nlpco.com/practitioner-home-study) - NLP Comprehensive
   - Boring. Watch Bandler's stuff instead.
 - [**NLP Master Practitioner home study program**](https://shop.nlpco.com/NLP-Master-Practitioner-Training-At-Home-p/910d.htm) - NLP Comprehensive
   - Boring. Watch Bandler's stuff instead.
@@ -95,9 +95,9 @@ If you have any experience with any of these or recommendation of others [let me
 
 - **Psychic influence** - Ross Jeffries
   - It's beneficial for beginners, but there are much better courses out there, and his energires/vibe/whateva ain't my thing.
-- [**Dark Side**](http://www.maxpersuasion.com/dark-side-ii/) - Kenrick Cleveland
+- [**Dark Side**](http://www.maxpersuasion.com/dark-side-ii) - Kenrick Cleveland
   - Rubbish
-- [**Unconscious Influence**](www.maxpersuasion.com/) - Kenrick Cleveland
+- [**Unconscious Influence**](www.maxpersuasion.com) - Kenrick Cleveland
   - Even worse rubbish
 
 ---
@@ -114,7 +114,7 @@ If you have any experience with any of these or recommendation of others [let me
 ---
 
 # Steve Andreas
-I've learned so much from this guy ... He likes to work really clean with sub-modalities, and he has such a calm presence. When I was going through some not-so-pleasant times, Watching these videos would calm and soothe me greatly, just by absorbing how he interacts with the world and with the people who come to him for different things. I cannot recommend it enough. If you know of anything of his that is not on this list, [let me know](/lets-talk/)!
+I've learned so much from this guy ... He likes to work really clean with sub-modalities, and he has such a calm presence. When I was going through some not-so-pleasant times, Watching these videos would calm and soothe me greatly, just by absorbing how he interacts with the world and with the people who come to him for different things. I cannot recommend it enough. If you know of anything of his that is not on this list, [let me know](/contactNEW)!
 
 - **The PTSD Training**
 - **Releasing PTSD: The Client Sessions**
@@ -154,9 +154,9 @@ It's beautiful to see these two work together, complete each others' sentences, 
 ---
 
 # Bandler
-The man who started it all ... This is a pretty interesting individual with a fucked up story, and his work is brilliant. He's doing so many things at once when he teaches, that it's hard for me to listen to the "normal" old way by others. I've watched all of these multiple times, and I find myself becoming a [better communicator and speaker](/book-me/) still.
+The man who started it all ... This is a pretty interesting individual with a fucked up story, and his work is brilliant. He's doing so many things at once when he teaches, that it's hard for me to listen to the "normal" old way by others. I've watched all of these multiple times, and I find myself becoming a [better communicator and speaker](/book-me) still.
 
-- [**Rare 1981 Live Seminar**](/blog/bandler-rare-1981/) (my notes)
+- [**Rare 1981 Live Seminar**](/blog/bandler-rare-1981) (my notes)
 - **Persuasion Engineering - Sales & Business, Language & Behavior**
  - If you are into persuasion, this is for you. And if you are not, this is for you even more. This is the whackiest "sales" course you will ever do ;)
 - **Three days in konstanz (200)**
@@ -213,17 +213,17 @@ Started as Bandler's apprentice. He is not so good with a crowd, but his persona
 
 # Milton Erickson
 One of the early successful recorded hypnotherapists.
-I've seen some of his sessions with clients. It's interesting but soooo indirect and slooowwwww ... for example he cures a phobia in 6 sessions, and I've done it [many times](/blog/aprils-bus-phobia/) in a few minutes. We have faster & better technology now. Use it!
+I've seen some of his sessions with clients. It's interesting but soooo indirect and slooowwwww ... for example he cures a phobia in 6 sessions, and I've done it [many times](/blog/aprils-bus-phobia) in a few minutes. We have faster & better technology now. Use it!
 
 ---
 
 # Andre chaperon
 This guy is such a powerful writer and story teller, I've done each of these courses more than thrice.
 
-- [ARM - Auto Responder Madness](https://tinylittlebusinesses.com/email/autoresponder-madness/)
+- [ARM - Auto Responder Madness](https://tinylittlebusinesses.com/email/autoresponder-madness)
  - Monster profits from tiny lists. Considered by many the #1 email marketing course on earth.
-- [TLB](https://tinylittlebusinesses.com/tribe/) - Tiny Little Businesses
-- [Lucrative Email Marketing](https://tinylittlebusinesses.com/email/) (Free)
-- [Lucrative List Building](https://tinylittlebusinesses.com/list-building/) (Free)
+- [TLB](https://tinylittlebusinesses.com/tribe) - Tiny Little Businesses
+- [Lucrative Email Marketing](https://tinylittlebusinesses.com/email) (Free)
+- [Lucrative List Building](https://tinylittlebusinesses.com/list-building) (Free)
 `,
 }

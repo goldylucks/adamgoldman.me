@@ -11,7 +11,7 @@ Initially he wanted to complete his diving license course, which he kept failing
  
 Every time he was asked to take off the mask underwater, he panicked and asked to go up to the surface.
  
-A few minutes and one [visual swish](/tools/visual-swish/) later, the problem was gone.
+A few minutes and one visual swish later, the problem was gone.
 
 He’s now a happy certified diver.
 
@@ -22,7 +22,7 @@ He was in severe pain from the laser intense removal sessions, and had 6 more co
 He kept putting the sessions off due to the pain.
  
 We did many “little tricks”, mainly played with sub-modalities and “locked” the pain behind many internal mental corridors.
-(it's hard to explain, I'm working on a post on that, feel free to [message me](/lets-talk/) in the meantime)
+(it's hard to explain, I'm working on a post on that, feel free to [message me](/contactNEW) in the meantime)
  
 He went back to continue with the laser sessions, reporting the pain decreased immensely and does not bother him too much, despite being still very much "there".
  

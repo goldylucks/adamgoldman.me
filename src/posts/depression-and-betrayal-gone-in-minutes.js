@@ -262,7 +262,7 @@ all natural, learning to use your brain
 I was depressed for most of my life
 </div><div class="chat-message">and had many panic attacks and anxiety
 </div><div class="chat-message">and was a very sad person
-</div><div class="chat-message"><a href="/i-dont-charge-i-accept/">www.adamgoldman.me/i-dont-charge-i-accept/</a>
+</div><div class="chat-message"><a href="/i-dont-charge-i-accept">www.adamgoldman.me/i-dont-charge-i-accept</a>
 </div><div class="chat-message">and now I offer this gift
 </div><div class="chat-message">to anyone
 </div><div class="chat-message">and whoever wants to give back
@@ -317,7 +317,7 @@ I'm here to stay
 </div><div class="chat-message">like I said, most important for me is that you keep feeling so good!
 </div></div><div class="chat-message-container clearfix other"><div class="chat-message">I'm always willing to pay back <img alt="😃" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/z51/1/16/1f603.png"></div></div><div class="chat-message-container clearfix adam"><div class="chat-message">and I hope also your husband (and dogs!) will enjoy all the things you have learned as well
 </div><div class="chat-message">u can do that here:)
-</div><div class="chat-message"><a href="/i-dont-charge-i-accept/">www.adamgoldman.me/i-dont-charge-i-accept/</a>
+</div><div class="chat-message"><a href="/i-dont-charge-i-accept">www.adamgoldman.me/i-dont-charge-i-accept</a>
 </div></div><div class="chat-message-container clearfix other"><div class="chat-message">Maybe we can just me, it's hard to have a bit coin here in philippines
 </div><div class="chat-message">*meet
 </div></div><div class="chat-message-container clearfix adam"><div class="chat-message">oh you can also use this:
@@ -383,9 +383,9 @@ I'm here to stay
   ps: `
 Do you(or any close ones) suffer from depression or some other nasty feeling? I got your back.
 
-[Take action](/lets-talk/). Dare to live life to fullest. 
+[Take action](/contactNEW). Dare to live life to fullest. 
 We all deserve it!
 
-PS. Too many people promise but don't deliver, which might make you hesitant to depart your hard earned cash BEFORE knowing if you get any value. I like to flip things around, so [I don't charge, I accept](/i-dont-charge-i-accept/).
+PS. Too many people promise but don't deliver, which might make you hesitant to depart your hard earned cash BEFORE knowing if you get any value. I like to flip things around, so [I don't charge, I accept](/i-dont-charge-i-accept).
 `,
 }

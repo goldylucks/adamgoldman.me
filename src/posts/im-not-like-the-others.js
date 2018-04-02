@@ -20,9 +20,9 @@ Well ... How can I say this ...
 - *"I'm not like the others, I'm different"*
 - *"I don't belong, this will not work for me"*
 
-If you are here reading these lines, I've probably sent you here in one point of [our interaction](/lets-talk/).
+If you are here reading these lines, I've probably sent you here in one point of [our interaction](/contactNEW).
 
-Maybe we were [talking 1x1](${MESSENGER_LINK_WELCOME}), or you were trying one of the [brain hacking tools](/tools/), and you uttered or thought one of the above statements.
+Maybe we were [talking 1x1](${MESSENGER_LINK_WELCOME}), or you were trying one of the [brain hacking tools](/tools), and you uttered or thought one of the above statements.
 
 Well ... How can I say this ...
 
@@ -30,7 +30,7 @@ I'm getting this so often that I've actually took the time to dedicate a whole p
 
 Here's the thing ...
 
-[We](/about/) all want to think we are a special snowflake, and that there's just something about us that's just different, and there is!
+[We](/about) all want to think we are a special snowflake, and that there's just something about us that's just different, and there is!
 
 Your [life experiences](/blog/sort-out-your-past/) are yours and yours alone.
 
@@ -60,13 +60,13 @@ Got it?
 
 Now notice what's the first thing that comes to your mind AS you are thinking about this problem.
 
-Most [OCD](/tags/ocd/) cases I've encountered make themselves compulsive by first hearing an [internal dialog](/tools/internal-dialog-scrambeler/) that goes something like:
+Most [OCD](/tags/ocd/) cases I've encountered make themselves compulsive by first hearing an [internal dialog](/tools/internal-dialog-scrambler) that goes something like:
 
 *"You MUST wash your hands 5 times or else ... "*
 
-And then visualizing a loved one getting killed or some other [lovely scenario](/tools/trauma-relief/).
+And then visualizing a loved one getting killed or some other [lovely scenario](/tools/trauma-relief).
 
-So in order to break this pattern, all they have to do is [skew the internal dialog](/tools/internal-dialog-scrambeler), [scramble the nasty visualization](/tools/trauma-relief/), and lo and behold, ["OCD" gone](/blog/ocd-and-guilt-gone-in-one-session/).
+So in order to break this pattern, all they have to do is [skew the internal dialog](/tools/internal-dialog-scrambler), [scramble the nasty visualization](/tools/trauma-relief), and lo and behold, ["OCD" gone](/blog/ocd-and-guilt-gone-in-one-session/).
 
 If it sounds simple it's only because IT IS, and the more you can let go of your "higher intelect" and just start to be willing to [experiment](/blog/brain-exploration/), the faster you will get it too.
 

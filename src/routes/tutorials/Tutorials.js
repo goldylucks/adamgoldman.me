@@ -30,7 +30,7 @@ const ToolsListPage = ({
           {tutorials
             .filter(filterDrafts)
             .map(t => (
-              <Card {...t} url={`${path}${t.url}/`} key={t.url} />
+              <Card {...t} url={`${path}/${t.url}`} key={t.url} />
             ))}
         </div>
       </section>

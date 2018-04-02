@@ -61,7 +61,7 @@ As you'll see below, within 3 days into the first intervention most of her sympt
 
 I'll post a followup in a month or so with her progress and more processes we've done.
 
-If you or someone you know have any of the symptoms, or have been diagnosed with Fibro/CFS/ME, do [contact](/lets-talk/) me and we'll start gearing you towards a brighter future ASAP.
+If you or someone you know have any of the symptoms, or have been diagnosed with Fibro/CFS/ME, do [contact](/contactNEW) me and we'll start gearing you towards a brighter future ASAP.
 
 ---
 
@@ -141,7 +141,7 @@ Notice she ends with dissociation (*I feel so bad for that girl*), and I enforce
 *... without even realizing* - this is a seed for later on, to warm her up to the idea she has more power than she is aware of.  
 *... let's first only focus on the attack itself okay?* - This is not a must, and I could have opt for processing the rape AND the social judging, which I usually do in face to face sessions.
 
-I then have her use do the [trauma relief](/tools/trauma-relief/) [tool](/tools/) on just the rape incident itself. At the time the [tool](/tools/) was "in diapers", and didn't include some important framing, so I walked her thru that myself.
+I then have her use do the [trauma relief](/tools/trauma-relief) [tool](/tools) on just the rape incident itself. At the time the [tool](/tools) was "in diapers", and didn't include some important framing, so I walked her thru that myself.
 
 Success was evident:
 
@@ -299,7 +299,7 @@ At this point the rest of her past traumas "flipped" to good feelings, as her br
 Notice how I keep the frame of "everything is great" even tho she uses words that could go either way like "how strange" and "it's kinda freaky". Like I said in the intro, the client needs to know that no matter what happens, she WILL get better.
 
 ### Intervention #4 - Intensify good feelings
-Sent her to do the [good feelings generator](/tools/feel-good-generator/).
+Sent her to do the [good feelings generator](/tools/feel-good-generator).
 
 **JB**: *Got interrupted by the door twice pfft. So took me a while to get back in the zone but I persisted. That was really good! I chose excitement.* - This is brilliant. Julliane's initiative and proactivity are quite remarkable. She won't let anything stand in her way, and that's exactly where you want clients to be.
 
@@ -322,7 +322,7 @@ This is an attempt on her part to get over the anxiety which most people do. Bec
 
 Notice also this elicitation presupposes again that this is something she is DOING, as oppose to something that just happens to her.
 
-She describes a vivid internal movie, so I have her run the [trauma relief tool](/tools/trauma-relief/) on it, which works the same way on constructed scenarios.
+She describes a vivid internal movie, so I have her run the [trauma relief tool](/tools/trauma-relief) on it, which works the same way on constructed scenarios.
 
 **JB**: *it's like bright lights of good stuff coming out from where I expected something awful to come from*
 
@@ -495,12 +495,12 @@ I elicited an "in the zone" state, added all the good feelings we've been buildi
 ### Intervention #15 - Turning parents' loss into health resource + future pacing
 Julliane is really something else, she actually started doing this with her mother in her dreams.
 
-I had her use the grief [tools](/tools/) to further feel her mother's presence, future pace it, and same with her father.
+I had her use the grief [tools](/tools) to further feel her mother's presence, future pace it, and same with her father.
 
 ### Intervention #16 - Enjoying social situations
-Since she was demonstrating such an ability to learn quickly, I wanted her to experience a deep trance phenomena, [time distortion](/tools/recurring-time-distortion/), to open up her brain and senses even more.
+Since she was demonstrating such an ability to learn quickly, I wanted her to experience a deep trance phenomena, [time distortion](/tools/recurring-time-distortion), to open up her brain and senses even more.
 
-She went through the [time distortion](/tools/recurring-time-distortion/) [tool](/tools/) and chose social situations the first time, and intensyfing ecstasy the second time.
+She went through the [time distortion](/tools/recurring-time-distortion) [tool](/tools) and chose social situations the first time, and intensyfing ecstasy the second time.
 
 **JB**:  *it was going into social situations. I have this thing like going into a party or gathering of people where I'm self conscious and stressed and wired and feeling like I don't want to be there I want to just hide (and often go to the bathroom for space). It was all quite funny really, and the previous feelings got totally distorted. On thinking of it it normal time I no longer felt stressed like I wanted to go to hide in the bathroom. So that's really good!*
 
