@@ -73,7 +73,7 @@ app.get('/savoring-your-child/contact', (req, res) => {
 //
 
 app.use('/api', api)
-
+app.use(slash(false))
 //
 // Register server-side rendering middleware
 // -----------------------------------------------------------------------------
