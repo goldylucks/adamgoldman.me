@@ -46,7 +46,7 @@ app.use(cookieParser())
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }))
 app.use(bodyParser.json({ limit: '50mb' }))
-app.use(slash())
+app.use(slash(false))
 
 if (__DEV__) { // eslint-disable-line no-undef
   app.use(morgan('tiny'))
@@ -73,7 +73,6 @@ app.get('/savoring-your-child/contact', (req, res) => {
 //
 
 app.use('/api', api)
-app.use(slash(false))
 //
 // Register server-side rendering middleware
 // -----------------------------------------------------------------------------
