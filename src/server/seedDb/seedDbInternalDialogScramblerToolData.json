@@ -1,0 +1,273 @@
+{
+  "isDraft": false,
+  "hasReview": true,
+  "isSavoring": false,
+  "isGrief": false,
+  "title": "Internal Dialog Scrambler",
+  "description": "Jam any internal thoughts and dialogs that bother you",
+  "credits": "",
+  "steps": [
+    {
+      "title": "Background",
+      "description": "So there are some things you say to yourself over and over that don't make you feel the way you want yet, some of the most common ones are:\n\n- *what if ...*\n- *I'm not good enough*\n- *you don't deserve ...*  \n\nand before we turn this around you might wonder ...    ",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "How is this going to work Adam?",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ]
+    },
+    {
+      "title": "How this is going to work",
+      "description": "I'm glad you asked,  \n  so here's how it's going to work,  \n  as I've been studying human behavior, organisms,  \n  how society shapes behavior, communication,  \n  and the greatest learning machine of all, the human brain,  \n  I'm going to give you some things to try,  \n  and whatever works for you, you get to keep,  \n  whatever doesn't you file away in the  \n  \"thing's I've tried and haven't worked for me yet.\"\n\n  Sounds good?",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Sounds good!",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Yes, let's continue",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Choose phrase",
+      "description": "Pick one the things you say to yourself which make you feel not the way you want, and write it below.",
+      "notes": "",
+      "type": "short",
+      "inputPlaceholder": "",
+      "answers": [],
+      "flashStepNum": "0",
+      "flashSpeed": "100"
+    },
+    {
+      "title": "Initial tempo",
+      "description": "${echo}\n\nWhen you have said this to yourself, do you say it in your normal conversational speaking voice, or is it said at a faster tempo? ",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Normal tempo",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Fast tempo",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Initial tempo test",
+      "description": "${echo}\n\nSay this phrase exactly as you have done to date and notice how you feel in response to doing so ",
+      "notes": "",
+      "type": "short",
+      "inputPlaceholder": "When I say this phrase to myself at normal tempo I feel ...",
+      "answers": [],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Slow tempo",
+      "description": "Now I'm going to flash the phrase on the screen at a certain tempo, and for now just notice the speed, don't do anything else.",
+      "notes": "",
+      "type": "flash",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I've noticed the speed, what's next?",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "1500",
+      "flashStepNum": "2"
+    },
+    {
+      "title": "Slow tempo",
+      "description": "Now say this phrase out loud at the same speed I've just flashed it and notice what's different",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I feel MUCH better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I don’t feel a change in this step",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": true,
+          "text": "Other",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "isReadOnly": true
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Slower tempo",
+      "description": "Oddly enough, now I'm going to flash the phrase on the screen even slower, and for now just notice the speed, don't do anything else.",
+      "notes": "",
+      "type": "flash",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I've noticed the speed, what's next?",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "2500",
+      "flashStepNum": "2"
+    },
+    {
+      "title": "Slower tempo",
+      "description": "Now say this phrase out loud at the same speed I've just flashed it and notice what's different",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I feel MUCH better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I don’t feel a change in this step",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "It's almost laughable now",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": true,
+          "text": "Other",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "isReadOnly": true
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Describing differences",
+      "description": "Describe the difference between the way you used to say it to yourself until now, and saying it to yourself like you do now",
+      "notes": "",
+      "type": "long",
+      "inputPlaceholder": "",
+      "answers": [],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Trying in vain",
+      "description": "as you try now to think of this as you used to, what are you noticing that is different?",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "It's ridiculous now",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "it's much better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "It's humerous, almost laughable!",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": true,
+          "text": "Other",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "isReadOnly": true
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    }
+  ],
+  "hiddenFields": [],
+  "isRtl": false,
+  "url": "internal-dialog-scrambler"
+}
