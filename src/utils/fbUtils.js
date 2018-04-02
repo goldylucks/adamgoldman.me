@@ -14,10 +14,10 @@ function fbAuth2(response, cb) {
     return
   }
   const { accessToken, userID } = response.authResponse
-  global.FB.api('/me?fields=id,name,picture',
-    ({ name, picture }) => {
+  global.FB.api('/me?fields=id,name,picture,gender',
+    ({ name, picture, gender }) => {
       userServerLogin({
-        fbUserId: userID, fbClientAccessToken: accessToken, name, picture,
+        fbUserId: userID, fbClientAccessToken: accessToken, name, picture, gender,
       }, cb)
     },
   )
