@@ -33,6 +33,10 @@ mongoose.connect(config.dbUrl)
 global.navigator = global.navigator || {}
 global.navigator.userAgent = global.navigator.userAgent || 'all'
 
+if (config.env === 'production') {
+  app.use(forceSsl)
+}
+
 //
 // Register Node.js middleware
 // -----------------------------------------------------------------------------
@@ -165,3 +169,10 @@ if (module.hot) {
 }
 
 export default app
+
+function forceSsl(req, res, next) {
+  if (req.headers['x-forwarded-proto'] !== 'https') {
+    return res.redirect(['https://', req.get('Host'), req.url].join(''))
+  }
+  return next()
+}

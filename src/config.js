@@ -33,7 +33,7 @@ module.exports = {
   jwtSecret: process.env.JWT_SECRET || 'foo',
   fbId: process.env.FACEBOOK_APP_ID || '1957034857888787',
   fbSecret: process.env.FACEBOOK_APP_SECRET,
-
+  env: process.env.ENV || 'development',
   mailChimpApiKy: process.env.MAILCHIMP_API_KEY,
 
   dbUrl: process.env.MONGODB_URI || 'mongodb://localhost/adamgoldman',
