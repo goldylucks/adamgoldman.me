@@ -132,7 +132,7 @@ class App extends React.PureComponent {
       setAuthHeader(user.token)
       axios.get(`/api/users/${user._id}`)
         .then(({ data }) => {
-          global.console.log('[user logged in]', user)
+          global.console.log('[user logged in]', data)
           this.updateUser(data)
           this.setState({ isUiReady: true })
         })
