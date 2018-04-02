@@ -48,7 +48,7 @@ async function fbAuth(req, res, next) {
       : await axios.get(`https://graph.facebook.com/oauth/access_token?client_id=${fbId}&client_secret=${fbSecret}&grant_type=fb_exchange_token&fb_exchange_token=${userToCreate.fbClientAccessToken}`)
     let user = await Users.findOneAndUpdate(
       { fbUserId: userToCreate.fbUserId }, userToCreate, options)
-    user = prepareUser(user, await getToolsHistory(req.params.id))
+    user = prepareUser(user, await getToolsHistory(user._id))
     res.json(user)
   } catch (err) {
     next(err)
