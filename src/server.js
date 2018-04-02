@@ -41,12 +41,12 @@ if (config.env === 'production') {
 //
 // Register Node.js middleware
 // -----------------------------------------------------------------------------
-app.use(slash())
 app.use(express.static(path.resolve(__dirname, 'public')))
 app.use(cookieParser())
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }))
 app.use(bodyParser.json({ limit: '50mb' }))
+app.use(slash())
 
 if (__DEV__) { // eslint-disable-line no-undef
   app.use(morgan('tiny'))
