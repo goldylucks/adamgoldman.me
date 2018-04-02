@@ -8,7 +8,7 @@ router.route('/')
   .get(...isAdminMiddlewares, controller.getAll)
   .post(decodeToken, getFreshUser, controller.create)
 
-router.route('/:id')
+router.route('/:id/')
   .get(decodeToken, getFreshUser, controller.get)
   .put(controller.update)
 

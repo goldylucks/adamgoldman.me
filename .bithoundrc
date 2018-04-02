@@ -45,7 +45,6 @@
 	    "**/tools**",
 	    "**/src/tutorials/**",
 	    "**/src/components/FbLogin/**",
-	    "**/src/components/SignupForm/**",
 	    "**/src/blogPost/**",
 	    "**/src/routes/tutorial/**",
 	    "**/src/posts/**",

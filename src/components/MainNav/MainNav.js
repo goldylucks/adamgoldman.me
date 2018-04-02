@@ -77,20 +77,20 @@ class MainNav extends React.Component {
   }
 
   logoLink() {
-    return this.isSavoring() ? '/savoring-your-child' : '/'
+    return this.isSavoring() ? '/savoring-your-child/' : '/'
   }
 
   navItems() {
     return this.isSavoring()
       ? [
-        { to: '/savoring-your-child/pricing', text: <span>Pricing <FontAwesomeIcon icon={faHeart} style={{ color: 'red', marginLeft: 5 }} /></span> },
+        { to: '/savoring-your-child/pricing/', text: <span>Pricing <FontAwesomeIcon icon={faHeart} style={{ color: 'red', marginLeft: 5 }} /></span> },
       ]
       : [
-        { to: '/transcripts', text: 'Transcripts' },
-        { to: '/tools', text: 'Tutorials' },
-        { to: '/about', text: 'About' },
+        { to: '/transcripts/', text: 'Transcripts' },
+        { to: '/tools/', text: 'Tutorials' },
+        { to: '/about/', text: 'About' },
         { href: MESSENGER_LINK_WELCOME, text: 'Contact' },
-        { to: '/i-dont-charge-i-accept', text: <span>Pricing <FontAwesomeIcon icon={faHeart} style={{ color: 'red', marginLeft: 5 }} /></span> },
+        { to: '/i-dont-charge-i-accept/', text: <span>Pricing <FontAwesomeIcon icon={faHeart} style={{ color: 'red', marginLeft: 5 }} /></span> },
       ]
   }
 }

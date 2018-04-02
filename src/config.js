@@ -38,8 +38,6 @@ module.exports = {
 
   dbUrl: process.env.MONGODB_URI || 'mongodb://localhost/adamgoldman',
 
-  typeFormApiKey: process.env.TYPEFORM_API_KEY,
-
   fbPageId: '1589876824360149',
 
   fbPageAccessToken: process.env.FB_PAGE_ACCESS_TOKEN,

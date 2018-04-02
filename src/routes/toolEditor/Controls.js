@@ -31,7 +31,7 @@ class Controls extends React.Component {
   render() {
     return (
       <div className={s.controls}>
-        <a className={s.control} href={`/tools/${this.props.tool.url}`} target="_blank"><FontAwesomeIcon icon={faEye} /></a>
+        <a className={s.control} href={`/tools/${this.props.tool.url}/`} target="_blank"><FontAwesomeIcon icon={faEye} /></a>
         <a className={s.control} onClick={this.save}><FontAwesomeIcon icon={faSave} /></a>
         <a className={s.control} onClick={this.del}><FontAwesomeIcon icon={faTrashAlt} /></a>
         <a className={s.control} onClick={this.export}><FontAwesomeIcon icon={faDatabase} /></a>

@@ -4,8 +4,7 @@ import Layout from '../../components/Layout'
 
 import SavoringYourChildModule from './savoringYourChildModule'
 
-async function action({ params }) {
-  const path = `/savoring-your-child/${params.module}`
+async function action({ params, path }) {
   const module = await import(`./${params.module}.js`)
     .then(_module => _module.default) // use an object from `export default`
     .catch((error) => {

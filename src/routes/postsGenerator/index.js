@@ -7,9 +7,8 @@ import PostsGenerator from './PostsGenerator'
 
 const title = 'Posts Generator'
 
-async function action({ params }) {
+async function action({ params, path }) {
   const { data } = await axios.get(`/api/posts/${params.post}`)
-  const path = `/posts-generator/${params.post}`
   return {
     chunks: ['postsGenerator'],
     title,

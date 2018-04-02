@@ -5,9 +5,8 @@ import ToolEditor from './ToolEditor'
 
 const title = 'Brain Hacking Automation Tools Generator'
 
-async function action({ params }) {
-  const { data } = await axios.get(`/api/tools/${params.tool}`)
-  const path = `/tool-editor/${params.tool}`
+async function action({ params, path }) {
+  const { data } = await axios.get(`/api/tools/${params.tool}/`)
   return {
     chunks: ['toolEditor'],
     title,

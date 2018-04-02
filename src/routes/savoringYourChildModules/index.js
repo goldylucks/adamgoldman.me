@@ -5,9 +5,8 @@ import Layout from '../../components/Layout'
 import SavoringYourChildModules from './savoringYourChildModules'
 
 const title = 'Savoring Your Child Modules'
-const path = '/savoring-your-child/modules'
 
-function action() {
+function action({ path }) {
   return {
     chunks: ['savoringYourChildModules'],
     title,

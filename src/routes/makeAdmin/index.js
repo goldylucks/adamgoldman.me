@@ -4,10 +4,7 @@ import Layout from '../../components/Layout'
 
 import MakeAdmin from './MakeAdmin'
 
-const path = '/make-admin'
-
-// @TODO hide from robot.txt
-async function action() {
+async function action({ path }) {
   return {
     chunks: ['makeAdmin'],
     title: 'Adam Goldman\'s Management page',

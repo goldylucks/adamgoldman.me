@@ -9,9 +9,7 @@ const toolsV1 = [
   'internal-dialog-scrambeler',
 ]
 
-async function action({ params }) {
-  const path = getPath(params.tool)
-
+async function action({ params, path }) {
   const tool = await import(`../../tutorials/${params.tool}.js`)
     .catch((error) => {
       if (error.message.startsWith('Cannot find module')) {
@@ -38,9 +36,3 @@ async function action({ params }) {
 }
 
 export default action
-
-function getPath(tool) {
-  return tool.match(/trauma-relief-he|coming-to-wholeness|reverse-feeling-spin|internal-dialog-scrambeler|reverse-feeling-spin/)
-    ? `/tools/${tool}`
-    : `/tools/${tool}/`
-}

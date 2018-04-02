@@ -20,7 +20,7 @@ const Home = ({ transcripts, tutorials }: Props) => (
         <Markdown
           className="lead"
           source={`
-Book a [session](${MESSENGER_LINK_BOOK_SESSION}), hack your [mind](/tools), [learn](/transcripts) what's possible, and [read](/FB_REVIEWS) what others have to say.
+Book a [session](${MESSENGER_LINK_BOOK_SESSION}), hack your [mind](/tools/), [learn](/transcripts/) what's possible, and [read](/FB_REVIEWS) what others have to say.
 `}
         />
       </div>
@@ -31,7 +31,7 @@ Book a [session](${MESSENGER_LINK_BOOK_SESSION}), hack your [mind](/tools), [lea
         <div className="card-columns card-columns-three listrecent">
           {tutorials
             .map(t => (
-              <Card {...t} url={`/tools/${t.url}`} key={t.url} />
+              <Card {...t} url={`/tools/${t.url}/`} key={t.url} />
             ))}
         </div>
       </section>
@@ -42,7 +42,7 @@ Book a [session](${MESSENGER_LINK_BOOK_SESSION}), hack your [mind](/tools), [lea
         <div className="card-columns card-columns-three listrecent">
           {transcripts
             .map(t => (
-              <Card {...t} url={`/blog/${t.url}`} key={t.url} />
+              <Card {...t} url={`/blog/${t.url}/`} key={t.url} />
             ))}
         </div>
       </section>

@@ -8,11 +8,14 @@ import Card from '../../components/Card'
 
 type Props = {
   title: '',
+  path: '',
   description: '',
   tutorials: [],
 }
 
-const ToolsListPage = ({ title, description, tutorials }: Props) => (
+const ToolsListPage = ({
+  title, description, tutorials, path,
+}: Props) => (
   <div>
     <div className="container">
       <div className="mainheading">
@@ -27,7 +30,7 @@ const ToolsListPage = ({ title, description, tutorials }: Props) => (
           {tutorials
             .filter(filterDrafts)
             .map(t => (
-              <Card {...t} url={`/tools/${t.url}`} key={t.url} />
+              <Card {...t} url={`${path}${t.url}/`} key={t.url} />
             ))}
         </div>
       </section>

@@ -22,7 +22,7 @@ const Blog = () => (
         <div className="card-columns listrecent">
           {posts.filter(filterDrafts)
             .map(t => (
-              <Card {...t} url={`/blog/${t.url}`} key={t.url} />
+              <Card {...t} url={`/blog/${t.url}/`} key={t.url} />
             ))}
         </div>
       </section>

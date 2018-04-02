@@ -4,7 +4,6 @@ export default {
   slug: 'special-days',
   title: 'Special Days',
   description: 'Birthdays, holidays, and transition days as an opportunity',
-  typeform: 'https://adamgoldman.typeform.com/to/kERZFQ',
   benefits: [
     'Look forward to special/meaningful days',
     'Enjoy celebrating future birthdays',

@@ -77,7 +77,7 @@ function RenderComments(questions) {
       <Comments
         className={s.fbComments}
         width="1100"
-        href={`${DOMAIN}/savoring-your-child/feedback/feedback-${path}`}
+        href={`${DOMAIN}/savoring-your-child/feedback/feedback-${path}/`}
       />
       <hr />
     </div>

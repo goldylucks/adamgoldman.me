@@ -5,7 +5,7 @@ import Page from '../page/Page'
 
 import notFound from './notFound'
 
-const path = '/404'
+const path = '/404/'
 
 function action() {
   return {

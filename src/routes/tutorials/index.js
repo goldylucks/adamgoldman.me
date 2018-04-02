@@ -9,10 +9,9 @@ import hardCodedTutorials from './tutorialsHardCoded'
 const title = 'Brain Hacking Automation Tools'
 const description = 'Rewire your brain step by step tutorials'
 
-const path = '/tools'
 
-async function action() {
-  const { data } = await axios.get('/api/tools/all')
+async function action({ path }) {
+  const { data } = await axios.get('/api/tools/all/')
   return {
     chunks: ['tutorials'],
     title,
@@ -23,6 +22,7 @@ async function action() {
         <Tutorials
           tutorials={data.concat(hardCodedTutorials)}
           title={title}
+          path={path}
           description={description}
         />
       </Layout>

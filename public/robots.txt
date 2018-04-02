@@ -3,5 +3,5 @@
 # Allow crawling of all content
 User-agent: *
 Disallow: /admin/
-Disallow: /make-admin
+Disallow: /make-admin/
 Disallow: /tool-editor/

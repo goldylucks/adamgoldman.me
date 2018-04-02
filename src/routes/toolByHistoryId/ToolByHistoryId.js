@@ -58,7 +58,7 @@ class ToolByHistoryId extends React.Component {
   }
 
   fetchToolByHistoryId() {
-    axios.get(`/api/toolsHistory/${this.props.historyId}`)
+    axios.get(`/api/toolsHistory/${this.props.historyId}/`)
       .then(({ data }) => this.setState({ data, isLoaded: true }))
       .catch((err) => {
         global.console.error(err)

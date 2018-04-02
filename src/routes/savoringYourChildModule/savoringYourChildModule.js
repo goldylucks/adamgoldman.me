@@ -97,7 +97,7 @@ class savoringYourChildSectionModule extends React.Component {
   }
 
   fetchTool() {
-    axios.get(`/api/tools/${this.props.slug}`)
+    axios.get(`/api/tools/${this.props.slug}/`)
       .then(({ data }) => {
         this.setState({
           tool: data,

@@ -10,6 +10,7 @@ import ReactDOM from 'react-dom/server'
 import PrettyError from 'pretty-error'
 import cors from 'cors'
 import morgan from 'morgan'
+import slash from 'connect-slashes'
 
 import api from './server/api'
 import App from './components/App'
@@ -40,6 +41,7 @@ if (config.env === 'production') {
 //
 // Register Node.js middleware
 // -----------------------------------------------------------------------------
+app.use(slash())
 app.use(express.static(path.resolve(__dirname, 'public')))
 app.use(cookieParser())
 app.use(cors())

@@ -13,10 +13,9 @@ const dbPosts = [
   'oliver-anxiety-ocd',
 ]
 
-async function action({ params }) {
-  const path = getPath(params.post)
+async function action({ params, path }) {
   if (dbPosts.includes(params.post)) {
-    const { data } = await axios.get(`/api/posts/${params.post}`)
+    const { data } = await axios.get(`/api/posts/${params.post}/`)
     const Comp = data.transcript.length ? Transcript : BlogPost
     return {
       title: data.title,
@@ -54,9 +53,3 @@ async function action({ params }) {
 }
 
 export default action
-
-function getPath(post) {
-  return post.match(/healing-metaphors-water-slime|dora-talias-cancer/)
-    ? `/blog/${post}`
-    : `/blog/${post}/`
-}

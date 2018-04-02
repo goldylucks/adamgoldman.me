@@ -13,7 +13,7 @@ import Layout from '../../components/Layout'
 
 import ErrorPage from './ErrorPage'
 
-const path = '/error'
+const path = '/error/'
 
 function action() {
   return {

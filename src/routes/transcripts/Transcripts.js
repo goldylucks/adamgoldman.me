@@ -24,7 +24,7 @@ const Transcripts = ({ title, description, transcripts }: Props) => (
         <div className="card-columns listrecent">
           {transcripts
             .map(t => (
-              <Card {...t} url={`/blog/${t.url}`} key={t.url} />
+              <Card {...t} url={`/blog/${t.url}/`} key={t.url} />
             ))}
         </div>
       </section>

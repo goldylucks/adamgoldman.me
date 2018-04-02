@@ -4,9 +4,7 @@ import Layout from '../../components/Layout'
 
 import SavoringYourChild from './SavoringYourChild'
 
-const path = '/savoring-your-child'
-
-function action() {
+function action({ path }) {
   return {
     chunks: ['savoringYourChild'],
     title: 'Savoring Your Child',

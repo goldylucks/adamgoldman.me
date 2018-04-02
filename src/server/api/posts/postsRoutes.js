@@ -7,13 +7,13 @@ const router = require('express').Router()
 router.route('/')
   .post(decodeToken, getFreshUser, isAdmin, controller.updateOrCreate)
 
-router.route('/:url/transcript')
+router.route('/:url/transcript/')
   .put(decodeToken, getFreshUser, isAdmin, controller.updateTranscript)
 
-router.route('/transcripts')
+router.route('/transcripts/')
   .get(controller.getTranscripts)
 
-router.route('/:url')
+router.route('/:url/')
   .get(controller.getByUrl)
 
 export default router

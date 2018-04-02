@@ -4,8 +4,7 @@ import ToolJsonEditor from './ToolJsonEditor'
 
 const title = 'Brain Hacking Automation Tools Generator'
 
-async function action() {
-  const path = '/tool-json-editor'
+async function action({ path }) {
   return {
     chunks: ['toolEditor'],
     title,

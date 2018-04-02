@@ -5,9 +5,8 @@ import Layout from '../../components/Layout'
 import Blog from './Blog'
 
 const title = 'Blog'
-const path = '/blog/'
 
-function action() {
+function action({ path }) {
   return {
     chunks: ['blog'],
     title,
