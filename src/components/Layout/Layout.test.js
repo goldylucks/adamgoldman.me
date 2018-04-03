@@ -1,23 +1,16 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import App from '../App'
 import { initFbSdk } from '../../utils/fbUtils'
-
-import Layout from './Layout'
-
-
-jest.mock('../../utils/fbUtils')
+import Wrapper from '../../../test/TestWrapper'
 
 describe('Layout', () => {
   test('renders children correctly', () => {
     const wrapper = renderer
       .create(
-        <App context={{ insertCss: () => {}, fetch: () => {} }}>
-          <Layout path="/test">
-            <div className="child" />
-          </Layout>
-        </App>,
+        <Wrapper>
+          <div className="child" />
+        </Wrapper>,
       )
       .toJSON()
 

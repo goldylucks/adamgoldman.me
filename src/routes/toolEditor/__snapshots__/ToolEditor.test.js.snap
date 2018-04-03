@@ -1,0 +1,2664 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToolEditor no data 1`] = `
+<div
+  className="container"
+>
+  <nav
+    className="navbar navbar-expand-lg fixed-top main-nav navbar-light"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="clearfix d-sm-block d-md-none"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-bars fa-w-14 "
+          data-icon="bars"
+          data-prefix="fas"
+          onClick={[Function]}
+          role="img"
+          style={
+            Object {
+              "marginRight": 10,
+            }
+          }
+          viewBox="0 0 448 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+        <div
+          className="mobileMenu"
+        >
+          <nav>
+            <h3
+              className="mobileMenuHeadline"
+              onClick={[Function]}
+            >
+              Adam Goldman
+            </h3>
+            <ul
+              className="navbar-nav"
+            >
+              <li
+                className="nav-item"
+              >
+                <a
+                  className="nav-link navLink"
+                  href="/"
+                  onClick={[Function]}
+                >
+                  Home
+                </a>
+              </li>
+              <li
+                className="nav-item"
+              >
+                <a
+                  className="nav-link navLink"
+                  href="/transcripts"
+                  onClick={[Function]}
+                >
+                  Transcripts
+                </a>
+              </li>
+              <li
+                className="nav-item"
+              >
+                <a
+                  className="nav-link navLink"
+                  href="/tools"
+                  onClick={[Function]}
+                >
+                  Tutorials
+                </a>
+              </li>
+              <li
+                className="nav-item"
+              >
+                <a
+                  className="nav-link navLink"
+                  href="/about"
+                  onClick={[Function]}
+                >
+                  About
+                </a>
+              </li>
+              <li
+                className="nav-item"
+              >
+                <a
+                  className="nav-link navLink"
+                  href="https://www.adamgoldman.me/contact"
+                  rel="nofollow noreferrer noopener"
+                  target="_blank"
+                >
+                  Contact
+                </a>
+              </li>
+              <li
+                className="nav-item"
+              >
+                <a
+                  className="nav-link navLink"
+                  href="/i-dont-charge-i-accept"
+                  onClick={[Function]}
+                >
+                  <span>
+                    Pricing 
+                    <svg
+                      aria-hidden="true"
+                      className="svg-inline--fa fa-heart fa-w-18 "
+                      data-icon="heart"
+                      data-prefix="fas"
+                      role="img"
+                      style={
+                        Object {
+                          "color": "red",
+                          "marginLeft": 5,
+                        }
+                      }
+                      viewBox="0 0 576 512"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M414.9 24C361.8 24 312 65.7 288 89.3 264 65.7 214.2 24 161.1 24 70.3 24 16 76.9 16 165.5c0 72.6 66.8 133.3 69.2 135.4l187 180.8c8.8 8.5 22.8 8.5 31.6 0l186.7-180.2c2.7-2.7 69.5-63.5 69.5-136C560 76.9 505.7 24 414.9 24z"
+                        fill="currentColor"
+                        style={Object {}}
+                      />
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li
+                className="nav-item"
+                style={
+                  Object {
+                    "marginTop": 20,
+                  }
+                }
+              >
+                <a
+                  className="nav-link btn btn-primary btn-block"
+                  href="https://www.adamgoldman.me/book-session"
+                  rel="nofollow noreferrer noopener"
+                  target="_blank"
+                >
+                  Book a session
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <a
+        className="navbar-brand mr-auto"
+        href="/"
+        onClick={[Function]}
+      >
+        Adam Goldman
+      </a>
+      <div
+        className="collapse navbar-collapse"
+      >
+        <ul
+          className="navbar-nav ml-auto"
+        >
+          <li
+            className="nav-item"
+          >
+            <a
+              className="nav-link"
+              href="/transcripts"
+              onClick={[Function]}
+            >
+              Transcripts
+            </a>
+          </li>
+          <li
+            className="nav-item"
+          >
+            <a
+              className="nav-link"
+              href="/tools"
+              onClick={[Function]}
+            >
+              Tutorials
+            </a>
+          </li>
+          <li
+            className="nav-item"
+          >
+            <a
+              className="nav-link"
+              href="/about"
+              onClick={[Function]}
+            >
+              About
+            </a>
+          </li>
+          <li
+            className="nav-item"
+          >
+            <a
+              className="nav-link"
+              href="https://www.adamgoldman.me/contact"
+              rel="nofollow noreferrer noopener"
+              target="_blank"
+            >
+              Contact
+            </a>
+          </li>
+          <li
+            className="nav-item"
+          >
+            <a
+              className="nav-link"
+              href="/i-dont-charge-i-accept"
+              onClick={[Function]}
+            >
+              <span>
+                Pricing 
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-heart fa-w-18 "
+                  data-icon="heart"
+                  data-prefix="fas"
+                  role="img"
+                  style={
+                    Object {
+                      "color": "red",
+                      "marginLeft": 5,
+                    }
+                  }
+                  viewBox="0 0 576 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M414.9 24C361.8 24 312 65.7 288 89.3 264 65.7 214.2 24 161.1 24 70.3 24 16 76.9 16 165.5c0 72.6 66.8 133.3 69.2 135.4l187 180.8c8.8 8.5 22.8 8.5 31.6 0l186.7-180.2c2.7-2.7 69.5-63.5 69.5-136C560 76.9 505.7 24 414.9 24z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li
+            className="nav-item"
+            style={
+              Object {
+                "marginLeft": 10,
+              }
+            }
+          >
+            <a
+              className="nav-link btn btn-primary btn-sm"
+              href="https://www.adamgoldman.me/book-session"
+              rel="nofollow noreferrer noopener"
+              target="_blank"
+            >
+              Book a session
+            </a>
+          </li>
+        </ul>
+      </div>
+      <a
+        className="nav-link btn btn-primary btn-sm d-sm-block d-md-none"
+        href="https://www.adamgoldman.me/book-session"
+        rel="nofollow noreferrer noopener"
+        target="_blank"
+      >
+        Book a session
+      </a>
+    </div>
+  </nav>
+  <div>
+    <div
+      style={
+        Object {
+          "padding": 10,
+        }
+      }
+    >
+      <div
+        className="clearfix"
+        style={
+          Object {
+            "float": "left",
+            "width": "60%",
+          }
+        }
+      >
+        <div>
+          <h1
+            className="text-center"
+            id="details"
+          >
+            Details
+          </h1>
+          <div
+            className="form-group"
+          >
+            Title
+            <input
+              className="form-control"
+              onChange={[Function]}
+              placeholder="Title"
+              value=""
+            />
+          </div>
+          <div
+            className="form-group"
+          >
+            Description
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                }
+              }
+            >
+              <input
+                className="form-control"
+                onChange={[Function]}
+                placeholder="Description"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            className="form-group"
+          >
+            Credits
+            <input
+              className="form-control"
+              onChange={[Function]}
+              placeholder="Credits"
+              value=""
+            />
+          </div>
+          <div
+            className="form-group"
+          >
+            <input
+              checked={false}
+              id="isDraft"
+              onChange={[Function]}
+              style={
+                Object {
+                  "marginRight": 10,
+                }
+              }
+              type="checkbox"
+              value={false}
+            />
+            <label
+              htmlFor="isDraft"
+            >
+              Draft
+            </label>
+          </div>
+          <div
+            className="form-group"
+          >
+            <input
+              checked={false}
+              id="hasReview"
+              onChange={[Function]}
+              style={
+                Object {
+                  "marginRight": 10,
+                }
+              }
+              type="checkbox"
+              value={false}
+            />
+            <label
+              htmlFor="hasReview"
+            >
+              Has review
+            </label>
+          </div>
+          <div
+            className="form-group"
+          >
+            <input
+              checked={false}
+              id="isSavoring"
+              onChange={[Function]}
+              style={
+                Object {
+                  "marginRight": 10,
+                }
+              }
+              type="checkbox"
+              value={false}
+            />
+            <label
+              htmlFor="isSavoring"
+            >
+              Is Savoring
+            </label>
+          </div>
+          <div
+            className="form-group"
+          >
+            <input
+              checked={false}
+              id="isGrief"
+              onChange={[Function]}
+              style={
+                Object {
+                  "marginRight": 10,
+                }
+              }
+              type="checkbox"
+              value={false}
+            />
+            <label
+              htmlFor="isGrief"
+            >
+              Is grief
+            </label>
+          </div>
+          <div
+            className="rbt open clearfix"
+            style={
+              Object {
+                "position": "relative",
+              }
+            }
+            tabIndex={-1}
+          >
+            <div
+              className="rbt-input form-control rbt-input-multi"
+              disabled={false}
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={-1}
+            >
+              <div
+                className="rbt-input-wrapper"
+              >
+                <div
+                  style={
+                    Object {
+                      "display": "inline-block",
+                      "position": "relative",
+                    }
+                  }
+                >
+                  <div
+                    className={undefined}
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "position": "relative",
+                        "zIndex": 1,
+                      }
+                    }
+                  >
+                    <input
+                      aria-autocomplete="list"
+                      aria-expanded={false}
+                      aria-haspopup="true"
+                      autoComplete="off"
+                      className="rbt-input-main"
+                      disabled={false}
+                      name={undefined}
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      placeholder="Add hidden field"
+                      role="combobox"
+                      style={
+                        Object {
+                          "backgroundColor": "transparent",
+                          "border": 0,
+                          "boxShadow": "none",
+                          "boxSizing": "content-box",
+                          "cursor": "inherit",
+                          "outline": "none",
+                          "padding": 0,
+                          "width": "1px",
+                        }
+                      }
+                      type="text"
+                      value=""
+                    />
+                    <div
+                      style={
+                        Object {
+                          "height": 0,
+                          "left": 0,
+                          "overflow": "scroll",
+                          "position": "absolute",
+                          "top": 0,
+                          "visibility": "hidden",
+                          "whiteSpace": "pre",
+                        }
+                      }
+                    >
+                      
+                    </div>
+                    <div
+                      style={
+                        Object {
+                          "height": 0,
+                          "left": 0,
+                          "overflow": "scroll",
+                          "position": "absolute",
+                          "top": 0,
+                          "visibility": "hidden",
+                          "whiteSpace": "pre",
+                        }
+                      }
+                    >
+                      Add hidden field
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-atomic={true}
+              aria-live="polite"
+              className="sr-only rbt-sr-status"
+              role="status"
+            >
+              0 selections
+            </div>
+          </div>
+        </div>
+        <hr />
+        <h1
+          className="text-center"
+        >
+          Steps
+        </h1>
+        <div>
+          <div
+            style={
+              Object {
+                "display": "none",
+                "left": "50%",
+                "position": "fixed",
+                "top": "50%",
+                "zIndex": 1,
+              }
+            }
+          >
+            <div
+              className="rbt open clearfix"
+              style={
+                Object {
+                  "position": "relative",
+                }
+              }
+              tabIndex={-1}
+            >
+              <div
+                className="rbt-input form-control"
+                disabled={false}
+                onClick={[Function]}
+                onFocus={[Function]}
+                tabIndex={-1}
+              >
+                <div
+                  className="rbt-input-wrapper"
+                >
+                  <div
+                    style={
+                      Object {
+                        "display": "block",
+                        "position": "relative",
+                      }
+                    }
+                  >
+                    <input
+                      aria-autocomplete="list"
+                      aria-expanded={false}
+                      aria-haspopup="true"
+                      autoComplete="off"
+                      className="rbt-input-main"
+                      disabled={false}
+                      name={undefined}
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      placeholder="Choose Variable"
+                      role="combobox"
+                      style={
+                        Object {
+                          "backgroundColor": "transparent",
+                          "border": 0,
+                          "boxShadow": "none",
+                          "cursor": "inherit",
+                          "outline": "none",
+                          "padding": 0,
+                          "width": "100%",
+                        }
+                      }
+                      type="text"
+                      value=""
+                    />
+                    <div
+                      className={undefined}
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "display": "block",
+                          "pointerEvents": "none",
+                          "position": "absolute",
+                          "top": 0,
+                          "zIndex": 0,
+                        }
+                      }
+                    >
+                      <input
+                        aria-hidden={true}
+                        className="rbt-input-hint"
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "border": 0,
+                            "boxShadow": "none",
+                            "boxSizing": "content-box",
+                            "color": "rgba(0, 0, 0, 0.35)",
+                            "cursor": "inherit",
+                            "outline": "none",
+                            "padding": 0,
+                            "width": "1px",
+                          }
+                        }
+                        tabIndex={-1}
+                        value=""
+                      />
+                      <div
+                        style={
+                          Object {
+                            "height": 0,
+                            "left": 0,
+                            "overflow": "scroll",
+                            "position": "absolute",
+                            "top": 0,
+                            "visibility": "hidden",
+                            "whiteSpace": "pre",
+                          }
+                        }
+                      >
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-atomic={true}
+                aria-live="polite"
+                className="sr-only rbt-sr-status"
+                role="status"
+              >
+                0 selections
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              className="step"
+              id="step-0"
+            >
+              <div
+                className="row"
+                style={
+                  Object {
+                    "marginBottom": 20,
+                  }
+                }
+              >
+                <div
+                  className="col-10"
+                >
+                  <div>
+                    <div
+                      onKeyDown={[Function]}
+                      role="button"
+                      tabIndex={-1}
+                    >
+                      <input
+                        className="h2"
+                        onChange={[Function]}
+                        placeholder="Step title"
+                        style={
+                          Object {
+                            "border": 0,
+                            "marginBottom": 20,
+                            "width": "100%",
+                          }
+                        }
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <div
+                    style={
+                      Object {
+                        "marginBottom": 10,
+                      }
+                    }
+                  >
+                    <div
+                      onKeyDown={[Function]}
+                      role="button"
+                      tabIndex={-1}
+                    >
+                      <textarea
+                        className="form-control"
+                        onChange={[Function]}
+                        placeholder="Step description"
+                        required={true}
+                        rows={1}
+                        style={
+                          Object {
+                            "border": 0,
+                            "width": "100%",
+                          }
+                        }
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="stepRevealable"
+                  >
+                    <div
+                      onKeyDown={[Function]}
+                      role="button"
+                      tabIndex={-1}
+                    >
+                      <textarea
+                        className="form-control text-muted tool-note"
+                        onChange={[Function]}
+                        placeholder="Step notes"
+                        required={true}
+                        rows={1}
+                        style={
+                          Object {
+                            "border": 0,
+                            "width": "100%",
+                          }
+                        }
+                        value=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="col-2"
+                >
+                  <p
+                    className="text-right"
+                  >
+                    0
+                    /
+                    0
+                     
+                    <a
+                      className="stepRevealable"
+                      onClick={[Function]}
+                    >
+                      <svg
+                        aria-hidden="true"
+                        className="svg-inline--fa fa-trash-alt fa-w-14 "
+                        data-icon="trash-alt"
+                        data-prefix="far"
+                        role="img"
+                        style={Object {}}
+                        viewBox="0 0 448 512"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M192 188v216c0 6.627-5.373 12-12 12h-24c-6.627 0-12-5.373-12-12V188c0-6.627 5.373-12 12-12h24c6.627 0 12 5.373 12 12zm100-12h-24c-6.627 0-12 5.373-12 12v216c0 6.627 5.373 12 12 12h24c6.627 0 12-5.373 12-12V188c0-6.627-5.373-12-12-12zm132-96c13.255 0 24 10.745 24 24v12c0 6.627-5.373 12-12 12h-20v336c0 26.51-21.49 48-48 48H80c-26.51 0-48-21.49-48-48V128H12c-6.627 0-12-5.373-12-12v-12c0-13.255 10.745-24 24-24h74.411l34.018-56.696A48 48 0 0 1 173.589 0h100.823a48 48 0 0 1 41.16 23.304L349.589 80H424zm-269.611 0h139.223L276.16 50.913A6 6 0 0 0 271.015 48h-94.028a6 6 0 0 0-5.145 2.913L154.389 80zM368 128H80v330a6 6 0 0 0 6 6h276a6 6 0 0 0 6-6V128z"
+                          fill="currentColor"
+                          style={Object {}}
+                        />
+                      </svg>
+                    </a>
+                  </p>
+                  <select
+                    className="select stepRevealable"
+                    onChange={[Function]}
+                    required={true}
+                    style={
+                      Object {
+                        "marginRight": 5,
+                      }
+                    }
+                    value="radio"
+                  >
+                    <option
+                      value="radio"
+                    >
+                      Radio
+                    </option>
+                    <option
+                      value="checkbox"
+                    >
+                      Checkbox
+                    </option>
+                    <option
+                      value="short"
+                    >
+                      Short
+                    </option>
+                    <option
+                      value="long"
+                    >
+                      Long
+                    </option>
+                    <option
+                      value="flash"
+                    >
+                      flash
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <div>
+                    <div
+                      className="row answer"
+                    >
+                      <div
+                        className="col-10"
+                      >
+                        <input
+                          className="btn btn-primary btn-block text-left"
+                          onChange={[Function]}
+                          onKeyPress={[Function]}
+                          placeholder="answer #0"
+                          readOnly={undefined}
+                          value=""
+                        />
+                      </div>
+                      <div
+                        className="col-2 text-right answerActions"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          className="svg-inline--fa fa-trash-alt fa-w-14 "
+                          data-icon="trash-alt"
+                          data-prefix="far"
+                          onClick={[Function]}
+                          role="img"
+                          style={Object {}}
+                          viewBox="0 0 448 512"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M192 188v216c0 6.627-5.373 12-12 12h-24c-6.627 0-12-5.373-12-12V188c0-6.627 5.373-12 12-12h24c6.627 0 12 5.373 12 12zm100-12h-24c-6.627 0-12 5.373-12 12v216c0 6.627 5.373 12 12 12h24c6.627 0 12-5.373 12-12V188c0-6.627-5.373-12-12-12zm132-96c13.255 0 24 10.745 24 24v12c0 6.627-5.373 12-12 12h-20v336c0 26.51-21.49 48-48 48H80c-26.51 0-48-21.49-48-48V128H12c-6.627 0-12-5.373-12-12v-12c0-13.255 10.745-24 24-24h74.411l34.018-56.696A48 48 0 0 1 173.589 0h100.823a48 48 0 0 1 41.16 23.304L349.589 80H424zm-269.611 0h139.223L276.16 50.913A6 6 0 0 0 271.015 48h-94.028a6 6 0 0 0-5.145 2.913L154.389 80zM368 128H80v330a6 6 0 0 0 6 6h276a6 6 0 0 0 6-6V128z"
+                            fill="currentColor"
+                            style={Object {}}
+                          />
+                        </svg>
+                      </div>
+                      <div
+                        className="col-10 answerOptionCol"
+                      >
+                        <div
+                          className="answerOption"
+                        >
+                          <div
+                            className="answerOptionToggle"
+                            onClick={[Function]}
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-paper-plane fa-w-16 "
+                              data-icon="paper-plane"
+                              data-prefix="far"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 512 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M440 6.5L24 246.4c-34.4 19.9-31.1 70.8 5.7 85.9L144 379.6V464c0 46.4 59.2 65.5 86.6 28.6l43.8-59.1 111.9 46.2c5.9 2.4 12.1 3.6 18.3 3.6 8.2 0 16.3-2.1 23.6-6.2 12.8-7.2 21.6-20 23.9-34.5l59.4-387.2c6.1-40.1-36.9-68.8-71.5-48.9zM192 464v-64.6l36.6 15.1L192 464zm212.6-28.7l-153.8-63.5L391 169.5c10.7-15.5-9.5-33.5-23.7-21.2L155.8 332.6 48 288 464 48l-59.4 387.3z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </div>
+                          <input
+                            className="answerOptionField"
+                            id="goToStepByNum"
+                            onChange={[Function]}
+                            placeholder="goToStepByNum"
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                        <div
+                          className="answerOption"
+                        >
+                          <div
+                            className="answerOptionToggle"
+                            onClick={[Function]}
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-link fa-w-16 "
+                              data-icon="link"
+                              data-prefix="fas"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 512 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </div>
+                          <input
+                            className="answerOptionField"
+                            id="link"
+                            onChange={[Function]}
+                            placeholder="link"
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                        <div
+                          className="answerOption"
+                        >
+                          <div
+                            className="answerOptionToggle"
+                            onClick={[Function]}
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-external-link-alt fa-w-18 "
+                              data-icon="external-link-alt"
+                              data-prefix="fas"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 576 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M576 24v127.984c0 21.461-25.96 31.98-40.971 16.971l-35.707-35.709-243.523 243.523c-9.373 9.373-24.568 9.373-33.941 0l-22.627-22.627c-9.373-9.373-9.373-24.569 0-33.941L442.756 76.676l-35.703-35.705C391.982 25.9 402.656 0 424.024 0H552c13.255 0 24 10.745 24 24zM407.029 270.794l-16 16A23.999 23.999 0 0 0 384 303.765V448H64V128h264a24.003 24.003 0 0 0 16.97-7.029l16-16C376.089 89.851 365.381 64 344 64H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V287.764c0-21.382-25.852-32.09-40.971-16.97z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </div>
+                          <input
+                            className="answerOptionField"
+                            id="linkNew"
+                            onChange={[Function]}
+                            placeholder="linkNew"
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                        <div
+                          className="answerOption"
+                        >
+                          <div
+                            className="answerOptionToggle"
+                            onClick={[Function]}
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-exclamation fa-w-6 "
+                              data-icon="exclamation"
+                              data-prefix="fas"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 192 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M176 432c0 44.112-35.888 80-80 80s-80-35.888-80-80 35.888-80 80-80 80 35.888 80 80zM25.26 25.199l13.6 272C39.499 309.972 50.041 320 62.83 320h66.34c12.789 0 23.331-10.028 23.97-22.801l13.6-272C167.425 11.49 156.496 0 142.77 0H49.23C35.504 0 24.575 11.49 25.26 25.199z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </div>
+                          <input
+                            className="answerOptionField"
+                            id="concern"
+                            onChange={[Function]}
+                            placeholder="concern"
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="col-10 stepRevealable"
+                  style={
+                    Object {
+                      "display": "flex",
+                      "justifyContent": "space-between",
+                      "marginTop": 15,
+                    }
+                  }
+                >
+                  <div
+                    className="form-check"
+                  >
+                    <input
+                      checked={false}
+                      className="form-check-input"
+                      id="step-0-other-toggle"
+                      onChange={[Function]}
+                      type="checkbox"
+                    />
+                    <label
+                      className="form-check-label"
+                      htmlFor="step-0-other-toggle"
+                    >
+                      Other
+                    </label>
+                  </div>
+                  <a
+                    onClick={[Function]}
+                  >
+                    Template A
+                  </a>
+                  <a
+                    onClick={[Function]}
+                  >
+                    + answer
+                  </a>
+                </div>
+              </div>
+              <a
+                className="pull-right stepRevealable"
+                onClick={[Function]}
+              >
+                + Step
+              </a>
+              <hr
+                style={
+                  Object {
+                    "borderTopWidth": 1,
+                    "clear": "both",
+                    "marginBottom": 70,
+                    "marginTop": 70,
+                  }
+                }
+              />
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "padding": 20,
+              }
+            }
+          >
+            <a
+              onClick={[Function]}
+              style={
+                Object {
+                  "fontSize": 20,
+                  "marginRight": 20,
+                }
+              }
+            >
+              + Step
+            </a>
+            <a
+              onClick={[Function]}
+              style={
+                Object {
+                  "fontSize": 20,
+                }
+              }
+            >
+              + Duplicate Step
+            </a>
+          </div>
+        </div>
+        <div
+          className="controls"
+        >
+          <a
+            className="control"
+            href="/tools/test"
+            onClick={[Function]}
+            target="_blank"
+          >
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-eye fa-w-18 "
+              data-icon="eye"
+              data-prefix="fas"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 576 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M569.354 231.631C512.969 135.949 407.81 72 288 72 168.14 72 63.004 135.994 6.646 231.631a47.999 47.999 0 0 0 0 48.739C63.031 376.051 168.19 440 288 440c119.86 0 224.996-63.994 281.354-159.631a47.997 47.997 0 0 0 0-48.738zM288 392c-75.162 0-136-60.827-136-136 0-75.162 60.826-136 136-136 75.162 0 136 60.826 136 136 0 75.162-60.826 136-136 136zm104-136c0 57.438-46.562 104-104 104s-104-46.562-104-104c0-17.708 4.431-34.379 12.236-48.973l-.001.032c0 23.651 19.173 42.823 42.824 42.823s42.824-19.173 42.824-42.823c0-23.651-19.173-42.824-42.824-42.824l-.032.001C253.621 156.431 270.292 152 288 152c57.438 0 104 46.562 104 104z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+          <a
+            className="control"
+            onClick={[Function]}
+          >
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-save fa-w-14 "
+              data-icon="save"
+              data-prefix="far"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 448 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M433.941 129.941l-83.882-83.882A48 48 0 0 0 316.118 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V163.882a48 48 0 0 0-14.059-33.941zM272 80v80H144V80h128zm122 352H54a6 6 0 0 1-6-6V86a6 6 0 0 1 6-6h42v104c0 13.255 10.745 24 24 24h176c13.255 0 24-10.745 24-24V83.882l78.243 78.243a6 6 0 0 1 1.757 4.243V426a6 6 0 0 1-6 6zM224 232c-48.523 0-88 39.477-88 88s39.477 88 88 88 88-39.477 88-88-39.477-88-88-88zm0 128c-22.056 0-40-17.944-40-40s17.944-40 40-40 40 17.944 40 40-17.944 40-40 40z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+          <a
+            className="control"
+            onClick={[Function]}
+          >
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-trash-alt fa-w-14 "
+              data-icon="trash-alt"
+              data-prefix="far"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 448 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M192 188v216c0 6.627-5.373 12-12 12h-24c-6.627 0-12-5.373-12-12V188c0-6.627 5.373-12 12-12h24c6.627 0 12 5.373 12 12zm100-12h-24c-6.627 0-12 5.373-12 12v216c0 6.627 5.373 12 12 12h24c6.627 0 12-5.373 12-12V188c0-6.627-5.373-12-12-12zm132-96c13.255 0 24 10.745 24 24v12c0 6.627-5.373 12-12 12h-20v336c0 26.51-21.49 48-48 48H80c-26.51 0-48-21.49-48-48V128H12c-6.627 0-12-5.373-12-12v-12c0-13.255 10.745-24 24-24h74.411l34.018-56.696A48 48 0 0 1 173.589 0h100.823a48 48 0 0 1 41.16 23.304L349.589 80H424zm-269.611 0h139.223L276.16 50.913A6 6 0 0 0 271.015 48h-94.028a6 6 0 0 0-5.145 2.913L154.389 80zM368 128H80v330a6 6 0 0 0 6 6h276a6 6 0 0 0 6-6V128z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+          <a
+            className="control"
+            onClick={[Function]}
+          >
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-database fa-w-14 "
+              data-icon="database"
+              data-prefix="fas"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 448 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M448 73.143v45.714C448 159.143 347.667 192 224 192S0 159.143 0 118.857V73.143C0 32.857 100.333 0 224 0s224 32.857 224 73.143zM448 176v102.857C448 319.143 347.667 352 224 352S0 319.143 0 278.857V176c48.125 33.143 136.208 48.572 224 48.572S399.874 209.143 448 176zm0 160v102.857C448 479.143 347.667 512 224 512S0 479.143 0 438.857V336c48.125 33.143 136.208 48.572 224 48.572S399.874 369.143 448 336z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div
+        className="clearfix"
+        style={
+          Object {
+            "position": "fixed",
+            "right": 0,
+            "width": "35%",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "maxHeight": "90vh",
+              "overflowY": "scroll",
+            }
+          }
+        >
+          <h2>
+            TOC
+          </h2>
+          <a
+            onClick={[Function]}
+          >
+            Details
+          </a>
+          <div
+            style={
+              Object {
+                "background": "lightgrey",
+                "padding": 2,
+              }
+            }
+          >
+            <div>
+              <div>
+                <div
+                  aria-grabbed={false}
+                  data-react-beautiful-dnd-drag-handle="0"
+                  draggable={false}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onDrop={[Function]}
+                  onKeyDown={[Function]}
+                  onMouseDown={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  style={
+                    Object {
+                      "background": "",
+                      "border": "1px solid #000",
+                      "margin": "0 0 2px 0",
+                      "padding": 4,
+                      "userSelect": "none",
+                    }
+                  }
+                  tabIndex={0}
+                >
+                  <a
+                    onClick={[Function]}
+                  >
+                    00
+                  </a>
+                   - 
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="container"
+  >
+    <div
+      className="footer"
+    >
+      <p
+        className="pull-left"
+      >
+        Copyright © 2017 
+        <a
+          className="link"
+          href="/"
+          onClick={[Function]}
+        >
+          Adam Goldman
+        </a>
+      </p>
+      <p
+        className="pull-right"
+      >
+        <a
+          className="link"
+          href="/legal-stuff"
+          onClick={[Function]}
+        >
+          legal stuff
+        </a>
+        <a
+          className="link"
+          href="/privacy"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginLeft": 10,
+            }
+          }
+        >
+          Privacy
+        </a>
+      </p>
+      <div
+        className="clearfix"
+      />
+    </div>
+  </div>
+  <a
+    className="container"
+    href="https://www.adamgoldman.me/contact"
+    rel="nofollow noreferrer noopener"
+    target="_blank"
+  >
+    <img
+      alt="Messenger Link"
+      src="https://cdn.supple.com.au/wp-content/themes/supple/img/msg.png"
+    />
+  </a>
+</div>
+`;
+
+exports[`ToolEditor with data 1`] = `
+<div
+  className="container"
+>
+  <nav
+    className="navbar navbar-expand-lg fixed-top main-nav navbar-light"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="clearfix d-sm-block d-md-none"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-bars fa-w-14 "
+          data-icon="bars"
+          data-prefix="fas"
+          onClick={[Function]}
+          role="img"
+          style={
+            Object {
+              "marginRight": 10,
+            }
+          }
+          viewBox="0 0 448 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+        <div
+          className="mobileMenu"
+        >
+          <nav>
+            <h3
+              className="mobileMenuHeadline"
+              onClick={[Function]}
+            >
+              Adam Goldman
+            </h3>
+            <ul
+              className="navbar-nav"
+            >
+              <li
+                className="nav-item"
+              >
+                <a
+                  className="nav-link navLink"
+                  href="/"
+                  onClick={[Function]}
+                >
+                  Home
+                </a>
+              </li>
+              <li
+                className="nav-item"
+              >
+                <a
+                  className="nav-link navLink"
+                  href="/transcripts"
+                  onClick={[Function]}
+                >
+                  Transcripts
+                </a>
+              </li>
+              <li
+                className="nav-item"
+              >
+                <a
+                  className="nav-link navLink"
+                  href="/tools"
+                  onClick={[Function]}
+                >
+                  Tutorials
+                </a>
+              </li>
+              <li
+                className="nav-item"
+              >
+                <a
+                  className="nav-link navLink"
+                  href="/about"
+                  onClick={[Function]}
+                >
+                  About
+                </a>
+              </li>
+              <li
+                className="nav-item"
+              >
+                <a
+                  className="nav-link navLink"
+                  href="https://www.adamgoldman.me/contact"
+                  rel="nofollow noreferrer noopener"
+                  target="_blank"
+                >
+                  Contact
+                </a>
+              </li>
+              <li
+                className="nav-item"
+              >
+                <a
+                  className="nav-link navLink"
+                  href="/i-dont-charge-i-accept"
+                  onClick={[Function]}
+                >
+                  <span>
+                    Pricing 
+                    <svg
+                      aria-hidden="true"
+                      className="svg-inline--fa fa-heart fa-w-18 "
+                      data-icon="heart"
+                      data-prefix="fas"
+                      role="img"
+                      style={
+                        Object {
+                          "color": "red",
+                          "marginLeft": 5,
+                        }
+                      }
+                      viewBox="0 0 576 512"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M414.9 24C361.8 24 312 65.7 288 89.3 264 65.7 214.2 24 161.1 24 70.3 24 16 76.9 16 165.5c0 72.6 66.8 133.3 69.2 135.4l187 180.8c8.8 8.5 22.8 8.5 31.6 0l186.7-180.2c2.7-2.7 69.5-63.5 69.5-136C560 76.9 505.7 24 414.9 24z"
+                        fill="currentColor"
+                        style={Object {}}
+                      />
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li
+                className="nav-item"
+                style={
+                  Object {
+                    "marginTop": 20,
+                  }
+                }
+              >
+                <a
+                  className="nav-link btn btn-primary btn-block"
+                  href="https://www.adamgoldman.me/book-session"
+                  rel="nofollow noreferrer noopener"
+                  target="_blank"
+                >
+                  Book a session
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <a
+        className="navbar-brand mr-auto"
+        href="/"
+        onClick={[Function]}
+      >
+        Adam Goldman
+      </a>
+      <div
+        className="collapse navbar-collapse"
+      >
+        <ul
+          className="navbar-nav ml-auto"
+        >
+          <li
+            className="nav-item"
+          >
+            <a
+              className="nav-link"
+              href="/transcripts"
+              onClick={[Function]}
+            >
+              Transcripts
+            </a>
+          </li>
+          <li
+            className="nav-item"
+          >
+            <a
+              className="nav-link"
+              href="/tools"
+              onClick={[Function]}
+            >
+              Tutorials
+            </a>
+          </li>
+          <li
+            className="nav-item"
+          >
+            <a
+              className="nav-link"
+              href="/about"
+              onClick={[Function]}
+            >
+              About
+            </a>
+          </li>
+          <li
+            className="nav-item"
+          >
+            <a
+              className="nav-link"
+              href="https://www.adamgoldman.me/contact"
+              rel="nofollow noreferrer noopener"
+              target="_blank"
+            >
+              Contact
+            </a>
+          </li>
+          <li
+            className="nav-item"
+          >
+            <a
+              className="nav-link"
+              href="/i-dont-charge-i-accept"
+              onClick={[Function]}
+            >
+              <span>
+                Pricing 
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-heart fa-w-18 "
+                  data-icon="heart"
+                  data-prefix="fas"
+                  role="img"
+                  style={
+                    Object {
+                      "color": "red",
+                      "marginLeft": 5,
+                    }
+                  }
+                  viewBox="0 0 576 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M414.9 24C361.8 24 312 65.7 288 89.3 264 65.7 214.2 24 161.1 24 70.3 24 16 76.9 16 165.5c0 72.6 66.8 133.3 69.2 135.4l187 180.8c8.8 8.5 22.8 8.5 31.6 0l186.7-180.2c2.7-2.7 69.5-63.5 69.5-136C560 76.9 505.7 24 414.9 24z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li
+            className="nav-item"
+            style={
+              Object {
+                "marginLeft": 10,
+              }
+            }
+          >
+            <a
+              className="nav-link btn btn-primary btn-sm"
+              href="https://www.adamgoldman.me/book-session"
+              rel="nofollow noreferrer noopener"
+              target="_blank"
+            >
+              Book a session
+            </a>
+          </li>
+        </ul>
+      </div>
+      <a
+        className="nav-link btn btn-primary btn-sm d-sm-block d-md-none"
+        href="https://www.adamgoldman.me/book-session"
+        rel="nofollow noreferrer noopener"
+        target="_blank"
+      >
+        Book a session
+      </a>
+    </div>
+  </nav>
+  <div>
+    <div
+      style={
+        Object {
+          "padding": 10,
+        }
+      }
+    >
+      <div
+        className="clearfix"
+        style={
+          Object {
+            "float": "left",
+            "width": "60%",
+          }
+        }
+      >
+        <div>
+          <h1
+            className="text-center"
+            id="details"
+          >
+            Details
+          </h1>
+          <div
+            className="form-group"
+          >
+            Title
+            <input
+              className="form-control"
+              onChange={[Function]}
+              placeholder="Title"
+              value="Test title"
+            />
+          </div>
+          <div
+            className="form-group"
+          >
+            Description
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                }
+              }
+            >
+              <input
+                className="form-control"
+                onChange={[Function]}
+                placeholder="Description"
+                value="Test description"
+              />
+            </div>
+          </div>
+          <div
+            className="form-group"
+          >
+            Credits
+            <input
+              className="form-control"
+              onChange={[Function]}
+              placeholder="Credits"
+              value=""
+            />
+          </div>
+          <div
+            className="form-group"
+          >
+            <input
+              checked={true}
+              id="isDraft"
+              onChange={[Function]}
+              style={
+                Object {
+                  "marginRight": 10,
+                }
+              }
+              type="checkbox"
+              value={true}
+            />
+            <label
+              htmlFor="isDraft"
+            >
+              Draft
+            </label>
+          </div>
+          <div
+            className="form-group"
+          >
+            <input
+              checked={true}
+              id="hasReview"
+              onChange={[Function]}
+              style={
+                Object {
+                  "marginRight": 10,
+                }
+              }
+              type="checkbox"
+              value={true}
+            />
+            <label
+              htmlFor="hasReview"
+            >
+              Has review
+            </label>
+          </div>
+          <div
+            className="form-group"
+          >
+            <input
+              checked={true}
+              id="isSavoring"
+              onChange={[Function]}
+              style={
+                Object {
+                  "marginRight": 10,
+                }
+              }
+              type="checkbox"
+              value={true}
+            />
+            <label
+              htmlFor="isSavoring"
+            >
+              Is Savoring
+            </label>
+          </div>
+          <div
+            className="form-group"
+          >
+            <input
+              checked={true}
+              id="isGrief"
+              onChange={[Function]}
+              style={
+                Object {
+                  "marginRight": 10,
+                }
+              }
+              type="checkbox"
+              value={true}
+            />
+            <label
+              htmlFor="isGrief"
+            >
+              Is grief
+            </label>
+          </div>
+          <div
+            className="rbt open clearfix"
+            style={
+              Object {
+                "position": "relative",
+              }
+            }
+            tabIndex={-1}
+          >
+            <div
+              className="rbt-input form-control rbt-input-multi"
+              disabled={false}
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={-1}
+            >
+              <div
+                className="rbt-input-wrapper"
+              >
+                <div
+                  className="rbt-token rbt-token-removeable"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex={0}
+                >
+                  test hidden field
+                  <button
+                    aria-label="Remove"
+                    className="close rbt-close rbt-token-remove-button"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    tabIndex={-1}
+                    type="button"
+                  >
+                    <span
+                      aria-hidden="true"
+                    >
+                      ×
+                    </span>
+                    <span
+                      className="sr-only"
+                    >
+                      Remove
+                    </span>
+                  </button>
+                </div>
+                <div
+                  style={
+                    Object {
+                      "display": "inline-block",
+                      "position": "relative",
+                    }
+                  }
+                >
+                  <div
+                    className={undefined}
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "position": "relative",
+                        "zIndex": 1,
+                      }
+                    }
+                  >
+                    <input
+                      aria-autocomplete="list"
+                      aria-expanded={false}
+                      aria-haspopup="true"
+                      autoComplete="off"
+                      className="rbt-input-main"
+                      disabled={false}
+                      name={undefined}
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      placeholder={null}
+                      role="combobox"
+                      style={
+                        Object {
+                          "backgroundColor": "transparent",
+                          "border": 0,
+                          "boxShadow": "none",
+                          "boxSizing": "content-box",
+                          "cursor": "inherit",
+                          "outline": "none",
+                          "padding": 0,
+                          "width": "1px",
+                        }
+                      }
+                      type="text"
+                      value=""
+                    />
+                    <div
+                      style={
+                        Object {
+                          "height": 0,
+                          "left": 0,
+                          "overflow": "scroll",
+                          "position": "absolute",
+                          "top": 0,
+                          "visibility": "hidden",
+                          "whiteSpace": "pre",
+                        }
+                      }
+                    >
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-atomic={true}
+              aria-live="polite"
+              className="sr-only rbt-sr-status"
+              role="status"
+            >
+              1 selection
+            </div>
+          </div>
+        </div>
+        <hr />
+        <h1
+          className="text-center"
+        >
+          Steps
+        </h1>
+        <div>
+          <div
+            style={
+              Object {
+                "display": "none",
+                "left": "50%",
+                "position": "fixed",
+                "top": "50%",
+                "zIndex": 1,
+              }
+            }
+          >
+            <div
+              className="rbt open clearfix"
+              style={
+                Object {
+                  "position": "relative",
+                }
+              }
+              tabIndex={-1}
+            >
+              <div
+                className="rbt-input form-control"
+                disabled={false}
+                onClick={[Function]}
+                onFocus={[Function]}
+                tabIndex={-1}
+              >
+                <div
+                  className="rbt-input-wrapper"
+                >
+                  <div
+                    style={
+                      Object {
+                        "display": "block",
+                        "position": "relative",
+                      }
+                    }
+                  >
+                    <input
+                      aria-autocomplete="list"
+                      aria-expanded={false}
+                      aria-haspopup="true"
+                      autoComplete="off"
+                      className="rbt-input-main"
+                      disabled={false}
+                      name={undefined}
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      placeholder="Choose Variable"
+                      role="combobox"
+                      style={
+                        Object {
+                          "backgroundColor": "transparent",
+                          "border": 0,
+                          "boxShadow": "none",
+                          "cursor": "inherit",
+                          "outline": "none",
+                          "padding": 0,
+                          "width": "100%",
+                        }
+                      }
+                      type="text"
+                      value=""
+                    />
+                    <div
+                      className={undefined}
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "display": "block",
+                          "pointerEvents": "none",
+                          "position": "absolute",
+                          "top": 0,
+                          "zIndex": 0,
+                        }
+                      }
+                    >
+                      <input
+                        aria-hidden={true}
+                        className="rbt-input-hint"
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "border": 0,
+                            "boxShadow": "none",
+                            "boxSizing": "content-box",
+                            "color": "rgba(0, 0, 0, 0.35)",
+                            "cursor": "inherit",
+                            "outline": "none",
+                            "padding": 0,
+                            "width": "1px",
+                          }
+                        }
+                        tabIndex={-1}
+                        value=""
+                      />
+                      <div
+                        style={
+                          Object {
+                            "height": 0,
+                            "left": 0,
+                            "overflow": "scroll",
+                            "position": "absolute",
+                            "top": 0,
+                            "visibility": "hidden",
+                            "whiteSpace": "pre",
+                          }
+                        }
+                      >
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-atomic={true}
+                aria-live="polite"
+                className="sr-only rbt-sr-status"
+                role="status"
+              >
+                0 selections
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              className="step"
+              id="step-0"
+            >
+              <div
+                className="row"
+                style={
+                  Object {
+                    "marginBottom": 20,
+                  }
+                }
+              >
+                <div
+                  className="col-10"
+                >
+                  <div>
+                    <div
+                      onKeyDown={[Function]}
+                      role="button"
+                      tabIndex={-1}
+                    >
+                      <input
+                        className="h2"
+                        onChange={[Function]}
+                        placeholder="Step title"
+                        style={
+                          Object {
+                            "border": 0,
+                            "marginBottom": 20,
+                            "width": "100%",
+                          }
+                        }
+                        value="Step 0"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    style={
+                      Object {
+                        "marginBottom": 10,
+                      }
+                    }
+                  >
+                    <div
+                      onKeyDown={[Function]}
+                      role="button"
+                      tabIndex={-1}
+                    >
+                      <textarea
+                        className="form-control"
+                        onChange={[Function]}
+                        placeholder="Step description"
+                        required={true}
+                        rows={1}
+                        style={
+                          Object {
+                            "border": 0,
+                            "width": "100%",
+                          }
+                        }
+                        value="Step 0 description"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="stepRevealable isVisible"
+                  >
+                    <div
+                      onKeyDown={[Function]}
+                      role="button"
+                      tabIndex={-1}
+                    >
+                      <textarea
+                        className="form-control text-muted tool-note"
+                        onChange={[Function]}
+                        placeholder="Step notes"
+                        required={true}
+                        rows={1}
+                        style={
+                          Object {
+                            "border": 0,
+                            "width": "100%",
+                          }
+                        }
+                        value="Step 0 notes"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="col-2"
+                >
+                  <p
+                    className="text-right"
+                  >
+                    0
+                    /
+                    0
+                     
+                    <a
+                      className="stepRevealable"
+                      onClick={[Function]}
+                    >
+                      <svg
+                        aria-hidden="true"
+                        className="svg-inline--fa fa-trash-alt fa-w-14 "
+                        data-icon="trash-alt"
+                        data-prefix="far"
+                        role="img"
+                        style={Object {}}
+                        viewBox="0 0 448 512"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M192 188v216c0 6.627-5.373 12-12 12h-24c-6.627 0-12-5.373-12-12V188c0-6.627 5.373-12 12-12h24c6.627 0 12 5.373 12 12zm100-12h-24c-6.627 0-12 5.373-12 12v216c0 6.627 5.373 12 12 12h24c6.627 0 12-5.373 12-12V188c0-6.627-5.373-12-12-12zm132-96c13.255 0 24 10.745 24 24v12c0 6.627-5.373 12-12 12h-20v336c0 26.51-21.49 48-48 48H80c-26.51 0-48-21.49-48-48V128H12c-6.627 0-12-5.373-12-12v-12c0-13.255 10.745-24 24-24h74.411l34.018-56.696A48 48 0 0 1 173.589 0h100.823a48 48 0 0 1 41.16 23.304L349.589 80H424zm-269.611 0h139.223L276.16 50.913A6 6 0 0 0 271.015 48h-94.028a6 6 0 0 0-5.145 2.913L154.389 80zM368 128H80v330a6 6 0 0 0 6 6h276a6 6 0 0 0 6-6V128z"
+                          fill="currentColor"
+                          style={Object {}}
+                        />
+                      </svg>
+                    </a>
+                  </p>
+                  <select
+                    className="select stepRevealable"
+                    onChange={[Function]}
+                    required={true}
+                    style={
+                      Object {
+                        "marginRight": 5,
+                      }
+                    }
+                    value="radio"
+                  >
+                    <option
+                      value="radio"
+                    >
+                      Radio
+                    </option>
+                    <option
+                      value="checkbox"
+                    >
+                      Checkbox
+                    </option>
+                    <option
+                      value="short"
+                    >
+                      Short
+                    </option>
+                    <option
+                      value="long"
+                    >
+                      Long
+                    </option>
+                    <option
+                      value="flash"
+                    >
+                      flash
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <div>
+                    <div
+                      className="row answer"
+                    >
+                      <div
+                        className="col-10"
+                      >
+                        <input
+                          className="btn btn-primary btn-block text-left"
+                          onChange={[Function]}
+                          onKeyPress={[Function]}
+                          placeholder="answer #0"
+                          readOnly={undefined}
+                          value="answer 1"
+                        />
+                      </div>
+                      <div
+                        className="col-2 text-right answerActions"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          className="svg-inline--fa fa-trash-alt fa-w-14 "
+                          data-icon="trash-alt"
+                          data-prefix="far"
+                          onClick={[Function]}
+                          role="img"
+                          style={Object {}}
+                          viewBox="0 0 448 512"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M192 188v216c0 6.627-5.373 12-12 12h-24c-6.627 0-12-5.373-12-12V188c0-6.627 5.373-12 12-12h24c6.627 0 12 5.373 12 12zm100-12h-24c-6.627 0-12 5.373-12 12v216c0 6.627 5.373 12 12 12h24c6.627 0 12-5.373 12-12V188c0-6.627-5.373-12-12-12zm132-96c13.255 0 24 10.745 24 24v12c0 6.627-5.373 12-12 12h-20v336c0 26.51-21.49 48-48 48H80c-26.51 0-48-21.49-48-48V128H12c-6.627 0-12-5.373-12-12v-12c0-13.255 10.745-24 24-24h74.411l34.018-56.696A48 48 0 0 1 173.589 0h100.823a48 48 0 0 1 41.16 23.304L349.589 80H424zm-269.611 0h139.223L276.16 50.913A6 6 0 0 0 271.015 48h-94.028a6 6 0 0 0-5.145 2.913L154.389 80zM368 128H80v330a6 6 0 0 0 6 6h276a6 6 0 0 0 6-6V128z"
+                            fill="currentColor"
+                            style={Object {}}
+                          />
+                        </svg>
+                      </div>
+                      <div
+                        className="col-10 answerOptionCol"
+                      >
+                        <div
+                          className="answerOption"
+                        >
+                          <div
+                            className="answerOptionToggle"
+                            onClick={[Function]}
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-paper-plane fa-w-16 "
+                              data-icon="paper-plane"
+                              data-prefix="far"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 512 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M440 6.5L24 246.4c-34.4 19.9-31.1 70.8 5.7 85.9L144 379.6V464c0 46.4 59.2 65.5 86.6 28.6l43.8-59.1 111.9 46.2c5.9 2.4 12.1 3.6 18.3 3.6 8.2 0 16.3-2.1 23.6-6.2 12.8-7.2 21.6-20 23.9-34.5l59.4-387.2c6.1-40.1-36.9-68.8-71.5-48.9zM192 464v-64.6l36.6 15.1L192 464zm212.6-28.7l-153.8-63.5L391 169.5c10.7-15.5-9.5-33.5-23.7-21.2L155.8 332.6 48 288 464 48l-59.4 387.3z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </div>
+                          <input
+                            className="answerOptionField"
+                            id="goToStepByNum"
+                            onChange={[Function]}
+                            placeholder="goToStepByNum"
+                            type="text"
+                            value={undefined}
+                          />
+                        </div>
+                        <div
+                          className="answerOption"
+                        >
+                          <div
+                            className="answerOptionToggle"
+                            onClick={[Function]}
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-link fa-w-16 "
+                              data-icon="link"
+                              data-prefix="fas"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 512 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </div>
+                          <input
+                            className="answerOptionField"
+                            id="link"
+                            onChange={[Function]}
+                            placeholder="link"
+                            type="text"
+                            value={undefined}
+                          />
+                        </div>
+                        <div
+                          className="answerOption"
+                        >
+                          <div
+                            className="answerOptionToggle"
+                            onClick={[Function]}
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-external-link-alt fa-w-18 "
+                              data-icon="external-link-alt"
+                              data-prefix="fas"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 576 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M576 24v127.984c0 21.461-25.96 31.98-40.971 16.971l-35.707-35.709-243.523 243.523c-9.373 9.373-24.568 9.373-33.941 0l-22.627-22.627c-9.373-9.373-9.373-24.569 0-33.941L442.756 76.676l-35.703-35.705C391.982 25.9 402.656 0 424.024 0H552c13.255 0 24 10.745 24 24zM407.029 270.794l-16 16A23.999 23.999 0 0 0 384 303.765V448H64V128h264a24.003 24.003 0 0 0 16.97-7.029l16-16C376.089 89.851 365.381 64 344 64H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V287.764c0-21.382-25.852-32.09-40.971-16.97z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </div>
+                          <input
+                            className="answerOptionField"
+                            id="linkNew"
+                            onChange={[Function]}
+                            placeholder="linkNew"
+                            type="text"
+                            value={undefined}
+                          />
+                        </div>
+                        <div
+                          className="answerOption"
+                        >
+                          <div
+                            className="answerOptionToggle"
+                            onClick={[Function]}
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-exclamation fa-w-6 "
+                              data-icon="exclamation"
+                              data-prefix="fas"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 192 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M176 432c0 44.112-35.888 80-80 80s-80-35.888-80-80 35.888-80 80-80 80 35.888 80 80zM25.26 25.199l13.6 272C39.499 309.972 50.041 320 62.83 320h66.34c12.789 0 23.331-10.028 23.97-22.801l13.6-272C167.425 11.49 156.496 0 142.77 0H49.23C35.504 0 24.575 11.49 25.26 25.199z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </div>
+                          <input
+                            className="answerOptionField"
+                            id="concern"
+                            onChange={[Function]}
+                            placeholder="concern"
+                            type="text"
+                            value={undefined}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="col-10 stepRevealable"
+                  style={
+                    Object {
+                      "display": "flex",
+                      "justifyContent": "space-between",
+                      "marginTop": 15,
+                    }
+                  }
+                >
+                  <div
+                    className="form-check"
+                  >
+                    <input
+                      checked={false}
+                      className="form-check-input"
+                      id="step-0-other-toggle"
+                      onChange={[Function]}
+                      type="checkbox"
+                    />
+                    <label
+                      className="form-check-label"
+                      htmlFor="step-0-other-toggle"
+                    >
+                      Other
+                    </label>
+                  </div>
+                  <a
+                    onClick={[Function]}
+                  >
+                    Template A
+                  </a>
+                  <a
+                    onClick={[Function]}
+                  >
+                    + answer
+                  </a>
+                </div>
+              </div>
+              <a
+                className="pull-right stepRevealable"
+                onClick={[Function]}
+              >
+                + Step
+              </a>
+              <hr
+                style={
+                  Object {
+                    "borderTopWidth": 1,
+                    "clear": "both",
+                    "marginBottom": 70,
+                    "marginTop": 70,
+                  }
+                }
+              />
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "padding": 20,
+              }
+            }
+          >
+            <a
+              onClick={[Function]}
+              style={
+                Object {
+                  "fontSize": 20,
+                  "marginRight": 20,
+                }
+              }
+            >
+              + Step
+            </a>
+            <a
+              onClick={[Function]}
+              style={
+                Object {
+                  "fontSize": 20,
+                }
+              }
+            >
+              + Duplicate Step
+            </a>
+          </div>
+        </div>
+        <div
+          className="controls"
+        >
+          <a
+            className="control"
+            href="/tools/test"
+            onClick={[Function]}
+            target="_blank"
+          >
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-eye fa-w-18 "
+              data-icon="eye"
+              data-prefix="fas"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 576 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M569.354 231.631C512.969 135.949 407.81 72 288 72 168.14 72 63.004 135.994 6.646 231.631a47.999 47.999 0 0 0 0 48.739C63.031 376.051 168.19 440 288 440c119.86 0 224.996-63.994 281.354-159.631a47.997 47.997 0 0 0 0-48.738zM288 392c-75.162 0-136-60.827-136-136 0-75.162 60.826-136 136-136 75.162 0 136 60.826 136 136 0 75.162-60.826 136-136 136zm104-136c0 57.438-46.562 104-104 104s-104-46.562-104-104c0-17.708 4.431-34.379 12.236-48.973l-.001.032c0 23.651 19.173 42.823 42.824 42.823s42.824-19.173 42.824-42.823c0-23.651-19.173-42.824-42.824-42.824l-.032.001C253.621 156.431 270.292 152 288 152c57.438 0 104 46.562 104 104z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+          <a
+            className="control"
+            onClick={[Function]}
+          >
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-save fa-w-14 "
+              data-icon="save"
+              data-prefix="far"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 448 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M433.941 129.941l-83.882-83.882A48 48 0 0 0 316.118 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V163.882a48 48 0 0 0-14.059-33.941zM272 80v80H144V80h128zm122 352H54a6 6 0 0 1-6-6V86a6 6 0 0 1 6-6h42v104c0 13.255 10.745 24 24 24h176c13.255 0 24-10.745 24-24V83.882l78.243 78.243a6 6 0 0 1 1.757 4.243V426a6 6 0 0 1-6 6zM224 232c-48.523 0-88 39.477-88 88s39.477 88 88 88 88-39.477 88-88-39.477-88-88-88zm0 128c-22.056 0-40-17.944-40-40s17.944-40 40-40 40 17.944 40 40-17.944 40-40 40z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+          <a
+            className="control"
+            onClick={[Function]}
+          >
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-trash-alt fa-w-14 "
+              data-icon="trash-alt"
+              data-prefix="far"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 448 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M192 188v216c0 6.627-5.373 12-12 12h-24c-6.627 0-12-5.373-12-12V188c0-6.627 5.373-12 12-12h24c6.627 0 12 5.373 12 12zm100-12h-24c-6.627 0-12 5.373-12 12v216c0 6.627 5.373 12 12 12h24c6.627 0 12-5.373 12-12V188c0-6.627-5.373-12-12-12zm132-96c13.255 0 24 10.745 24 24v12c0 6.627-5.373 12-12 12h-20v336c0 26.51-21.49 48-48 48H80c-26.51 0-48-21.49-48-48V128H12c-6.627 0-12-5.373-12-12v-12c0-13.255 10.745-24 24-24h74.411l34.018-56.696A48 48 0 0 1 173.589 0h100.823a48 48 0 0 1 41.16 23.304L349.589 80H424zm-269.611 0h139.223L276.16 50.913A6 6 0 0 0 271.015 48h-94.028a6 6 0 0 0-5.145 2.913L154.389 80zM368 128H80v330a6 6 0 0 0 6 6h276a6 6 0 0 0 6-6V128z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+          <a
+            className="control"
+            onClick={[Function]}
+          >
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-database fa-w-14 "
+              data-icon="database"
+              data-prefix="fas"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 448 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M448 73.143v45.714C448 159.143 347.667 192 224 192S0 159.143 0 118.857V73.143C0 32.857 100.333 0 224 0s224 32.857 224 73.143zM448 176v102.857C448 319.143 347.667 352 224 352S0 319.143 0 278.857V176c48.125 33.143 136.208 48.572 224 48.572S399.874 209.143 448 176zm0 160v102.857C448 479.143 347.667 512 224 512S0 479.143 0 438.857V336c48.125 33.143 136.208 48.572 224 48.572S399.874 369.143 448 336z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div
+        className="clearfix"
+        style={
+          Object {
+            "position": "fixed",
+            "right": 0,
+            "width": "35%",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "maxHeight": "90vh",
+              "overflowY": "scroll",
+            }
+          }
+        >
+          <h2>
+            TOC
+          </h2>
+          <a
+            onClick={[Function]}
+          >
+            Details
+          </a>
+          <div
+            style={
+              Object {
+                "background": "lightgrey",
+                "padding": 2,
+              }
+            }
+          >
+            <div>
+              <div>
+                <div
+                  aria-grabbed={false}
+                  data-react-beautiful-dnd-drag-handle="1"
+                  draggable={false}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onDrop={[Function]}
+                  onKeyDown={[Function]}
+                  onMouseDown={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  style={
+                    Object {
+                      "background": "",
+                      "border": "1px solid #000",
+                      "margin": "0 0 2px 0",
+                      "padding": 4,
+                      "userSelect": "none",
+                    }
+                  }
+                  tabIndex={0}
+                >
+                  <a
+                    onClick={[Function]}
+                  >
+                    00
+                  </a>
+                   - 
+                  Step 0
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="container"
+  >
+    <div
+      className="footer"
+    >
+      <p
+        className="pull-left"
+      >
+        Copyright © 2017 
+        <a
+          className="link"
+          href="/"
+          onClick={[Function]}
+        >
+          Adam Goldman
+        </a>
+      </p>
+      <p
+        className="pull-right"
+      >
+        <a
+          className="link"
+          href="/legal-stuff"
+          onClick={[Function]}
+        >
+          legal stuff
+        </a>
+        <a
+          className="link"
+          href="/privacy"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginLeft": 10,
+            }
+          }
+        >
+          Privacy
+        </a>
+      </p>
+      <div
+        className="clearfix"
+      />
+    </div>
+  </div>
+  <a
+    className="container"
+    href="https://www.adamgoldman.me/contact"
+    rel="nofollow noreferrer noopener"
+    target="_blank"
+  >
+    <img
+      alt="Messenger Link"
+      src="https://cdn.supple.com.au/wp-content/themes/supple/img/msg.png"
+    />
+  </a>
+</div>
+`;

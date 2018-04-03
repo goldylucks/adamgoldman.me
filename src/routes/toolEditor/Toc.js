@@ -7,7 +7,6 @@ import { reorder, scrollToElem } from '../../utils'
 
 import Draggable from './Draggable'
 
-
 const Toc = ({ steps, onReorderSteps }) => (
   <div style={{ maxHeight: '90vh', overflowY: 'scroll' }}>
     <h2>TOC</h2>
@@ -19,9 +18,11 @@ const Toc = ({ steps, onReorderSteps }) => (
             ref={provided.innerRef}
             style={getListStyle(snapshot.isDraggingOver)}
           >
-            {steps.map(({ title }, sIdx) => (
-              <Draggable sIdx={sIdx} title={title} />
+            <div>
+              {steps.map(({ title }, sIdx) => (
+                <Draggable key={sIdx} sIdx={sIdx} title={title} />
               ))}
+            </div>
             {provided.placeholder}
           </div>
           )}

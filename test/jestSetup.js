@@ -1,3 +1,5 @@
+jest.mock('../src/utils/fbUtils')
+
 process.env.BROWSER = true
 
 class LocalStorageMock {

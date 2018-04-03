@@ -36,19 +36,22 @@ class Steps extends Component {
     return (
       <div>
         {this.renderPromptVariableAc()}
-        {this.props.steps.map((step, sIdx) => (
-          <Step
-            onPromptVariable={this.promptVariable}
-            onRegisterUnpromptVariable={this.registerUnpromptVariable}
-            step={step}
-            sIdx={sIdx}
-            onRef={(el) => { this.elems[`childStep-${sIdx}`] = el }}
-            stepCount={this.props.steps.length - 1}
-            onUpdateStep={this.updateStep}
-            onRemoveStep={this.removeStep}
-            onAddStep={this.addStep}
-          />
-        ))}
+        <div>
+          {this.props.steps.map((step, sIdx) => (
+            <Step
+              onPromptVariable={this.promptVariable}
+              onRegisterUnpromptVariable={this.registerUnpromptVariable}
+              step={step}
+              sIdx={sIdx}
+              key={sIdx}
+              onRef={(el) => { this.elems[`childStep-${sIdx}`] = el }}
+              stepCount={this.props.steps.length - 1}
+              onUpdateStep={this.updateStep}
+              onRemoveStep={this.removeStep}
+              onAddStep={this.addStep}
+            />
+          ))}
+        </div>
         <div style={{ padding: 20 }}>
           <a onClick={this.addStepAtEnd} style={{ marginRight: 20, fontSize: 20 }}>+ Step</a>
           <a onClick={this.duplicateStepAtEnd} style={{ fontSize: 20 }}>+ Duplicate Step</a>

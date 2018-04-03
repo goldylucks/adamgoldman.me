@@ -6,7 +6,7 @@ import { nn, scrollToElem } from '../../utils'
 
 export default class Draggable_ extends React.Component {
     static propTypes = {
-      sIdx: PropTypes.string.isRequired,
+      sIdx: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
     }
 

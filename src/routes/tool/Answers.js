@@ -14,7 +14,7 @@ type Props = {
   path: String,
 }
 
-class AnswersV4 extends React.Component {
+class Answers extends React.Component {
   state = {
     other: '',
   }
@@ -70,8 +70,8 @@ class AnswersV4 extends React.Component {
   concernClick = () => global.alert('Let\'s talk about it in messenger, click "get started" if messenger asks you')
 }
 
-AnswersV4.defaultProps = {
+Answers.defaultProps = {
   onSubmitOther: () => {},
 }
 
-export default AnswersV4
+export default Answers

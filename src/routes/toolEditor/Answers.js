@@ -108,50 +108,52 @@ class Answers extends React.Component {
 
     return (
       <div>
-        {answers.map((a, aIdx) => (
-          <div>
-            <div className={cx('row', s.answer)}>
-              <div className="col-10">
-                <input
-                  onKeyPress={answerKeyPress(answers, aIdx, onUpdateStepAnswers)}
-                  ref={(el) => { elems[`answer-${aIdx}`] = el }}
-                  className="btn btn-primary btn-block text-left"
-                  placeholder={`answer #${aIdx}`}
-                  value={a.text}
-                  onChange={changeAnswerKey('text', answers, aIdx, onUpdateStepAnswers)}
-                  readOnly={a.isReadOnly}
-                />
-              </div>
-              <div className={cx('col-2 text-right', s.answerActions)}>
-                <FontAwesomeIcon
-                  onClick={removeAnswer(answers, aIdx, onUpdateStepAnswers)}
-                  icon={faTrashAlt}
-                />
-              </div>
-              <div className={cx('col-10', s.answerOptionCol, { [s.isVisible]: a.hasGoToStep || a.isLink || a.isLinkNew || a.isConcern })}>
-                {[{ toggleId: 'hasGoToStep', icon: faPaperPlane, fieldId: 'goToStepByNum' }, { toggleId: 'isLink', icon: faLink, fieldId: 'link' }, { toggleId: 'isLinkNew', icon: faExternalLinkAlt, fieldId: 'linkNew' }, { toggleId: 'isConcern', icon: faExclamation, fieldId: 'concern' }]
-            .map(({ toggleId, icon, fieldId }) => (
-              <div className={s.answerOption}>
-                <div
-                  className={s.answerOptionToggle}
-                  onClick={toggleAnswerOption(toggleId, answers, aIdx, onUpdateStepAnswers)}
-                >
-                  <FontAwesomeIcon icon={icon} />
+        <div>
+          {answers.map((a, aIdx) => (
+            <div key={aIdx}>
+              <div className={cx('row', s.answer)}>
+                <div className="col-10">
+                  <input
+                    onKeyPress={answerKeyPress(answers, aIdx, onUpdateStepAnswers)}
+                    ref={(el) => { elems[`answer-${aIdx}`] = el }}
+                    className="btn btn-primary btn-block text-left"
+                    placeholder={`answer #${aIdx}`}
+                    value={a.text}
+                    onChange={changeAnswerKey('text', answers, aIdx, onUpdateStepAnswers)}
+                    readOnly={a.isReadOnly}
+                  />
                 </div>
-                <input
-                  type="text"
-                  className={cx(s.answerOptionField, { [s.isVisible]: a[toggleId] })}
-                  id={fieldId}
-                  placeholder={fieldId}
-                  value={a[fieldId]}
-                  onChange={changeAnswerKey(fieldId, answers, aIdx, onUpdateStepAnswers)}
-                />
-              </div>
-            ))}
+                <div className={cx('col-2 text-right', s.answerActions)}>
+                  <FontAwesomeIcon
+                    onClick={removeAnswer(answers, aIdx, onUpdateStepAnswers)}
+                    icon={faTrashAlt}
+                  />
+                </div>
+                <div className={cx('col-10', s.answerOptionCol, { [s.isVisible]: a.hasGoToStep || a.isLink || a.isLinkNew || a.isConcern })}>
+                  {[{ toggleId: 'hasGoToStep', icon: faPaperPlane, fieldId: 'goToStepByNum' }, { toggleId: 'isLink', icon: faLink, fieldId: 'link' }, { toggleId: 'isLinkNew', icon: faExternalLinkAlt, fieldId: 'linkNew' }, { toggleId: 'isConcern', icon: faExclamation, fieldId: 'concern' }]
+                  .map(({ toggleId, icon, fieldId }) => (
+                    <div className={s.answerOption} key={fieldId}>
+                      <div
+                        className={s.answerOptionToggle}
+                        onClick={toggleAnswerOption(toggleId, answers, aIdx, onUpdateStepAnswers)}
+                      >
+                        <FontAwesomeIcon icon={icon} />
+                      </div>
+                      <input
+                        type="text"
+                        className={cx(s.answerOptionField, { [s.isVisible]: a[toggleId] })}
+                        id={fieldId}
+                        placeholder={fieldId}
+                        value={a[fieldId]}
+                        onChange={changeAnswerKey(fieldId, answers, aIdx, onUpdateStepAnswers)}
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
         <div className={cx('col-10', s.stepRevealable)} style={{ display: 'flex', justifyContent: 'space-between', marginTop: 15 }}>
           <div className="form-check">
             <input type="checkbox" className="form-check-input" id={`step-${sIdx}-other-toggle`} checked={hasOtherAnswer(answers)} onChange={toggleHasOtherAnswer(answers, onUpdateStepAnswers)} />
