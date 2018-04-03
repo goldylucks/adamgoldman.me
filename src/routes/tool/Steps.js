@@ -35,7 +35,9 @@ class Steps extends React.Component {
   }
 
   componentWillUpdate(nextProps, nextState) {
-    this.props.onUpdateProgress(nextState)
+    if (nextState.currentStep !== this.state.currentStep) {
+      this.props.onUpdateProgress(nextState)
+    }
   }
 
   componentWillUnmount() {
