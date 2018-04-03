@@ -1,12 +1,33 @@
 import axios from 'axios'
 
-import { DOMAIN } from '../constants'
+import { DOMAIN, FB_APP_ID } from '../constants'
 
 export const fbAuth = (cb) => {
   global.FB.login(res => fbAuth2(res, cb), { scope: 'email,public_profile' })
 }
 
 export const getFbShareUrl = path => `https://www.facebook.com/sharer/sharer.php?u=${DOMAIN}${path}`
+
+/* eslint-disable */
+export const initFbSdk = () => {
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : FB_APP_ID,
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v2.11'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+};
+/* eslint-enable */
 
 function fbAuth2(response, cb) {
   if (response.status !== 'connected') {

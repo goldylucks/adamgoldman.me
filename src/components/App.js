@@ -12,7 +12,8 @@ import PropTypes from 'prop-types'
 import axios from 'axios'
 
 import { isMobile } from '../utils'
-import { FB_APP_ID, BASE_URL } from '../constants'
+import { initFbSdk } from '../utils/fbUtils'
+import { BASE_URL } from '../constants'
 import LoadingSite from '../components/LoadingSite'
 
 axios.defaults.baseURL = BASE_URL
@@ -47,27 +48,6 @@ const ContextType = {
  *     container,
  *   );
  */
-
-/* eslint-disable */
-const initFbSdk = () => {
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId            : FB_APP_ID,
-      autoLogAppEvents : true,
-      xfbml            : true,
-      version          : 'v2.11'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-};
-/* eslint-enable */
 
 class App extends React.PureComponent {
   static propTypes = {
@@ -114,18 +94,18 @@ class App extends React.PureComponent {
 
   logout = () => {
     global.console.log('user logout')
-    localStorage.removeItem('user')
+    global.localStorage.removeItem('user')
     delete axios.defaults.headers.common.authorization // TODO :: check if this works
     this.setState({ user: {} })
   }
 
   updateUser = (user) => {
     this.setState({ user })
-    localStorage.setItem('user', JSON.stringify(user))
+    global.localStorage.setItem('user', JSON.stringify(user))
   }
 
   syncUserFromLS() {
-    let user = localStorage.getItem('user')
+    let user = global.localStorage.getItem('user')
     if (user) {
       user = JSON.parse(user)
       this.setState({ user })

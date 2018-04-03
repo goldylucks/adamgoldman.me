@@ -57,8 +57,8 @@ class MainNavMobile extends React.Component {
             <h3 className={s.mobileMenuHeadline} onClick={this.toggle}>{this.props.title}</h3>
             <ul className="navbar-nav">
               {
-                [{ to: this.props.logoLink, text: 'Home' }].concat(this.props.navItems).map(({ to, href, text }) => (
-                  <li className={cx('nav-item', { active: to && to.substr(1) === this.props.basePath })} key={to}>
+                [{ to: this.props.logoLink, text: 'Home' }].concat(this.props.navItems).map(({ to, href, text }, idx) => (
+                  <li className={cx('nav-item', { active: to && to.substr(1) === this.props.basePath })} key={idx}>
                     { to
                       ? <Link className={cx('nav-link', s.navLink)} to={to}>{text}</Link>
                       : <ExternalA className={cx('nav-link', s.navLink)} href={href}>{text}</ExternalA>

@@ -38,8 +38,8 @@ class MainNav extends React.Component {
           <div className="collapse navbar-collapse">
             <ul className="navbar-nav ml-auto">
               {
-            this.navItems().map(({ to, href, text }) => (
-              <li className={cx('nav-item', { active: to && to.substr(1) === this.basePath() })} key={to}>
+            this.navItems().map(({ to, href, text }, idx) => (
+              <li className={cx('nav-item', { active: to && to.substr(1) === this.basePath() })} key={idx}>
                 { to
                 ? <Link className="nav-link" to={to}>{text}</Link>
                 : <ExternalA className="nav-link" href={href}>{text}</ExternalA>
