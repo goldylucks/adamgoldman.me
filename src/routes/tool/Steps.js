@@ -277,22 +277,22 @@ class Steps extends React.Component {
 
   populateStateFromProps() {
     const {
-      currentStep, answerByStep, price, stepsStack,
+      currentStep, price, stepsStack,
     } = this.props
     this.setState({
       currentStep,
-      answerByStep,
+      answerByStep: this.initialAnswerByStepState(),
       price,
       stepsStack, // eslint-disable-line react/no-unused-state
     })
   }
 
-  populateAnswersState() {
-    const answerByStep = { ...this.state.answerByStep }
+  initialAnswerByStepState() {
+    const answerByStep = { ...this.props.answerByStep }
     for (let i = this.props.currentStep; i < this.props.steps.length; i += 1) {
       answerByStep[i] = ''
     }
-    this.setState({ answerByStep })
+    return answerByStep
   }
 
   back = () => {
