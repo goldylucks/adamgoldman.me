@@ -8,6 +8,8 @@ import faPaperPlane from '@fortawesome/fontawesome-free-regular/faPaperPlane'
 import faTrashAlt from '@fortawesome/fontawesome-free-regular/faTrashAlt'
 import _ from 'lodash'
 
+import InputTrigger from '../../components/InputTrigger'
+
 import s from './ToolEditor.css'
 import Answers from './Answers'
 import AnswerOption from './AnswerOption'
@@ -20,28 +22,85 @@ class Step extends Component {
     onUpdateStep: PropTypes.func.isRequired,
     onRemoveStep: PropTypes.func.isRequired,
     onAddStep: PropTypes.func.isRequired,
+    onPromptVariable: PropTypes.func.isRequired,
+    onRef: PropTypes.func.isRequired,
+    onRegisterUnpromptVariable: PropTypes.func.isRequired,
   }
-
+  componentDidMount() {
+    this.props.onRef(this)
+  }
   shouldComponentUpdate(nextProps) {
     return !_.isEqual(this.props.step, nextProps.step)
     || this.props.sIdx !== nextProps.sIdx
     || this.props.stepCount !== nextProps.stepCount
   }
+  componentWillUnmount() {
+    this.props.onRef(null)
+  }
 
   render() {
-    const { step, sIdx, stepCount } = this.props
+    const {
+      step, sIdx, stepCount, onPromptVariable, onRegisterUnpromptVariable,
+    } = this.props
     return (
       <div key={sIdx} id={`step-${sIdx}`} className={s.step}>
         <div className="row" style={{ marginBottom: 20 }}>
           <div className="col-10">
             <div>
-              <input style={{ width: '100%', border: 0, marginBottom: 20 }} ref={(el) => { this.elems[`${sIdx}-title`] = el }} className="h2" placeholder="Step title" value={step.title} onChange={this.changeStepKey('title')} />
+              <InputTrigger
+                onStart={(obj) => {
+                  onPromptVariable({ sIdx, key: 'title', promptIdx: obj.cursor.selectionStart - 1 })
+                }}
+                endTrigger={endTriggerHandler => onRegisterUnpromptVariable(endTriggerHandler, sIdx, 'title')}
+                elementRef={this.elems.title}
+              >
+                <input
+                  style={{ width: '100%', border: 0, marginBottom: 20 }}
+                  ref={(el) => { this.elems.title = el }}
+                  className="h2"
+                  placeholder="Step title"
+                  value={step.title}
+                  onChange={this.changeStepKey('title')}
+                />
+              </InputTrigger>
             </div>
             <div style={{ marginBottom: 10 }}>
-              <TextareaAutosize style={{ width: '100%', border: 0 }} required className="form-control" placeholder="Step description" value={step.description} onChange={this.changeStepKey('description')} />
+              <InputTrigger
+                onStart={(obj) => {
+                  onPromptVariable({ sIdx, key: 'description', promptIdx: obj.cursor.selectionStart - 1 })
+                }}
+                endTrigger={endTriggerHandler => onRegisterUnpromptVariable(endTriggerHandler, sIdx, 'description')}
+                elementRef={this.elems.description}
+              >
+                <TextareaAutosize
+                  style={{ width: '100%', border: 0 }}
+                  required
+                  className="form-control"
+                  placeholder="Step description"
+                  value={step.description}
+                  onChange={this.changeStepKey('description')}
+                  innerRef={(el) => { this.elems.description = el }}
+                />
+              </InputTrigger>
             </div>
             <div className={cx(s.stepRevealable, { [s.isVisible]: step.notes })}>
-              <TextareaAutosize style={{ width: '100%', border: 0 }} required className="form-control text-muted tool-note" placeholder="Step notes" value={step.notes} onChange={this.changeStepKey('notes')} />
+              <InputTrigger
+                onStart={(obj) => {
+                  onPromptVariable({ sIdx, key: 'notes', promptIdx: obj.cursor.selectionStart - 1 })
+                }}
+                endTrigger={endTriggerHandler => onRegisterUnpromptVariable(endTriggerHandler, sIdx, 'notes')}
+                elementRef={this.elems.notes}
+              >
+                <TextareaAutosize
+                  style={{ width: '100%', border: 0 }}
+                  required
+                  className="form-control text-muted tool-note"
+                  placeholder="Step notes"
+                  value={step.notes}
+                  onChange={this.changeStepKey('notes')}
+                  innerRef={(el) => { this.elems.notes = el }}
+                />
+              </InputTrigger>
             </div>
           </div>
           <div className="col-2">

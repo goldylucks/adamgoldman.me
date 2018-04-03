@@ -42,7 +42,11 @@ class ToolEditor extends React.Component {
           {this.renderDetails()}
           <hr />
           <h1 className="text-center">Steps</h1>
-          <Steps steps={this.state.steps} onUpdateSteps={this.updateSteps} />
+          <Steps
+            steps={this.state.steps}
+            onUpdateSteps={this.updateSteps}
+            hiddenFields={this.state.hiddenFields}
+          />
           <Controls tool={{ ...this.state, url: this.props.url }} />
         </div>
         <div className="clearfix" style={{ width: '35%', right: 0, position: 'fixed' }}>
