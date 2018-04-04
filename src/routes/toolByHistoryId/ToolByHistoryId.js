@@ -63,7 +63,7 @@ class ToolByHistoryId extends React.Component {
   }
 
   updateProgress = (nextState) => {
-    if (nextState.currentStep === this.state.data.steps.length - 1) {
+    if (nextState.currentStepNum === this.state.data.steps.length - 1) {
       nextState.status = 'Completed'
     }
     axios.put(`/api/toolsHistory/${this.props.historyId}`, { ...this.state.data, ...nextState })

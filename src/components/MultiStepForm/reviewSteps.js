@@ -16,7 +16,7 @@ export default [
   },
   {
     title: 'Value first biz model - choose',
-    id: 'choose-payment-amount',
+    id: 'choosePaymentAmount',
     description: `Great!
 I’m glad you’ve found value in our time together.
 

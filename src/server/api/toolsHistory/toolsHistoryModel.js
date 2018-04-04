@@ -39,7 +39,7 @@ function getSchema() {
       enum: ['In Progress', 'Completed'],
     },
 
-    currentStep: {
+    currentStepNum: {
       type: Number,
       required: true,
       default: 0,

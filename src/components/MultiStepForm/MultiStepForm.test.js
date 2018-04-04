@@ -14,7 +14,7 @@ describe('MultiStepForm', () => {
 }]}
         hiddenFields={[]}
         path="/tools/trauma-relief/5ac43ef0d3b723075ebfd200"
-        currentStep={0}
+        currentStepNum={0}
         answerByStep={{}}
         price={0}
         stepsStack={[]}
@@ -67,7 +67,7 @@ test('MultiStepForm with data', () => {
         ]}
         hiddenFields={[]}
         path="/tools/trauma-relief/5ac43ef0d3b723075ebfd200"
-        currentStep={1}
+        currentStepNum={1}
         answerByStep={{
           0: 'My name is neo',
         }}

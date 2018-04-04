@@ -5,8 +5,9 @@ import ReactStars from 'react-stars'
 import { MESSENGER_LINK_TOOL_CONCERN, MESSENGER_LINK_INNER_CIRCLE } from '../../constants'
 import Markdown from '../../components/Markdown'
 import ExternalA from '../../components/ExternalA'
-import { scrollToElem, isMobile } from '../../utils'
+import { isMobile } from '../../utils'
 
+import { stateForGoToStep, stateForBack, stateForStepInputChange, stateForReviewRating, replaceVarsUtil, initialAnswerByStepState, scrollTop } from './multiStepFormUtils'
 import Answers from './Answers'
 
 class Steps extends React.Component {
@@ -14,7 +15,7 @@ class Steps extends React.Component {
     steps: PropTypes.array.isRequired,
     hiddenFields: PropTypes.array.isRequired,
     path: PropTypes.string.isRequired,
-    currentStep: PropTypes.number.isRequired,
+    currentStepNum: PropTypes.number.isRequired,
     answerByStep: PropTypes.object.isRequired,
     price: PropTypes.number.isRequired,
     stepsStack: PropTypes.array.isRequired,
@@ -24,14 +25,18 @@ class Steps extends React.Component {
   state = {
     flashedIdx: 0,
     isFlashing: false,
-    currentStep: this.props.currentStep,
-    answerByStep: this.initialAnswerByStepState(),
+    currentStepNum: this.props.currentStepNum,
+    answerByStep: initialAnswerByStepState({
+      answerByStep: this.props.answerByStep,
+      stepsCount: this.props.steps.length,
+      currentStepNum: this.props.currentStepNum,
+    }),
     price: this.props.price,
     stepsStack: this.props.stepsStack, // eslint-disable-line react/no-unused-state
   }
 
   componentDidUpdate(nextProps, nextState) {
-    if (nextState.currentStep !== this.state.currentStep) {
+    if (nextState.currentStepNum !== this.state.currentStepNum) {
       this.props.onUpdateProgress(nextState)
     }
   }
@@ -87,7 +92,7 @@ class Steps extends React.Component {
       <form onSubmit={this.onInputSubmit}>
         <div className="form-group">
           <input
-            value={this.state.answerByStep[this.state.currentStep]}
+            value={this.state.answerByStep[this.state.currentStepNum]}
             onChange={this.stepInputChange}
             placeholder={this.replaceVars(inputPlaceholder || 'write your answer here')}
             required
@@ -111,7 +116,7 @@ class Steps extends React.Component {
       <form onSubmit={this.onInputSubmit}>
         <div className="form-group">
           <textarea
-            value={this.state.answerByStep[this.state.currentStep]}
+            value={this.state.answerByStep[this.state.currentStepNum]}
             onChange={this.stepInputChange}
             placeholder={this.replaceVars(inputPlaceholder || 'write your answer here')}
             required
@@ -195,7 +200,7 @@ class Steps extends React.Component {
   }
 
   renderBack() {
-    return this.state.currentStep === 0 ? null : <button className="btn btn-secondary btn-sm" style={{ display: 'block', marginBottom: 10 }} onClick={this.back}>Back</button>
+    return this.state.currentStepNum === 0 ? null : <button className="btn btn-secondary btn-sm" style={{ display: 'block', marginBottom: 10 }} onClick={this.back}>Back</button>
   }
 
   // eslint-disable-next-line class-methods-use-this
@@ -207,7 +212,7 @@ class Steps extends React.Component {
     evt.preventDefault()
     const { goToStepByNum } = this.currentStep()
     if (goToStepByNum) {
-      this.goToStep(Number(goToStepByNum), { resetPreviousAnswers: Number(goToStepByNum) < this.state.currentStep }) // eslint-disable-line max-len
+      this.goToStep(Number(goToStepByNum), { shouldResetPreviousAnswers: Number(goToStepByNum) < this.state.currentStepNum }) // eslint-disable-line max-len
     } else {
       this.next()
     }
@@ -218,17 +223,17 @@ class Steps extends React.Component {
     const {
       text, goToStepByNum, isRepeatProcess, price, goToStepById,
     } = this.getAnswerByAidx(aIdx)
-    answerByStep[this.state.currentStep] = text
+    answerByStep[this.state.currentStepNum] = text
     this.setState({ answerByStep })
     if (price) {
       this.setState({ price })
     }
     if (goToStepByNum) {
-      this.goToStep(Number(goToStepByNum), { resetPreviousAnswers: Number(goToStepByNum) < this.state.currentStep }) // eslint-disable-line max-len
+      this.goToStep(Number(goToStepByNum), { shouldResetPreviousAnswers: Number(goToStepByNum) < this.state.currentStepNum }) // eslint-disable-line max-len
     } else if (goToStepById) {
       this.goToStepById(goToStepById)
     } else if (isRepeatProcess) {
-      this.goToStep(Number(0), { resetPreviousAnswers: true })
+      this.goToStep(Number(0), { shouldResetPreviousAnswers: true })
     } else {
       this.next()
     }
@@ -237,10 +242,10 @@ class Steps extends React.Component {
   submitMultipleChoiceOtherAnswer = (aIdx, text) => {
     const answerByStep = { ...this.state.answerByStep }
     const { goToStepByNum } = this.getAnswerByAidx(aIdx)
-    answerByStep[this.state.currentStep] = text
+    answerByStep[this.state.currentStepNum] = text
     this.setState({ answerByStep })
     if (goToStepByNum) {
-      this.goToStep(Number(goToStepByNum), { resetPreviousAnswers: Number(goToStepByNum) < this.state.currentStep }) // eslint-disable-line max-len
+      this.goToStep(Number(goToStepByNum), { shouldResetPreviousAnswers: Number(goToStepByNum) < this.state.currentStepNum }) // eslint-disable-line max-len
     } else {
       this.next()
     }
@@ -271,100 +276,43 @@ class Steps extends React.Component {
     return this.state.answerByStep[this.currentStep().flashStepNum].split(' ')
   }
 
-  initialAnswerByStepState() {
-    const answerByStep = { ...this.props.answerByStep }
-    for (let i = this.props.currentStep; i < this.props.steps.length; i += 1) {
-      answerByStep[i] = ''
-    }
-    return answerByStep
-  }
-
   back = () => {
-    this.setState(({ stepsStack }) => {
-      const currentStep = stepsStack.pop()
-      return { currentStep, stepsStack, flashedIdx: 0 }
-    })
+    this.setState(stateForBack)
     scrollTop()
   }
+
   next = () => {
-    const nextStep = this.state.currentStep + 1
-    this.goToStep(nextStep)
+    this.goToStep(this.state.currentStepNum + 1)
   }
 
-  goToStep = (step, { resetPreviousAnswers } = {}) => {
-    if (resetPreviousAnswers) {
-      this.resetPreviousAnswers(step)
-    }
-    this.setState(state => ({
-      currentStep: step,
-      stepsStack: state.stepsStack.concat(this.state.currentStep),
-      flashedIdx: 0,
-    }))
+  goToStep = (stepToGoTo, { shouldResetPreviousAnswers } = {}) => {
+    this.setState(stateForGoToStep(stepToGoTo, { shouldResetPreviousAnswers }))
     scrollTop()
-  }
-
-  resetPreviousAnswers(step) {
-    this.setState(({ answerByStep, stepsStack }) => {
-      for (let i = this.state.currentStep; i >= step; i -= 1) {
-        delete answerByStep[i]
-      }
-      stepsStack = stepsStack.filter(stepNumber => stepNumber >= step)
-      return { answerByStep, stepsStack }
-    })
   }
 
   stepInputChange = (evt) => {
-    const answerByStep = { ...this.state.answerByStep }
-    answerByStep[this.state.currentStep] = evt.target.value
-    this.setState({ answerByStep })
+    this.setState(stateForStepInputChange(evt.target.value))
   }
 
   currentStep() {
-    return this.props.steps[this.state.currentStep]
+    return this.props.steps[this.state.currentStepNum]
   }
 
   replaceVars(str) {
-    if (!str) {
-      global.console.warn('replaceVars called on empty value')
-      return str
-    }
-    return str.replace(/\${(.*?)}/g, (...args) => {
-      const key = args[1]
-      if (key === 'echo') {
-        return `***“${this.state.answerByStep[this.state.currentStep - 1]}”***`
-      }
-      if (key.indexOf('he') === 0) {
-        return this.state.answerByStep[key.slice(2)].match(/female/i) ? 'she' : 'he'
-      }
-      if (key.indexOf('his') === 0) {
-        return this.state.answerByStep[key.slice(3)].match(/female/i) ? 'her' : 'his'
-      }
-      if (key.indexOf('him') === 0) {
-        return this.state.answerByStep[key.slice(3)].match(/female/i) ? 'her' : 'him'
-      }
-      if (key[0] === 's') {
-        return this.state.answerByStep[key.slice(1)]
-      }
-      if (key[0] === 'h') {
-        return this.props.hiddenFields[key.slice(1)]
-      }
-      return args[1]
+    return replaceVarsUtil({
+      str,
+      hiddenFields: this.props.hiddenFields,
+      answerByStep: this.state.answerByStep,
+      currentStepNum: this.state.currentStepNum,
     })
   }
 
   onStarReviewRating = (rating) => {
-    const answerByStep = { ...this.state.answerByStep }
-    answerByStep[this.state.currentStep] = rating
-    if (rating <= 2) {
-      if (global.confirm('Glad you are being honest with me and yourself. \nI\'d like to hear how I can help you with this and what didn\'t you like.\n\n click "ok" to start a conversation with me on messenger')) {
-        window.open(MESSENGER_LINK_TOOL_CONCERN)
-      }
-      this.goToStepById('finalComments')
-    } else if (rating === 3) {
-      this.goToStepById('finalComments')
-    } else {
-      this.goToStepById('choose-payment-amount')
+    if (rating <= 2 && global.confirm('Glad you are being honest with me and yourself. \nI\'d like to hear how I can help you with this and what didn\'t you like.\n\n click "ok" to start a conversation with me on messenger')) {
+      window.open(MESSENGER_LINK_TOOL_CONCERN)
     }
+    this.setState(stateForReviewRating(rating, this.props.steps))
+    scrollTop()
   }
 
   goToStepById = (id) => {
@@ -374,7 +322,3 @@ class Steps extends React.Component {
   stepNumById = id => this.props.steps.findIndex(s => s.id === id)
 }
 export default Steps
-
-function scrollTop() {
-  return scrollToElem(document.querySelector('html'), 0, 300)
-}

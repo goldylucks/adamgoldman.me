@@ -7,6 +7,7 @@ import faTrashAlt from '@fortawesome/fontawesome-free-regular/faTrashAlt'
 import faSave from '@fortawesome/fontawesome-free-regular/faSave'
 import faEye from '@fortawesome/fontawesome-free-solid/faEye'
 import faDatabase from '@fortawesome/fontawesome-free-solid/faDatabase'
+import _ from 'lodash'
 
 import Link from '../../components/Link'
 
@@ -75,9 +76,7 @@ class Controls extends React.Component {
 
   export = () => {
     const state = cleanEmptyValues({ ...this.props.tool })
-    delete state.__v
-    delete state._id
-    axios.post('/api/tools/export', state)
+    axios.post('/api/tools/export', _.omit(state, ['__v', '_id']))
       .then((res) => {
         global.console.log(res.data)
         global.alert(res.data)
