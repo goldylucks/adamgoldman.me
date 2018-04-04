@@ -379,9 +379,4 @@
     ],
     "url": "coming-to-wholeness"
   },
-  {
-    "title": "Internal Dialog Scrambeler",
-    "description": "Stop recurring intrusive thoughts and limiting beliefs. Perfect for \"what if's, \"I'm not good enough\", and all that lovely things we said to ourselves",
-    "url": "internal-dialog-scrambler"
-  },
 ]
