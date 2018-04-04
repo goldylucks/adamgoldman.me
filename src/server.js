@@ -48,6 +48,8 @@ app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }))
 app.use(bodyParser.json({ limit: '50mb' }))
 app.use(slash(false))
 
+app.use(permanentRedirectsMiddleware)
+
 if (__DEV__) { // eslint-disable-line no-undef
   app.use(morgan('tiny'))
   app.enable('trust proxy')
@@ -176,4 +178,14 @@ function forceSsl(req, res, next) {
     return res.redirect(['https://', req.get('Host'), req.url].join(''))
   }
   return next()
+}
+
+function permanentRedirectsMiddleware(req, res, next) {
+  if (req.originalUrl === '/tools/internal-dialog-scrambeler') {
+    res.redirect(301, '/tools/internal-dialog-scrambler')
+  } else if (req.originalUrl === '/tools/grief-to-appreciation') {
+    res.redirect(301, '/tools/reunion')
+  } else {
+    next()
+  }
 }
