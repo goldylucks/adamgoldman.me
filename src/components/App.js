@@ -73,6 +73,15 @@ class App extends React.PureComponent {
   }
 
   render() {
+    return this.renderInner()
+    // return (
+    //   <React.StrictMode>
+    //     {this.renderInner()}
+    //   </React.StrictMode>
+    // )
+  }
+
+  renderInner() {
     // NOTE: If you need to add or modify header, footer etc. of the app,
     // please do that inside the Layout component.
     if (!this.state.isUiReady) {
@@ -93,9 +102,8 @@ class App extends React.PureComponent {
   }
 
   logout = () => {
-    global.console.log('user logout')
     global.localStorage.removeItem('user')
-    delete axios.defaults.headers.common.authorization // TODO :: check if this works
+    delete axios.defaults.headers.common.authorization
     this.setState({ user: {} })
   }
 
