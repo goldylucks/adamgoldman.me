@@ -49,11 +49,7 @@ class Transcript extends React.Component {
     isAdmin: false,
     messageEditableIdx: '',
     messageEditableValue: '',
-    transcript: [],
-  }
-
-  componentWillMount() {
-    this.setState({ transcript: this.props.transcript })
+    transcript: this.props.transcript,
   }
 
   componentDidMount() {

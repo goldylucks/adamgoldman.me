@@ -13,26 +13,19 @@ import s from './ToolEditor.css'
 
 class ToolEditor extends React.Component {
   static propTypes = {
-    data: PropTypes.any.isRequired,
+    data: PropTypes.object.isRequired,
     url: PropTypes.string.isRequired,
   }
-
   state = {
-    isDraft: false,
-    hasReview: false,
-    isSavoring: false,
-    isGrief: false,
-    title: '',
-    description: '',
-    credits: '',
-    steps: [freshStep()],
-    hiddenFields: [],
-  }
-
-  componentWillMount() {
-    if (this.props.data) {
-      this.setState(this.props.data)
-    }
+    isDraft: this.props.data.isDraft || false,
+    hasReview: this.props.data.hasReview || false,
+    isSavoring: this.props.data.isSavoring || false,
+    isGrief: this.props.data.isGrief || false,
+    title: this.props.data.title || '',
+    description: this.props.data.description || '',
+    credits: this.props.data.credits || '',
+    steps: this.props.data.steps || [freshStep()],
+    hiddenFields: this.props.data.hiddenFields || [],
   }
 
   render() {

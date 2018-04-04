@@ -27,7 +27,7 @@ class savoringYourChildSectionModule extends React.Component {
     tool: null,
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.fetchTool()
   }
 

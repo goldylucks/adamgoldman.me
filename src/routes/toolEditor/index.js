@@ -14,7 +14,7 @@ async function action({ params, path }) {
     description:
       'Create a brain tool',
     component: (
-      <ToolEditor data={data} url={params.tool} />
+      <ToolEditor data={data || {}} url={params.tool} />
     ),
   }
 }
