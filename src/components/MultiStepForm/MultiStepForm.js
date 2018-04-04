@@ -22,21 +22,15 @@ class Steps extends React.Component {
   }
 
   state = {
-    currentStep: 0,
-    answerByStep: {},
-    price: 0,
-    stepsStack: [], // eslint-disable-line react/no-unused-state
     flashedIdx: 0,
     isFlashing: false,
+    currentStep: this.props.currentStep,
+    answerByStep: this.initialAnswerByStepState(),
+    price: this.props.price,
+    stepsStack: this.props.stepsStack, // eslint-disable-line react/no-unused-state
   }
 
-  componentWillMount() {
-    // Todo move to constructor
-    this.populateStateFromProps()
-  }
-
-  componentWillUpdate(nextProps, nextState) {
-    // todo use componentDidUpdate
+  componentDidUpdate(nextProps, nextState) {
     if (nextState.currentStep !== this.state.currentStep) {
       this.props.onUpdateProgress(nextState)
     }
@@ -275,18 +269,6 @@ class Steps extends React.Component {
 
   flashPhrase() {
     return this.state.answerByStep[this.currentStep().flashStepNum].split(' ')
-  }
-
-  populateStateFromProps() {
-    const {
-      currentStep, price, stepsStack,
-    } = this.props
-    this.setState({
-      currentStep,
-      answerByStep: this.initialAnswerByStepState(),
-      price,
-      stepsStack, // eslint-disable-line react/no-unused-state
-    })
   }
 
   initialAnswerByStepState() {
