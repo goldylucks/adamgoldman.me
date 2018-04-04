@@ -8,7 +8,7 @@ import MessageMe from '../../components/MessageMe'
 import Testimonials from '../../components/Testimonials'
 import FAQ from '../../components/FAQ'
 import FbGateKeeper from '../../components/FbGateKeeper'
-import Steps from '../../routes/tool/Steps'
+import MultiStepForm from '../../components/MultiStepForm'
 
 type Props = {
   title: string,
@@ -44,7 +44,7 @@ class savoringYourChildSectionModule extends React.Component {
             <h1 className="posttitle">{title}</h1>
           </div>
           <div style={{ position: 'relative' }}>
-            { this.state.tool && <Steps {...this.state.tool} path={path} /> }
+            { this.state.tool && <MultiStepForm {...this.state.tool} path={path} /> }
             {!user._id &&
             <FbGateKeeper onLogin={onLogin} user={user} />
             }

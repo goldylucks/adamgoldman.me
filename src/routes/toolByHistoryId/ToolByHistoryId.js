@@ -1,21 +1,18 @@
-// @flow
-
 import React from 'react'
 import axios from 'axios'
+import PropTypes from 'prop-types'
 
 import Share from '../../components/Share'
-import Steps from '../tool/Steps'
+import MultiStepForm from '../../components/MultiStepForm'
 
-type Props = {
-  tool: Object,
-  user: Object,
-  path: string,
-  historyId: string,
-  onLogin: Function,
-};
-
-// eslint-disable-next-line react/prefer-stateless-function
 class ToolByHistoryId extends React.Component {
+  static propTypes = {
+    tool: PropTypes.object.isRequired,
+    user: PropTypes.object.isRequired,
+    path: PropTypes.string.isRequired,
+    historyId: PropTypes.string.isRequired,
+    onLogin: PropTypes.func.isRequired,
+  }
   state = {
     data: null,
     isLoaded: false,
@@ -23,7 +20,6 @@ class ToolByHistoryId extends React.Component {
   componentDidMount() {
     this.fetchToolByHistoryId()
   }
-  props: Props
   render() {
     if (!this.state.isLoaded) {
       return null
@@ -42,7 +38,7 @@ class ToolByHistoryId extends React.Component {
               </div>
               <div className="article-post">
                 <div>
-                  <Steps
+                  <MultiStepForm
                     {...this.state.data}
                     path={path}
                     toolHistoryId={this.props.historyId}

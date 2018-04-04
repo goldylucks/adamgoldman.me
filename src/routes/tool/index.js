@@ -2,8 +2,8 @@ import React from 'react'
 import axios from 'axios'
 
 import Layout from '../../components/Layout'
+import reviewSteps from '../../components/MultiStepForm/reviewSteps'
 
-import reviewSteps from './reviewSteps'
 import Tool from './Tool'
 
 async function action({ path }) {

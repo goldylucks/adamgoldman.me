@@ -12,13 +12,13 @@ import Answers from './Answers'
 class Steps extends React.Component {
   static propTypes = {
     steps: PropTypes.array.isRequired,
-    hiddenFields: PropTypes.object.isRequired,
+    hiddenFields: PropTypes.array.isRequired,
     path: PropTypes.string.isRequired,
-    onUpdateProgress: PropTypes.func.isRequired,
     currentStep: PropTypes.number.isRequired,
     answerByStep: PropTypes.object.isRequired,
     price: PropTypes.number.isRequired,
     stepsStack: PropTypes.array.isRequired,
+    onUpdateProgress: PropTypes.func.isRequired,
   }
 
   state = {
@@ -31,10 +31,12 @@ class Steps extends React.Component {
   }
 
   componentWillMount() {
+    // Todo move to constructor
     this.populateStateFromProps()
   }
 
   componentWillUpdate(nextProps, nextState) {
+    // todo use componentDidUpdate
     if (nextState.currentStep !== this.state.currentStep) {
       this.props.onUpdateProgress(nextState)
     }
