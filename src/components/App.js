@@ -10,6 +10,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import axios from 'axios'
+import { ConnectedFetch } from 'react-data-fetching'
 
 import { isMobile } from '../utils'
 import { initFbSdk } from '../utils/fbUtils'
@@ -87,12 +88,19 @@ class App extends React.PureComponent {
     if (!this.state.isUiReady) {
       return <LoadingSite />
     }
-    return React.Children.only(React.cloneElement(this.props.children, {
-      user: this.state.user,
-      onLogin: this.login,
-      onLogout: this.logout,
-      onUpdateUser: this.updateUser,
-    }))
+    return (
+      <ConnectedFetch
+        loader={<h2>Loading …</h2>}
+        headers={{ authorization: `Bearer ${this.state.user.token}` }}
+      >
+        {React.Children.only(React.cloneElement(this.props.children, {
+          user: this.state.user,
+          onLogin: this.login,
+          onLogout: this.logout,
+          onUpdateUser: this.updateUser,
+        }))}
+      </ConnectedFetch>
+    )
   }
 
   login = (user) => {

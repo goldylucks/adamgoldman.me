@@ -1,6 +1,7 @@
 // @flow
 
 import React from 'react'
+import { Fetch } from 'react-data-fetching'
 
 import { MESSENGER_LINK_BOOK_SESSION } from '../../constants'
 import Markdown from '../../components/Markdown'
@@ -8,11 +9,10 @@ import Card from '../../components/Card'
 import Ending from '../../components/Ending'
 
 type Props = {
-  transcripts: [],
   tutorials: [],
 }
 
-const Home = ({ transcripts, tutorials }: Props) => (
+const Home = ({ tutorials }: Props) => (
   <div>
     <div className="container">
       <div className="mainheading">
@@ -40,10 +40,13 @@ Book a [session](${MESSENGER_LINK_BOOK_SESSION}), hack your [mind](/tools), [lea
           <h2><span>Mind Hacking Sessions Transcripts</span></h2>
         </div>
         <div className="card-columns card-columns-three listrecent">
-          {transcripts
-            .map(t => (
+          <Fetch
+            url="/api/posts/transcripts"
+          >
+            {({ data }) => data.map(t => (
               <Card {...t} url={`/blog/${t.url}`} key={t.url} />
             ))}
+          </Fetch>
         </div>
       </section>
       <hr />
@@ -51,5 +54,4 @@ Book a [session](${MESSENGER_LINK_BOOK_SESSION}), hack your [mind](/tools), [lea
     </div>
   </div>
 )
-
 export default Home

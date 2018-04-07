@@ -7916,6 +7916,13 @@ react-collapsible@^2.0.3:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/react-collapsible/-/react-collapsible-2.0.4.tgz#fb1761eda57599a045d602534e31cb23a6c3f52a"
 
+react-data-fetching@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/react-data-fetching/-/react-data-fetching-0.1.2.tgz#ef72028321c3c2eaeb74ac0eb657d0e28029957f"
+  dependencies:
+    invariant "^2.2.2"
+    prop-types "^15.6.0"
+
 react-deep-force-update@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/react-deep-force-update/-/react-deep-force-update-2.1.1.tgz#8ea4263cd6455a050b37445b3f08fd839d86e909"

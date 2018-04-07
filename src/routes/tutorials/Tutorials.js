@@ -1,22 +1,24 @@
 // @flow
 
 import React from 'react'
+import { Fetch } from 'react-data-fetching'
 
 import { filterDrafts } from '../../utils'
 import BottomSection from '../../components/BottomSection'
 import Card from '../../components/Card'
 
+import tutorialsHardCoded from './tutorialsHardCoded'
+
 type Props = {
   title: '',
   path: '',
   description: '',
-  tutorials: [],
 }
 
 const ToolsListPage = ({
-  title, description, tutorials, path,
+  title, description, path,
 }: Props) => (
-  <div>
+  <React.Fragment>
     <div className="container">
       <div className="mainheading">
         <h1 className="sitetitle">{title}</h1>
@@ -27,16 +29,19 @@ const ToolsListPage = ({
           <h2><span>All Tutorials</span></h2>
         </div>
         <div className="card-columns listrecent">
-          {tutorials
-            .filter(filterDrafts)
+          <Fetch
+            url="/api/tools/all"
+          >
+            {({ data }) => data.concat(tutorialsHardCoded).filter(filterDrafts)
             .map(t => (
               <Card {...t} url={`${path}/${t.url}`} key={t.url} />
             ))}
+          </Fetch>
         </div>
       </section>
     </div>
     <BottomSection />
-  </div>
+  </React.Fragment>
 )
 
 export default ToolsListPage

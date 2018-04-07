@@ -77,6 +77,7 @@
     "react-bootstrap-typeahead": "^2.5.1",
     "react-click-outside": "tj/react-click-outside",
     "react-collapsible": "^2.0.3",
+    "react-data-fetching": "^0.1.2",
     "react-dom": "^16.3.0",
     "react-facebook": "^4.2.1",
     "react-markdown": "2.5.0",
