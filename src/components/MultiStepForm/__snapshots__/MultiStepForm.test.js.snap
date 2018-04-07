@@ -1,332 +1,164 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MultiStepForm should render flash answer 1`] = `
-<div
-  className="container"
+<MultiStepForm
+  answerByStep={
+    Object {
+      "0": "",
+      "1": "",
+      "2": "",
+    }
+  }
+  currentStepNum={0}
+  hiddenFields={Array []}
+  onUpdateProgress={[MockFunction]}
+  path="/tools/trauma-relief/5ac43ef0d3b723075ebfd200"
+  price={0}
+  steps={
+    Array [
+      Object {
+        "answers": Array [
+          Object {
+            "text": "answer 1",
+          },
+        ],
+        "description": "Step 0 Description",
+        "notes": "Step 0 notes",
+        "title": "Step 0 Title",
+        "type": "flash",
+      },
+      Object {
+        "answers": Array [
+          Object {
+            "text": "answer 1",
+          },
+        ],
+        "description": "Step 1 Description: \${echo} and \${s0}",
+        "notes": "Step 1 notes: \${echo} and \${s0}",
+        "title": "Step 1 Title: \${echo} and \${s0}",
+        "type": "flash",
+      },
+    ]
+  }
+  stepsStack={Array []}
 >
-  <nav
-    className="navbar navbar-expand-lg fixed-top main-nav navbar-light"
-  >
+  <div>
     <div
-      className="container"
+      style={
+        Object {
+          "marginBottom": 30,
+        }
+      }
     >
-      <div
-        className="clearfix d-sm-block d-md-none"
+      <Markdown
+        source="## Step 0 Title"
       >
-        <svg
-          aria-hidden="true"
-          className="svg-inline--fa fa-bars fa-w-14 "
-          data-icon="bars"
-          data-prefix="fas"
-          onClick={[Function]}
-          role="img"
-          style={
+        <ReactMarkdown
+          containerTagName="div"
+          parserOptions={Object {}}
+          renderers={
             Object {
-              "marginRight": 10,
+              "Link": [Function],
             }
           }
-          viewBox="0 0 448 512"
-          xmlns="http://www.w3.org/2000/svg"
+          source="## Step 0 Title"
         >
-          <path
-            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
-            fill="currentColor"
-            style={Object {}}
-          />
-        </svg>
-        <div
-          className="mobileMenu"
-        >
-          <nav>
-            <h3
-              className="mobileMenuHeadline"
-              onClick={[Function]}
+          <div>
+            <Heading
+              key="1:1-1:152"
+              level={2}
+              literal={null}
+              nodeKey="1:1-1:152"
             >
-              Adam Goldman
-            </h3>
-            <ul
-              className="navbar-nav"
-            >
-              <li
-                className="nav-item"
+              <h2
+                key="1:1-1:152"
               >
-                <a
-                  className="nav-link navLink"
-                  href="/"
-                  onClick={[Function]}
-                >
-                  Home
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/transcripts"
-                  onClick={[Function]}
-                >
-                  Transcripts
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/tools"
-                  onClick={[Function]}
-                >
-                  Tutorials
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/about"
-                  onClick={[Function]}
-                >
-                  About
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="https://www.adamgoldman.me/contact"
-                  rel="nofollow noreferrer noopener"
-                  target="_blank"
-                >
-                  Contact
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/i-dont-charge-i-accept"
-                  onClick={[Function]}
-                >
-                  <span>
-                    Pricing 
-                    <svg
-                      aria-hidden="true"
-                      className="svg-inline--fa fa-heart fa-w-18 "
-                      data-icon="heart"
-                      data-prefix="fas"
-                      role="img"
-                      style={
-                        Object {
-                          "color": "red",
-                          "marginLeft": 5,
-                        }
-                      }
-                      viewBox="0 0 576 512"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M414.9 24C361.8 24 312 65.7 288 89.3 264 65.7 214.2 24 161.1 24 70.3 24 16 76.9 16 165.5c0 72.6 66.8 133.3 69.2 135.4l187 180.8c8.8 8.5 22.8 8.5 31.6 0l186.7-180.2c2.7-2.7 69.5-63.5 69.5-136C560 76.9 505.7 24 414.9 24z"
-                        fill="currentColor"
-                        style={Object {}}
-                      />
-                    </svg>
-                  </span>
-                </a>
-              </li>
-              <li
-                className="nav-item"
-                style={
-                  Object {
-                    "marginTop": 20,
-                  }
-                }
-              >
-                <a
-                  className="nav-link btn btn-primary btn-block"
-                  href="https://www.adamgoldman.me/book-session"
-                  rel="nofollow noreferrer noopener"
-                  target="_blank"
-                >
-                  Book a session
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <a
-        className="navbar-brand mr-auto"
-        href="/"
-        onClick={[Function]}
-      >
-        Adam Goldman
-      </a>
-      <div
-        className="collapse navbar-collapse"
-      >
-        <ul
-          className="navbar-nav ml-auto"
-        >
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/transcripts"
-              onClick={[Function]}
-            >
-              Transcripts
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/tools"
-              onClick={[Function]}
-            >
-              Tutorials
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/about"
-              onClick={[Function]}
-            >
-              About
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="https://www.adamgoldman.me/contact"
-              rel="nofollow noreferrer noopener"
-              target="_blank"
-            >
-              Contact
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/i-dont-charge-i-accept"
-              onClick={[Function]}
-            >
-              <span>
-                Pricing 
-                <svg
-                  aria-hidden="true"
-                  className="svg-inline--fa fa-heart fa-w-18 "
-                  data-icon="heart"
-                  data-prefix="fas"
-                  role="img"
-                  style={
-                    Object {
-                      "color": "red",
-                      "marginLeft": 5,
-                    }
-                  }
-                  viewBox="0 0 576 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M414.9 24C361.8 24 312 65.7 288 89.3 264 65.7 214.2 24 161.1 24 70.3 24 16 76.9 16 165.5c0 72.6 66.8 133.3 69.2 135.4l187 180.8c8.8 8.5 22.8 8.5 31.6 0l186.7-180.2c2.7-2.7 69.5-63.5 69.5-136C560 76.9 505.7 24 414.9 24z"
-                    fill="currentColor"
-                    style={Object {}}
-                  />
-                </svg>
-              </span>
-            </a>
-          </li>
-          <li
-            className="nav-item"
-            style={
-              Object {
-                "marginLeft": 10,
-              }
-            }
-          >
-            <a
-              className="nav-link btn btn-primary btn-sm"
-              href="https://www.adamgoldman.me/book-session"
-              rel="nofollow noreferrer noopener"
-              target="_blank"
-            >
-              Book a session
-            </a>
-          </li>
-        </ul>
-      </div>
-      <a
-        className="nav-link btn btn-primary btn-sm d-sm-block d-md-none"
-        href="https://www.adamgoldman.me/book-session"
-        rel="nofollow noreferrer noopener"
-        target="_blank"
-      >
-        Book a session
-      </a>
+                Step 0 Title
+              </h2>
+            </Heading>
+          </div>
+        </ReactMarkdown>
+      </Markdown>
     </div>
-  </nav>
-  <div>
-    <div>
-      <div
-        style={
+    <Markdown
+      source="Step 0 Description"
+    >
+      <ReactMarkdown
+        containerTagName="div"
+        parserOptions={Object {}}
+        renderers={
           Object {
-            "marginBottom": 30,
+            "Link": [Function],
           }
         }
+        source="Step 0 Description"
       >
         <div>
-          <h2
-            className={undefined}
-            data-sourcepos={undefined}
+          <p
+            key="1:1-1:182"
           >
-            Title
-          </h2>
+            Step 0 Description
+          </p>
         </div>
-      </div>
-      <div>
-        <p>
-          Description
-        </p>
-      </div>
-      <div
+      </ReactMarkdown>
+    </Markdown>
+    <Markdown
+      className="text-muted tool-note"
+      source="Step 0 notes"
+    >
+      <ReactMarkdown
         className="text-muted tool-note"
-      >
-        <p>
-          notes
-        </p>
-      </div>
-      <div>
-        <button
-          onClick={[Function]}
-        >
-          Flash me!
-        </button>
-        <p />
-      </div>
-      <div
-        style={
+        containerTagName="div"
+        parserOptions={Object {}}
+        renderers={
           Object {
-            "marginBottom": 20,
-            "marginTop": 20,
+            "Link": [Function],
           }
         }
+        source="Step 0 notes"
+      >
+        <div
+          className="text-muted tool-note"
+        >
+          <p
+            key="1:1-1:122"
+          >
+            Step 0 notes
+          </p>
+        </div>
+      </ReactMarkdown>
+    </Markdown>
+    <div>
+      <button
+        onClick={[Function]}
+      >
+        Flash me!
+      </button>
+      <p />
+    </div>
+    <div
+      style={
+        Object {
+          "marginBottom": 20,
+          "marginTop": 20,
+        }
+      }
+    >
+      <Answers
+        answers={
+          Array [
+            Object {
+              "text": "answer 1",
+            },
+          ]
+        }
+        onSubmit={[Function]}
+        onSubmitOther={[Function]}
+        path="/tools/trauma-relief/5ac43ef0d3b723075ebfd200"
       >
         <div>
           <div
+            key="0"
             style={
               Object {
                 "marginBottom": 10,
@@ -341,7 +173,12 @@ exports[`MultiStepForm should render flash answer 1`] = `
             </a>
           </div>
         </div>
-      </div>
+      </Answers>
+    </div>
+    <ExternalA
+      className="btn btn-secondary btn-sm"
+      href="https://m.me/adamgoldman.me?ref=inner-circle"
+    >
       <a
         className="btn btn-secondary btn-sm"
         href="https://m.me/adamgoldman.me?ref=inner-circle"
@@ -350,395 +187,151 @@ exports[`MultiStepForm should render flash answer 1`] = `
       >
         Subscribe to future tools
       </a>
-    </div>
+    </ExternalA>
   </div>
-  <div
-    className="container"
-  >
-    <div
-      className="footer"
-    >
-      <p
-        className="pull-left"
-      >
-        Copyright © 2017 
-        <a
-          className="link"
-          href="/"
-          onClick={[Function]}
-        >
-          Adam Goldman
-        </a>
-      </p>
-      <p
-        className="pull-right"
-      >
-        <a
-          className="link"
-          href="/legal-stuff"
-          onClick={[Function]}
-        >
-          legal stuff
-        </a>
-        <a
-          className="link"
-          href="/privacy"
-          onClick={[Function]}
-          style={
-            Object {
-              "marginLeft": 10,
-            }
-          }
-        >
-          Privacy
-        </a>
-      </p>
-      <div
-        className="clearfix"
-      />
-    </div>
-  </div>
-  <a
-    className="container"
-    href="https://www.adamgoldman.me/contact"
-    rel="nofollow noreferrer noopener"
-    target="_blank"
-  >
-    <img
-      alt="Messenger Link"
-      src="https://cdn.supple.com.au/wp-content/themes/supple/img/msg.png"
-    />
-  </a>
-</div>
+</MultiStepForm>
 `;
 
 exports[`MultiStepForm should render long answer 1`] = `
-<div
-  className="container"
+<MultiStepForm
+  answerByStep={
+    Object {
+      "0": "",
+      "1": "",
+      "2": "",
+    }
+  }
+  currentStepNum={0}
+  hiddenFields={Array []}
+  onUpdateProgress={[MockFunction]}
+  path="/tools/trauma-relief/5ac43ef0d3b723075ebfd200"
+  price={0}
+  steps={
+    Array [
+      Object {
+        "description": "Step 0 Description",
+        "notes": "Step 0 notes",
+        "title": "Step 0 Title",
+        "type": "long",
+      },
+      Object {
+        "description": "Step 1 Description: \${echo} and \${s0}",
+        "notes": "Step 1 notes: \${echo} and \${s0}",
+        "title": "Step 1 Title: \${echo} and \${s0}",
+        "type": "long",
+      },
+    ]
+  }
+  stepsStack={Array []}
 >
-  <nav
-    className="navbar navbar-expand-lg fixed-top main-nav navbar-light"
-  >
+  <div>
     <div
-      className="container"
+      style={
+        Object {
+          "marginBottom": 30,
+        }
+      }
     >
-      <div
-        className="clearfix d-sm-block d-md-none"
+      <Markdown
+        source="## Step 0 Title"
       >
-        <svg
-          aria-hidden="true"
-          className="svg-inline--fa fa-bars fa-w-14 "
-          data-icon="bars"
-          data-prefix="fas"
-          onClick={[Function]}
-          role="img"
-          style={
+        <ReactMarkdown
+          containerTagName="div"
+          parserOptions={Object {}}
+          renderers={
             Object {
-              "marginRight": 10,
+              "Link": [Function],
             }
           }
-          viewBox="0 0 448 512"
-          xmlns="http://www.w3.org/2000/svg"
+          source="## Step 0 Title"
         >
-          <path
-            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
-            fill="currentColor"
-            style={Object {}}
-          />
-        </svg>
-        <div
-          className="mobileMenu"
-        >
-          <nav>
-            <h3
-              className="mobileMenuHeadline"
-              onClick={[Function]}
+          <div>
+            <Heading
+              key="1:1-1:152"
+              level={2}
+              literal={null}
+              nodeKey="1:1-1:152"
             >
-              Adam Goldman
-            </h3>
-            <ul
-              className="navbar-nav"
-            >
-              <li
-                className="nav-item"
+              <h2
+                key="1:1-1:152"
               >
-                <a
-                  className="nav-link navLink"
-                  href="/"
-                  onClick={[Function]}
-                >
-                  Home
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/transcripts"
-                  onClick={[Function]}
-                >
-                  Transcripts
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/tools"
-                  onClick={[Function]}
-                >
-                  Tutorials
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/about"
-                  onClick={[Function]}
-                >
-                  About
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="https://www.adamgoldman.me/contact"
-                  rel="nofollow noreferrer noopener"
-                  target="_blank"
-                >
-                  Contact
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/i-dont-charge-i-accept"
-                  onClick={[Function]}
-                >
-                  <span>
-                    Pricing 
-                    <svg
-                      aria-hidden="true"
-                      className="svg-inline--fa fa-heart fa-w-18 "
-                      data-icon="heart"
-                      data-prefix="fas"
-                      role="img"
-                      style={
-                        Object {
-                          "color": "red",
-                          "marginLeft": 5,
-                        }
-                      }
-                      viewBox="0 0 576 512"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M414.9 24C361.8 24 312 65.7 288 89.3 264 65.7 214.2 24 161.1 24 70.3 24 16 76.9 16 165.5c0 72.6 66.8 133.3 69.2 135.4l187 180.8c8.8 8.5 22.8 8.5 31.6 0l186.7-180.2c2.7-2.7 69.5-63.5 69.5-136C560 76.9 505.7 24 414.9 24z"
-                        fill="currentColor"
-                        style={Object {}}
-                      />
-                    </svg>
-                  </span>
-                </a>
-              </li>
-              <li
-                className="nav-item"
-                style={
-                  Object {
-                    "marginTop": 20,
-                  }
-                }
-              >
-                <a
-                  className="nav-link btn btn-primary btn-block"
-                  href="https://www.adamgoldman.me/book-session"
-                  rel="nofollow noreferrer noopener"
-                  target="_blank"
-                >
-                  Book a session
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <a
-        className="navbar-brand mr-auto"
-        href="/"
-        onClick={[Function]}
-      >
-        Adam Goldman
-      </a>
-      <div
-        className="collapse navbar-collapse"
-      >
-        <ul
-          className="navbar-nav ml-auto"
-        >
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/transcripts"
-              onClick={[Function]}
-            >
-              Transcripts
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/tools"
-              onClick={[Function]}
-            >
-              Tutorials
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/about"
-              onClick={[Function]}
-            >
-              About
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="https://www.adamgoldman.me/contact"
-              rel="nofollow noreferrer noopener"
-              target="_blank"
-            >
-              Contact
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/i-dont-charge-i-accept"
-              onClick={[Function]}
-            >
-              <span>
-                Pricing 
-                <svg
-                  aria-hidden="true"
-                  className="svg-inline--fa fa-heart fa-w-18 "
-                  data-icon="heart"
-                  data-prefix="fas"
-                  role="img"
-                  style={
-                    Object {
-                      "color": "red",
-                      "marginLeft": 5,
-                    }
-                  }
-                  viewBox="0 0 576 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M414.9 24C361.8 24 312 65.7 288 89.3 264 65.7 214.2 24 161.1 24 70.3 24 16 76.9 16 165.5c0 72.6 66.8 133.3 69.2 135.4l187 180.8c8.8 8.5 22.8 8.5 31.6 0l186.7-180.2c2.7-2.7 69.5-63.5 69.5-136C560 76.9 505.7 24 414.9 24z"
-                    fill="currentColor"
-                    style={Object {}}
-                  />
-                </svg>
-              </span>
-            </a>
-          </li>
-          <li
-            className="nav-item"
-            style={
-              Object {
-                "marginLeft": 10,
-              }
-            }
-          >
-            <a
-              className="nav-link btn btn-primary btn-sm"
-              href="https://www.adamgoldman.me/book-session"
-              rel="nofollow noreferrer noopener"
-              target="_blank"
-            >
-              Book a session
-            </a>
-          </li>
-        </ul>
-      </div>
-      <a
-        className="nav-link btn btn-primary btn-sm d-sm-block d-md-none"
-        href="https://www.adamgoldman.me/book-session"
-        rel="nofollow noreferrer noopener"
-        target="_blank"
-      >
-        Book a session
-      </a>
+                Step 0 Title
+              </h2>
+            </Heading>
+          </div>
+        </ReactMarkdown>
+      </Markdown>
     </div>
-  </nav>
-  <div>
-    <div>
-      <div
-        style={
+    <Markdown
+      source="Step 0 Description"
+    >
+      <ReactMarkdown
+        containerTagName="div"
+        parserOptions={Object {}}
+        renderers={
           Object {
-            "marginBottom": 30,
+            "Link": [Function],
           }
         }
+        source="Step 0 Description"
       >
         <div>
-          <h2
-            className={undefined}
-            data-sourcepos={undefined}
+          <p
+            key="1:1-1:182"
           >
-            Title
-          </h2>
+            Step 0 Description
+          </p>
         </div>
-      </div>
-      <div>
-        <p>
-          Description
-        </p>
-      </div>
-      <div
+      </ReactMarkdown>
+    </Markdown>
+    <Markdown
+      className="text-muted tool-note"
+      source="Step 0 notes"
+    >
+      <ReactMarkdown
         className="text-muted tool-note"
-      >
-        <p>
-          notes
-        </p>
-      </div>
-      <form
-        onSubmit={[Function]}
+        containerTagName="div"
+        parserOptions={Object {}}
+        renderers={
+          Object {
+            "Link": [Function],
+          }
+        }
+        source="Step 0 notes"
       >
         <div
-          className="form-group"
+          className="text-muted tool-note"
         >
-          <textarea
-            aria-describedby="inputHelp"
-            autoFocus={true}
-            className="form-control"
-            onChange={[Function]}
-            placeholder="write your answer here"
-            required={true}
-            value=""
-          />
-          <small
-            className="form-text text-muted"
-            id="inputHelp"
+          <p
+            key="1:1-1:122"
+          >
+            Step 0 notes
+          </p>
+        </div>
+      </ReactMarkdown>
+    </Markdown>
+    <form
+      onSubmit={[Function]}
+    >
+      <div
+        className="form-group"
+      >
+        <textarea
+          aria-describedby="inputHelp"
+          autoFocus={true}
+          className="form-control"
+          onChange={[Function]}
+          placeholder="write your answer here"
+          required={true}
+          value=""
+        />
+        <small
+          className="form-text text-muted"
+          id="inputHelp"
+        >
+          <ExternalA
+            href="/privacy"
+            target="_blank"
           >
             <a
               href="/privacy"
@@ -747,15 +340,20 @@ exports[`MultiStepForm should render long answer 1`] = `
             >
               Privacy is sacred. Your data is safe.
             </a>
-          </small>
-        </div>
-        <button
-          className="btn btn-primary"
-          type="submit"
-        >
-          Continue
-        </button>
-      </form>
+          </ExternalA>
+        </small>
+      </div>
+      <button
+        className="btn btn-primary"
+        type="submit"
+      >
+        Continue
+      </button>
+    </form>
+    <ExternalA
+      className="btn btn-secondary btn-sm"
+      href="https://m.me/adamgoldman.me?ref=inner-circle"
+    >
       <a
         className="btn btn-secondary btn-sm"
         href="https://m.me/adamgoldman.me?ref=inner-circle"
@@ -764,478 +362,234 @@ exports[`MultiStepForm should render long answer 1`] = `
       >
         Subscribe to future tools
       </a>
-    </div>
+    </ExternalA>
   </div>
-  <div
-    className="container"
-  >
-    <div
-      className="footer"
-    >
-      <p
-        className="pull-left"
-      >
-        Copyright © 2017 
-        <a
-          className="link"
-          href="/"
-          onClick={[Function]}
-        >
-          Adam Goldman
-        </a>
-      </p>
-      <p
-        className="pull-right"
-      >
-        <a
-          className="link"
-          href="/legal-stuff"
-          onClick={[Function]}
-        >
-          legal stuff
-        </a>
-        <a
-          className="link"
-          href="/privacy"
-          onClick={[Function]}
-          style={
-            Object {
-              "marginLeft": 10,
-            }
-          }
-        >
-          Privacy
-        </a>
-      </p>
-      <div
-        className="clearfix"
-      />
-    </div>
-  </div>
-  <a
-    className="container"
-    href="https://www.adamgoldman.me/contact"
-    rel="nofollow noreferrer noopener"
-    target="_blank"
-  >
-    <img
-      alt="Messenger Link"
-      src="https://cdn.supple.com.au/wp-content/themes/supple/img/msg.png"
-    />
-  </a>
-</div>
+</MultiStepForm>
 `;
 
 exports[`MultiStepForm should render payment 1`] = `
-<div
-  className="container"
+<MultiStepForm
+  answerByStep={
+    Object {
+      "0": "",
+      "1": "",
+      "2": "",
+    }
+  }
+  currentStepNum={0}
+  hiddenFields={Array []}
+  onUpdateProgress={[MockFunction]}
+  path="/tools/trauma-relief/5ac43ef0d3b723075ebfd200"
+  price={0}
+  steps={
+    Array [
+      Object {
+        "description": "Step 0 Description",
+        "notes": "Step 0 notes",
+        "title": "Step 0 Title",
+        "type": "payment",
+      },
+      Object {
+        "description": "Step 1 Description: \${echo} and \${s0}",
+        "notes": "Step 1 notes: \${echo} and \${s0}",
+        "title": "Step 1 Title: \${echo} and \${s0}",
+        "type": "payment",
+      },
+    ]
+  }
+  stepsStack={Array []}
 >
-  <nav
-    className="navbar navbar-expand-lg fixed-top main-nav navbar-light"
-  >
+  <div>
     <div
-      className="container"
+      style={
+        Object {
+          "marginBottom": 30,
+        }
+      }
     >
-      <div
-        className="clearfix d-sm-block d-md-none"
+      <Markdown
+        source="## Step 0 Title"
       >
-        <svg
-          aria-hidden="true"
-          className="svg-inline--fa fa-bars fa-w-14 "
-          data-icon="bars"
-          data-prefix="fas"
-          onClick={[Function]}
-          role="img"
-          style={
+        <ReactMarkdown
+          containerTagName="div"
+          parserOptions={Object {}}
+          renderers={
             Object {
-              "marginRight": 10,
+              "Link": [Function],
             }
           }
-          viewBox="0 0 448 512"
-          xmlns="http://www.w3.org/2000/svg"
+          source="## Step 0 Title"
         >
-          <path
-            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
-            fill="currentColor"
-            style={Object {}}
-          />
-        </svg>
-        <div
-          className="mobileMenu"
-        >
-          <nav>
-            <h3
-              className="mobileMenuHeadline"
-              onClick={[Function]}
+          <div>
+            <Heading
+              key="1:1-1:152"
+              level={2}
+              literal={null}
+              nodeKey="1:1-1:152"
             >
-              Adam Goldman
-            </h3>
-            <ul
-              className="navbar-nav"
-            >
-              <li
-                className="nav-item"
+              <h2
+                key="1:1-1:152"
               >
-                <a
-                  className="nav-link navLink"
-                  href="/"
-                  onClick={[Function]}
-                >
-                  Home
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/transcripts"
-                  onClick={[Function]}
-                >
-                  Transcripts
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/tools"
-                  onClick={[Function]}
-                >
-                  Tutorials
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/about"
-                  onClick={[Function]}
-                >
-                  About
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="https://www.adamgoldman.me/contact"
-                  rel="nofollow noreferrer noopener"
-                  target="_blank"
-                >
-                  Contact
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/i-dont-charge-i-accept"
-                  onClick={[Function]}
-                >
-                  <span>
-                    Pricing 
-                    <svg
-                      aria-hidden="true"
-                      className="svg-inline--fa fa-heart fa-w-18 "
-                      data-icon="heart"
-                      data-prefix="fas"
-                      role="img"
-                      style={
-                        Object {
-                          "color": "red",
-                          "marginLeft": 5,
-                        }
-                      }
-                      viewBox="0 0 576 512"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M414.9 24C361.8 24 312 65.7 288 89.3 264 65.7 214.2 24 161.1 24 70.3 24 16 76.9 16 165.5c0 72.6 66.8 133.3 69.2 135.4l187 180.8c8.8 8.5 22.8 8.5 31.6 0l186.7-180.2c2.7-2.7 69.5-63.5 69.5-136C560 76.9 505.7 24 414.9 24z"
-                        fill="currentColor"
-                        style={Object {}}
-                      />
-                    </svg>
-                  </span>
-                </a>
-              </li>
-              <li
-                className="nav-item"
-                style={
-                  Object {
-                    "marginTop": 20,
-                  }
-                }
-              >
-                <a
-                  className="nav-link btn btn-primary btn-block"
-                  href="https://www.adamgoldman.me/book-session"
-                  rel="nofollow noreferrer noopener"
-                  target="_blank"
-                >
-                  Book a session
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <a
-        className="navbar-brand mr-auto"
-        href="/"
-        onClick={[Function]}
-      >
-        Adam Goldman
-      </a>
-      <div
-        className="collapse navbar-collapse"
-      >
-        <ul
-          className="navbar-nav ml-auto"
-        >
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/transcripts"
-              onClick={[Function]}
-            >
-              Transcripts
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/tools"
-              onClick={[Function]}
-            >
-              Tutorials
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/about"
-              onClick={[Function]}
-            >
-              About
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="https://www.adamgoldman.me/contact"
-              rel="nofollow noreferrer noopener"
-              target="_blank"
-            >
-              Contact
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/i-dont-charge-i-accept"
-              onClick={[Function]}
-            >
-              <span>
-                Pricing 
-                <svg
-                  aria-hidden="true"
-                  className="svg-inline--fa fa-heart fa-w-18 "
-                  data-icon="heart"
-                  data-prefix="fas"
-                  role="img"
-                  style={
-                    Object {
-                      "color": "red",
-                      "marginLeft": 5,
-                    }
-                  }
-                  viewBox="0 0 576 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M414.9 24C361.8 24 312 65.7 288 89.3 264 65.7 214.2 24 161.1 24 70.3 24 16 76.9 16 165.5c0 72.6 66.8 133.3 69.2 135.4l187 180.8c8.8 8.5 22.8 8.5 31.6 0l186.7-180.2c2.7-2.7 69.5-63.5 69.5-136C560 76.9 505.7 24 414.9 24z"
-                    fill="currentColor"
-                    style={Object {}}
-                  />
-                </svg>
-              </span>
-            </a>
-          </li>
-          <li
-            className="nav-item"
-            style={
-              Object {
-                "marginLeft": 10,
-              }
-            }
-          >
-            <a
-              className="nav-link btn btn-primary btn-sm"
-              href="https://www.adamgoldman.me/book-session"
-              rel="nofollow noreferrer noopener"
-              target="_blank"
-            >
-              Book a session
-            </a>
-          </li>
-        </ul>
-      </div>
-      <a
-        className="nav-link btn btn-primary btn-sm d-sm-block d-md-none"
-        href="https://www.adamgoldman.me/book-session"
-        rel="nofollow noreferrer noopener"
-        target="_blank"
-      >
-        Book a session
-      </a>
+                Step 0 Title
+              </h2>
+            </Heading>
+          </div>
+        </ReactMarkdown>
+      </Markdown>
     </div>
-  </nav>
-  <div>
-    <div>
-      <div
-        style={
+    <Markdown
+      source="Step 0 Description"
+    >
+      <ReactMarkdown
+        containerTagName="div"
+        parserOptions={Object {}}
+        renderers={
           Object {
-            "marginBottom": 30,
+            "Link": [Function],
           }
         }
+        source="Step 0 Description"
       >
         <div>
-          <h2
-            className={undefined}
-            data-sourcepos={undefined}
+          <p
+            key="1:1-1:182"
           >
-            Title
-          </h2>
+            Step 0 Description
+          </p>
         </div>
-      </div>
-      <div>
-        <p>
-          Description
-        </p>
-      </div>
-      <div
+      </ReactMarkdown>
+    </Markdown>
+    <Markdown
+      className="text-muted tool-note"
+      source="Step 0 notes"
+    >
+      <ReactMarkdown
         className="text-muted tool-note"
+        containerTagName="div"
+        parserOptions={Object {}}
+        renderers={
+          Object {
+            "Link": [Function],
+          }
+        }
+        source="Step 0 notes"
       >
-        <p>
-          notes
-        </p>
-      </div>
-      <form
-        action="https://www.paypal.com/cgi-bin/webscr"
-        method="post"
-        target="_blank"
-      >
-        <input
-          name="cmd"
-          type="hidden"
-          value="_s-xclick"
-        />
-        <input
-          name="hosted_button_id"
-          type="hidden"
-          value="L73XBAVRMGQ6S"
-        />
         <div
-          className="form-group"
+          className="text-muted tool-note"
         >
-          <select
-            className="form-control"
-            name="os0"
-            onChange={[Function]}
-            value={0}
+          <p
+            key="1:1-1:122"
           >
-            <option
-              value="7"
-            >
-              $7 USD
-            </option>
-            <option
-              value="9"
-            >
-              $9 USD
-            </option>
-            <option
-              value="23"
-            >
-              $23 USD
-            </option>
-            <option
-              value="30"
-            >
-              $30 USD
-            </option>
-            <option
-              value="70"
-            >
-              $70 USD
-            </option>
-            <option
-              value="140"
-            >
-              $140 USD
-            </option>
-            <option
-              value="350"
-            >
-              $350 USD
-            </option>
-            <option
-              value="600"
-            >
-              $600 USD
-            </option>
-            <option
-              value="970"
-            >
-              $970 USD
-            </option>
-          </select>
+            Step 0 notes
+          </p>
         </div>
-        <input
-          name="currency_code"
-          type="hidden"
-          value="USD"
-        />
-        <input
-          alt="PayPal - The safer, easier way to pay online!"
-          border="0"
-          name="submit"
-          src="https://www.paypalobjects.com/en_US/IL/i/btn/btn_buynowCC_LG.gif"
-          style={
-            Object {
-              "width": "auto",
-            }
+      </ReactMarkdown>
+    </Markdown>
+    <form
+      action="https://www.paypal.com/cgi-bin/webscr"
+      method="post"
+      target="_blank"
+    >
+      <input
+        name="cmd"
+        type="hidden"
+        value="_s-xclick"
+      />
+      <input
+        name="hosted_button_id"
+        type="hidden"
+        value="L73XBAVRMGQ6S"
+      />
+      <div
+        className="form-group"
+      >
+        <select
+          className="form-control"
+          name="os0"
+          onChange={[Function]}
+          value={0}
+        >
+          <option
+            value="7"
+          >
+            $7 USD
+          </option>
+          <option
+            value="9"
+          >
+            $9 USD
+          </option>
+          <option
+            value="23"
+          >
+            $23 USD
+          </option>
+          <option
+            value="30"
+          >
+            $30 USD
+          </option>
+          <option
+            value="70"
+          >
+            $70 USD
+          </option>
+          <option
+            value="140"
+          >
+            $140 USD
+          </option>
+          <option
+            value="350"
+          >
+            $350 USD
+          </option>
+          <option
+            value="600"
+          >
+            $600 USD
+          </option>
+          <option
+            value="970"
+          >
+            $970 USD
+          </option>
+        </select>
+      </div>
+      <input
+        name="currency_code"
+        type="hidden"
+        value="USD"
+      />
+      <input
+        alt="PayPal - The safer, easier way to pay online!"
+        border="0"
+        name="submit"
+        src="https://www.paypalobjects.com/en_US/IL/i/btn/btn_buynowCC_LG.gif"
+        style={
+          Object {
+            "width": "auto",
           }
-          type="image"
-        />
-        <img
-          alt=""
-          border="0"
-          height="1"
-          src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"
-          style={
-            Object {
-              "display": "none",
-            }
+        }
+        type="image"
+      />
+      <img
+        alt=""
+        border="0"
+        height="1"
+        src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"
+        style={
+          Object {
+            "display": "none",
           }
-          width="1"
-        />
-      </form>
+        }
+        width="1"
+      />
+    </form>
+    <ExternalA
+      className="btn btn-secondary btn-sm"
+      href="https://m.me/adamgoldman.me?ref=inner-circle"
+    >
       <a
         className="btn btn-secondary btn-sm"
         href="https://m.me/adamgoldman.me?ref=inner-circle"
@@ -1244,387 +598,162 @@ exports[`MultiStepForm should render payment 1`] = `
       >
         Subscribe to future tools
       </a>
-    </div>
+    </ExternalA>
   </div>
-  <div
-    className="container"
-  >
-    <div
-      className="footer"
-    >
-      <p
-        className="pull-left"
-      >
-        Copyright © 2017 
-        <a
-          className="link"
-          href="/"
-          onClick={[Function]}
-        >
-          Adam Goldman
-        </a>
-      </p>
-      <p
-        className="pull-right"
-      >
-        <a
-          className="link"
-          href="/legal-stuff"
-          onClick={[Function]}
-        >
-          legal stuff
-        </a>
-        <a
-          className="link"
-          href="/privacy"
-          onClick={[Function]}
-          style={
-            Object {
-              "marginLeft": 10,
-            }
-          }
-        >
-          Privacy
-        </a>
-      </p>
-      <div
-        className="clearfix"
-      />
-    </div>
-  </div>
-  <a
-    className="container"
-    href="https://www.adamgoldman.me/contact"
-    rel="nofollow noreferrer noopener"
-    target="_blank"
-  >
-    <img
-      alt="Messenger Link"
-      src="https://cdn.supple.com.au/wp-content/themes/supple/img/msg.png"
-    />
-  </a>
-</div>
+</MultiStepForm>
 `;
 
 exports[`MultiStepForm should render radio answers 1`] = `
-<div
-  className="container"
+<MultiStepForm
+  answerByStep={
+    Object {
+      "0": "",
+      "1": "",
+      "2": "",
+    }
+  }
+  currentStepNum={0}
+  hiddenFields={Array []}
+  onUpdateProgress={[MockFunction]}
+  path="/tools/trauma-relief/5ac43ef0d3b723075ebfd200"
+  price={0}
+  steps={
+    Array [
+      Object {
+        "answers": Array [
+          Object {
+            "text": "answer 1",
+          },
+        ],
+        "description": "Step 0 Description",
+        "notes": "Step 0 notes",
+        "title": "Step 0 Title",
+        "type": "radio",
+      },
+      Object {
+        "answers": Array [
+          Object {
+            "text": "answer 1",
+          },
+        ],
+        "description": "Step 1 Description: \${echo} and \${s0}",
+        "notes": "Step 1 notes: \${echo} and \${s0}",
+        "title": "Step 1 Title: \${echo} and \${s0}",
+        "type": "radio",
+      },
+    ]
+  }
+  stepsStack={Array []}
 >
-  <nav
-    className="navbar navbar-expand-lg fixed-top main-nav navbar-light"
-  >
+  <div>
     <div
-      className="container"
+      style={
+        Object {
+          "marginBottom": 30,
+        }
+      }
     >
-      <div
-        className="clearfix d-sm-block d-md-none"
+      <Markdown
+        source="## Step 0 Title"
       >
-        <svg
-          aria-hidden="true"
-          className="svg-inline--fa fa-bars fa-w-14 "
-          data-icon="bars"
-          data-prefix="fas"
-          onClick={[Function]}
-          role="img"
-          style={
+        <ReactMarkdown
+          containerTagName="div"
+          parserOptions={Object {}}
+          renderers={
             Object {
-              "marginRight": 10,
+              "Link": [Function],
             }
           }
-          viewBox="0 0 448 512"
-          xmlns="http://www.w3.org/2000/svg"
+          source="## Step 0 Title"
         >
-          <path
-            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
-            fill="currentColor"
-            style={Object {}}
-          />
-        </svg>
-        <div
-          className="mobileMenu"
-        >
-          <nav>
-            <h3
-              className="mobileMenuHeadline"
-              onClick={[Function]}
+          <div>
+            <Heading
+              key="1:1-1:152"
+              level={2}
+              literal={null}
+              nodeKey="1:1-1:152"
             >
-              Adam Goldman
-            </h3>
-            <ul
-              className="navbar-nav"
-            >
-              <li
-                className="nav-item"
+              <h2
+                key="1:1-1:152"
               >
-                <a
-                  className="nav-link navLink"
-                  href="/"
-                  onClick={[Function]}
-                >
-                  Home
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/transcripts"
-                  onClick={[Function]}
-                >
-                  Transcripts
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/tools"
-                  onClick={[Function]}
-                >
-                  Tutorials
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/about"
-                  onClick={[Function]}
-                >
-                  About
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="https://www.adamgoldman.me/contact"
-                  rel="nofollow noreferrer noopener"
-                  target="_blank"
-                >
-                  Contact
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/i-dont-charge-i-accept"
-                  onClick={[Function]}
-                >
-                  <span>
-                    Pricing 
-                    <svg
-                      aria-hidden="true"
-                      className="svg-inline--fa fa-heart fa-w-18 "
-                      data-icon="heart"
-                      data-prefix="fas"
-                      role="img"
-                      style={
-                        Object {
-                          "color": "red",
-                          "marginLeft": 5,
-                        }
-                      }
-                      viewBox="0 0 576 512"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M414.9 24C361.8 24 312 65.7 288 89.3 264 65.7 214.2 24 161.1 24 70.3 24 16 76.9 16 165.5c0 72.6 66.8 133.3 69.2 135.4l187 180.8c8.8 8.5 22.8 8.5 31.6 0l186.7-180.2c2.7-2.7 69.5-63.5 69.5-136C560 76.9 505.7 24 414.9 24z"
-                        fill="currentColor"
-                        style={Object {}}
-                      />
-                    </svg>
-                  </span>
-                </a>
-              </li>
-              <li
-                className="nav-item"
-                style={
-                  Object {
-                    "marginTop": 20,
-                  }
-                }
-              >
-                <a
-                  className="nav-link btn btn-primary btn-block"
-                  href="https://www.adamgoldman.me/book-session"
-                  rel="nofollow noreferrer noopener"
-                  target="_blank"
-                >
-                  Book a session
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <a
-        className="navbar-brand mr-auto"
-        href="/"
-        onClick={[Function]}
-      >
-        Adam Goldman
-      </a>
-      <div
-        className="collapse navbar-collapse"
-      >
-        <ul
-          className="navbar-nav ml-auto"
-        >
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/transcripts"
-              onClick={[Function]}
-            >
-              Transcripts
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/tools"
-              onClick={[Function]}
-            >
-              Tutorials
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/about"
-              onClick={[Function]}
-            >
-              About
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="https://www.adamgoldman.me/contact"
-              rel="nofollow noreferrer noopener"
-              target="_blank"
-            >
-              Contact
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/i-dont-charge-i-accept"
-              onClick={[Function]}
-            >
-              <span>
-                Pricing 
-                <svg
-                  aria-hidden="true"
-                  className="svg-inline--fa fa-heart fa-w-18 "
-                  data-icon="heart"
-                  data-prefix="fas"
-                  role="img"
-                  style={
-                    Object {
-                      "color": "red",
-                      "marginLeft": 5,
-                    }
-                  }
-                  viewBox="0 0 576 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M414.9 24C361.8 24 312 65.7 288 89.3 264 65.7 214.2 24 161.1 24 70.3 24 16 76.9 16 165.5c0 72.6 66.8 133.3 69.2 135.4l187 180.8c8.8 8.5 22.8 8.5 31.6 0l186.7-180.2c2.7-2.7 69.5-63.5 69.5-136C560 76.9 505.7 24 414.9 24z"
-                    fill="currentColor"
-                    style={Object {}}
-                  />
-                </svg>
-              </span>
-            </a>
-          </li>
-          <li
-            className="nav-item"
-            style={
-              Object {
-                "marginLeft": 10,
-              }
-            }
-          >
-            <a
-              className="nav-link btn btn-primary btn-sm"
-              href="https://www.adamgoldman.me/book-session"
-              rel="nofollow noreferrer noopener"
-              target="_blank"
-            >
-              Book a session
-            </a>
-          </li>
-        </ul>
-      </div>
-      <a
-        className="nav-link btn btn-primary btn-sm d-sm-block d-md-none"
-        href="https://www.adamgoldman.me/book-session"
-        rel="nofollow noreferrer noopener"
-        target="_blank"
-      >
-        Book a session
-      </a>
+                Step 0 Title
+              </h2>
+            </Heading>
+          </div>
+        </ReactMarkdown>
+      </Markdown>
     </div>
-  </nav>
-  <div>
-    <div>
-      <div
-        style={
+    <Markdown
+      source="Step 0 Description"
+    >
+      <ReactMarkdown
+        containerTagName="div"
+        parserOptions={Object {}}
+        renderers={
           Object {
-            "marginBottom": 30,
+            "Link": [Function],
           }
         }
+        source="Step 0 Description"
       >
         <div>
-          <h2
-            className={undefined}
-            data-sourcepos={undefined}
+          <p
+            key="1:1-1:182"
           >
-            Title
-          </h2>
+            Step 0 Description
+          </p>
         </div>
-      </div>
-      <div>
-        <p>
-          Description
-        </p>
-      </div>
-      <div
+      </ReactMarkdown>
+    </Markdown>
+    <Markdown
+      className="text-muted tool-note"
+      source="Step 0 notes"
+    >
+      <ReactMarkdown
         className="text-muted tool-note"
-      >
-        <p>
-          notes
-        </p>
-      </div>
-      <div
-        style={
+        containerTagName="div"
+        parserOptions={Object {}}
+        renderers={
           Object {
-            "marginBottom": 20,
-            "marginTop": 20,
+            "Link": [Function],
           }
         }
+        source="Step 0 notes"
+      >
+        <div
+          className="text-muted tool-note"
+        >
+          <p
+            key="1:1-1:122"
+          >
+            Step 0 notes
+          </p>
+        </div>
+      </ReactMarkdown>
+    </Markdown>
+    <div
+      style={
+        Object {
+          "marginBottom": 20,
+          "marginTop": 20,
+        }
+      }
+    >
+      <Answers
+        answers={
+          Array [
+            Object {
+              "text": "answer 1",
+            },
+          ]
+        }
+        onSubmit={[Function]}
+        onSubmitOther={[Function]}
+        path="/tools/trauma-relief/5ac43ef0d3b723075ebfd200"
       >
         <div>
           <div
+            key="0"
             style={
               Object {
                 "marginBottom": 10,
@@ -1639,7 +768,12 @@ exports[`MultiStepForm should render radio answers 1`] = `
             </a>
           </div>
         </div>
-      </div>
+      </Answers>
+    </div>
+    <ExternalA
+      className="btn btn-secondary btn-sm"
+      href="https://m.me/adamgoldman.me?ref=inner-circle"
+    >
       <a
         className="btn btn-secondary btn-sm"
         href="https://m.me/adamgoldman.me?ref=inner-circle"
@@ -1648,395 +782,151 @@ exports[`MultiStepForm should render radio answers 1`] = `
       >
         Subscribe to future tools
       </a>
-    </div>
+    </ExternalA>
   </div>
-  <div
-    className="container"
-  >
-    <div
-      className="footer"
-    >
-      <p
-        className="pull-left"
-      >
-        Copyright © 2017 
-        <a
-          className="link"
-          href="/"
-          onClick={[Function]}
-        >
-          Adam Goldman
-        </a>
-      </p>
-      <p
-        className="pull-right"
-      >
-        <a
-          className="link"
-          href="/legal-stuff"
-          onClick={[Function]}
-        >
-          legal stuff
-        </a>
-        <a
-          className="link"
-          href="/privacy"
-          onClick={[Function]}
-          style={
-            Object {
-              "marginLeft": 10,
-            }
-          }
-        >
-          Privacy
-        </a>
-      </p>
-      <div
-        className="clearfix"
-      />
-    </div>
-  </div>
-  <a
-    className="container"
-    href="https://www.adamgoldman.me/contact"
-    rel="nofollow noreferrer noopener"
-    target="_blank"
-  >
-    <img
-      alt="Messenger Link"
-      src="https://cdn.supple.com.au/wp-content/themes/supple/img/msg.png"
-    />
-  </a>
-</div>
+</MultiStepForm>
 `;
 
 exports[`MultiStepForm should render short answer 1`] = `
-<div
-  className="container"
+<MultiStepForm
+  answerByStep={
+    Object {
+      "0": "",
+      "1": "",
+      "2": "",
+    }
+  }
+  currentStepNum={0}
+  hiddenFields={Array []}
+  onUpdateProgress={[MockFunction]}
+  path="/tools/trauma-relief/5ac43ef0d3b723075ebfd200"
+  price={0}
+  steps={
+    Array [
+      Object {
+        "description": "Step 0 Description",
+        "notes": "Step 0 notes",
+        "title": "Step 0 Title",
+        "type": "short",
+      },
+      Object {
+        "description": "Step 1 Description: \${echo} and \${s0}",
+        "notes": "Step 1 notes: \${echo} and \${s0}",
+        "title": "Step 1 Title: \${echo} and \${s0}",
+        "type": "short",
+      },
+    ]
+  }
+  stepsStack={Array []}
 >
-  <nav
-    className="navbar navbar-expand-lg fixed-top main-nav navbar-light"
-  >
+  <div>
     <div
-      className="container"
+      style={
+        Object {
+          "marginBottom": 30,
+        }
+      }
     >
-      <div
-        className="clearfix d-sm-block d-md-none"
+      <Markdown
+        source="## Step 0 Title"
       >
-        <svg
-          aria-hidden="true"
-          className="svg-inline--fa fa-bars fa-w-14 "
-          data-icon="bars"
-          data-prefix="fas"
-          onClick={[Function]}
-          role="img"
-          style={
+        <ReactMarkdown
+          containerTagName="div"
+          parserOptions={Object {}}
+          renderers={
             Object {
-              "marginRight": 10,
+              "Link": [Function],
             }
           }
-          viewBox="0 0 448 512"
-          xmlns="http://www.w3.org/2000/svg"
+          source="## Step 0 Title"
         >
-          <path
-            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
-            fill="currentColor"
-            style={Object {}}
-          />
-        </svg>
-        <div
-          className="mobileMenu"
-        >
-          <nav>
-            <h3
-              className="mobileMenuHeadline"
-              onClick={[Function]}
+          <div>
+            <Heading
+              key="1:1-1:152"
+              level={2}
+              literal={null}
+              nodeKey="1:1-1:152"
             >
-              Adam Goldman
-            </h3>
-            <ul
-              className="navbar-nav"
-            >
-              <li
-                className="nav-item"
+              <h2
+                key="1:1-1:152"
               >
-                <a
-                  className="nav-link navLink"
-                  href="/"
-                  onClick={[Function]}
-                >
-                  Home
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/transcripts"
-                  onClick={[Function]}
-                >
-                  Transcripts
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/tools"
-                  onClick={[Function]}
-                >
-                  Tutorials
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/about"
-                  onClick={[Function]}
-                >
-                  About
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="https://www.adamgoldman.me/contact"
-                  rel="nofollow noreferrer noopener"
-                  target="_blank"
-                >
-                  Contact
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/i-dont-charge-i-accept"
-                  onClick={[Function]}
-                >
-                  <span>
-                    Pricing 
-                    <svg
-                      aria-hidden="true"
-                      className="svg-inline--fa fa-heart fa-w-18 "
-                      data-icon="heart"
-                      data-prefix="fas"
-                      role="img"
-                      style={
-                        Object {
-                          "color": "red",
-                          "marginLeft": 5,
-                        }
-                      }
-                      viewBox="0 0 576 512"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M414.9 24C361.8 24 312 65.7 288 89.3 264 65.7 214.2 24 161.1 24 70.3 24 16 76.9 16 165.5c0 72.6 66.8 133.3 69.2 135.4l187 180.8c8.8 8.5 22.8 8.5 31.6 0l186.7-180.2c2.7-2.7 69.5-63.5 69.5-136C560 76.9 505.7 24 414.9 24z"
-                        fill="currentColor"
-                        style={Object {}}
-                      />
-                    </svg>
-                  </span>
-                </a>
-              </li>
-              <li
-                className="nav-item"
-                style={
-                  Object {
-                    "marginTop": 20,
-                  }
-                }
-              >
-                <a
-                  className="nav-link btn btn-primary btn-block"
-                  href="https://www.adamgoldman.me/book-session"
-                  rel="nofollow noreferrer noopener"
-                  target="_blank"
-                >
-                  Book a session
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <a
-        className="navbar-brand mr-auto"
-        href="/"
-        onClick={[Function]}
-      >
-        Adam Goldman
-      </a>
-      <div
-        className="collapse navbar-collapse"
-      >
-        <ul
-          className="navbar-nav ml-auto"
-        >
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/transcripts"
-              onClick={[Function]}
-            >
-              Transcripts
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/tools"
-              onClick={[Function]}
-            >
-              Tutorials
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/about"
-              onClick={[Function]}
-            >
-              About
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="https://www.adamgoldman.me/contact"
-              rel="nofollow noreferrer noopener"
-              target="_blank"
-            >
-              Contact
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/i-dont-charge-i-accept"
-              onClick={[Function]}
-            >
-              <span>
-                Pricing 
-                <svg
-                  aria-hidden="true"
-                  className="svg-inline--fa fa-heart fa-w-18 "
-                  data-icon="heart"
-                  data-prefix="fas"
-                  role="img"
-                  style={
-                    Object {
-                      "color": "red",
-                      "marginLeft": 5,
-                    }
-                  }
-                  viewBox="0 0 576 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M414.9 24C361.8 24 312 65.7 288 89.3 264 65.7 214.2 24 161.1 24 70.3 24 16 76.9 16 165.5c0 72.6 66.8 133.3 69.2 135.4l187 180.8c8.8 8.5 22.8 8.5 31.6 0l186.7-180.2c2.7-2.7 69.5-63.5 69.5-136C560 76.9 505.7 24 414.9 24z"
-                    fill="currentColor"
-                    style={Object {}}
-                  />
-                </svg>
-              </span>
-            </a>
-          </li>
-          <li
-            className="nav-item"
-            style={
-              Object {
-                "marginLeft": 10,
-              }
-            }
-          >
-            <a
-              className="nav-link btn btn-primary btn-sm"
-              href="https://www.adamgoldman.me/book-session"
-              rel="nofollow noreferrer noopener"
-              target="_blank"
-            >
-              Book a session
-            </a>
-          </li>
-        </ul>
-      </div>
-      <a
-        className="nav-link btn btn-primary btn-sm d-sm-block d-md-none"
-        href="https://www.adamgoldman.me/book-session"
-        rel="nofollow noreferrer noopener"
-        target="_blank"
-      >
-        Book a session
-      </a>
+                Step 0 Title
+              </h2>
+            </Heading>
+          </div>
+        </ReactMarkdown>
+      </Markdown>
     </div>
-  </nav>
-  <div>
-    <div>
-      <div
-        style={
+    <Markdown
+      source="Step 0 Description"
+    >
+      <ReactMarkdown
+        containerTagName="div"
+        parserOptions={Object {}}
+        renderers={
           Object {
-            "marginBottom": 30,
+            "Link": [Function],
           }
         }
+        source="Step 0 Description"
       >
         <div>
-          <h2
-            className={undefined}
-            data-sourcepos={undefined}
+          <p
+            key="1:1-1:182"
           >
-            Title
-          </h2>
+            Step 0 Description
+          </p>
         </div>
-      </div>
-      <div>
-        <p>
-          Description
-        </p>
-      </div>
-      <div
+      </ReactMarkdown>
+    </Markdown>
+    <Markdown
+      className="text-muted tool-note"
+      source="Step 0 notes"
+    >
+      <ReactMarkdown
         className="text-muted tool-note"
-      >
-        <p>
-          notes
-        </p>
-      </div>
-      <form
-        onSubmit={[Function]}
+        containerTagName="div"
+        parserOptions={Object {}}
+        renderers={
+          Object {
+            "Link": [Function],
+          }
+        }
+        source="Step 0 notes"
       >
         <div
-          className="form-group"
+          className="text-muted tool-note"
         >
-          <input
-            aria-describedby="inputHelp"
-            autoFocus={true}
-            className="form-control"
-            onChange={[Function]}
-            placeholder="write your answer here"
-            required={true}
-            value=""
-          />
-          <small
-            className="form-text text-muted"
-            id="inputHelp"
+          <p
+            key="1:1-1:122"
+          >
+            Step 0 notes
+          </p>
+        </div>
+      </ReactMarkdown>
+    </Markdown>
+    <form
+      onSubmit={[Function]}
+    >
+      <div
+        className="form-group"
+      >
+        <input
+          aria-describedby="inputHelp"
+          autoFocus={true}
+          className="form-control"
+          onChange={[Function]}
+          placeholder="write your answer here"
+          required={true}
+          value=""
+        />
+        <small
+          className="form-text text-muted"
+          id="inputHelp"
+        >
+          <ExternalA
+            href="/privacy"
+            target="_blank"
           >
             <a
               href="/privacy"
@@ -2045,15 +935,20 @@ exports[`MultiStepForm should render short answer 1`] = `
             >
               Privacy is sacred. Your data is safe.
             </a>
-          </small>
-        </div>
-        <button
-          className="btn btn-primary"
-          type="submit"
-        >
-          Press Enter or click to Continue
-        </button>
-      </form>
+          </ExternalA>
+        </small>
+      </div>
+      <button
+        className="btn btn-primary"
+        type="submit"
+      >
+        Press Enter or click to Continue
+      </button>
+    </form>
+    <ExternalA
+      className="btn btn-secondary btn-sm"
+      href="https://m.me/adamgoldman.me?ref=inner-circle"
+    >
       <a
         className="btn btn-secondary btn-sm"
         href="https://m.me/adamgoldman.me?ref=inner-circle"
@@ -2062,379 +957,316 @@ exports[`MultiStepForm should render short answer 1`] = `
       >
         Subscribe to future tools
       </a>
-    </div>
+    </ExternalA>
   </div>
-  <div
-    className="container"
-  >
-    <div
-      className="footer"
-    >
-      <p
-        className="pull-left"
-      >
-        Copyright © 2017 
-        <a
-          className="link"
-          href="/"
-          onClick={[Function]}
-        >
-          Adam Goldman
-        </a>
-      </p>
-      <p
-        className="pull-right"
-      >
-        <a
-          className="link"
-          href="/legal-stuff"
-          onClick={[Function]}
-        >
-          legal stuff
-        </a>
-        <a
-          className="link"
-          href="/privacy"
-          onClick={[Function]}
-          style={
-            Object {
-              "marginLeft": 10,
-            }
-          }
-        >
-          Privacy
-        </a>
-      </p>
-      <div
-        className="clearfix"
-      />
-    </div>
-  </div>
-  <a
-    className="container"
-    href="https://www.adamgoldman.me/contact"
-    rel="nofollow noreferrer noopener"
-    target="_blank"
-  >
-    <img
-      alt="Messenger Link"
-      src="https://cdn.supple.com.au/wp-content/themes/supple/img/msg.png"
-    />
-  </a>
-</div>
+</MultiStepForm>
 `;
 
-exports[`MultiStepForm should render stars review 1`] = `
-<div
-  className="container"
+exports[`MultiStepForm should render short answer 2`] = `
+<MultiStepForm
+  answerByStep={
+    Object {
+      "0": "",
+      "1": "",
+      "2": "",
+    }
+  }
+  currentStepNum={0}
+  hiddenFields={Array []}
+  onUpdateProgress={[MockFunction]}
+  path="/tools/trauma-relief/5ac43ef0d3b723075ebfd200"
+  price={0}
+  steps={
+    Array [
+      Object {
+        "description": "Step 0 Description",
+        "notes": "Step 0 notes",
+        "title": "Step 0 Title",
+        "type": "short",
+      },
+      Object {
+        "description": "Step 1 Description: \${echo} and \${s0}",
+        "notes": "Step 1 notes: \${echo} and \${s0}",
+        "title": "Step 1 Title: \${echo} and \${s0}",
+        "type": "short",
+      },
+    ]
+  }
+  stepsStack={Array []}
 >
-  <nav
-    className="navbar navbar-expand-lg fixed-top main-nav navbar-light"
-  >
+  <div>
     <div
-      className="container"
+      style={
+        Object {
+          "marginBottom": 30,
+        }
+      }
     >
-      <div
-        className="clearfix d-sm-block d-md-none"
+      <Markdown
+        source="## Step 0 Title"
       >
-        <svg
-          aria-hidden="true"
-          className="svg-inline--fa fa-bars fa-w-14 "
-          data-icon="bars"
-          data-prefix="fas"
-          onClick={[Function]}
-          role="img"
-          style={
+        <ReactMarkdown
+          containerTagName="div"
+          parserOptions={Object {}}
+          renderers={
             Object {
-              "marginRight": 10,
+              "Link": [Function],
             }
           }
-          viewBox="0 0 448 512"
-          xmlns="http://www.w3.org/2000/svg"
+          source="## Step 0 Title"
         >
-          <path
-            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
-            fill="currentColor"
-            style={Object {}}
-          />
-        </svg>
-        <div
-          className="mobileMenu"
-        >
-          <nav>
-            <h3
-              className="mobileMenuHeadline"
-              onClick={[Function]}
+          <div>
+            <Heading
+              key="1:1-1:152"
+              level={2}
+              literal={null}
+              nodeKey="1:1-1:152"
             >
-              Adam Goldman
-            </h3>
-            <ul
-              className="navbar-nav"
-            >
-              <li
-                className="nav-item"
+              <h2
+                key="1:1-1:152"
               >
-                <a
-                  className="nav-link navLink"
-                  href="/"
-                  onClick={[Function]}
-                >
-                  Home
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/transcripts"
-                  onClick={[Function]}
-                >
-                  Transcripts
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/tools"
-                  onClick={[Function]}
-                >
-                  Tutorials
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/about"
-                  onClick={[Function]}
-                >
-                  About
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="https://www.adamgoldman.me/contact"
-                  rel="nofollow noreferrer noopener"
-                  target="_blank"
-                >
-                  Contact
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/i-dont-charge-i-accept"
-                  onClick={[Function]}
-                >
-                  <span>
-                    Pricing 
-                    <svg
-                      aria-hidden="true"
-                      className="svg-inline--fa fa-heart fa-w-18 "
-                      data-icon="heart"
-                      data-prefix="fas"
-                      role="img"
-                      style={
-                        Object {
-                          "color": "red",
-                          "marginLeft": 5,
-                        }
-                      }
-                      viewBox="0 0 576 512"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M414.9 24C361.8 24 312 65.7 288 89.3 264 65.7 214.2 24 161.1 24 70.3 24 16 76.9 16 165.5c0 72.6 66.8 133.3 69.2 135.4l187 180.8c8.8 8.5 22.8 8.5 31.6 0l186.7-180.2c2.7-2.7 69.5-63.5 69.5-136C560 76.9 505.7 24 414.9 24z"
-                        fill="currentColor"
-                        style={Object {}}
-                      />
-                    </svg>
-                  </span>
-                </a>
-              </li>
-              <li
-                className="nav-item"
-                style={
-                  Object {
-                    "marginTop": 20,
-                  }
-                }
-              >
-                <a
-                  className="nav-link btn btn-primary btn-block"
-                  href="https://www.adamgoldman.me/book-session"
-                  rel="nofollow noreferrer noopener"
-                  target="_blank"
-                >
-                  Book a session
-                </a>
-              </li>
-            </ul>
-          </nav>
+                Step 0 Title
+              </h2>
+            </Heading>
+          </div>
+        </ReactMarkdown>
+      </Markdown>
+    </div>
+    <Markdown
+      source="Step 0 Description"
+    >
+      <ReactMarkdown
+        containerTagName="div"
+        parserOptions={Object {}}
+        renderers={
+          Object {
+            "Link": [Function],
+          }
+        }
+        source="Step 0 Description"
+      >
+        <div>
+          <p
+            key="1:1-1:182"
+          >
+            Step 0 Description
+          </p>
         </div>
-      </div>
-      <a
-        className="navbar-brand mr-auto"
-        href="/"
-        onClick={[Function]}
+      </ReactMarkdown>
+    </Markdown>
+    <Markdown
+      className="text-muted tool-note"
+      source="Step 0 notes"
+    >
+      <ReactMarkdown
+        className="text-muted tool-note"
+        containerTagName="div"
+        parserOptions={Object {}}
+        renderers={
+          Object {
+            "Link": [Function],
+          }
+        }
+        source="Step 0 notes"
       >
-        Adam Goldman
-      </a>
-      <div
-        className="collapse navbar-collapse"
-      >
-        <ul
-          className="navbar-nav ml-auto"
+        <div
+          className="text-muted tool-note"
         >
-          <li
-            className="nav-item"
+          <p
+            key="1:1-1:122"
+          >
+            Step 0 notes
+          </p>
+        </div>
+      </ReactMarkdown>
+    </Markdown>
+    <form
+      onSubmit={[Function]}
+    >
+      <div
+        className="form-group"
+      >
+        <input
+          aria-describedby="inputHelp"
+          autoFocus={true}
+          className="form-control"
+          onChange={[Function]}
+          placeholder="write your answer here"
+          required={true}
+          value="Answer step 0"
+        />
+        <small
+          className="form-text text-muted"
+          id="inputHelp"
+        >
+          <ExternalA
+            href="/privacy"
+            target="_blank"
           >
             <a
-              className="nav-link"
-              href="/transcripts"
-              onClick={[Function]}
-            >
-              Transcripts
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/tools"
-              onClick={[Function]}
-            >
-              Tutorials
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/about"
-              onClick={[Function]}
-            >
-              About
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="https://www.adamgoldman.me/contact"
+              href="/privacy"
               rel="nofollow noreferrer noopener"
               target="_blank"
             >
-              Contact
+              Privacy is sacred. Your data is safe.
             </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/i-dont-charge-i-accept"
-              onClick={[Function]}
-            >
-              <span>
-                Pricing 
-                <svg
-                  aria-hidden="true"
-                  className="svg-inline--fa fa-heart fa-w-18 "
-                  data-icon="heart"
-                  data-prefix="fas"
-                  role="img"
-                  style={
-                    Object {
-                      "color": "red",
-                      "marginLeft": 5,
-                    }
-                  }
-                  viewBox="0 0 576 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M414.9 24C361.8 24 312 65.7 288 89.3 264 65.7 214.2 24 161.1 24 70.3 24 16 76.9 16 165.5c0 72.6 66.8 133.3 69.2 135.4l187 180.8c8.8 8.5 22.8 8.5 31.6 0l186.7-180.2c2.7-2.7 69.5-63.5 69.5-136C560 76.9 505.7 24 414.9 24z"
-                    fill="currentColor"
-                    style={Object {}}
-                  />
-                </svg>
-              </span>
-            </a>
-          </li>
-          <li
-            className="nav-item"
-            style={
-              Object {
-                "marginLeft": 10,
-              }
-            }
-          >
-            <a
-              className="nav-link btn btn-primary btn-sm"
-              href="https://www.adamgoldman.me/book-session"
-              rel="nofollow noreferrer noopener"
-              target="_blank"
-            >
-              Book a session
-            </a>
-          </li>
-        </ul>
+          </ExternalA>
+        </small>
       </div>
+      <button
+        className="btn btn-primary"
+        type="submit"
+      >
+        Press Enter or click to Continue
+      </button>
+    </form>
+    <ExternalA
+      className="btn btn-secondary btn-sm"
+      href="https://m.me/adamgoldman.me?ref=inner-circle"
+    >
       <a
-        className="nav-link btn btn-primary btn-sm d-sm-block d-md-none"
-        href="https://www.adamgoldman.me/book-session"
+        className="btn btn-secondary btn-sm"
+        href="https://m.me/adamgoldman.me?ref=inner-circle"
         rel="nofollow noreferrer noopener"
         target="_blank"
       >
-        Book a session
+        Subscribe to future tools
       </a>
-    </div>
-  </nav>
+    </ExternalA>
+  </div>
+</MultiStepForm>
+`;
+
+exports[`MultiStepForm should render stars review 1`] = `
+<MultiStepForm
+  answerByStep={
+    Object {
+      "0": "",
+      "1": "",
+      "2": "",
+    }
+  }
+  currentStepNum={0}
+  hiddenFields={Array []}
+  onUpdateProgress={[MockFunction]}
+  path="/tools/trauma-relief/5ac43ef0d3b723075ebfd200"
+  price={0}
+  steps={
+    Array [
+      Object {
+        "description": "Step 0 Description",
+        "notes": "Step 0 notes",
+        "title": "Step 0 Title",
+        "type": "stars-review",
+      },
+      Object {
+        "description": "Step 1 Description: \${echo} and \${s0}",
+        "notes": "Step 1 notes: \${echo} and \${s0}",
+        "title": "Step 1 Title: \${echo} and \${s0}",
+        "type": "stars-review",
+      },
+    ]
+  }
+  stepsStack={Array []}
+>
   <div>
-    <div>
-      <div
-        style={
+    <div
+      style={
+        Object {
+          "marginBottom": 30,
+        }
+      }
+    >
+      <Markdown
+        source="## Step 0 Title"
+      >
+        <ReactMarkdown
+          containerTagName="div"
+          parserOptions={Object {}}
+          renderers={
+            Object {
+              "Link": [Function],
+            }
+          }
+          source="## Step 0 Title"
+        >
+          <div>
+            <Heading
+              key="1:1-1:152"
+              level={2}
+              literal={null}
+              nodeKey="1:1-1:152"
+            >
+              <h2
+                key="1:1-1:152"
+              >
+                Step 0 Title
+              </h2>
+            </Heading>
+          </div>
+        </ReactMarkdown>
+      </Markdown>
+    </div>
+    <Markdown
+      source="Step 0 Description"
+    >
+      <ReactMarkdown
+        containerTagName="div"
+        parserOptions={Object {}}
+        renderers={
           Object {
-            "marginBottom": 30,
+            "Link": [Function],
           }
         }
+        source="Step 0 Description"
       >
         <div>
-          <h2
-            className={undefined}
-            data-sourcepos={undefined}
+          <p
+            key="1:1-1:182"
           >
-            Title
-          </h2>
+            Step 0 Description
+          </p>
         </div>
-      </div>
-      <div>
-        <p>
-          Description
-        </p>
-      </div>
-      <div
+      </ReactMarkdown>
+    </Markdown>
+    <Markdown
+      className="text-muted tool-note"
+      source="Step 0 notes"
+    >
+      <ReactMarkdown
         className="text-muted tool-note"
+        containerTagName="div"
+        parserOptions={Object {}}
+        renderers={
+          Object {
+            "Link": [Function],
+          }
+        }
+        source="Step 0 notes"
       >
-        <p>
-          notes
-        </p>
-      </div>
+        <div
+          className="text-muted tool-note"
+        >
+          <p
+            key="1:1-1:122"
+          >
+            Step 0 notes
+          </p>
+        </div>
+      </ReactMarkdown>
+    </Markdown>
+    <ReactStars
+      char="★"
+      color1="gray"
+      color2="#ffd700"
+      count={5}
+      edit={true}
+      half={false}
+      onChange={[Function]}
+      size={60}
+      value={0}
+    >
       <div
-        className={undefined}
         style={
           Object {
             "overflow": "hidden",
@@ -2442,11 +1274,11 @@ exports[`MultiStepForm should render stars review 1`] = `
           }
         }
       >
-        
         <span
           className=""
           data-forhalf="★"
           data-index={0}
+          key="0"
           onClick={[Function]}
           onMouseLeave={[Function]}
           onMouseMove={[Function]}
@@ -2469,6 +1301,7 @@ exports[`MultiStepForm should render stars review 1`] = `
           className=""
           data-forhalf="★"
           data-index={1}
+          key="1"
           onClick={[Function]}
           onMouseLeave={[Function]}
           onMouseMove={[Function]}
@@ -2491,6 +1324,7 @@ exports[`MultiStepForm should render stars review 1`] = `
           className=""
           data-forhalf="★"
           data-index={2}
+          key="2"
           onClick={[Function]}
           onMouseLeave={[Function]}
           onMouseMove={[Function]}
@@ -2513,6 +1347,7 @@ exports[`MultiStepForm should render stars review 1`] = `
           className=""
           data-forhalf="★"
           data-index={3}
+          key="3"
           onClick={[Function]}
           onMouseLeave={[Function]}
           onMouseMove={[Function]}
@@ -2535,6 +1370,7 @@ exports[`MultiStepForm should render stars review 1`] = `
           className=""
           data-forhalf="★"
           data-index={4}
+          key="4"
           onClick={[Function]}
           onMouseLeave={[Function]}
           onMouseMove={[Function]}
@@ -2554,6 +1390,11 @@ exports[`MultiStepForm should render stars review 1`] = `
           ★
         </span>
       </div>
+    </ReactStars>
+    <ExternalA
+      className="btn btn-secondary btn-sm"
+      href="https://m.me/adamgoldman.me?ref=inner-circle"
+    >
       <a
         className="btn btn-secondary btn-sm"
         href="https://m.me/adamgoldman.me?ref=inner-circle"
@@ -2562,393 +1403,135 @@ exports[`MultiStepForm should render stars review 1`] = `
       >
         Subscribe to future tools
       </a>
-    </div>
+    </ExternalA>
   </div>
-  <div
-    className="container"
-  >
-    <div
-      className="footer"
-    >
-      <p
-        className="pull-left"
-      >
-        Copyright © 2017 
-        <a
-          className="link"
-          href="/"
-          onClick={[Function]}
-        >
-          Adam Goldman
-        </a>
-      </p>
-      <p
-        className="pull-right"
-      >
-        <a
-          className="link"
-          href="/legal-stuff"
-          onClick={[Function]}
-        >
-          legal stuff
-        </a>
-        <a
-          className="link"
-          href="/privacy"
-          onClick={[Function]}
-          style={
-            Object {
-              "marginLeft": 10,
-            }
-          }
-        >
-          Privacy
-        </a>
-      </p>
-      <div
-        className="clearfix"
-      />
-    </div>
-  </div>
-  <a
-    className="container"
-    href="https://www.adamgoldman.me/contact"
-    rel="nofollow noreferrer noopener"
-    target="_blank"
-  >
-    <img
-      alt="Messenger Link"
-      src="https://cdn.supple.com.au/wp-content/themes/supple/img/msg.png"
-    />
-  </a>
-</div>
+</MultiStepForm>
 `;
 
 exports[`MultiStepForm with data 1`] = `
-<div
-  className="container"
+<MultiStepForm
+  answerByStep={
+    Object {
+      "0": "My name is neo",
+      "1": "",
+      "2": "",
+    }
+  }
+  currentStepNum={1}
+  hiddenFields={Array []}
+  onUpdateProgress={[MockFunction]}
+  path="/tools/trauma-relief/5ac43ef0d3b723075ebfd200"
+  price={0}
+  steps={
+    Array [
+      Object {
+        "title": "Title",
+        "type": "short",
+      },
+      Object {
+        "description": "\${echo} and \${s0} and me",
+        "title": "Title",
+        "type": "short",
+      },
+    ]
+  }
+  stepsStack={
+    Array [
+      0,
+    ]
+  }
 >
-  <nav
-    className="navbar navbar-expand-lg fixed-top main-nav navbar-light"
-  >
+  <div>
     <div
-      className="container"
+      style={
+        Object {
+          "marginBottom": 30,
+        }
+      }
     >
-      <div
-        className="clearfix d-sm-block d-md-none"
+      <Markdown
+        source="## Title"
       >
-        <svg
-          aria-hidden="true"
-          className="svg-inline--fa fa-bars fa-w-14 "
-          data-icon="bars"
-          data-prefix="fas"
-          onClick={[Function]}
-          role="img"
-          style={
+        <ReactMarkdown
+          containerTagName="div"
+          parserOptions={Object {}}
+          renderers={
             Object {
-              "marginRight": 10,
+              "Link": [Function],
             }
           }
-          viewBox="0 0 448 512"
-          xmlns="http://www.w3.org/2000/svg"
+          source="## Title"
         >
-          <path
-            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
-            fill="currentColor"
-            style={Object {}}
-          />
-        </svg>
-        <div
-          className="mobileMenu"
-        >
-          <nav>
-            <h3
-              className="mobileMenuHeadline"
-              onClick={[Function]}
+          <div>
+            <Heading
+              key="1:1-1:82"
+              level={2}
+              literal={null}
+              nodeKey="1:1-1:82"
             >
-              Adam Goldman
-            </h3>
-            <ul
-              className="navbar-nav"
-            >
-              <li
-                className="nav-item"
+              <h2
+                key="1:1-1:82"
               >
-                <a
-                  className="nav-link navLink"
-                  href="/"
-                  onClick={[Function]}
-                >
-                  Home
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/transcripts"
-                  onClick={[Function]}
-                >
-                  Transcripts
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/tools"
-                  onClick={[Function]}
-                >
-                  Tutorials
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/about"
-                  onClick={[Function]}
-                >
-                  About
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="https://www.adamgoldman.me/contact"
-                  rel="nofollow noreferrer noopener"
-                  target="_blank"
-                >
-                  Contact
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/i-dont-charge-i-accept"
-                  onClick={[Function]}
-                >
-                  <span>
-                    Pricing 
-                    <svg
-                      aria-hidden="true"
-                      className="svg-inline--fa fa-heart fa-w-18 "
-                      data-icon="heart"
-                      data-prefix="fas"
-                      role="img"
-                      style={
-                        Object {
-                          "color": "red",
-                          "marginLeft": 5,
-                        }
-                      }
-                      viewBox="0 0 576 512"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M414.9 24C361.8 24 312 65.7 288 89.3 264 65.7 214.2 24 161.1 24 70.3 24 16 76.9 16 165.5c0 72.6 66.8 133.3 69.2 135.4l187 180.8c8.8 8.5 22.8 8.5 31.6 0l186.7-180.2c2.7-2.7 69.5-63.5 69.5-136C560 76.9 505.7 24 414.9 24z"
-                        fill="currentColor"
-                        style={Object {}}
-                      />
-                    </svg>
-                  </span>
-                </a>
-              </li>
-              <li
-                className="nav-item"
-                style={
-                  Object {
-                    "marginTop": 20,
-                  }
-                }
-              >
-                <a
-                  className="nav-link btn btn-primary btn-block"
-                  href="https://www.adamgoldman.me/book-session"
-                  rel="nofollow noreferrer noopener"
-                  target="_blank"
-                >
-                  Book a session
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <a
-        className="navbar-brand mr-auto"
-        href="/"
-        onClick={[Function]}
-      >
-        Adam Goldman
-      </a>
-      <div
-        className="collapse navbar-collapse"
-      >
-        <ul
-          className="navbar-nav ml-auto"
-        >
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/transcripts"
-              onClick={[Function]}
-            >
-              Transcripts
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/tools"
-              onClick={[Function]}
-            >
-              Tutorials
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/about"
-              onClick={[Function]}
-            >
-              About
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="https://www.adamgoldman.me/contact"
-              rel="nofollow noreferrer noopener"
-              target="_blank"
-            >
-              Contact
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/i-dont-charge-i-accept"
-              onClick={[Function]}
-            >
-              <span>
-                Pricing 
-                <svg
-                  aria-hidden="true"
-                  className="svg-inline--fa fa-heart fa-w-18 "
-                  data-icon="heart"
-                  data-prefix="fas"
-                  role="img"
-                  style={
-                    Object {
-                      "color": "red",
-                      "marginLeft": 5,
-                    }
-                  }
-                  viewBox="0 0 576 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M414.9 24C361.8 24 312 65.7 288 89.3 264 65.7 214.2 24 161.1 24 70.3 24 16 76.9 16 165.5c0 72.6 66.8 133.3 69.2 135.4l187 180.8c8.8 8.5 22.8 8.5 31.6 0l186.7-180.2c2.7-2.7 69.5-63.5 69.5-136C560 76.9 505.7 24 414.9 24z"
-                    fill="currentColor"
-                    style={Object {}}
-                  />
-                </svg>
-              </span>
-            </a>
-          </li>
-          <li
-            className="nav-item"
-            style={
-              Object {
-                "marginLeft": 10,
-              }
-            }
-          >
-            <a
-              className="nav-link btn btn-primary btn-sm"
-              href="https://www.adamgoldman.me/book-session"
-              rel="nofollow noreferrer noopener"
-              target="_blank"
-            >
-              Book a session
-            </a>
-          </li>
-        </ul>
-      </div>
-      <a
-        className="nav-link btn btn-primary btn-sm d-sm-block d-md-none"
-        href="https://www.adamgoldman.me/book-session"
-        rel="nofollow noreferrer noopener"
-        target="_blank"
-      >
-        Book a session
-      </a>
+                Title
+              </h2>
+            </Heading>
+          </div>
+        </ReactMarkdown>
+      </Markdown>
     </div>
-  </nav>
-  <div>
-    <div>
-      <div
-        style={
+    <Markdown
+      source="***“My name is neo”*** and My name is neo and me"
+    >
+      <ReactMarkdown
+        containerTagName="div"
+        parserOptions={Object {}}
+        renderers={
           Object {
-            "marginBottom": 30,
+            "Link": [Function],
           }
         }
+        source="***“My name is neo”*** and My name is neo and me"
       >
         <div>
-          <h2
-            className={undefined}
-            data-sourcepos={undefined}
+          <p
+            key="1:1-1:487"
           >
-            Title
-          </h2>
+            <strong
+              key="1:1-1:485"
+            >
+              <em
+                key="1:1-1:484"
+              >
+                “My name is neo”
+              </em>
+            </strong>
+             and My name is neo and me
+          </p>
         </div>
-      </div>
-      <div>
-        <p>
-          <strong>
-            <em>
-              “My name is neo”
-            </em>
-          </strong>
-           and My name is neo and me
-        </p>
-      </div>
-      <form
-        onSubmit={[Function]}
+      </ReactMarkdown>
+    </Markdown>
+    <form
+      onSubmit={[Function]}
+    >
+      <div
+        className="form-group"
       >
-        <div
-          className="form-group"
+        <input
+          aria-describedby="inputHelp"
+          autoFocus={true}
+          className="form-control"
+          onChange={[Function]}
+          placeholder="write your answer here"
+          required={true}
+          value=""
+        />
+        <small
+          className="form-text text-muted"
+          id="inputHelp"
         >
-          <input
-            aria-describedby="inputHelp"
-            autoFocus={true}
-            className="form-control"
-            onChange={[Function]}
-            placeholder="write your answer here"
-            required={true}
-            value=""
-          />
-          <small
-            className="form-text text-muted"
-            id="inputHelp"
+          <ExternalA
+            href="/privacy"
+            target="_blank"
           >
             <a
               href="/privacy"
@@ -2957,27 +1540,32 @@ exports[`MultiStepForm with data 1`] = `
             >
               Privacy is sacred. Your data is safe.
             </a>
-          </small>
-        </div>
-        <button
-          className="btn btn-primary"
-          type="submit"
-        >
-          Press Enter or click to Continue
-        </button>
-      </form>
+          </ExternalA>
+        </small>
+      </div>
       <button
-        className="btn btn-secondary btn-sm"
-        onClick={[Function]}
-        style={
-          Object {
-            "display": "block",
-            "marginBottom": 10,
-          }
-        }
+        className="btn btn-primary"
+        type="submit"
       >
-        Back
+        Press Enter or click to Continue
       </button>
+    </form>
+    <button
+      className="btn btn-secondary btn-sm"
+      onClick={[Function]}
+      style={
+        Object {
+          "display": "block",
+          "marginBottom": 10,
+        }
+      }
+    >
+      Back
+    </button>
+    <ExternalA
+      className="btn btn-secondary btn-sm"
+      href="https://m.me/adamgoldman.me?ref=inner-circle"
+    >
       <a
         className="btn btn-secondary btn-sm"
         href="https://m.me/adamgoldman.me?ref=inner-circle"
@@ -2986,488 +1574,7 @@ exports[`MultiStepForm with data 1`] = `
       >
         Subscribe to future tools
       </a>
-    </div>
+    </ExternalA>
   </div>
-  <div
-    className="container"
-  >
-    <div
-      className="footer"
-    >
-      <p
-        className="pull-left"
-      >
-        Copyright © 2017 
-        <a
-          className="link"
-          href="/"
-          onClick={[Function]}
-        >
-          Adam Goldman
-        </a>
-      </p>
-      <p
-        className="pull-right"
-      >
-        <a
-          className="link"
-          href="/legal-stuff"
-          onClick={[Function]}
-        >
-          legal stuff
-        </a>
-        <a
-          className="link"
-          href="/privacy"
-          onClick={[Function]}
-          style={
-            Object {
-              "marginLeft": 10,
-            }
-          }
-        >
-          Privacy
-        </a>
-      </p>
-      <div
-        className="clearfix"
-      />
-    </div>
-  </div>
-  <a
-    className="container"
-    href="https://www.adamgoldman.me/contact"
-    rel="nofollow noreferrer noopener"
-    target="_blank"
-  >
-    <img
-      alt="Messenger Link"
-      src="https://cdn.supple.com.au/wp-content/themes/supple/img/msg.png"
-    />
-  </a>
-</div>
-`;
-
-exports[`MultiStepForm with data 2`] = `
-<div
-  className="container"
->
-  <nav
-    className="navbar navbar-expand-lg fixed-top main-nav navbar-light"
-  >
-    <div
-      className="container"
-    >
-      <div
-        className="clearfix d-sm-block d-md-none"
-      >
-        <svg
-          aria-hidden="true"
-          className="svg-inline--fa fa-bars fa-w-14 "
-          data-icon="bars"
-          data-prefix="fas"
-          onClick={[Function]}
-          role="img"
-          style={
-            Object {
-              "marginRight": 10,
-            }
-          }
-          viewBox="0 0 448 512"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
-            fill="currentColor"
-            style={Object {}}
-          />
-        </svg>
-        <div
-          className="mobileMenu"
-        >
-          <nav>
-            <h3
-              className="mobileMenuHeadline"
-              onClick={[Function]}
-            >
-              Adam Goldman
-            </h3>
-            <ul
-              className="navbar-nav"
-            >
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/"
-                  onClick={[Function]}
-                >
-                  Home
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/transcripts"
-                  onClick={[Function]}
-                >
-                  Transcripts
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/tools"
-                  onClick={[Function]}
-                >
-                  Tutorials
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/about"
-                  onClick={[Function]}
-                >
-                  About
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="https://www.adamgoldman.me/contact"
-                  rel="nofollow noreferrer noopener"
-                  target="_blank"
-                >
-                  Contact
-                </a>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link navLink"
-                  href="/i-dont-charge-i-accept"
-                  onClick={[Function]}
-                >
-                  <span>
-                    Pricing 
-                    <svg
-                      aria-hidden="true"
-                      className="svg-inline--fa fa-heart fa-w-18 "
-                      data-icon="heart"
-                      data-prefix="fas"
-                      role="img"
-                      style={
-                        Object {
-                          "color": "red",
-                          "marginLeft": 5,
-                        }
-                      }
-                      viewBox="0 0 576 512"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M414.9 24C361.8 24 312 65.7 288 89.3 264 65.7 214.2 24 161.1 24 70.3 24 16 76.9 16 165.5c0 72.6 66.8 133.3 69.2 135.4l187 180.8c8.8 8.5 22.8 8.5 31.6 0l186.7-180.2c2.7-2.7 69.5-63.5 69.5-136C560 76.9 505.7 24 414.9 24z"
-                        fill="currentColor"
-                        style={Object {}}
-                      />
-                    </svg>
-                  </span>
-                </a>
-              </li>
-              <li
-                className="nav-item"
-                style={
-                  Object {
-                    "marginTop": 20,
-                  }
-                }
-              >
-                <a
-                  className="nav-link btn btn-primary btn-block"
-                  href="https://www.adamgoldman.me/book-session"
-                  rel="nofollow noreferrer noopener"
-                  target="_blank"
-                >
-                  Book a session
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <a
-        className="navbar-brand mr-auto"
-        href="/"
-        onClick={[Function]}
-      >
-        Adam Goldman
-      </a>
-      <div
-        className="collapse navbar-collapse"
-      >
-        <ul
-          className="navbar-nav ml-auto"
-        >
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/transcripts"
-              onClick={[Function]}
-            >
-              Transcripts
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/tools"
-              onClick={[Function]}
-            >
-              Tutorials
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/about"
-              onClick={[Function]}
-            >
-              About
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="https://www.adamgoldman.me/contact"
-              rel="nofollow noreferrer noopener"
-              target="_blank"
-            >
-              Contact
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="nav-link"
-              href="/i-dont-charge-i-accept"
-              onClick={[Function]}
-            >
-              <span>
-                Pricing 
-                <svg
-                  aria-hidden="true"
-                  className="svg-inline--fa fa-heart fa-w-18 "
-                  data-icon="heart"
-                  data-prefix="fas"
-                  role="img"
-                  style={
-                    Object {
-                      "color": "red",
-                      "marginLeft": 5,
-                    }
-                  }
-                  viewBox="0 0 576 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M414.9 24C361.8 24 312 65.7 288 89.3 264 65.7 214.2 24 161.1 24 70.3 24 16 76.9 16 165.5c0 72.6 66.8 133.3 69.2 135.4l187 180.8c8.8 8.5 22.8 8.5 31.6 0l186.7-180.2c2.7-2.7 69.5-63.5 69.5-136C560 76.9 505.7 24 414.9 24z"
-                    fill="currentColor"
-                    style={Object {}}
-                  />
-                </svg>
-              </span>
-            </a>
-          </li>
-          <li
-            className="nav-item"
-            style={
-              Object {
-                "marginLeft": 10,
-              }
-            }
-          >
-            <a
-              className="nav-link btn btn-primary btn-sm"
-              href="https://www.adamgoldman.me/book-session"
-              rel="nofollow noreferrer noopener"
-              target="_blank"
-            >
-              Book a session
-            </a>
-          </li>
-        </ul>
-      </div>
-      <a
-        className="nav-link btn btn-primary btn-sm d-sm-block d-md-none"
-        href="https://www.adamgoldman.me/book-session"
-        rel="nofollow noreferrer noopener"
-        target="_blank"
-      >
-        Book a session
-      </a>
-    </div>
-  </nav>
-  <div>
-    <div>
-      <div
-        style={
-          Object {
-            "marginBottom": 30,
-          }
-        }
-      >
-        <div>
-          <h2
-            className={undefined}
-            data-sourcepos={undefined}
-          >
-            Title
-          </h2>
-        </div>
-      </div>
-      <div>
-        <p>
-          <strong>
-            <em>
-              “My name is neo”
-            </em>
-          </strong>
-           and My name is neo and me
-        </p>
-      </div>
-      <form
-        onSubmit={[Function]}
-      >
-        <div
-          className="form-group"
-        >
-          <input
-            aria-describedby="inputHelp"
-            autoFocus={true}
-            className="form-control"
-            onChange={[Function]}
-            placeholder="write your answer here"
-            required={true}
-            value=""
-          />
-          <small
-            className="form-text text-muted"
-            id="inputHelp"
-          >
-            <a
-              href="/privacy"
-              rel="nofollow noreferrer noopener"
-              target="_blank"
-            >
-              Privacy is sacred. Your data is safe.
-            </a>
-          </small>
-        </div>
-        <button
-          className="btn btn-primary"
-          type="submit"
-        >
-          Press Enter or click to Continue
-        </button>
-      </form>
-      <button
-        className="btn btn-secondary btn-sm"
-        onClick={[Function]}
-        style={
-          Object {
-            "display": "block",
-            "marginBottom": 10,
-          }
-        }
-      >
-        Back
-      </button>
-      <a
-        className="btn btn-secondary btn-sm"
-        href="https://m.me/adamgoldman.me?ref=inner-circle"
-        rel="nofollow noreferrer noopener"
-        target="_blank"
-      >
-        Subscribe to future tools
-      </a>
-    </div>
-  </div>
-  <div
-    className="container"
-  >
-    <div
-      className="footer"
-    >
-      <p
-        className="pull-left"
-      >
-        Copyright © 2017 
-        <a
-          className="link"
-          href="/"
-          onClick={[Function]}
-        >
-          Adam Goldman
-        </a>
-      </p>
-      <p
-        className="pull-right"
-      >
-        <a
-          className="link"
-          href="/legal-stuff"
-          onClick={[Function]}
-        >
-          legal stuff
-        </a>
-        <a
-          className="link"
-          href="/privacy"
-          onClick={[Function]}
-          style={
-            Object {
-              "marginLeft": 10,
-            }
-          }
-        >
-          Privacy
-        </a>
-      </p>
-      <div
-        className="clearfix"
-      />
-    </div>
-  </div>
-  <a
-    className="container"
-    href="https://www.adamgoldman.me/contact"
-    rel="nofollow noreferrer noopener"
-    target="_blank"
-  >
-    <img
-      alt="Messenger Link"
-      src="https://cdn.supple.com.au/wp-content/themes/supple/img/msg.png"
-    />
-  </a>
-</div>
+</MultiStepForm>
 `;
