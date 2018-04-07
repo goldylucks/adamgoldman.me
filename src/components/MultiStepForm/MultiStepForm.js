@@ -10,7 +10,7 @@ import { isMobile } from '../../utils'
 import { stateForGoToStep, stateForBack, stateForStepInputChange, stateForReviewRating, replaceVarsUtil, initialAnswerByStepState, scrollTop } from './multiStepFormUtils'
 import Answers from './Answers'
 
-class Steps extends React.Component {
+class MultiStepForm extends React.Component {
   static propTypes = {
     steps: PropTypes.array.isRequired,
     hiddenFields: PropTypes.array.isRequired,
@@ -321,4 +321,4 @@ class Steps extends React.Component {
 
   stepNumById = id => this.props.steps.findIndex(s => s.id === id)
 }
-export default Steps
+export default MultiStepForm
