@@ -1,3 +1,8 @@
+import Enzyme from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
+
+Enzyme.configure({ adapter: new Adapter() })
+
 jest.mock('../src/utils/fbUtils')
 
 process.env.BROWSER = true
