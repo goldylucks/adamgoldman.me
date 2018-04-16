@@ -55,7 +55,7 @@ class Answers extends React.Component {
             )
           } else {
             html = (
-              <a className="btn btn-primary" onClick={() => onSubmit(idx)}>{answer.text}</a>
+              <a className="btn btn-primary btnfixed" onClick={() => onSubmit(idx)}>{answer.text}</a>
             )
           }
 
