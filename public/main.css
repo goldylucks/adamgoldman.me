@@ -226,6 +226,13 @@ span.post-name a,span.post-read-more a:hover {
 	padding-bottom:12px;
 	font-size:0.8rem;
 	color:rgba(0,0,0,.44);
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #fff;
+	z-index: 999;
+	border-top: 1px #eee solid;
 }
 .link-dark {
 	color:rgba(0,0,0,.8);
