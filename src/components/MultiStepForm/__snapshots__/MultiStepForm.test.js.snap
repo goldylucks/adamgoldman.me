@@ -168,6 +168,11 @@ exports[`MultiStepForm should render flash answer 1`] = `
             <a
               className="btn btn-primary"
               onClick={[Function]}
+              style={
+                Object {
+                  "width": 84,
+                }
+              }
             >
               answer 1
             </a>
@@ -763,6 +768,11 @@ exports[`MultiStepForm should render radio answers 1`] = `
             <a
               className="btn btn-primary"
               onClick={[Function]}
+              style={
+                Object {
+                  "width": 84,
+                }
+              }
             >
               answer 1
             </a>
@@ -973,7 +983,276 @@ exports[`MultiStepForm should render short answer 2`] = `
   }
   currentStepNum={0}
   hiddenFields={Array []}
-  onUpdateProgress={[MockFunction]}
+  onUpdateProgress={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "answerByStep": Object {
+              "0": "Answer step 0",
+              "1": "",
+              "2": "",
+            },
+            "currentStepNum": 0,
+            "flashedIdx": 0,
+            "isFlashing": false,
+            "price": 0,
+            "stepsStack": Array [],
+          },
+        ],
+      ],
+    }
+  }
+  path="/tools/trauma-relief/5ac43ef0d3b723075ebfd200"
+  price={0}
+  steps={
+    Array [
+      Object {
+        "description": "Step 0 Description",
+        "notes": "Step 0 notes",
+        "title": "Step 0 Title",
+        "type": "short",
+      },
+      Object {
+        "description": "Step 1 Description: \${echo} and \${s0}",
+        "notes": "Step 1 notes: \${echo} and \${s0}",
+        "title": "Step 1 Title: \${echo} and \${s0}",
+        "type": "short",
+      },
+    ]
+  }
+  stepsStack={Array []}
+>
+  <div>
+    <div
+      style={
+        Object {
+          "marginBottom": 30,
+        }
+      }
+    >
+      <Markdown
+        source="## Step 1 Title: ***“Answer step 0”*** and Answer step 0"
+      >
+        <ReactMarkdown
+          containerTagName="div"
+          parserOptions={Object {}}
+          renderers={
+            Object {
+              "Link": [Function],
+            }
+          }
+          source="## Step 1 Title: ***“Answer step 0”*** and Answer step 0"
+        >
+          <div>
+            <Heading
+              key="1:1-1:568"
+              level={2}
+              literal={null}
+              nodeKey="1:1-1:568"
+            >
+              <h2
+                key="1:1-1:568"
+              >
+                Step 1 Title: 
+                <strong
+                  key="1:1-1:566"
+                >
+                  <em
+                    key="1:1-1:565"
+                  >
+                    “Answer step 0”
+                  </em>
+                </strong>
+                 and Answer step 0
+              </h2>
+            </Heading>
+          </div>
+        </ReactMarkdown>
+      </Markdown>
+    </div>
+    <Markdown
+      source="Step 1 Description: ***“Answer step 0”*** and Answer step 0"
+    >
+      <ReactMarkdown
+        containerTagName="div"
+        parserOptions={Object {}}
+        renderers={
+          Object {
+            "Link": [Function],
+          }
+        }
+        source="Step 1 Description: ***“Answer step 0”*** and Answer step 0"
+      >
+        <div>
+          <p
+            key="1:1-1:598"
+          >
+            Step 1 Description: 
+            <strong
+              key="1:1-1:596"
+            >
+              <em
+                key="1:1-1:595"
+              >
+                “Answer step 0”
+              </em>
+            </strong>
+             and Answer step 0
+          </p>
+        </div>
+      </ReactMarkdown>
+    </Markdown>
+    <Markdown
+      className="text-muted tool-note"
+      source="Step 1 notes: ***“Answer step 0”*** and Answer step 0"
+    >
+      <ReactMarkdown
+        className="text-muted tool-note"
+        containerTagName="div"
+        parserOptions={Object {}}
+        renderers={
+          Object {
+            "Link": [Function],
+          }
+        }
+        source="Step 1 notes: ***“Answer step 0”*** and Answer step 0"
+      >
+        <div
+          className="text-muted tool-note"
+        >
+          <p
+            key="1:1-1:538"
+          >
+            Step 1 notes: 
+            <strong
+              key="1:1-1:536"
+            >
+              <em
+                key="1:1-1:535"
+              >
+                “Answer step 0”
+              </em>
+            </strong>
+             and Answer step 0
+          </p>
+        </div>
+      </ReactMarkdown>
+    </Markdown>
+    <form
+      onSubmit={[Function]}
+    >
+      <div
+        className="form-group"
+      >
+        <input
+          aria-describedby="inputHelp"
+          autoFocus={true}
+          className="form-control"
+          onChange={[Function]}
+          placeholder="write your answer here"
+          required={true}
+          value=""
+        />
+        <small
+          className="form-text text-muted"
+          id="inputHelp"
+        >
+          <ExternalA
+            href="/privacy"
+            target="_blank"
+          >
+            <a
+              href="/privacy"
+              rel="nofollow noreferrer noopener"
+              target="_blank"
+            >
+              Privacy is sacred. Your data is safe.
+            </a>
+          </ExternalA>
+        </small>
+      </div>
+      <button
+        className="btn btn-primary"
+        type="submit"
+      >
+        Press Enter or click to Continue
+      </button>
+    </form>
+    <button
+      className="btn btn-secondary btn-sm btn-back"
+      onClick={[Function]}
+      style={
+        Object {
+          "display": "block",
+          "marginBottom": 10,
+        }
+      }
+    >
+      Back
+    </button>
+    <ExternalA
+      className="btn btn-secondary btn-sm"
+      href="https://m.me/adamgoldman.me?ref=inner-circle"
+    >
+      <a
+        className="btn btn-secondary btn-sm"
+        href="https://m.me/adamgoldman.me?ref=inner-circle"
+        rel="nofollow noreferrer noopener"
+        target="_blank"
+      >
+        Subscribe to future tools
+      </a>
+    </ExternalA>
+  </div>
+</MultiStepForm>
+`;
+
+exports[`MultiStepForm should render short answer 3`] = `
+<MultiStepForm
+  answerByStep={
+    Object {
+      "0": "",
+      "1": "",
+      "2": "",
+    }
+  }
+  currentStepNum={0}
+  hiddenFields={Array []}
+  onUpdateProgress={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "answerByStep": Object {
+              "0": "Answer step 0",
+              "1": "",
+              "2": "",
+            },
+            "currentStepNum": 0,
+            "flashedIdx": 0,
+            "isFlashing": false,
+            "price": 0,
+            "stepsStack": Array [],
+          },
+        ],
+        Array [
+          Object {
+            "answerByStep": Object {
+              "0": "Answer step 0",
+              "1": "",
+              "2": "",
+            },
+            "currentStepNum": 1,
+            "flashedIdx": 0,
+            "isFlashing": false,
+            "price": 0,
+            "stepsStack": Array [],
+          },
+        ],
+      ],
+    }
+  }
   path="/tools/trauma-relief/5ac43ef0d3b723075ebfd200"
   price={0}
   steps={
@@ -1094,6 +1373,214 @@ exports[`MultiStepForm should render short answer 2`] = `
           placeholder="write your answer here"
           required={true}
           value="Answer step 0"
+        />
+        <small
+          className="form-text text-muted"
+          id="inputHelp"
+        >
+          <ExternalA
+            href="/privacy"
+            target="_blank"
+          >
+            <a
+              href="/privacy"
+              rel="nofollow noreferrer noopener"
+              target="_blank"
+            >
+              Privacy is sacred. Your data is safe.
+            </a>
+          </ExternalA>
+        </small>
+      </div>
+      <button
+        className="btn btn-primary"
+        type="submit"
+      >
+        Press Enter or click to Continue
+      </button>
+    </form>
+    <ExternalA
+      className="btn btn-secondary btn-sm"
+      href="https://m.me/adamgoldman.me?ref=inner-circle"
+    >
+      <a
+        className="btn btn-secondary btn-sm"
+        href="https://m.me/adamgoldman.me?ref=inner-circle"
+        rel="nofollow noreferrer noopener"
+        target="_blank"
+      >
+        Subscribe to future tools
+      </a>
+    </ExternalA>
+  </div>
+</MultiStepForm>
+`;
+
+exports[`MultiStepForm should render short answer 4`] = `
+<MultiStepForm
+  answerByStep={
+    Object {
+      "0": "",
+      "1": "",
+      "2": "",
+    }
+  }
+  currentStepNum={0}
+  hiddenFields={Array []}
+  onUpdateProgress={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "answerByStep": Object {
+              "0": "Answer step 0",
+              "1": "",
+              "2": "",
+            },
+            "currentStepNum": 0,
+            "flashedIdx": 0,
+            "isFlashing": false,
+            "price": 0,
+            "stepsStack": Array [],
+          },
+        ],
+        Array [
+          Object {
+            "answerByStep": Object {
+              "0": "Answer step 0",
+              "1": "",
+              "2": "",
+            },
+            "currentStepNum": 1,
+            "flashedIdx": 0,
+            "isFlashing": false,
+            "price": 0,
+            "stepsStack": Array [],
+          },
+        ],
+      ],
+    }
+  }
+  path="/tools/trauma-relief/5ac43ef0d3b723075ebfd200"
+  price={0}
+  steps={
+    Array [
+      Object {
+        "description": "Step 0 Description",
+        "notes": "Step 0 notes",
+        "title": "Step 0 Title",
+        "type": "short",
+      },
+      Object {
+        "description": "Step 1 Description: \${echo} and \${s0}",
+        "notes": "Step 1 notes: \${echo} and \${s0}",
+        "title": "Step 1 Title: \${echo} and \${s0}",
+        "type": "short",
+      },
+    ]
+  }
+  stepsStack={Array []}
+>
+  <div>
+    <div
+      style={
+        Object {
+          "marginBottom": 30,
+        }
+      }
+    >
+      <Markdown
+        source="## Step 0 Title"
+      >
+        <ReactMarkdown
+          containerTagName="div"
+          parserOptions={Object {}}
+          renderers={
+            Object {
+              "Link": [Function],
+            }
+          }
+          source="## Step 0 Title"
+        >
+          <div>
+            <Heading
+              key="1:1-1:152"
+              level={2}
+              literal={null}
+              nodeKey="1:1-1:152"
+            >
+              <h2
+                key="1:1-1:152"
+              >
+                Step 0 Title
+              </h2>
+            </Heading>
+          </div>
+        </ReactMarkdown>
+      </Markdown>
+    </div>
+    <Markdown
+      source="Step 0 Description"
+    >
+      <ReactMarkdown
+        containerTagName="div"
+        parserOptions={Object {}}
+        renderers={
+          Object {
+            "Link": [Function],
+          }
+        }
+        source="Step 0 Description"
+      >
+        <div>
+          <p
+            key="1:1-1:182"
+          >
+            Step 0 Description
+          </p>
+        </div>
+      </ReactMarkdown>
+    </Markdown>
+    <Markdown
+      className="text-muted tool-note"
+      source="Step 0 notes"
+    >
+      <ReactMarkdown
+        className="text-muted tool-note"
+        containerTagName="div"
+        parserOptions={Object {}}
+        renderers={
+          Object {
+            "Link": [Function],
+          }
+        }
+        source="Step 0 notes"
+      >
+        <div
+          className="text-muted tool-note"
+        >
+          <p
+            key="1:1-1:122"
+          >
+            Step 0 notes
+          </p>
+        </div>
+      </ReactMarkdown>
+    </Markdown>
+    <form
+      onSubmit={[Function]}
+    >
+      <div
+        className="form-group"
+      >
+        <input
+          aria-describedby="inputHelp"
+          autoFocus={true}
+          className="form-control"
+          onChange={[Function]}
+          placeholder="write your answer here"
+          required={true}
+          value="It's short answer for step 0"
         />
         <small
           className="form-text text-muted"
@@ -1551,7 +2038,7 @@ exports[`MultiStepForm with data 1`] = `
       </button>
     </form>
     <button
-      className="btn btn-secondary btn-sm"
+      className="btn btn-secondary btn-sm btn-back"
       onClick={[Function]}
       style={
         Object {

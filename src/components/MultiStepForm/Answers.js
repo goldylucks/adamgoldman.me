@@ -55,7 +55,7 @@ class Answers extends React.Component {
             )
           } else {
             html = (
-              <a className="btn btn-primary" onClick={() => onSubmit(idx)}>{answer.text}</a>
+              <a className="btn btn-primary" style={{ width: this.getMaxWidth() }} onClick={() => onSubmit(idx)}>{answer.text}</a>
             )
           }
 
@@ -68,10 +68,15 @@ class Answers extends React.Component {
   }
 
   concernClick = () => global.alert('Let\'s talk about it in messenger, click "get started" if messenger asks you')
+  getMaxWidth = () => {
+    const maxLength = this.props.answers.reduce(
+      (prev, current) => ((prev.text.length > current.text.length) ? prev : current),
+    ).text.replace(/ /g, '').length
+    return maxLength * 12
+  }
 }
 
 Answers.defaultProps = {
   onSubmitOther: () => {},
 }
-
 export default Answers
