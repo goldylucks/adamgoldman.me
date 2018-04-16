@@ -1,3 +1,4 @@
+// tools
 import seedDbInternalDialogScramblerToolData from './seedDbInternalDialogScramblerToolData.json'
 import seedDbSpecialDaysToolData from './seedDbSpecialDaysToolData.json'
 import seedDbSessionIntroToolData from './seedDbSessionIntroToolData.json'
@@ -13,6 +14,8 @@ import seedDbRecurringTimeDistortionToolData from './seedDbRecurringTimeDistorti
 import seedDbReverseFeelingSpinToolData from './seedDbReverseFeelingSpinToolData.json'
 import toolHasReviewTest from './seedDbToolHasReviewTestData.json'
 import toolTestShort from './seedDbToolTestShortData.json'
+// session intros
+import seedDbSessionIntroHistoryData from './seedDbSessionIntroHistoryData.json'
 
 // eslint-disable-next-line import/prefer-default-export
 export const tools = [
@@ -31,4 +34,8 @@ export const tools = [
   seedDbResolvingFeelingsToolData,
   toolHasReviewTest,
   toolTestShort,
+]
+
+export const toolsHistory = [
+  seedDbSessionIntroHistoryData,
 ]

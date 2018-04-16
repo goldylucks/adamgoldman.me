@@ -2,10 +2,11 @@ import deasync from 'deasync'
 import prompt from 'prompt-sync' // eslint-disable-line import/no-extraneous-dependencies
 
 import Tools from '../api/tools/toolsModel'
+import ToolsHistory from '../api/toolsHistory/toolsHistoryModel'
 
-import { tools } from './seedDbData'
+import { tools, toolsHistory } from './seedDbData'
 
-const ModelsToCleanDb = [Tools]
+const ModelsToCleanDb = [Tools, ToolsHistory]
 
 if (prompt()('Seed DB? (type yes to prcoeed)') !== 'yes') {
   process.exit(0)
@@ -20,6 +21,7 @@ function run() {
   let ready // eslint-disable-line no-unmodified-loop-condition
   cleanDB()
     .then(seedTools)
+    .then(seedToolsHistory)
     .then(onSeedSuccess)
     .catch(onSeedError)
     .then(() => { ready = true })
@@ -38,6 +40,12 @@ function cleanDB() {
 function seedTools() {
   global.console.log('Seeding tools ...')
   const promises = tools.map(p => Tools.create(p))
+  return Promise.all(promises)
+}
+
+function seedToolsHistory() {
+  global.console.log('Seeding toolsHistory ...')
+  const promises = toolsHistory.map(p => ToolsHistory.create(p))
   return Promise.all(promises)
 }
 
