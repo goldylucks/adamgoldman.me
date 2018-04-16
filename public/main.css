@@ -28,6 +28,9 @@ input[type="image"], input[type="checkbox"] {
   border-color: #03a87c;
   background: #fff;
 }
+.btnfixed {
+	min-width: 150px;
+}
 .btn-primary:hover {
   border-color: #029e74 !important;
   color: #018f69 !important;
@@ -222,8 +225,8 @@ span.post-name a,span.post-read-more a:hover {
 	margin-bottom:1rem;
 }
 .footer {
-	padding-top:15px;
-	padding-bottom:12px;
+	padding-top:6px;
+	padding-bottom:5px;
 	font-size:0.8rem;
 	color:rgba(0,0,0,.44);
 	position: fixed;
