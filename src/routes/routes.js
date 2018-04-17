@@ -15,6 +15,14 @@ const routes = {
       load: () => import(/* webpackChunkName: 'makeAdmin' */ './makeAdmin'),
     },
     {
+      path: '/adminToolHistory',
+      load: () => import(/* webpackChunkName: 'adminToolHistory' */ './adminToolHistory'),
+    },
+    {
+      path: '/adminToolHistory/:id',
+      load: () => import(/* webpackChunkName: 'adminToolHistoryItem' */ './adminToolHistoryItem'),
+    },
+    {
       path: '/transcripts',
       load: () => import(/* webpackChunkName: 'transcripts' */ './transcripts'),
     },

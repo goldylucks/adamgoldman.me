@@ -1,4 +1,4 @@
-import { validateOwner } from '../../auth'
+import { validateOwnerOrAdmin } from '../../auth'
 
 import ToolsHistory from './toolsHistoryModel'
 
@@ -8,13 +8,15 @@ export default {
 
 function getAll(req, res, next) {
   ToolsHistory.find()
+    .populate('user')
     .then(tools => res.json(tools))
     .catch(next)
 }
 
 function get(req, res, next) {
   ToolsHistory.findOne({ _id: req.params.id })
-    .then(validateOwner(req.user._id))
+    .populate('user')
+    .then(validateOwnerOrAdmin(req.user))
     .then(tool => res.json(tool))
     .catch(next)
 }

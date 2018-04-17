@@ -8,7 +8,7 @@
     "fix-js": "yarn run lint-js --fix",
     "fix": "yarn run fix-js",
     "check": "flow check",
-    "test": "jest",
+    "test-client": "BROWSER=true jest .test.js",
     "test-watch": "yarn run test --watch --notify",
     "test-cover": "yarn run test --coverage",
     "coverage": "yarn run test-cover && opn coverage/lcov-report/index.html",

@@ -26,7 +26,7 @@ function getSchema() {
       required: true,
     },
 
-    userId: {
+    user: {
       type: Schema.Types.ObjectId,
       ref: 'users',
       required: true,

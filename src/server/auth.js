@@ -46,6 +46,16 @@ export const validateOwner = userId => (item) => {
   return item
 }
 
+export const validateOwnerOrAdmin = user => (item) => {
+  if (__DEV__) { // eslint-disable-line no-undef
+    return item
+  }
+  if (!item.userId.equals(user._id) && !user.isAdmin) {
+    throw Error('item don\'t exist or you are not the owner')
+  }
+  return item
+}
+
 export function getFreshUser(req, res, next) {
   User.findById(req.user._id)
     .then((user) => {
