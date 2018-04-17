@@ -26,7 +26,7 @@ class Answers extends React.Component {
       answers, onSubmit, onSubmitOther, path,
     } = this.props
     return (
-      <div>
+      <div className="answer-group">
         {answers.map((answer, idx) => {
           let html
           if (answer.isConcern) {
@@ -55,7 +55,7 @@ class Answers extends React.Component {
             )
           } else {
             html = (
-              <a className="btn btn-primary btnfixed" onClick={() => onSubmit(idx)}>{answer.text}</a>
+              <a className="btn btn-primary btn-fixed" onClick={() => onSubmit(idx)}>{answer.text}</a>
             )
           }
 
