@@ -24,20 +24,22 @@ class Layout extends React.Component {
       children, path, onLogin, onLogout, user,
     } = this.props
     return (
-      <div className={s.container}>
-        <MainNav path={path} user={user} onLogin={onLogin} onLogout={onLogout} />
-        <div>
-          {React.cloneElement(children, {
-            user,
-            onLogin,
-            onSubmitIntro: this.submitIntro,
-            onSubmitModule: this.submitModule,
-          })}
+      <div>
+        <div className={s.container}>
+          <MainNav path={path} user={user} onLogin={onLogin} onLogout={onLogout} />
+          <div>
+            {React.cloneElement(children, {
+              user,
+              onLogin,
+              onSubmitIntro: this.submitIntro,
+              onSubmitModule: this.submitModule,
+            })}
+          </div>
+          <MessengerFixed path={path} />
         </div>
         <div className="container">
           <Footer />
         </div>
-        <MessengerFixed path={path} />
       </div>
     )
   }
