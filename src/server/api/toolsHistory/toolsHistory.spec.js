@@ -5,8 +5,8 @@ var expect = require('chai').expect
 var request = require('supertest-as-promised')
 
 var server = require('../../../server.js')
-var seededHistoryItem = require('../../..//server/seedDb/seedDbSessionIntroHistoryData.json')
-var seededUsers = require('../../..//server/seedDb/seedDbUsersData.json')
+var seededHistoryItem = require('../../../server/seedDb/seedDbSessionIntroHistoryData.json')
+var seededUsers = require('../../../server/seedDb/seedDbUsersData.json')
 
 var seededHistoryItemUser = seededUsers.find(user => user._id === seededHistoryItem.user)
 
