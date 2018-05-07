@@ -7,7 +7,7 @@ export default {
 }
 
 function getAll(req, res, next) {
-  ToolResponses.find()
+  ToolResponses.find().select('createdAt user title currentStepNum status')
     .populate('user')
     .then(tools => res.json(tools))
     .catch(next)

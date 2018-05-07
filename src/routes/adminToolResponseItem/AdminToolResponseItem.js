@@ -3,6 +3,8 @@ import { Fetch } from 'react-data-fetching'
 import PropTypes from 'prop-types'
 
 import Link from '../../components/Link'
+import Markdown from '../../components/Markdown'
+import { replaceVarsUtil } from '../../components/MultiStepForm/multiStepFormUtils'
 
 class AdminToolResponseItem extends React.Component {
   static propTypes = {
@@ -36,13 +38,29 @@ class AdminToolResponseItem extends React.Component {
     )
   }
   // eslint-disable-next-line class-methods-use-this
-  renderStepsWithAnswers({ steps, answerByStep }) {
+  renderStepsWithAnswers({
+    steps, answerByStep, currentStepNum, hiddenFields,
+  }) {
     return steps.map((step, idx) => (
       <div>
-        <h6>{step.title}</h6>
-        <p>{step.description}</p>
-        <hr style={{ marginLeft: 0, width: 100 }} />
-        <p>{answerByStep[idx]}</p>
+        <Markdown source={'## ' + replaceVarsUtil({ // eslint-disable-line prefer-template
+ str: step.title, hiddenFields, answerByStep, currentStepNum,
+})}
+        />
+        <Markdown source={replaceVarsUtil({
+str: step.description, hiddenFields, answerByStep, currentStepNum,
+})}
+        />
+        <Markdown
+          className="text-muted tool-note"
+          source={replaceVarsUtil({
+ str: step.notes, hiddenFields, answerByStep, currentStepNum,
+})}
+        />
+        <Markdown source={replaceVarsUtil({
+ str: answerByStep[idx], hiddenFields, answerByStep, currentStepNum,
+})}
+        />
         <hr />
       </div>
     ))
