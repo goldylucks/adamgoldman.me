@@ -6,23 +6,23 @@ import { Fetch } from 'react-data-fetching'
 import Share from '../../components/Share'
 import MultiStepForm from '../../components/MultiStepForm'
 
-class ToolByHistoryId extends React.Component {
+class ToolResponse extends React.Component {
   static propTypes = {
     tool: PropTypes.object.isRequired,
     user: PropTypes.object.isRequired,
     path: PropTypes.string.isRequired,
-    historyId: PropTypes.string.isRequired,
+    responseId: PropTypes.string.isRequired,
     onLogin: PropTypes.func.isRequired,
   }
   state = {
     data: null,
   }
   render() {
-    const { path, historyId } = this.props
+    const { path, responseId } = this.props
     return (
       <Fetch
         onFetch={this.onFetch}
-        url={`/api/toolsHistory/${historyId}`}
+        url={`/api/toolResponses/${responseId}`}
       >
         {({ data, isOK }) => isOK && (
           <div className="container">
@@ -38,7 +38,7 @@ class ToolByHistoryId extends React.Component {
                   <MultiStepForm
                     {...data}
                     path={path}
-                    toolHistoryId={historyId}
+                    toolResponseId={responseId}
                     onUpdateProgress={this.updateProgress}
                   />
                 </div>
@@ -63,7 +63,7 @@ class ToolByHistoryId extends React.Component {
     if (nextState.currentStepNum === this.state.data.steps.length - 1) {
       nextState.status = 'Completed'
     }
-    axios.put(`/api/toolsHistory/${this.props.historyId}`, { ...this.state.data, ...nextState })
+    axios.put(`/api/toolResponses/${this.props.responseId}`, { ...this.state.data, ...nextState })
       .catch((err) => {
         global.console.error(err)
         global.alert(err.message)
@@ -71,4 +71,4 @@ class ToolByHistoryId extends React.Component {
   }
 }
 
-export default ToolByHistoryId
+export default ToolResponse

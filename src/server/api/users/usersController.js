@@ -2,7 +2,7 @@ import axios from 'axios'
 
 import { fbId, fbSecret, fbPageId, fbPageAccessToken, adminPass } from '../../../config'
 import { signToken } from '../../auth'
-import ToolsHistory from '../toolsHistory/toolsHistoryModel'
+import ToolResponses from '../toolResponses/toolResponsesModel'
 
 import Users from './usersModel'
 
@@ -13,12 +13,12 @@ export default {
 async function getOne(req, res, next) {
   try {
     const getUserCall = Users.findById(req.params.id)
-    const getToolsHistoryCall = getToolsHistory(req.params.id)
-    const [user, toolsHistory] = [await getUserCall, await getToolsHistoryCall]
+    const getToolResponsesCall = getToolResponses(req.params.id)
+    const [user, toolResponses] = [await getUserCall, await getToolResponsesCall]
     if (!user) {
       throw Error('user doesn\'t exist')
     }
-    res.json(prepareUser(user, toolsHistory))
+    res.json(prepareUser(user, toolResponses))
   } catch (err) {
     next(err)
   }
@@ -48,7 +48,7 @@ async function fbAuth(req, res, next) {
       : await axios.get(`https://graph.facebook.com/oauth/access_token?client_id=${fbId}&client_secret=${fbSecret}&grant_type=fb_exchange_token&fb_exchange_token=${userToCreate.fbClientAccessToken}`)
     let user = await Users.findOneAndUpdate(
       { fbUserId: userToCreate.fbUserId }, userToCreate, options)
-    user = prepareUser(user, await getToolsHistory(user._id))
+    user = prepareUser(user, await getToolResponses(user._id))
     res.json(user)
   } catch (err) {
     next(err)
@@ -65,11 +65,11 @@ function makeAdmin(req, res, next) {
     .catch(next)
 }
 
-function prepareUser(user, toolsHistory) {
+function prepareUser(user, toolResponses) {
   user = user.toObject()
   delete user.fbServerAccessToken
   user.token = signToken(user._id)
-  user.toolsHistory = toolsHistory
+  user.toolResponses = toolResponses
   return user
 }
 
@@ -79,6 +79,6 @@ function getFBPageReviews(req, res, next) {
     .catch(next)
 }
 
-function getToolsHistory(userId) {
-  return ToolsHistory.find({ userId }).select('status createdAt toolId')
+function getToolResponses(user) {
+  return ToolResponses.find({ user }).select('status createdAt toolId')
 }

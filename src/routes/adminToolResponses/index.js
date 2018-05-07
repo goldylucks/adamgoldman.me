@@ -2,17 +2,17 @@ import React from 'react'
 
 import Layout from '../../components/Layout'
 
-import AdminToolHistory from './AdminToolHistory'
+import AdminToolResponses from './AdminToolResponses'
 
 async function action({ path }) {
   return {
-    chunks: ['adminToolHistory'],
-    title: 'Tool history',
+    chunks: ['adminToolResponses'],
+    title: 'Tool Responses',
     path,
-    description: "Relax, it's just life",
+    description: 'Tools responses',
     component: (
       <Layout path={path}>
-        <AdminToolHistory path={path} />
+        <AdminToolResponses path={path} />
       </Layout>
     ),
   }

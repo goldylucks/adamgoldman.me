@@ -98,6 +98,7 @@ class App extends React.PureComponent {
           onLogin: this.login,
           onLogout: this.logout,
           onUpdateUser: this.updateUser,
+          onStartToolResponse: this.startToolResponse,
         }))}
       </ConnectedFetch>
     )
@@ -118,6 +119,15 @@ class App extends React.PureComponent {
   updateUser = (user) => {
     this.setState({ user })
     global.localStorage.setItem('user', JSON.stringify(user))
+  }
+
+  startToolResponse = (toolResponse) => {
+    this.setState(({ user }) => ({
+      user: {
+        ...user,
+        toolResponses: user.toolResponses.concat(toolResponse),
+      },
+    }), global.localStorage.setItem('user', JSON.stringify(this.state.user)))
   }
 
   syncUserFromLS() {

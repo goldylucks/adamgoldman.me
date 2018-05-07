@@ -1,12 +1,12 @@
 import toolsRoutes from './tools/toolsRoutes'
-import toolsHistoryRoutes from './toolsHistory/toolsHistoryRoutes'
+import toolResponsesRoutes from './toolResponses/toolResponsesRoutes'
 import postsRoutes from './posts/postsRoutes'
 import usersRoutes from './users/usersRoutes'
 
 const router = require('express').Router()
 
 router.use('/tools', toolsRoutes)
-router.use('/toolsHistory', toolsHistoryRoutes)
+router.use('/toolResponses', toolResponsesRoutes)
 router.use('/posts', postsRoutes)
 router.use('/users', usersRoutes)
 

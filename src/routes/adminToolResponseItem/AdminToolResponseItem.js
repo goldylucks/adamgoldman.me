@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 import Link from '../../components/Link'
 
-class AdminToolHistory extends React.Component {
+class AdminToolResponseItem extends React.Component {
   static propTypes = {
     id: PropTypes.string.isRequired,
   }
@@ -14,14 +14,14 @@ class AdminToolHistory extends React.Component {
       <div>
         <div className="container">
           <div className="mainheading">
-            <Link to="/adminToolHistory">Tools history list</Link>
+            <Link to="/adminToolResponses">Tools history list</Link>
             <h1 className="sitetitle">Tool History</h1>
           </div>
-          <Fetch url={`/api/toolsHistory/${this.props.id}`}>
+          <Fetch url={`/api/toolResponses/${this.props.id}`}>
             {({ data }) => (
               <div>
                 <h2>{data.title}</h2>
-                <p>Created at: {data.createdAt}</p>
+                <p>Created at: {`${new Date(data.createdAt)}`}</p>
                 {/* TODO remove checking for user  after https://github.com/goldylucks/adamgoldman.me/issues/99 */}
                 <p>User: {data.user && data.user.name}</p>
                 <p>Current Step: {data.currentStepNum}</p>
@@ -49,5 +49,4 @@ class AdminToolHistory extends React.Component {
   }
 }
 
-export default AdminToolHistory
-
+export default AdminToolResponseItem

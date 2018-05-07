@@ -15,12 +15,12 @@ const routes = {
       load: () => import(/* webpackChunkName: 'makeAdmin' */ './makeAdmin'),
     },
     {
-      path: '/adminToolHistory',
-      load: () => import(/* webpackChunkName: 'adminToolHistory' */ './adminToolHistory'),
+      path: '/adminToolResponses',
+      load: () => import(/* webpackChunkName: 'adminToolResponses' */ './adminToolResponses'),
     },
     {
-      path: '/adminToolHistory/:id',
-      load: () => import(/* webpackChunkName: 'adminToolHistoryItem' */ './adminToolHistoryItem'),
+      path: '/adminToolResponses/:id',
+      load: () => import(/* webpackChunkName: 'adminToolResponseItem' */ './adminToolResponseItem'),
     },
     {
       path: '/transcripts',
@@ -77,7 +77,7 @@ const routes = {
     },
     {
       path: ['internal-dialog-scrambler', 'session-intro', 'reengaging-the-future', 'reunion', 'loved-one-amplifier', 'recurring-time-distortion', 'perfect-day', 'reverse-feeling-spin', 'judgement-to-preference', 'feel-good-generator', 'trauma-relief', 'resolving-feelings', 'test', 'has-review'].map(t => `/tools/${t}/:historyId`),
-      load: () => import(/* webpackChunkName: 'toolByHistoryId' */ './toolByHistoryId'),
+      load: () => import(/* webpackChunkName: 'toolResponse' */ './toolResponse'),
     },
     {
       path: '/tool-editor/:tool',
