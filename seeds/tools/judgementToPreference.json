@@ -1,0 +1,385 @@
+{
+    "url" : "judgement-to-preference",
+    "isRtl" : false,
+    "hiddenFields" : [
+
+    ],
+    "steps" : [
+        {
+            "title" : "Background",
+            "description" : "Oh yes ... Judgement ... I've also been known to take \"your honor\"'s role and swing my mighty condemning hammer from time to time ...\n\nSometimes it feels like if everyone just listen to us and do as we say, life on this planet would blossom, birds would sing, sun will shine, everything would just \"work!\" you know?",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "Oh yes I do Adam ... Why wouldn't they listen?",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : " Yes, I've been judging people as well ...",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "Ok, so what's next?",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "Inherently helpful loved ones",
+            "description" : "${echo}\n\nI'm sure you, like me, just LOVE when people tell you to inherently helpful things like ...\n\n- *\"Just let go!\"*\n- *\"Stop thinking about it!\"*\n- *\"Can't you see it from their point of view??\"*\n\nI have not found that to be useful, and often just gives me one more thing to judge!",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "Aahhhh loved ones ... Sometimes you just wanna smother them, don't you?",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "Actually that never happened to me",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "OK, so what's next?",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "Judgement Experiences",
+            "description" : "${echo}\n\nTo begin our exploration, think of 2-3 things outside yourself, some persons, acts, or events that you judge as bad, wrong, or evil, \"That's wrong!\" ...\n\nGot few of those?\n\n(If this is your first time using this tool, don't go for self-judgement, you'll see why later)",
+            "notes" : "*\"There is nothing either good or bad, but thinking makes it so\"* — Shakespeare",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "Oh yes ... I have some 2-3 good ones in mind ...",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "Got it, let's continue",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "Judging? Me? NEVER! I'm a saint! (okay okay, I got a few examples ...)",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "Let go of Letting go",
+            "description" : "${echo}\n\nI suspect the reason \"just let go\" doesn't work is it offers no alternative, and there IS a reason we judge.\n\nWe may think (or KNOW) there's a better way of doing whatever it is we are judging.\n\nWe may have some values that we feel are jeopardized and at danger.\n\nLetting go is not a good idea!\n\nNow before I share with you a trick to transform/expand the judgement for something more useful ...",
+            "notes" : "*\"Your task is of altering, not abolishing\"* - Milton Erickson",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "Oh yes, I like tricks!",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "Ok, what's next Adam?",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : " Judgement can be useful? Interesting ...",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "Choose an example your honor!",
+            "description" : "Pick an experience of judging another person, that you'll be happy to \"free yourself\" from.\n\nSomething like\n\n- *“X is bad/wrong”*\n- *\"You can't/shouldn't do X\"*",
+            "notes" : "E.g. *\"Talking to your kids like this is bad\"*",
+            "type" : "short",
+            "inputPlaceholder" : "",
+            "answers" : [
+
+            ]
+        },
+        {
+            "title" : "Judgement to preference",
+            "description" : "${echo}\n\nNow express the same thing as a preference, something like:\n\n- *\"I strongly prefer Y over X\"*\n- *\"I much rather have you do Y over X\"*",
+            "notes" : "E.g. *\"I much rather you'd talk to your kids in a soft tone of voice\"*",
+            "type" : "short",
+            "inputPlaceholder" : "",
+            "answers" : [
+
+            ]
+        },
+        {
+            "title" : "Elicit resource",
+            "description" : "",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "CA",
+            "description" : "",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "MA",
+            "description" : "",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "Judgement to preference - Recovering deleted content",
+            "description" : "Fantastic!\n\nAt this point often times the feelings of judgement are mostly cleared, and as frosting on the cake, see if there's any useful information you'd like to add to the judgement.\n\nFor example, let's say I make the judgement \"You shouldn't be late!\"\n\nNot a lot of information in there, right?\n\nBut when we expand that to:\n\n*\"I much rather enjoy meeting you in the time we scheduled, when we make plans to go out, so I don't waste time waiting, so I know you care about my time, and I feel respected instead of underrated.\"*\n\nNow there's a more complete/encompassing picture of what I feel, what I want, when I feel it, why I feel it, and in relation to what/who.\n\nSo take the initial statement you made:  \n*\"${s4}\"*\n\nThat you already expressed as a preference: *\"${s5}\"*\n\nAnd add any information that might be relevant, to get a more complete experience (Don't be cheap now, the more the merrier!)",
+            "notes" : "",
+            "type" : "long",
+            "inputPlaceholder" : "",
+            "answers" : [
+
+            ]
+        },
+        {
+            "title" : "Bring forth the defendant! - Gender",
+            "description" : "For an even more complete resolution, here's something to play with ...\n\nThe poor soul you've judged, is he/she a male or female?",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "Male",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "Female",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "Bring forth the defendant! - Name",
+            "description" : "And what's ${his10} name?",
+            "notes" : "",
+            "type" : "short",
+            "inputPlaceholder" : "${his10} name is ...",
+            "answers" : [
+
+            ]
+        },
+        {
+            "title" : "Bow before the all mighty judge",
+            "description" : "And what is your own name, your honor?",
+            "notes" : "",
+            "type" : "short",
+            "inputPlaceholder" : "My name is ...",
+            "answers" : [
+
+            ]
+        },
+        {
+            "title" : "Take “Other” Position",
+            "description" : "In a moment I'll ask you to jump into ${s11}'s POV (point of view) and recall that past statement you made:  \n*\"${s4}\"*\n\nAnd literally relive the experience thru ${s11}'s eyes, so you see what ${he10} sees, hear what ${he10} hears, and act like ${he10} acts.\n\nFrom this POV, think of your limitations that make you act this way, and feel ${s12}'s judgement descending upon you in all it's might and glory, judging you, your puny little actions, and your limitations.\n\nClose your eyes and do it now.",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "Yikes! That was NOT fun!",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "Oh Adam ... I've tasted my own medicine and it is bitter ...",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "Done reliving the judgement thru ${s11}'s eyes",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "Take “Other” Position - Preference",
+            "description" : "Now I want you to do the same thing, and this time as you relive the experience, feel the difference when instead of judging, ${s12} is telling you the following ...\n\n*\"${s5}\"*\n\nClose your eyes and do it now",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "Oh my, what a difference!",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "OK Adam, I get your point, no more judging for me!",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "That was interesting ...",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "Reliving as preference",
+            "description" : "Now go back to your POV and relive the experience thru your own eyes, describing your full preference to ${s11} instead of your old judgement.\n\nNotice how the situation is different, and how you feel being this way now.\n\nClose your eyes and do it now.",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "I feel much better being this way!",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I notice ${s11} prefers this over my past judgments",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "The entire situation has improved greatly",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "Future pacing sharing preferences",
+            "description" : "Now think of some similar future scenarios, in which you would have acted with judgement in the past, and feel the difference in your own and others' responses and emotions, as you share your full preference, and allow this was of being to unfold ...\n\nClose your eyes and do it now ...",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "Yup, this is much better than my old way of thinking",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I ran it in my mind with ${s11} as well as other people",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "This is great! I can feel my relationships improving greatly",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        }
+    ],
+    "credits" : "",
+    "description" : "Transform bad feelings of judgement to resourceful ACTIONABLE preference",
+    "title" : "Judgement to Preference",
+    "isSavoring" : false,
+    "hasReview" : true,
+    "isDraft" : true
+}

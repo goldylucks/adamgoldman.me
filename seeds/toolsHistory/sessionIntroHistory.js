@@ -1,4 +1,5 @@
-{
+/* eslint-disable quotes,quote-props,indent,comma-dangle,no-template-curly-in-string */
+module.exports = {
   "_id": "56f4636ec558e7a529b0b42d",
     "toolId": "5abe0bc1489aa800047cabac",
     "user": "56f46358c558e7a529b0b42b",

@@ -53,9 +53,6 @@ app.use(permanentRedirectsMiddleware)
 if (__DEV__) { // eslint-disable-line no-undef
   app.use(morgan('tiny'))
   app.enable('trust proxy')
-  if (process.argv.includes('--seed')) {
-    require('./server/seedDb') // eslint-disable-line global-require
-  }
 }
 
 app.get('/book-session', (req, res) => {

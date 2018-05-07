@@ -28,7 +28,8 @@
     "release": "tools/release.sh",
     "db-import-prod-to-local": "babel-node tools/db importProdToLocal",
     "db-export-local-to-prod": "babel-node tools/db exportLocalToProd",
-    "seed": "npm start --seed",
+    "seed": "seed",
+    "seed-setup": "seed-setup",
     "start": "babel-node tools/run start"
   },
   "private": true,
