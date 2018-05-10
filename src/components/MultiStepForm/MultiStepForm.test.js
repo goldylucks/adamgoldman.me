@@ -28,10 +28,15 @@ describe('MultiStepForm', () => {
     const component = getComponent({ type: 'short' })
     expect(component).toMatchSnapshot()
     component.find('input').simulate('change', { target: { value: 'Answer step 0' } })
-    component.find('button').simulate('click')
-    expect(component).toMatchSnapshot() // TODO fix: this should render next step
+    component.find('button').simulate('submit')
+    expect(component).toMatchSnapshot() // TODO fix: this should render next step - FIXED
     // press back
+    component.find('.btn-back').simulate('click')
     // see if matches snapshot
+    expect(component).toMatchSnapshot()
+    // Update text of short answer
+    component.find('input').simulate('change', { target: { value: 'It\'s short answer for step 0' } })
+    expect(component).toMatchSnapshot()
     // press enter on input field
     // see if matches snapshot
   })

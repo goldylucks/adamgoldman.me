@@ -200,7 +200,7 @@ class MultiStepForm extends React.Component {
   }
 
   renderBack() {
-    return this.state.currentStepNum === 0 ? null : <button className="btn btn-secondary btn-sm" style={{ display: 'block', marginBottom: 10 }} onClick={this.back}>Back</button>
+    return this.state.currentStepNum === 0 ? null : <button className="btn btn-secondary btn-sm btn-back" style={{ display: 'block', marginBottom: 10 }} onClick={this.back}>Back</button>
   }
 
   // eslint-disable-next-line class-methods-use-this
