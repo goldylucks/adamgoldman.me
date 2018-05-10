@@ -30,13 +30,13 @@ class Answers extends React.Component {
         {answers.map((answer, idx) => {
           let html
           if (answer.isConcern) {
-            html = <ExternalA className="btn btn-primary" onClick={this.concernClick} href={MESSENGER_LINK_TOOL_CONCERN}>{answer.text}</ExternalA>
+            html = <ExternalA className="btn btn-primary text-left" style={{ width: this.getMaxWidth() }} onClick={this.concernClick} href={MESSENGER_LINK_TOOL_CONCERN}>{answer.text}</ExternalA>
           } else if (answer.isFbShare) {
-            html = <ExternalA className="btn btn-primary" href={getFbShareUrl(path)}>{answer.text}</ExternalA>
+            html = <ExternalA className="btn btn-primary text-left" style={{ width: this.getMaxWidth() }} href={getFbShareUrl(path)}>{answer.text}</ExternalA>
           } else if (answer.link) {
             html = <Link className="btn btn-primary" to={answer.link}>{answer.text}</Link>
           } else if (answer.linkNew) {
-            html = <ExternalA className="btn btn-primary" href={answer.linkNew}>{answer.text}</ExternalA>
+            html = <ExternalA className="btn btn-primary text-left" style={{ width: this.getMaxWidth() }} href={answer.linkNew}>{answer.text}</ExternalA>
           } else if (answer.isOther) {
             html = (
               <form onSubmit={(evt) => {
@@ -55,7 +55,7 @@ class Answers extends React.Component {
             )
           } else {
             html = (
-              <a className="btn btn-primary" style={{ width: this.getMaxWidth() }} onClick={() => onSubmit(idx)}>{answer.text}</a>
+              <a className="btn btn-primary text-left" style={{ width: this.getMaxWidth() }} onClick={() => onSubmit(idx)}>{answer.text}</a>
             )
           }
 
