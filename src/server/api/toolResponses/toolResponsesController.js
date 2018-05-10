@@ -16,7 +16,10 @@ function getAll(req, res, next) {
 function get(req, res, next) {
   ToolResponses.findOne({ _id: req.params.id })
     .populate('user')
-    .then(validateOwnerOrAdmin(req.user))
+    .then((tool) => {
+      validateOwnerOrAdmin(req.user, tool.user._id)
+      return tool
+    })
     .then(tool => res.json(tool))
     .catch(next)
 }
