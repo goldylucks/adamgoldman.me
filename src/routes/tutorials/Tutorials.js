@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react'
-import { Fetch } from 'react-data-fetching'
+import axios from 'axios'
 
 import { filterDrafts } from '../../utils'
 import BottomSection from '../../components/BottomSection'
@@ -10,38 +10,57 @@ import Card from '../../components/Card'
 import tutorialsHardCoded from './tutorialsHardCoded'
 
 type Props = {
-  title: '',
-  path: '',
-  description: '',
+  title: string,
+  path: string,
+  description: string,
 }
 
-const ToolsListPage = ({
-  title, description, path,
-}: Props) => (
-  <React.Fragment>
-    <div className="container">
-      <div className="mainheading">
-        <h1 className="sitetitle">{title}</h1>
-        <p className="lead">{description}</p>
-      </div>
-      <section className="recent-posts">
-        <div className="section-title">
-          <h2><span>All Tutorials</span></h2>
+class ToolsListPage extends React.Component<Props> {
+  state = {
+    tutorials: [],
+    isFetchingTutorials: true,
+  }
+  componentDidMount() {
+    this.fetchTutorials()
+  }
+  render() {
+    const { title, description, path } = this.props
+    const { tutorials, isFetchingTutorials } = this.state
+    return (
+      <React.Fragment>
+        <div className="container">
+          <div className="mainheading">
+            <h1 className="sitetitle">{title}</h1>
+            <p className="lead">{description}</p>
+          </div>
+          <section className="recent-posts">
+            <div className="section-title">
+              <h2><span>All Tutorials</span></h2>
+            </div>
+            <div className="card-columns listrecent">
+              {
+                isFetchingTutorials
+                  ? <div>Loading ...</div>
+                  : tutorials.concat(tutorialsHardCoded).filter(filterDrafts)
+                  .map(t => (
+                    <Card {...t} url={`${path}/${t.url}`} key={t.url} />
+                  ))
+                }
+            </div>
+          </section>
         </div>
-        <div className="card-columns listrecent">
-          <Fetch
-            url="/api/tools/all"
-          >
-            {({ data }) => data.concat(tutorialsHardCoded).filter(filterDrafts)
-            .map(t => (
-              <Card {...t} url={`${path}/${t.url}`} key={t.url} />
-            ))}
-          </Fetch>
-        </div>
-      </section>
-    </div>
-    <BottomSection />
-  </React.Fragment>
-)
+        <BottomSection />
+      </React.Fragment>
+    )
+  }
+  fetchTutorials() {
+    axios.get('/api/tools/all')
+      .then(({ data }) => this.setState({ tutorials: data, isFetchingTutorials: false }))
+      .catch((err) => {
+        global.console.log(err)
+        this.setState({ isFetchingTutorials: false })
+      })
+  }
+}
 
 export default ToolsListPage

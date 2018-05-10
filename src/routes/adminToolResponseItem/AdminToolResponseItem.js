@@ -1,14 +1,24 @@
+// @flow
+
 import React from 'react'
-import { Fetch } from 'react-data-fetching'
-import PropTypes from 'prop-types'
+import axios from 'axios'
 
 import Link from '../../components/Link'
 import Markdown from '../../components/Markdown'
 import { replaceVarsUtil } from '../../components/MultiStepForm/multiStepFormUtils'
 
-class AdminToolResponseItem extends React.Component {
-  static propTypes = {
-    id: PropTypes.string.isRequired,
+type Props = {
+  id: string,
+}
+
+class AdminToolResponseItem extends React.Component<Props> {
+  state = {
+    toolResponse: null,
+    isFetchingToolResponse: true,
+  }
+
+  componentDidMount() {
+    this.fetchToolResponses()
   }
 
   render() {
@@ -19,29 +29,38 @@ class AdminToolResponseItem extends React.Component {
             <Link to="/adminToolResponses">Tools history list</Link>
             <h1 className="sitetitle">Tool History</h1>
           </div>
-          <Fetch url={`/api/toolResponses/${this.props.id}`}>
-            {({ data }) => (
-              <div>
-                <h2>{data.title}</h2>
-                <p>Created at: {`${new Date(data.createdAt)}`}</p>
-                {/* TODO remove checking for user  after https://github.com/goldylucks/adamgoldman.me/issues/99 */}
-                <p>User: {data.user && data.user.name}</p>
-                <p>Current Step: {data.currentStepNum}</p>
-                <p>Status: {data.status}</p>
-                {this.renderStepsWithAnswers(data)}
-              </div>
-            )}
-          </Fetch>
+          {this.renderResponseItem()}
           <hr />
         </div>
       </div>
     )
   }
+  renderResponseItem() {
+    const { isFetchingToolResponse, toolResponse } = this.state
+    if (isFetchingToolResponse) {
+      return <div>Loading Responses</div>
+    }
+    if (!toolResponse) {
+      return <div>No response found</div>
+    }
+    return (
+      <div>
+        <h2>{toolResponse.title}</h2>
+        <p>Created at: {`${new Date(toolResponse.createdAt)}`}</p>
+        {/* TODO remove checking for user  after https://github.com/goldylucks/adamgoldman.me/issues/99 */}
+        <p>User: {toolResponse.user && toolResponse.user.name}</p>
+        <p>Current Step: {toolResponse.currentStepNum}</p>
+        <p>Status: {toolResponse.status}</p>
+        {this.renderStepsWithAnswers(toolResponse)}
+      </div>
+    )
+  }
+
   // eslint-disable-next-line class-methods-use-this
   renderStepsWithAnswers({
     steps, answerByStep, currentStepNum, hiddenFields,
   }) {
-    return steps.map((step, idx) => (
+    return steps.slice(0, currentStepNum).map((step, idx) => (
       <div>
         <Markdown source={'## ' + replaceVarsUtil({ // eslint-disable-line prefer-template
  str: step.title, hiddenFields, answerByStep, currentStepNum,
@@ -64,6 +83,15 @@ str: step.description, hiddenFields, answerByStep, currentStepNum,
         <hr />
       </div>
     ))
+  }
+
+  fetchToolResponses() {
+    axios.get(`/api/toolResponses/${this.props.id}`)
+      .then(({ data }) => this.setState({ toolResponse: data, isFetchingToolResponse: false }))
+      .catch((err) => {
+        global.console.log(err)
+        this.setState({ isFetchingToolResponse: false })
+      })
   }
 }
 
