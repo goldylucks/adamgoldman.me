@@ -5,8 +5,6 @@ Enzyme.configure({ adapter: new Adapter() })
 
 jest.mock('../src/utils/fbUtils')
 
-process.env.BROWSER = true
-
 class LocalStorageMock {
   constructor() {
     this.store = {}

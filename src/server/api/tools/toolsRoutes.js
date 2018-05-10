@@ -1,11 +1,10 @@
-import { isAdmin, decodeToken, getFreshUser, isAdminMiddlewares } from '../../auth'
+import { isAdminMiddlewares } from '../../auth'
 
 import controller from './toolsController'
 
 const router = require('express').Router()
 
 router.route('/')
-  // .post(decodeToken, getFreshUser, isAdmin, controller.updateOrCreate)
   .post(...isAdminMiddlewares, controller.updateOrCreate) // uncomment for dev
 
 router.route('/all/')
@@ -13,7 +12,7 @@ router.route('/all/')
 
 router.route('/:url/')
   .get(controller.getByUrl)
-  .delete(decodeToken, getFreshUser, isAdmin, controller.delByUrl)
+  .delete(...isAdminMiddlewares, controller.delByUrl)
 
 router.route('/export/')
   .post(...isAdminMiddlewares, controller.exportTool)

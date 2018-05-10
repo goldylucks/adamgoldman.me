@@ -17,29 +17,29 @@ class Layout extends React.Component {
     onLogin: PropTypes.func.isRequired,
     onLogout: PropTypes.func.isRequired,
     onUpdateUser: PropTypes.func.isRequired,
+    onStartToolResponse: PropTypes.func.isRequired,
   }
 
   render() {
     const {
-      children, path, onLogin, onLogout, user,
+      children, path, onLogin, onLogout, user, onStartToolResponse,
     } = this.props
     return (
-      <div>
-        <div className={s.container}>
-          <MainNav path={path} user={user} onLogin={onLogin} onLogout={onLogout} />
-          <div>
-            {React.cloneElement(children, {
-              user,
-              onLogin,
-              onSubmitIntro: this.submitIntro,
-              onSubmitModule: this.submitModule,
-            })}
-          </div>
-          <MessengerFixed path={path} />
+      <div className={s.container}>
+        <MainNav path={path} user={user} onLogin={onLogin} onLogout={onLogout} />
+        <div>
+          {React.cloneElement(children, {
+            user,
+            onLogin,
+            onStartToolResponse,
+            onSubmitIntro: this.submitIntro,
+            onSubmitModule: this.submitModule,
+          })}
         </div>
         <div className="container">
           <Footer />
         </div>
+        <MessengerFixed path={path} />
       </div>
     )
   }

@@ -1,14 +1,14 @@
 import mongoose from 'mongoose'
 
 const { Schema } = mongoose
-const ToolsSchema = getSchema()
+const ToolResponsesSchema = getSchema()
 
-export default (function toolsHistoryModel() {
+export default (function toolResponsesModel() {
   let tools
   try {
-    tools = mongoose.model('toolsHistory')
+    tools = mongoose.model('toolresponses')
   } catch (error) {
-    tools = mongoose.model('toolsHistory', ToolsSchema)
+    tools = mongoose.model('toolresponses', ToolResponsesSchema)
   }
   return tools
 }())
@@ -26,7 +26,7 @@ function getSchema() {
       required: true,
     },
 
-    userId: {
+    user: {
       type: Schema.Types.ObjectId,
       ref: 'users',
       required: true,

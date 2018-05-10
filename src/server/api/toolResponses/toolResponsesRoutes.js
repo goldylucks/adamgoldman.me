@@ -1,6 +1,6 @@
 import { isAdminMiddlewares, decodeToken, getFreshUser } from '../../auth'
 
-import controller from './toolsHistoryController'
+import controller from './toolResponsesController'
 
 const router = require('express').Router()
 

@@ -16,7 +16,7 @@ const dbPassProd = process.env.DB_PASSWORD_PROD
 const dbNameLocal = 'adamgoldman'
 const dbAddressLocal = '127.0.0.1:27017'
 
-const collections = ['tools', 'posts']
+const collections = ['tools', 'posts', 'toolshistories', 'toolresponses']
 
 if (!collections.includes(collection)) {
   global.console.log(`collection ${collection} doesn't exist. Pass third parameter from: ${collections} `)

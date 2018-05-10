@@ -2,16 +2,17 @@ import React from 'react'
 
 import Layout from '../../components/Layout'
 
-import ToolByHistoryId from './ToolByHistoryId'
+import ToolResponse from './ToolResponse'
 
 async function action({ params, path }) {
   return {
+    chunks: ['toolResponse'],
     title: 'Tool process',
     description: 'Tool process',
     path,
     component: (
       <Layout path={path}>
-        <ToolByHistoryId path={path} historyId={params.historyId} />
+        <ToolResponse path={path} responseId={params.historyId} />
       </Layout>
     ),
   }

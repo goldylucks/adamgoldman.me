@@ -13,6 +13,7 @@ type Props = {
   user: Object,
   path: string,
   onLogin: Function,
+  onStartToolResponse: Function,
 };
 
 // eslint-disable-next-line react/prefer-stateless-function
@@ -65,7 +66,7 @@ class Tool extends React.Component {
     if (!this.props.user._id) {
       return null
     }
-    const historyItems = user.toolsHistory.filter(item => item.toolId === tool._id)
+    const historyItems = user.toolResponses.filter(item => item.toolId === tool._id)
     if (!historyItems.length) {
       return null
     }
@@ -87,17 +88,20 @@ class Tool extends React.Component {
   }
 
   getStarted = () => {
-    const { tool, user, path } = this.props
+    const {
+      tool, user, path, onStartToolResponse,
+    } = this.props
     const data = {
       toolId: tool._id,
-      userId: user._id,
+      user: user._id,
       ...tool,
     }
     delete data._id
-    axios.post('/api/toolsHistory', data)
+    axios.post('/api/toolResponses', data)
       .then((res) => {
         global.console.log(res)
         history.push(`${path}/${res.data._id}`)
+        onStartToolResponse(res.data)
       })
       .catch((err) => {
         global.alert(err.message)

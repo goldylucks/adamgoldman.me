@@ -46,6 +46,12 @@ export const validateOwner = userId => (item) => {
   return item
 }
 
+export const validateOwnerOrAdmin = (user, itemUserId) => {
+  if (!itemUserId.equals(user._id) && !user.isAdmin) {
+    throw Error('item don\'t exist or you are not the owner')
+  }
+}
+
 export function getFreshUser(req, res, next) {
   User.findById(req.user._id)
     .then((user) => {

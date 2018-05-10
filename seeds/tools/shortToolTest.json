@@ -1,9 +1,9 @@
-{ 
-    "url" : "test", 
-    "isRtl" : false, 
+{
+    "url" : "test",
+    "isRtl" : false,
     "hiddenFields" : [
 
-    ], 
+    ],
     "steps" : [
       {
         "title": "Quick step 0/1",
@@ -37,11 +37,11 @@
           }
         ]
       }
-    ], 
-    "credits" : "", 
-    "description" : "", 
-    "title" : "Short test", 
-    "isSavoring" : false, 
-    "hasReview" : false, 
+    ],
+    "credits" : "",
+    "description" : "",
+    "title" : "Short test",
+    "isSavoring" : false,
+    "hasReview" : false,
     "isDraft" : true
 }
