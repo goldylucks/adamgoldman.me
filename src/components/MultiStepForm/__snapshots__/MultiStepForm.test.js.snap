@@ -156,7 +156,9 @@ exports[`MultiStepForm should render flash answer 1`] = `
         onSubmitOther={[Function]}
         path="/tools/trauma-relief/5ac43ef0d3b723075ebfd200"
       >
-        <div>
+        <div
+          className="answer-group"
+        >
           <div
             key="0"
             style={
@@ -166,7 +168,7 @@ exports[`MultiStepForm should render flash answer 1`] = `
             }
           >
             <a
-              className="btn btn-primary"
+              className="btn btn-primary btn-fixed"
               onClick={[Function]}
             >
               answer 1
@@ -751,7 +753,9 @@ exports[`MultiStepForm should render radio answers 1`] = `
         onSubmitOther={[Function]}
         path="/tools/trauma-relief/5ac43ef0d3b723075ebfd200"
       >
-        <div>
+        <div
+          className="answer-group"
+        >
           <div
             key="0"
             style={
@@ -761,7 +765,7 @@ exports[`MultiStepForm should render radio answers 1`] = `
             }
           >
             <a
-              className="btn btn-primary"
+              className="btn btn-primary btn-fixed"
               onClick={[Function]}
             >
               answer 1
@@ -962,7 +966,7 @@ exports[`MultiStepForm should render short answer 1`] = `
 </MultiStepForm>
 `;
 
-exports[`MultiStepForm should render short answer 2`] = `
+exports[`MultiStepForm should render short answer: submitting answer 1`] = `
 <MultiStepForm
   answerByStep={
     Object {
@@ -973,7 +977,26 @@ exports[`MultiStepForm should render short answer 2`] = `
   }
   currentStepNum={0}
   hiddenFields={Array []}
-  onUpdateProgress={[MockFunction]}
+  onUpdateProgress={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "answerByStep": Object {
+              "0": "Answer step 0",
+              "1": "",
+              "2": "",
+            },
+            "currentStepNum": 0,
+            "flashedIdx": 0,
+            "isFlashing": false,
+            "price": 0,
+            "stepsStack": Array [],
+          },
+        ],
+      ],
+    }
+  }
   path="/tools/trauma-relief/5ac43ef0d3b723075ebfd200"
   price={0}
   steps={
@@ -1003,7 +1026,7 @@ exports[`MultiStepForm should render short answer 2`] = `
       }
     >
       <Markdown
-        source="## Step 0 Title"
+        source="## Step 1 Title: ***“Answer step 0”*** and Answer step 0"
       >
         <ReactMarkdown
           containerTagName="div"
@@ -1013,19 +1036,29 @@ exports[`MultiStepForm should render short answer 2`] = `
               "Link": [Function],
             }
           }
-          source="## Step 0 Title"
+          source="## Step 1 Title: ***“Answer step 0”*** and Answer step 0"
         >
           <div>
             <Heading
-              key="1:1-1:152"
+              key="1:1-1:568"
               level={2}
               literal={null}
-              nodeKey="1:1-1:152"
+              nodeKey="1:1-1:568"
             >
               <h2
-                key="1:1-1:152"
+                key="1:1-1:568"
               >
-                Step 0 Title
+                Step 1 Title: 
+                <strong
+                  key="1:1-1:566"
+                >
+                  <em
+                    key="1:1-1:565"
+                  >
+                    “Answer step 0”
+                  </em>
+                </strong>
+                 and Answer step 0
               </h2>
             </Heading>
           </div>
@@ -1033,7 +1066,7 @@ exports[`MultiStepForm should render short answer 2`] = `
       </Markdown>
     </div>
     <Markdown
-      source="Step 0 Description"
+      source="Step 1 Description: ***“Answer step 0”*** and Answer step 0"
     >
       <ReactMarkdown
         containerTagName="div"
@@ -1043,20 +1076,30 @@ exports[`MultiStepForm should render short answer 2`] = `
             "Link": [Function],
           }
         }
-        source="Step 0 Description"
+        source="Step 1 Description: ***“Answer step 0”*** and Answer step 0"
       >
         <div>
           <p
-            key="1:1-1:182"
+            key="1:1-1:598"
           >
-            Step 0 Description
+            Step 1 Description: 
+            <strong
+              key="1:1-1:596"
+            >
+              <em
+                key="1:1-1:595"
+              >
+                “Answer step 0”
+              </em>
+            </strong>
+             and Answer step 0
           </p>
         </div>
       </ReactMarkdown>
     </Markdown>
     <Markdown
       className="text-muted tool-note"
-      source="Step 0 notes"
+      source="Step 1 notes: ***“Answer step 0”*** and Answer step 0"
     >
       <ReactMarkdown
         className="text-muted tool-note"
@@ -1067,15 +1110,25 @@ exports[`MultiStepForm should render short answer 2`] = `
             "Link": [Function],
           }
         }
-        source="Step 0 notes"
+        source="Step 1 notes: ***“Answer step 0”*** and Answer step 0"
       >
         <div
           className="text-muted tool-note"
         >
           <p
-            key="1:1-1:122"
+            key="1:1-1:538"
           >
-            Step 0 notes
+            Step 1 notes: 
+            <strong
+              key="1:1-1:536"
+            >
+              <em
+                key="1:1-1:535"
+              >
+                “Answer step 0”
+              </em>
+            </strong>
+             and Answer step 0
           </p>
         </div>
       </ReactMarkdown>
@@ -1093,7 +1146,7 @@ exports[`MultiStepForm should render short answer 2`] = `
           onChange={[Function]}
           placeholder="write your answer here"
           required={true}
-          value="Answer step 0"
+          value=""
         />
         <small
           className="form-text text-muted"
@@ -1120,6 +1173,18 @@ exports[`MultiStepForm should render short answer 2`] = `
         Press Enter or click to Continue
       </button>
     </form>
+    <button
+      className="btn btn-secondary btn-sm"
+      onClick={[Function]}
+      style={
+        Object {
+          "display": "block",
+          "marginBottom": 10,
+        }
+      }
+    >
+      Back
+    </button>
     <ExternalA
       className="btn btn-secondary btn-sm"
       href="https://m.me/adamgoldman.me?ref=inner-circle"
