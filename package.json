@@ -8,6 +8,7 @@
     "fix-js": "npm run lint-js --fix",
     "fix": "npm run fix-js",
     "check": "flow check",
+    "test": "jest",
     "test-client": "BROWSER=true jest .test.js",
     "test-watch": "npm run test --watch --notify",
     "test-cover": "npm run test --coverage",
