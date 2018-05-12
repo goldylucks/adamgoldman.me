@@ -1,0 +1,485 @@
+{
+    "url" : "feel-good-generator",
+    "isRtl" : false,
+    "hiddenFields" : [
+
+    ],
+    "steps" : [
+        {
+            "title" : "Choose feeling",
+            "description" : "Think of a feeling or a resource you'd like to have more available for you now, and you'd like to experience it more as you progress through life.",
+            "notes" : "",
+            "type" : "short",
+            "inputPlaceholder" : "I want to experience more ...",
+            "answers" : [
+
+            ]
+        },
+        {
+            "title" : "Eliciting ${s0} - background",
+            "description" : "Now, in all your years on this odd planet, you had many experiences and events, in which you experienced ${s0} in a variety of ways and degrees, in which some the ${s0} you feel is stronger than others, correct?",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : "",
+                    "text" : "Correct"
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I had MANY experiences of ${s0}",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "Eliciting ${s0} - background",
+            "description" : "${echo}\n\nGreat, and as you think about some of these ${s0} experiences now, pick the one that attracts you the most now. One that has the most ${s0} in it, as you think about it now.",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "Got one!",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "Not sure it's the strongest one, but I got one.",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "Eliciting ${s0} - age",
+            "description" : "${echo}\n\nOK, and what's your age in that ${s0} experience?",
+            "notes" : "",
+            "type" : "short",
+            "inputPlaceholder" : "In this ${s0} experience my age is ...",
+            "answers" : [
+
+            ]
+        },
+        {
+            "title" : "Eliciting ${s0} - location",
+            "description" : "And you are ${s3} ...\n\nAnd you are in this experience, and you are ${s3} ... And you are feeling ${s0} ...\n\nAnd when you are ${s3} years old, and in this experience now, where are you?",
+            "notes" : "",
+            "type" : "long",
+            "inputPlaceholder" : "In this experience I'm at/in ...",
+            "answers" : [
+
+            ]
+        },
+        {
+            "title" : "Eliciting ${s0} - sights",
+            "description" : "And ${echo} ...\n\nAnd as you are in the {s4}, being ${s3} years old, feeling ${s0}, what do you see? what and who is around you?\n\n",
+            "notes" : "",
+            "type" : "long",
+            "inputPlaceholder" : "In this experience I see  ...",
+            "answers" : [
+
+            ]
+        },
+        {
+            "title" : "Eliciting ${s0} - sounds",
+            "description" : "And ${echo} ...\n\nAnd as you are in the {s4}, being ${s3} years old, seeing ${s5}, feeling ${s0}, what do you hear?\n\nAnyone speaking? Any background noises or sounds?",
+            "notes" : "",
+            "type" : "long",
+            "inputPlaceholder" : "In this experience I hear  ...",
+            "answers" : [
+
+            ]
+        },
+        {
+            "title" : "Eliciting ${s0} - touch & tactiles",
+            "description" : "And ${echo} ...\n\nAnd as you are in the {s4}, being ${s3} years old, seeing ${s5}, hearing ${s6}, feeling ${s0}, what can you feel touching your body and skin?\n\nYour cloth? Other people? Any bodily sensations?",
+            "notes" : "",
+            "type" : "long",
+            "inputPlaceholder" : "In this experience I can feel the touches of  ...",
+            "answers" : [
+
+            ]
+        },
+        {
+            "title" : "Eliciting ${s0} - highlights",
+            "description" : "And ${echo} ...\n\nNow as you go through that ${s0} experience out loud again,\n\nAnd you are in the ${s4}, being ${s3} years old, seeing ${s5}, hearing ${s6}, feeling the touch of ${s7} ...\n\nNotice the special moments, like in the movies, as you think of a good movie which induces within you a response, the movie itself could be \"great\", but there are those tiny magical moments in which there's such a build up ...\n\nAnd so many feelings come together inside, that is almost indescribable ...\n\nGo through your experience of ${s0} again, and notice in which moments you feel ${s0} the most?",
+            "notes" : "Fill in as much details about it as you can, so you add on to what you've done already. The more details, the greater the ${s0} you will allow yourself to feel now, and let ${s0} fill you as you go through life ...",
+            "type" : "long",
+            "inputPlaceholder" : "",
+            "answers" : [
+
+            ]
+        },
+        {
+            "title" : "Intensifying ${s0} - 1st person",
+            "description" : "And ${echo} ...\n\nAnd as you relive that ${s0} memory now, and experience these special moments now ...\n\n${echo}\n\n... I want you to step inside that experience, so you see what you saw at the time, hear what you heard, feel what you felt, as if you are there again, reliving the experience from 1st person perspective, from your own eyes.",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "I feel MUCH more ${s0}",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel more ${s0}",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I don’t feel a change in this step",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "Intensifying ${s0} - smell & taste",
+            "description" : "This step is optional and highly individualistic. Allow the experience to have rich smell and / or taste, and notice if it further intensifies the ${s0} you feel now",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "I feel MUCH better",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel better",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I don’t feel a change in this step",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "Intensifying ${s0} - brightness & color",
+            "description" : "${echo}\n\nNow allow the experience to become much brighter and more colorful, and notice how much it increases the ${s0} you feel now",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "I feel MUCH more ${s0}",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel more ${s0}",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I don’t feel a change in this step",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "Intensifying ${s0} - focus & vividness",
+            "description" : "${echo}\n\nNext allow the experience to become much more focused, more vivid, so it's crisper and sharper as you relive it now, and notice how much it intensifies the sense of ${s0} within you now",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "I feel MUCH more ${s0}",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel more ${s0}",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I don’t feel a change in this step",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "Intensifying ${s0} - depth",
+            "description" : "${echo}\n\nNow allow the experience to become much deeper and in 3d, and notice how much it amplifies the ${s0} you feel now",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "I feel MUCH more ${s0}",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel more ${s0}",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I don’t feel a change in this step",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "Intensifying ${s0} - looping",
+            "description" : "${echo}\n\nNext, as you relive this experience:\n\nAnd you are in the ${s4}, being ${s3} years old, seeing ${s5}, hearing ${s6}, feeling the touch of ${s7} ...\n\nAllow it to become a fuller experience, with motion, and to loop back on itself.",
+            "notes" : "Meaning when you reach the end, it automatically starts again from the beginning, so you can have this experience generating you ${s0} \"in the background\" as you go through life.\n\nWouldn't that be great to feel better for no reason, effortlessly, now and for the rest of your life?",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "I feel MUCH more ${s0}",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel more ${s0}",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I don’t feel a change in this step",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "Intensifying ${s0} - sounds",
+            "description" : "${echo}\n\nNow as you pay attention to what you hear:\n\n***\"${s6}\"***\n\nAllow the sounds to become richer, fuller, deeper, coming from all around you in surround, as if we are surrounded  by the world's greatest speakers ever crafted by men or machine.",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "I feel MUCH more ${s0}",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel more ${s0}",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I don’t feel a change in this step",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "Intensifying ${s0} - touches",
+            "description" : "${echo}\n\nNext, as you pay attention to the bodily sensations and what you feel the touch of:\n\n***${s7}***\n\nAllow the touch to become richer, as you attend to the textures, temperatures, and feeling of these bodily sensations",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "I feel MUCH more ${s0}",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel more ${s0}",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I don’t feel a change in this step",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "Where does ${s0} starts?",
+            "description" : "${ehco}\n\nNow as you go through the highlight moments:\n\n*\"${s8}\"*\n\nNotice where in your body do you feel the ${s0} first? Where in your body does this feeling starts?",
+            "notes" : "Or where do you notice it first in your body?\n\ni.e. stomach, belly, chest, arms, etc",
+            "type" : "short",
+            "inputPlaceholder" : "I feel {s0} first in my ...",
+            "answers" : [
+
+            ]
+        },
+        {
+            "title" : "Where does ${s0} move?",
+            "description" : "${ehco}\n\nAnd what it begins there, notice where does it move as it starts to grow & spread, as you keep the feeling spinning faster & faster ",
+            "notes" : "Or where do you notice it first in your body?\n\ni.e. stomach, belly, chest, arms, etc",
+            "type" : "long",
+            "inputPlaceholder" : "",
+            "answers" : [
+
+            ]
+        },
+        {
+            "title" : "The color of ${s0}",
+            "description" : "${ehco}\n\nKeep intensifying the good feeling and ${s0}, and start to get curious about this feeling ...\n\nIf this feeling you are spinning inside you now had a color, and what color would that color might be now,\n\nAnd you are in the ${s4}, being ${s3} years old, seeing ${s5}, hearing ${s6}, feeling the touch of ${s7} ...\n\nand you can feel good now, as more and more ${s0} flows through you,\n\nand what color does that feeling have now, as you spin it faster and faster?",
+            "notes" : "Or where do you notice it first in your body?\n\ni.e. stomach, belly, chest, arms, etc",
+            "type" : "short",
+            "inputPlaceholder" : "This ${s0} feeling has the color ...",
+            "answers" : [
+
+            ]
+        },
+        {
+            "title" : "The sound of ${s0}",
+            "description" : "And ${s19} ...\n\nand the more you spin this feeling, the more you can see the ${s19}, and the more ${s19}, the stronger it feels,\n\nand I wonder if you can begin to imagine ...\n\nIf this feeling would have a sound, as you feel the ${s0} stronger, deeper inside, intensifying,\n\nand what kind of sound would this feeling you are spinning faster and faster might have now, as you feel the ${s0} more and more, and more ${s19} can fill the horizon ...",
+            "notes" : "Another way of thinking about this is, if you had to compose a music, a tune, or a particular sound, through this feeling, what sound would that be?",
+            "type" : "short",
+            "inputPlaceholder" : "This ${s0} feeling has the sound of ...",
+            "answers" : [
+
+            ]
+        },
+        {
+            "title" : "${s0}'s vicious circle ...",
+            "description" : "And ${s20} ...\n\nAnd notice where in your body you feel ${s0} first, as you see more and more ${s19}, and where in your body do you feel ${s0} the most,\n\nand the stronger the feeling, the more you can hear ${s20},\n\nand the more you can hear, the more ${s19} it becomes,\n\nand the more ${s19} it becomes, the stronger the feeling,\n\nit's a vicious cycle my friend, and I'm afraid you gonna have to be stuck in good feelings forever!",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "Stuck in good feelings? Anything but that!",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "Oh Adam, you are so cruel ...",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "Ok I'm ready for the next step",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "Sprinkling ${s0} to Infinity and Beyond!",
+            "description" : "think about a situation not too far from today, maybe in a few hours or a few days, in which you used to not have enough ${s0} in the past, and notice now as you keep spinning this feeling,\n\nyou are learning you can begin to realize how fast you can learn to respond in new ways to old limitations which used to have bothered you before,\n\nyet you will be surprised, as each time you do this, you can feel the ${s0} fill you even more,\n\nand isn't it odd to feel as good about something you did not think about just a few moments ago?\n\nAnd as you wander more and more around what it is you do not know yet, as more than just air fills your lounges and you succumb to good feelings,\n\nand it feels so right to be lost sometimes,\n\nand what's still left in you that you don't want anymore can get curious as you think about the most important question of them all,\n\nand *\"how much pleasure can I stand\"*,\n\neven if you sit or lay down in an odd place, deeper than before,\n\nas you surface back, only at the rate and speed as you feel more and more ${s0} fill bigger parts of your life, now and then, the more you do this now ...",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "I'm overflown by $[s0}!",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel ${s0} stronger than before!",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "This is AMAZING!",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I enjoyed this a lot",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I found this beneficial",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        }
+    ],
+    "credits" : "",
+    "description" : "Get a rush of good feelings on command",
+    "title" : "Feel Good Generator",
+    "isSavoring" : false,
+    "hasReview" : true,
+    "isDraft" : false
+}

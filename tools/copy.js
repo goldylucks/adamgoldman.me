@@ -8,9 +8,12 @@
  */
 
 import path from 'path'
+
 import chokidar from 'chokidar'
-import { writeFile, copyFile, makeDir, copyDir, cleanDir } from './lib/fs'
+
 import pkg from '../package.json'
+
+import { writeFile, copyFile, makeDir, copyDir, cleanDir } from './lib/fs'
 import { format } from './run'
 
 /**
@@ -36,7 +39,7 @@ async function copy() {
       ),
     ),
     copyFile('LICENSE.txt', 'build/LICENSE.txt'),
-    copyFile('yarn.lock', 'build/yarn.lock'),
+    copyFile('package-lock.json', 'build/package-lock.json'),
     copyDir('public', 'build/public'),
   ])
 

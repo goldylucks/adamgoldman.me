@@ -1,0 +1,224 @@
+{
+    "url" : "recurring-time-distortion",
+    "isRtl" : false,
+    "hiddenFields" : [
+
+    ],
+    "steps" : [
+        {
+            "title" : "Background",
+            "description" : "You know how sometimes you wait in line for half an hour, and you look at the time and less than 10 minutes have gone by?\n\nor your starving waiting for your meal, about to snap at the poor waiter for torturing you for so long, only to realize just a few minutes have passed?\n\non the other hand, when your having fun with that special friend, or see a great movie, it seems like hours turn to minutes, and \"where did the time ago???\"\n\nThat happens all the time, and the ability to control time at the time you wish is a good recipe to turn bad time to good time, and turn good time to something so wonderful you might have not experienced yet.\n\nNow before we get you into some wacky states, you might wonder ...",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "how is it going to work Adam?",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "How is it going to work",
+            "description" : "I'm glad you asked,\nso here's how it's going to work,\nas I've been studying human behavior, organisms,\nhow society shapes behavior, communication,\nand the greatest learning machine of all, the human brain,\nI'm going to give you some things to try,\nand whatever works for you, you get to keep,\nwhatever doesn't you file away in the\n\"thing's I've tried and haven't worked for me yet.\"\n\nSounds good?",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "Good indeed, let's continue",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "Sounds great, let's do this Adam!",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "Recurring situation - category",
+            "description" : "pick a recurring situation you have trouble dealing with,\n\ni.e. going to the bank, dealing with a certain person, etc",
+            "notes" : "",
+            "type" : "short",
+            "inputPlaceholder" : "",
+            "answers" : [
+
+            ]
+        },
+        {
+            "title" : "Recurring situation - specific example",
+            "description" : "And ${echo} ...\n\nNow pick a specific example or a future scenario of that recurring situation",
+            "notes" : "E.g. if the category is standing in line for the bank, pick a a specific scenario of you standing in line for the bank, or talking to the teller, etc",
+            "type" : "short",
+            "inputPlaceholder" : "",
+            "answers" : [
+
+            ]
+        },
+        {
+            "title" : "Normal time",
+            "description" : "${echo}\n\nRun that scenario in your mind in normal time, just as you usually think about it",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "I ran the scenario in normal time, what's next?",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "Normal time - report",
+            "description" : "how was it to run the scenario \"normally\"?\n\nhow it feels like?\n\nand how intense is the feeling?",
+            "notes" : "",
+            "type" : "long",
+            "inputPlaceholder" : "When I run the scenario in normal time I feel ...",
+            "answers" : [
+
+            ]
+        },
+        {
+            "title" : "Fast time",
+            "description" : "Now go back to the beginning of the scenario, freeze the frame, step inside the beginning of the scenario,\n\nand hear and feel turning down a knob and slow YOURSELF to half speed,\n\nso everything will be running twice as fast in your subjective experience, and go through the scenario in fast time,\n\ni.e. every one in the bank will talk and move twice as fast as you",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "I ran the scenario in fast time, what's next?",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "Running it in fast time is trippy!",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "Fast time - report",
+            "description" : "${echo}\n\nHow was it to run the scenario in \"fast time\"?\n\nHow does it feel like?\n\nAnd how intense is the feeling?",
+            "notes" : "",
+            "type" : "long",
+            "inputPlaceholder" : "When I run the scenario in fast time I feel ...",
+            "answers" : [
+
+            ]
+        },
+        {
+            "title" : "Slow time",
+            "description" : "go back to the beginning of the scenario, freeze the frame, step inside the beginning of the scenario,\n\nhear and feel turning up a knob and speed YOURSELF back to normal speed,\n\nthen turn the knob further up and speed YOURSELF to double speed,\n\nso everything will be running twice as slow in your subjective experience, and go through the scenario in slow time\n\ni.e. every one in the bank will talk and move twice as slow as you",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "I ran the scenario in slow time, what's next?",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "Running it in slow time is trippy!",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "Slow time - report",
+            "description" : "${echo}\n\nHow was it to run the scenario in \"slow time\"?\n\nHow does it feel like?\n\nAnd how intense is the feeling?",
+            "notes" : "",
+            "type" : "long",
+            "inputPlaceholder" : "When I run the scenario in slow time I feel ...",
+            "answers" : [
+
+            ]
+        },
+        {
+            "title" : "Normal time - noticing differences",
+            "description" : "Now try and run the same scenario in normal time, and try to get the old feeling back, and notice what's different.",
+            "notes" : "",
+            "type" : "long",
+            "inputPlaceholder" : "Now that I try to run the scenario again in normal time, the differences I notice are ...",
+            "answers" : [
+
+            ]
+        },
+        {
+            "title" : "My own experience (Adam)",
+            "description" : "Isn't it freaky?\n\nfor me it changed from negative to \"c'mon out with it! let's get it over with!\"\n\nsort of a comical impatience :)",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "Freaky indeed :)",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "So what's next?",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "Intensifying good times",
+            "description" : "${echo}\n\nWe can repeat this process with an experience you enjoy, to intensify the good feelings.\n\n if you wish. repeat the entire process for a recurring PLEASURABLE situation, in which you wish to amplify and experience that much more INTENSE pleasure in a deep way.\n\n(this is some trippy stuff ...)\n\nI went for juggling and sex, not necessarily in that order ;)\n\nWhen your ready, repeat the process, and replace \"trouble\" with \"pleasurable\" as you come along, and thrust forward inside ...",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "Ready to intensify pleasure",
+                    "hasGoToStep" : true,
+                    "goToStepByNum" : "2",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "Naa, let's skip intensifying pleasure for now",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        }
+    ],
+    "credits" : "",
+    "description" : "Turn bad time to good time and good time to wonderful time by distorting time subjectively",
+    "title" : "Recurring Time Distortion",
+    "isSavoring" : false,
+    "hasReview" : true,
+    "isDraft" : false
+}

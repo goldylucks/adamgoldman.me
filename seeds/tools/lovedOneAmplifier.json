@@ -1,0 +1,545 @@
+{
+    "url" : "loved-one-amplifier",
+    "isRtl" : false,
+    "hiddenFields" : [
+
+    ],
+    "steps" : [
+        {
+            "title" : "Background",
+            "description" : "Imagine you could get a certain dose of ecstasy and good feelings as a side effect of learning to operate your brain in more effective ways.\n\nHow awesome would that be?",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "That'd be great!",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "Oh yes please, I'll take some of that!",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "Ecstasy and good feelings? sure, I'll have some",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "Lovable people",
+            "description" : "Great. Now, you know those people you just love to have around?\n\nLike their mere presence fills you up with good feelings, sometimes without saying a word, and sometimes with. And at times it's the way they just \"are\", you know?",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "Of course I love those people!",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "Yes of course I can feel more love already!",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I got some in mind, yes",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "Lovable people - the chosen one",
+            "description" : "${echo}\n\nFantastic. As you think of them now, notice which one induces the strongest feeling inside you now?",
+            "notes" : "",
+            "type" : "short",
+            "inputPlaceholder" : "",
+            "answers" : [
+
+            ]
+        },
+        {
+            "title" : "Lovable people - the chosen one - gender",
+            "description" : "Are they male or female?",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "Male",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "Female",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "Look",
+            "description" : "Great, and as you think of ${him3}, do you see ${him3} looking at you?",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "Yes",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "Now that you ask, I do, yes",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "No",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                }
+            ]
+        },
+        {
+            "title" : "Intensifying good feelings - brightness",
+            "description" : "Notice how bright is the image of ${him3} in your mind, and see what happens as you brighten it up a bit, like in a old TV, pressing the button to increase brightness.",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "I feel MUCH better",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel better",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I don’t feel a change in this step",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel worse",
+                    "isLinkNew" : false,
+                    "isConcern" : true,
+                    "concern" : "feel worse"
+                }
+            ]
+        },
+        {
+            "title" : "Intensifying good feelings - color",
+            "description" : "${echo}\n\nNext make the colors richer and as vivid as you can.",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "I feel MUCH better",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel better",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I don’t feel a change in this step",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel worse",
+                    "isLinkNew" : false,
+                    "isConcern" : true,
+                    "concern" : "feel worse"
+                }
+            ]
+        },
+        {
+            "title" : "Intensifying good feelings - sharpness and quality",
+            "description" : "${echo}\n\nGreat. Now that we cranked up the brightness and color, notice how sharp, crisp, and high quality you see ${s2} in your mind.\n\nYou might experienced sometimes watching a video on Youtube or a screen, and halfway into it you noticed the resolution and quality is not set to maximum.\n\nNow look at ${s2} and increase the quality of the image, set it to maximum quality, so it's crisper and sharper, like the best screen you can imagine.",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "I feel MUCH better",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel better",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I don’t feel a change in this step",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel worse",
+                    "isLinkNew" : false,
+                    "isConcern" : true,
+                    "concern" : "feel worse"
+                }
+            ]
+        },
+        {
+            "title" : "Intensifying good feelings - distance",
+            "description" : "${echo}\n\nNow let's talk distance. How close do you see ${s2}? Is ${he3} right up there in your face or miles away?\n\nUsually it's something in between. Now push the image away all the way into the distance so it's just a dot, then pull it closer till it's \"in your face\", and start pushing it away again until you find the sweepspot which induces the most good feelings.",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "I feel MUCH better",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel better",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I don’t feel a change in this step",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel worse",
+                    "isLinkNew" : false,
+                    "isConcern" : true,
+                    "concern" : "feel worse"
+                }
+            ]
+        },
+        {
+            "title" : "Intensifying good feelings - depth",
+            "description" : "${echo}\n\nAdd more and more depth, so you make ${s2}'s representation as deep and as 3d as you can.",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "I feel MUCH better",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel better",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I don’t feel a change in this step",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel worse",
+                    "isLinkNew" : false,
+                    "isConcern" : true,
+                    "concern" : "feel worse"
+                }
+            ]
+        },
+        {
+            "title" : "Intensifying good feelings - focus and clarity",
+            "description" : "${echo}\n\nNext increase the focus & clarity, so you see ${s2} crystal clear and focused.",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "I feel MUCH better",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel better",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I don’t feel a change in this step",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel worse",
+                    "isLinkNew" : false,
+                    "isConcern" : true,
+                    "concern" : "feel worse"
+                }
+            ]
+        },
+        {
+            "title" : "Intensifying good feelings - motion",
+            "description" : "${echo}\n\nIs ${s2} moving as you look at ${him3} now, or is it a still picture?\n\nIf it's not yet a movie, \"press play\" so you see ${him3} moving, and notice if and how much you feel good even more.",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "I feel MUCH better",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel better",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I don’t feel a change in this step",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel worse",
+                    "isLinkNew" : false,
+                    "isConcern" : true,
+                    "concern" : "feel worse"
+                }
+            ]
+        },
+        {
+            "title" : "Intensifying good feelings - sounds",
+            "description" : "${echo}\n\nNow that it's a movie, do you hear ${s2} talking to you yet?\n\nHear what ${he3}'s saying and more importantly HOW ${he3}'s saying it, the tone of ${his3} voice and the way ${he3} talks to you.",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "I feel MUCH better",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel better",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I don’t feel a change in this step",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel worse",
+                    "isLinkNew" : false,
+                    "isConcern" : true,
+                    "concern" : "feel worse"
+                }
+            ]
+        },
+        {
+            "title" : "Intensifying good feelings - enriching sounds",
+            "description" : "${echo}\n\nNow try this ...\n\nAs ${he3} speaks, hear ${him3} as if the sound would come from all around you, like a surround effect in a cinema, if there were high quality speakers from all around.",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "I feel MUCH better",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel better",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I don’t feel a change in this step",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel worse",
+                    "isLinkNew" : false,
+                    "isConcern" : true,
+                    "concern" : "feel worse"
+                }
+            ]
+        },
+        {
+            "title" : "Intensifying good feelings - smell",
+            "description" : "${echo}\n\nAs you see and hear ${s2}, what smell might go on with this experience?\n\nDo you like that smell? If there's no smell already, add it in and notice if you feel good in a better way with the smell.",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "I feel MUCH better",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel better",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I don’t feel a change in this step",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel worse",
+                    "isLinkNew" : false,
+                    "isConcern" : true,
+                    "concern" : "feel worse"
+                }
+            ]
+        },
+        {
+            "title" : "Intensifying good feelings - glow",
+            "description" : "${echo}\n\nNext experiment with adding glow, gloss, glitter, and shining/radiating/emanating light to the experience, either on ${s2}, through ${him3}, around ${him3}, or to the entire experience itself.",
+            "notes" : "",
+            "type" : "radio",
+            "inputPlaceholder" : "",
+            "answers" : [
+                {
+                    "isOther" : false,
+                    "text" : "I feel MUCH better",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel better",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I don’t feel a change in this step",
+                    "isLinkNew" : false,
+                    "isConcern" : false,
+                    "concern" : ""
+                },
+                {
+                    "isOther" : false,
+                    "text" : "I feel worse",
+                    "isLinkNew" : false,
+                    "isConcern" : true,
+                    "concern" : "feel worse"
+                }
+            ]
+        }
+    ],
+    "credits" : "",
+    "description" : "Enjoy people you like like never before",
+    "title" : "Loved Ones Amplifier",
+    "isSavoring" : false,
+    "hasReview" : true,
+    "isDraft" : false
+}
