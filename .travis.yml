@@ -2,7 +2,7 @@ sudo: false
 
 language: node_js
 node_js: node
-script: npm run fix
+script: npm run fix && npm run test-client
 branches:
   only:
   - master
