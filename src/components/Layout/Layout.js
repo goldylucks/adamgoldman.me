@@ -27,7 +27,7 @@ class Layout extends React.Component {
     return (
       <div className={s.container}>
         <MainNav path={path} user={user} onLogin={onLogin} onLogout={onLogout} />
-        <div>
+        <div className={s.innerContainer}>
           {React.cloneElement(children, {
             user,
             onLogin,
@@ -36,7 +36,7 @@ class Layout extends React.Component {
             onSubmitModule: this.submitModule,
           })}
         </div>
-        <div className="container">
+        <div className="container container-footer">
           <Footer />
         </div>
         <MessengerFixed path={path} />

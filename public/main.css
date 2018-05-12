@@ -1,5 +1,13 @@
 html {
-    overflow-y:scroll;
+	min-height: 100%;
+	position: relative;
+	overflow-y:scroll;
+}
+body, #app{
+	height: 100%;
+	display: block;
+	width: 100%;
+	margin-bottom: 30px
 }
 body {
   font-family: medium-content-sans-serif-font,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
@@ -27,6 +35,13 @@ input[type="image"], input[type="checkbox"] {
   color: #03a87c !important;
   border-color: #03a87c;
   background: #fff;
+}
+.answer-group{
+	display: inline-block;
+}
+.btn-fixed {
+	width: 100%;
+    display: block;
 }
 .btn-primary:hover {
   border-color: #029e74 !important;
@@ -222,10 +237,23 @@ span.post-name a,span.post-read-more a:hover {
 	margin-bottom:1rem;
 }
 .footer {
-	padding-top:15px;
-	padding-bottom:12px;
+	padding-top:6px;
+	padding-bottom:5px;
 	font-size:0.8rem;
 	color:rgba(0,0,0,.44);
+	/*position: fixed;*/
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #fff;
+	/*z-index: 999;*/
+	border-top: 1px #eee solid;
+}
+.container-footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 .link-dark {
 	color:rgba(0,0,0,.8);

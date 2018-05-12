@@ -7,13 +7,19 @@ import s from './Footer.css'
 
 const Footer = () => (
   <div className="footer">
-    <p className="pull-left">
-       Copyright &copy; 2017 <Link className={s.link} to="/">Adam Goldman</Link>
-    </p>
-    <p className="pull-right">
-      <Link className={`${s.link}`} to="/legal-stuff">legal stuff</Link>
-      <Link className={`${s.link}`} style={{ marginLeft: 10 }} to="/privacy">Privacy</Link>
-    </p>
+    <div className="row">
+      <div className="col-sm-6">
+        <p className="pull-left">
+               Copyright &copy; 2017 <Link className={s.link} to="/">Adam Goldman</Link>
+        </p>
+      </div>
+      <div className="col-sm-6">
+        <p className="pull-right">
+          <Link className={`${s.link}`} to="/legal-stuff">legal stuff</Link>
+          <Link className={`${s.link}`} style={{ marginLeft: 10 }} to="/privacy">Privacy</Link>
+        </p>
+      </div>
+    </div>
     <div className="clearfix" />
   </div>
 )
