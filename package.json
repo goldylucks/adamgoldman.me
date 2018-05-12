@@ -2,7 +2,7 @@
   "scripts": {
     "heroku-postbuild": "npm run build -- --release",
     "precommit": "lint-staged",
-    "prepush": "npm run fix",
+    "prepush": "npm run fix && npm run test-client",
     "lint-js": "eslint --ignore-path .gitignore --ignore-pattern tools/ \"!**/.*\" .",
     "lint": "npm run lint-js",
     "fix-js": "npm run lint-js --fix",
