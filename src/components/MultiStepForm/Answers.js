@@ -23,7 +23,7 @@ class Answers extends React.Component {
 
   render() {
     const {
-      answers, onSubmit, onSubmitOther, path,
+      answers, onSubmit, path,
     } = this.props
     return (
       <div className="answer-group">
@@ -41,12 +41,13 @@ class Answers extends React.Component {
             html = (
               <form onSubmit={(evt) => {
                   evt.preventDefault()
-                  onSubmitOther(idx, this.state.other)
+                  this.submitOther(idx)
                 }}
               >
                 <input
                   onChange={(evt) => { this.setState({ other: evt.target.value }) }}
                   placeholder="Other"
+                  data-test="other"
                   value={this.state.other}
                   className="btn btn-primary text-left"
                 />
@@ -65,6 +66,11 @@ class Answers extends React.Component {
         })}
       </div>
     )
+  }
+
+  submitOther(idx) {
+    this.props.onSubmitOther(idx, this.state.other)
+    this.setState({ other: '' })
   }
 
   concernClick = () => global.alert('Let\'s talk about it in messenger, click "get started" if messenger asks you')
