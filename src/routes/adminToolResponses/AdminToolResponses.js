@@ -47,7 +47,7 @@ class AdminToolResponses extends React.Component<Props> {
                             {`${new Date(item.createdAt)}`}
                           </Link>
                         </th>
-                        <th scope="col">{item.user.name}</th>
+                        <th scope="col">{item.user ? item.user.name : 'user not found'}</th>
                         <th scope="col">{item.title}</th>
                         <th scope="col">{item.currentStepNum}</th>
                         <th scope="col">{item.status}</th>
