@@ -27,7 +27,7 @@ label[for] {
 }
 button {
   cursor: pointer;
-}  
+}
 input[type="image"], input[type="checkbox"] {
   cursor: pointer;
 }
@@ -38,6 +38,10 @@ input[type="image"], input[type="checkbox"] {
 }
 .answer-group{
 	display: inline-block;
+}
+
+.answer-group .btn{
+	text-align: left;
 }
 .btn-fixed {
 	width: 100%;
@@ -80,7 +84,7 @@ section {
 		-webkit-column-count:2;
 		-moz-column-count:2;
 		column-count:2;
-	}  
+	}
 	.card-columns-three {
 		display: flex;
     justify-content: space-between;
@@ -474,7 +478,7 @@ blockquote.rtl {
 }
 /* fb messages */
 .chat-message-container.adam + .chat-message-container.other,
-.chat-message-container.other + .chat-message-container.adam { 
+.chat-message-container.other + .chat-message-container.adam {
   margin-top: 10px;
 }
 .chat-message {

@@ -67,10 +67,10 @@ class ToolResponse extends React.Component<Props> {
   }
 
   updateProgress = (nextState) => {
-    if (nextState.currentStepNum === this.state.data.steps.length - 1) {
+    if (nextState.currentStepNum === this.state.toolResponse.steps.length - 1) {
       nextState.status = 'Completed'
     }
-    axios.put(`/api/toolResponses/${this.props.responseId}`, { ...this.state.data, ...nextState })
+    axios.put(`/api/toolResponses/${this.props.responseId}`, { ...this.state.toolResponse, ...nextState })
       .catch((err) => {
         global.console.error(err)
         global.alert(err.message)
