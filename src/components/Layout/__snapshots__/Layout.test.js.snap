@@ -357,7 +357,7 @@ exports[`Layout renders children correctly 1`] = `
   >
     <img
       alt="Messenger Link"
-      src="https://cdn.supple.com.au/wp-content/themes/supple/img/msg.png"
+      src="http://res.cloudinary.com/goldylucks/image/upload/v1/adamgoldman.me/messenger"
     />
   </a>
 </div>
