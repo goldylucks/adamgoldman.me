@@ -4,7 +4,7 @@ import React from 'react'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
 
 import { MESSENGER_LINK_WELCOME, MESSENGER_LINK_SAVORING_CONTACT } from '../../constants'
-import { isSavoring } from '../../utils'
+import { isSavoring, cloudImg } from '../../utils'
 
 import s from './MessengerFixed.css'
 
@@ -20,7 +20,7 @@ const MessengerFixed = ({ path }: Props) => (
     rel="nofollow noreferrer noopener"
   >
     <img
-      src="https://cdn.supple.com.au/wp-content/themes/supple/img/msg.png"
+      src={cloudImg('adamgoldman.me/messenger')}
       alt="Messenger Link"
     />
   </a>
