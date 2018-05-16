@@ -160,6 +160,7 @@ exports[`MultiStepForm should render flash answer 1`] = `
           className="answer-group"
         >
           <div
+            data-test="answer-0"
             key="0"
             style={
               Object {
@@ -757,6 +758,7 @@ exports[`MultiStepForm should render radio answers 1`] = `
           className="answer-group"
         >
           <div
+            data-test="answer-0"
             key="0"
             style={
               Object {
@@ -987,11 +989,13 @@ exports[`MultiStepForm should render short answer: submitting answer 1`] = `
               "1": "",
               "2": "",
             },
-            "currentStepNum": 0,
+            "currentStepNum": 1,
             "flashedIdx": 0,
             "isFlashing": false,
             "price": 0,
-            "stepsStack": Array [],
+            "stepsStack": Array [
+              0,
+            ],
           },
         ],
       ],

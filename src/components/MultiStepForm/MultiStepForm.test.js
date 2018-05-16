@@ -75,6 +75,37 @@ test('resets other answer after submit', () => {
   expect(other2.props().value).toBe('')
 })
 
+test('stack is synced', () => {
+  const wrapper = mountWrapper({
+    steps: [
+      { title: '0', type: 'radio', answers: [{ text: '0' }] },
+      { title: '1', type: 'radio', answers: [{ text: '1' }] },
+      { title: '2', type: 'radio', answers: [{ text: '2' }] },
+    ],
+  })
+  expect(wrapper.props().stepsStack).toEqual([])
+  wrapper.find('[data-test="answer-0"] a').props().onClick()
+  expect(wrapper.state().stepsStack).toEqual([0])
+  expect(wrapper.props().onUpdateProgress).toHaveBeenCalledTimes(1)
+  expect(wrapper.props().onUpdateProgress).toHaveBeenCalledWith(expect.objectContaining({
+    currentStepNum: 1,
+    stepsStack: [0],
+  }))
+  wrapper.find('[data-test="answer-0"] a').props().onClick()
+  expect(wrapper.props().onUpdateProgress).toHaveBeenCalledTimes(2)
+  expect(wrapper.props().onUpdateProgress).toHaveBeenLastCalledWith(expect.objectContaining({
+    currentStepNum: 2,
+    stepsStack: [0, 1],
+  }))
+  // BUG doens't render back button in test
+  // wrapper.find('button').props().onClick()
+  // expect(wrapper.props().onUpdateProgress).toHaveBeenCalledTimes(3)
+  // expect(wrapper.props().onUpdateProgress).toHaveBeenLastCalledWith(expect.objectContaining({
+  //   currentStepNum: 1,
+  //   stepsStack: [0],
+  // }))
+})
+
 function mountWrapper(props) {
   const propsToUse = Object.assign({
     steps: [],

@@ -61,7 +61,7 @@ class Answers extends React.Component {
           }
 
           return (
-            <div key={idx} style={{ marginBottom: 10 }}>{html}</div>
+            <div key={idx} style={{ marginBottom: 10 }} data-test={`answer-${idx}`}>{html}</div>
           )
         })}
       </div>

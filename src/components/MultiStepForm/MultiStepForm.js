@@ -35,9 +35,9 @@ class MultiStepForm extends React.Component {
     stepsStack: this.props.stepsStack, // eslint-disable-line react/no-unused-state
   }
 
-  componentDidUpdate(nextProps, nextState) {
-    if (nextState.currentStepNum !== this.state.currentStepNum) {
-      this.props.onUpdateProgress(nextState)
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.currentStepNum !== this.state.currentStepNum) {
+      this.props.onUpdateProgress(this.state)
     }
   }
 
