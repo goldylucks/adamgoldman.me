@@ -41,7 +41,10 @@ class ToolsListPage extends React.Component<Props> {
               {
                 isFetchingTutorials
                   ? <div>Loading ...</div>
-                  : tutorials.concat(tutorialsHardCoded).filter(filterDrafts)
+                  : tutorials
+                    .concat(tutorialsHardCoded)
+                    .filter(filterDrafts)
+                    .filter(this.filterSavoring)
                   .map(t => (
                     <Card {...t} url={`${path}/${t.url}`} key={t.url} />
                   ))
@@ -61,6 +64,7 @@ class ToolsListPage extends React.Component<Props> {
         this.setState({ isFetchingTutorials: false })
       })
   }
+  filterSavoring = tool => !tool.isSavoring
 }
 
 export default ToolsListPage
