@@ -12,7 +12,7 @@ async function action({ params, path }) {
     path,
     component: (
       <Layout path={path}>
-        <ToolResponse path={path} responseId={params.historyId} />
+        <ToolResponse path={path} responseId={params.toolResponseId} />
       </Layout>
     ),
   }

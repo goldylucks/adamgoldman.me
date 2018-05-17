@@ -31,7 +31,6 @@ export const steps = [
       <div>
         <Testimony
           isRtl
-          imgSrc="https://scontent.fmad3-4.fna.fbcdn.net/v/t1.0-1/c0.0.50.50/p50x50/21432798_1596784173712528_8021548721668961597_n.jpg?oh=5adc2e0e5eeebb9c76f9dba2b2d58924&oe=5AC7A069"
           name="דורה טליאס"
           nameMeta="מאובחנת עם סרטן השד"
           text="מדהים!!!
@@ -39,7 +38,6 @@ export const steps = [
         />
         <Testimony
           isRtl
-          imgSrc="https://scontent.fmad3-4.fna.fbcdn.net/v/t1.0-1/p50x50/23032652_1966225826726443_6316139551781794369_n.jpg?oh=07cdaa0939e6d3768164e5a630b1e273&oe=5A93A2C6"
           text="יותר אפקטיבי מ8 שנים טיפול פסיכולוגי"
           name="רותם אלישע"
           nameMeta="חוותה אונס במשך כמה שנים"
@@ -337,7 +335,7 @@ ${he.taer(gender)} את התחושה הזאת באופן הכי חי ומפור�
   {
     title: '',
     description: ({ gender }) => `
-זה לא אדיר ש${he.ata(gender)}  ${he.yajol(gender)} ללמוד כל כך מהר?  
+זה לא אדיר ש${he.ata(gender)}  ${he.yajol(gender)} ללמוד כל כך מהר?
 ${he.makir(gender)} [אחרים](FB_SHARE) ש${he.yajol(gender)}ים להנות מזה גם?
 
 או ש${he.ata(gender)} רוצה לעשות את זה שוב על זכרון אחר קודם?

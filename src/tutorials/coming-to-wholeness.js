@@ -7,7 +7,7 @@ import Testimony from '../components/Testimony'
 
 export const title = 'Coming To Wholeness'
 export const nick = 'whole'
-// eslint-disable-next-line prettier/prettier
+
 export const description = 'A PRACTICAL step by step tool for non "enlightment"'
 
 export const credits = 'Source: I\'ve adapted this [tool](/tools) from Connirae\'s [Wholeness Process](http://andreasnlptrainings.com/wholeness/).'
@@ -92,13 +92,11 @@ export const steps = [
     preDescriptionHtml: (
       <div>
         <Testimony
-          imgSrc="https://scontent.fmad3-4.fna.fbcdn.net/v/t1.0-1/p50x50/22852018_10155160350728379_1394566735044658139_n.jpg?oh=57414f3649e2f9a526776e8a6be6d521&oe=5AC94334"
           text="I feel like that resolved the memory even more and equipped me with a tool I can tap into in a similar situation in the future. That exercise makes me feel much more aware and accepting of myself and what's inside my head, it's incredibly helpful."
           name="Julianne Barley"
           nameMeta="cleared all Fibromyalgia symptoms"
         />
         <Testimony
-          imgSrc="https://scontent.fmad3-4.fna.fbcdn.net/v/t1.0-1/p50x50/21761536_1549692695090122_4419204185971223288_n.jpg?oh=5196db6b63c2ebe986e404a8a2e471a7&oe=5ACD560E"
           text="Man! Just completed two rounds of this WHOLENESS process and I'm FLYING! The frustration turned into a soft sensation, and I can keep on going!"
           name="Tommy Gorden"
           nameMeta="Hypnotist"
@@ -171,7 +169,7 @@ And *${stepsState.inputFeel}* ...
 
 And when you feel *${stepsState.inputFeel}*, **where is this feeling** of *${stepsState.inputFeel}* located, when you feel *${stepsState.inputFeel}*?
 
-(E.g. “in my chest.”)    
+(E.g. “in my chest.”)
 `,
     input: {
       placeholder: 'It’s ...',
@@ -186,7 +184,7 @@ And *${stepsState.inputFeelingLocation}* ...
 
 And when it's a *${stepsState.inputFeel}* feeling, and it's *${stepsState.inputFeelingLocation}*, **notice it's size & shape**, when it's a *${stepsState.inputFeel}* feeling, and it's *${stepsState.inputFeelingLocation}*
 
-(E.g. “It’s sort of round and the size of an orange.”)    
+(E.g. “It’s sort of round and the size of an orange.”)
 `,
     input: {
       placeholder: 'It’s ...',
@@ -390,7 +388,7 @@ And what happens?
     title: 'I - Allowing Complete Integration',
     description: stepsState => `
 And *${stepsState.inputIIntegrationDescription}*
-    
+
 And if you are experiencing a relaxing, melting, or dissolving, just stay with it until things settle. Enjoy the sense of relaxation, peace or flow as long as you like.
 `,
     answers: [
@@ -458,7 +456,7 @@ You might prefer to notice what happens when the fullness of Awareness... all of
 Or, it may feel like the Awareness already present in *${lastI(stepsState)
     .location}*, wakes up to itself.
 
-It matters less if the answer is ‘Yes’ or ‘No’, It just tells us what to do next.    
+It matters less if the answer is ‘Yes’ or ‘No’, It just tells us what to do next.
 `,
     answers: [
       { text: 'Yes', goToStepByTitle: 'I - Experiencing Integration' },
@@ -515,7 +513,7 @@ Another way to experience it is notice what happens when the fullness of Awarene
 
 Or, it may feel like the Awareness already present *${stepsState.inputFeelingLocation}*, wakes up to itself.
 
-Now there is just an allowing of whatever happens. You can enjoy this experience as long as you like, and share what happens and how you feel:    
+Now there is just an allowing of whatever happens. You can enjoy this experience as long as you like, and share what happens and how you feel:
 `,
     input: {
       placeholder: 'I feel ...',
@@ -599,7 +597,7 @@ And check how it is being this way in two situations in the past of *${stepsStat
 
 And *${stepsState.initialContextPast}*
 
-And check how it is being this way in three (or) more future scenarios of *${stepsState.inputExperience}*  
+And check how it is being this way in three (or) more future scenarios of *${stepsState.inputExperience}*
 `,
     answers: [
       {

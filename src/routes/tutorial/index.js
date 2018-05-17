@@ -2,15 +2,11 @@ import React from 'react'
 
 import Layout from '../../components/Layout'
 
-import BrainToolV1 from './BrainTool-v1'
 import BrainToolV3 from './BrainTool-v3'
 
-const toolsV1 = [
-  'internal-dialog-scrambler',
-]
-
 async function action({ params, path }) {
-  const tool = await import(`../../tutorials/${params.tool}.js`)
+  const toolSlug = path.split('/')[2]
+  const tool = await import(`../../tutorials/${toolSlug}.js`)
     .catch((error) => {
       if (error.message.startsWith('Cannot find module')) {
         console.error(`module ${params.tool} does not exists`) // eslint-disable-line no-console
@@ -19,9 +15,6 @@ async function action({ params, path }) {
       throw error // loading chunk failed (render error page)
     })
   if (!tool) return null // go to next route (or render 404)
-  const Comp = toolsV1.includes(params.tool)
-    ? BrainToolV1
-    : BrainToolV3
 
   return {
     title: tool.title,
@@ -29,7 +22,7 @@ async function action({ params, path }) {
     path,
     component: (
       <Layout path={path}>
-        <Comp tool={tool} path={path} />
+        <BrainToolV3 tool={tool} path={path} />
       </Layout>
     ),
   }

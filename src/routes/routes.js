@@ -72,11 +72,16 @@ const routes = {
       load: () => import(/* webpackChunkName: 'tutorials' */ './tutorials'),
     },
     {
-      path: ['internal-dialog-scrambler', 'session-intro', 'reengaging-the-future', 'reunion', 'loved-one-amplifier', 'recurring-time-distortion', 'perfect-day', 'reverse-feeling-spin', 'judgement-to-preference', 'feel-good-generator', 'trauma-relief', 'resolving-feelings', 'test', 'has-review'].map(t => `/tools/${t}`),
+      // path: '/tools/coming-to-wholeness',
+      path: ['coming-to-wholeness', 'trauma-relief-he'].map(t => `/tools/${t}`),
+      load: () => import(/* webpackChunkName: 'tutorial' */ './tutorial'),
+    },
+    {
+      path: '/tools/:toolUrl',
       load: () => import(/* webpackChunkName: 'tool' */ './tool'),
     },
     {
-      path: ['internal-dialog-scrambler', 'session-intro', 'reengaging-the-future', 'reunion', 'loved-one-amplifier', 'recurring-time-distortion', 'perfect-day', 'reverse-feeling-spin', 'judgement-to-preference', 'feel-good-generator', 'trauma-relief', 'resolving-feelings', 'test', 'has-review'].map(t => `/tools/${t}/:historyId`),
+      path: '/tools/:toolUrl/:toolResponseId',
       load: () => import(/* webpackChunkName: 'toolResponse' */ './toolResponse'),
     },
     {
@@ -86,10 +91,6 @@ const routes = {
     {
       path: '/tool-json-editor',
       load: () => import(/* webpackChunkName: 'toolJsonEditor' */ './toolJsonEditor'),
-    },
-    {
-      path: '/tools/:tool',
-      load: () => import(/* webpackChunkName: 'tutorial' */ './tutorial'),
     },
     {
       path: '/:page',
