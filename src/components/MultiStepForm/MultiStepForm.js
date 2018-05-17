@@ -14,12 +14,15 @@ class MultiStepForm extends React.Component {
   static propTypes = {
     steps: PropTypes.array.isRequired,
     hiddenFields: PropTypes.array.isRequired,
-    path: PropTypes.string.isRequired,
+    path: PropTypes.string,
     currentStepNum: PropTypes.number.isRequired,
     answerByStep: PropTypes.object.isRequired,
     price: PropTypes.number.isRequired,
     stepsStack: PropTypes.array.isRequired,
     onUpdateProgress: PropTypes.func.isRequired,
+  }
+  static defaultProps = {
+    path: '',
   }
 
   state = {
