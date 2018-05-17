@@ -1,4 +1,4 @@
-// tools
+const savoringIntro = require('./tools/savoringIntro.json')
 const internalDialogScrambler = require('./tools/internalDialogScrambler.json')
 const specialDays = require('./tools/specialDays.json')
 const sessionIntro = require('./tools/sessionIntro.json')
@@ -16,6 +16,7 @@ const toolHasReviewTest = require('./tools/hasReviewTest.json')
 const toolTestShort = require('./tools/shortToolTest.json')
 
 module.exports = [
+  savoringIntro,
   internalDialogScrambler,
   specialDays,
   sessionIntro,
