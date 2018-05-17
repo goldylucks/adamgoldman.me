@@ -1,6 +1,7 @@
 // @flow
 
 import React from 'react'
+import cx from 'classnames'
 
 import Link from '../../components/Link'
 import ExternalA from '../../components/ExternalA'
@@ -12,6 +13,7 @@ type Props = {
   onSubmit: Function,
   onSubmitOther?: Function,
   path: String,
+  isPulsating: Boolean,
 }
 
 class Answers extends React.Component {
@@ -23,10 +25,10 @@ class Answers extends React.Component {
 
   render() {
     const {
-      answers, onSubmit, path,
+      answers, onSubmit, path, isPulsating,
     } = this.props
     return (
-      <div className="answer-group">
+      <div className={cx('answer-group', { pulsating: isPulsating })}>
         {answers.map((answer, idx) => {
           let html
           if (answer.isConcern) {
