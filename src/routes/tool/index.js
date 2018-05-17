@@ -7,10 +7,10 @@ import reviewSteps from '../../components/MultiStepForm/reviewSteps'
 import Tool from './Tool'
 
 async function action({ path }) {
-  let { data } = await axios.get(`/api${path}`)
+  const { data } = await axios.get(`/api${path}`)
   if (!data) {
     global.console.warn('data is empty!')
-    data = {}
+    return null
   }
   if (data.hasReview) {
     data.steps = data.steps.concat(reviewSteps)
