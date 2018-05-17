@@ -889,7 +889,7 @@ module.exports = {
             "answers": []
         },
         {
-            "title": "Limiting beliefes",
+            "title": "Limiting beliefs",
             "description": "Are you aware of any limiting beliefs you have about yourself or the world? ",
             "notes": "Doesn't matter if they are \"true\" or not, just things that you believe in, that you know are limiting you in any way.",
             "type": "radio",
@@ -914,7 +914,7 @@ module.exports = {
             ]
         },
         {
-            "title": "Limiting beliefes",
+            "title": "Limiting beliefs",
             "description": "List all of them",
             "notes": "I don't need the actual beliefs. If you don't want to write them down, find a way to refer to them instead.\n\nI.e. instead of \"making money is hard if you're born poor\", you can write \"finances\" ",
             "type": "long",
