@@ -5,7 +5,7 @@ import controller from './toolsController'
 const router = require('express').Router()
 
 router.route('/')
-  .post(...isAdminMiddlewares, controller.updateOrCreate) // uncomment for dev
+  .post(...isAdminMiddlewares, controller.updateOrCreate)
 
 router.route('/all/')
   .get(controller.getAll)
