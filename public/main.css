@@ -574,3 +574,12 @@ blockquote.rtl {
 .italic {
   font-style: italic;
 }
+/* ANIMATIONS */
+@keyframes pulsating {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+		100% {opacity: 1;}
+}
+.pulsating {
+	animation: pulsating 2s infinite;
+}
