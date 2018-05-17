@@ -41,13 +41,15 @@ function updateOrCreate(req, res, next) {
 
 function exportTool(req, res, next) {
   const fileName = toolFileName(req.body.url)
+  const seedSingleToolFilePath = path.resolve(__dirname, `../seeds/tools/${fileName}.json`)
+  const seedToolsFilePath = path.resolve(__dirname, '../seeds/tools.js')
   try {
-    fs.writeFileSync(path.resolve(__dirname, '..', 'src', 'server', 'seedDb', `${fileName}.json`), JSON.stringify(req.body, null, 2))
-    let text = fs.readFileSync(path.resolve(__dirname, '..', 'src', 'server', 'seedDb', 'seedDbData.js'), 'utf8')
+    fs.writeFileSync(seedSingleToolFilePath, JSON.stringify(req.body, null, 2))
+    let text = fs.readFileSync(seedToolsFilePath, 'utf8')
     if (!text.includes(fileName)) {
-      text = `import ${fileName} from './${fileName}.json'\n${text}`
-      text = text.split('tools = [').join(`tools = [\n  ${fileName},`)
-      fs.writeFileSync(path.resolve(__dirname, '..', 'src', 'server', 'seedDb', 'seedDbData.js'), text)
+      text = `const ${fileName} = require('./tools/${fileName}.json')\n${text}`
+      text = text.split('module.exports = [').join(`module.exports = [\n  ${fileName},`)
+      fs.writeFileSync(seedToolsFilePath, text)
     }
     res.send('saved to file!')
   } catch (err) {
@@ -56,5 +58,7 @@ function exportTool(req, res, next) {
 }
 
 export function toolFileName(str) {
-  return `seedDb${str.split('-').map(_.capitalize).join('')}ToolData`
+  return str.split('-').map((word, idx) => (
+    idx === 0 ? word : _.capitalize(word)
+  )).join('')
 }
