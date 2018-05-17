@@ -47,7 +47,7 @@ const Testimonials = ({ testimonials }: Props) => {
     <div className="container">
       <Slider {...settings} className={`countSlide-${currentSlide}`}>
         {testimonials.map(item => (
-          <div className={`totalSlides-${testimonials.length}-${testimonials.length}`}>
+          <div className={`totalSlides-${testimonials.length}-${testimonials.length}`} key={item.title}>
             <TestimonialItem item={item} />
           </div>
         ))}

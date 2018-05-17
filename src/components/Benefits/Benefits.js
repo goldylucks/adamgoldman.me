@@ -12,7 +12,7 @@ type Props = {
 }
 
 const Benefits = ({ benefits }: Props) => benefits.map(b => (
-  <div className={s.benefit}><FontAwesomeIcon icon={faCheck} />{b}</div>
+  <div className={s.benefit} key={b}><FontAwesomeIcon icon={faCheck} />{b}</div>
 ))
 
 export default withStyles(s)(Benefits)
