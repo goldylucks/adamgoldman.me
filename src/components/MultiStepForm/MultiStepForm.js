@@ -14,12 +14,19 @@ class MultiStepForm extends React.Component {
   static propTypes = {
     steps: PropTypes.array.isRequired,
     hiddenFields: PropTypes.array.isRequired,
-    path: PropTypes.string.isRequired,
+    path: PropTypes.string,
     currentStepNum: PropTypes.number.isRequired,
     answerByStep: PropTypes.object.isRequired,
     price: PropTypes.number.isRequired,
     stepsStack: PropTypes.array.isRequired,
+    hideSubscribeButton: PropTypes.bool,
     onUpdateProgress: PropTypes.func.isRequired,
+    scrollTop: PropTypes.func,
+  }
+  static defaultProps = {
+    path: '',
+    hideSubscribeButton: false,
+    scrollTop,
   }
 
   state = {
@@ -183,6 +190,7 @@ class MultiStepForm extends React.Component {
     return (
       <div style={{ marginTop: 20, marginBottom: 20 }}>
         <Answers
+          isPulsating={this.isFirstStep()}
           path={this.props.path}
           answers={answers}
           onSubmit={this.submitMultipleChoiceAnswer}
@@ -203,8 +211,11 @@ class MultiStepForm extends React.Component {
     return this.state.currentStepNum === 0 ? null : <button className="btn btn-secondary btn-sm" style={{ display: 'block', marginBottom: 10 }} onClick={this.back}>Back</button>
   }
 
-  // eslint-disable-next-line class-methods-use-this
   renderSubscribe() {
+    const { hideSubscribeButton } = this.props
+    if (hideSubscribeButton) {
+      return null
+    }
     return <ExternalA href={MESSENGER_LINK_INNER_CIRCLE} className="btn btn-secondary btn-sm">Subscribe to future tools</ExternalA>
   }
 
@@ -278,7 +289,7 @@ class MultiStepForm extends React.Component {
 
   back = () => {
     this.setState(stateForBack)
-    scrollTop()
+    this.props.scrollTop()
   }
 
   next = () => {
@@ -287,7 +298,7 @@ class MultiStepForm extends React.Component {
 
   goToStep = (stepToGoTo, { shouldResetPreviousAnswers } = {}) => {
     this.setState(stateForGoToStep(stepToGoTo, { shouldResetPreviousAnswers }))
-    scrollTop()
+    this.props.scrollTop()
   }
 
   stepInputChange = (evt) => {
@@ -312,7 +323,7 @@ class MultiStepForm extends React.Component {
       window.open(MESSENGER_LINK_TOOL_CONCERN)
     }
     this.setState(stateForReviewRating(rating, this.props.steps))
-    scrollTop()
+    this.props.scrollTop()
   }
 
   goToStepById = (id) => {
@@ -320,5 +331,9 @@ class MultiStepForm extends React.Component {
   }
 
   stepNumById = id => this.props.steps.findIndex(s => s.id === id)
+
+  isFirstStep() {
+    return this.state.currentStepNum === 0
+  }
 }
 export default MultiStepForm

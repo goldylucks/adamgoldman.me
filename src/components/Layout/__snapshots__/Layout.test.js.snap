@@ -301,7 +301,7 @@ exports[`Layout renders children correctly 1`] = `
         className="row"
       >
         <div
-          className="col-sm-6"
+          className="col-sm-12"
         >
           <p
             className="pull-left"
@@ -315,10 +315,6 @@ exports[`Layout renders children correctly 1`] = `
               Adam Goldman
             </a>
           </p>
-        </div>
-        <div
-          className="col-sm-6"
-        >
           <p
             className="pull-right"
           >

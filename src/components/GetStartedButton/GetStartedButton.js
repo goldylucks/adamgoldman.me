@@ -19,15 +19,16 @@ class GetStartedButton extends React.Component {
   props: Props
 
   render() {
+    const { text, ...remainingProps } = this.props
     return (
-      <div>
+      <div {...remainingProps}>
         <a onClick={this.goToElement} className={`btn btn-primary ${s.ctaButton}`} >
           {this.props.text}
         </a>
       </div>
     )
   }
-  goToElement = () => scrollToElem(document.querySelector('html'), 0, 300)
+  goToElement = () => scrollToElem(document.querySelector('html'), document.body.scrollHeight, 1000)
 }
 
 export default withStyles(s)(GetStartedButton)

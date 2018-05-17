@@ -24,7 +24,7 @@ class ToolResponse extends React.Component<Props> {
   }
 
   render() {
-    const { path, responseId } = this.props
+    const { path } = this.props
     const { toolResponse, isFetchingToolResponse } = this.state
     if (isFetchingToolResponse) {
       return <h1>Loading ...</h1>
@@ -46,7 +46,6 @@ class ToolResponse extends React.Component<Props> {
               <MultiStepForm
                 {...toolResponse}
                 path={path}
-                toolResponseId={responseId}
                 onUpdateProgress={this.updateProgress}
               />
             </div>

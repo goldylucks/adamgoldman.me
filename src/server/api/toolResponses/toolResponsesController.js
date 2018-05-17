@@ -1,9 +1,10 @@
 import { validateOwnerOrAdmin } from '../../auth'
+import Tools from '../tools/toolsModel'
 
 import ToolResponses from './toolResponsesModel'
 
 export default {
-  getAll, get, create, update,
+  getAll, get, create, update, fetchByUserOrCreate,
 }
 
 function getAll(req, res, next) {
@@ -26,6 +27,7 @@ function get(req, res, next) {
     .catch(next)
 }
 
+// updating create method might require updating fetchByUserOrCreate as well
 function create(req, res, next) {
   ToolResponses.create(req.body)
     .then(tool => res.status(201).json(tool))
@@ -36,4 +38,24 @@ function update(req, res, next) {
   ToolResponses.findOneAndUpdate({ _id: req.params.id }, req.body)
     .then(DBres => res.json(DBres))
     .catch(next)
+}
+
+async function fetchByUserOrCreate(req, res, next) {
+  const { user, params: { toolSlug } } = req
+  try {
+    const tool = await Tools.findOne({ url: toolSlug })
+    const existingToolResponse = await ToolResponses.findOne({ user: user._id, toolId: tool._id })
+    if (existingToolResponse !== null) {
+      res.json(existingToolResponse)
+      return
+    }
+    console.log('creating tool response!')
+    const toolResponseToCreate = { ...tool.toObject(), user: user._id, toolId: tool._id }
+    ToolResponses.create(toolResponseToCreate)
+      .then((toolResponse) => {
+        res.status(201).json(toolResponse)
+      })
+  } catch (err) {
+    next(err)
+  }
 }
