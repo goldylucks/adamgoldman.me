@@ -87,7 +87,7 @@ class SavoringYourChild extends React.Component {
     const { user, onLogin } = this.props
     if (!user._id) {
       return (
-        <div>
+        <div className={s.introModule}>
           <h1>Intro</h1>
           <p>Let me tell you a little bit about how I work with parents, so you can get a gentle idea about the short time we are about to spend together, ok?</p>
           <FbGateKeeper onLogin={onLogin} user={user} />
