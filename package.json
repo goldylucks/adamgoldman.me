@@ -15,6 +15,7 @@
     "coverage": "npm run test-cover && opn coverage/lcov-report/index.html",
     "clean": "babel-node tools/run clean",
     "copy": "babel-node tools/run copy",
+    "debug": "node --inspect --inspect-brk ./src/server.js",
     "bundle": "babel-node tools/run bundle",
     "build": "babel-node tools/run build",
     "build-stats": "npm run build --release --analyse",
