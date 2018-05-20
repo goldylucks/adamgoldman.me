@@ -2,16 +2,22 @@
 
 import React from 'react'
 import axios from 'axios'
+import withStyles from 'isomorphic-style-loader/lib/withStyles'
 
+import { scrollToElem } from '../../utils'
 import Benefits from '../../components/Benefits'
 import MessageMe from '../../components/MessageMe'
 import Testimonials from '../../components/Testimonials'
 import FAQ from '../../components/FAQ'
+import GetStarted from '../../components/GetStartedButton'
 import FbGateKeeper from '../../components/FbGateKeeper'
 import MultiStepForm from '../../components/MultiStepForm'
 
+import s from './SavoringYourChildModule.css'
+
 type Props = {
   title: string,
+  description: string,
   slug: string,
   path: string,
   faq: [],
@@ -24,30 +30,27 @@ type Props = {
 
 class savoringYourChildSectionModule extends React.Component {
   state = {
-    tool: null,
+    isFetchingModule: true,
+    module: null,
+    fetchingModuleError: null,
   }
-
   componentDidMount() {
-    this.fetchTool()
+    this.fetchModule()
   }
 
   props: Props
 
   render() {
     const {
-      title, faq, benefits, testimonials, user, onLogin, path,
+      title, description, faq, benefits, testimonials,
     } = this.props
     return (
       <div>
         <div className="container">
           <div className="mainheading">
-            <h1 className="posttitle">{title}</h1>
-          </div>
-          <div style={{ position: 'relative' }}>
-            { this.state.tool && <MultiStepForm {...this.state.tool} path={path} /> }
-            {!user._id &&
-            <FbGateKeeper onLogin={onLogin} user={user} />
-            }
+            <h1 className="sitetitle text-center">{title}</h1>
+            <p className="lead text-center">{description}</p>
+            <GetStarted style={{ marginTop: 80, marginBottom: 80 }} />
           </div>
           <hr />
           {!testimonials.length
@@ -56,6 +59,8 @@ class savoringYourChildSectionModule extends React.Component {
               <section>
                 <h1 className="text-center">Parents Share</h1>
                 <Testimonials testimonials={testimonials} />
+                <hr />
+                <GetStarted style={{ marginTop: 80, marginBottom: 80 }} />
                 <hr />
               </section>
             )}
@@ -70,14 +75,7 @@ class savoringYourChildSectionModule extends React.Component {
                   </div>
                 </div>
                 <hr />
-              </section>
-            )}
-          {!faq.length
-            ? null
-            : (
-              <section>
-                <h1 className="text-center">F.A.Q.</h1>
-                <FAQ faq={faq} />
+                <GetStarted style={{ marginTop: 80, marginBottom: 80 }} />
                 <hr />
               </section>
             )}
@@ -91,23 +89,80 @@ class savoringYourChildSectionModule extends React.Component {
               </section>
             )}
           <MessageMe />
+          <hr />
+          <div style={{ position: 'relative' }}>
+            {this.renderModule()}
+          </div>
         </div>
       </div>
     )
   }
 
-  fetchTool() {
-    axios.get(`/api/tools/${this.props.slug}`)
-      .then(({ data }) => {
-        this.setState({
-          tool: data,
-        })
-      })
+  renderModule() {
+    const { module, isFetchingModule, fetchingModuleError } = this.state
+    const { user, title } = this.props
+    if (!user._id) {
+      return (
+        <div className={s.module}>
+          <h1>Intro</h1>
+          <p>Login to get started</p>
+          <FbGateKeeper onLogin={this.onLogin} user={user} />
+        </div>
+      )
+    }
+    if (isFetchingModule) {
+      return <p>Loading ...</p>
+    }
+    if (fetchingModuleError) {
+      return <p>There was an error loading. Please refresh the page and contact me if it continues</p>
+    }
+    return (
+      <div className={s.module}>
+        <div>
+          <h1 className="text-center" ref={(ref) => { this.moduleNode = ref }}>{title}</h1>
+        </div>
+        <div>
+          <MultiStepForm
+            hideSubscribeButton
+            {...module}
+            scrollTop={this.scrollTopOfModule}
+            onUpdateProgress={this.updateProgress}
+          />
+        </div>
+      </div>
+    )
+  }
+
+  fetchModule = () => {
+    const { slug } = this.props
+    axios.get(`/api/toolResponses/fetchByUserOrCreate/${slug}`)
+      .then(({ data }) => { this.setState({ module: data, isFetchingModule: false }) })
       .catch((err) => {
-        global.alert('there was an error')
         global.console.error(err)
+        this.setState({ fetchingModuleError: err.message, isFetchingModule: false })
       })
   }
+
+  onLogin = (user) => {
+    this.props.onLogin(user, this.fetchModule)
+  }
+
+  updateProgress = (nextState) => {
+    if (nextState.currentStepNum === this.state.module.steps.length - 1) {
+      nextState.status = 'Completed'
+    }
+    axios.put(`/api/toolResponses/${this.state.module._id}`, { ...this.state.module, ...nextState })
+      .catch((err) => {
+        global.console.error(err)
+        global.alert(err.message)
+      })
+  }
+
+  scrollTopOfModule = () => {
+    const top = this.moduleNode.getBoundingClientRect().top - document.body.getBoundingClientRect().top
+    scrollToElem(document.querySelector('html'), top, 300)
+  }
+  moduleNode = null
 }
 
-export default savoringYourChildSectionModule
+export default withStyles(s)(savoringYourChildSectionModule)
