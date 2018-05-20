@@ -84,13 +84,13 @@ class SavoringYourChild extends React.Component {
 
   renderIntroModule() {
     const { introModule, isFetchingIntroModule, fetchingIntroModuleError } = this.state
-    const { user, onLogin } = this.props
+    const { user } = this.props
     if (!user._id) {
       return (
         <div className={s.introModule}>
           <h1>Intro</h1>
           <p>Let me tell you a little bit about how I work with parents, so you can get a gentle idea about the short time we are about to spend together, ok?</p>
-          <FbGateKeeper onLogin={onLogin} user={user} />
+          <FbGateKeeper onLogin={this.onLogin} user={user} />
         </div>
       )
     }
@@ -117,13 +117,17 @@ class SavoringYourChild extends React.Component {
     )
   }
 
-  fetchIntroModule() {
+  fetchIntroModule = () => {
     axios.get('/api/toolResponses/fetchByUserOrCreate/savoring-intro')
       .then(({ data }) => { this.setState({ introModule: data, isFetchingIntroModule: false }) })
       .catch((err) => {
         global.console.error(err)
         this.setState({ fetchingIntroModuleError: err.message, isFetchingIntroModule: false })
       })
+  }
+
+  onLogin = (user) => {
+    this.props.onLogin(user, this.fetchIntroModule)
   }
 
   updateProgress = (nextState) => {

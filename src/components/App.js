@@ -98,10 +98,11 @@ class App extends React.PureComponent {
     )
   }
 
-  login = (user) => {
+  login = (user, cb = () => {}) => {
     global.console.log('user login', user)
     setAuthHeader(user.token)
     this.updateUser(user)
+    cb()
   }
 
   logout = () => {
