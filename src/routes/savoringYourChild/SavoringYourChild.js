@@ -22,7 +22,8 @@ type Props = {
   fetchingToolResponseError: string,
   onLogin: Function,
   onUpdateProgress: Function,
-  onUpdateUser: Function
+  onUpdateUser: Function,
+  onUpdateUserInDb: Function
 }
 
 class SavoringYourChild extends React.Component<Props> {
@@ -111,7 +112,7 @@ class SavoringYourChild extends React.Component<Props> {
   }
 
   updateProgress = (nextState) => {
-    const { onUpdateProgress, toolResponse } = this.props
+    const { onUpdateProgress, toolResponse, onUpdateUserInDb } = this.props
     const { answerByStep } = nextState
     if (nextState.currentStepNum === toolResponse.steps.length - 1) {
       const userPropertiesToUpdate = {
@@ -121,6 +122,7 @@ class SavoringYourChild extends React.Component<Props> {
         gender: answerByStep[8].match(/father/i) ? 'male' : 'female',
       }
       onUpdateProgress(nextState, userPropertiesToUpdate)
+      onUpdateUserInDb(userPropertiesToUpdate)
     } else {
       onUpdateProgress(nextState)
     }

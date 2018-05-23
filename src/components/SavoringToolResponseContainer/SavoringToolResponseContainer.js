@@ -42,6 +42,7 @@ export default class SavoringToolResponseContainer extends React.Component<Props
       fetchingToolResponseError,
       onLogin: this.onLogin,
       onUpdateProgress: this.updateProgress,
+      onUpdateUserInDb: this.updateUserInDb,
     })
   }
 
@@ -105,6 +106,14 @@ export default class SavoringToolResponseContainer extends React.Component<Props
       ...userPropertiesToUpdateOnCompletion,
       toolResponses: user.toolResponses.map(this.markToolResponseAsCompleted),
     })
+  }
+
+  updateUserInDb = (userPropertiesToUpdate) => {
+    axios.put(`/api/users/${this.props.user._id}`, userPropertiesToUpdate)
+      .catch((err) => {
+        global.console.error(err)
+        global.alert('there was an error processing your answers, please contact me')
+      })
   }
 
   onLogin = (user) => {
