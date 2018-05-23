@@ -8,7 +8,7 @@
     {
       "type": "node",
       "request": "attach",
-      "name": "Attach",
+      "name": "Node Attach",
       "sourceMaps": true,
       "port": 9229,
       "protocol": "inspector"
@@ -16,7 +16,7 @@
     {
       "type": "chrome",
       "request": "launch",
-      "name": "Launch Chrome",
+      "name": "Chrome Launch",
       "url": "http://localhost:3000",
       "webRoot": "${workspaceRoot}"
     }
