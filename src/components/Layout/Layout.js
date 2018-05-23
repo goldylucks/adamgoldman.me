@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
 
-import history from '../../history'
 import Footer from '../Footer'
 import MainNav from '../MainNav'
 import MessengerFixed from '../MessengerFixed'
@@ -22,7 +21,7 @@ class Layout extends React.Component {
 
   render() {
     const {
-      children, path, onLogin, onLogout, user, onStartToolResponse,
+      children, path, onLogin, onLogout, user, onStartToolResponse, onUpdateUser,
     } = this.props
     return (
       <div className={s.container}>
@@ -32,6 +31,7 @@ class Layout extends React.Component {
             user,
             onLogin,
             onStartToolResponse,
+            onUpdateUser,
             onSubmitIntro: this.submitIntro,
             onSubmitModule: this.submitModule,
           })}
@@ -42,13 +42,6 @@ class Layout extends React.Component {
         <MessengerFixed path={path} />
       </div>
     )
-  }
-
-  submitModule = (formId) => {
-    global.console.log('submitted form', formId)
-    // TODO handle completed forms better
-    this.props.onUpdateUser({ ...this.props.user, form: formId })
-    history.push('/savoring-your-child/modules')
   }
 }
 

@@ -19,9 +19,10 @@ import { testimonials } from './data'
 type Props = {
   user: Object,
   onLogin: Function,
+  onUpdateUser: Function,
 }
 
-class SavoringYourChild extends React.Component {
+class SavoringYourChild extends React.Component<Props> {
   state = {
     isFetchingIntroModule: true,
     introModule: null,
@@ -32,7 +33,6 @@ class SavoringYourChild extends React.Component {
       this.fetchIntroModule()
     }
   }
-  props: Props
 
   render() {
     return (
@@ -119,7 +119,14 @@ class SavoringYourChild extends React.Component {
 
   fetchIntroModule = () => {
     axios.get('/api/toolResponses/fetchByUserOrCreate/savoring-intro')
-      .then(({ data }) => { this.setState({ introModule: data, isFetchingIntroModule: false }) })
+      // update user tool responses if this is a new created module
+      .then(({ data: toolResponse }) => {
+        this.setState({ introModule: toolResponse, isFetchingIntroModule: false })
+        // update user tool responses if this is a new created module
+        if (this.isNewToolResponse(toolResponse)) {
+          this.addToolResponseToUser(toolResponse)
+        }
+      })
       .catch((err) => {
         global.console.error(err)
         this.setState({ fetchingIntroModuleError: err.message, isFetchingIntroModule: false })
@@ -133,7 +140,7 @@ class SavoringYourChild extends React.Component {
   updateProgress = (nextState) => {
     if (nextState.currentStepNum === this.state.introModule.steps.length - 1) {
       nextState.status = 'Completed'
-      // TODO go to peaceful ending
+      this.updateUserOnCompletion(nextState.answerByStep)
     }
     axios.put(`/api/toolResponses/${this.state.introModule._id}`, { ...this.state.introModule, ...nextState })
       .catch((err) => {
@@ -146,7 +153,55 @@ class SavoringYourChild extends React.Component {
     const top = this.introNode.getBoundingClientRect().top - document.body.getBoundingClientRect().top
     scrollToElem(document.querySelector('html'), top, 300)
   }
+
+  updateUserOnCompletion(answerByStep) {
+    const { user, onUpdateUser } = this.props
+    const userPropertiesToUpdate = {
+      name: answerByStep[6],
+      savoringChildName: answerByStep[7],
+      savoringChildGender: answerByStep[8].match(/son/i) ? 'male' : 'female',
+      gender: answerByStep[8].match(/father/i) ? 'male' : 'female',
+    }
+    axios.put(`/api/users/${user._id}`, userPropertiesToUpdate)
+      .then(() => {
+        onUpdateUser({
+          ...user,
+          ...userPropertiesToUpdate,
+          toolResponses: user.toolResponses.map(this.markToolResponseAsCompleted),
+        })
+      })
+      .catch((err) => {
+        global.console.error(err)
+        global.alert(err.message)
+      })
+  }
+
   introNode = null
+
+  markToolResponseAsCompleted = (tr) => {
+    if (tr._id === this.state.introModule._id) {
+      tr.status = 'Completed'
+    }
+    return tr
+  }
+
+  isNewToolResponse(toolResponse) {
+    const { user } = this.props
+    return !user.toolResponses.find(tr => tr.toolId === toolResponse.toolId)
+  }
+
+  addToolResponseToUser(newToolResponse) {
+    const { onUpdateUser, user } = this.props
+    onUpdateUser({
+      ...user,
+      toolResponses: [...user.toolResponses, {
+        createdAt: newToolResponse.createdAt,
+        status: newToolResponse.status,
+        toolId: newToolResponse.toolId,
+        _id: newToolResponse._id,
+      }],
+    })
+  }
 }
 
 export default withStyles(s)(SavoringYourChild)

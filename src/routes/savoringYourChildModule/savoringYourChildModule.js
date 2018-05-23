@@ -25,10 +25,10 @@ type Props = {
   benefits: Array<String>,
   user: Object,
   onLogin: Function,
-  // onSubmitModule: Function,
+  onUpdateUser: Function
 };
 
-class savoringYourChildSectionModule extends React.Component {
+class savoringYourChildSectionModule extends React.Component<Props> {
   state = {
     isFetchingModule: true,
     module: null,
@@ -37,8 +37,6 @@ class savoringYourChildSectionModule extends React.Component {
   componentDidMount() {
     this.fetchModule()
   }
-
-  props: Props
 
   render() {
     const {
@@ -123,6 +121,12 @@ class savoringYourChildSectionModule extends React.Component {
         </div>
         <div>
           <MultiStepForm
+            hiddenFields={{
+              childHe: user.savoringChildGender === 'male' ? 'he' : 'she',
+              childHis: user.savoringChildGender === 'male' ? 'his' : 'her',
+              childHim: user.savoringChildGender === 'male' ? 'him' : 'her',
+              childName: user.savoringChildName,
+            }}
             hideSubscribeButton
             {...module}
             scrollTop={this.scrollTopOfModule}
@@ -136,7 +140,13 @@ class savoringYourChildSectionModule extends React.Component {
   fetchModule = () => {
     const { slug } = this.props
     axios.get(`/api/toolResponses/fetchByUserOrCreate/${slug}`)
-      .then(({ data }) => { this.setState({ module: data, isFetchingModule: false }) })
+      .then(({ data: toolResponse }) => {
+        this.setState({ module: toolResponse, isFetchingModule: false })
+        // update user tool responses if this is a new created module
+        if (this.isNewToolResponse(toolResponse)) {
+          this.addToolResponseToUser(toolResponse)
+        }
+      })
       .catch((err) => {
         global.console.error(err)
         this.setState({ fetchingModuleError: err.message, isFetchingModule: false })
@@ -163,6 +173,39 @@ class savoringYourChildSectionModule extends React.Component {
     scrollToElem(document.querySelector('html'), top, 300)
   }
   moduleNode = null
+
+  markToolResponseAsCompleted = (tr) => {
+    if (tr._id === this.state.module._id) {
+      tr.status = 'Completed'
+    }
+    return tr
+  }
+
+  isNewToolResponse(toolResponse) {
+    const { user } = this.props
+    return !user.toolResponses.find(tr => tr.toolId === toolResponse.toolId)
+  }
+
+  addToolResponseToUser(newToolResponse) {
+    const { onUpdateUser, user } = this.props
+    onUpdateUser({
+      ...user,
+      toolResponses: [...user.toolResponses, {
+        createdAt: newToolResponse.createdAt,
+        status: newToolResponse.status,
+        toolId: newToolResponse.toolId,
+        _id: newToolResponse._id,
+      }],
+    })
+  }
+
+  updateUserOnCompletion() {
+    const { onUpdateUser, user } = this.props
+    onUpdateUser({
+      ...user,
+      toolResponses: user.toolResponses.map(this.markToolResponseAsCompleted),
+    })
+  }
 }
 
 export default withStyles(s)(savoringYourChildSectionModule)

@@ -295,7 +295,8 @@ exports[`Layout renders children correctly 1`] = `
       onLogin={[Function]}
       onStartToolResponse={[Function]}
       onSubmitIntro={undefined}
-      onSubmitModule={[Function]}
+      onSubmitModule={undefined}
+      onUpdateUser={[Function]}
       user={Object {}}
     />
   </div>
