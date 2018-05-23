@@ -42,6 +42,25 @@ class InputTrigger extends Component {
     this.props.endTrigger(this.resetState)
   }
 
+  render() {
+    return (
+      <div
+        role="button"
+        tabIndex={-1}
+        onKeyDown={this.handleTrigger}
+      >
+        {this.props.children}
+      </div>
+    )
+  }
+
+  resetState() {
+    this.setState({
+      triggered: false,
+      triggerStartPosition: null,
+    })
+  }
+
   handleTrigger(event) {
     const {
       trigger,
@@ -94,25 +113,6 @@ class InputTrigger extends Component {
     }
 
     return null
-  }
-
-  resetState() {
-    this.setState({
-      triggered: false,
-      triggerStartPosition: null,
-    })
-  }
-
-  render() {
-    return (
-      <div
-        role="button"
-        tabIndex={-1}
-        onKeyDown={this.handleTrigger}
-      >
-        {this.props.children}
-      </div>
-    )
   }
 }
 
