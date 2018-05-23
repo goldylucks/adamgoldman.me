@@ -32,7 +32,7 @@ function updateUserForm(req, res, next) {
 }
 
 function updateUser(req, res, next) {
-  Users.update({ _id: req.params.id }, { $set: req.body })
+  Users.findOneAndUpdate({ _id: req.params.id }, req.body)
     .then(DBres => res.json(DBres))
     .catch(next)
 }
