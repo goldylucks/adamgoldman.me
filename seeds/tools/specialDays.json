@@ -16,7 +16,7 @@
       "answers": [
         {
           "isOther": false,
-          "text": "OK, let's start",
+          "text": "OK <-------- CLICK TO GET STARTED",
           "isLinkNew": false,
           "isConcern": false,
           "concern": ""
@@ -754,6 +754,21 @@
       "customOption": true,
       "id": "new-id-18",
       "label": "childName"
+    },
+    {
+      "customOption": true,
+      "id": "new-id-15",
+      "label": "childHe"
+    },
+    {
+      "customOption": true,
+      "id": "new-id-35",
+      "label": "childHis"
+    },
+    {
+      "customOption": true,
+      "id": "new-id-53",
+      "label": "childHim"
     }
   ],
   "url": "special-days"
