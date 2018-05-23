@@ -3,6 +3,7 @@
 .*/docs
 .*/public
 .*/node_modules/bcryptjs/src/bower.json
+.*/node_modules/node-mongo-seeds/test/.*
 
 [include]
 
