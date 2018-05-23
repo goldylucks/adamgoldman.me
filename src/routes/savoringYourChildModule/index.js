@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Layout from '../../components/Layout'
+import SavoringToolResponseContainer from '../../components/SavoringToolResponseContainer'
 
 import SavoringYourChildModule from './savoringYourChildModule'
 
@@ -21,7 +22,9 @@ async function action({ params, path }) {
     path,
     component: (
       <Layout path={path}>
-        <SavoringYourChildModule path={path} {...module} />
+        <SavoringToolResponseContainer toolSlug={params.module}>
+          <SavoringYourChildModule path={path} {...module} />
+        </SavoringToolResponseContainer>
       </Layout>
     ),
   }

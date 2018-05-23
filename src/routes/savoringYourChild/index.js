@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Layout from '../../components/Layout'
+import SavoringToolResponseContainer from '../../components/SavoringToolResponseContainer'
 
 import SavoringYourChild from './SavoringYourChild'
 
@@ -12,7 +13,9 @@ function action({ path }) {
     description: "Relax, it's just life",
     component: (
       <Layout path={path}>
-        <SavoringYourChild />
+        <SavoringToolResponseContainer toolSlug="savoring-intro">
+          <SavoringYourChild path={path} {...module} />
+        </SavoringToolResponseContainer>
       </Layout>
     ),
   }

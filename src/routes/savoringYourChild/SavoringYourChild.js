@@ -1,10 +1,9 @@
 // @flow
 
 import React from 'react'
-import axios from 'axios'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
 
-import { scrollToElem } from '../../utils'
+import { scrollToTopOfNode } from '../../utils'
 import Benefits from '../../components/Benefits'
 import MultiStepForm from '../../components/MultiStepForm'
 import Testimonials from '../../components/Testimonials'
@@ -18,22 +17,15 @@ import { testimonials } from './data'
 
 type Props = {
   user: Object,
+  toolResponse: Object,
+  isFetchingToolResponse: boolean,
+  fetchingToolResponseError: string,
   onLogin: Function,
-  onUpdateUser: Function,
+  onUpdateProgress: Function,
+  onUpdateUser: Function
 }
 
 class SavoringYourChild extends React.Component<Props> {
-  state = {
-    isFetchingIntroModule: true,
-    introModule: null,
-    fetchingIntroModuleError: null,
-  }
-  componentDidMount() {
-    if (this.props.user._id) {
-      this.fetchIntroModule()
-    }
-  }
-
   render() {
     return (
       <div>
@@ -75,41 +67,42 @@ class SavoringYourChild extends React.Component<Props> {
           <MessageMe />
           <hr className={s.hr} />
           <div style={{ position: 'relative' }}>
-            {this.renderIntroModule()}
+            {this.renderToolResponse()}
           </div>
         </div>
       </div>
     )
   }
 
-  renderIntroModule() {
-    const { introModule, isFetchingIntroModule, fetchingIntroModuleError } = this.state
-    const { user } = this.props
+  renderToolResponse() {
+    const {
+      toolResponse, isFetchingToolResponse, fetchingToolResponseError, user, onLogin,
+    } = this.props
     if (!user._id) {
       return (
-        <div className={s.introModule}>
+        <div className={s.introModule} data-test="noUser">
           <h1>Intro</h1>
           <p>Let me tell you a little bit about how I work with parents, so you can get a gentle idea about the short time we are about to spend together, ok?</p>
-          <FbGateKeeper onLogin={this.onLogin} user={user} />
+          <FbGateKeeper onLogin={onLogin} user={user} />
         </div>
       )
     }
-    if (isFetchingIntroModule) {
-      return <p>Loading ...</p>
+    if (isFetchingToolResponse || !toolResponse) {
+      return <p data-test="loading">Loading ...</p>
     }
-    if (fetchingIntroModuleError) {
-      return <p>There was an error loading. Please refresh the page and contact me if it continues</p>
+    if (fetchingToolResponseError) {
+      return <p data-test="error">There was an error loading. Please refresh the page and contact me if it continues</p>
     }
     return (
       <div className={s.introModule}>
         <div>
-          <h1 className="text-center" ref={(ref) => { this.introNode = ref }}>Intro Questionnaire</h1>
+          <h1 className="text-center" ref={(ref) => { this.toolResponseNode = ref }}>Intro Questionnaire</h1>
         </div>
         <div>
           <MultiStepForm
             hideSubscribeButton
-            {...introModule}
-            scrollTop={this.scrollTopOfIntroModule}
+            {...toolResponse}
+            scrollTop={() => scrollToTopOfNode(this.toolResponseNode)}
             onUpdateProgress={this.updateProgress}
           />
         </div>
@@ -117,91 +110,23 @@ class SavoringYourChild extends React.Component<Props> {
     )
   }
 
-  fetchIntroModule = () => {
-    axios.get('/api/toolResponses/fetchByUserOrCreate/savoring-intro')
-      // update user tool responses if this is a new created module
-      .then(({ data: toolResponse }) => {
-        this.setState({ introModule: toolResponse, isFetchingIntroModule: false })
-        // update user tool responses if this is a new created module
-        if (this.isNewToolResponse(toolResponse)) {
-          this.addToolResponseToUser(toolResponse)
-        }
-      })
-      .catch((err) => {
-        global.console.error(err)
-        this.setState({ fetchingIntroModuleError: err.message, isFetchingIntroModule: false })
-      })
-  }
-
-  onLogin = (user) => {
-    this.props.onLogin(user, this.fetchIntroModule)
-  }
-
   updateProgress = (nextState) => {
-    if (nextState.currentStepNum === this.state.introModule.steps.length - 1) {
-      nextState.status = 'Completed'
-      this.updateUserOnCompletion(nextState.answerByStep)
+    const { onUpdateProgress, toolResponse } = this.props
+    const { answerByStep } = nextState
+    if (nextState.currentStepNum === toolResponse.steps.length - 1) {
+      const userPropertiesToUpdate = {
+        name: answerByStep[6],
+        savoringChildName: answerByStep[7],
+        savoringChildGender: answerByStep[8].match(/son/i) ? 'male' : 'female',
+        gender: answerByStep[8].match(/father/i) ? 'male' : 'female',
+      }
+      onUpdateProgress(nextState, userPropertiesToUpdate)
+    } else {
+      onUpdateProgress(nextState)
     }
-    axios.put(`/api/toolResponses/${this.state.introModule._id}`, { ...this.state.introModule, ...nextState })
-      .catch((err) => {
-        global.console.error(err)
-        global.alert(err.message)
-      })
   }
 
-  scrollTopOfIntroModule = () => {
-    const top = this.introNode.getBoundingClientRect().top - document.body.getBoundingClientRect().top
-    scrollToElem(document.querySelector('html'), top, 300)
-  }
-
-  updateUserOnCompletion(answerByStep) {
-    const { user, onUpdateUser } = this.props
-    const userPropertiesToUpdate = {
-      name: answerByStep[6],
-      savoringChildName: answerByStep[7],
-      savoringChildGender: answerByStep[8].match(/son/i) ? 'male' : 'female',
-      gender: answerByStep[8].match(/father/i) ? 'male' : 'female',
-    }
-    axios.put(`/api/users/${user._id}`, userPropertiesToUpdate)
-      .then(() => {
-        onUpdateUser({
-          ...user,
-          ...userPropertiesToUpdate,
-          toolResponses: user.toolResponses.map(this.markToolResponseAsCompleted),
-        })
-      })
-      .catch((err) => {
-        global.console.error(err)
-        global.alert(err.message)
-      })
-  }
-
-  introNode = null
-
-  markToolResponseAsCompleted = (tr) => {
-    if (tr._id === this.state.introModule._id) {
-      tr.status = 'Completed'
-    }
-    return tr
-  }
-
-  isNewToolResponse(toolResponse) {
-    const { user } = this.props
-    return !user.toolResponses.find(tr => tr.toolId === toolResponse.toolId)
-  }
-
-  addToolResponseToUser(newToolResponse) {
-    const { onUpdateUser, user } = this.props
-    onUpdateUser({
-      ...user,
-      toolResponses: [...user.toolResponses, {
-        createdAt: newToolResponse.createdAt,
-        status: newToolResponse.status,
-        toolId: newToolResponse.toolId,
-        _id: newToolResponse._id,
-      }],
-    })
-  }
+  toolResponseNode = null
 }
 
 export default withStyles(s)(SavoringYourChild)

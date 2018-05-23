@@ -1,10 +1,9 @@
 // @flow
 
 import React from 'react'
-import axios from 'axios'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
 
-import { scrollToElem } from '../../utils'
+import { scrollToTopOfNode } from '../../utils'
 import Benefits from '../../components/Benefits'
 import MessageMe from '../../components/MessageMe'
 import Testimonials from '../../components/Testimonials'
@@ -24,20 +23,15 @@ type Props = {
   testimonials: [],
   benefits: Array<String>,
   user: Object,
+  toolResponse: Object,
+  isFetchingToolResponse: boolean,
+  fetchingToolResponseError: string,
   onLogin: Function,
+  onUpdateProgress: Function,
   onUpdateUser: Function
 };
 
 class savoringYourChildSectionModule extends React.Component<Props> {
-  state = {
-    isFetchingModule: true,
-    module: null,
-    fetchingModuleError: null,
-  }
-  componentDidMount() {
-    this.fetchModule()
-  }
-
   render() {
     const {
       title, description, faq, benefits, testimonials,
@@ -89,35 +83,36 @@ class savoringYourChildSectionModule extends React.Component<Props> {
           <MessageMe />
           <hr />
           <div style={{ position: 'relative' }}>
-            {this.renderModule()}
+            {this.renderToolResponse()}
           </div>
         </div>
       </div>
     )
   }
 
-  renderModule() {
-    const { module, isFetchingModule, fetchingModuleError } = this.state
-    const { user, title } = this.props
+  renderToolResponse() {
+    const {
+      toolResponse, isFetchingToolResponse, fetchingToolResponseError, user, title, onLogin, onUpdateProgress,
+    } = this.props
     if (!user._id) {
       return (
-        <div className={s.module}>
+        <div className={s.toolResponse} data-test="noUser">
           <h1>Intro</h1>
           <p>Login to get started</p>
-          <FbGateKeeper onLogin={this.onLogin} user={user} />
+          <FbGateKeeper onLogin={onLogin} user={user} />
         </div>
       )
     }
-    if (isFetchingModule) {
-      return <p>Loading ...</p>
+    if (isFetchingToolResponse || !toolResponse) {
+      return <p data-test="loading">Loading ...</p>
     }
-    if (fetchingModuleError) {
-      return <p>There was an error loading. Please refresh the page and contact me if it continues</p>
+    if (fetchingToolResponseError) {
+      return <p data-test="error">There was an error loading. Please refresh the page and contact me if it continues</p>
     }
     return (
-      <div className={s.module}>
+      <div className={s.toolResponse}>
         <div>
-          <h1 className="text-center" ref={(ref) => { this.moduleNode = ref }}>{title}</h1>
+          <h1 className="text-center" ref={(ref) => { this.toolResponseNode = ref }}>{title}</h1>
         </div>
         <div>
           <MultiStepForm
@@ -128,84 +123,16 @@ class savoringYourChildSectionModule extends React.Component<Props> {
               childName: user.savoringChildName,
             }}
             hideSubscribeButton
-            {...module}
-            scrollTop={this.scrollTopOfModule}
-            onUpdateProgress={this.updateProgress}
+            {...toolResponse}
+            scrollTop={() => scrollToTopOfNode(this.toolResponseNode)}
+            onUpdateProgress={onUpdateProgress}
           />
         </div>
       </div>
     )
   }
 
-  fetchModule = () => {
-    const { slug } = this.props
-    axios.get(`/api/toolResponses/fetchByUserOrCreate/${slug}`)
-      .then(({ data: toolResponse }) => {
-        this.setState({ module: toolResponse, isFetchingModule: false })
-        // update user tool responses if this is a new created module
-        if (this.isNewToolResponse(toolResponse)) {
-          this.addToolResponseToUser(toolResponse)
-        }
-      })
-      .catch((err) => {
-        global.console.error(err)
-        this.setState({ fetchingModuleError: err.message, isFetchingModule: false })
-      })
-  }
-
-  onLogin = (user) => {
-    this.props.onLogin(user, this.fetchModule)
-  }
-
-  updateProgress = (nextState) => {
-    if (nextState.currentStepNum === this.state.module.steps.length - 1) {
-      nextState.status = 'Completed'
-    }
-    axios.put(`/api/toolResponses/${this.state.module._id}`, { ...this.state.module, ...nextState })
-      .catch((err) => {
-        global.console.error(err)
-        global.alert(err.message)
-      })
-  }
-
-  scrollTopOfModule = () => {
-    const top = this.moduleNode.getBoundingClientRect().top - document.body.getBoundingClientRect().top
-    scrollToElem(document.querySelector('html'), top, 300)
-  }
-  moduleNode = null
-
-  markToolResponseAsCompleted = (tr) => {
-    if (tr._id === this.state.module._id) {
-      tr.status = 'Completed'
-    }
-    return tr
-  }
-
-  isNewToolResponse(toolResponse) {
-    const { user } = this.props
-    return !user.toolResponses.find(tr => tr.toolId === toolResponse.toolId)
-  }
-
-  addToolResponseToUser(newToolResponse) {
-    const { onUpdateUser, user } = this.props
-    onUpdateUser({
-      ...user,
-      toolResponses: [...user.toolResponses, {
-        createdAt: newToolResponse.createdAt,
-        status: newToolResponse.status,
-        toolId: newToolResponse.toolId,
-        _id: newToolResponse._id,
-      }],
-    })
-  }
-
-  updateUserOnCompletion() {
-    const { onUpdateUser, user } = this.props
-    onUpdateUser({
-      ...user,
-      toolResponses: user.toolResponses.map(this.markToolResponseAsCompleted),
-    })
-  }
+  toolResponseNode = null
 }
 
 export default withStyles(s)(savoringYourChildSectionModule)
