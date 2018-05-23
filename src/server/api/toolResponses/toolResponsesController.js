@@ -49,7 +49,7 @@ async function fetchByUserOrCreate(req, res, next) {
       res.json(existingToolResponse)
       return
     }
-    console.log('creating tool response!')
+    global.console.log('creating tool response!')
     const toolResponseToCreate = { ...tool.toObject(), user: user._id, toolId: tool._id }
     ToolResponses.create(toolResponseToCreate)
       .then((toolResponse) => {
