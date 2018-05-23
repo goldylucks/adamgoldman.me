@@ -27,7 +27,8 @@ function getSchema() {
     fbServerAccessToken: String,
 
     gender: String,
-    savoring: Object,
+    savoringChildName: String,
+    savoringChildGender: String,
 
     createdAt: {
       type: Date,
