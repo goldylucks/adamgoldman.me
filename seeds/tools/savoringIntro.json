@@ -842,21 +842,27 @@
           "text": "I would love to experience more peace",
           "isLinkNew": false,
           "isConcern": false,
-          "concern": ""
+          "concern": "",
+          "isLink": true,
+          "link": "/savoring-your-child/peaceful-ending"
         },
         {
           "isOther": false,
           "text": "OK, let’s do it",
           "isLinkNew": false,
           "isConcern": false,
-          "concern": ""
+          "concern": "",
+          "isLink": true,
+          "link": "/savoring-your-child/peaceful-ending"
         },
         {
           "isOther": false,
           "text": "Great, let’s start",
           "isLinkNew": false,
           "isConcern": false,
-          "concern": ""
+          "concern": "",
+          "isLink": true,
+          "link": "/savoring-your-child/peaceful-ending"
         }
       ],
       "flashSpeed": "",
