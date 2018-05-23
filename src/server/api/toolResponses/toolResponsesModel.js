@@ -51,14 +51,7 @@ function getSchema() {
       default: 0,
     },
 
-    hiddenFields: [],
-
     steps: [],
-
-    isRtl: {
-      type: Boolean,
-      default: false,
-    },
 
     stepsStack: {
       type: [],

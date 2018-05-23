@@ -116,6 +116,7 @@ class savoringYourChildSectionModule extends React.Component<Props> {
         </div>
         <div>
           <MultiStepForm
+            {...toolResponse}
             hiddenFields={{
               childHe: user.savoringChildGender === 'male' ? 'he' : 'she',
               childHis: user.savoringChildGender === 'male' ? 'his' : 'her',
@@ -123,7 +124,6 @@ class savoringYourChildSectionModule extends React.Component<Props> {
               childName: user.savoringChildName,
             }}
             hideSubscribeButton
-            {...toolResponse}
             scrollTop={() => scrollToTopOfNode(this.toolResponseNode)}
             onUpdateProgress={onUpdateProgress}
           />
