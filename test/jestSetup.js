@@ -50,3 +50,15 @@ function sel(id) {
 function changeInputValue(input, value) {
   input.simulate('change', { target: { value } })
 }
+
+// polyfill for react-slick, user in Testimonials
+// https://github.com/akiran/react-slick/issues/742
+/* eslint-disable */
+window.matchMedia = window.matchMedia || function() {
+  return {
+    matches : false,
+    addListener : function() {},
+    removeListener: function() {}
+  }
+}
+/* eslint-enable */
