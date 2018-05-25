@@ -8,12 +8,12 @@ footerHeight = 47px
 headerHeight = 56px
 buffer = 30px
 */
-.module {
+.toolResponse {
   min-height: calc(100vh - 47px - 56px - 30px)
 }
 
 /* for testimonials images */
-.module img {
+.toolResponse img {
   max-width: 100px;
   border-radius: 50%;
 }
