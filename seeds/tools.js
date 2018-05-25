@@ -1,9 +1,9 @@
+const savoringReunion = require('./tools/savoringReunion.json')
 const savoringPeacefulEnding = require('./tools/savoringPeacefulEnding.json')
 const savoringSpecialDays = require('./tools/savoringSpecialDays.json')
 const savoringTestModule = require('./tools/savoringTestModule.json')
 const savoringIntro = require('./tools/savoringIntro.json')
 const internalDialogScrambler = require('./tools/internalDialogScrambler.json')
-const specialDays = require('./tools/specialDays.json')
 const sessionIntro = require('./tools/sessionIntro.json')
 const reengagingTheFuture = require('./tools/reengagingTheFuture.json')
 const reunion = require('./tools/reunion.json')
@@ -19,12 +19,12 @@ const toolHasReviewTest = require('./tools/hasReviewTest.json')
 const toolTestShort = require('./tools/shortToolTest.json')
 
 module.exports = [
+  savoringReunion,
   savoringPeacefulEnding,
   savoringSpecialDays,
   savoringTestModule,
   savoringIntro,
   internalDialogScrambler,
-  specialDays,
   sessionIntro,
   reengagingTheFuture,
   reunion,

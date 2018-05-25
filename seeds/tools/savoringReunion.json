@@ -1,15 +1,15 @@
 {
   "isDraft": false,
   "hasReview": true,
-  "isSavoring": false,
-  "isGrief": true,
+  "isSavoring": true,
+  "isGrief": false,
   "title": "Reunion",
   "description": "Experience your lost loves ones in a more resourceful way",
   "credits": "",
   "steps": [
     {
-      "title": "Background",
-      "description": "You have someone that you used to have in your life, that as you think of him or her, you don't feel yet the warmth, gratitude, appreciation, and good times you shared, but still feel the old feelings of loss, and before we turn this around you might wonder …",
+      "title": "Intro",
+      "description": "In this process we'll explore different ways to increase the feelings of presence as you think of ${hchildName}, and the appreciation for having ${hchildHim} and this relationship in your life.",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -19,143 +19,14 @@
           "isLinkNew": false,
           "isConcern": false,
           "concern": "",
-          "text": "How's this going to work Adam? <---- CLICK TO GET STARTED"
-        }
-      ]
-    },
-    {
-      "title": "How's this going to work",
-      "description": "I'm glad you asked,\nso here's how it's going to work,\nas I've been studying human behavior, organisms,\nhow society shapes behavior, communication,\nand the greatest learning machine of all, the human brain,\nI'm going to give you some things to try,\nand whatever works for you, you get to keep,\nwhatever doesn't you file away in the\n\n\"things I've tried and haven't worked for me yet.\"\n\nSounds good?",
-      "notes": "",
-      "type": "radio",
-      "inputPlaceholder": "",
-      "answers": [
-        {
-          "isOther": false,
-          "isLinkNew": false,
-          "isConcern": false,
-          "concern": "",
-          "text": "Sounds good!"
-        },
-        {
-          "isOther": false,
-          "text": "Yes, let's continue",
-          "isLinkNew": false,
-          "isConcern": false,
-          "concern": ""
-        }
-      ]
-    },
-    {
-      "title": "Current grief - gender",
-      "description": "The person you are grieving, are they male or female?",
-      "notes": "",
-      "type": "radio",
-      "inputPlaceholder": "",
-      "answers": [
-        {
-          "isOther": false,
-          "text": "Male",
-          "isLinkNew": false,
-          "isConcern": false,
-          "concern": ""
-        },
-        {
-          "isOther": false,
-          "text": "Female",
-          "isLinkNew": false,
-          "isConcern": false,
-          "concern": ""
-        }
-      ]
-    },
-    {
-      "title": "Current grief - name",
-      "description": "And what's ${his2} name?",
-      "notes": "",
-      "type": "short",
-      "inputPlaceholder": "${his2} name is ...",
-      "answers": []
-    },
-    {
-      "title": "Clearing unresolved feelings",
-      "description": "One of the mothers who recently learned this process has lost her son in a car accident she was in. When trying to grieve, the shock response from the accident kept interfering.\n\nAnother man lost his father a few days after they had an awful intense fight, and had mixed feelings of resentment, guilt and regret.\n\nIn both cases we attended to those feelings first, with a different protocol, to ensure a cleaner resourceful response to their loss at the end of this protocol.\n\nAs you think about ${s3} now, do any negative mixed feelings come up, or it's only a feeling of emptiness / grief / loss?",
-      "notes": "",
-      "type": "radio",
-      "inputPlaceholder": "",
-      "answers": [
-        {
-          "isOther": false,
-          "text": "There some negative mixed feelings",
-          "isLinkNew": false,
-          "isConcern": false,
-          "concern": ""
-        },
-        {
-          "isOther": false,
-          "text": "Only emptiness / grief / loss",
-          "hasGoToStep": true,
-          "goToStepByNum": "7",
-          "isLinkNew": false,
-          "isConcern": false,
-          "concern": ""
-        }
-      ]
-    },
-    {
-      "title": "Clearing unresolved feelings",
-      "description": "${echo}\n\nGood observation. After doing this process MANY times with MANY different people, I find that clearing past feelings is almost always the better way to go.\n\nHowever this is your body, your mind, and your life, and of course YOUR decision.",
-      "notes": "",
-      "type": "radio",
-      "inputPlaceholder": "",
-      "answers": [
-        {
-          "isOther": false,
-          "text": "Let's resolve the negative mixed feelings first",
-          "isLinkNew": false,
-          "isConcern": false,
-          "concern": ""
-        },
-        {
-          "isOther": false,
-          "text": "Let's continue with the current grief protocol",
-          "hasGoToStep": true,
-          "goToStepByNum": "7",
-          "isLinkNew": false,
-          "isConcern": false,
-          "concern": ""
-        }
-      ]
-    },
-    {
-      "title": "Clearing unresolved feelings",
-      "description": "${echo}\n\nGood. If the mixed feelings are very intense, like a shock or trauma from an accident or a very intense negative experience regarding or with ${s3}, then the [trauma relief](/tools/trauma-relief/NEW) process the place to start.\n\nOtherwise, start with [resolving feelings](/tools/resolving-feelings/NEW).",
-      "notes": "If you are not sure, please [contact me](/contact) before proceeding. ",
-      "type": "radio",
-      "inputPlaceholder": "",
-      "answers": [
-        {
-          "isOther": false,
-          "isLinkNew": true,
-          "isConcern": false,
-          "concern": "",
-          "text": "Let's start with the trauma relief",
-          "linkNew": "/tools/trauma-relief"
-        },
-        {
-          "isOther": false,
-          "text": "Let's start with resolving feelings",
-          "isLinkNew": true,
-          "linkNew": "/tools/resolving-feelings",
-          "isConcern": false,
-          "concern": ""
+          "text": "OK <----------- CLICK TO GET STARTED"
         }
       ]
     },
     {
       "title": "Eliciting valued loss",
-      "description": "Think of ${s3} now, and make very sure that your representation is of what you valued and didn't want to lose, and not the loss/end of the relationship.",
-      "notes": "For example, if ${s3} died of cancer, and you recall ${him2} as emaciated and comatose shortly before death, that is probably not what you are sorry you no longer have.\n\nWhat leads to grieving is what you valued and now miss - ${s3}’s laughter and play, special qualities, etc.",
+      "description": "Think of ${hchildName} now, and make very sure that your representation is of what you valued and didn't want to lose, and not the loss/end of the relationship.",
+      "notes": "For example, if ${hchildName} died of cancer, and you recall ${hchildHim} as emaciated and comatose shortly before death, that is probably not what you are sorry you no longer have.\n\nWhat leads to grieving is what you valued and now miss - ${hchildName}’s laughter and play, special qualities, etc.",
       "type": "radio",
       "inputPlaceholder": "",
       "answers": [
@@ -170,7 +41,7 @@
     },
     {
       "title": "Eliciting valued loss - description",
-      "description": "As you think of ${s3} in that way, notice what image comes to mind, and describe it to me a little bit.",
+      "description": "As you think of ${hchildName} in that way, notice what image comes to mind, and describe it to me a little bit.",
       "notes": "Especially notice what you see, hear, and feel.",
       "type": "long",
       "inputPlaceholder": "",
@@ -194,7 +65,7 @@
           "isOther": false,
           "text": "Actually, let me make some modifications",
           "hasGoToStep": true,
-          "goToStepByNum": "7",
+          "goToStepByNum": "1",
           "isLinkNew": false,
           "isConcern": false,
           "concern": ""
@@ -254,7 +125,7 @@
           "isConcern": false,
           "concern": "",
           "hasGoToStep": true,
-          "goToStepByNum": "15"
+          "goToStepByNum": "9"
         },
         {
           "isOther": false,
@@ -267,8 +138,8 @@
     },
     {
       "title": "Eliciting resource - alternative",
-      "description": "${echo}\n\nSo think of someone who you typically have available to you in your life but who is not physically present at this moment as you think about him/her now.\n\nFor example, you have a loving friend, a spouse, or a child who is actually distant at the moment.\n\nYet when you think about this person, you experience him/her with you as a present resource.",
-      "notes": "**Note**: We are using this experience only to find out how you already know how to represent someone as present with you so that you can learn how to regain what you valued and the good feelings that you had with ${s3}.\n\nYou and I both know that you won't be able to contact ${s3} (at least in this physical dimension)\n",
+      "description": "${echo}\n\nSo think of someone who you typically have available to you in your life but who is not physically present at this moment as you think about him/her now.\n\nFor example, you have a loving friend, a spouse, or another child who is actually distant at the moment.\n\nYet when you think about this person, you experience him/her with you as a present resource.",
+      "notes": "**Note**: We are using this experience only to find out how you already know how to represent someone as present with you so that you can learn how to regain what you valued and the good feelings that you had with ${hchildName}.\n\nYou and I both know that you won't be able to contact ${hchildName} (at least in this physical dimension)\n",
       "type": "radio",
       "inputPlaceholder": "",
       "answers": [
@@ -295,13 +166,13 @@
           "isConcern": false,
           "concern": "",
           "hasGoToStep": true,
-          "goToStepByNum": "16"
+          "goToStepByNum": "10"
         },
         {
           "isOther": false,
           "text": "Actually, let me choose someone else",
           "hasGoToStep": true,
-          "goToStepByNum": "11",
+          "goToStepByNum": "5",
           "isLinkNew": false,
           "isConcern": false,
           "concern": ""
@@ -326,7 +197,7 @@
           "isOther": false,
           "text": "Actually, let me choose someone else",
           "hasGoToStep": true,
-          "goToStepByNum": "11",
+          "goToStepByNum": "5",
           "isLinkNew": false,
           "isConcern": false,
           "concern": ""
@@ -343,7 +214,7 @@
     },
     {
       "title": "Eliciting resource - description",
-      "description": "Great, so keep thinking about ${s16}, and notice how do you experience and represent them in your mind.\n\nNot a specific memory or experience, just how you see them as a person.",
+      "description": "Great, so keep thinking about ${s10}, and notice how do you experience and represent them in your mind.\n\nNot a specific memory or experience, just how you see them as a person.",
       "notes": "You might see them looking at you, just as if they are right there in the room with you, next to you, or in front of you.\n\nMaybe they are talking to you, or touching you in a certain way.\n\nTake a moment to see, hear, and feel how you experience ${s16} now, and attend to the presence and appreciation feelings towards them.\n\nDescribe to me what comes to mind.\n",
       "type": "long",
       "inputPlaceholder": "",
@@ -351,14 +222,14 @@
     },
     {
       "title": "Eliciting resource - description - validating",
-      "description": "${echo}\n\nAnd as you experience ${s16} this way, you can feel their presence, warmth and appreciation for getting to know them, correct?",
+      "description": "${echo}\n\nAnd as you experience ${s10} this way, you can feel their presence, warmth and appreciation for getting to know them, correct?",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
       "answers": [
         {
           "isOther": false,
-          "text": "Yes, I feel good thinking about ${s16} now",
+          "text": "Yes, I feel good thinking about ${s10} now",
           "isLinkNew": false,
           "isConcern": false,
           "concern": ""
@@ -367,7 +238,7 @@
           "isOther": false,
           "text": "Actually, let me choose someone else",
           "hasGoToStep": true,
-          "goToStepByNum": "11",
+          "goToStepByNum": "5",
           "isLinkNew": false,
           "isConcern": false,
           "concern": ""
@@ -376,7 +247,7 @@
           "isOther": false,
           "text": "Let me make some modifications for this person",
           "hasGoToStep": true,
-          "goToStepByNum": "17",
+          "goToStepByNum": "11",
           "isLinkNew": false,
           "isConcern": false,
           "concern": ""
@@ -408,8 +279,8 @@
     },
     {
       "title": "Congruence check (CC)",
-      "description": "So you have the resource experience:\n“${s17}”\n\nAnd the cue experience:\n“${s8}”\n\nDo you have any objections to experience ${s3}, in the same way you experience ${s16}?",
-      "notes": "I.e. Feel ${him2} presence, warmth, and appreciation towards the good times you shared, in the same way?",
+      "description": "So you have the resource experience:\n“${s11}”\n\nAnd the cue experience:\n“${s2}”\n\nDo you have any objections to experience ${hchildName}, in the same way you experience ${s10}?",
+      "notes": "I.e. Feel ${hchildHis} presence, warmth, and appreciation towards the good times you shared, in the same way?",
       "type": "radio",
       "inputPlaceholder": "",
       "answers": [
@@ -422,7 +293,7 @@
         },
         {
           "isOther": false,
-          "text": "I would LOVE to experience ${s3} like that",
+          "text": "I would LOVE to experience ${hchildName} like that",
           "isLinkNew": false,
           "isConcern": false,
           "concern": ""
@@ -431,7 +302,7 @@
           "isOther": false,
           "text": "Let me pick another resource",
           "hasGoToStep": true,
-          "goToStepByNum": "11",
+          "goToStepByNum": "5",
           "isLinkNew": false,
           "isConcern": false,
           "concern": ""
@@ -463,7 +334,7 @@
     },
     {
       "title": "Contrastive Analysis (CA)",
-      "description": "Now as you think about both of these at the same time:\n\n**The resource:**\n${s17}\n\n**And the cue:**\n${s8}\n\nAttend to the differences in how you see, hear, and experience them in your mind.",
+      "description": "Now as you think about both of these at the same time:\n\n**The resource:**\n${s11}\n\n**And the cue:**\n${s2}\n\nAttend to the differences in how you see, hear, and experience them in your mind.",
       "notes": "As you go back and forth between the two a few times, notice the visual, auditory, and tactile differences between the way you experience them.\n\nWhat are the main differences you see, hear, and feel between the two? Write down all differences you can already notice.",
       "type": "long",
       "inputPlaceholder": "",
@@ -483,7 +354,7 @@
           "isConcern": false,
           "concern": "",
           "hasGoToStep": true,
-          "goToStepByNum": "25"
+          "goToStepByNum": "19"
         },
         {
           "isOther": false,
@@ -492,7 +363,7 @@
           "isConcern": false,
           "concern": "",
           "hasGoToStep": true,
-          "goToStepByNum": "25"
+          "goToStepByNum": "19"
         },
         {
           "isOther": false,
@@ -501,7 +372,7 @@
           "isConcern": false,
           "concern": "",
           "hasGoToStep": true,
-          "goToStepByNum": "25"
+          "goToStepByNum": "19"
         },
         {
           "isOther": false,
@@ -510,7 +381,7 @@
           "isConcern": false,
           "concern": "",
           "hasGoToStep": true,
-          "goToStepByNum": "25"
+          "goToStepByNum": "19"
         },
         {
           "isOther": false,
@@ -527,13 +398,13 @@
           "concern": "",
           "isReadOnly": true,
           "hasGoToStep": true,
-          "goToStepByNum": "25"
+          "goToStepByNum": "19"
         }
       ]
     },
     {
-      "title": "Contrastive Analysis - location & distance",
-      "description": "***“The images are in the exact same place”***\n\nWhile it does happen that the images are in the same place and distance to begin with, it is very rare, so I just want to be thorough here, with your permission.\n\nI want you to look again at the **resource image** again:\n*${s17}*\n\nThen at the **cue image** again:\n*${s8}*\n\nAnd go back and forth between the two a few times. Then close your eyes and point at the location you see each of them.\n\nAre you pointing to the **exact same place**, and the images are the **exact same distance** from you?",
+      "title": "Contrastive Analysis - location $ distance - Validation",
+      "description": "***“The images are in the exact same place”***\n\nWhile it does happen that the images are in the same place and distance to begin with, it is very rare, so I just want to be thorough here, with your permission.\n\nI want you to look again at the **resource image** again:\n*${s11}*\n\nThen at the **cue image** again:\n*${s2}*\n\nAnd go back and forth between the two a few times. Then close your eyes and point at the location you see each of them.\n\nAre you pointing to the **exact same place**, and the images are the **exact same distance** from you?",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -545,7 +416,7 @@
           "isConcern": false,
           "concern": "",
           "hasGoToStep": true,
-          "goToStepByNum": "26"
+          "goToStepByNum": "20"
         },
         {
           "isOther": false,
@@ -725,7 +596,7 @@
           "isConcern": false,
           "concern": "",
           "hasGoToStep": true,
-          "goToStepByNum": "33"
+          "goToStepByNum": "27"
         },
         {
           "isOther": false,
@@ -734,7 +605,7 @@
           "isConcern": false,
           "concern": "",
           "hasGoToStep": true,
-          "goToStepByNum": "31"
+          "goToStepByNum": "25"
         },
         {
           "isOther": false,
@@ -743,7 +614,7 @@
           "isConcern": false,
           "concern": "",
           "hasGoToStep": true,
-          "goToStepByNum": "32"
+          "goToStepByNum": "26"
         }
       ]
     },
@@ -761,7 +632,7 @@
           "isConcern": false,
           "concern": "",
           "hasGoToStep": true,
-          "goToStepByNum": "33"
+          "goToStepByNum": "27"
         },
         {
           "isOther": false,
@@ -770,7 +641,7 @@
           "isConcern": false,
           "concern": "",
           "hasGoToStep": true,
-          "goToStepByNum": "33"
+          "goToStepByNum": "27"
         },
         {
           "isOther": false,
@@ -779,7 +650,7 @@
           "isConcern": false,
           "concern": "",
           "hasGoToStep": true,
-          "goToStepByNum": "33"
+          "goToStepByNum": "27"
         },
         {
           "isOther": false,
@@ -804,7 +675,7 @@
           "isConcern": false,
           "concern": "",
           "hasGoToStep": true,
-          "goToStepByNum": "33"
+          "goToStepByNum": "27"
         },
         {
           "isOther": false,
@@ -813,7 +684,7 @@
           "isConcern": false,
           "concern": "",
           "hasGoToStep": true,
-          "goToStepByNum": "33"
+          "goToStepByNum": "27"
         },
         {
           "isOther": false,
@@ -822,7 +693,7 @@
           "isConcern": false,
           "concern": "",
           "hasGoToStep": true,
-          "goToStepByNum": "33"
+          "goToStepByNum": "27"
         },
         {
           "isOther": false,
@@ -891,7 +762,7 @@
           "isConcern": false,
           "concern": "",
           "hasGoToStep": true,
-          "goToStepByNum": "37"
+          "goToStepByNum": "31"
         },
         {
           "isOther": false,
@@ -900,7 +771,7 @@
           "isConcern": false,
           "concern": "",
           "hasGoToStep": true,
-          "goToStepByNum": "35"
+          "goToStepByNum": "29"
         },
         {
           "isOther": false,
@@ -909,7 +780,7 @@
           "isConcern": false,
           "concern": "",
           "hasGoToStep": true,
-          "goToStepByNum": "36"
+          "goToStepByNum": "30"
         }
       ]
     },
@@ -927,7 +798,7 @@
           "isConcern": false,
           "concern": "",
           "hasGoToStep": true,
-          "goToStepByNum": "37"
+          "goToStepByNum": "31"
         },
         {
           "isOther": false,
@@ -936,7 +807,7 @@
           "isConcern": false,
           "concern": "",
           "hasGoToStep": true,
-          "goToStepByNum": "37"
+          "goToStepByNum": "31"
         },
         {
           "isOther": false,
@@ -945,7 +816,7 @@
           "isConcern": false,
           "concern": "",
           "hasGoToStep": true,
-          "goToStepByNum": "37"
+          "goToStepByNum": "31"
         },
         {
           "isOther": false,
@@ -954,7 +825,7 @@
           "isConcern": true,
           "concern": "feel worse",
           "hasGoToStep": true,
-          "goToStepByNum": "37"
+          "goToStepByNum": "31"
         }
       ]
     },
@@ -972,7 +843,7 @@
           "isConcern": false,
           "concern": "",
           "hasGoToStep": true,
-          "goToStepByNum": "37"
+          "goToStepByNum": "31"
         },
         {
           "isOther": false,
@@ -981,7 +852,7 @@
           "isConcern": false,
           "concern": "",
           "hasGoToStep": true,
-          "goToStepByNum": "37"
+          "goToStepByNum": "31"
         },
         {
           "isOther": false,
@@ -990,7 +861,7 @@
           "isConcern": false,
           "concern": "",
           "hasGoToStep": true,
-          "goToStepByNum": "37"
+          "goToStepByNum": "31"
         },
         {
           "isOther": false,
@@ -1040,7 +911,7 @@
     },
     {
       "title": "Mapping Across - remaining differences",
-      "description": "Now go back and forth between both images and scan for remaining differences.\n\nIs there anything else in the way you experience ${s16}, which you'd like to apply to ${s3}?",
+      "description": "Now go back and forth between both images and scan for remaining differences.\n\nIs there anything else in the way you experience ${s10}, which you'd like to apply to ${hchildName}?",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -1076,8 +947,8 @@
       ]
     },
     {
-      "title": "Intensifying ${s3}'s presence",
-      "description": "${echo}\n\nNow as you experience ${s3} in this way, Make sure you see ${him2} completely, ${his2} whole body, in life size",
+      "title": "Intensifying ${hchildName}'s presence",
+      "description": "${echo}\n\nNow as you experience ${hchildName} in this way, Make sure you see ${hchildHim} completely, ${hchildHis} whole body, in life size",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -1113,8 +984,8 @@
       ]
     },
     {
-      "title": "Intensifying ${s3}'s presence",
-      "description": "${echo}\n\nNow notice what happens as you allow ${his2} image to become more focused, vivid, rich and colorful.",
+      "title": "Intensifying ${hchildName}'s presence",
+      "description": "${echo}\n\nNow notice what happens as you allow ${hchildHis} image to become more focused, vivid, rich and colorful.",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -1150,8 +1021,8 @@
       ]
     },
     {
-      "title": "Intensifying ${s3}'s presence",
-      "description": "${echo}\n\nNext add depth so you see ${him2} more in 3d, and make it sharper, brighter and more crisp.",
+      "title": "Intensifying ${hchildName}'s presence",
+      "description": "${echo}\n\nNext add depth so you see ${hchildHim} more in 3d, and make it sharper, brighter and more crisp.",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -1187,8 +1058,8 @@
       ]
     },
     {
-      "title": "Intensifying ${s3}'s presence",
-      "description": "${echo}\n\nNext notice if you see and hear ${him2} talking to you, if it further increases and solidifies the feeling of presence.",
+      "title": "Intensifying ${hchildName}'s presence",
+      "description": "${echo}\n\nNext notice if you see and hear ${hchildHim} talking to you, if it further increases and solidifies the feeling of presence.",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -1224,8 +1095,8 @@
       ]
     },
     {
-      "title": "Intensifying ${s3}'s presence",
-      "description": "${echo}\n\nAnd as you hear ${his2} voice now, allow it to become richer, so you hear it in a fuller tone, coming from all around you in surround.",
+      "title": "Intensifying ${hchildName}'s presence",
+      "description": "${echo}\n\nAnd as you hear ${hchildHis} voice now, allow it to become richer, so you hear it in a fuller tone, coming from all around you in surround.",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -1261,8 +1132,8 @@
       ]
     },
     {
-      "title": "Intensifying ${s3}'s presence",
-      "description": "${echo}\n\nNow hug, hold or kiss ${s3} in a certain way that feels pleasant you both.\n\nSo you can feel ${his2} touch on your skin and feel your touch on ${his2}’s.",
+      "title": "Intensifying ${hchildName}'s presence",
+      "description": "${echo}\n\nNow hug, hold or kiss ${hchildName} in a certain way that feels pleasant you both.\n\nSo you can feel ${hchildHis} touch on your skin and feel your touch on ${hchildHis}’s.",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -1298,8 +1169,8 @@
       ]
     },
     {
-      "title": "Intensifying ${s3}'s presence",
-      "description": "${echo}\n\nNotice if you already smell ${him2} as well, or add a scent to the experience, how much it further increases the good feeling.",
+      "title": "Intensifying ${hchildName}'s presence",
+      "description": "${echo}\n\nNotice if you already smell ${hchildHim} as well, or add a scent to the experience, how much it further increases the good feeling.",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -1335,8 +1206,8 @@
       ]
     },
     {
-      "title": "Intensifying ${s3}'s presence",
-      "description": "${echo}\n\nNow take a moment to experiment with different ways to further embellish the way you experience ${him2}.\n\nSome people enjoy seeing their loved ones glow, and add sparkles and gloss to the experience. Some envision shining and radiating light.",
+      "title": "Intensifying ${hchildName}'s presence",
+      "description": "${echo}\n\nNow take a moment to experiment with different ways to further embellish the way you experience ${hchildHim}.\n\nSome people enjoy seeing their loved ones glow, and add sparkles and gloss to the experience. Some envision shining and radiating light.",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -1373,7 +1244,7 @@
     },
     {
       "title": "Congruence check (CC)",
-      "description": "As you experience ${s3} like that now, do you have any objections being this way, experiencing ${him2} this way?",
+      "description": "As you experience ${hchildName} like that now, do you have any objections being this way, experiencing ${hchildHim} this way?",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -1409,6 +1280,27 @@
       ]
     }
   ],
-  "hiddenFields": [],
-  "url": "reunion"
+  "hiddenFields": [
+    {
+      "customOption": true,
+      "id": "new-id-19",
+      "label": "childName"
+    },
+    {
+      "customOption": true,
+      "id": "new-id-35",
+      "label": "childHe"
+    },
+    {
+      "customOption": true,
+      "id": "new-id-53",
+      "label": "childHis"
+    },
+    {
+      "customOption": true,
+      "id": "new-id-71",
+      "label": "childHim"
+    }
+  ],
+  "url": "savoring-reunion"
 }
