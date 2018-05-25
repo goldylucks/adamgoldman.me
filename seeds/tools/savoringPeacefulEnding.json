@@ -8,6 +8,24 @@
   "credits": "",
   "steps": [
     {
+      "title": "Intro",
+      "description": "This process will help soften the unpleasantness and negative feelings regarding the moment of transition, and the events regarding the transition, like the funeral and related things you might went through.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Let's start <---------------- CLICK TO ",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
       "title": "Happy moment before",
       "description": "First,\nthink about the last happy memory with ${hchildName}, and describe it to me a little bit.",
       "notes": "No need for details, just a title for reference will do, i.e. “at the water park two years ago”\n\nIf the end of the relationship was graphic, disturbing, or unpleasant, pick a happy moment with ${hchildName} before all that.\n\nIf the last month or years involved frequent visits to the hospital, or suffering of any kind, pick a happy moment before the suffering and the hospital visits.\n\nIf you had fights and intense emotions towards the end, pick a moment before that.\n\nI want you to pick a happy memory with ${hchildName}, before anything had happened.\n",
@@ -31,7 +49,7 @@
           "concern": "",
           "text": "Yes, it’s a positive experience, no sign for any unpleasantness",
           "hasGoToStep": true,
-          "goToStepByNum": "3"
+          "goToStepByNum": "4"
         },
         {
           "isOther": false,
@@ -55,7 +73,7 @@
           "isOther": false,
           "text": "OK, let me pick an earlier happy memory",
           "hasGoToStep": true,
-          "goToStepByNum": "0",
+          "goToStepByNum": "1",
           "isLinkNew": false,
           "isConcern": false,
           "concern": ""
@@ -86,14 +104,18 @@
           "text": "It’s a neutral moment/experience",
           "isLinkNew": false,
           "isConcern": false,
-          "concern": ""
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "7"
         },
         {
           "isOther": false,
           "text": "It’s a positive moment/experience",
           "isLinkNew": false,
           "isConcern": false,
-          "concern": ""
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "7"
         },
         {
           "isOther": false,
@@ -117,7 +139,7 @@
           "isOther": false,
           "text": "OK, let me pick another memory",
           "hasGoToStep": true,
-          "goToStepByNum": "3",
+          "goToStepByNum": "4",
           "isLinkNew": false,
           "isConcern": false,
           "concern": ""
@@ -128,7 +150,7 @@
     },
     {
       "title": "Positive/neutral experience after - Aside",
-      "description": "***\"${s4}\"***\n\nGreat, now put that experience aside for now, we’ll use if for reference soon.",
+      "description": "***\"${s5}\"***\n\nGreat, now put that experience aside for now, we’ll use if for reference soon.",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -153,7 +175,7 @@
     },
     {
       "title": "Setting the stage",
-      "description": "${echo}\n\n**Before** image  \nNow think back on the “before” experience with ${hchildName}:\n\n*\"${s0}\"*\n\nAnd notice what image comes to mind",
+      "description": "${echo}\n\n**Before** image:  \nNow think back on the “before” experience with ${hchildName}:\n\n*\"${s1}\"*\n\nAnd notice what image comes to mind",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -203,7 +225,7 @@
     },
     {
       "title": "Setting the stage - Further dissociation",
-      "description": "Now as you look at your younger self in that far away screen, make sure it’s already:\n\n• 3rd person\n• Still image\n• The screen is black & white\n• The screen is very far away\n• The screen is muted\n• The screen is a bit out of focus and low resolution\n• The screen is faded out a bit",
+      "description": "Now as you look at your younger self in that far away screen, make sure it’s already:\n\n• 3rd person  \n• Still image  \n• The screen is black & white  \n• The screen is very far away  \n• The screen is muted  \n• The screen is a bit out of focus and low resolution  \n• The screen is faded out a bit  ",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -228,7 +250,7 @@
     },
     {
       "title": "Setting the stage - Fast forwarding",
-      "description": "Good,\nNow in a moment I’ll ask you to watch your younger self “over there”, in the small far away black and white screen, being fast forwarded through everything that has happened, and freeze it at the end, so you see your younger self in the after moment:\n\n*\"${s3}\"*\n\nNow, know the sound of fast forwarding a cartoon?",
+      "description": "Good,\nNow in a moment I’ll ask you to watch your younger self “over there”, in the small far away black and white screen, being fast forwarded through everything that has happened, and freeze it at the end, so you see your younger self in the after moment:\n\n*\"${s4}\"*\n\nNow, know the sound of fast forwarding a cartoon?",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -335,7 +357,7 @@
     },
     {
       "title": "Rewinding - Validation",
-      "description": "${echo}\n\nSo now you’re back in the before moment with ${hchildName}:\n\n*\"${s0}\"*\n\nCorrect?",
+      "description": "${echo}\n\nSo now you’re back in the before moment with ${hchildName}:\n\n*\"${s1}\"*\n\nCorrect?",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -344,7 +366,7 @@
           "isOther": false,
           "text": "Correct, I’m back in that happy memory",
           "hasGoToStep": true,
-          "goToStepByNum": "16",
+          "goToStepByNum": "17",
           "isLinkNew": false,
           "isConcern": false,
           "concern": ""
@@ -371,7 +393,7 @@
           "isOther": false,
           "text": "Good, let me reverse it all the way this time",
           "hasGoToStep": true,
-          "goToStepByNum": "13",
+          "goToStepByNum": "14",
           "isLinkNew": false,
           "isConcern": false,
           "concern": ""
@@ -380,7 +402,7 @@
           "isOther": false,
           "text": "Great, let’s do it again",
           "hasGoToStep": true,
-          "goToStepByNum": "13",
+          "goToStepByNum": "14",
           "isLinkNew": false,
           "isConcern": false,
           "concern": ""
@@ -389,7 +411,7 @@
           "isOther": false,
           "text": "Oh okay, I think I understand now",
           "hasGoToStep": true,
-          "goToStepByNum": "13",
+          "goToStepByNum": "14",
           "isLinkNew": false,
           "isConcern": false,
           "concern": ""
@@ -409,7 +431,7 @@
           "isOther": false,
           "text": "In 1st person, through my own eyes, yes",
           "hasGoToStep": true,
-          "goToStepByNum": "18",
+          "goToStepByNum": "19",
           "isLinkNew": false,
           "isConcern": false,
           "concern": ""
@@ -427,7 +449,7 @@
     },
     {
       "title": "Rewinding - Another run",
-      "description": "Good, some people prefer to first experience it this way, before doing it through their own eyes in 1st person.\n\nSo put yourself back in the “after” experience:\n\n*\"${s3}\"*\n\nAnd I’ll redirect you to the previous step, to rewind it through your own eyes in 1st person.",
+      "description": "${echo}\n\nGood, some people prefer to first experience it this way, before doing it through their own eyes in 1st person.\n\nSo put yourself back in the “after” experience:\n\n*\"${s4}\"*\n\nAnd I’ll redirect you to the previous step, to rewind it through your own eyes in 1st person.",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -436,7 +458,7 @@
           "isOther": false,
           "text": "OK, I’m back in the after memory",
           "hasGoToStep": true,
-          "goToStepByNum": "13",
+          "goToStepByNum": "14",
           "isLinkNew": false,
           "isConcern": false,
           "concern": ""
@@ -448,7 +470,7 @@
     {
       "title": "Embellishments - Choosing sound",
       "description": "Now let's embellish this.\n\nI want you to think about a tune you enjoy, or a voice/sound that makes you feel good in anyway.",
-      "notes": "You can use ANYTHING you like, that makes you laugh, feel silly, comfort, powerful, curious, whatever it is.\n\nFor many people the circus theme song works magic:\nhttps://www.youtube.com/watch?v=zjedLeVGcfE\n\nSome go for people laughing:\nhttps://www.youtube.com/watch?v=yLmd0100T9g\n\nOthers go for the voice of a good friend, a comedian, or a cartoon.\n\nLet me know when you got a tune/voice/sound you enjoy. No need for details, a title for reference will do.",
+      "notes": "You can use ANYTHING you like, that makes you laugh, feel silly, comfort, powerful, curious, whatever it is.\n\nFor many people the circus theme song works magic:\n[zjedLeVGcfE](YtEmbedd)\n\nSome go for people laughing:\n[yLmd0100T9g](YtEmbedd)\n\nOthers go for the voice of a good friend, a comedian, or a cartoon.\n\nLet me know when you got a tune/voice/sound you enjoy. No need for details, a title for reference will do.",
       "type": "short",
       "inputPlaceholder": "",
       "answers": [],
@@ -480,7 +502,7 @@
           "isOther": false,
           "text": "Actually let me choose a different sound/tune/voice",
           "hasGoToStep": true,
-          "goToStepByNum": "18",
+          "goToStepByNum": "19",
           "isLinkNew": false,
           "isConcern": false,
           "concern": ""
@@ -491,7 +513,7 @@
     },
     {
       "title": "Embellishments - Adding sound",
-      "description": "${ehco}\n\nNow as you hear that in this way, put yourself back in the after moment:\n\n*“${s3}”*\n\nMake sure you are inside it, in 1st person , through your own eyes, seeing everything in color, and experience everything in reverse again, as you let the sound of SOUND lead you through it, until you are back again at the happy “before” experience:\n\n*“${s0}’*\n\nClose your eyes and do it now, and let me know when you’re back at the “before” experience.",
+      "description": "${echo}\n\nNow as you hear that in this way, put yourself back in the after moment:\n\n*“${s4}”*\n\nMake sure you are inside it, in 1st person , through your own eyes, seeing everything in color, and experience everything in reverse again, as you let the sound of SOUND lead you through it, until you are back again at the happy “before” experience:\n\n*\"${s1}\"*\n\nClose your eyes and do it now, and let me know when you’re back at the “before” experience.",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -556,7 +578,7 @@
           "isOther": false,
           "text": "Actually, let me choose something else",
           "hasGoToStep": true,
-          "goToStepByNum": "21",
+          "goToStepByNum": "22",
           "isLinkNew": false,
           "isConcern": false,
           "concern": ""
@@ -567,7 +589,7 @@
     },
     {
       "title": "Embellishments - Adding touch",
-      "description": "${echo}\n\nNow as you feel it this way, start hearing the sound as well: \n\n*“${s18}”*\n\nPut yourself back in the after experience:\n\n*“${s3}”*\n\nAgain in 1st person, through your own eyes, and experience everything in reverse, as you let the sound and touch you enjoy to lead you through it, all the way until you are back in the before moment, the happy memory with ${hchildName}.",
+      "description": "${echo}\n\nNow as you feel it this way, start hearing the sound as well: \n\n*“${s19}”*\n\nPut yourself back in the after experience:\n\n*“${s4}”*\n\nAgain in 1st person, through your own eyes, and experience everything in reverse, as you let the sound and touch you enjoy to lead you through it, all the way until you are back in the before moment, the happy memory with ${hchildName}.",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -608,7 +630,7 @@
           "isOther": false,
           "text": "do it again from the fast forward point",
           "hasGoToStep": true,
-          "goToStepByNum": "11",
+          "goToStepByNum": "12",
           "isLinkNew": false,
           "isConcern": false,
           "concern": ""
@@ -617,7 +639,7 @@
           "isOther": false,
           "text": "do it again from the reverse point",
           "hasGoToStep": true,
-          "goToStepByNum": "12",
+          "goToStepByNum": "13",
           "isLinkNew": false,
           "isConcern": false,
           "concern": ""
@@ -626,7 +648,7 @@
           "isOther": false,
           "text": "do it again from the reverse with sound point",
           "hasGoToStep": true,
-          "goToStepByNum": "18",
+          "goToStepByNum": "19",
           "isLinkNew": false,
           "isConcern": false,
           "concern": ""
@@ -635,7 +657,7 @@
           "isOther": false,
           "text": "do it again from the reverse with touch point",
           "hasGoToStep": true,
-          "goToStepByNum": "21",
+          "goToStepByNum": "22",
           "isLinkNew": false,
           "isConcern": false,
           "concern": ""
