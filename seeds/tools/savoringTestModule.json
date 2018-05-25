@@ -1,0 +1,52 @@
+{
+  "isDraft": false,
+  "hasReview": true,
+  "isSavoring": true,
+  "isGrief": false,
+  "title": "Savoring test module",
+  "description": "Savoring test module with description for development",
+  "credits": "",
+  "steps": [
+    {
+      "title": "The only step",
+      "description": "${hchildHis} name is ${hchildName}, ${hchildHe} is cool, and you love ${hchildHim}",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "End this",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    }
+  ],
+  "hiddenFields": [
+    {
+      "customOption": true,
+      "id": "new-id-19",
+      "label": "childName"
+    },
+    {
+      "customOption": true,
+      "id": "new-id-45",
+      "label": "childHe"
+    },
+    {
+      "customOption": true,
+      "id": "new-id-63",
+      "label": "childHim"
+    },
+    {
+      "customOption": true,
+      "id": "new-id-81",
+      "label": "childHis"
+    }
+  ],
+  "url": "savoring-test-module"
+}

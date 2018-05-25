@@ -1,0 +1,756 @@
+{
+  "isDraft": false,
+  "hasReview": true,
+  "isSavoring": true,
+  "isGrief": false,
+  "title": "Peaceful Ending",
+  "description": "This process will help soften the unpleasantness and negative feelings regarding the moment of transition, and the events regarding the transition, like the funeral and related things you might went through",
+  "credits": "",
+  "steps": [
+    {
+      "title": "Happy moment before",
+      "description": "First,\nthink about the last happy memory with ${hchildName}, and describe it to me a little bit.",
+      "notes": "No need for details, just a title for reference will do, i.e. “at the water park two years ago”\n\nIf the end of the relationship was graphic, disturbing, or unpleasant, pick a happy moment with ${hchildName} before all that.\n\nIf the last month or years involved frequent visits to the hospital, or suffering of any kind, pick a happy moment before the suffering and the hospital visits.\n\nIf you had fights and intense emotions towards the end, pick a moment before that.\n\nI want you to pick a happy memory with ${hchildName}, before anything had happened.\n",
+      "type": "short",
+      "inputPlaceholder": "",
+      "answers": [],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Happy moment before - Validation",
+      "description": "Now I want to be sure before we proceed, that this experience:\n\n${echo}\n\nIs a positive one, and there’s no sign or reference for any unpleasantness that happened after, yes?",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "text": "Yes, it’s a positive experience, no sign for any unpleasantness",
+          "hasGoToStep": true,
+          "goToStepByNum": "3"
+        },
+        {
+          "isOther": false,
+          "text": "You know what let me pick another one",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Happy moment before - Another",
+      "description": "${echo}\n\nSo I’m redirecting back to the previous step, to pick an earlier happy moment before there’s any sign or reference for any future unpleasantness",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "OK, let me pick an earlier happy memory",
+          "hasGoToStep": true,
+          "goToStepByNum": "0",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Positive/neutral experience after",
+      "description": "***\"Yes, it’s a positive experience, no sign for any unpleasantness\"***\n\nGreat,\nnow think about a moment in time, after all the events regarding ${hchildHis} transition were over.",
+      "notes": "So after the funeral and handling all the logistics involved, after you got back somewhat to your routine.\n\nLife weren't perfect, and you were probably still sad, but that episode was over.\n\nSo a moment after all that, in which you were happy, and if you can't find a happy moment, go for a neutral one, like doing something mundane, making coffee or brushing teeth.\n\nA positive or neutral experience.\n\nAgain no need for details, just a title for reference will do, i.e. “Meeting my beloved friend”, “brushing teeth two month after”, etc",
+      "type": "short",
+      "inputPlaceholder": "",
+      "answers": [],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Positive/neutral experience after - Validation",
+      "description": "OK, now let me quickly make sure again, that in this experience:\n\n${echo}\n\nYou are having a neutral or positive moment, correct?",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "It’s a neutral moment/experience",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "It’s a positive moment/experience",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Actually it’s a negative one, let’s pick another",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Positive/neutral experience after - Another",
+      "description": "So I’m redirecting back to the previous step, to pick a positive/neutral moment after all the events regarding ${hchildName}’s transition.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "OK, let me pick another memory",
+          "hasGoToStep": true,
+          "goToStepByNum": "3",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Positive/neutral experience after - Aside",
+      "description": "***\"${s4}\"***\n\nGreat, now put that experience aside for now, we’ll use if for reference soon.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "OK, let’s continue",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I’ve put it aside for now",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Setting the stage",
+      "description": "${echo}\n\n**Before** image  \nNow think back on the “before” experience with ${hchildName}:\n\n*\"${s0}\"*\n\nAnd notice what image comes to mind",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "OK, I see the image",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Yes, what’s next",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Setting the stage - Dissociation",
+      "description": "Now first I want you to freeze that image and dissociate from it, so you see your younger self “over there”, in 3rd person, having a happy moment with ${hchildName}, in a small black & white muted screen far far away.\n\nMake that screen slightly out of focus and low resolution, like in Youtube where you select the lowest resolution you know?\n\nDo it now, and let me know when you're done.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "OK, I see my younger self in the small screen far away",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "OK, I’m dissociated from that before image, what’s next?",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Setting the stage - Further dissociation",
+      "description": "Now as you look at your younger self in that far away screen, make sure it’s already:\n\n• 3rd person\n• Still image\n• The screen is black & white\n• The screen is very far away\n• The screen is muted\n• The screen is a bit out of focus and low resolution\n• The screen is faded out a bit",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "It was already like that",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Made some adjustments, now it’s like that",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Setting the stage - Fast forwarding",
+      "description": "Good,\nNow in a moment I’ll ask you to watch your younger self “over there”, in the small far away black and white screen, being fast forwarded through everything that has happened, and freeze it at the end, so you see your younger self in the after moment:\n\n*\"${s3}\"*\n\nNow, know the sound of fast forwarding a cartoon?",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Fast forwarding a cartoon, of course! funny sound",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Yes I do, let's continue",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Fast forwarding",
+      "description": "${echo}\n\nGreat, so here's what I want you to do:\n\n1. See your younger self in a small screen far far away, frozen in time, at the before moment, before anything had happened, in the happy moment with ${hchildName}.\n\n2. Make sure the screen is black & white, out of focus a little bit, and decrease the resolution. \n\n3. Mute the sound.\n\n4. Fast forward the movie as fast as you can all the way to after everything is over, and you see your younger self in the after moment, having a neutral or positive moment\n\n5. Like a cartoon, hear everything going forward very fast\n\nDo it now, and let me know when you're done.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "It’s so different watching it this way",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "OK. I fast forwarded the memory, and I see myself in the “after” moment",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "War in reverse is ...",
+      "description": "Now, as you see yourself in the small still picture far far away, after everything that has happened after the end being ok, did you ever think what does a war movie turn into, when you run it in reverse?\n\n[diihWjg0lAM](YtEmbedd)",
+      "notes": " I just heard it in a seminar the other day, and it made perfect sense to me.\n\nThe flames of destruction would package themselves back into bombs, which would return to the plane, which will return to the base and get unpacked.\n\nAll the weapons and ammunition get shipped back to the factories to be disassembled to raw materials.\n\nSoldiers would go back home, kiss their partners, hug their loved ones.\n\nDid you ever think of that?",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Haven't thought of that before, it's actually quite interesting …",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Yes I have",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Rewinding",
+      "description": "Now in a moment I'll ask you do to something interesting, and don't do it until I tell you to, okay?\n\nI will want you to step inside the end of the memory, after everything was over being ok, into your own body, so you see what you saw at the time, in color, hear what you heard and ...\n\nRun the memory in reverse as fast as you can, all the way to before the beginning, in the happy memory with ${hchildName}.",
+      "notes": "So you hear everyone talking backwards, see everything and everyone moving backwards in reverse, as fast as you can.\n\n(yes you guessed it, like a cartoon)\n\nWe gonna do it this way one time, then add some decorations.\n\nSo here are the steps again:\n\n1. Step inside the end of the memory, into your own body, in 1st person,  perfectly okay.\n\n2. See what you saw at the time, in color, hear what you heard.\n\n3. Run the memory in reverse as fast as you can, hear everyone talking backwards, see everything and moving backwards in reverse, as fast as you can, like a cartoon, all the way to before the beginning, where you're perfectly okay again.\n\nClose your eyes and do it now, let me know when you're done.",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Done and done!",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I ran the memory in reverse",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Did it, that was funky!",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Rewinding - Validation",
+      "description": "${echo}\n\nSo now you’re back in the before moment with ${hchildName}:\n\n*\"${s0}\"*\n\nCorrect?",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Correct, I’m back in that happy memory",
+          "hasGoToStep": true,
+          "goToStepByNum": "16",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I didn’t rewind all the way",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Rewinding - Another run",
+      "description": "${echo}\n\nGood observation, so I’m redirecting you back to the previous step, so you can reverse it all the way this time.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Good, let me reverse it all the way this time",
+          "hasGoToStep": true,
+          "goToStepByNum": "13",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Great, let’s do it again",
+          "hasGoToStep": true,
+          "goToStepByNum": "13",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Oh okay, I think I understand now",
+          "hasGoToStep": true,
+          "goToStepByNum": "13",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Rewinding - Validation",
+      "description": "***\"Correct, I’m back in that happy memory\"***\n\nGreat, And you experienced everything in reverse in 1st person, through your own eyes, correct?",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "In 1st person, through my own eyes, yes",
+          "hasGoToStep": true,
+          "goToStepByNum": "18",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Actually I saw myself from the outside, in 3rd person",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Rewinding - Another run",
+      "description": "Good, some people prefer to first experience it this way, before doing it through their own eyes in 1st person.\n\nSo put yourself back in the “after” experience:\n\n*\"${s3}\"*\n\nAnd I’ll redirect you to the previous step, to rewind it through your own eyes in 1st person.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "OK, I’m back in the after memory",
+          "hasGoToStep": true,
+          "goToStepByNum": "13",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Embellishments - Choosing sound",
+      "description": "Now let's embellish this.\n\nI want you to think about a tune you enjoy, or a voice/sound that makes you feel good in anyway.",
+      "notes": "You can use ANYTHING you like, that makes you laugh, feel silly, comfort, powerful, curious, whatever it is.\n\nFor many people the circus theme song works magic:\nhttps://www.youtube.com/watch?v=zjedLeVGcfE\n\nSome go for people laughing:\nhttps://www.youtube.com/watch?v=yLmd0100T9g\n\nOthers go for the voice of a good friend, a comedian, or a cartoon.\n\nLet me know when you got a tune/voice/sound you enjoy. No need for details, a title for reference will do.",
+      "type": "short",
+      "inputPlaceholder": "",
+      "answers": [],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Embellishments - Enriching sound",
+      "description": "Now start hearing that in your mind:\n\n${echo}\n\nAnd make sure you hear it in a rich tone, coming from all around you with echo and reverb, as if you were surrounded by the best speakers ever crafted by man or machine.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I hear it much richer now",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "It’s much more impacting this way",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Actually let me choose a different sound/tune/voice",
+          "hasGoToStep": true,
+          "goToStepByNum": "18",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Embellishments - Adding sound",
+      "description": "${ehco}\n\nNow as you hear that in this way, put yourself back in the after moment:\n\n*“${s3}”*\n\nMake sure you are inside it, in 1st person , through your own eyes, seeing everything in color, and experience everything in reverse again, as you let the sound of SOUND lead you through it, until you are back again at the happy “before” experience:\n\n*“${s0}’*\n\nClose your eyes and do it now, and let me know when you’re back at the “before” experience.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "text": "Done and done!"
+        },
+        {
+          "isOther": false,
+          "text": "It's even better with the tune",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Done, let’s continue",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Embellishments - Choosing touch",
+      "description": "${echo}\n\nNow let’s add to that.\nThink about something you enjoy the touch of.",
+      "notes": "A pet usually works very well, either yours or an animal you know and love. Some people go for something soft, velvet, blanket, or a pillow.\n\nWhatever it is you enjoy the sense of touch of.\n\nNo need for details, a title for reference will do.",
+      "type": "short",
+      "inputPlaceholder": "",
+      "answers": [],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Embellishments - Enriching touch",
+      "description": "Now start feeling and sensing that touch:\n\n${echo}\n\nAnd make sure you experience it fully, and really attend to the tactile sensations, the textures, temperature, and all that is associated with that touch.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I feel it much richer now",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "It’s much more impacting this way",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Actually, let me choose something else",
+          "hasGoToStep": true,
+          "goToStepByNum": "21",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Embellishments - Adding touch",
+      "description": "${echo}\n\nNow as you feel it this way, start hearing the sound as well: \n\n*“${s18}”*\n\nPut yourself back in the after experience:\n\n*“${s3}”*\n\nAgain in 1st person, through your own eyes, and experience everything in reverse, as you let the sound and touch you enjoy to lead you through it, all the way until you are back in the before moment, the happy memory with ${hchildName}.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "text": "It’s even better with the touch"
+        },
+        {
+          "isOther": false,
+          "text": "It’s logistically harder, but more enjoyable",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Done, let’s continue",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Another run?",
+      "description": "Do you want to do one or some of the steps again?\n\nThis is totally up to you, if you feel you will benefit from it, It never hurts, and it’s easier and more automatic each time you do it anyway.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "do it again from the fast forward point",
+          "hasGoToStep": true,
+          "goToStepByNum": "11",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "do it again from the reverse point",
+          "hasGoToStep": true,
+          "goToStepByNum": "12",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "do it again from the reverse with sound point",
+          "hasGoToStep": true,
+          "goToStepByNum": "18",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "do it again from the reverse with touch point",
+          "hasGoToStep": true,
+          "goToStepByNum": "21",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I’m good for now, let’s continue",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Congruence check",
+      "description": "${echo}\n\nAnd what happens now, as you think of those events you just rewinded?",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "It’s much better / softer",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "It’s more accepting/loving",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "My mind rewinds back to our happy memory",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "There’s still an event that “stings”",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "savoring"
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Congruence check",
+      "description": "${echo}\n\nDo you have any objections being this way, experiencing these events like that?",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Objections? Of course not!",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I LOVE being this way",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "No objections",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Yes, I have an objection",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "savoring"
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    }
+  ],
+  "hiddenFields": [
+    {
+      "customOption": true,
+      "id": "new-id-25",
+      "label": "childName"
+    },
+    {
+      "customOption": true,
+      "id": "new-id-42",
+      "label": "childHe"
+    },
+    {
+      "customOption": true,
+      "id": "new-id-60",
+      "label": "childHim"
+    },
+    {
+      "customOption": true,
+      "id": "new-id-80",
+      "label": "childHer"
+    }
+  ],
+  "url": "savoring-peaceful-ending"
+}

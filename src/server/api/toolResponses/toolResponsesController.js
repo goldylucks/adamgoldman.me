@@ -1,6 +1,7 @@
 import { validateOwnerOrAdmin } from '../../auth'
 import Tools from '../tools/toolsModel'
 
+import savoringReviewSteps from './savoringReviewSteps'
 import ToolResponses from './toolResponsesModel'
 
 export default {
@@ -40,6 +41,8 @@ function update(req, res, next) {
     .catch(next)
 }
 
+// assumption: only used by savoring modules
+// other tools have different way to handle reviews
 async function fetchByUserOrCreate(req, res, next) {
   const { user, params: { toolSlug } } = req
   try {
@@ -50,7 +53,11 @@ async function fetchByUserOrCreate(req, res, next) {
       return
     }
     global.console.log('creating tool response!')
-    const toolResponseToCreate = { ...tool.toObject(), user: user._id, toolId: tool._id }
+    const toolObject = tool.toObject()
+    if (toolObject.hasReview) {
+      toolObject.steps = toolObject.steps.concat(savoringReviewSteps)
+    }
+    const toolResponseToCreate = { ...toolObject, user: user._id, toolId: tool._id }
     ToolResponses.create(toolResponseToCreate)
       .then((toolResponse) => {
         res.status(201).json(toolResponse)

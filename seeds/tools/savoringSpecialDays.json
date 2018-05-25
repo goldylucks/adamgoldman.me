@@ -1,0 +1,775 @@
+{
+  "isDraft": false,
+  "hasReview": true,
+  "isSavoring": true,
+  "isGrief": false,
+  "title": "Special Days",
+  "description": "Birthdays, holidays, and transition days as an opportunity",
+  "credits": "",
+  "steps": [
+    {
+      "title": "Background",
+      "description": "Parents who lost their child often confess some dates in the year are harder and sadder than others.\n\nThe child’s birthday, transition day, holidays and memorials are common examples.\n\nSome parents avoid family gatherings altogether to avoid the feelings of emptiness of not having the child there.\n\nThis process will aid you to reconnect these future special dates with the presence and appreciation of having ${hchildName} in your life. ",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "OK <-------- CLICK TO GET STARTED",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ]
+    },
+    {
+      "title": "Eliciting future birthday - Feeling",
+      "description": "As you think about ${hchildName}'s next birthday now, how do you feel?",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Empty",
+          "hasGoToStep": true,
+          "goToStepByNum": "3",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Sad",
+          "hasGoToStep": true,
+          "goToStepByNum": "3",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Bad",
+          "hasGoToStep": true,
+          "goToStepByNum": "3",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel good!",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ]
+    },
+    {
+      "title": "Eliciting future birthday - Proceed?",
+      "description": "Great! So this process will do one of three things for you:\n\n1. Increase the good feelings even more\n2. Will provide some new ways to experience ${hchildName}'s future birthdays, transition days and holidays\n3. Will do nothing, since you already feel good\n\nWould you like to continue this process or proceed to the next one?",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Why not, let’s give it a go!",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Yes let’s try it",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Let’s proceed to the next process",
+          "isLink": true,
+          "link": "/ssavoring-your-child/modules",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ]
+    },
+    {
+      "title": "Eliciting future birthday - Description",
+      "description": "And as you think about ${hchildName}’s next birthday now, what image comes to mind?",
+      "notes": " Make sure this is an image of the birthday itself, and not your response to/about the birthday. I.e. if you have an image of yourself crying about it, you can put that image aside, and think of ${hchildName}’s next birthday in terms of what you valued and feel loss/sad about. ",
+      "type": "long",
+      "inputPlaceholder": "",
+      "answers": []
+    },
+    {
+      "title": "Eliciting future birthday - Validating",
+      "description": "${echo}\n\nNow just to make sure, this is what you valued and didn't want to lose, correct?",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Correct",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Actually, let me choose something else",
+          "hasGoToStep": true,
+          "goToStepByNum": "3",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ]
+    },
+    {
+      "title": "Break state",
+      "description": "${echo}\n\nGreat, and you can set that image aside for now, we'll transform it soon",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "O, I've set it aside",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ]
+    },
+    {
+      "title": "Eliciting resource - Past birthdays",
+      "description": "Now think about past ${hchildName}'s birthdays, and everything you valued and enjoyed in these birthdays.\n\nAs you think about those past birthdays with ${hchildName} now, how do you feel? ",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I feel good, I love birthdays",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel good, we had good time in birthdays",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel the love of all the participants",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel bad",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "feel bad"
+        }
+      ]
+    },
+    {
+      "title": "Eliciting resource - Description",
+      "description": "${echo}\n\nGreat, and as you think about those past birthdays with ${hchildName} now, what images come to mind?",
+      "notes": "Describe it in rich detail as possible.",
+      "type": "long",
+      "inputPlaceholder": "",
+      "answers": []
+    },
+    {
+      "title": "Contrastive Analysis (CA)",
+      "description": "Now think about both of these at the same time:\n\n**Past birthdays**:  \n${s7}\n\n**Future birthday**:  \n${s3}\n\nI want you to attend to the differences in how you see, hear, and experience them in your mind.",
+      "notes": "Go back and forth between the two a few times, and notice the visual, auditory, and tactile differences between the way you experience them.\n\nWhat are the main differences you see, hear, and feel between the two? ",
+      "type": "long",
+      "inputPlaceholder": "",
+      "answers": []
+    },
+    {
+      "title": "Contrastive Analysis (CA) - Location & distance",
+      "description": "Now check, as you look at the image(s) of the past birthdays, and the image of the next birthday in your mind, are the images in the same place in your physical space?",
+      "notes": " For example you might see the past birthdays closer and to your left, while the next birthday will be farther and on your right. ",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "One image is closer than the other",
+          "hasGoToStep": true,
+          "goToStepByNum": "11",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "One image is higher than the other",
+          "hasGoToStep": true,
+          "goToStepByNum": "11",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "One image is more to my right and the other to my left",
+          "hasGoToStep": true,
+          "goToStepByNum": "11",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "One image is more in front of me than the other",
+          "hasGoToStep": true,
+          "goToStepByNum": "11",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "The images are in the exact same place and distance",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Other",
+          "hasGoToStep": true,
+          "goToStepByNum": "11",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ]
+    },
+    {
+      "title": "Contrastive Analysis (CA) - Validating",
+      "description": "***“The images are in the exact same place and distance”***\n\nWhile it does happen that the images are in the same place and distance to begin with, it is very rare, so I just want to be thorough here, with your permission.\n\nI want you to look at the image of the **past birthdays** again:  \n${s7}\n\nAnd the image of the **future birthday**:  \n${s3}\n\nAnd go back and forth between the two a few times. Then close your eyes and point at the location you see each of them.\n\nAre you pointing to the **exact same place**, and the images are the **exact same distance** from you?",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I’m pointing to the exact same place",
+          "hasGoToStep": true,
+          "goToStepByNum": "12",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I’m pointing to two different places",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ]
+    },
+    {
+      "title": "Mapping Across (MA) - Location & distance",
+      "description": "Now notice what happens as you allow the image of the next birthday, to slide to the same location of the image(s) of the past birthdays.\n\nSo you see the image of the next birthday in the same location and distance as the image(s) of the past birthdays.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "text": "It's better, yes"
+        },
+        {
+          "isOther": false,
+          "text": "Less sad",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Happier",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "More peaceful",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "It's exactly the same",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": true,
+          "text": "Other",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "isReadOnly": true
+        }
+      ]
+    },
+    {
+      "title": "Mapping Across (MA) - Remaining differences",
+      "description": "${echo}\n\nNow go back and forth between the images of the past birthday dream and the next birthday in your mind, and scan for remaining differences.\n\nNot in the content, but in the way you are representing them internally.\n\nGo back and forth between the two a few times, and notice if there are any visual, auditory, and tactile differences in the way you experience them.\n\nNotice if there is something in the way you experience the past birthday, which you'd like to apply to the next birthday as well.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I don't notice any differences between the images",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I applied some of the differences",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": true,
+          "text": "Other",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "isReadOnly": true
+        }
+      ]
+    },
+    {
+      "title": "Increasing happiness & appreciation",
+      "description": "As you think of ${hchildName}'s next birthday now, allow it to become brighter, more colorful and rich, so you see it vividly and crystal clear, and notice how much it increases the happiness & appreciation",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "text": "I feel happier this way"
+        },
+        {
+          "isOther": false,
+          "text": "I feel more grateful this way",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "It helps",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "It's more loving",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel more at peace",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel exactly the same",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": true,
+          "text": "Other",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "isReadOnly": true
+        }
+      ]
+    },
+    {
+      "title": "Increasing happiness & appreciation",
+      "description": "${echo}\n\nNow allow it to become fuller and more three dimensional, so it gets deeper as well, and notice how much it increases the happiness & appreciation",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "text": "I feel happier this way"
+        },
+        {
+          "isOther": false,
+          "text": "I feel more grateful this way",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "It helps",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "It's more loving",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel more at peace",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel exactly the same",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": true,
+          "text": "Other",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "isReadOnly": true
+        }
+      ]
+    },
+    {
+      "title": "Increasing happiness & appreciation",
+      "description": "${echo}\n\nHow about motion and movement?\n\nIf the image is still, experiment in watching it as a video with motion and movement, so you see everybody moving, interacting and talking.\n\nAlso play with different speeds and notice how you feel the best experiencing it.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "text": "I feel happier this way"
+        },
+        {
+          "isOther": false,
+          "text": "I feel more grateful this way",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "It helps",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "It's more loving",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel more at peace",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel exactly the same",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": true,
+          "text": "Other",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "isReadOnly": true
+        }
+      ]
+    },
+    {
+      "title": "Increasing happiness & appreciation",
+      "description": "${echo}\n\nLet's check sound and voices next.\n\nTry hearing the sounds and voices of everything and everybody in that experience, in rich full tones, coming from all around you in surround.\n\nYou might see and hear people sharing stories, good times and experiences they had with ${hchildName}, and all the things they love and appreciate about ${hchildName} and having them in their lives.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "text": "I feel happier this way"
+        },
+        {
+          "isOther": false,
+          "text": "I feel more grateful this way",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "It helps",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "It's more loving",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel more at peace",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel exactly the same",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": true,
+          "text": "Other",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "isReadOnly": true
+        }
+      ]
+    },
+    {
+      "title": "Increasing happiness & appreciation",
+      "description": "${echo}\n\nNow let's attend to the sense of touch and bodily sensations.\n\nYou might see some dear friends, loved ones, family members and ${hchildName}'s friends interacting in caring, gentle, or playful ways.\n\nSome of them might hug, kiss, touch or display affection in whatever way that is appropriate.\n\nNotice what happens as you attend to the sense of touch and bodily sensations and connection between all the people.\n\nAlso feel yourself hugging, kissing or touching your loved ones in this experience in way you enjoy, and notice which elements of those you enjoy the most. ",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "text": "I feel happier this way"
+        },
+        {
+          "isOther": false,
+          "text": "I feel more grateful this way",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "It helps",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "It's more loving",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel more at peace",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel exactly the same",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": true,
+          "text": "Other",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "isReadOnly": true
+        }
+      ]
+    },
+    {
+      "title": "Increasing happiness & appreciation",
+      "description": "Now take a moment to notice if there are any further changes you'd like to make to this experience.\n\nSomething you'd like to add or embellish in anyway.\n\nWe can always revise this later of course, and there's no \"right or wrong\" here.\n\nIf you find anything that works for you, please share it below so me and future participants can all learn from you as well. ",
+      "notes": "",
+      "type": "long",
+      "inputPlaceholder": "",
+      "answers": []
+    },
+    {
+      "title": "Congruence check (CC)",
+      "description": "As you think about the next birthday now, do you have any objections being this way, experiencing it this way?",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Objections? Of course not!",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "No objections",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Yes, I have an objection",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "objection"
+        }
+      ]
+    },
+    {
+      "title": "Congruence check (CC)",
+      "description": "${echo}\n\nAnd how do you feel thinking about the next birthday now, experiencing it in this way?",
+      "notes": "",
+      "type": "long",
+      "inputPlaceholder": "",
+      "answers": []
+    },
+    {
+      "title": "Future pacing",
+      "description": "${echo}\n\nAnd you can have every birthday, holiday, transition day, memorial day and every special day reminding you that good feeling,\n\nand all that you learned, enjoyed, and have available for you, and your loved ones, for having ${hchildName} in your lives.\n\nAnd you can look at all those special days, past and future, and access these good feelings whenever you wish.\n\nAnd some of them you might enjoy more with glow, sparkles, glitters or bright shining light.\n\nAnd of course the future ones will be somewhat vague, none of us can fully predict the future. ",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "That is lovely ❤",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "It's wonderful",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel much more grateful",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": true,
+          "text": "Other",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "isReadOnly": true
+        }
+      ]
+    }
+  ],
+  "hiddenFields": [
+    {
+      "customOption": true,
+      "id": "new-id-18",
+      "label": "childName"
+    },
+    {
+      "customOption": true,
+      "id": "new-id-15",
+      "label": "childHe"
+    },
+    {
+      "customOption": true,
+      "id": "new-id-35",
+      "label": "childHis"
+    },
+    {
+      "customOption": true,
+      "id": "new-id-53",
+      "label": "childHim"
+    }
+  ],
+  "url": "savoring-special-days"
+}

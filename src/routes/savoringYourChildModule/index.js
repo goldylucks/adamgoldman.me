@@ -22,7 +22,7 @@ async function action({ params, path }) {
     path,
     component: (
       <Layout path={path}>
-        <SavoringToolResponseContainer toolSlug={params.module}>
+        <SavoringToolResponseContainer toolSlug={`savoring-${params.module}`}>
           <SavoringYourChildModule path={path} {...module} />
         </SavoringToolResponseContainer>
       </Layout>
