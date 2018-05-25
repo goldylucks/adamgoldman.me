@@ -92,7 +92,7 @@ class Controls extends React.Component {
       this.save()
     }
 
-    if (evt.key === 'E' && evt.ctrlKey && evt.shiftKey) {
+    if (evt.key === 'e' && evt.ctrlKey && evt.altKey) {
       this.export()
     }
   }
