@@ -40,7 +40,7 @@ export const updateVariableReferencesAfterRemoveStep = (str, sIdx) => str.replac
   if (key[0] === 's') {
     const stepNum = Number(key.slice(1))
     if (stepNum === sIdx) {
-      throw new Error('cant remove step that has dependencies')
+      throw new Error(`cant remove step that has dependencies: ${sIdx}`)
     }
     if (stepNum > sIdx) {
       return '${' + `s${stepNum - 1}` + '}' // eslint-disable-line no-useless-concat
@@ -84,12 +84,12 @@ export const updateLogicalJumpsAfterRemoveStep = (sIdx, nextSteps) => nextSteps.
   if (step.inputPlaceholder) {
     step.inputPlaceholder = updateVariableReferencesAfterRemoveStep(step.inputPlaceholder, sIdx)
   }
-  step.answers = step.answers.map((a) => {
+  step.answers = step.answers.map((a, aIdx) => {
     if (a.hasGoToStep && (Number(a.goToStepByNum) > sIdx)) {
       a.goToStepByNum = String(Number(a.goToStepByNum) - 1)
     }
     if (a.hasGoToStep && (Number(a.goToStepByNum) === sIdx)) {
-      throw new Error('cant remove step that has dependencies')
+      throw new Error(`cant remove step that has dependencies: ${step.title} answer ${aIdx}`)
     }
     if (a.text) {
       a.text = updateVariableReferencesAfterRemoveStep(a.text, sIdx)
@@ -100,7 +100,7 @@ export const updateLogicalJumpsAfterRemoveStep = (sIdx, nextSteps) => nextSteps.
     step.goToStepByNum = String(Number(step.goToStepByNum) - 1)
   }
   if (step.hasGoToStep && (Number(step.goToStepByNum) === sIdx)) {
-    throw new Error('cant remove step that has dependencies')
+    throw new Error(`cant remove step that has dependencies: ${step.title}`)
   }
   return step
 })
