@@ -1,0 +1,1585 @@
+{
+  "isDraft": false,
+  "hasReview": true,
+  "isSavoring": true,
+  "isGrief": false,
+  "title": "Savoring the future",
+  "description": "Parents often make future plans for and with their children. Then they have constructed scenes in their mind of things they look forward to.  This process is designed to savor the future without these scenes happening, and more coming to terms with the future that will not be.",
+  "credits": "",
+  "steps": [
+    {
+      "title": "Intro",
+      "description": "Parents often make future plans for and with their children. Then they have constructed scenes in their mind of things they look forward to.\n\nThis process is designed to savor the future without these scenes happening, and more coming to terms with the future that will not be.",
+      "notes": "Most parents found tremendous value and relief following this process",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "OK <----------- CLICK TO GET STARTED",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Eliciting future loss response",
+      "description": "Think about the things you will never get to do or explore with {hchildName}, or thoughts about dreams and hopes you had for {hchildHim} that will not happen now.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "OK, got a few in mind",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I had so many things planned, this still hurts ...",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Eliciting future loss response - Choosing one",
+      "description": "${echo}\n\nFrom those future scenarios, pick the one that still bothers you or hurts you the most to think about now.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Got one",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Not sure if this is the strongest one, but I got one",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Eliciting future loss response - Description",
+      "description": "As you think about that, describe to me a bit what image comes to mind",
+      "notes": "No need for details, a title for reference would do. I.e. “taking {hchildHim} to college”",
+      "type": "short",
+      "inputPlaceholder": "",
+      "answers": [],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "The cue",
+      "description": "${echo}\n\nOK, we’ll call that the “cue”. Now you can put that cue experience aside for now, we’ll use it soon.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "OK, I’ve put it aside",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I’ve set it aside, what’s next?",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Eliciting resource - Savored dream",
+      "description": "Now let me ask you something.\n\nIn all your life on this odd planet, I'm sure you had many things planned, many dreams, some more meaningful than others.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Yes that's true",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Some more meaningful than others, indeed",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Eliciting resource - Savored dream",
+      "description": "${echo}\n\nNow, many of those have not happened, correct?",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Yes that's true",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I have some that didn't, but most came true",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Eliciting resource - Savored dream - Description",
+      "description": "${echo}\n\nSo I want you to think of a dream you used to have, that will never happen, but is still savored, and you can still appreciate it.\n\nYou can close your eyes to do this, or not, and tell me a little bit about it.",
+      "notes": "No need for details, just title and age for reference will do, i.e. “Play professional basketball, age 21”",
+      "type": "short",
+      "inputPlaceholder": "",
+      "answers": [],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Eliciting resource - Validation",
+      "description": "OK, we’ll call this the “resource”. And as you think about this resource now:\n\n${echo}\n\nYou can remember wanting it to happen, but you are ok with it not happening yes?\n\nIt might have been nice to have happened, but you can still savor it, appreciate it, and are at peace with it not happening yes?",
+      "notes": "(i.e. you have come to terms with knowing and acknowledging that)",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I used to want it, but it’s still savored",
+          "hasGoToStep": true,
+          "goToStepByNum": "10",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel bad about it not happening",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Eliciting resource - Choosing another",
+      "description": "${echo}\n\nOK, so I’m redirecting you back to the previous step, to pick another life dream or plan that didn’t happen, but is still savored",
+      "notes": "Something you enjoy thinking about, and you’ve  come to terms about it not happening",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Ok, let me pick another resource",
+          "hasGoToStep": true,
+          "goToStepByNum": "5",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Eliciting resource - Image",
+      "description": "***\"${s8}\"***\n\nGood, and as you keep thinking about this now:\n\n*${s7}*\n\nAllow an image to come to mind",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "OK, I see the image",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Got the image, what’s next?",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Congruence check (CC)",
+      "description": "Do you have any objections to experience the future scenarios regarding {hchildName}, in the same way you are experiencing that savored dream that didn't happen?",
+      "notes": "Savoring it, with more peace?",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "No objections",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "No, I'd love to savor that future",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Yes, I have an objection",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Common questions & concerns",
+      "description": "***\"Yes, I have an objection\"***\n\nI'm glad you are being honest with me and yourself. As I said in the beginning, we'll only do what you are comfortable doing.\n\nPlease go over the following FAQs, and let me know which ones were relevant for you, and if you still have an objection.",
+      "notes": "***- \"My heart don't want to let it go\"***  \nI certainly don't want you to let it go, either. we are not abolishing or erasing {hchildName}, and everything we do is reversible, so no need to let it go. Just like the dream you used to have, but didn't happen, I am offering you a way to honor that future plan you had with/for {hchildHim}, in a more peaceful and loving way.\n\n***- \"Isn't grieving about this a way to honor it?\"***  \nIndeed, it's honoring it by marking how much it is important for you. Otherwise, there would be nothing to grieve about. What I am offering you is a way to honor it even more, by remembering it in a softer, peaceful way, so you can treasure it and appreciate it while feeling more complete; honoring it in a more “wholesome” way. To savor and cherish it forever. \n\nif you still have a concern or a question, mark \"I still have an objection/question\".\n\nif there's something you want to comment before proceeding, click \"other\" and write it there.\n",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "That's a lovely way to describe it",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I'm ready to continue, thank you for clarifying",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I still have a concern/question",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "savoring"
+        },
+        {
+          "isOther": true,
+          "text": "Other",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "isReadOnly": true
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Contrastive Analysis",
+      "description": "Now as you think about both of these at the same time:\n\n**The resource:**  \n*\"${s7}\"*\n\n**And the cue:**  \n*\"${s3}\"*\n\nAttend to the differences in how you see, hear, and experience them in your mind.\n\nAs you go back and forth between the two a few times, notice the visual, auditory, and tactile differences between the way you experience them.\n\nWhat are the main differences you see, hear, and feel between the two? Write down all differences you can already notice.",
+      "type": "long",
+      "inputPlaceholder": "The differences I already notice are ...",
+      "answers": []
+    },
+    {
+      "title": "Contrastive Analysis - location & distance",
+      "description": "Now check, as you look at the resource image and the cue image, are the images in the same place in your physical space?\n\nFor example you might see one image further away to your left, while the the other will be closer and to your right.",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "One image is closer than the other",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "16"
+        },
+        {
+          "isOther": false,
+          "text": "One image is higher than the other",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "16"
+        },
+        {
+          "isOther": false,
+          "text": "One image is more to my right and the other to my left",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "16"
+        },
+        {
+          "isOther": false,
+          "text": "One image is more in front of me than the other",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "16"
+        },
+        {
+          "isOther": false,
+          "text": "The images are in the exact same place",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": true,
+          "text": "Other",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "16"
+        }
+      ]
+    },
+    {
+      "title": "Contrastive Analysis - location & distance",
+      "description": "***“The images are in the exact same place”***\n\nWhile it does happen that the images are in the same place and distance to begin with, it is very rare, so I just want to be thorough here, with your permission.\n\nI want you to look again at the **resource image** again:  \n*${s7}*\n\nThen at the **cue image** again:  \n*${s3}*\n\nAnd go back and forth between the two a few times. Then close your eyes and point at the location you see each of them.\n\nAre you pointing to the **exact same place**, and the images are the **exact same distance** from you?",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I’m pointing to the exact same place",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "17"
+        },
+        {
+          "isOther": false,
+          "text": "I’m pointing to two different places",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ]
+    },
+    {
+      "title": "Mapping Across - location & distance",
+      "description": "Now notice what happens as you allow the cue image, to slide to the same location of the resource image.\n\nSo you see both images in the same location and distance from you.",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I feel MUCH better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I don’t feel a change in this step",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel worse",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "feel worse"
+        }
+      ]
+    },
+    {
+      "title": "Mapping Across - brightness / dimness",
+      "description": "Next notice what happens as you allow the cue image to become as bright (or as dim) as the resource image.\n\nSo you see both images in the same brightness/dimness.",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I feel MUCH better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I don’t feel a change in this step",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel worse",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "feel worse"
+        }
+      ]
+    },
+    {
+      "title": "Mapping Across - depth(3d)",
+      "description": "Now notice what happens as you allow the cue image to become as deep/flat as the resource image.\n\nSo you see both images in the same depth.",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I feel MUCH better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I don’t feel a change in this step",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel worse",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "feel worse"
+        }
+      ]
+    },
+    {
+      "title": "Mapping Across - vividness & focus",
+      "description": "Next notice what happens as you allow the cue image to become as vivid and focused as the resource image.\n\nSo you see both images in the same vividness & focus.",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I feel MUCH better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I don’t feel a change in this step",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel worse",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "feel worse"
+        }
+      ]
+    },
+    {
+      "title": "Mapping Across - sound",
+      "description": "Do any of the images have sound?\n\nVoice, background noises, music, or any type of sound.",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Both have sound",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Neither have sound",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "24"
+        },
+        {
+          "isOther": false,
+          "text": "Cue does, resource doesn't",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "22"
+        },
+        {
+          "isOther": false,
+          "text": "Resource has, cue doesn't",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "feel worse",
+          "hasGoToStep": true,
+          "goToStepByNum": "23"
+        }
+      ]
+    },
+    {
+      "title": "Mapping Across - sound",
+      "description": "***“Both have sound”***\n\nNotice what happens as you allow the sound of the cue image, to become like the sound of the resource image.\n\nSo you hear both of them in the same way. Same sound quality, tempo, tone, volume, direction, etc",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I feel MUCH better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "24"
+        },
+        {
+          "isOther": false,
+          "text": "I feel better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "24"
+        },
+        {
+          "isOther": false,
+          "text": "I don’t feel a change in this step",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "24"
+        },
+        {
+          "isOther": false,
+          "text": "I feel worse",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "feel worse"
+        }
+      ]
+    },
+    {
+      "title": "Mapping Across - sound",
+      "description": "***“Cue does, resource doesn't”***\n\nNotice what happens as you allow the cue image to become muted as well.\n\nLike in a tv remote, as you press the “mute” button, or the “decrease volume” all the way to zero.",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I feel MUCH better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "24"
+        },
+        {
+          "isOther": false,
+          "text": "I feel better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "24"
+        },
+        {
+          "isOther": false,
+          "text": "I don’t feel a change in this step",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "24"
+        },
+        {
+          "isOther": false,
+          "text": "I feel worse",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "feel worse"
+        }
+      ]
+    },
+    {
+      "title": "Mapping Across - sound",
+      "description": "***“Resource has, cue doesn't”***\n\nNotice what happens as you turn on the sound in the cue image, and allow it to become like the sound of the resource image.\n\nLike in a tv remote, as you press the “mute/unmute” button, or the “increase volume” all the way to zero. So you hear both of them in the same way. Same sound quality, tempo, tone, direction, etc",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I feel MUCH better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I don’t feel a change in this step",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel worse",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "feel worse"
+        }
+      ]
+    },
+    {
+      "title": "Mapping Across - tactile / touch",
+      "description": "Do any of the images have tactile sensations or a sense of touch?\n\nI.e. you feel someone’s touch, something touching your skin, etc",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Both have tactile",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Neither have tactile",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "28"
+        },
+        {
+          "isOther": false,
+          "text": "Cue does, resource doesn't",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "26"
+        },
+        {
+          "isOther": false,
+          "text": "Resource has, cue doesn't",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "feel worse",
+          "hasGoToStep": true,
+          "goToStepByNum": "27"
+        }
+      ]
+    },
+    {
+      "title": "Mapping Across - tactile / touch",
+      "description": "***“Both have tactile”***\n\nNotice what happens as you allow the tactile sensations of the cue image, to become like the tactile sensations of the resource image.\n\nSo you feel the touch in both of them in the same way. Same texture, temperature, softness/stiffness, etc ",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I feel MUCH better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "28"
+        },
+        {
+          "isOther": false,
+          "text": "I feel better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "28"
+        },
+        {
+          "isOther": false,
+          "text": "I don’t feel a change in this step",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "28"
+        },
+        {
+          "isOther": false,
+          "text": "I feel worse",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "feel worse"
+        }
+      ]
+    },
+    {
+      "title": "Mapping Across - tactile / touch",
+      "description": "***“Cue does, resource doesn't”***\n\nNotice what happens as you allow the tactile sensation of the cue image to drain away, and become touchless/tactiless as well.",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I feel MUCH better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "28"
+        },
+        {
+          "isOther": false,
+          "text": "I feel better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "28"
+        },
+        {
+          "isOther": false,
+          "text": "I don’t feel a change in this step",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "28"
+        },
+        {
+          "isOther": false,
+          "text": "I feel worse",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "feel worse"
+        }
+      ]
+    },
+    {
+      "title": "Mapping Across - tactile / touch",
+      "description": "***“Resource has, cue doesn't”***\n\nNotice what happens as you start feeling the sense of touch in the cue image, and allow it to become like the sense of touch in the resource image.\n\nSo you feel the touch in both of them in the same way. Same texture, temperature, softness/stiffness, etc ",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I feel MUCH better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I don’t feel a change in this step",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel worse",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "feel worse"
+        }
+      ]
+    },
+    {
+      "title": "Mapping Across - remaining differences",
+      "description": "Now go back and forth between both images and scan for remaining differences.\n\nIs there anything else in the way you experience the resource, which you'd like to apply to the cue?\n\n**Resource:**\n*\"${s7}\"*\n\n**Cue:**\n*\"${s3}\"*",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I don't notice any remaining differences",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "31"
+        },
+        {
+          "isOther": false,
+          "text": "I notice some differences I want to apply",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I notice some differences I don't want to apply",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "31"
+        }
+      ]
+    },
+    {
+      "title": "Mapping Across - remaining differences",
+      "description": "***“I noticed some differences I want to apply”***\n\nGood observation, what remaining differences do you notice?",
+      "type": "long",
+      "inputPlaceholder": "",
+      "answers": []
+    },
+    {
+      "title": "Mapping Across - remaining differences",
+      "description": "${echo}\n\nApply them as well now and notice what happens",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I feel MUCH better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I don’t feel a change in this step",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel worse",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "feel worse"
+        }
+      ]
+    },
+    {
+      "title": "Increasing peace - color",
+      "description": "As you think of this experience you just transformed now:\n\n*\"${s3}\"*\n\nTry making it B&W/gray scale, and decrease the colorfulness",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I feel MUCH better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I don’t feel a change in this step",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel worse",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "feel worse"
+        }
+      ]
+    },
+    {
+      "title": "Increasing peace - Fading out",
+      "description": "Now try fading it out a bit, and notice how much increases the peace.\n\nAllow it to fade out completely, then start fading it in, so you find your sweet spot.",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I feel MUCH better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I don’t feel a change in this step",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel worse",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "feel worse"
+        }
+      ]
+    },
+    {
+      "title": "Increasing peace - Transparency",
+      "description": "Now allow it to fade out a bit, and notice how much it increases the peace.",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I feel MUCH better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I don’t feel a change in this step",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel worse",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "feel worse"
+        }
+      ]
+    },
+    {
+      "title": "Increasing peace - Zoom out",
+      "description": "Next try “zooming out” the experience. The image itself would still be at the same plane, and the same distance from you, but the content of the image would zoom out.",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I feel MUCH better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I don’t feel a change in this step",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel worse",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "feel worse"
+        }
+      ],
+      "notes": "It sometimes helps to think of a camera or taking a photo with your smartphone. You can zoom out the camera, so the screen is still in the same distance from you, but the image on the screen is zoomed out."
+    },
+    {
+      "title": "Increasing peace - Distance",
+      "description": "Next allow it to get further into the distance, to a point you still see it but much less, and notice how much it increases the peace.\n\nAllow it to get waaaaaay far into the distance, then start pulling it back a bit closer, so you find your sweet spot.",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I feel MUCH better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I don’t feel a change in this step",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel worse",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "feel worse"
+        }
+      ]
+    },
+    {
+      "title": "Increasing peace - Still & flat",
+      "description": "If it's not already a still flat image, make it still and flat, and notice how much it increases the peace.",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I feel MUCH better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I don’t feel a change in this step",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel worse",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "feel worse"
+        }
+      ]
+    },
+    {
+      "title": "Increasing peace - Frame",
+      "description": "Now how about putting a frame around that pic?\n\nTry different frames, see if anything works for you.",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I feel MUCH better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I don’t feel a change in this step",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel worse",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "feel worse"
+        }
+      ]
+    },
+    {
+      "title": "Increasing peace - Lamination & glass",
+      "description": "Next experiment with different lamination and glass over the image, and notice how much it increases the peace.",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I feel MUCH better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I don’t feel a change in this step",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel worse",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "feel worse"
+        }
+      ]
+    },
+    {
+      "title": "Increasing peace - Muting",
+      "description": "If there's sound or voices that goes with the image, try muting it and notice if you prefer it that way",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I feel MUCH better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I don’t feel a change in this step",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel worse",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "feel worse"
+        }
+      ]
+    },
+    {
+      "title": "Increasing peace - Tactile",
+      "description": "If there's a sense of touch to the image, or any other tactile sensation, remove it and notice if you prefer it that way",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I feel MUCH better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I don’t feel a change in this step",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel worse",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "feel worse"
+        }
+      ]
+    },
+    {
+      "title": "Increasing peace - Word, date, album",
+      "description": "Now some parents found it appropriate to add a word(s) to the image, or a date. It could be on the image itself somewhere, above it, to the side or below.\n\nSome parents also like to put the image in a photo album in their mind.\n\nThe words can be written in an artistic way, with decorations (gold is common). If this doesn't make sense to you or doesn't appeal to you, skip it. If you are not sure, the best way to find out is to experiment.",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I feel MUCH better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I don’t feel a change in this step",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel worse",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "feel worse"
+        }
+      ]
+    },
+    {
+      "title": "Increasing peace - Additional changes",
+      "description": "Now take a moment to play the “director” role, notice if there are any further changes you'd like to make. Something you'd like to add or embellish in anyway.\n\nWe can always revise this later of course, and there's no \"right or wrong\" here.",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Nothing comes to mind at the moment",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "45"
+        },
+        {
+          "isOther": false,
+          "text": "Hmm … There’s something I want to try",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Oh yeah I have something!",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ]
+    },
+    {
+      "title": "Increasing peace - Additional changes",
+      "description": "${echo}\n\nGreat, what is it?\n\nYou don’t have to share, but … If something works for you, it might help many other parents as well, so anything you share is VERY appreciated. If you want to keep it to yourself, just write something for reference.",
+      "type": "long",
+      "inputPlaceholder": "",
+      "answers": []
+    },
+    {
+      "title": "Increasing peace - Additional changes",
+      "description": "${echo}\n\nNow notice what happens as you allow that change to take place now.",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I feel MUCH better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel better",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I don’t feel a change in this step",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I feel worse",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "feel worse"
+        }
+      ]
+    },
+    {
+      "title": "Generalizing peace - Intro",
+      "description": "When we started, I asked you to think about the future plans & dreams you had with and for ${hchildName}.\n\nThen we picked the strongest one, and we transformed it.\n\nNow it's time to generalize the change, and savor the rest of them.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "OK, let's generalize the change",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Generalizing peace - Check",
+      "description": "So first check, as you think of the other future plans with and for ${hchildName}, if they are already in their correct place, same place  as the experience you just transformed:\n\n${s3}\n\nAnd if you already see, hear, and feel them in the same way.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "The other experiences are not yet there",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "The other experiences are already there",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Generalizing peace",
+      "description": "${echo}\n\nOK, so allow the other experiences to completely slide to their correct place, same as the experience you just transformed.\n\nAnd as you do so, allow the other changes to fully take place as well (The colors, brightness, depth, sound, touch, lamination/glass/album etc)",
+      "notes": "**Note**: Some parents prefer to repeat the individual process with another single experience first, before generalizing the change to the rest of them.\n\nIf that's the case for you, click \"let's transform another single experience first\"",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": "",
+          "text": "All the other changes have taken place",
+          "hasGoToStep": true,
+          "goToStepByNum": "49"
+        },
+        {
+          "isOther": false,
+          "text": "let's transform another single experience first",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Choosing next single experience",
+      "description": "***\"let's transform another single experience first\"***\n\nOK, so I'm redirecting you back to the first step, so you could choose the next single experience to transform.\n\nIt's usually much faster, easier, and more automatic the second time.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "OK, let's transform another single experience",
+          "hasGoToStep": true,
+          "goToStepByNum": "1",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Actually, let me try generalizing the change again",
+          "hasGoToStep": true,
+          "goToStepByNum": "45",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Congruence check (CC)",
+      "description": "***\"All the other changes have taken place\"***\n\nGreat, and do you have any objections being this way, experiencing these experiences like that, savoring and cherishing the future plans you had for your child?",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Objections? of course not!",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I'd LOVE to be this way and cherish this forever",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "No objections",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Yes I have an objection",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "savoring"
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    }
+  ],
+  "hiddenFields": [
+    {
+      "customOption": true,
+      "id": "new-id-20",
+      "label": "childName"
+    },
+    {
+      "customOption": true,
+      "id": "new-id-36",
+      "label": "childHe"
+    },
+    {
+      "customOption": true,
+      "id": "new-id-54",
+      "label": "childHim"
+    },
+    {
+      "customOption": true,
+      "id": "new-id-72",
+      "label": "childHis"
+    }
+  ],
+  "url": "savoring-savoring-the-future"
+}
