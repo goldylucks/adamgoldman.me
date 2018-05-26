@@ -818,21 +818,27 @@
           "text": "I feel MUCH better",
           "isLinkNew": false,
           "isConcern": false,
-          "concern": ""
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "34"
         },
         {
           "isOther": false,
           "text": "I feel better",
           "isLinkNew": false,
           "isConcern": false,
-          "concern": ""
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "34"
         },
         {
           "isOther": false,
           "text": "I don’t feel a change in this step",
           "isLinkNew": false,
           "isConcern": false,
-          "concern": ""
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "34"
         },
         {
           "isOther": false,
@@ -1085,7 +1091,7 @@
     },
     {
       "title": "Mapping Across - remaining differences",
-      "description": "Remaining differences\n\nNow go back and forth between both images and scan for remaining differences.\n\nIs there anything else in the way you experience the resource, which you'd like to apply to the cue?\n\n**Resource:**\n*\"${s12}\"*\n\n**Cue:**\n*\"${s4}\"*",
+      "description": "Now go back and forth between both images and scan for remaining differences.\n\nIs there anything else in the way you experience the resource, which you'd like to apply to the cue?\n\n**Resource:**\n*\"${s12}\"*\n\n**Cue:**\n*\"${s4}\"*",
       "type": "radio",
       "inputPlaceholder": "",
       "answers": [
