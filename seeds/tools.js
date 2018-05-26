@@ -1,3 +1,4 @@
+const savoringReengagingTheFuture = require('./tools/savoringReengagingTheFuture.json')
 const savoringSavoringTheFuture = require('./tools/savoringSavoringTheFuture.json')
 const savoringRelationshipConsilidation = require('./tools/savoringRelationshipConsilidation.json')
 const savoringReunion = require('./tools/savoringReunion.json')
@@ -21,6 +22,7 @@ const toolHasReviewTest = require('./tools/hasReviewTest.json')
 const toolTestShort = require('./tools/shortToolTest.json')
 
 module.exports = [
+  savoringReengagingTheFuture,
   savoringSavoringTheFuture,
   savoringRelationshipConsilidation,
   savoringReunion,

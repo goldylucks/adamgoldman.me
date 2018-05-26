@@ -1,0 +1,307 @@
+{
+    "isDraft": false,
+    "hasReview": true,
+    "isSavoring": false,
+    "isGrief": true,
+    "title": "Reengaging the future",
+    "description": "",
+    "credits": "",
+    "steps": [
+      {
+        "title": "Background",
+        "description": "This part is derived from the most effective strategies for responding resourcefully to a loss, and will assist you to actively seek out appropriate new nourishing experiences in the future, inspired by your relationship with the loved one you lost.",
+        "notes": "**Note**: This process is usually much more powerful, healing, and beneficial, after completing the [reunion process](/tools/reunionNEW) first",
+        "type": "radio",
+        "inputPlaceholder": "",
+        "answers": [
+          {
+            "isOther": false,
+            "text": "Let's start",
+            "isLinkNew": false,
+            "isConcern": false,
+            "concern": ""
+          },
+          {
+            "isOther": false,
+            "text": "Let's do Reunion first",
+            "isLinkNew": true,
+            "linkNew": "/tools/reunion",
+            "isConcern": false,
+            "concern": ""
+          }
+        ]
+      },
+      {
+        "title": "Name",
+        "description": "What's the name of the person you are grieving?",
+        "notes": "",
+        "type": "short",
+        "inputPlaceholder": "",
+        "answers": []
+      },
+      {
+        "title": "Gender",
+        "description": "Is ${s1} a male or female?",
+        "notes": "",
+        "type": "radio",
+        "inputPlaceholder": "",
+        "answers": [
+          {
+            "isOther": false,
+            "text": "Male",
+            "isLinkNew": false,
+            "isConcern": false,
+            "concern": ""
+          },
+          {
+            "isOther": false,
+            "text": "Female",
+            "isLinkNew": false,
+            "isConcern": false,
+            "concern": ""
+          }
+        ]
+      },
+      {
+        "title": "Eliciting qualities",
+        "description": "Now think about ${s1}, and identify what is it about this relationship with ${him2} that you value so much.\n\nWhat are some of the qualities, aspects, values or outcomes that make it valuable and special to you?",
+        "notes": "E.g. tenderness, sweetness, softness, unconditional love, humor, spontaneity, acceptance, etc\n\nYou might benefit from taking a moment and relive in your mind some of the best experiences you had with ${s1}, sort of the \"hall of fame\" of your times together.",
+        "type": "long",
+        "inputPlaceholder": "",
+        "answers": []
+      },
+      {
+        "title": "Eliciting qualities representations",
+        "description": "${echo}\n\nNow as you attend to those values and qualities, allow your unconscious and imagination to bring to mind many images, sounds, and sensations that might correspond and represent these values and qualities.\n\nThese could be metaphors, symbols or anything else that can represent these values and qualities for you, in any way shape or form. How many do you have in mind?",
+        "notes": "For example for some parents bird represent freedom, and the person they lost gave them a sense of freedom, so they see a bird (or a flock) as a symbol for the freedom they feel when thinking about that person.\n\nFor others a soft tissue or pillow represents how soft and tender the person was.\n\nWhatever it is what comes to your mind now and is appropriate for you.\n\nNow as you think about these values and qualities, close your eyes, do it now, and let me know when you're done, and roughly how many of those symbols you have in mind.",
+        "type": "short",
+        "inputPlaceholder": "I have about XX representations in mind ...",
+        "answers": []
+      },
+      {
+        "title": "Eliciting qualities representations",
+        "description": "Now take those ${s4} or so representations and symbols, and stack them together like a deck of cards.\n\nThen as you look at the deck, allow it to multiple many times over, preferably until there are more cards than you can count.",
+        "notes": "Cards is what works for most parents. You can choose any way you wish to stack them.",
+        "type": "radio",
+        "inputPlaceholder": "I have about XX representations in mind ...",
+        "answers": [
+          {
+            "isOther": false,
+            "text": "I've multiplied the deck, it's huge now",
+            "isLinkNew": false,
+            "isConcern": false,
+            "concern": ""
+          },
+          {
+            "isOther": false,
+            "text": "I see many decks",
+            "isLinkNew": false,
+            "isConcern": false,
+            "concern": ""
+          },
+          {
+            "isOther": true,
+            "text": "Other",
+            "isLinkNew": false,
+            "isConcern": false,
+            "concern": "",
+            "isReadOnly": true
+          }
+        ]
+      },
+      {
+        "title": "Embellishing representations",
+        "description": "Now as you look at all the cards, allow each card to glow, sparkle, shine, radiate light and gloss if you wish.",
+        "notes": "Feel free to add any other visual appealing \"effects\" and make adjustments to make the cards more attractive for you",
+        "type": "radio",
+        "inputPlaceholder": "",
+        "answers": [
+          {
+            "isOther": false,
+            "text": "This is beautiful!",
+            "isLinkNew": false,
+            "isConcern": false,
+            "concern": ""
+          },
+          {
+            "isOther": false,
+            "text": "It's better this way",
+            "isLinkNew": false,
+            "isConcern": false,
+            "concern": ""
+          },
+          {
+            "isOther": false,
+            "text": "Let's continue",
+            "isLinkNew": false,
+            "isConcern": false,
+            "concern": ""
+          },
+          {
+            "isOther": true,
+            "text": "Other",
+            "isLinkNew": false,
+            "isConcern": false,
+            "concern": "",
+            "isReadOnly": true
+          }
+        ]
+      },
+      {
+        "title": "Sparkling future",
+        "description": "Now face your future (or think about your future), and cast the cards, one by one or all at once, into your future.\n\nWatch them spread out and fall into many different places.\n\nWhen you have finished, you will see lots of little sparkling dots of light indicating where each card landed in your future, drawing you forward.",
+        "notes": "",
+        "type": "radio",
+        "inputPlaceholder": "",
+        "answers": [
+          {
+            "isOther": false,
+            "text": "The sparkling dots do draw me forward …",
+            "isLinkNew": false,
+            "isConcern": false,
+            "concern": ""
+          },
+          {
+            "isOther": false,
+            "text": "Future's looking pretty good right now!",
+            "isLinkNew": false,
+            "isConcern": false,
+            "concern": ""
+          },
+          {
+            "isOther": false,
+            "text": "This is interesting ...",
+            "isLinkNew": false,
+            "isConcern": false,
+            "concern": ""
+          },
+          {
+            "isOther": true,
+            "text": "Other",
+            "isLinkNew": false,
+            "isConcern": false,
+            "concern": "",
+            "isReadOnly": true
+          }
+        ]
+      },
+      {
+        "title": "Sparkling future - embellishments",
+        "description": "Now as you look at all the glowing dots, cards and symbols, notice if some of them already want to multiply and transform, and spread in and throughout your future even more.",
+        "notes": "",
+        "type": "radio",
+        "inputPlaceholder": "",
+        "answers": [
+          {
+            "isOther": false,
+            "text": "Some of them have transformed",
+            "isLinkNew": false,
+            "isConcern": false,
+            "concern": ""
+          },
+          {
+            "isOther": false,
+            "text": "Some of them indeed multiplied",
+            "isLinkNew": false,
+            "isConcern": false,
+            "concern": ""
+          },
+          {
+            "isOther": false,
+            "text": "Some of them have spread",
+            "isLinkNew": false,
+            "isConcern": false,
+            "concern": ""
+          },
+          {
+            "isOther": true,
+            "text": "Other",
+            "isLinkNew": false,
+            "isConcern": false,
+            "concern": "",
+            "isReadOnly": true
+          }
+        ]
+      },
+      {
+        "title": "Connecting the sparkles",
+        "description": "And as you experience the future this way, and look at all the glowing dots, notice if some of them can connect to one another and to you, with a glowing string, thread, or any form that feels good now",
+        "notes": "",
+        "type": "radio",
+        "inputPlaceholder": "",
+        "answers": [
+          {
+            "isOther": false,
+            "text": "The glowing dots are connected to each other",
+            "isLinkNew": false,
+            "isConcern": false,
+            "concern": ""
+          },
+          {
+            "isOther": false,
+            "text": "I am connected to the glowing dots as well",
+            "isLinkNew": false,
+            "isConcern": false,
+            "concern": ""
+          },
+          {
+            "isOther": false,
+            "text": "This is gorgeous",
+            "isLinkNew": false,
+            "isConcern": false,
+            "concern": ""
+          },
+          {
+            "isOther": true,
+            "text": "Other",
+            "isLinkNew": false,
+            "isConcern": false,
+            "concern": "",
+            "isReadOnly": true
+          }
+        ]
+      },
+      {
+        "title": "Playing director",
+        "description": "Now as you look at that, take a moment to play \"director\" and see if anything comes to mind, how to embellish that even more, in whatever way you can think of.\n\nTry playing with lights, sounds, surroundings, metaphors, symbols and anything else that comes to mind.\n\nClose your eyes and do it now, and let me know what changes come to mind.",
+        "notes": "",
+        "type": "long",
+        "inputPlaceholder": "",
+        "answers": []
+      },
+      {
+        "title": "The best is yet to come ...",
+        "description": "And tonight as you sleep and dream, you can let your unconscious carry these changes into more areas and experiences in your life, in more unexpected ways and forms.",
+        "notes": "",
+        "type": "radio",
+        "inputPlaceholder": "",
+        "answers": [
+          {
+            "isOther": false,
+            "text": "You read my mind",
+            "isLinkNew": false,
+            "isConcern": false,
+            "concern": ""
+          },
+          {
+            "isOther": false,
+            "text": "Sounds good",
+            "isLinkNew": false,
+            "isConcern": false,
+            "concern": ""
+          },
+          {
+            "isOther": true,
+            "text": "Other",
+            "isLinkNew": false,
+            "isConcern": false,
+            "concern": "",
+            "isReadOnly": true
+          }
+        ]
+      }
+    ],
+    "hiddenFields": [],
+    "url": "savoring-reengaging-the-future"
+  }
+  
