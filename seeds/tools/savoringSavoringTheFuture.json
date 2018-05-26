@@ -315,14 +315,14 @@
       "flashStepNum": ""
     },
     {
-      "title": "Contrastive Analysis",
+      "title": "Contrastive analysis",
       "description": "Now as you think about both of these at the same time:\n\n**The resource:**  \n*\"${s7}\"*\n\n**And the cue:**  \n*\"${s3}\"*\n\nAttend to the differences in how you see, hear, and experience them in your mind.\n\nAs you go back and forth between the two a few times, notice the visual, auditory, and tactile differences between the way you experience them.\n\nWhat are the main differences you see, hear, and feel between the two? Write down all differences you can already notice.",
       "type": "long",
       "inputPlaceholder": "The differences I already notice are ...",
       "answers": []
     },
     {
-      "title": "Contrastive Analysis - location & distance",
+      "title": "Contrastive analysis - Location & distance",
       "description": "Now check, as you look at the resource image and the cue image, are the images in the same place in your physical space?\n\nFor example you might see one image further away to your left, while the the other will be closer and to your right.",
       "type": "radio",
       "inputPlaceholder": "",
@@ -382,7 +382,7 @@
       ]
     },
     {
-      "title": "Contrastive Analysis - location & distance",
+      "title": "Contrastive analysis - Location & distance",
       "description": "***“The images are in the exact same place”***\n\nWhile it does happen that the images are in the same place and distance to begin with, it is very rare, so I just want to be thorough here, with your permission.\n\nI want you to look again at the **resource image** again:  \n*${s7}*\n\nThen at the **cue image** again:  \n*${s3}*\n\nAnd go back and forth between the two a few times. Then close your eyes and point at the location you see each of them.\n\nAre you pointing to the **exact same place**, and the images are the **exact same distance** from you?",
       "type": "radio",
       "inputPlaceholder": "",
@@ -406,7 +406,7 @@
       ]
     },
     {
-      "title": "Mapping Across - location & distance",
+      "title": "Mapping across - Location & distance",
       "description": "Now notice what happens as you allow the cue image, to slide to the same location of the resource image.\n\nSo you see both images in the same location and distance from you.",
       "type": "radio",
       "inputPlaceholder": "",
@@ -442,7 +442,7 @@
       ]
     },
     {
-      "title": "Mapping Across - brightness / dimness",
+      "title": "Mapping across - Brightness / dimness",
       "description": "Next notice what happens as you allow the cue image to become as bright (or as dim) as the resource image.\n\nSo you see both images in the same brightness/dimness.",
       "type": "radio",
       "inputPlaceholder": "",
@@ -478,7 +478,7 @@
       ]
     },
     {
-      "title": "Mapping Across - depth(3d)",
+      "title": "Mapping across - Depth(3d)",
       "description": "Now notice what happens as you allow the cue image to become as deep/flat as the resource image.\n\nSo you see both images in the same depth.",
       "type": "radio",
       "inputPlaceholder": "",
@@ -514,7 +514,7 @@
       ]
     },
     {
-      "title": "Mapping Across - vividness & focus",
+      "title": "Mapping across - Vividness & focus",
       "description": "Next notice what happens as you allow the cue image to become as vivid and focused as the resource image.\n\nSo you see both images in the same vividness & focus.",
       "type": "radio",
       "inputPlaceholder": "",
@@ -550,7 +550,7 @@
       ]
     },
     {
-      "title": "Mapping Across - sound",
+      "title": "Mapping across - Sound",
       "description": "Do any of the images have sound?\n\nVoice, background noises, music, or any type of sound.",
       "type": "radio",
       "inputPlaceholder": "",
@@ -592,7 +592,7 @@
       ]
     },
     {
-      "title": "Mapping Across - sound",
+      "title": "Mapping across - Sound",
       "description": "***“Both have sound”***\n\nNotice what happens as you allow the sound of the cue image, to become like the sound of the resource image.\n\nSo you hear both of them in the same way. Same sound quality, tempo, tone, volume, direction, etc",
       "type": "radio",
       "inputPlaceholder": "",
@@ -634,7 +634,7 @@
       ]
     },
     {
-      "title": "Mapping Across - sound",
+      "title": "Mapping across - Sound",
       "description": "***“Cue does, resource doesn't”***\n\nNotice what happens as you allow the cue image to become muted as well.\n\nLike in a tv remote, as you press the “mute” button, or the “decrease volume” all the way to zero.",
       "type": "radio",
       "inputPlaceholder": "",
@@ -676,7 +676,7 @@
       ]
     },
     {
-      "title": "Mapping Across - sound",
+      "title": "Mapping across - Sound",
       "description": "***“Resource has, cue doesn't”***\n\nNotice what happens as you turn on the sound in the cue image, and allow it to become like the sound of the resource image.\n\nLike in a tv remote, as you press the “mute/unmute” button, or the “increase volume” all the way to zero. So you hear both of them in the same way. Same sound quality, tempo, tone, direction, etc",
       "type": "radio",
       "inputPlaceholder": "",
@@ -712,7 +712,7 @@
       ]
     },
     {
-      "title": "Mapping Across - tactile / touch",
+      "title": "Mapping across - Tactile / touch",
       "description": "Do any of the images have tactile sensations or a sense of touch?\n\nI.e. you feel someone’s touch, something touching your skin, etc",
       "type": "radio",
       "inputPlaceholder": "",
@@ -754,7 +754,7 @@
       ]
     },
     {
-      "title": "Mapping Across - tactile / touch",
+      "title": "Mapping across - Tactile / touch",
       "description": "***“Both have tactile”***\n\nNotice what happens as you allow the tactile sensations of the cue image, to become like the tactile sensations of the resource image.\n\nSo you feel the touch in both of them in the same way. Same texture, temperature, softness/stiffness, etc ",
       "type": "radio",
       "inputPlaceholder": "",
@@ -796,7 +796,7 @@
       ]
     },
     {
-      "title": "Mapping Across - tactile / touch",
+      "title": "Mapping across - Tactile / touch",
       "description": "***“Cue does, resource doesn't”***\n\nNotice what happens as you allow the tactile sensation of the cue image to drain away, and become touchless/tactiless as well.",
       "type": "radio",
       "inputPlaceholder": "",
@@ -838,7 +838,7 @@
       ]
     },
     {
-      "title": "Mapping Across - tactile / touch",
+      "title": "Mapping across - Tactile / touch",
       "description": "***“Resource has, cue doesn't”***\n\nNotice what happens as you start feeling the sense of touch in the cue image, and allow it to become like the sense of touch in the resource image.\n\nSo you feel the touch in both of them in the same way. Same texture, temperature, softness/stiffness, etc ",
       "type": "radio",
       "inputPlaceholder": "",
@@ -874,7 +874,7 @@
       ]
     },
     {
-      "title": "Mapping Across - remaining differences",
+      "title": "Mapping across - Remaining differences",
       "description": "Now go back and forth between both images and scan for remaining differences.\n\nIs there anything else in the way you experience the resource, which you'd like to apply to the cue?\n\n**Resource:**\n*\"${s7}\"*\n\n**Cue:**\n*\"${s3}\"*",
       "type": "radio",
       "inputPlaceholder": "",
@@ -907,14 +907,14 @@
       ]
     },
     {
-      "title": "Mapping Across - remaining differences",
+      "title": "Mapping across - Remaining differences",
       "description": "***“I noticed some differences I want to apply”***\n\nGood observation, what remaining differences do you notice?",
       "type": "long",
       "inputPlaceholder": "",
       "answers": []
     },
     {
-      "title": "Mapping Across - remaining differences",
+      "title": "Mapping across - Remaining differences",
       "description": "${echo}\n\nApply them as well now and notice what happens",
       "type": "radio",
       "inputPlaceholder": "",
