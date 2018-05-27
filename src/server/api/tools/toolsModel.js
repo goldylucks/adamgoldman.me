@@ -64,9 +64,5 @@ function getSchema() {
 
     steps: [],
 
-    isRtl: {
-      type: Boolean,
-      default: false,
-    },
   })
 }

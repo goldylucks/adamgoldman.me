@@ -1318,7 +1318,6 @@ module.exports = {
             ]
         }
     ],
-    "isRtl": false,
     "__v": 0,
     "title": "Mind Hacking Session Intro",
     "status": "In Progress",
