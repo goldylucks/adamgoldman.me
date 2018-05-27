@@ -3,7 +3,7 @@
   "hasReview": true,
   "isSavoring": true,
   "isGrief": false,
-  "title": "Savoring the future",
+  "title": "Savoring future plans",
   "description": "Parents often make future plans for and with their children. Then they have constructed scenes in their mind of things they look forward to.  This process is designed to savor the future without these scenes happening, and more coming to terms with the future that will not be.",
   "credits": "",
   "steps": [
@@ -27,7 +27,7 @@
     },
     {
       "title": "Eliciting future loss response",
-      "description": "Think about the things you will never get to do or explore with {hchildName}, or thoughts about dreams and hopes you had for {hchildHim} that will not happen now.",
+      "description": "Think about the things you will never get to do or explore with ${hchildName}, or thoughts about dreams and hopes you had for ${hchildHim} that will not happen now.",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -78,7 +78,7 @@
     {
       "title": "Eliciting future loss response - Description",
       "description": "As you think about that, describe to me a bit what image comes to mind",
-      "notes": "No need for details, a title for reference would do. I.e. “taking {hchildHim} to college”",
+      "notes": "No need for details, a title for reference would do. I.e. “taking ${hchildHim} to college”",
       "type": "short",
       "inputPlaceholder": "",
       "answers": [],
@@ -219,7 +219,7 @@
     },
     {
       "title": "Eliciting resource - Image",
-      "description": "***\"${s8}\"***\n\nGood, and as you keep thinking about this now:\n\n*${s7}*\n\nAllow an image to come to mind",
+      "description": "***\"${s8}\"***\n\nGood, and as you keep thinking about this now:\n\n*\"${s7}\"*\n\nAllow an image to come to mind",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -244,7 +244,7 @@
     },
     {
       "title": "Congruence check (CC)",
-      "description": "Do you have any objections to experience the future scenarios regarding {hchildName}, in the same way you are experiencing that savored dream that didn't happen?",
+      "description": "Do you have any objections to experience the future scenarios regarding ${hchildName}, in the same way you are experiencing that savored dream that didn't happen?",
       "notes": "Savoring it, with more peace?",
       "type": "radio",
       "inputPlaceholder": "",
@@ -254,14 +254,18 @@
           "text": "No objections",
           "isLinkNew": false,
           "isConcern": false,
-          "concern": ""
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "13"
         },
         {
           "isOther": false,
           "text": "No, I'd love to savor that future",
           "isLinkNew": false,
           "isConcern": false,
-          "concern": ""
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "13"
         },
         {
           "isOther": false,
@@ -277,7 +281,7 @@
     {
       "title": "Common questions & concerns",
       "description": "***\"Yes, I have an objection\"***\n\nI'm glad you are being honest with me and yourself. As I said in the beginning, we'll only do what you are comfortable doing.\n\nPlease go over the following FAQs, and let me know which ones were relevant for you, and if you still have an objection.",
-      "notes": "***- \"My heart don't want to let it go\"***  \nI certainly don't want you to let it go, either. we are not abolishing or erasing {hchildName}, and everything we do is reversible, so no need to let it go. Just like the dream you used to have, but didn't happen, I am offering you a way to honor that future plan you had with/for {hchildHim}, in a more peaceful and loving way.\n\n***- \"Isn't grieving about this a way to honor it?\"***  \nIndeed, it's honoring it by marking how much it is important for you. Otherwise, there would be nothing to grieve about. What I am offering you is a way to honor it even more, by remembering it in a softer, peaceful way, so you can treasure it and appreciate it while feeling more complete; honoring it in a more “wholesome” way. To savor and cherish it forever. \n\nif you still have a concern or a question, mark \"I still have an objection/question\".\n\nif there's something you want to comment before proceeding, click \"other\" and write it there.\n",
+      "notes": "***- \"My heart don't want to let it go\"***  \nI certainly don't want you to let it go, either. we are not abolishing or erasing ${hchildName}, and everything we do is reversible, so no need to let it go. Just like the dream you used to have, but didn't happen, I am offering you a way to honor that future plan you had with/for ${hchildHim}, in a more peaceful and loving way.\n\n***- \"Isn't grieving about this a way to honor it?\"***  \nIndeed, it's honoring it by marking how much it is important for you. Otherwise, there would be nothing to grieve about. What I am offering you is a way to honor it even more, by remembering it in a softer, peaceful way, so you can treasure it and appreciate it while feeling more complete; honoring it in a more “wholesome” way. To savor and cherish it forever. \n\nif you still have a concern or a question, mark \"I still have an objection/question\".\n\nif there's something you want to comment before proceeding, click \"other\" and write it there.\n",
       "type": "radio",
       "inputPlaceholder": "",
       "answers": [
@@ -1440,7 +1444,7 @@
     },
     {
       "title": "Generalizing peace - Check",
-      "description": "So first check, as you think of the other future plans with and for ${hchildName}, if they are already in their correct place, same place  as the experience you just transformed:\n\n${s3}\n\nAnd if you already see, hear, and feel them in the same way.",
+      "description": "So first check, as you think of the other future plans with and for ${hchildName}, if they are already in their correct place, same place  as the experience you just transformed:\n\n*\"${s3}\"*\n\nAnd if you already see, hear, and feel them in the same way.",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -1581,5 +1585,5 @@
       "label": "childHis"
     }
   ],
-  "url": "savoring-savoring-the-future"
+  "url": "savoring-savoring-future-plans"
 }

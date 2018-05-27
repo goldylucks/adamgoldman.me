@@ -4,13 +4,13 @@
   "isSavoring": true,
   "isGrief": false,
   "title": "Relationship Consolidation",
-  "description": "This process will increase acceptance and soften unpleasant experiences, while increasing the presence and good feeling towards and with your child.",
+  "description": "This process will soften unpleasant experiences, while increasing the presence and good feeling towards and with your child.",
   "credits": "",
   "steps": [
     {
       "title": "Intro",
       "description": "In every relationship there are some moments that are better than others, and I’m sure your relationship with ${hchildName} is no different.",
-      "notes": "This process will increase acceptance and soften unpleasant experiences, while increasing the presence and good feeling towards and with ${hchildName}.\n\nIt will also offer you some new perspectives for the relationship.",
+      "notes": "This process will soften unpleasant experiences, while increasing the presence and good feeling towards and with ${hchildName}.\n\nIt will also offer you some new perspectives for the relationship.",
       "type": "radio",
       "inputPlaceholder": "",
       "answers": [
@@ -38,7 +38,7 @@
     {
       "title": "Unpleasant experiences",
       "description": "\nI'll soon ask you to sort all the unpleasant experiences with ${hchildName}, and any bad experience that is related to ${hchildHim} in any way.\n\nI want you to dissociate from those experiences so you neutralize/soften any bad feelings that might still be there.",
-      "notes": "Here's how you do it:\n\nFor each experience, see it from the outside, in 3rd person, so you see your younger self \"over there\" in it.\n\nThen make the picture dimmer and B&W, mute the sounds, and allow the picture to get further away from you, so you gain some distance.\n\nIf you come across a particular memory that still has too much “sting” to it, pause the process, and [notify me](https://m.me/adamgoldman.me) at",
+      "notes": "Here's how you do it:\n\nFor each experience, see it from the outside, in 3rd person, so you see your younger self \"over there\" in it.\n\nThen make the picture dimmer and B&W, mute the sounds, and allow the picture to get further away from you, so you gain some distance.\n\nIf you come across a particular memory that still has too much “sting” to it, pause the process, and [notify me](https://m.me/adamgoldman.me?ref=tool-concern-generic-entry) at",
       "type": "radio",
       "inputPlaceholder": "",
       "answers": [
@@ -580,7 +580,9 @@
           "text": "Nothing comes to mind at the moment",
           "isLinkNew": false,
           "isConcern": false,
-          "concern": ""
+          "concern": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "21"
         },
         {
           "isOther": false,
@@ -875,7 +877,7 @@
     {
       "title": "Some more ideas to try",
       "description": "Here are some more ideas other parents contributed to the process. Try them out and see if they work for you as well:",
-      "notes": "* Put lights shining on it, like an art exhibition.  \n* Frame the entire thing and laminate it in different ways.  \n* Project the entire CONFIGURATION as a hologram.  \n",
+      "notes": "* Put lights shining on it, like an art exhibition.  \n* Frame the entire thing and laminate it in different ways.  \n* Project the entire ${s4} as a hologram.  \n",
       "type": "radio",
       "inputPlaceholder": "",
       "answers": [

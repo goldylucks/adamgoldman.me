@@ -4,7 +4,7 @@ export const modules = [
     title: 'Peaceful Ending', description: 'Attach the moment of transition to your last happy memory', url: 'peaceful-ending',
   },
   {
-    title: 'Savoring The Future', description: 'Savor the future plans & dreams for your child', url: 'savoring-the-future',
+    title: 'Savoring Future Plans', description: 'Savor the future plans & dreams for your child', url: 'savoring-future-plans',
   },
   {
     title: 'Reunion', description: 'Reunite with your child\'s presence and valued relationship', url: 'reunion',

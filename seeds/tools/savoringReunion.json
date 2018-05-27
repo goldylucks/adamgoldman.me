@@ -215,7 +215,7 @@
     {
       "title": "Eliciting resource - description",
       "description": "Great, so keep thinking about ${s10}, and notice how do you experience and represent them in your mind.\n\nNot a specific memory or experience, just how you see them as a person.",
-      "notes": "You might see them looking at you, just as if they are right there in the room with you, next to you, or in front of you.\n\nMaybe they are talking to you, or touching you in a certain way.\n\nTake a moment to see, hear, and feel how you experience ${s16} now, and attend to the presence and appreciation feelings towards them.\n\nDescribe to me what comes to mind.\n",
+      "notes": "You might see them looking at you, just as if they are right there in the room with you, next to you, or in front of you.\n\nMaybe they are talking to you, or touching you in a certain way.\n\nTake a moment to see, hear, and feel how you experience ${s10} now, and attend to the presence and appreciation feelings towards them.\n\nDescribe to me what comes to mind.\n",
       "type": "long",
       "inputPlaceholder": "",
       "answers": []
@@ -911,44 +911,30 @@
     },
     {
       "title": "Mapping Across - remaining differences",
-      "description": "Now go back and forth between both images and scan for remaining differences.\n\nIs there anything else in the way you experience ${s10}, which you'd like to apply to ${hchildName}?",
+      "description": "Now go back and forth between both images and scan for remaining differences.\n\nIs there anything else in the way you experience ${s10}, which you'd like to apply to ${hchildName}?\n\nIf so, allow these changes to take place now.",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
       "answers": [
         {
           "isOther": false,
-          "text": "I feel MUCH better",
+          "text": "I've found some differences and applied them",
           "isLinkNew": false,
           "isConcern": false,
           "concern": ""
         },
         {
           "isOther": false,
-          "text": "I feel better",
+          "text": "I don't find any other differences",
           "isLinkNew": false,
           "isConcern": false,
           "concern": ""
-        },
-        {
-          "isOther": false,
-          "text": "I don’t feel a change in this step",
-          "isLinkNew": false,
-          "isConcern": false,
-          "concern": ""
-        },
-        {
-          "isOther": false,
-          "text": "I feel worse",
-          "isLinkNew": false,
-          "isConcern": true,
-          "concern": "feel worse"
         }
       ]
     },
     {
       "title": "Intensifying ${hchildName}'s presence",
-      "description": "${echo}\n\nNow as you experience ${hchildName} in this way, Make sure you see ${hchildHim} completely, ${hchildHis} whole body, in life size",
+      "description": "${echo}\n\nNow as you experience ${hchildName} in this way, make sure you see ${hchildHim} completely, ${hchildHis} whole body, in life size",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
