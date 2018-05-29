@@ -1,8 +1,8 @@
 {
     "isDraft": false,
     "hasReview": true,
-    "isSavoring": false,
-    "isGrief": true,
+    "isSavoring": true,
+    "isGrief": false,
     "title": "Reengaging the future",
     "description": "",
     "credits": "",
