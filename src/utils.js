@@ -6,7 +6,7 @@ Array.prototype.last = function () {
 }
 /* eslint-enable no-extend-native */
 
-const cloudinaryCore = new cloudinary.Cloudinary({ cloud_name: 'goldylucks' })
+const cloudinaryCore = new cloudinary.Cloudinary({ cloud_name: 'goldylucks', secure: true })
 
 export const cloudImg = imgName => cloudinaryCore.url(imgName)
 
