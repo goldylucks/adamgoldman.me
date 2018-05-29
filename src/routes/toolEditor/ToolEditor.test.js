@@ -8,7 +8,7 @@ import Wrapper from '../../../test/TestWrapper'
 
 import ToolEditor from './ToolEditor'
 
-test.skip('ToolEditor no data', () => {
+test('ToolEditor no data', () => {
   const component = renderer.create(
     <Wrapper>
       <ToolEditor url="test" data={{}} />
@@ -18,7 +18,7 @@ test.skip('ToolEditor no data', () => {
   expect(tree).toMatchSnapshot()
 })
 
-test.skip('ToolEditor with data', () => {
+test('ToolEditor with data', () => {
   const component = renderer.create(
     <Wrapper>
       <ToolEditor

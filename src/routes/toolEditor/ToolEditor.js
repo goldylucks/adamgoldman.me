@@ -89,6 +89,7 @@ class ToolEditor extends React.Component {
         <Typeahead
           allowNew
           multiple
+          menuId="hiddenFields"
           newSelectionPrefix="Add hidden field:"
           onChange={this.updateHiddenFields}
           defaultSelected={this.state.hiddenFields}

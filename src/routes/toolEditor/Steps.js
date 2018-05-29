@@ -68,6 +68,7 @@ class Steps extends Component {
       >
         <Typeahead
           onChange={this.onSelectVariable}
+          menuId="promptVariable"
           selectHintOnEnter
           options={this.variableAcOptions()}
           labelKey={this.variableAcLabelKey}

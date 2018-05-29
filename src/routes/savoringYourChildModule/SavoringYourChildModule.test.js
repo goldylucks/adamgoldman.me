@@ -1,7 +1,9 @@
 // // uncomment to test, issue reported
 // // https://github.com/kriasoft/react-starter-kit/issues/1618
 
-test()
+test('dummy', () => {
+  expect(true).toBe(true)
+})
 
 // import React from 'react'
 // import { mount } from 'enzyme'
