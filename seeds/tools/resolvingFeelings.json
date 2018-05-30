@@ -962,8 +962,6 @@
           "isOther": false,
           "text": "Resource has, cue doesn't",
           "isLinkNew": false,
-          "isConcern": true,
-          "concern": "feel worse",
           "hasGoToStep": true,
           "goToStepByNum": "37"
         }
