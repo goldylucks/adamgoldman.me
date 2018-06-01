@@ -185,7 +185,7 @@ describe('stateForReviewRating', () => {
     }
     expect(stateForReviewRating(rating, steps)(state)).toEqual({
       answerByStep: {
-        0: rating,
+        0: String(rating),
       },
       currentStepNum: 2,
     })
@@ -198,7 +198,7 @@ describe('stateForReviewRating', () => {
     }
     expect(stateForReviewRating(rating, steps)(state)).toEqual({
       answerByStep: {
-        0: rating,
+        0: String(rating),
       },
       currentStepNum: 1,
     })
