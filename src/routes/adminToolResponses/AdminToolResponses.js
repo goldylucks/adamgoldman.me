@@ -2,6 +2,8 @@
 
 import React from 'react'
 import axios from 'axios'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import faTrash from '@fortawesome/fontawesome-free-solid/faTrash'
 
 import Link from '../../components/Link'
 
@@ -37,6 +39,7 @@ class AdminToolResponses extends React.Component<Props> {
                       <th scope="col">Tool</th>
                       <th scope="col">Current Step</th>
                       <th scope="col">Status</th>
+                      <th scope="col">Actions</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -51,6 +54,9 @@ class AdminToolResponses extends React.Component<Props> {
                         <th scope="col">{item.title}</th>
                         <th scope="col">{item.currentStepNum}</th>
                         <th scope="col">{item.status}</th>
+                        <th scope="col">
+                          <a onClick={() => { this.deleteResponse(item._id) }}><FontAwesomeIcon icon={faTrash} /></a>
+                        </th>
                       </tr>
                   ))}
                   </tbody>
@@ -69,6 +75,13 @@ class AdminToolResponses extends React.Component<Props> {
         global.console.log(err)
         this.setState({ isFetchingToolResponses: false })
       })
+  }
+  deleteResponse(id) {
+    axios.delete(`/api/toolResponses/${id}`)
+      .then(() => {
+        this.setState({ toolResponses: this.state.toolResponses.filter(tr => tr._id !== id) })
+      })
+      .catch(err => console.error(err))
   }
 }
 

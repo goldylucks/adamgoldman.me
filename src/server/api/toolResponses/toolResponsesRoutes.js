@@ -14,5 +14,6 @@ router.route('/fetchByUserOrCreate/:toolSlug')
 router.route('/:id/')
   .get(decodeToken, getFreshUser, controller.get)
   .put(controller.update)
+  .delete(...isAdminMiddlewares, controller.del)
 
 export default router

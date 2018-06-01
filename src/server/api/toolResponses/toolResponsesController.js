@@ -5,7 +5,7 @@ import savoringReviewSteps from './savoringReviewSteps'
 import ToolResponses from './toolResponsesModel'
 
 export default {
-  getAll, get, create, update, fetchByUserOrCreate,
+  getAll, get, create, update, fetchByUserOrCreate, del,
 }
 
 function getAll(req, res, next) {
@@ -66,4 +66,10 @@ async function fetchByUserOrCreate(req, res, next) {
   } catch (err) {
     next(err)
   }
+}
+
+function del(req, res, next) {
+  ToolResponses.deleteOne({ _id: req.params.id })
+    .then(tool => res.json(tool))
+    .catch(next)
 }

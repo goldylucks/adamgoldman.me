@@ -42,32 +42,39 @@ export const replaceVarsUtil = ({
   if (!str) {
     return ''
   }
-  return str.replace(/\${(.*?)}/g, (...args) => {
-    const key = args[1]
-    if (key === 'echo') {
-      return `***“${answerByStep[currentStepNum - 1]}”***`
-    }
-    if (key.indexOf('he') === 0) {
-      return answerByStep[key.slice(2)].match(/female/i) ? 'she' : 'he'
-    }
-    if (key.indexOf('his') === 0) {
-      return answerByStep[key.slice(3)].match(/female/i) ? 'her' : 'his'
-    }
-    if (key.indexOf('him') === 0) {
-      return answerByStep[key.slice(3)].match(/female/i) ? 'her' : 'him'
-    }
-    if (key[0] === 's') {
-      return answerByStep[key.slice(1)]
-    }
-    if (key[0] === 'h') {
-      return hiddenFields[key.slice(1)]
-    }
-    return args[1]
-  })
+  str = String(str)
+  try {
+    return str.replace(/\${(.*?)}/g, (...args) => {
+      const key = args[1]
+      if (key === 'echo') {
+        return `***“${answerByStep[currentStepNum - 1]}”***`
+      }
+      if (key.indexOf('he') === 0) {
+        return answerByStep[key.slice(2)].match(/female/i) ? 'she' : 'he'
+      }
+      if (key.indexOf('his') === 0) {
+        return answerByStep[key.slice(3)].match(/female/i) ? 'her' : 'his'
+      }
+      if (key.indexOf('him') === 0) {
+        return answerByStep[key.slice(3)].match(/female/i) ? 'her' : 'him'
+      }
+      if (key[0] === 's') {
+        return answerByStep[key.slice(1)]
+      }
+      if (key[0] === 'h') {
+        return hiddenFields[key.slice(1)]
+      }
+      return args[1]
+    })
+  } catch (err) {
+    global.console.info('error for string:', str)
+    global.console.info(err)
+    return str
+  }
 }
 
 export const stateForReviewRating = (rating, steps) => ({ answerByStep, currentStepNum }) => ({
-  answerByStep: { ...answerByStep, [currentStepNum]: rating },
+  answerByStep: { ...answerByStep, [currentStepNum]: String(rating) },
   currentStepNum: stepNumById(rating <= 3 ? 'finalComments' : 'choosePaymentAmount', steps),
 })
 
