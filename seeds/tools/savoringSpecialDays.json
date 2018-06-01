@@ -4,7 +4,7 @@
   "isSavoring": true,
   "isGrief": false,
   "title": "Special Days",
-  "description": "Birthdays, holidays, and transition days as an opportunity",
+  "description": "Birthdays, holidays, and transition days as an opportunity to reminisce",
   "credits": "",
   "steps": [
     {
@@ -68,7 +68,7 @@
     },
     {
       "title": "Eliciting future birthday - Proceed?",
-      "description": "Great! So this process will do one of three things for you:\n\n1. Increase the good feelings even more\n2. Will provide some new ways to experience ${hchildName}'s future birthdays, transition days and holidays\n3. Will do nothing, since you already feel good\n\nWould you like to continue this process or proceed to the next one?",
+      "description": "***\"I feel good!\"***\n\nGreat! So this process will do one of three things for you:\n\n1. Increase the good feelings even more\n2. Will provide some new ways to experience ${hchildName}'s future birthdays, transition days and holidays\n3. Will do nothing, since you already feel good\n\nWould you like to continue this process or proceed to the next one?",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -91,7 +91,7 @@
           "isOther": false,
           "text": "Let’s proceed to the next process",
           "isLink": true,
-          "link": "/ssavoring-your-child/modules",
+          "link": "/savoring-your-child/modules",
           "isLinkNew": false,
           "isConcern": false,
           "concern": ""
@@ -140,7 +140,7 @@
       "answers": [
         {
           "isOther": false,
-          "text": "O, I've set it aside",
+          "text": "Ok, I've set it aside",
           "isLinkNew": false,
           "isConcern": false,
           "concern": ""
@@ -340,7 +340,7 @@
     },
     {
       "title": "Mapping Across (MA) - Remaining differences",
-      "description": "${echo}\n\nNow go back and forth between the images of the past birthday dream and the next birthday in your mind, and scan for remaining differences.\n\nNot in the content, but in the way you are representing them internally.\n\nGo back and forth between the two a few times, and notice if there are any visual, auditory, and tactile differences in the way you experience them.\n\nNotice if there is something in the way you experience the past birthday, which you'd like to apply to the next birthday as well.",
+      "description": "Now go back and forth between the images of the past birthday dream and the next birthday in your mind, and scan for remaining differences.\n\nNot in the content, but in the way you are representing them internally.\n\nGo back and forth between the two a few times, and notice if there are any visual, auditory, and tactile differences in the way you experience them.\n\nNotice if there is something in the way you experience the past birthday, which you'd like to apply to the next birthday as well.",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
