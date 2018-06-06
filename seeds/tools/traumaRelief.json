@@ -238,7 +238,7 @@
         },
         {
             "title" : "Extending memory - before - elicitation",
-            "description" : "${echo}\n\nOK, so I want you to think about a moment in time in which younger ${s6} had no sign of anything unusual about to happen, like I was before my accident.\n\nIt can be a few minutes, hours, days or week before that had happened:\n*${s9}*\n\nSo you can see your younger self in there, having a neutral or positive.\n",
+            "description" : "${echo}\n\nOK, so I want you to think about a moment in time in which younger ${s6} had no sign of anything unusual about to happen, like I was before my accident.\n\nIt can be a few minutes, hours, days or weeks before that had happened:\n*${s9}*\n\nSo you can see your younger self in there, having a neutral or positive.\n",
             "notes" : "This is not scientific evidence we are gathering here, so don't worry about \"getting it right\" or \"accurate\". Anything that could've happened before and would make sense is fine.\n\nYou can go for something mundane as brushing your teeth a day before. Or watching a tv series you used to like, or having fun with a friend you had at the time.\n\nYou are not being graded on this. Promise ;)",
             "type" : "radio",
             "inputPlaceholder" : "",
@@ -303,7 +303,7 @@
         },
         {
             "title" : "Extending memory - after - elicitation",
-            "description" : "${echo}\n\nGreat, so now I want you to think about a neutral or positive moment in time, in which younger ${s6} was after everything that had happened, like I was after the accident, back on the motorbike with my brother.\n\nMy leg wasn't 100% healed yet at the time, but the danger and unpleasantness of that event are over.\n\nIt can be a few minutes, hours, days or week before that had happened:\n*${s9}*\n\nSo you can see your younger self in there, having a neutral or positive.",
+            "description" : "${echo}\n\nGreat, so now I want you to think about a neutral or positive moment in time, in which younger ${s6} was after everything that had happened, like I was after the accident, back on the motorbike with my brother.\n\nMy leg wasn't 100% healed yet at the time, but the danger and unpleasantness of that event are over.\n\nIt can be a few minutes, hours, days or weeks after that had happened:\n*${s9}*\n\nSo you can see your younger self in there, having a neutral or positive.",
             "notes" : "Remember this is not scientific evidence we are gathering here, so don't worry about \"getting it right\" or \"accurate\". Anything that could've happened after and would make sense is fine.\n\nYou can go for something mundane as brushing your teeth the next day (or week/month). Or watching a tv series you used to like, or having fun with a friend you had at the time.\n\nYou are not being graded on this.",
             "type" : "radio",
             "inputPlaceholder" : "",
