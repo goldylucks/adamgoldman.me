@@ -47,6 +47,7 @@ class ToolResponse extends React.Component<Props> {
                 {...toolResponse}
                 path={path}
                 onUpdateProgress={this.updateProgress}
+                onConcern={this.onConcern}
               />
             </div>
           </div>
@@ -77,6 +78,10 @@ class ToolResponse extends React.Component<Props> {
         global.alert(err.message)
       })
   }
+
+  onConcern = (currentStepNum) => {
+    fireGaEventOnConcern(this.state.toolResponse.title, currentStepNum)
+  }
 }
 
 export default ToolResponse
@@ -97,5 +102,15 @@ function fireGaEventToolCompleted(toolTitle) {
     eventCategory: 'Mind Tool',
     eventAction: 'Completed',
     eventLabel: toolTitle,
+  })
+}
+
+function fireGaEventOnConcern(toolTitle, stepNumber) {
+  window.ga('send', {
+    hitType: 'event',
+    eventCategory: 'Mind Tool',
+    eventAction: 'Concern on step:',
+    eventLabel: toolTitle,
+    eventValue: stepNumber,
   })
 }

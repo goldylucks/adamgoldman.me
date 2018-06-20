@@ -12,15 +12,22 @@ type Props = {
   answers: Array<any>,
   onSubmit: Function,
   onSubmitOther?: Function,
+  onConcern: Function,
   path: String,
   isPulsating: Boolean,
 }
 
-class Answers extends React.Component<Props> {
+const State = {
+  other: String,
+}
+
+class Answers extends React.Component<Props, State> {
+  static defaultProps = {
+    onSubmitOther: () => {},
+  }
   state = {
     other: '',
   }
-
   render() {
     const {
       answers, onSubmit, path, isPulsating,
@@ -73,11 +80,10 @@ class Answers extends React.Component<Props> {
     this.setState({ other: '' })
   }
 
-  concernClick = () => global.alert('Let\'s talk about it in messenger, click "get started" if messenger asks you')
-}
-
-Answers.defaultProps = {
-  onSubmitOther: () => {},
+  concernClick = () => {
+    this.props.onConcern()
+    global.alert('Let\'s talk about it in messenger, click "get started" if messenger asks you')
+  }
 }
 
 export default Answers

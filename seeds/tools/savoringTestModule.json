@@ -8,7 +8,7 @@
   "credits": "",
   "steps": [
     {
-      "title": "The only step",
+      "title": "The first step",
       "description": "${hchildHis} name is ${hchildName}, ${hchildHe} is cool, and you love ${hchildHim}",
       "notes": "",
       "type": "radio",
@@ -16,10 +16,44 @@
       "answers": [
         {
           "isOther": false,
-          "text": "End this",
+          "text": "go to last step",
           "isLinkNew": false,
           "isConcern": false,
           "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Test concern step 0",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "savoring"
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "The last step",
+      "description": "",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "go to modules",
+          "hasGoToStep": true,
+          "goToStepByNum": "/savoring-your-child/modules",
+          "isLinkNew": false,
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Test concern step 1",
+          "isLinkNew": false,
+          "isConcern": true,
+          "concern": "savoring"
         }
       ],
       "flashSpeed": "",

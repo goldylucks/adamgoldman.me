@@ -42,6 +42,7 @@ export default class SavoringToolResponseContainer extends React.Component<Props
       fetchingToolResponseError,
       onLogin: this.onLogin,
       onUpdateProgress: this.updateProgress,
+      onConcern: this.onConcern,
       onUpdateUserInDb: this.updateUserInDb,
     })
   }
@@ -76,6 +77,10 @@ export default class SavoringToolResponseContainer extends React.Component<Props
         global.console.error(err)
         global.alert(err.message)
       })
+  }
+
+  onConcern = (currentStepNum) => {
+    fireGaEventOnConcern(this.state.toolResponse.title, currentStepNum)
   }
   markToolResponseAsCompleted = (tr) => {
     if (tr._id === this.state.toolResponse._id) {
@@ -140,5 +145,15 @@ function fireGaEventToolCompleted(toolTitle) {
     eventCategory: 'Savoring Tool',
     eventAction: 'Completed',
     eventLabel: toolTitle,
+  })
+}
+
+function fireGaEventOnConcern(toolTitle, stepNumber) {
+  window.ga('send', {
+    hitType: 'event',
+    eventCategory: 'Savoring Tool',
+    eventAction: 'Concern on step:',
+    eventLabel: toolTitle,
+    eventValue: stepNumber,
   })
 }

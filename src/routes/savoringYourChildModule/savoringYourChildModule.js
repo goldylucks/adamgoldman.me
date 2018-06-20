@@ -28,7 +28,8 @@ type Props = {
   fetchingToolResponseError: string,
   onLogin: Function,
   onUpdateProgress: Function,
-  onUpdateUser: Function
+  onUpdateUser: Function,
+  onConcern: Function,
 };
 
 class savoringYourChildSectionModule extends React.Component<Props> {
@@ -126,6 +127,7 @@ class savoringYourChildSectionModule extends React.Component<Props> {
             hideSubscribeButton
             scrollTop={() => scrollToTopOfNode(this.toolResponseNode)}
             onUpdateProgress={onUpdateProgress}
+            onConcern={this.props.onConcern}
           />
         </div>
       </div>

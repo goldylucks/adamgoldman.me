@@ -116,6 +116,7 @@ function mountWrapper(props) {
     price: 0,
     stepsStack: [],
     onUpdateProgress: jest.fn(),
+    onConcern: jest.fn(),
   }, props)
   return mount(<MultiStepForm {...propsToUse} />)
 }

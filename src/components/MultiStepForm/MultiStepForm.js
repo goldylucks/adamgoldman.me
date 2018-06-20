@@ -21,6 +21,7 @@ class MultiStepForm extends React.Component {
     stepsStack: PropTypes.array.isRequired,
     hideSubscribeButton: PropTypes.bool,
     onUpdateProgress: PropTypes.func.isRequired,
+    onConcern: PropTypes.func.isRequired,
     scrollTop: PropTypes.func,
   }
   static defaultProps = {
@@ -190,6 +191,7 @@ class MultiStepForm extends React.Component {
     return (
       <div style={{ marginTop: 20, marginBottom: 20 }}>
         <Answers
+          onConcern={this.onConcern}
           isPulsating={this.isFirstStep()}
           path={this.props.path}
           answers={answers}
@@ -334,6 +336,10 @@ class MultiStepForm extends React.Component {
 
   isFirstStep() {
     return this.state.currentStepNum === 0
+  }
+
+  onConcern = () => {
+    this.props.onConcern(Number(this.state.currentStepNum))
   }
 }
 export default MultiStepForm

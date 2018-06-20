@@ -23,6 +23,7 @@ type Props = {
   onLogin: Function,
   onUpdateProgress: Function,
   onUpdateUser: Function,
+  onConcern: Function,
   onUpdateUserInDb: Function
 }
 
@@ -105,6 +106,7 @@ class SavoringYourChild extends React.Component<Props> {
             {...toolResponse}
             scrollTop={() => scrollToTopOfNode(this.toolResponseNode)}
             onUpdateProgress={this.updateProgress}
+            onConcern={this.props.onConcern}
           />
         </div>
       </div>

@@ -1,3 +1,4 @@
+const test = require('./tools/test.json')
 const savoringSavoringFuturePlans = require('./tools/savoringSavoringFuturePlans.json')
 const savoringRelationshipConsolidation = require('./tools/savoringRelationshipConsolidation.json')
 const savoringReengagingTheFuture = require('./tools/savoringReengagingTheFuture.json')
@@ -19,9 +20,9 @@ const perfectDay = require('./tools/perfectDay.json')
 const recurringTimeDistortion = require('./tools/recurringTimeDistortion.json')
 const reverseFeelingSpin = require('./tools/reverseFeelingSpin.json')
 const toolHasReviewTest = require('./tools/hasReviewTest.json')
-const toolTestShort = require('./tools/shortToolTest.json')
 
 module.exports = [
+  test,
   savoringRelationshipConsolidation,
   savoringReengagingTheFuture,
   savoringSavoringFuturePlans,
@@ -43,5 +44,4 @@ module.exports = [
   traumaRelief,
   resolvingFeelings,
   toolHasReviewTest,
-  toolTestShort,
 ]
