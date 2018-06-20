@@ -89,11 +89,11 @@ class SavoringYourChild extends React.Component<Props> {
         </div>
       )
     }
-    if (isFetchingToolResponse || !toolResponse) {
-      return <p data-test="loading">Loading ...</p>
-    }
     if (fetchingToolResponseError) {
       return <p data-test="error">There was an error loading. Please refresh the page and contact me if it continues</p>
+    }
+    if (isFetchingToolResponse || !toolResponse) {
+      return <p data-test="loading">Loading ...</p>
     }
     return (
       <div className={s.introModule}>
