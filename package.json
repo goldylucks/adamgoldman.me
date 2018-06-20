@@ -30,6 +30,7 @@
     "release": "tools/release.sh",
     "db-import-prod-to-local": "babel-node tools/db importProdToLocal",
     "db-export-local-to-prod": "babel-node tools/db exportLocalToProd",
+    "db-export-local-to-staging": "babel-node tools/db exportLocalToStaging",
     "seed": "seed",
     "seed-setup": "seed-setup",
     "start": "babel-node tools/run start"

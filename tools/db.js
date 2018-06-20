@@ -13,6 +13,11 @@ const dbNameProd = process.env.DB_NAME_PROD
 const dbUserProd = process.env.DB_USER_PROD
 const dbPassProd = process.env.DB_PASSWORD_PROD
 
+const dbAddressStaging = process.env.DB_ADDRESS_STAGING
+const dbNameStaging = process.env.DB_NAME_STAGING
+const dbUserStaging = process.env.DB_USER_STAGING
+const dbPassStaging = process.env.DB_PASSWORD_STAGING
+
 const dbNameLocal = 'adamgoldman'
 const dbAddressLocal = '127.0.0.1:27017'
 
@@ -41,6 +46,12 @@ if (action === 'exportLocalToProd') {
   exportLocalToProd()
 }
 
+if (action === 'exportLocalToStaging') {
+  downloadLocal()
+  dropStaging()
+  exportLocalToStaging()
+}
+
 function downloadProd() {
   shell.exec(`mongodump -h ${dbAddressProd} -d ${dbNameProd} -c ${collection} -u ${dbUserProd} -p ${dbPassProd} -o ${getDir()}`)
 }
@@ -57,8 +68,16 @@ function exportLocalToProd() {
   shell.exec(`mongorestore -h ${dbAddressProd} -d ${dbNameProd} -c ${collection} -u ${dbUserProd} -p ${dbPassProd} ${getDir()}/${dbNameLocal}/${collection}.bson`)
 }
 
+function exportLocalToStaging() {
+  shell.exec(`mongorestore -h ${dbAddressStaging} -d ${dbNameStaging} -c ${collection} -u ${dbUserStaging} -p ${dbPassStaging} ${getDir()}/${dbNameLocal}/${collection}.bson`)
+}
+
 function dropProd() {
   shell.exec(`mongo -u ${dbUserProd} -p ${dbPassProd} --eval 'db.${collection}.drop()' ${dbAddressProd}/${dbNameProd}`)
+}
+
+function dropStaging() {
+  shell.exec(`mongo -u ${dbUserStaging} -p ${dbPassStaging} --eval 'db.${collection}.drop()' ${dbAddressStaging}/${dbNameStaging}`)
 }
 
 function dropLocal() {
