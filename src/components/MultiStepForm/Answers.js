@@ -16,12 +16,10 @@ type Props = {
   isPulsating: Boolean,
 }
 
-class Answers extends React.Component {
+class Answers extends React.Component<Props> {
   state = {
     other: '',
   }
-
-  props: Props
 
   render() {
     const {
