@@ -66,8 +66,10 @@ class ToolResponse extends React.Component<Props> {
   }
 
   updateProgress = (nextState) => {
+    fireGaEventOnStepChange(this.state.toolResponse.title, Number(nextState.currentStepNum))
     if (nextState.currentStepNum === this.state.toolResponse.steps.length - 1) {
       nextState.status = 'Completed'
+      fireGaEventToolCompleted(this.state.toolResponse.title)
     }
     axios.put(`/api/toolResponses/${this.props.responseId}`, { ...this.state.toolResponse, ...nextState })
       .catch((err) => {
@@ -78,3 +80,22 @@ class ToolResponse extends React.Component<Props> {
 }
 
 export default ToolResponse
+
+function fireGaEventOnStepChange(toolTitle, stepNumber) {
+  window.ga('send', {
+    hitType: 'event',
+    eventCategory: 'Mind Tool',
+    eventAction: 'Go To Step',
+    eventLabel: toolTitle,
+    eventValue: stepNumber,
+  })
+}
+
+function fireGaEventToolCompleted(toolTitle) {
+  window.ga('send', {
+    hitType: 'event',
+    eventCategory: 'Mind Tool',
+    eventAction: 'Completed',
+    eventLabel: toolTitle,
+  })
+}

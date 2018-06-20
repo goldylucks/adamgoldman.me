@@ -63,12 +63,15 @@ export default class SavoringToolResponseContainer extends React.Component<Props
   }
 
   updateProgress = (nextState, userPropertiesToUpdateOnCompletion = {}) => {
-    if (nextState.currentStepNum === this.state.toolResponse.steps.length - 1) {
+    const { toolResponse } = this.state
+    fireGaEventOnStepChange(toolResponse.title, Number(nextState.currentStepNum))
+    if (nextState.currentStepNum === toolResponse.steps.length - 1) {
       nextState.status = 'Completed'
+      fireGaEventToolCompleted(toolResponse.title)
       // for intro module to pass gender, name, childName, childGender
       this.updateUserOnCompletion(userPropertiesToUpdateOnCompletion)
     }
-    axios.put(`/api/toolResponses/${this.state.toolResponse._id}`, { ...this.state.toolResponse, ...nextState })
+    axios.put(`/api/toolResponses/${toolResponse._id}`, { ...toolResponse, ...nextState })
       .catch((err) => {
         global.console.error(err)
         global.alert(err.message)
@@ -119,4 +122,23 @@ export default class SavoringToolResponseContainer extends React.Component<Props
   onLogin = (user) => {
     this.props.onLogin(user, this.fetchToolResponse)
   }
+}
+
+function fireGaEventOnStepChange(toolTitle, stepNumber) {
+  window.ga('send', {
+    hitType: 'event',
+    eventCategory: 'Savoring Tool',
+    eventAction: 'Go To Step',
+    eventLabel: toolTitle,
+    eventValue: stepNumber,
+  })
+}
+
+function fireGaEventToolCompleted(toolTitle) {
+  window.ga('send', {
+    hitType: 'event',
+    eventCategory: 'Savoring Tool',
+    eventAction: 'Completed',
+    eventLabel: toolTitle,
+  })
 }
