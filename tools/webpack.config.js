@@ -492,11 +492,19 @@ function baseUrl() {
   return '"http://localhost:3000"'
 }
 
+function stripePublishableKey() {
+  // for now using same key for staging and development
+  if (isStaging) { return '"pk_test_U8vqf0SvU5nMd5thuggjVLLQ"' }
+  if (isProduction) { return '"pk_live_xJfjeypYxiNSz0qIDRZqbr8K"' }
+  return '"pk_test_U8vqf0SvU5nMd5thuggjVLLQ"'
+}
+
 function webpackDefine(env) {
   return new webpack.DefinePlugin({
     'process.env.NODE_ENV': isDebug ? '"development"' : '"production"',
     'process.env.FB_APP_ID': fbAppId(),
     'process.env.BASE_URL': baseUrl(),
+    'process.env.STRIPE_PUBLISHABLE_KEY': stripePublishableKey(),
     'process.env.BROWSER': env === 'client' ? true : 'false',
     __DEV__: isDebug,
   })
