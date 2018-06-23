@@ -7,6 +7,7 @@ import { MESSENGER_LINK_BOOK_SESSION } from '../../constants'
 import Markdown from '../../components/Markdown'
 import Card from '../../components/Card'
 import Ending from '../../components/Ending'
+import Stripe from '../../components/Stripe'
 
 type Props = {
   tutorials: [],
@@ -28,6 +29,7 @@ class Home extends React.Component<Props> {
     return (
       <div>
         <div className="container">
+          <Stripe />
           <div className="mainheading">
             <h1 className="sitetitle">Relax, it&apos;s just life ...</h1>
             <Markdown
