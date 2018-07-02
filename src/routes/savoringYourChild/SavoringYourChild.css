@@ -16,3 +16,61 @@ buffer = 30px
   max-width: 100px;
   border-radius: 50%;
 }
+
+.andreasContainerBoth {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.andreasContainerBoth img {
+  border-radius: 50%;
+  max-width: 100%;
+  margin-bottom: 5px;
+}
+
+.andreasContainerIndividual {
+  margin-right: 20px;
+}
+
+.andreasCaption {
+  text-align: center;
+  display: block;
+}
+
+.aboutContainer {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.aboutContainer img {
+  border-radius: 50%;
+  max-width: 100%;
+  margin-right: 20px;
+}
+
+.aboutContainer .lead {
+  max-width: 40%;
+}
+
+@media (max-width: 800px) {
+  .andreasContainerBoth {
+    flex-direction: column;
+  }
+  .andreasContainerIndividual {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  
+  .aboutContainer {
+    flex-direction: column;
+  }
+  .aboutContainer img {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .aboutContainer .lead {
+    max-width: 100%;
+  }
+}
+

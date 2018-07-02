@@ -3,7 +3,8 @@
 import React from 'react'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
 
-import { scrollToTopOfNode } from '../../utils'
+import { scrollToTopOfNode, cloudImg } from '../../utils'
+import ExternalA from '../../components/ExternalA'
 import Benefits from '../../components/Benefits'
 import MultiStepForm from '../../components/MultiStepForm'
 import Testimonials from '../../components/Testimonials'
@@ -44,27 +45,17 @@ class SavoringYourChild extends React.Component<Props> {
           </section>
           <GetStarted />
           <hr className={s.hr} />
-          <section>
-            <h1 className="text-center">Learn how to ...</h1>
-            <div className="row justify-content-md-center">
-              <div className="col col-lg-10">
-                <Benefits benefits={[
-                  'Enjoy thinking about your child again',
-                  'Focus on the good experiences',
-                  'Feel your child\'s presence even more',
-                  'Enjoy looking forward to your future',
-                  'Increase the peace & love in your life',
-                ]}
-                />
-              </div>
-            </div>
-          </section>
+          {this.renderBenefitsSection()}
           <hr className={s.hr} />
           <section>
             <FAQContainer />
           </section>
           <hr className={s.hr} />
           <GetStarted />
+          <hr className={s.hr} />
+          {this.renderPartenrshipsSection()}
+          <hr className={s.hr} />
+          {this.renderAboutMeSection()}
           <hr className={s.hr} />
           <MessageMe />
           <hr className={s.hr} />
@@ -76,6 +67,90 @@ class SavoringYourChild extends React.Component<Props> {
     )
   }
 
+  renderBenefitsSection() {
+    return (
+      <section>
+        <h1 className="text-center">Learn how to ...</h1>
+        <div className="row justify-content-md-center">
+          <div className="col col-lg-10">
+            <Benefits benefits={[
+                  'Enjoy thinking about your child again',
+                  'Focus on the good experiences',
+                  'Feel your child\'s presence even more',
+                  'Enjoy looking forward to your future',
+                  'Increase the peace & love in your life',
+                ]}
+            />
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  renderPartenrshipsSection() {
+    return (
+      <section>
+        <h1 className="text-center" style={{ marginBottom: 30 }}>Partnerships and acknowledgements</h1>
+        <h3 className="text-center">Helping Parents Heal</h3>
+        <p className="lead">I work closely with helping parents heal, a non profit organization dedicated to support parents in a very accepting, loving, non judgemental way, regardless of personal belief.</p>
+        <img
+          src={cloudImg('adamgoldman.me/helping-parents-heal-cover-min')}
+          alt="Helping Parents Heal"
+          style={{ maxWidth: '100%' }}
+        />
+        <h3 className="text-center" style={{ marginTop: 50 }}>Connirae & Steve Andreas</h3>
+        <p className="lead">Connirae and Steve and  have developed the base for many of the processes we will work together through, among countless other books, programs, and training material.</p>
+        <div className={s.andreasContainerBoth}>
+          <div className={s.andreasContainerIndividual}>
+            <img
+              src={cloudImg('adamgoldman.me/Connirae_Andreas')}
+              alt="Connirae Andreas"
+            />
+            <ExternalA className={s.andreasCaption} href="https://andreasnlptrainings.com/connirae-andreas-bio/">Connirae Andreas, Ph.D., master trainer</ExternalA>
+          </div>
+          <div className={s.andreasContainerIndividual}>
+            <img
+              src={cloudImg('adamgoldman.me/Steve_Andreas')}
+              alt="Steve Andreas"
+            />
+            <ExternalA className={s.andreasCaption} href="http://steveandreas.com/cv.html">Steve Andreas, M.A., master trainer</ExternalA>
+          </div>
+        </div>
+        <blockquote style={{ marginTop: 20 }}>
+            Adam Goldman is a brilliant new colleague whose depth and breadth of understanding of the principles of personal change is exceptional, combined with the hands-on skills to manifest this in the experience of clients.
+          <br />
+          <br />
+            Perceptive, intelligent, creative, confident, one of the fastest and most thorough learners I’ve ever met, able and willing to question established wisdom and discuss differences of opinion openly when that’s appropriate.
+          <br />
+          <br />
+
+He has created open-source online programs to guide parents through effective change processes on their own, a huge opportunity for so many who would otherwise not be able to even think of affording it.
+          <br />
+          <br />
+His work is a detailed challenge to the rest of us to learn how to “up our game” or be left behind in the dustbin of history.
+          <br />
+- Steve Andreas, MA, master trainer and author.
+        </blockquote>
+
+      </section>
+    )
+  }
+  renderAboutMeSection() {
+    return (
+      <section>
+        <h1 className="text-center">About Me (Adam)</h1>
+        <div className={s.aboutContainer}>
+          <img
+            src={cloudImg('adamgoldman.me/profile-smiling')}
+            alt="About Adam Goldman"
+          />
+          <p className="lead">
+            I&apos;ve been guiding people through personal change processes for over 8 years. My latest focus is helping you (and fellow parents) savor the relationship with your child, to align your brain, mind and body, towards a compelling brightening future, and let the light of your child shine through you as you carry it wherever you go.
+          </p>
+        </div>
+      </section>
+    )
+  }
   renderToolResponse() {
     const {
       toolResponse, isFetchingToolResponse, fetchingToolResponseError, user, onLogin,
