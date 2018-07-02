@@ -5,7 +5,9 @@ import axios from 'axios'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faTrash from '@fortawesome/fontawesome-free-solid/faTrash'
 
+import { fbLinkByUserId } from '../../utils/fbUtils'
 import Link from '../../components/Link'
+import ExternalA from '../../components/ExternalA'
 
 type Props = {
   path: string,
@@ -50,7 +52,7 @@ class AdminToolResponses extends React.Component<Props> {
                             {`${new Date(item.createdAt)}`}
                           </Link>
                         </th>
-                        <th scope="col">{item.user ? item.user.name : 'user not found'}</th>
+                        <th scope="col">{this.renderUser(item.user)}</th>
                         <th scope="col">{item.title}</th>
                         <th scope="col">{item.currentStepNum}</th>
                         <th scope="col">{item.status}</th>
@@ -67,6 +69,15 @@ class AdminToolResponses extends React.Component<Props> {
         </div>
       </div>
     )
+  }
+  renderUser({ name, fbUserId } = {}) {
+    if (!name) {
+      return 'user not found'
+    }
+    if (fbUserId) {
+      return <ExternalA href={fbLinkByUserId(fbUserId)}>{name}</ExternalA>
+    }
+    return name
   }
   fetchToolResponses() {
     axios.get('/api/toolResponses')

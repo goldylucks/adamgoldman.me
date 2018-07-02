@@ -68,6 +68,7 @@ function makeAdmin(req, res, next) {
 function prepareUser(user, toolResponses) {
   user = user.toObject()
   delete user.fbServerAccessToken
+  delete user.password
   user.token = signToken(user._id)
   user.toolResponses = toolResponses
   return user

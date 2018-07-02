@@ -2,6 +2,8 @@ import axios from 'axios'
 
 import { DOMAIN, FB_APP_ID } from '../constants'
 
+export const fbLinkByUserId = id => `https://www.facebook.com/profile.php?id${id}`
+
 export const fbAuth = (cb) => {
   global.FB.login(res => fbAuth2(res, cb), { scope: 'email,public_profile' })
 }
