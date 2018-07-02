@@ -41,9 +41,7 @@
       "answers": [
         {
           "isOther": false,
-          "text": "go to modules",
-          "hasGoToStep": true,
-          "goToStepByNum": "/savoring-your-child/modules",
+          "text": "Start review",
           "isLinkNew": false,
           "isConcern": false,
           "concern": ""
