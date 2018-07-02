@@ -7,6 +7,9 @@ import { MESSENGER_LINK_BOOK_SESSION } from '../../constants'
 import Markdown from '../../components/Markdown'
 import Card from '../../components/Card'
 import Ending from '../../components/Ending'
+import BgVid from '../../components/BgVid'
+
+const HP_VIDEO_SRC = 'https://res.cloudinary.com/goldylucks/video/upload/v1530530492/hp-bg_mskmxx.mp4'
 
 type Props = {
   tutorials: [],
@@ -29,6 +32,7 @@ class Home extends React.Component<Props> {
       <div>
         <div className="container">
           <div className="mainheading">
+            <BgVid src={HP_VIDEO_SRC} />
             <h1 className="sitetitle">Relax, it&apos;s just life ...</h1>
             <Markdown
               className="lead"
