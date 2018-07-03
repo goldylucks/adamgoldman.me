@@ -1,7 +1,6 @@
-# ADDING SOMETHING?
-# Probably want to copy it to .eslintignore as well
-
 # See https://help.github.com/ignore-files/ for more about ignoring files.
+
+cypress
 
 # Dependencies
 node_modules/
