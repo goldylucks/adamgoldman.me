@@ -55,6 +55,8 @@ class SavoringYourChild extends React.Component<Props> {
           <hr className={s.hr} />
           {this.renderPartenrshipsSection()}
           <hr className={s.hr} />
+          <GetStarted />
+          <hr className={s.hr} />
           {this.renderAboutMeSection()}
           <hr className={s.hr} />
           <MessageMe />
