@@ -513,7 +513,7 @@
     },
     {
       "title": "Embellishments - Adding sound",
-      "description": "${echo}\n\nNow as you hear that in this way, put yourself back in the after moment:\n\n*“${s4}”*\n\nMake sure you are inside it, in 1st person , through your own eyes, seeing everything in color, and experience everything in reverse again, as you let the sound of SOUND lead you through it, until you are back again at the happy “before” experience:\n\n*\"${s1}\"*\n\nClose your eyes and do it now, and let me know when you’re back at the “before” experience.",
+      "description": "${echo}\n\nNow as you hear that in this way, put yourself back in the after moment:\n\n*“${s4}”*\n\nMake sure you are inside it, in 1st person , through your own eyes, seeing everything in color, and experience everything in reverse again, as you let the sound of ${s19} lead you through it, until you are back again at the happy “before” experience:\n\n*\"${s1}\"*\n\nClose your eyes and do it now, and let me know when you’re back at the “before” experience.",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -689,7 +689,7 @@
         },
         {
           "isOther": false,
-          "text": "It’s more accepting/loving",
+          "text": "It’s more accepting / loving",
           "isLinkNew": false,
           "isConcern": false,
           "concern": ""
