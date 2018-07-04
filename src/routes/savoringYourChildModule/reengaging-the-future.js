@@ -23,7 +23,7 @@ export default {
       text: 'Looking at my glowing future looks good actually, and even thinking that I will look forward to tomorrow which I never used to do. Right now I feel very good. I feel at peace and happy right now before bed',
       name: 'Tracy Soussi',
       nameMeta: 'Mother of Aymen, transitioned from illness',
-      imgSrc: 'https://scontent.fbkk5-6.fna.fbcdn.net/v/t1.0-9/26733326_10210388881990002_952210852032135504_n.jpg?oh=e5fbfeb7ff36b598ef156c4101ed26d6&oe=5B1DD6DF',
+      imgSrc: 'https://res.cloudinary.com/goldylucks/image/upload/c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1530689574/Tracy_Soussi_ix64h4.jpg',
     },
     {
       title: 'All I see is peace',
