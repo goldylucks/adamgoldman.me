@@ -8,6 +8,7 @@ import Benefits from '../../components/Benefits'
 import MessageMe from '../../components/MessageMe'
 import Testimonials from '../../components/Testimonials'
 import FAQ from '../../components/FAQ'
+import LoomEmbedd from '../../components/LoomEmbedd'
 import GetStarted from '../../components/GetStartedButton'
 import FbGateKeeper from '../../components/FbGateKeeper'
 import MultiStepForm from '../../components/MultiStepForm'
@@ -19,6 +20,7 @@ type Props = {
   description: string,
   slug: string,
   path: string,
+  loom?: string,
   faq: [],
   testimonials: [],
   benefits: Array<String>,
@@ -35,7 +37,7 @@ type Props = {
 class savoringYourChildSectionModule extends React.Component<Props> {
   render() {
     const {
-      title, description, faq, benefits, testimonials,
+      title, description, faq, benefits, testimonials, loom,
     } = this.props
     return (
       <div>
@@ -43,6 +45,7 @@ class savoringYourChildSectionModule extends React.Component<Props> {
           <div className="mainheading">
             <h1 className="sitetitle text-center">{title}</h1>
             <p className="lead text-center">{description}</p>
+            {loom && <LoomEmbedd src={loom} />}
             <GetStarted style={{ marginTop: 80, marginBottom: 80 }} />
           </div>
           <hr />

@@ -27,7 +27,7 @@
     },
     {
       "title": "Happy moment before",
-      "description": "First,\nthink about the last happy memory with ${hchildName}, and describe it to me a little bit.",
+      "description": "[cac5dd2872d0437abaabd4b2d8037637](LoomEmbedd)\n\nFirst,\nthink about the last happy memory with ${hchildName}, and describe it to me a little bit.",
       "notes": "No need for details, just a title for reference will do, i.e. “at the water park two years ago”\n\nIf the end of the relationship was graphic, disturbing, or unpleasant, pick a happy moment with ${hchildName} before all that.\n\nIf the last month or years involved frequent visits to the hospital, or suffering of any kind, pick a happy moment before the suffering and the hospital visits.\n\nIf you had fights and intense emotions towards the end, pick a moment before that.\n\nI want you to pick a happy memory with ${hchildName}, before anything had happened.\n",
       "type": "short",
       "inputPlaceholder": "",
@@ -37,7 +37,7 @@
     },
     {
       "title": "Happy moment before - Validation",
-      "description": "Now I want to be sure before we proceed, that this experience:\n\n${echo}\n\nIs a positive one, and there’s no sign or reference for any unpleasantness that happened after, yes?",
+      "description": "[c9eca678241c4058aee99a98da9a180e](LoomEmbedd)\n\nNow I want to be sure before we proceed, that this experience:\n\n${echo}\n\nIs a positive one, and there’s no sign or reference for any unpleasantness that happened after, yes?",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -84,7 +84,7 @@
     },
     {
       "title": "Positive/neutral experience after",
-      "description": "***\"Yes, it’s a positive experience, no sign for any unpleasantness\"***\n\nGreat,\nnow think about a moment in time, after all the events regarding ${hchildHis} transition were over.",
+      "description": "***\"Yes, it’s a positive experience, no sign for any unpleasantness\"***\n\n[c4f9c239244549aa8c841d4dd3399055](LoomEmbedd)\n\nGreat,\nnow think about a moment in time, after all the events regarding ${hchildHis} transition were over.",
       "notes": "So after the funeral and handling all the logistics involved, after you got back somewhat to your routine.\n\nLife weren't perfect, and you were probably still sad, but that episode was over.\n\nSo a moment after all that, in which you were happy, and if you can't find a happy moment, go for a neutral one, like doing something mundane, making coffee or brushing teeth.\n\nA positive or neutral experience.\n\nAgain no need for details, just a title for reference will do, i.e. “Meeting my beloved friend”, “brushing teeth two month after”, etc",
       "type": "short",
       "inputPlaceholder": "",
@@ -94,7 +94,7 @@
     },
     {
       "title": "Positive/neutral experience after - Validation",
-      "description": "OK, now let me quickly make sure again, that in this experience:\n\n${echo}\n\nYou are having a neutral or positive moment, correct?",
+      "description": "[175f8ceb7795498fbdcd37541bd225f4](LoomEmbedd)\n\nOK, now let me quickly make sure again, that in this experience:\n\n${echo}\n\nYou are having a neutral or positive moment, correct?",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -150,7 +150,7 @@
     },
     {
       "title": "Positive/neutral experience after - Aside",
-      "description": "***\"${s5}\"***\n\nGreat, now put that experience aside for now, we’ll use if for reference soon.",
+      "description": "***\"${s5}\"***\n\n[fc71e3601e8644b7b8491bfa525f32e2](LoomEmbedd)\n\nGreat, now put that experience aside for now, we’ll use if for reference soon.",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -175,7 +175,7 @@
     },
     {
       "title": "Setting the stage",
-      "description": "${echo}\n\n**Before** image:  \nNow think back on the “before” experience with ${hchildName}:\n\n*\"${s1}\"*\n\nAnd notice what image comes to mind",
+      "description": "${echo}\n\n[7021df92b3024961bfa63052d9e818dc](LoomEmbedd)\n\n**Before** image:  \nNow think back on the “before” experience with ${hchildName}:\n\n*\"${s1}\"*\n\nAnd notice what image comes to mind",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -200,7 +200,7 @@
     },
     {
       "title": "Setting the stage - Dissociation",
-      "description": "Now first I want you to freeze that image and dissociate from it, so you see your younger self “over there”, in 3rd person, having a happy moment with ${hchildName}, in a small black & white muted screen far far away.\n\nMake that screen slightly out of focus and low resolution, like in Youtube where you select the lowest resolution you know?\n\nDo it now, and let me know when you're done.",
+      "description": "[8ca35869f89243f8afa529fd1be9f8e5](LoomEmbedd)\n\nNow first I want you to freeze that image and dissociate from it, so you see your younger self “over there”, in 3rd person, having a happy moment with ${hchildName}, in a small black & white muted screen far far away.\n\nMake that screen slightly out of focus and low resolution, like in Youtube where you select the lowest resolution you know?\n\nDo it now, and let me know when you're done.",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -225,7 +225,7 @@
     },
     {
       "title": "Setting the stage - Further dissociation",
-      "description": "Now as you look at your younger self in that far away screen, make sure it’s already:\n\n• 3rd person  \n• Still image  \n• The screen is black & white  \n• The screen is very far away  \n• The screen is muted  \n• The screen is a bit out of focus and low resolution  \n• The screen is faded out a bit  ",
+      "description": "[251af5eddae4488db1bd127d4bb372ad](LoomEmbedd)\n\nNow as you look at your younger self in that far away screen, make sure it’s already:\n\n• 3rd person  \n• Still image  \n• The screen is black & white  \n• The screen is very far away  \n• The screen is muted  \n• The screen is a bit out of focus and low resolution  \n• The screen is faded out a bit  ",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -250,7 +250,7 @@
     },
     {
       "title": "Setting the stage - Fast forwarding",
-      "description": "Good,\nNow in a moment I’ll ask you to watch your younger self “over there”, in the small far away black and white screen, being fast forwarded through everything that has happened, and freeze it at the end, so you see your younger self in the after moment:\n\n*\"${s4}\"*\n\nNow, know the sound of fast forwarding a cartoon?",
+      "description": "[f0f65645881d44cda429e8036f78092e](LoomEmbedd)\n\nGood,\nNow in a moment I’ll ask you to watch your younger self “over there”, in the small far away black and white screen, being fast forwarded through everything that has happened, and freeze it at the end, so you see your younger self in the after moment:\n\n*\"${s4}\"*\n\nNow, know the sound of fast forwarding a cartoon?",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -275,7 +275,7 @@
     },
     {
       "title": "Fast forwarding",
-      "description": "${echo}\n\nGreat, so here's what I want you to do:\n\n1. See your younger self in a small screen far far away, frozen in time, at the before moment, before anything had happened, in the happy moment with ${hchildName}.\n\n2. Make sure the screen is black & white, out of focus a little bit, and decrease the resolution. \n\n3. Mute the sound.\n\n4. Fast forward the movie as fast as you can all the way to after everything is over, and you see your younger self in the after moment, having a neutral or positive moment\n\n5. Like a cartoon, hear everything going forward very fast\n\nDo it now, and let me know when you're done.",
+      "description": "${echo}\n\n[95eb0b1558064f739f6935fdb3325ecf](LoomEmbedd)\n\nGreat, so here's what I want you to do:\n\n1. See your younger self in a small screen far far away, frozen in time, at the before moment, before anything had happened, in the happy moment with ${hchildName}.\n\n2. Make sure the screen is black & white, out of focus a little bit, and decrease the resolution. \n\n3. Mute the sound.\n\n4. Fast forward the movie as fast as you can all the way to after everything is over, and you see your younger self in the after moment, having a neutral or positive moment\n\n5. Like a cartoon, hear everything going forward very fast\n\nDo it now, and let me know when you're done.",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -300,7 +300,7 @@
     },
     {
       "title": "War in reverse is ...",
-      "description": "Now, as you see yourself in the small still picture far far away, after everything that has happened after the end being ok, did you ever think what does a war movie turn into, when you run it in reverse?\n\n[diihWjg0lAM](YtEmbedd)",
+      "description": "[8b88e91731d3457cbdf31869cf0a2af1](LoomEmbedd)\n\nNow, as you see yourself in the small still picture far far away, after everything that has happened after the end being ok, did you ever think what does a war movie turn into, when you run it in reverse?\n\n[diihWjg0lAM](YtEmbedd)",
       "notes": " I just heard it in a seminar the other day, and it made perfect sense to me.\n\nThe flames of destruction would package themselves back into bombs, which would return to the plane, which will return to the base and get unpacked.\n\nAll the weapons and ammunition get shipped back to the factories to be disassembled to raw materials.\n\nSoldiers would go back home, kiss their partners, hug their loved ones.\n\nDid you ever think of that?",
       "type": "radio",
       "inputPlaceholder": "",
@@ -325,7 +325,7 @@
     },
     {
       "title": "Rewinding",
-      "description": "Now in a moment I'll ask you do to something interesting, and don't do it until I tell you to, okay?\n\nI will want you to step inside the end of the memory, after everything was over being ok, into your own body, so you see what you saw at the time, in color, hear what you heard and ...\n\nRun the memory in reverse as fast as you can, all the way to before the beginning, in the happy memory with ${hchildName}.",
+      "description": "[a2b706be6a204274a231662e770934ca](LoomEmbedd)\n\nNow in a moment I'll ask you do to something interesting, and don't do it until I tell you to, okay?\n\nI will want you to step inside the end of the memory, after everything was over being ok, into your own body, so you see what you saw at the time, in color, hear what you heard and ...\n\nRun the memory in reverse as fast as you can, all the way to before the beginning, in the happy memory with ${hchildName}.",
       "notes": "So you hear everyone talking backwards, see everything and everyone moving backwards in reverse, as fast as you can.\n\n(yes you guessed it, like a cartoon)\n\nWe gonna do it this way one time, then add some decorations.\n\nSo here are the steps again:\n\n1. Step inside the end of the memory, into your own body, in 1st person,  perfectly okay.\n\n2. See what you saw at the time, in color, hear what you heard.\n\n3. Run the memory in reverse as fast as you can, hear everyone talking backwards, see everything and moving backwards in reverse, as fast as you can, like a cartoon, all the way to before the beginning, where you're perfectly okay again.\n\nClose your eyes and do it now, let me know when you're done.",
       "type": "radio",
       "inputPlaceholder": "",
@@ -357,7 +357,7 @@
     },
     {
       "title": "Rewinding - Validation",
-      "description": "${echo}\n\nSo now you’re back in the before moment with ${hchildName}:\n\n*\"${s1}\"*\n\nCorrect?",
+      "description": "${echo}\n\n[7ae31f8034154c5eb7d70bd601ac4f40](LoomEmbedd)\n\nSo now you’re back in the before moment with ${hchildName}:\n\n*\"${s1}\"*\n\nCorrect?",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -422,7 +422,7 @@
     },
     {
       "title": "Rewinding - Validation",
-      "description": "***\"Correct, I’m back in that happy memory\"***\n\nGreat, And you experienced everything in reverse in 1st person, through your own eyes, correct?",
+      "description": "***\"Correct, I’m back in that happy memory\"***\n\n[bb681d27b5b341a99d4a9610374bccc7](LoomEmbedd)\n\nGreat, And you experienced everything in reverse in 1st person, through your own eyes, correct?",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -469,7 +469,7 @@
     },
     {
       "title": "Embellishments - Choosing sound",
-      "description": "Now let's embellish this.\n\nI want you to think about a tune you enjoy, or a voice/sound that makes you feel good in anyway.",
+      "description": "[bd7a4abbbb4e44da887b3d2f15681b0a](LoomEmbedd)\n\nNow let's embellish this.\n\nI want you to think about a tune you enjoy, or a voice/sound that makes you feel good in anyway.",
       "notes": "You can use ANYTHING you like, that makes you laugh, feel silly, comfort, powerful, curious, whatever it is.\n\nFor many people the circus theme song works magic:\n[zjedLeVGcfE](YtEmbedd)\n\nSome go for people laughing:\n[yLmd0100T9g](YtEmbedd)\n\nOthers go for the voice of a good friend, a comedian, or a cartoon.\n\nLet me know when you got a tune/voice/sound you enjoy. No need for details, a title for reference will do.",
       "type": "short",
       "inputPlaceholder": "",
@@ -479,7 +479,7 @@
     },
     {
       "title": "Embellishments - Enriching sound",
-      "description": "Now start hearing that in your mind:\n\n${echo}\n\nAnd make sure you hear it in a rich tone, coming from all around you with echo and reverb, as if you were surrounded by the best speakers ever crafted by man or machine.",
+      "description": "[46f55ed305a14b2187898499ea3f30db](LoomEmbedd)\n\nNow start hearing that in your mind:\n\n${echo}\n\nAnd make sure you hear it in a rich tone, coming from all around you with echo and reverb, as if you were surrounded by the best speakers ever crafted by man or machine.",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -513,7 +513,7 @@
     },
     {
       "title": "Embellishments - Adding sound",
-      "description": "${echo}\n\nNow as you hear that in this way, put yourself back in the after moment:\n\n*“${s4}”*\n\nMake sure you are inside it, in 1st person , through your own eyes, seeing everything in color, and experience everything in reverse again, as you let the sound of ${s19} lead you through it, until you are back again at the happy “before” experience:\n\n*\"${s1}\"*\n\nClose your eyes and do it now, and let me know when you’re back at the “before” experience.",
+      "description": "${echo}\n\n[d64d56cedc8e4ab8b6544581fb86043a](LoomEmbedd)\n\nNow as you hear that in this way, put yourself back in the after moment:\n\n*“${s4}”*\n\nMake sure you are inside it, in 1st person , through your own eyes, seeing everything in color, and experience everything in reverse again, as you let the sound of ${s19} lead you through it, until you are back again at the happy “before” experience:\n\n*\"${s1}\"*\n\nClose your eyes and do it now, and let me know when you’re back at the “before” experience.",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -545,7 +545,7 @@
     },
     {
       "title": "Embellishments - Choosing touch",
-      "description": "${echo}\n\nNow let’s add to that.\nThink about something you enjoy the touch of.",
+      "description": "[e15a2ae6b26649a3b2197024a3e32461](LoomEmbedd)\n\n${echo}\n\nNow let’s add to that.\nThink about something you enjoy the touch of.",
       "notes": "A pet usually works very well, either yours or an animal you know and love. Some people go for something soft, velvet, blanket, or a pillow.\n\nWhatever it is you enjoy the sense of touch of.\n\nNo need for details, a title for reference will do.",
       "type": "short",
       "inputPlaceholder": "",
@@ -555,7 +555,7 @@
     },
     {
       "title": "Embellishments - Enriching touch",
-      "description": "Now start feeling and sensing that touch:\n\n${echo}\n\nAnd make sure you experience it fully, and really attend to the tactile sensations, the textures, temperature, and all that is associated with that touch.",
+      "description": "[03f74282b9cd44eeaf8dd12742ae822b](LoomEmbedd)\n\nNow start feeling and sensing that touch:\n\n${echo}\n\nAnd make sure you experience it fully, and really attend to the tactile sensations, the textures, temperature, and all that is associated with that touch.",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -589,7 +589,7 @@
     },
     {
       "title": "Embellishments - Adding touch",
-      "description": "${echo}\n\nNow as you feel it this way, start hearing the sound as well: \n\n*“${s19}”*\n\nPut yourself back in the after experience:\n\n*“${s4}”*\n\nAgain in 1st person, through your own eyes, and experience everything in reverse, as you let the sound and touch you enjoy to lead you through it, all the way until you are back in the before moment, the happy memory with ${hchildName}.",
+      "description": "[6b0bac51dc544710a199b2fd45c4432f](LoomEmbedd)\n\n${echo}\n\nNow as you feel it this way, start hearing the sound as well: \n\n*“${s19}”*\n\nPut yourself back in the after experience:\n\n*“${s4}”*\n\nAgain in 1st person, through your own eyes, and experience everything in reverse, as you let the sound and touch you enjoy to lead you through it, all the way until you are back in the before moment, the happy memory with ${hchildName}.",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -621,7 +621,7 @@
     },
     {
       "title": "Another run?",
-      "description": "Do you want to do one or some of the steps again?\n\nThis is totally up to you, if you feel you will benefit from it, It never hurts, and it’s easier and more automatic each time you do it anyway.",
+      "description": "[9de9c4dd599246a3b261aeb50896032f](LoomEmbedd)\n\nDo you want to do one or some of the steps again?\n\nThis is totally up to you, if you feel you will benefit from it, It never hurts, and it’s easier and more automatic each time you do it anyway.",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -675,7 +675,7 @@
     },
     {
       "title": "Congruence check",
-      "description": "${echo}\n\nAnd what happens now, as you think of those events you just rewinded?",
+      "description": "[9601f08ac0b34961a4fb4e3f53016686](LoomEmbedd)\n\n${echo}\n\nAnd what happens now, as you think of those events you just rewinded?",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -714,7 +714,7 @@
     },
     {
       "title": "Congruence check",
-      "description": "${echo}\n\nDo you have any objections being this way, experiencing these events like that?",
+      "description": "[e9c86a529f8c40ddb8b9a06873cf3bc9](LoomEmbedd)\n\n${echo}\n\nDo you have any objections being this way, experiencing these events like that?",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",

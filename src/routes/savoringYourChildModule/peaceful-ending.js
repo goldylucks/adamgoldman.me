@@ -4,6 +4,7 @@ export default {
   slug: 'peaceful-ending',
   title: 'Peaceful Ending',
   description: 'This process will help soften the unpleasantness and negative feelings regarding the moment of transition, and the events regarding the transition, like the funeral and related things you might went through.',
+  loom: '7ca3c61f85a14110b9d91f87adde01e9',
   benefits: [
     'Soften the moment of getting the news',
     'Focus on the happy times with your child',
