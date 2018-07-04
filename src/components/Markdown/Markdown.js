@@ -6,6 +6,7 @@ import FbShareLink from '../FbShareLink'
 import Link from '../Link'
 import FbReview from '../FbReview'
 import YtEmbedd from '../YtEmbedd'
+import LoomEmbedd from '../LoomEmbedd'
 import ExplicitWarning from '../ExplicitWarning'
 
 const Markdown = props => (
@@ -19,6 +20,10 @@ const Markdown = props => (
 
             if (linkProps.href === 'YtEmbedd') {
               return <YtEmbedd src={linkProps.children} />
+            }
+
+            if (linkProps.href === 'LoomEmbedd') {
+              return <LoomEmbedd src={linkProps.children} />
             }
 
             if (linkProps.href === 'iframe') {
