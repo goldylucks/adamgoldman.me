@@ -4,6 +4,7 @@ import React from 'react'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
 
 import { scrollToTopOfNode, cloudImg } from '../../utils'
+import LoomEmbedd from '../../components/LoomEmbedd'
 import ExternalA from '../../components/ExternalA'
 import Benefits from '../../components/Benefits'
 import MultiStepForm from '../../components/MultiStepForm'
@@ -36,6 +37,7 @@ class SavoringYourChild extends React.Component<Props> {
           <div className="mainheading">
             <h1 className="sitetitle text-center">How to honor your child&apos;s memory after the transition</h1>
             <p className="lead text-center">And savor the relationship in a healing way</p>
+            <LoomEmbedd src="f4c6f6f44e4f4a008bc4ba63fdd8ec27" />
             <GetStarted style={{ marginTop: 80, marginBottom: 80 }} />
           </div>
           <hr className={s.hr} />
