@@ -60,24 +60,24 @@ class AdminToolResponseItem extends React.Component<Props> {
   renderStepsWithAnswers({
     steps, answerByStep, currentStepNum, hiddenFields,
   }) {
-    return steps.slice(0, currentStepNum).map((step, idx) => (
+    return steps.slice(0, currentStepNum).map((step, sIdx) => (
       <div>
         <Markdown source={'## ' + replaceVarsUtil({ // eslint-disable-line prefer-template
- str: step.title, hiddenFields, answerByStep, currentStepNum,
+ str: step.title, hiddenFields, answerByStep, currentStepNum: sIdx,
 })}
         />
         <Markdown source={replaceVarsUtil({
-str: step.description, hiddenFields, answerByStep, currentStepNum,
+str: step.description, hiddenFields, answerByStep, currentStepNum: sIdx,
 })}
         />
         <Markdown
           className="text-muted tool-note"
           source={replaceVarsUtil({
- str: step.notes, hiddenFields, answerByStep, currentStepNum,
+ str: step.notes, hiddenFields, answerByStep, currentStepNum: sIdx,
 })}
         />
         <Markdown source={replaceVarsUtil({
- str: answerByStep[idx], hiddenFields, answerByStep, currentStepNum,
+ str: answerByStep[sIdx], hiddenFields, answerByStep, currentStepNum: sIdx,
 })}
         />
         <hr />
