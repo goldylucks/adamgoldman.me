@@ -55,7 +55,7 @@ async function fetchByUserOrCreate(req, res, next) {
     global.console.log('creating tool response!')
     const toolObject = tool.toObject()
     if (toolObject.hasReview) {
-      toolObject.steps = toolObject.steps.concat(savoringReviewSteps)
+      toolObject.steps = toolObject.steps.concat(savoringReviewSteps({ toolSlug }))
     }
     const toolResponseToCreate = { ...toolObject, user: user._id, toolId: tool._id }
     delete toolResponseToCreate._id

@@ -1,8 +1,6 @@
 /* eslint-disable max-len */
 
-import { MESSENGER_LINK_WELCOME } from '../../../constants'
-
-export default [
+export default ({ toolSlug }) => [
   {
     title: 'Review - most useful',
     description: '[aa9e2f6e92b54af285c729078aa6db39](LoomEmbedd)\n\nWhich part did you find the most useful, and why?\n (or found more beneficial/healing)',
@@ -81,12 +79,10 @@ Please don’t hold back. I take everything as constructive feedback.`,
     answers: [],
   },
   {
-    title: 'Next steps',
-    description: '[e3acbf15ecf3481a82df507fdd0a061c](LoomEmbedd)\n\nWhat would you like to do next?',
+    title: 'Finish',
+    description: 'Click the "I am done" button below to continue',
     answers: [
-      { text: 'Choose the next process to experience', isLink: true, link: '/savoring-your-child/modules' },
-      { text: 'Repeat this process again', isRepeatProcess: true },
-      { text: 'Talk to me (Adam)', isLinkNew: true, linkNew: MESSENGER_LINK_WELCOME },
+      { text: 'I am done <----- CLICK HERE', isLinkNew: true, linkNew: `https://m.me/adamgoldman.me?ref=finished-${toolSlug}` },
     ],
   },
 ]
