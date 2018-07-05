@@ -40,8 +40,9 @@ class SavoringYourChild extends React.Component<Props> {
           </div>
           <hr className={s.hr} />
           <section>
-            <h1 className="text-center">Parents share ...</h1>
+            <h1 className="text-center">Parents share ... <span className={s.asterixDisclaimer}>*</span></h1>
             <Testimonials testimonials={testimonials} />
+            <small>* Results may vary (<ExternalA href="/legal-stuff" style={{ color: 'inherit' }}>full disclaimer</ExternalA>)</small>
           </section>
           <GetStarted />
           <hr className={s.hr} />
@@ -72,7 +73,7 @@ class SavoringYourChild extends React.Component<Props> {
   renderBenefitsSection() {
     return (
       <section>
-        <h1 className="text-center">Learn how to ...</h1>
+        <h1 className="text-center">Learn how to ...<span className={s.asterixDisclaimer}>*</span></h1>
         <div className="row justify-content-md-center">
           <div className="col col-lg-10">
             <Benefits benefits={[
@@ -85,6 +86,7 @@ class SavoringYourChild extends React.Component<Props> {
             />
           </div>
         </div>
+        <small>* Results may vary (<ExternalA href="/legal-stuff" style={{ color: 'inherit' }}>full disclaimer</ExternalA>)</small>
       </section>
     )
   }

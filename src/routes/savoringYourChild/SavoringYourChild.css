@@ -17,6 +17,11 @@ buffer = 30px
   border-radius: 50%;
 }
 
+.asterixDisclaimer {
+  font-size: 14px;
+  vertical-align: text-top;
+}
+
 .andreasContainerBoth {
   display: flex;
   justify-content: space-evenly;
