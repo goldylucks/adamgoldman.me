@@ -41,18 +41,13 @@ class SavoringYourChild extends React.Component<Props> {
             <GetStarted style={{ marginTop: 80, marginBottom: 80 }} />
           </div>
           <hr className={s.hr} />
-          <section>
-            <h1 className="text-center">Parents share ... <span className={s.asterixDisclaimer}>*</span></h1>
-            <Testimonials testimonials={testimonials} />
-            <small>* Results may vary (<ExternalA href="/legal-stuff" style={{ color: 'inherit' }}>full disclaimer</ExternalA>)</small>
-          </section>
-          <GetStarted />
+          {this.renderPainsSection()}
           <hr className={s.hr} />
           {this.renderBenefitsSection()}
           <hr className={s.hr} />
-          <section>
-            <FAQContainer />
-          </section>
+          <GetStarted />
+          <hr className={s.hr} />
+          {this.renderTestimonialsSection()}
           <hr className={s.hr} />
           <GetStarted />
           <hr className={s.hr} />
@@ -61,6 +56,10 @@ class SavoringYourChild extends React.Component<Props> {
           <GetStarted />
           <hr className={s.hr} />
           {this.renderAboutMeSection()}
+          <hr className={s.hr} />
+          <section>
+            <FAQContainer />
+          </section>
           <hr className={s.hr} />
           <MessageMe />
           <hr className={s.hr} />
@@ -72,6 +71,24 @@ class SavoringYourChild extends React.Component<Props> {
     )
   }
 
+  renderPainsSection() {
+    return (
+      <section>
+        <h1 className="text-center">Common pains parents share</h1>
+        <div className="row justify-content-md-center">
+          <div className="col col-lg-10">
+            <div className={s.painPoint}>- &quot;I&apos;m just existing&quot; </div>
+            <div className={s.painPoint}>- &quot;I have nothing to look forward to&quot; </div>
+            <div className={s.painPoint}>- &quot;I have this image stuck in my head&quot; </div>
+            <div className={s.painPoint}>- &quot;All I feel is sorrow & loss&quot; </div>
+            <div className={s.painPoint}>- &quot;This pain will never go away&quot; </div>
+            <p>If any of the above feel familiar to you, please realize you are NOT alone in this!</p>
+            <p>Many parents Ive worked with felt the same way before doing the program.</p>
+          </div>
+        </div>
+      </section>
+    )
+  }
   renderBenefitsSection() {
     return (
       <section>
@@ -93,6 +110,15 @@ class SavoringYourChild extends React.Component<Props> {
     )
   }
 
+  renderTestimonialsSection() {
+    return (
+      <section>
+        <h1 className="text-center">What parents are saying ... <span className={s.asterixDisclaimer}>*</span></h1>
+        <Testimonials testimonials={testimonials} />
+        <small>* Results may vary (<ExternalA href="/legal-stuff" style={{ color: 'inherit' }}>full disclaimer</ExternalA>)</small>
+      </section>
+    )
+  }
   renderPartenrshipsSection() {
     return (
       <section>
@@ -135,7 +161,7 @@ He has created open-source online programs to guide parents through effective ch
           <br />
 His work is a detailed challenge to the rest of us to learn how to “up our game” or be left behind in the dustbin of history.
           <br />
-- Steve Andreas, MA, master trainer and author.
+          <strong>- Steve Andreas, MA, master trainer and author.</strong>
         </blockquote>
 
       </section>

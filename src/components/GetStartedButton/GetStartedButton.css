@@ -5,6 +5,8 @@
   border-radius: 30px;
   display: block;
   width: 50%;
+  background: #03a87c;
+  color: #fff !important;
 }
 
 @media only screen and (max-width : 768px) {
