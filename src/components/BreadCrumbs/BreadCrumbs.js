@@ -6,11 +6,12 @@ import Link from '../Link'
 
 type Props = {
   crumbs: Array<Object>,
+  basePath?: string
 };
 
-const BreadCrumbs = ({ crumbs, ...restProps }: Props) => (
+const BreadCrumbs = ({ crumbs, basePath, ...restProps }: Props) => (
   <div {...restProps}>
-    <Link to="/">Home</Link>
+    <Link to={basePath}>Home</Link>
     {crumbs.map((c, idx) =>
         (idx === crumbs.length - 1 ? (
           <span> | {c.text}</span>
@@ -21,5 +22,9 @@ const BreadCrumbs = ({ crumbs, ...restProps }: Props) => (
         )))}
   </div>
 )
+
+BreadCrumbs.defaultProps = {
+  basePath: '/',
+}
 
 export default BreadCrumbs

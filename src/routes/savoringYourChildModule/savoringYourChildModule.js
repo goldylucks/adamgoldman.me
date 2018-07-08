@@ -4,6 +4,7 @@ import React from 'react'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
 
 import { scrollToTopOfNode } from '../../utils'
+import BreadCrumbs from '../../components/BreadCrumbs'
 import Benefits from '../../components/Benefits'
 import MessageMe from '../../components/MessageMe'
 import Testimonials from '../../components/Testimonials'
@@ -42,6 +43,13 @@ class savoringYourChildSectionModule extends React.Component<Props> {
     return (
       <div>
         <div className="container">
+          <BreadCrumbs
+            basePath="/savoring-your-child"
+            crumbs={[
+              { text: 'Modules', path: '/savoring-your-child/modules' },
+              { text: title },
+            ]}
+          />
           <div className="mainheading">
             <h1 className="sitetitle text-center">{title}</h1>
             <p className="lead text-center">{description}</p>
@@ -49,17 +57,6 @@ class savoringYourChildSectionModule extends React.Component<Props> {
             <GetStarted style={{ marginTop: 80, marginBottom: 80 }} />
           </div>
           <hr />
-          {!testimonials.length
-            ? null
-            : (
-              <section>
-                <h1 className="text-center">Parents Share</h1>
-                <Testimonials testimonials={testimonials} />
-                <hr />
-                <GetStarted style={{ marginTop: 80, marginBottom: 80 }} />
-                <hr />
-              </section>
-            )}
           {!benefits.length
             ? null
             : (
@@ -70,6 +67,17 @@ class savoringYourChildSectionModule extends React.Component<Props> {
                     <Benefits benefits={benefits} />
                   </div>
                 </div>
+                <hr />
+                <GetStarted style={{ marginTop: 80, marginBottom: 80 }} />
+                <hr />
+              </section>
+            )}
+          {!testimonials.length
+            ? null
+            : (
+              <section>
+                <h1 className="text-center">Parents Share</h1>
+                <Testimonials testimonials={testimonials} />
                 <hr />
                 <GetStarted style={{ marginTop: 80, marginBottom: 80 }} />
                 <hr />
