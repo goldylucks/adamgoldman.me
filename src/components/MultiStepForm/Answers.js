@@ -13,6 +13,8 @@ type Props = {
   onSubmit: Function,
   onSubmitOther?: Function,
   onConcern: Function,
+  onLinkPress: Function,
+  onNewLinkPress: Function,
   path: String,
   isPulsating: Boolean,
 }
@@ -30,7 +32,7 @@ class Answers extends React.Component<Props, State> {
   }
   render() {
     const {
-      answers, onSubmit, path, isPulsating,
+      answers, onSubmit, path, isPulsating, onLinkPress, onNewLinkPress,
     } = this.props
     return (
       <div className={cx('answer-group', { pulsating: isPulsating })}>
@@ -41,9 +43,9 @@ class Answers extends React.Component<Props, State> {
           } else if (answer.isFbShare) {
             html = <ExternalA className="btn btn-primary btn-fixed" href={getFbShareUrl(path)}>{answer.text}</ExternalA>
           } else if (answer.link) {
-            html = <Link className="btn btn-primary btn-fixed" to={answer.link}>{answer.text}</Link>
+            html = <Link className="btn btn-primary btn-fixed" onClick={() => onLinkPress(answer.link)} to={answer.link}>{answer.text}</Link>
           } else if (answer.linkNew) {
-            html = <ExternalA className="btn btn-primary btn-fixed" href={answer.linkNew}>{answer.text}</ExternalA>
+            html = <ExternalA className="btn btn-primary btn-fixed" onClick={() => onNewLinkPress(answer.linkNew)} href={answer.linkNew}>{answer.text}</ExternalA>
           } else if (answer.isOther) {
             html = (
               <form onSubmit={(evt) => {

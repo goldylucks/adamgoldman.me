@@ -128,6 +128,7 @@ class savoringYourChildSectionModule extends React.Component<Props> {
         </div>
         <div>
           <MultiStepForm
+            // TODO catch link and linkNew answer events
             {...toolResponse}
             hiddenFields={{
               childHe: user.savoringChildGender === 'male' ? 'he' : 'she',

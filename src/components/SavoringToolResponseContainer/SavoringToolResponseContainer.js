@@ -44,6 +44,7 @@ export default class SavoringToolResponseContainer extends React.Component<Props
       onUpdateProgress: this.updateProgress,
       onConcern: this.onConcern,
       onUpdateUserInDb: this.updateUserInDb,
+      // TODO catch link and linkNew answer events
     })
   }
 
@@ -65,7 +66,8 @@ export default class SavoringToolResponseContainer extends React.Component<Props
 
   updateProgress = (nextState, userPropertiesToUpdateOnCompletion = {}) => {
     const { toolResponse } = this.state
-    fireGaEventOnStepChange(toolResponse.title, Number(nextState.currentStepNum))
+    // TODO:: get gaEventAction, hasValue, stepAnswer from the current step
+    fireGaEventOnStepChange(toolResponse.title, Number(nextState.currentStepNum), gaEventAction, hasValue, stepAnswer)
     if (nextState.currentStepNum === toolResponse.steps.length - 1) {
       nextState.status = 'Completed'
       fireGaEventToolCompleted(toolResponse.title)
@@ -129,16 +131,27 @@ export default class SavoringToolResponseContainer extends React.Component<Props
   }
 }
 
-function fireGaEventOnStepChange(toolTitle, stepNumber) {
-  window.ga('send', {
+function fireGaEventOnStepChange(toolTitle, stepNumber, gaEventAction, hasValue, stepAnswer) {
+  const options = {
     hitType: 'event',
     eventCategory: 'Savoring Tool',
-    eventAction: 'Go To Step',
+    eventAction: getEventActionForStepChange(stepNumber, gaEventAction),
     eventLabel: toolTitle,
-    eventValue: stepNumber,
-  })
+  }
+  // filling stars or making payment have value. the step object has "hasValue" property
+  // for stars, the step answer is the value
+  if (hasValue) {
+    options.eventValue = Number(stepAnswer)
+  }
+  window.ga('send', options)
 }
 
+// TODO at the moment this is fired when user sees the finish step.
+// should fire this upon clicking the "finish" button
+// pass the finish flag somehow from MultiStepForm, or,
+// catch the "link" event from MultiStepForm, and identify where link goes
+// or if it's an internal link and the process is finished (we are on last step)
+// optional hack: listen to history route change
 function fireGaEventToolCompleted(toolTitle) {
   window.ga('send', {
     hitType: 'event',
@@ -152,8 +165,31 @@ function fireGaEventOnConcern(toolTitle, stepNumber) {
   window.ga('send', {
     hitType: 'event',
     eventCategory: 'Savoring Tool',
-    eventAction: 'Concern on step:',
+    eventAction: `300 Concern on step - ${nn(stepNumber)}`,
     eventLabel: toolTitle,
-    eventValue: stepNumber,
+    // eventValue: stepNumber,
   })
 }
+
+// TODO :: check
+function nn(n) {
+  return Number(n) < 10
+    ? `0${n}`
+    : String(n)
+}
+
+function getEventActionForStepChange(stepNumber, gaEventAction) {
+  const _nn = nn(stepNumber)
+  if (!gaEventAction) {
+    // 0 is prefix for "go to step" actions
+    return `0${_nn} Go to step ${_nn}`
+  }
+  // 1 is prefix for "ending" actions (review, stars, payment)
+  // coming from savoringReviewSteps.js
+  return gaEventAction
+}
+
+// todo add step names in savoring review steps
+
+// todo capture link clicks from multistepform
+// use it to determine if tool has ended

@@ -1,20 +1,26 @@
 /* eslint-disable max-len */
+// name property is used for analytics.
 
 export default ({ toolSlug }) => [
   {
     title: 'Review - most useful',
     description: '[aa9e2f6e92b54af285c729078aa6db39](LoomEmbedd)\n\nWhich part did you find the most useful, and why?\n (or found more beneficial/healing)',
     type: 'long',
+    id: 'most-useful',
+    gaEventAction: '100 Go to most useful',
     answers: [],
   },
   {
     title: 'Review - rate',
     description: '[e62767011bd74d77aeb05c782fdf7717](LoomEmbedd)\n\nHow much did you find this process useful/beneficial/healing?',
     type: 'stars-review',
+    gaEventAction: '110 most useful -> stars',
+    hasValue: true,
   },
   {
     title: 'Value first biz model - choose',
     id: 'choosePaymentAmount',
+    gaEventAction: '120 stars -> payment intro',
     description: `[eb68c28fb30b4e159b393078439f61e7](LoomEmbedd)
 
 Great!
@@ -41,6 +47,7 @@ Like I said in the beginning, I work with a [value first biz model](/savoring-yo
   {
     title: 'Value first biz model',
     id: 'low-on-cash',
+    gaEventAction: '131 Low on cash',
     description: `\${echo}
 
 That’s perfectly fine. Our #1 priority is to reconnect you with what you value and appreciate in your relationship with \${hchildName}, give you more control over your internal experiences, emotions, and thought processes, hence increasing the freedom and choices in your life.
@@ -56,6 +63,7 @@ You are more than welcome to share this with others parents of course`,
   {
     title: 'Thank you for your support!',
     id: 'payment',
+    gaEventAction: '132 Payment',
     description: '[b843c523b7de4f5c8951b9bafdf48005](LoomEmbedd)\n\nThis allows me to invest more time to improve these processes and help more parents worldwide, just like you.',
     type: 'payment',
     answers: [
@@ -66,6 +74,7 @@ You are more than welcome to share this with others parents of course`,
   {
     title: 'Final comments & suggestions',
     id: 'finalComments',
+    gaEventAction: '140 Final Comments',
     description: `[2e0ddfb8f31d4cfa98110c69d0868ad8](LoomEmbedd)
 
 Do you want to help me improve this process for the next parent?
@@ -80,6 +89,7 @@ Please don’t hold back. I take everything as constructive feedback.`,
   },
   {
     title: 'Finish',
+    gaEventAction: '150 Arrive at Finish',
     description: 'Click the "I am done" button below to continue',
     answers: [
       { text: 'I am done <----- CLICK HERE', isLinkNew: true, linkNew: `https://m.me/adamgoldman.me?ref=finished-${toolSlug}` },

@@ -209,6 +209,7 @@ His work is a detailed challenge to the rest of us to learn how to “up our gam
         </div>
         <div>
           <MultiStepForm
+            // TODO catch link and linkNew answer events
             hideSubscribeButton
             {...toolResponse}
             scrollTop={() => scrollToTopOfNode(this.toolResponseNode)}
