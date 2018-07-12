@@ -1,3 +1,4 @@
+const decisionDestroyer = require('./tools/decisionDestroyer.json')
 const markB4bRewind = require('./tools/markB4bRewind.json')
 const test = require('./tools/test.json')
 const savoringSavoringFuturePlans = require('./tools/savoringSavoringFuturePlans.json')
@@ -23,6 +24,7 @@ const reverseFeelingSpin = require('./tools/reverseFeelingSpin.json')
 const toolHasReviewTest = require('./tools/hasReviewTest.json')
 
 module.exports = [
+  decisionDestroyer,
   markB4bRewind,
   test,
   savoringRelationshipConsolidation,
