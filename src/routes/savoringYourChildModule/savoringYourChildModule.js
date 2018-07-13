@@ -32,7 +32,10 @@ type Props = {
   onLogin: Function,
   onUpdateProgress: Function,
   onUpdateUser: Function,
+  onAnswerLinkPress: Function,
+  onAnswerNewLinkPress: Function,
   onConcern: Function,
+  onComplete: Function,
 };
 
 class savoringYourChildSectionModule extends React.Component<Props> {
@@ -128,8 +131,9 @@ class savoringYourChildSectionModule extends React.Component<Props> {
         </div>
         <div>
           <MultiStepForm
-            // TODO catch link and linkNew answer events
             {...toolResponse}
+            onAnswerLinkPress={this.props.onAnswerLinkPress}
+            onAnswerNewLinkPress={this.answerNewLinkPress}
             hiddenFields={{
               childHe: user.savoringChildGender === 'male' ? 'he' : 'she',
               childHis: user.savoringChildGender === 'male' ? 'his' : 'her',
@@ -144,6 +148,14 @@ class savoringYourChildSectionModule extends React.Component<Props> {
         </div>
       </div>
     )
+  }
+
+  answerNewLinkPress = (link, isLastStep) => {
+    if (isLastStep) {
+      this.props.onComplete()
+    } else {
+      this.props.onAnswerNewLinkPress(link)
+    }
   }
 
   toolResponseNode = null

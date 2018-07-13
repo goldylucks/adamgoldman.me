@@ -12,6 +12,8 @@ exports[`MultiStepForm should render flash answer 1`] = `
   currentStepNum={0}
   hiddenFields={Array []}
   hideSubscribeButton={false}
+  onAnswerLinkPress={[Function]}
+  onAnswerNewLinkPress={[Function]}
   onConcern={[MockFunction]}
   onUpdateProgress={[MockFunction]}
   path="/tools/trauma-relief/5ac43ef0d3b723075ebfd200"
@@ -157,6 +159,8 @@ exports[`MultiStepForm should render flash answer 1`] = `
         }
         isPulsating={true}
         onConcern={[Function]}
+        onLinkPress={[Function]}
+        onNewLinkPress={[Function]}
         onSubmit={[Function]}
         onSubmitOther={[Function]}
         path="/tools/trauma-relief/5ac43ef0d3b723075ebfd200"
@@ -212,6 +216,8 @@ exports[`MultiStepForm should render long answer 1`] = `
   currentStepNum={0}
   hiddenFields={Array []}
   hideSubscribeButton={false}
+  onAnswerLinkPress={[Function]}
+  onAnswerNewLinkPress={[Function]}
   onConcern={[MockFunction]}
   onUpdateProgress={[MockFunction]}
   path="/tools/trauma-relief/5ac43ef0d3b723075ebfd200"
@@ -390,6 +396,8 @@ exports[`MultiStepForm should render payment 1`] = `
   currentStepNum={0}
   hiddenFields={Array []}
   hideSubscribeButton={false}
+  onAnswerLinkPress={[Function]}
+  onAnswerNewLinkPress={[Function]}
   onConcern={[MockFunction]}
   onUpdateProgress={[MockFunction]}
   path="/tools/trauma-relief/5ac43ef0d3b723075ebfd200"
@@ -629,6 +637,8 @@ exports[`MultiStepForm should render radio answers 1`] = `
   currentStepNum={0}
   hiddenFields={Array []}
   hideSubscribeButton={false}
+  onAnswerLinkPress={[Function]}
+  onAnswerNewLinkPress={[Function]}
   onConcern={[MockFunction]}
   onUpdateProgress={[MockFunction]}
   path="/tools/trauma-relief/5ac43ef0d3b723075ebfd200"
@@ -766,6 +776,8 @@ exports[`MultiStepForm should render radio answers 1`] = `
         }
         isPulsating={true}
         onConcern={[Function]}
+        onLinkPress={[Function]}
+        onNewLinkPress={[Function]}
         onSubmit={[Function]}
         onSubmitOther={[Function]}
         path="/tools/trauma-relief/5ac43ef0d3b723075ebfd200"
@@ -821,6 +833,8 @@ exports[`MultiStepForm should render short answer 1`] = `
   currentStepNum={0}
   hiddenFields={Array []}
   hideSubscribeButton={false}
+  onAnswerLinkPress={[Function]}
+  onAnswerNewLinkPress={[Function]}
   onConcern={[MockFunction]}
   onUpdateProgress={[MockFunction]}
   path="/tools/trauma-relief/5ac43ef0d3b723075ebfd200"
@@ -999,6 +1013,8 @@ exports[`MultiStepForm should render short answer: submitting answer 1`] = `
   currentStepNum={0}
   hiddenFields={Array []}
   hideSubscribeButton={false}
+  onAnswerLinkPress={[Function]}
+  onAnswerNewLinkPress={[Function]}
   onConcern={[MockFunction]}
   onUpdateProgress={
     [MockFunction] {
@@ -1017,6 +1033,18 @@ exports[`MultiStepForm should render short answer: submitting answer 1`] = `
             "stepsStack": Array [
               0,
             ],
+          },
+          Object {
+            "answerByStep": Object {
+              "0": "Answer step 0",
+              "1": "",
+              "2": "",
+            },
+            "currentStepNum": 0,
+            "flashedIdx": 0,
+            "isFlashing": false,
+            "price": 0,
+            "stepsStack": Array [],
           },
         ],
       ],
@@ -1240,6 +1268,8 @@ exports[`MultiStepForm should render stars review 1`] = `
   currentStepNum={0}
   hiddenFields={Array []}
   hideSubscribeButton={false}
+  onAnswerLinkPress={[Function]}
+  onAnswerNewLinkPress={[Function]}
   onConcern={[MockFunction]}
   onUpdateProgress={[MockFunction]}
   path="/tools/trauma-relief/5ac43ef0d3b723075ebfd200"
@@ -1514,6 +1544,8 @@ exports[`MultiStepForm with data 1`] = `
   currentStepNum={1}
   hiddenFields={Array []}
   hideSubscribeButton={false}
+  onAnswerLinkPress={[Function]}
+  onAnswerNewLinkPress={[Function]}
   onConcern={[MockFunction]}
   onUpdateProgress={[MockFunction]}
   path="/tools/trauma-relief/5ac43ef0d3b723075ebfd200"

@@ -113,4 +113,4 @@ export const isSavoring = path => path.includes('savoring-your-child')
 
 export const didUserFillForm = (user, formId) => user.form && user.form.includes(formId)
 
-export const nn = n => (n < 10 ? `0${n}` : `${n}`)
+export const nn = n => (Number(n) < 10 ? `0${n}` : `${n}`)
