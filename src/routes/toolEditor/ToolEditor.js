@@ -103,7 +103,7 @@ class ToolEditor extends React.Component {
   elems = {}
 
   updateHiddenFields = (hiddenFields) => {
-    // TODO :: if an existing field is changed or removed, check if it's used, and prompt warning
+    // TODO :: if an existing field is changed or removed, and it's used by a step, prompt warning
     this.setState({ hiddenFields })
   }
 

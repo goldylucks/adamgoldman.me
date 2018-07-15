@@ -24,8 +24,11 @@ type Props = {
   fetchingToolResponseError: string,
   onLogin: Function,
   onUpdateProgress: Function,
+  onAnswerLinkPress: Function,
+  onAnswerNewLinkPress: Function,
   onUpdateUser: Function,
   onConcern: Function,
+  onComplete: Function,
   onUpdateUserInDb: Function
 }
 
@@ -209,32 +212,35 @@ His work is a detailed challenge to the rest of us to learn how to “up our gam
         </div>
         <div>
           <MultiStepForm
+            onAnswerLinkPress={this.answerLinkPress}
+            onAnswerNewLinkPress={this.props.onAnswerNewLinkPress}
             hideSubscribeButton
             {...toolResponse}
             scrollTop={() => scrollToTopOfNode(this.toolResponseNode)}
-            onUpdateProgress={this.updateProgress}
+            onUpdateProgress={this.props.onUpdateProgress}
             onConcern={this.props.onConcern}
           />
         </div>
       </div>
     )
   }
-
-  updateProgress = (nextState) => {
-    const { onUpdateProgress, toolResponse, onUpdateUserInDb } = this.props
-    const { answerByStep } = nextState
-    if (nextState.currentStepNum === toolResponse.steps.length - 1) {
-      const userPropertiesToUpdate = {
-        name: answerByStep[6],
-        savoringChildName: answerByStep[7],
-        savoringChildGender: answerByStep[8].match(/son/i) ? 'male' : 'female',
-        gender: answerByStep[8].match(/father/i) ? 'male' : 'female',
-      }
-      onUpdateProgress(nextState, userPropertiesToUpdate)
-      onUpdateUserInDb(userPropertiesToUpdate)
+  answerLinkPress = (link, isLastStep, multiFormState) => {
+    if (isLastStep) {
+      this.completed(link, multiFormState)
     } else {
-      onUpdateProgress(nextState)
+      this.props.onAnswerLinkPress(link)
     }
+  }
+
+  completed(link, multiFormState) {
+    const { answerByStep } = multiFormState
+    const userPropertiesToUpdate = {
+      name: answerByStep[6],
+      savoringChildName: answerByStep[7],
+      savoringChildGender: answerByStep[8].match(/son/i) ? 'male' : 'female',
+      gender: answerByStep[8].match(/father/i) ? 'male' : 'female',
+    }
+    this.props.onComplete(userPropertiesToUpdate)
   }
 
   toolResponseNode = null

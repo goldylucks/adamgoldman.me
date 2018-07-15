@@ -3,6 +3,8 @@
 import React from 'react'
 import axios from 'axios'
 
+import { nn } from '../../utils'
+
 type Props = {
   toolSlug: string,
   children: React.Node,
@@ -44,6 +46,9 @@ export default class SavoringToolResponseContainer extends React.Component<Props
       onUpdateProgress: this.updateProgress,
       onConcern: this.onConcern,
       onUpdateUserInDb: this.updateUserInDb,
+      onAnswerLinkPress: this.answerLinkPress,
+      onAnswerNewLinkPress: this.answerNewLinkPress,
+      onComplete: this.complete,
     })
   }
 
@@ -63,25 +68,57 @@ export default class SavoringToolResponseContainer extends React.Component<Props
       })
   }
 
-  updateProgress = (nextState, userPropertiesToUpdateOnCompletion = {}) => {
+  updateProgress = (nextMultiFormState, prevMultiFormState) => {
     const { toolResponse } = this.state
-    fireGaEventOnStepChange(toolResponse.title, Number(nextState.currentStepNum))
-    if (nextState.currentStepNum === toolResponse.steps.length - 1) {
-      nextState.status = 'Completed'
-      fireGaEventToolCompleted(toolResponse.title)
-      // for intro module to pass gender, name, childName, childGender
-      this.updateUserOnCompletion(userPropertiesToUpdateOnCompletion)
+    const nextStepN = Number(nextMultiFormState.currentStepNum)
+    const nextStep = toolResponse.steps[nextStepN]
+    // HACK, need to pass beter info on step change from MultiStepForm
+    // if last step answered is star rating:
+    if (this.progressIsStarRating(nextMultiFormState, prevMultiFormState)) {
+      const stars = nextMultiFormState.answerByStep[nextStepN - 1]
+      fireGaEventOnStepChange(toolResponse.title, nextStepN, nextStep.gaEventAction, true, stars)
+    } else {
+      fireGaEventOnStepChange(toolResponse.title, nextStepN, nextStep.gaEventAction)
     }
-    axios.put(`/api/toolResponses/${toolResponse._id}`, { ...toolResponse, ...nextState })
+    axios.put(`/api/toolResponses/${toolResponse._id}`, { ...toolResponse, ...nextMultiFormState })
       .catch((err) => {
         global.console.error(err)
         global.alert(err.message)
       })
   }
+  progressIsStarRating(nextMultiFormState, prevMultiFormState) {
+    const { toolResponse } = this.state
+    const previousStepN = Number(nextMultiFormState.currentStepNum) - 1
+    const previousStep = toolResponse.steps[previousStepN]
+    const isGoingForward = Number(nextMultiFormState.currentStepNum) === Number(prevMultiFormState.currentStepNum + 1)
+    const lastStepIsStarr = previousStep.type === 'stars-review'
+    return lastStepIsStarr && isGoingForward
+  }
+  // userPropertiesToUpdate currently only for passing user info on completing intro questionnaire
+  complete = (userPropertiesToUpdate) => {
+    console.log('DELETE ME: complete!')
+    const { toolResponse } = this.state
+    fireGaEventToolCompleted(toolResponse.title)
+    axios.put(`/api/toolResponses/${toolResponse._id}`, { ...toolResponse, status: 'Completed' })
+      .catch((err) => {
+        global.console.error(err)
+        global.alert(err.message)
+      })
+    this.updateUserOnCompletion(userPropertiesToUpdate)
+    this.updateUserInDb(userPropertiesToUpdate)
+  }
+  answerLinkPress = (link) => {
+    console.log(link)
+  }
+  answerNewLinkPress = (link) => {
+    console.log(link, 'DELETE ME')
+    fireGaEventOnOutboundLink(link)
+  }
 
   onConcern = (currentStepNum) => {
     fireGaEventOnConcern(this.state.toolResponse.title, currentStepNum)
   }
+
   markToolResponseAsCompleted = (tr) => {
     if (tr._id === this.state.toolResponse._id) {
       tr.status = 'Completed'
@@ -107,11 +144,11 @@ export default class SavoringToolResponseContainer extends React.Component<Props
     })
   }
 
-  updateUserOnCompletion(userPropertiesToUpdateOnCompletion) {
+  updateUserOnCompletion(userPropertiesToUpdate) {
     const { onUpdateUser, user } = this.props
     onUpdateUser({
       ...user,
-      ...userPropertiesToUpdateOnCompletion,
+      ...userPropertiesToUpdate,
       toolResponses: user.toolResponses.map(this.markToolResponseAsCompleted),
     })
   }
@@ -129,14 +166,30 @@ export default class SavoringToolResponseContainer extends React.Component<Props
   }
 }
 
-function fireGaEventOnStepChange(toolTitle, stepNumber) {
-  window.ga('send', {
+function fireGaEventOnStepChange(toolTitle, nextStepN, nextStepGaEventAction, hasValue, value) {
+  const options = {
     hitType: 'event',
     eventCategory: 'Savoring Tool',
-    eventAction: 'Go To Step',
+    eventAction: getEventActionForStepChange(nextStepN, nextStepGaEventAction),
     eventLabel: toolTitle,
-    eventValue: stepNumber,
-  })
+  }
+  // filling stars or making payment have value. the step object has "hasValue" property
+  // for stars, the step answer is the value
+  if (hasValue) {
+    options.eventValue = Number(value)
+  }
+  console.log('fireGaEventOnStepChange', options)
+  window.ga('send', options)
+}
+
+function fireGaEventOnOutboundLink(toolTitle, stepNumber, gaEventAction, link) {
+  const options = {
+    hitType: 'event',
+    eventCategory: 'Savoring Tool',
+    eventAction: getEventActionForOutboundLink(stepNumber, gaEventAction, link),
+    eventLabel: toolTitle,
+  }
+  window.ga('send', options)
 }
 
 function fireGaEventToolCompleted(toolTitle) {
@@ -152,8 +205,30 @@ function fireGaEventOnConcern(toolTitle, stepNumber) {
   window.ga('send', {
     hitType: 'event',
     eventCategory: 'Savoring Tool',
-    eventAction: 'Concern on step:',
+    eventAction: `300 Concern on step - ${nn(stepNumber)}`,
     eventLabel: toolTitle,
-    eventValue: stepNumber,
+    // eventValue: stepNumber,
   })
+}
+
+function getEventActionForStepChange(nextStepN, nextStepGaEventAction) {
+  const _nn = nn(nextStepN)
+  if (!nextStepGaEventAction) {
+    // 0 is prefix for "go to step" actions
+    return `0${_nn} Go to step ${_nn}`
+  }
+  // 1 is prefix for "ending" actions (review, stars, payment)
+  // coming from savoringReviewSteps.js
+  return nextStepGaEventAction
+}
+
+function getEventActionForOutboundLink(stepNumber, gaEventAction, link) {
+  const _nn = nn(stepNumber)
+  if (!gaEventAction) {
+    // 0 is prefix for "go to step" actions
+    return `0${_nn} step - outbound link - ${link}`
+  }
+  // 1 is prefix for "ending" actions (review, stars, payment)
+  // coming from savoringReviewSteps.js
+  return `${gaEventAction} oubtound link - ${link}`
 }

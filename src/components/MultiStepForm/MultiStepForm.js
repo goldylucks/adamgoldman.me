@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import ReactStars from 'react-stars'
+import _ from 'lodash'
 
 import { MESSENGER_LINK_TOOL_CONCERN, MESSENGER_LINK_INNER_CIRCLE } from '../../constants'
 import Markdown from '../../components/Markdown'
@@ -23,11 +24,15 @@ class MultiStepForm extends React.Component {
     onUpdateProgress: PropTypes.func.isRequired,
     onConcern: PropTypes.func.isRequired,
     scrollTop: PropTypes.func,
+    onAnswerLinkPress: PropTypes.func,
+    onAnswerNewLinkPress: PropTypes.func,
   }
   static defaultProps = {
     path: '',
     hideSubscribeButton: false,
     scrollTop,
+    onAnswerLinkPress: _.noop,
+    onAnswerNewLinkPress: _.noop,
   }
 
   state = {
@@ -45,7 +50,7 @@ class MultiStepForm extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.currentStepNum !== this.state.currentStepNum) {
-      this.props.onUpdateProgress(this.state)
+      this.props.onUpdateProgress(this.state, prevState)
     }
   }
 
@@ -191,6 +196,8 @@ class MultiStepForm extends React.Component {
     return (
       <div style={{ marginTop: 20, marginBottom: 20 }}>
         <Answers
+          onLinkPress={this.onAnswerLinkPress}
+          onNewLinkPress={this.onAnswerNewLinkPress}
           onConcern={this.onConcern}
           isPulsating={this.isFirstStep()}
           path={this.props.path}
@@ -264,6 +271,15 @@ class MultiStepForm extends React.Component {
     }
   }
 
+  onAnswerLinkPress = (link) => {
+    this.props.onAnswerLinkPress(link, this.isLastStep, this.state)
+  }
+  onAnswerNewLinkPress = (link) => {
+    this.props.onAnswerNewLinkPress(link, this.isLastStep, this.state)
+  }
+  get isLastStep() {
+    return this.state.currentStepNum === this.props.steps.length - 1
+  }
   getAnswerByAidx(aIdx) {
     return this.currentStep().answers[aIdx]
   }

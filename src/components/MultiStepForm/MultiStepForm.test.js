@@ -90,13 +90,13 @@ test('stack is synced', () => {
   expect(wrapper.props().onUpdateProgress).toHaveBeenCalledWith(expect.objectContaining({
     currentStepNum: 1,
     stepsStack: [0],
-  }))
+  }), expect.any(Object))
   wrapper.find('[data-test="answer-0"] a').props().onClick()
   expect(wrapper.props().onUpdateProgress).toHaveBeenCalledTimes(2)
   expect(wrapper.props().onUpdateProgress).toHaveBeenLastCalledWith(expect.objectContaining({
     currentStepNum: 2,
     stepsStack: [0, 1],
-  }))
+  }), expect.any(Object))
   // BUG doens't render back button in test
   // wrapper.find('button').props().onClick()
   // expect(wrapper.props().onUpdateProgress).toHaveBeenCalledTimes(3)
