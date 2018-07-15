@@ -88,6 +88,9 @@ class AdminToolResponses extends React.Component<Props> {
       })
   }
   deleteResponse(id) {
+    if (!global.confirm('delete?')) {
+      return
+    }
     axios.delete(`/api/toolResponses/${id}`)
       .then(() => {
         this.setState({ toolResponses: this.state.toolResponses.filter(tr => tr._id !== id) })
