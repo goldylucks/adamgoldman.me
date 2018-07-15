@@ -11,7 +11,7 @@ function action({ path }) {
     chunks: ['savoringYourChildModules'],
     title,
     path,
-    description: 'List of modules',
+    description: 'Which module you want to explore next?',
     component: (
       <Layout path={path}>
         <SavoringYourChildModules />
