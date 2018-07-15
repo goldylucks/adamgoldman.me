@@ -10,7 +10,7 @@ function action({ path }) {
     chunks: ['savoringYourChild'],
     title: 'Savoring Your Child',
     path,
-    description: "Relax, it's just life",
+    description: "How to honor your child's memory after the transition, and savor the relationship in a healing way",
     component: (
       <Layout path={path}>
         <SavoringToolResponseContainer toolSlug="savoring-intro">
