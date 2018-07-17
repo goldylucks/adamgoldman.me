@@ -39,6 +39,10 @@ const routes = {
       load: () => import(/* webpackChunkName: 'savoringYourChild' */ './savoringYourChild'),
     },
     {
+      path: '/savoring-your-pet',
+      load: () => import(/* webpackChunkName: 'savoringYourPet' */ './savoringYourPet'),
+    },
+    {
       path: '/savoring-your-child/modules',
       load: () => import(/* webpackChunkName: 'savoringYourChildModules' */ './savoringYourChildModules'),
     },
