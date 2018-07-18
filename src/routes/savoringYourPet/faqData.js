@@ -3,7 +3,7 @@
 
 import { MESSENGER_LINK_WELCOME } from '../../constants'
 
-export const logistics = [
+export default [
   {
     title: 'Do I need to physically go somewhere?',
     content: `No, you can follow the process from the comfort of your own home, or on the go, and if anything comes up [just talk to me](${MESSENGER_LINK_WELCOME})`,
@@ -20,9 +20,6 @@ I will only share what YOU will EXPLICITLY ask me to. Many participants find it 
 Most of the work we will do is content free, and you get to choose how much you want to share. You do not need to get into details in order to utilize the protocol and increase softness and comfort.
 `,
   },
-]
-
-export const lossGrief = [
   {
     title: 'Wouldn\'t people think I don\'t care for my beloved furry friend if I\'m not in pain?',
     content: `

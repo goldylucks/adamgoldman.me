@@ -16,9 +16,9 @@ export const noop = () => null
 
 export const isProd = process.env.NODE_ENV === 'production'
 
-export const scrollToTopOfNode = (node) => {
+export const scrollToTopOfNode = (node, duration = 300) => {
   const top = node.getBoundingClientRect().top - document.body.getBoundingClientRect().top
-  scrollToElem(document.querySelector('html'), top, 300)
+  scrollToElem(document.querySelector('html'), top, duration)
 }
 
 export const scrollToElem = (element, to, duration) => {
