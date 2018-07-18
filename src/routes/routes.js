@@ -43,6 +43,10 @@ const routes = {
       load: () => import(/* webpackChunkName: 'savoringYourPet' */ './savoringYourPet'),
     },
     {
+      path: '/savoring-your-pet/success-dj34f84',
+      load: () => import(/* webpackChunkName: 'savoringYourPetAfterPayment' */ './savoringYourPetAfterPayment'),
+    },
+    {
       path: '/savoring-your-child/modules',
       load: () => import(/* webpackChunkName: 'savoringYourChildModules' */ './savoringYourChildModules'),
     },

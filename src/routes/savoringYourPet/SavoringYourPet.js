@@ -2,6 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import React from 'react'
+import axios from 'axios'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
 
 import { cloudImg, scrollToTopOfNode } from '../../utils'
@@ -17,6 +18,11 @@ import s from './SavoringYourPet.css'
 type Props = {}
 
 class SavoringYourPet extends React.Component<Props> {
+  state = {
+    isCouponApplied: false,
+    isProcessingCoupon: false,
+    couponInputValue: '',
+  }
   render() {
     return (
       <div>
@@ -120,7 +126,7 @@ class SavoringYourPet extends React.Component<Props> {
             <p>I have invested thousands of dollars, and countless days and nights of work and research into this program, but I want to keep it affordable for you and others who are going through this, so I am asking a lot less than the actual value of the program.</p>
             <div ref={(el) => { this.paymentButton1 = el }}>
               <h4 className="text-center"><small>Instead of the full price of </small><s>312$</s></h4>
-              <h3 className="text-center"><small>Order today for</small><br /> <strong>Only 97$</strong></h3>
+              {this.renderFinalPrice()}
               {this.renderPaymentButton()}
               {this.renderPaypalSecure()}
             </div>
@@ -150,8 +156,7 @@ class SavoringYourPet extends React.Component<Props> {
               <br />
             - <strong>Adam Goldman</strong>
             </p>
-            {this.renderPaymentButton()}
-            {this.renderPaypalSecure()}
+            {this.renderBuyNowScrollButton()}
             <p style={{ marginTop: 40 }}><strong>Ps.</strong>Yes, you can literally rewire your mind, body and feelings, to transform your current grief to feeling of appreciation, in way that will honor your lost furry friend in a comprehensive way.</p>
             <p><strong>Ps.s. </strong>Remember all the risk is on me, so when you gain access today there’s nothing for you to lose other than unwanted negative feelings.</p>
             <section style={{ marginTop: 40 }}>
@@ -237,7 +242,7 @@ class SavoringYourPet extends React.Component<Props> {
 
   renderBuyNowScrollButton() {
     return (
-      <button onClick={() => scrollToTopOfNode(this.paymentButton1, 1000)} className={`btn btn-primary ${s.goToPaymentButton}`}>Go To<br /> Payment</button>
+      <button onClick={() => scrollToTopOfNode(this.paymentButton1, 1000)} className={`btn btn-primary ${s.getStartedButton}`}>Get Started</button>
     )
   }
 
@@ -316,16 +321,61 @@ His work is a detailed challenge to the rest of us to learn how to “up our gam
       </section>
     )
   }
-  renderPaymentButton() {
+  renderFinalPrice() {
+    const { isCouponApplied } = this.state
+    if (!isCouponApplied) {
+      return <h3 className="text-center"><small>Order today for</small><br /> <strong>Only 97$</strong></h3>
+    }
     return (
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" className="text-center">
-        <input type="hidden" name="cmd" value="_s-xclick" />
-        <input type="hidden" name="landing_page" value="billing" />
-        <input type="hidden" name="hosted_button_id" value="5RVFWYZP5HMBG" />
-        <input type="image" src="http://res.cloudinary.com/goldylucks/image/upload/v1531924994/get-access-now_pqssf4.jpg" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
-        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-      </form>
+      <div>
+        <h3 className="text-center" style={{ textDecoration: 'line-through' }}><small>Order today for</small><br /> <strong>Only 97$</strong></h3>
+        <h2 className="text-center">Limited time offer for I Love Veterinary customers!</h2>
+        <h3 className="text-center"><small>Order today for</small><br /> <strong>Only 47$</strong></h3>
+      </div>
     )
+  }
+  renderPaymentButton() {
+    const { isCouponApplied, couponInputValue, isProcessingCoupon } = this.state
+    return (
+      <div>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" className="text-center">
+          <input type="hidden" name="cmd" value="_s-xclick" />
+          <input type="hidden" name="landing_page" value="billing" />
+          <input type="hidden" name="hosted_button_id" value={isCouponApplied ? 'RHHHM7QUDJRXE' : '5RVFWYZP5HMBG'} />
+          <input type="image" src="http://res.cloudinary.com/goldylucks/image/upload/v1531924994/get-access-now_pqssf4.jpg" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+        </form>
+        <form onSubmit={this.onSubmitCoupon} className="text-center">
+          <input type="text" value={couponInputValue} onChange={this.onCouponInputChange} placeholder="Coupon" />
+          <button>Validate Coupon</button>
+        </form>
+        { isProcessingCoupon && <p>Loading, please wait ...</p>}
+      </div>
+    )
+  }
+  onCouponInputChange = (evt) => {
+    this.setState({ couponInputValue: evt.target.value })
+  }
+  onSubmitCoupon = async (evt) => {
+    const { couponInputValue, isProcessingCoupon } = this.state
+    evt.preventDefault()
+    if (isProcessingCoupon) {
+      return
+    }
+    this.setState({ isProcessingCoupon: true })
+    try {
+      const { data: isValid } = await axios.post('/api/savoringPetCoupon', { coupon: couponInputValue })
+      if (isValid) {
+        global.alert('Valid coupon, enjoy your discount')
+        this.setState({ isCouponApplied: true, isProcessingCoupon: false })
+      } else {
+        global.alert('invalid coupon, please contact me if you think it is a mistake')
+        this.setState({ isProcessingCoupon: false })
+      }
+    } catch (err) {
+      this.setState({ isProcessingCoupon: false })
+      global.alert('error validating the coupon, please try again')
+    }
   }
 
   renderPaypalSecure() {

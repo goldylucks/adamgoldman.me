@@ -10,4 +10,15 @@ router.use('/toolResponses', toolResponsesRoutes)
 router.use('/posts', postsRoutes)
 router.use('/users', usersRoutes)
 
+router.post('/savoringPetCoupon', savoringPetCoupon)
+
 export default router
+
+function savoringPetCoupon(req, res) {
+  const { coupon } = req.body
+  if (coupon === process.env.I_LOVE_VET_LAUNCH_COUPON) {
+    res.send(true)
+  } else {
+    res.send(false)
+  }
+}

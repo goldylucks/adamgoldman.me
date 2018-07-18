@@ -48,13 +48,28 @@
   max-width: 40%;
 }
 
-.goToPaymentButton {
-  font-size: 60px;
-  border-radius: 50%;
+.getStartedButton {
+  font-size: 50px;
+  padding: 30px;
+  margin: 20px auto;
+  border-radius: 30px;
   display: block;
-  margin: 30px auto;
-  padding: 40px;
+  width: 50%;
+  background: #03a87c;
+  color: #fff !important;
 }
+
+@media only screen and (max-width : 768px) {
+  .getStartedButton{
+    font-size: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    width: 100%;
+  }
+}
+
+
+
 
 .widthContainer {
   max-width: 800px;
