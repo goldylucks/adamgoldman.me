@@ -22,6 +22,7 @@
     "react/forbid-prop-types": 0,
     "react/jsx-filename-extension": 0,
     "react/no-array-index-key": 0,
+    "jsx-a11y/accessible-emoji": 0,
     "jsx-a11y/no-autofocus": 0,
     "jsx-a11y/label-has-for": 0,
     "jsx-a11y/no-noninteractive-element-interactions": 0,
