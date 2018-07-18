@@ -6,6 +6,7 @@ import axios from 'axios'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
 
 import { cloudImg, scrollToTopOfNode } from '../../utils'
+import Link from '../../components/Link'
 import Footer from '../../components/Footer'
 import ExternalA from '../../components/ExternalA'
 import Benefits from '../../components/Benefits'
@@ -14,6 +15,8 @@ import Testimonials from '../../components/Testimonials'
 import testimonials from './testimonialsData'
 import FAQContainer from './FAQContainer'
 import s from './SavoringYourPet.css'
+
+const TOP_BAR_HRIGHT = 56
 
 type Props = {}
 
@@ -25,7 +28,8 @@ class SavoringYourPet extends React.Component<Props> {
   }
   render() {
     return (
-      <div>
+      <div style={{ paddingTop: TOP_BAR_HRIGHT }}>
+        {this.renderTopBar()}
         <div className="container">
           <div className={`mainheading ${s.widthContainer}`}>
             <h1 className="sitetitle text-center">How to honor your furry friend&apos;s memory after the transition</h1>
@@ -47,7 +51,7 @@ class SavoringYourPet extends React.Component<Props> {
             <hr className={s.hr} />
             <h4 className="text-center">“The death of a pet can be a truly traumatic experience and create a large void in our hearts and lives” <br />- <strong>Ralph Ryback M.D.</strong></h4>
             <hr className={s.hr} />
-            <h2 className="text-center" style={{ marginBottom: 20 }}>Do you feel any of the following?</h2>
+            <h2 ref={(el) => { this.elPain = el }} className="text-center" style={{ marginBottom: 20 }}>Do you feel any of the following?</h2>
             <ul>
               <li><strong>Emptiness</strong> as you go through your day?</li>
               <li><strong>Guilt & regret</strong> about what you did or didn’t do?</li>
@@ -67,7 +71,7 @@ class SavoringYourPet extends React.Component<Props> {
             <p>Our combined work gave birth to a new program, unlike anything we’ve seen or experienced before.</p>
             <hr className={s.hr} />
             <strong className="text-center">Presenting ...</strong>
-            <h1 className="text-center">Savoring Your Pet</h1>
+            <h1 ref={(el) => { this.elProgram = el }} className="text-center">Savoring Your Pet</h1>
             <p className="lead">A step by step gentle journey from grief to appreciation, that will show you how to transform and soften your grief in a healthier way, alleviate much of your pain, so you can expect to ...</p>
             {this.renderBenefitsSection()}
             <h2 className="text-center" style={{ marginTop: 20, marginBottom: 20 }}>How is this program different?</h2>
@@ -94,7 +98,7 @@ class SavoringYourPet extends React.Component<Props> {
               <span>Source: <ExternalA href="https://www.scoopnest.com/user/Jestepar/758043485618528257-don-t-cry-because-it-s-over-smile-because-it-happened-dr-seuss-quote-thankfulthursday">scoopnest.com</ExternalA></span>
             </div>
             <hr className={s.hr} />
-            <h2 className="text-center" style={{ marginBottom: 30 }}>Here’s what you’re getting when you get your copy of the program today:</h2>
+            <h2 ref={(el) => { this.elModules = el }} className="text-center" style={{ marginBottom: 30 }}>Here’s what you’re getting when you get your copy of the program today:</h2>
             {this.renderModules()}
             {this.renderBuyNowScrollButton()}
             <hr className={s.hr} />
@@ -122,9 +126,9 @@ class SavoringYourPet extends React.Component<Props> {
           {this.renderTestimonialsSection()}
           <div className={s.widthContainer}>
             <hr className={s.hr} />
-            <h2 className="text-center">“So how much will it cost me?”</h2>
+            <h2 ref={(el) => { this.elBuyNow = el }} className="text-center">“So how much will it cost me?”</h2>
             <p>I have invested thousands of dollars, and countless days and nights of work and research into this program, but I want to keep it affordable for you and others who are going through this, so I am asking a lot less than the actual value of the program.</p>
-            <div ref={(el) => { this.paymentButton1 = el }}>
+            <div>
               <h4 className="text-center"><small>Instead of the full price of </small><s>312$</s></h4>
               {this.renderFinalPrice()}
               {this.renderPaymentButton()}
@@ -133,7 +137,7 @@ class SavoringYourPet extends React.Component<Props> {
             <hr className={s.hr} />
             <p>That’s right, you can <strong>guarantee</strong> your <strong>lifetime access</strong> to this program <strong>for less than the price of 1 therapy session</strong>.</p>
             <p>I am so confident this will help you beyond your expectations, I’m willing to personally take all the risk off your hands when you invest in this today, with a double guarantee:</p>
-            <div className="text-center" style={{ marginBottom: 40 }}>
+            <div ref={(el) => { this.elGuarantee = el }} className="text-center" style={{ marginBottom: 40 }}>
               <h4 className>30 days no hassle money back guarantee</h4>
               <img
                 src={cloudImg('30-day-refund-guarantee_ug806q')}
@@ -170,7 +174,34 @@ class SavoringYourPet extends React.Component<Props> {
       </div>
     )
   }
-
+  renderTopBar() {
+    return (
+      <nav className="navbar navbar-expand-lg fixed-top main-nav navbar-light">
+        <div className="container">
+          <Link className="navbar-brand mr-auto" to="/savoring-your-pet">Savoring Your Pet</Link>
+          <div className="collapse navbar-collapse">
+            <ul className="navbar-nav ml-auto">
+              {[
+              { text: 'Pain', nodeId: 'elPain' },
+              { text: 'Program', nodeId: 'elProgram' },
+              { text: 'Modules', nodeId: 'elModules' },
+              { text: 'Research', nodeId: 'elResearch' },
+              { text: 'About Me', nodeId: 'elAboutMe' },
+              { text: 'Guarantee', nodeId: 'elGuarantee' },
+            ].map(({ text, nodeId }) => (
+              <li className="nav-item">
+                <a className="nav-link" onClick={() => scrollToTopOfNode(this[nodeId], { duration: 1000, topOffest: TOP_BAR_HRIGHT })}>{text}</a>
+              </li>
+            ))}
+              <li className="nav-item">
+                <a className="nav-link btn btn-primary btn-sm" onClick={() => scrollToTopOfNode(this.elBuyNow, { duration: 1000, topOffest: TOP_BAR_HRIGHT })}>Claim Access</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    )
+  }
   renderBenefitsSection() {
     return (
       <section>
@@ -242,13 +273,13 @@ class SavoringYourPet extends React.Component<Props> {
 
   renderBuyNowScrollButton() {
     return (
-      <button onClick={() => scrollToTopOfNode(this.paymentButton1, 1000)} className={`btn btn-primary ${s.getStartedButton}`}>Get Started</button>
+      <button onClick={() => scrollToTopOfNode(this.elBuyNow, 1000)} className={`btn btn-primary ${s.getStartedButton}`}>Get Started</button>
     )
   }
 
   renderAndreas() {
     return (
-      <div>
+      <div ref={(el) => { this.elResearch = el }}>
         <div className={s.widthContainer}>
 
           <h2 className="text-center">Made possible by decades of research and field experience</h2>
@@ -304,7 +335,7 @@ His work is a detailed challenge to the rest of us to learn how to “up our gam
   }
   renderAboutMeSection() {
     return (
-      <section>
+      <section ref={(el) => { this.elAboutMe = el }}>
         <h1 className="text-center">Who am I to guide you through this journey?</h1>
         <div className={s.aboutContainer}>
           <img
