@@ -96,10 +96,9 @@ export default class SavoringToolResponseContainer extends React.Component<Props
   }
   // userPropertiesToUpdate currently only for passing user info on completing intro questionnaire
   complete = (userPropertiesToUpdate) => {
-    console.log('DELETE ME: complete!')
     const { toolResponse } = this.state
     fireGaEventToolCompleted(toolResponse.title)
-    axios.put(`/api/toolResponses/${toolResponse._id}`, { ...toolResponse, status: 'Completed' })
+    axios.put(`/api/toolResponses/${toolResponse._id}`, { status: 'Completed' })
       .catch((err) => {
         global.console.error(err)
         global.alert(err.message)
