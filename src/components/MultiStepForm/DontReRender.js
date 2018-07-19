@@ -3,12 +3,13 @@
 import * as React from 'react'
 
 type Props = {
-  children: React.Node
+  children: React.Node,
+  currentStepNum: number
 }
 
 class DontReRender extends React.Component<Props> {
-  shouldComponentUpdate() {
-    return false
+  shouldComponentUpdate(nextProps) {
+    return this.props.currentStepNum !== nextProps.currentStepNum
   }
   render() {
     return this.props.children
