@@ -74,6 +74,7 @@ export const replaceVarsUtil = ({
 }
 
 export const stateForReviewRating = (rating, steps) => ({ answerByStep, currentStepNum }) => ({
+  rating,
   answerByStep: { ...answerByStep, [currentStepNum]: String(rating) },
   currentStepNum: stepNumById(rating <= 3 ? 'finalComments' : 'choosePaymentAmount', steps),
 })

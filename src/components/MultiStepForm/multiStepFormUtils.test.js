@@ -188,6 +188,7 @@ describe('stateForReviewRating', () => {
         0: String(rating),
       },
       currentStepNum: 2,
+      rating,
     })
   })
   it('should go to choosePaymentAmount', () => {
@@ -201,6 +202,7 @@ describe('stateForReviewRating', () => {
         0: String(rating),
       },
       currentStepNum: 1,
+      rating,
     })
   })
 })
