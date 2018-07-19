@@ -10,7 +10,7 @@ export default {
 
 function getAll(req, res, next) {
   ToolResponses.find()
-    .select('createdAt user title currentStepNum status')
+    .select('createdAt user title currentStepNum status rating')
     .sort('-createdAt')
     .populate('user')
     .then(tools => res.json(tools))

@@ -4,13 +4,12 @@ import React from 'react'
 import axios from 'axios'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faTrash from '@fortawesome/fontawesome-free-solid/faTrash'
+import ReactTable from 'react-table'
 
-import { fbLinkByUserId } from '../../utils/fbUtils'
 import Link from '../../components/Link'
-import ExternalA from '../../components/ExternalA'
 
 type Props = {
-  path: string,
+  path: string
 }
 
 class AdminToolResponses extends React.Component<Props> {
@@ -22,7 +21,7 @@ class AdminToolResponses extends React.Component<Props> {
     this.fetchToolResponses()
   }
   render() {
-    const { toolResponses, isFetchingToolResponses } = this.state
+    const { isFetchingToolResponses } = this.state
     return (
       <div>
         <div className="container">
@@ -32,50 +31,69 @@ class AdminToolResponses extends React.Component<Props> {
           {
             isFetchingToolResponses
               ? 'Loading responses'
-              : (
-                <table className="table">
-                  <thead>
-                    <tr>
-                      <th scope="col">Date</th>
-                      <th scope="col">User</th>
-                      <th scope="col">Tool</th>
-                      <th scope="col">Current Step</th>
-                      <th scope="col">Status</th>
-                      <th scope="col">Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {toolResponses.map(item => (
-                      <tr key={item._id}>
-                        <th scope="col">
-                          <Link to={`${this.props.path}/${item._id}`}>
-                            {`${new Date(item.createdAt)}`}
-                          </Link>
-                        </th>
-                        <th scope="col">{this.renderUser(item.user)}</th>
-                        <th scope="col">{item.title}</th>
-                        <th scope="col">{item.currentStepNum}</th>
-                        <th scope="col">{item.status}</th>
-                        <th scope="col">
-                          <a onClick={() => { this.deleteResponse(item._id) }}><FontAwesomeIcon icon={faTrash} /></a>
-                        </th>
-                      </tr>
-                  ))}
-                  </tbody>
-                </table>
-              )
+              : this.renderTable()
+
           }
           <hr />
         </div>
       </div>
     )
   }
-  renderUser({ name, fbUserId } = {}) {
+  renderTable() {
+    return (
+      <ReactTable
+        data={this.state.toolResponses}
+        columns={[
+        {
+          Header: 'Date',
+          id: 'date',
+          accessor: this.renderDate,
+        },
+        {
+          Header: 'User',
+          id: 'user',
+          accessor: item => this.renderUser(item.user),
+        },
+        {
+          Header: 'Tool',
+          accessor: 'title',
+        },
+        {
+          Header: 'Step',
+          accessor: 'currentStepNum',
+          className: 'text-center',
+        },
+        {
+          Header: 'Status',
+          accessor: 'status',
+        },
+        {
+          Header: 'Rating',
+          className: 'text-center',
+          accessor: 'rating',
+        },
+        {
+          Header: 'actions',
+          accessor: '_id',
+          className: 'text-center',
+          Cell: ({ value: id }) => (
+            <a onClick={() => { this.deleteResponse(id) }}><FontAwesomeIcon icon={faTrash} /></a>
+          ),
+        },
+      ]}
+        className="-striped -highlight"
+      />
+    )
+  }
+  renderDate = ({ createdAt, _id }) => (
+    <Link to={`${this.props.path}/${_id}`}>
+      {createdAt.replace(/(-|T)/g, ' ').split('.')[0]}
+    </Link>
+  )
+
+  renderUser = ({ name } = {}) => {
     if (!name) {
       return 'user not found'
-    }
-    if (fbUserId) {
-      return <ExternalA href={fbLinkByUserId(fbUserId)}>{name}</ExternalA>
     }
     return name
   }
@@ -100,3 +118,36 @@ class AdminToolResponses extends React.Component<Props> {
 }
 
 export default AdminToolResponses
+
+// (
+//   <table className="table">
+//     <thead>
+//       <tr>
+//         <th scope="col">Date</th>
+//         <th scope="col">User</th>
+//         <th scope="col">Tool</th>
+//         <th scope="col">Current Step</th>
+//         <th scope="col">Status</th>
+//         <th scope="col">Actions</th>
+//       </tr>
+//     </thead>
+//     <tbody>
+//       {toolResponses.map(item => (
+//         <tr key={item._id}>
+//           <th scope="col">
+//             <Link to={`${this.props.path}/${item._id}`}>
+//               {`${new Date(item.createdAt)}`}
+//             </Link>
+//           </th>
+//           <th scope="col">{this.renderUser(item.user)}</th>
+//           <th scope="col">{item.title}</th>
+//           <th scope="col">{item.currentStepNum}</th>
+//           <th scope="col">{item.status}</th>
+//           <th scope="col">
+//             <a onClick={() => { this.deleteResponse(item._id) }}><FontAwesomeIcon icon={faTrash} /></a>
+//           </th>
+//         </tr>
+//     ))}
+//     </tbody>
+//   </table>
+// )

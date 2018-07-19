@@ -51,6 +51,8 @@ function getSchema() {
       default: 0,
     },
 
+    rating: Number,
+
     steps: [],
 
     stepsStack: {
