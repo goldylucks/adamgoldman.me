@@ -62,24 +62,33 @@ class AdminToolResponseItem extends React.Component<Props> {
   }) {
     return steps.slice(0, currentStepNum).map((step, sIdx) => (
       <div>
-        <Markdown source={'## ' + replaceVarsUtil({ // eslint-disable-line prefer-template
- str: step.title, hiddenFields, answerByStep, currentStepNum: sIdx,
-})}
-        />
-        <Markdown source={replaceVarsUtil({
-str: step.description, hiddenFields, answerByStep, currentStepNum: sIdx,
-})}
-        />
-        <Markdown
-          className="text-muted tool-note"
-          source={replaceVarsUtil({
- str: step.notes, hiddenFields, answerByStep, currentStepNum: sIdx,
-})}
-        />
-        <Markdown source={replaceVarsUtil({
- str: answerByStep[sIdx], hiddenFields, answerByStep, currentStepNum: sIdx,
-})}
-        />
+        <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
+          <div style={{ width: '60%' }}>
+            <Markdown source={'## ' + replaceVarsUtil({ // eslint-disable-line prefer-template
+    str: step.title, hiddenFields, answerByStep, currentStepNum: sIdx,
+    })}
+            />
+            <Markdown
+              dontEmbedd
+              source={replaceVarsUtil({
+    str: step.description, hiddenFields, answerByStep, currentStepNum: sIdx,
+    })}
+            />
+            <Markdown
+              dontEmbedd
+              className="text-muted tool-note"
+              source={replaceVarsUtil({
+    str: step.notes, hiddenFields, answerByStep, currentStepNum: sIdx,
+    })}
+            />
+          </div>
+          <div style={{ width: '30%' }}>
+            <Markdown source={replaceVarsUtil({
+      str: answerByStep[sIdx], hiddenFields, answerByStep, currentStepNum: sIdx,
+      })}
+            />
+          </div>
+        </div>
         <hr />
       </div>
     ))
