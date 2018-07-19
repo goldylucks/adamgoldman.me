@@ -5,6 +5,7 @@ import _ from 'lodash'
 
 import { MESSENGER_LINK_TOOL_CONCERN, MESSENGER_LINK_INNER_CIRCLE } from '../../constants'
 import Markdown from '../../components/Markdown'
+import DontReRender from '../../hocs/DontReRender'
 import ExternalA from '../../components/ExternalA'
 import { isMobile } from '../../utils'
 
@@ -81,19 +82,20 @@ class MultiStepForm extends React.Component {
   renderTitle() {
     const { title } = this.currentStep()
     if (!title) { return null }
-    return <Markdown source={`## ${this.replaceVars(title)}`} />
+    return <DontReRender><Markdown source={`## ${this.replaceVars(title)}`} /></DontReRender>
   }
 
   renderDescription() {
     const { description } = this.currentStep()
     if (!description) { return null }
-    return <Markdown source={this.replaceVars(description)} />
+    return <DontReRender><Markdown source={this.replaceVars(description)} /></DontReRender>
+    // return <Markdown source={this.replaceVars(description)} />
   }
 
   renderNotes() {
     const { notes } = this.currentStep()
     if (!notes) { return null }
-    return <Markdown className="text-muted tool-note" source={this.replaceVars(notes)} />
+    return <DontReRender><Markdown className="text-muted tool-note" source={this.replaceVars(notes)} /></DontReRender>
   }
 
   renderInput() {
@@ -359,3 +361,4 @@ class MultiStepForm extends React.Component {
   }
 }
 export default MultiStepForm
+

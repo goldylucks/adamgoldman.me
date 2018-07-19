@@ -55,8 +55,41 @@ exports[`MultiStepForm should render flash answer 1`] = `
         }
       }
     >
+      <DontReRender>
+        <Markdown
+          source="## Step 0 Title"
+        >
+          <ReactMarkdown
+            containerTagName="div"
+            parserOptions={Object {}}
+            renderers={
+              Object {
+                "Link": [Function],
+              }
+            }
+            source="## Step 0 Title"
+          >
+            <div>
+              <Heading
+                key="1:1-1:152"
+                level={2}
+                literal={null}
+                nodeKey="1:1-1:152"
+              >
+                <h2
+                  key="1:1-1:152"
+                >
+                  Step 0 Title
+                </h2>
+              </Heading>
+            </div>
+          </ReactMarkdown>
+        </Markdown>
+      </DontReRender>
+    </div>
+    <DontReRender>
       <Markdown
-        source="## Step 0 Title"
+        source="Step 0 Description"
       >
         <ReactMarkdown
           containerTagName="div"
@@ -66,73 +99,46 @@ exports[`MultiStepForm should render flash answer 1`] = `
               "Link": [Function],
             }
           }
-          source="## Step 0 Title"
+          source="Step 0 Description"
         >
           <div>
-            <Heading
-              key="1:1-1:152"
-              level={2}
-              literal={null}
-              nodeKey="1:1-1:152"
+            <p
+              key="1:1-1:182"
             >
-              <h2
-                key="1:1-1:152"
-              >
-                Step 0 Title
-              </h2>
-            </Heading>
+              Step 0 Description
+            </p>
           </div>
         </ReactMarkdown>
       </Markdown>
-    </div>
-    <Markdown
-      source="Step 0 Description"
-    >
-      <ReactMarkdown
-        containerTagName="div"
-        parserOptions={Object {}}
-        renderers={
-          Object {
-            "Link": [Function],
-          }
-        }
-        source="Step 0 Description"
-      >
-        <div>
-          <p
-            key="1:1-1:182"
-          >
-            Step 0 Description
-          </p>
-        </div>
-      </ReactMarkdown>
-    </Markdown>
-    <Markdown
-      className="text-muted tool-note"
-      source="Step 0 notes"
-    >
-      <ReactMarkdown
+    </DontReRender>
+    <DontReRender>
+      <Markdown
         className="text-muted tool-note"
-        containerTagName="div"
-        parserOptions={Object {}}
-        renderers={
-          Object {
-            "Link": [Function],
-          }
-        }
         source="Step 0 notes"
       >
-        <div
+        <ReactMarkdown
           className="text-muted tool-note"
+          containerTagName="div"
+          parserOptions={Object {}}
+          renderers={
+            Object {
+              "Link": [Function],
+            }
+          }
+          source="Step 0 notes"
         >
-          <p
-            key="1:1-1:122"
+          <div
+            className="text-muted tool-note"
           >
-            Step 0 notes
-          </p>
-        </div>
-      </ReactMarkdown>
-    </Markdown>
+            <p
+              key="1:1-1:122"
+            >
+              Step 0 notes
+            </p>
+          </div>
+        </ReactMarkdown>
+      </Markdown>
+    </DontReRender>
     <div>
       <button
         onClick={[Function]}
@@ -249,8 +255,41 @@ exports[`MultiStepForm should render long answer 1`] = `
         }
       }
     >
+      <DontReRender>
+        <Markdown
+          source="## Step 0 Title"
+        >
+          <ReactMarkdown
+            containerTagName="div"
+            parserOptions={Object {}}
+            renderers={
+              Object {
+                "Link": [Function],
+              }
+            }
+            source="## Step 0 Title"
+          >
+            <div>
+              <Heading
+                key="1:1-1:152"
+                level={2}
+                literal={null}
+                nodeKey="1:1-1:152"
+              >
+                <h2
+                  key="1:1-1:152"
+                >
+                  Step 0 Title
+                </h2>
+              </Heading>
+            </div>
+          </ReactMarkdown>
+        </Markdown>
+      </DontReRender>
+    </div>
+    <DontReRender>
       <Markdown
-        source="## Step 0 Title"
+        source="Step 0 Description"
       >
         <ReactMarkdown
           containerTagName="div"
@@ -260,73 +299,46 @@ exports[`MultiStepForm should render long answer 1`] = `
               "Link": [Function],
             }
           }
-          source="## Step 0 Title"
+          source="Step 0 Description"
         >
           <div>
-            <Heading
-              key="1:1-1:152"
-              level={2}
-              literal={null}
-              nodeKey="1:1-1:152"
+            <p
+              key="1:1-1:182"
             >
-              <h2
-                key="1:1-1:152"
-              >
-                Step 0 Title
-              </h2>
-            </Heading>
+              Step 0 Description
+            </p>
           </div>
         </ReactMarkdown>
       </Markdown>
-    </div>
-    <Markdown
-      source="Step 0 Description"
-    >
-      <ReactMarkdown
-        containerTagName="div"
-        parserOptions={Object {}}
-        renderers={
-          Object {
-            "Link": [Function],
-          }
-        }
-        source="Step 0 Description"
-      >
-        <div>
-          <p
-            key="1:1-1:182"
-          >
-            Step 0 Description
-          </p>
-        </div>
-      </ReactMarkdown>
-    </Markdown>
-    <Markdown
-      className="text-muted tool-note"
-      source="Step 0 notes"
-    >
-      <ReactMarkdown
+    </DontReRender>
+    <DontReRender>
+      <Markdown
         className="text-muted tool-note"
-        containerTagName="div"
-        parserOptions={Object {}}
-        renderers={
-          Object {
-            "Link": [Function],
-          }
-        }
         source="Step 0 notes"
       >
-        <div
+        <ReactMarkdown
           className="text-muted tool-note"
+          containerTagName="div"
+          parserOptions={Object {}}
+          renderers={
+            Object {
+              "Link": [Function],
+            }
+          }
+          source="Step 0 notes"
         >
-          <p
-            key="1:1-1:122"
+          <div
+            className="text-muted tool-note"
           >
-            Step 0 notes
-          </p>
-        </div>
-      </ReactMarkdown>
-    </Markdown>
+            <p
+              key="1:1-1:122"
+            >
+              Step 0 notes
+            </p>
+          </div>
+        </ReactMarkdown>
+      </Markdown>
+    </DontReRender>
     <form
       onSubmit={[Function]}
     >
@@ -429,8 +441,41 @@ exports[`MultiStepForm should render payment 1`] = `
         }
       }
     >
+      <DontReRender>
+        <Markdown
+          source="## Step 0 Title"
+        >
+          <ReactMarkdown
+            containerTagName="div"
+            parserOptions={Object {}}
+            renderers={
+              Object {
+                "Link": [Function],
+              }
+            }
+            source="## Step 0 Title"
+          >
+            <div>
+              <Heading
+                key="1:1-1:152"
+                level={2}
+                literal={null}
+                nodeKey="1:1-1:152"
+              >
+                <h2
+                  key="1:1-1:152"
+                >
+                  Step 0 Title
+                </h2>
+              </Heading>
+            </div>
+          </ReactMarkdown>
+        </Markdown>
+      </DontReRender>
+    </div>
+    <DontReRender>
       <Markdown
-        source="## Step 0 Title"
+        source="Step 0 Description"
       >
         <ReactMarkdown
           containerTagName="div"
@@ -440,73 +485,46 @@ exports[`MultiStepForm should render payment 1`] = `
               "Link": [Function],
             }
           }
-          source="## Step 0 Title"
+          source="Step 0 Description"
         >
           <div>
-            <Heading
-              key="1:1-1:152"
-              level={2}
-              literal={null}
-              nodeKey="1:1-1:152"
+            <p
+              key="1:1-1:182"
             >
-              <h2
-                key="1:1-1:152"
-              >
-                Step 0 Title
-              </h2>
-            </Heading>
+              Step 0 Description
+            </p>
           </div>
         </ReactMarkdown>
       </Markdown>
-    </div>
-    <Markdown
-      source="Step 0 Description"
-    >
-      <ReactMarkdown
-        containerTagName="div"
-        parserOptions={Object {}}
-        renderers={
-          Object {
-            "Link": [Function],
-          }
-        }
-        source="Step 0 Description"
-      >
-        <div>
-          <p
-            key="1:1-1:182"
-          >
-            Step 0 Description
-          </p>
-        </div>
-      </ReactMarkdown>
-    </Markdown>
-    <Markdown
-      className="text-muted tool-note"
-      source="Step 0 notes"
-    >
-      <ReactMarkdown
+    </DontReRender>
+    <DontReRender>
+      <Markdown
         className="text-muted tool-note"
-        containerTagName="div"
-        parserOptions={Object {}}
-        renderers={
-          Object {
-            "Link": [Function],
-          }
-        }
         source="Step 0 notes"
       >
-        <div
+        <ReactMarkdown
           className="text-muted tool-note"
+          containerTagName="div"
+          parserOptions={Object {}}
+          renderers={
+            Object {
+              "Link": [Function],
+            }
+          }
+          source="Step 0 notes"
         >
-          <p
-            key="1:1-1:122"
+          <div
+            className="text-muted tool-note"
           >
-            Step 0 notes
-          </p>
-        </div>
-      </ReactMarkdown>
-    </Markdown>
+            <p
+              key="1:1-1:122"
+            >
+              Step 0 notes
+            </p>
+          </div>
+        </ReactMarkdown>
+      </Markdown>
+    </DontReRender>
     <form
       action="https://www.paypal.com/cgi-bin/webscr"
       method="post"
@@ -680,8 +698,41 @@ exports[`MultiStepForm should render radio answers 1`] = `
         }
       }
     >
+      <DontReRender>
+        <Markdown
+          source="## Step 0 Title"
+        >
+          <ReactMarkdown
+            containerTagName="div"
+            parserOptions={Object {}}
+            renderers={
+              Object {
+                "Link": [Function],
+              }
+            }
+            source="## Step 0 Title"
+          >
+            <div>
+              <Heading
+                key="1:1-1:152"
+                level={2}
+                literal={null}
+                nodeKey="1:1-1:152"
+              >
+                <h2
+                  key="1:1-1:152"
+                >
+                  Step 0 Title
+                </h2>
+              </Heading>
+            </div>
+          </ReactMarkdown>
+        </Markdown>
+      </DontReRender>
+    </div>
+    <DontReRender>
       <Markdown
-        source="## Step 0 Title"
+        source="Step 0 Description"
       >
         <ReactMarkdown
           containerTagName="div"
@@ -691,73 +742,46 @@ exports[`MultiStepForm should render radio answers 1`] = `
               "Link": [Function],
             }
           }
-          source="## Step 0 Title"
+          source="Step 0 Description"
         >
           <div>
-            <Heading
-              key="1:1-1:152"
-              level={2}
-              literal={null}
-              nodeKey="1:1-1:152"
+            <p
+              key="1:1-1:182"
             >
-              <h2
-                key="1:1-1:152"
-              >
-                Step 0 Title
-              </h2>
-            </Heading>
+              Step 0 Description
+            </p>
           </div>
         </ReactMarkdown>
       </Markdown>
-    </div>
-    <Markdown
-      source="Step 0 Description"
-    >
-      <ReactMarkdown
-        containerTagName="div"
-        parserOptions={Object {}}
-        renderers={
-          Object {
-            "Link": [Function],
-          }
-        }
-        source="Step 0 Description"
-      >
-        <div>
-          <p
-            key="1:1-1:182"
-          >
-            Step 0 Description
-          </p>
-        </div>
-      </ReactMarkdown>
-    </Markdown>
-    <Markdown
-      className="text-muted tool-note"
-      source="Step 0 notes"
-    >
-      <ReactMarkdown
+    </DontReRender>
+    <DontReRender>
+      <Markdown
         className="text-muted tool-note"
-        containerTagName="div"
-        parserOptions={Object {}}
-        renderers={
-          Object {
-            "Link": [Function],
-          }
-        }
         source="Step 0 notes"
       >
-        <div
+        <ReactMarkdown
           className="text-muted tool-note"
+          containerTagName="div"
+          parserOptions={Object {}}
+          renderers={
+            Object {
+              "Link": [Function],
+            }
+          }
+          source="Step 0 notes"
         >
-          <p
-            key="1:1-1:122"
+          <div
+            className="text-muted tool-note"
           >
-            Step 0 notes
-          </p>
-        </div>
-      </ReactMarkdown>
-    </Markdown>
+            <p
+              key="1:1-1:122"
+            >
+              Step 0 notes
+            </p>
+          </div>
+        </ReactMarkdown>
+      </Markdown>
+    </DontReRender>
     <div
       style={
         Object {
@@ -866,8 +890,41 @@ exports[`MultiStepForm should render short answer 1`] = `
         }
       }
     >
+      <DontReRender>
+        <Markdown
+          source="## Step 0 Title"
+        >
+          <ReactMarkdown
+            containerTagName="div"
+            parserOptions={Object {}}
+            renderers={
+              Object {
+                "Link": [Function],
+              }
+            }
+            source="## Step 0 Title"
+          >
+            <div>
+              <Heading
+                key="1:1-1:152"
+                level={2}
+                literal={null}
+                nodeKey="1:1-1:152"
+              >
+                <h2
+                  key="1:1-1:152"
+                >
+                  Step 0 Title
+                </h2>
+              </Heading>
+            </div>
+          </ReactMarkdown>
+        </Markdown>
+      </DontReRender>
+    </div>
+    <DontReRender>
       <Markdown
-        source="## Step 0 Title"
+        source="Step 0 Description"
       >
         <ReactMarkdown
           containerTagName="div"
@@ -877,73 +934,46 @@ exports[`MultiStepForm should render short answer 1`] = `
               "Link": [Function],
             }
           }
-          source="## Step 0 Title"
+          source="Step 0 Description"
         >
           <div>
-            <Heading
-              key="1:1-1:152"
-              level={2}
-              literal={null}
-              nodeKey="1:1-1:152"
+            <p
+              key="1:1-1:182"
             >
-              <h2
-                key="1:1-1:152"
-              >
-                Step 0 Title
-              </h2>
-            </Heading>
+              Step 0 Description
+            </p>
           </div>
         </ReactMarkdown>
       </Markdown>
-    </div>
-    <Markdown
-      source="Step 0 Description"
-    >
-      <ReactMarkdown
-        containerTagName="div"
-        parserOptions={Object {}}
-        renderers={
-          Object {
-            "Link": [Function],
-          }
-        }
-        source="Step 0 Description"
-      >
-        <div>
-          <p
-            key="1:1-1:182"
-          >
-            Step 0 Description
-          </p>
-        </div>
-      </ReactMarkdown>
-    </Markdown>
-    <Markdown
-      className="text-muted tool-note"
-      source="Step 0 notes"
-    >
-      <ReactMarkdown
+    </DontReRender>
+    <DontReRender>
+      <Markdown
         className="text-muted tool-note"
-        containerTagName="div"
-        parserOptions={Object {}}
-        renderers={
-          Object {
-            "Link": [Function],
-          }
-        }
         source="Step 0 notes"
       >
-        <div
+        <ReactMarkdown
           className="text-muted tool-note"
+          containerTagName="div"
+          parserOptions={Object {}}
+          renderers={
+            Object {
+              "Link": [Function],
+            }
+          }
+          source="Step 0 notes"
         >
-          <p
-            key="1:1-1:122"
+          <div
+            className="text-muted tool-note"
           >
-            Step 0 notes
-          </p>
-        </div>
-      </ReactMarkdown>
-    </Markdown>
+            <p
+              key="1:1-1:122"
+            >
+              Step 0 notes
+            </p>
+          </div>
+        </ReactMarkdown>
+      </Markdown>
+    </DontReRender>
     <form
       onSubmit={[Function]}
     >
@@ -1079,8 +1109,41 @@ exports[`MultiStepForm should render short answer: submitting answer 1`] = `
         }
       }
     >
+      <DontReRender>
+        <Markdown
+          source="## Step 0 Title"
+        >
+          <ReactMarkdown
+            containerTagName="div"
+            parserOptions={Object {}}
+            renderers={
+              Object {
+                "Link": [Function],
+              }
+            }
+            source="## Step 0 Title"
+          >
+            <div>
+              <Heading
+                key="1:1-1:152"
+                level={2}
+                literal={null}
+                nodeKey="1:1-1:152"
+              >
+                <h2
+                  key="1:1-1:152"
+                >
+                  Step 0 Title
+                </h2>
+              </Heading>
+            </div>
+          </ReactMarkdown>
+        </Markdown>
+      </DontReRender>
+    </div>
+    <DontReRender>
       <Markdown
-        source="## Step 1 Title: ***“Answer step 0”*** and Answer step 0"
+        source="Step 0 Description"
       >
         <ReactMarkdown
           containerTagName="div"
@@ -1090,103 +1153,46 @@ exports[`MultiStepForm should render short answer: submitting answer 1`] = `
               "Link": [Function],
             }
           }
-          source="## Step 1 Title: ***“Answer step 0”*** and Answer step 0"
+          source="Step 0 Description"
         >
           <div>
-            <Heading
-              key="1:1-1:568"
-              level={2}
-              literal={null}
-              nodeKey="1:1-1:568"
+            <p
+              key="1:1-1:182"
             >
-              <h2
-                key="1:1-1:568"
-              >
-                Step 1 Title: 
-                <strong
-                  key="1:1-1:566"
-                >
-                  <em
-                    key="1:1-1:565"
-                  >
-                    “Answer step 0”
-                  </em>
-                </strong>
-                 and Answer step 0
-              </h2>
-            </Heading>
+              Step 0 Description
+            </p>
           </div>
         </ReactMarkdown>
       </Markdown>
-    </div>
-    <Markdown
-      source="Step 1 Description: ***“Answer step 0”*** and Answer step 0"
-    >
-      <ReactMarkdown
-        containerTagName="div"
-        parserOptions={Object {}}
-        renderers={
-          Object {
-            "Link": [Function],
-          }
-        }
-        source="Step 1 Description: ***“Answer step 0”*** and Answer step 0"
-      >
-        <div>
-          <p
-            key="1:1-1:598"
-          >
-            Step 1 Description: 
-            <strong
-              key="1:1-1:596"
-            >
-              <em
-                key="1:1-1:595"
-              >
-                “Answer step 0”
-              </em>
-            </strong>
-             and Answer step 0
-          </p>
-        </div>
-      </ReactMarkdown>
-    </Markdown>
-    <Markdown
-      className="text-muted tool-note"
-      source="Step 1 notes: ***“Answer step 0”*** and Answer step 0"
-    >
-      <ReactMarkdown
+    </DontReRender>
+    <DontReRender>
+      <Markdown
         className="text-muted tool-note"
-        containerTagName="div"
-        parserOptions={Object {}}
-        renderers={
-          Object {
-            "Link": [Function],
-          }
-        }
-        source="Step 1 notes: ***“Answer step 0”*** and Answer step 0"
+        source="Step 0 notes"
       >
-        <div
+        <ReactMarkdown
           className="text-muted tool-note"
+          containerTagName="div"
+          parserOptions={Object {}}
+          renderers={
+            Object {
+              "Link": [Function],
+            }
+          }
+          source="Step 0 notes"
         >
-          <p
-            key="1:1-1:538"
+          <div
+            className="text-muted tool-note"
           >
-            Step 1 notes: 
-            <strong
-              key="1:1-1:536"
+            <p
+              key="1:1-1:122"
             >
-              <em
-                key="1:1-1:535"
-              >
-                “Answer step 0”
-              </em>
-            </strong>
-             and Answer step 0
-          </p>
-        </div>
-      </ReactMarkdown>
-    </Markdown>
+              Step 0 notes
+            </p>
+          </div>
+        </ReactMarkdown>
+      </Markdown>
+    </DontReRender>
     <form
       onSubmit={[Function]}
     >
@@ -1301,8 +1307,41 @@ exports[`MultiStepForm should render stars review 1`] = `
         }
       }
     >
+      <DontReRender>
+        <Markdown
+          source="## Step 0 Title"
+        >
+          <ReactMarkdown
+            containerTagName="div"
+            parserOptions={Object {}}
+            renderers={
+              Object {
+                "Link": [Function],
+              }
+            }
+            source="## Step 0 Title"
+          >
+            <div>
+              <Heading
+                key="1:1-1:152"
+                level={2}
+                literal={null}
+                nodeKey="1:1-1:152"
+              >
+                <h2
+                  key="1:1-1:152"
+                >
+                  Step 0 Title
+                </h2>
+              </Heading>
+            </div>
+          </ReactMarkdown>
+        </Markdown>
+      </DontReRender>
+    </div>
+    <DontReRender>
       <Markdown
-        source="## Step 0 Title"
+        source="Step 0 Description"
       >
         <ReactMarkdown
           containerTagName="div"
@@ -1312,73 +1351,46 @@ exports[`MultiStepForm should render stars review 1`] = `
               "Link": [Function],
             }
           }
-          source="## Step 0 Title"
+          source="Step 0 Description"
         >
           <div>
-            <Heading
-              key="1:1-1:152"
-              level={2}
-              literal={null}
-              nodeKey="1:1-1:152"
+            <p
+              key="1:1-1:182"
             >
-              <h2
-                key="1:1-1:152"
-              >
-                Step 0 Title
-              </h2>
-            </Heading>
+              Step 0 Description
+            </p>
           </div>
         </ReactMarkdown>
       </Markdown>
-    </div>
-    <Markdown
-      source="Step 0 Description"
-    >
-      <ReactMarkdown
-        containerTagName="div"
-        parserOptions={Object {}}
-        renderers={
-          Object {
-            "Link": [Function],
-          }
-        }
-        source="Step 0 Description"
-      >
-        <div>
-          <p
-            key="1:1-1:182"
-          >
-            Step 0 Description
-          </p>
-        </div>
-      </ReactMarkdown>
-    </Markdown>
-    <Markdown
-      className="text-muted tool-note"
-      source="Step 0 notes"
-    >
-      <ReactMarkdown
+    </DontReRender>
+    <DontReRender>
+      <Markdown
         className="text-muted tool-note"
-        containerTagName="div"
-        parserOptions={Object {}}
-        renderers={
-          Object {
-            "Link": [Function],
-          }
-        }
         source="Step 0 notes"
       >
-        <div
+        <ReactMarkdown
           className="text-muted tool-note"
+          containerTagName="div"
+          parserOptions={Object {}}
+          renderers={
+            Object {
+              "Link": [Function],
+            }
+          }
+          source="Step 0 notes"
         >
-          <p
-            key="1:1-1:122"
+          <div
+            className="text-muted tool-note"
           >
-            Step 0 notes
-          </p>
-        </div>
-      </ReactMarkdown>
-    </Markdown>
+            <p
+              key="1:1-1:122"
+            >
+              Step 0 notes
+            </p>
+          </div>
+        </ReactMarkdown>
+      </Markdown>
+    </DontReRender>
     <ReactStars
       char="★"
       color1="gray"
@@ -1578,8 +1590,41 @@ exports[`MultiStepForm with data 1`] = `
         }
       }
     >
+      <DontReRender>
+        <Markdown
+          source="## Title"
+        >
+          <ReactMarkdown
+            containerTagName="div"
+            parserOptions={Object {}}
+            renderers={
+              Object {
+                "Link": [Function],
+              }
+            }
+            source="## Title"
+          >
+            <div>
+              <Heading
+                key="1:1-1:82"
+                level={2}
+                literal={null}
+                nodeKey="1:1-1:82"
+              >
+                <h2
+                  key="1:1-1:82"
+                >
+                  Title
+                </h2>
+              </Heading>
+            </div>
+          </ReactMarkdown>
+        </Markdown>
+      </DontReRender>
+    </div>
+    <DontReRender>
       <Markdown
-        source="## Title"
+        source="***“My name is neo”*** and My name is neo and me"
       >
         <ReactMarkdown
           containerTagName="div"
@@ -1589,56 +1634,27 @@ exports[`MultiStepForm with data 1`] = `
               "Link": [Function],
             }
           }
-          source="## Title"
+          source="***“My name is neo”*** and My name is neo and me"
         >
           <div>
-            <Heading
-              key="1:1-1:82"
-              level={2}
-              literal={null}
-              nodeKey="1:1-1:82"
+            <p
+              key="1:1-1:487"
             >
-              <h2
-                key="1:1-1:82"
+              <strong
+                key="1:1-1:485"
               >
-                Title
-              </h2>
-            </Heading>
+                <em
+                  key="1:1-1:484"
+                >
+                  “My name is neo”
+                </em>
+              </strong>
+               and My name is neo and me
+            </p>
           </div>
         </ReactMarkdown>
       </Markdown>
-    </div>
-    <Markdown
-      source="***“My name is neo”*** and My name is neo and me"
-    >
-      <ReactMarkdown
-        containerTagName="div"
-        parserOptions={Object {}}
-        renderers={
-          Object {
-            "Link": [Function],
-          }
-        }
-        source="***“My name is neo”*** and My name is neo and me"
-      >
-        <div>
-          <p
-            key="1:1-1:487"
-          >
-            <strong
-              key="1:1-1:485"
-            >
-              <em
-                key="1:1-1:484"
-              >
-                “My name is neo”
-              </em>
-            </strong>
-             and My name is neo and me
-          </p>
-        </div>
-      </ReactMarkdown>
-    </Markdown>
+    </DontReRender>
     <form
       onSubmit={[Function]}
     >
