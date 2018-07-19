@@ -55,7 +55,9 @@ exports[`MultiStepForm should render flash answer 1`] = `
         }
       }
     >
-      <DontReRender>
+      <DontReRender
+        currentStepNum={0}
+      >
         <Markdown
           source="## Step 0 Title"
         >
@@ -87,7 +89,9 @@ exports[`MultiStepForm should render flash answer 1`] = `
         </Markdown>
       </DontReRender>
     </div>
-    <DontReRender>
+    <DontReRender
+      currentStepNum={0}
+    >
       <Markdown
         source="Step 0 Description"
       >
@@ -111,7 +115,9 @@ exports[`MultiStepForm should render flash answer 1`] = `
         </ReactMarkdown>
       </Markdown>
     </DontReRender>
-    <DontReRender>
+    <DontReRender
+      currentStepNum={0}
+    >
       <Markdown
         className="text-muted tool-note"
         source="Step 0 notes"
@@ -255,7 +261,9 @@ exports[`MultiStepForm should render long answer 1`] = `
         }
       }
     >
-      <DontReRender>
+      <DontReRender
+        currentStepNum={0}
+      >
         <Markdown
           source="## Step 0 Title"
         >
@@ -287,7 +295,9 @@ exports[`MultiStepForm should render long answer 1`] = `
         </Markdown>
       </DontReRender>
     </div>
-    <DontReRender>
+    <DontReRender
+      currentStepNum={0}
+    >
       <Markdown
         source="Step 0 Description"
       >
@@ -311,7 +321,9 @@ exports[`MultiStepForm should render long answer 1`] = `
         </ReactMarkdown>
       </Markdown>
     </DontReRender>
-    <DontReRender>
+    <DontReRender
+      currentStepNum={0}
+    >
       <Markdown
         className="text-muted tool-note"
         source="Step 0 notes"
@@ -441,7 +453,9 @@ exports[`MultiStepForm should render payment 1`] = `
         }
       }
     >
-      <DontReRender>
+      <DontReRender
+        currentStepNum={0}
+      >
         <Markdown
           source="## Step 0 Title"
         >
@@ -473,7 +487,9 @@ exports[`MultiStepForm should render payment 1`] = `
         </Markdown>
       </DontReRender>
     </div>
-    <DontReRender>
+    <DontReRender
+      currentStepNum={0}
+    >
       <Markdown
         source="Step 0 Description"
       >
@@ -497,7 +513,9 @@ exports[`MultiStepForm should render payment 1`] = `
         </ReactMarkdown>
       </Markdown>
     </DontReRender>
-    <DontReRender>
+    <DontReRender
+      currentStepNum={0}
+    >
       <Markdown
         className="text-muted tool-note"
         source="Step 0 notes"
@@ -698,7 +716,9 @@ exports[`MultiStepForm should render radio answers 1`] = `
         }
       }
     >
-      <DontReRender>
+      <DontReRender
+        currentStepNum={0}
+      >
         <Markdown
           source="## Step 0 Title"
         >
@@ -730,7 +750,9 @@ exports[`MultiStepForm should render radio answers 1`] = `
         </Markdown>
       </DontReRender>
     </div>
-    <DontReRender>
+    <DontReRender
+      currentStepNum={0}
+    >
       <Markdown
         source="Step 0 Description"
       >
@@ -754,7 +776,9 @@ exports[`MultiStepForm should render radio answers 1`] = `
         </ReactMarkdown>
       </Markdown>
     </DontReRender>
-    <DontReRender>
+    <DontReRender
+      currentStepNum={0}
+    >
       <Markdown
         className="text-muted tool-note"
         source="Step 0 notes"
@@ -890,7 +914,9 @@ exports[`MultiStepForm should render short answer 1`] = `
         }
       }
     >
-      <DontReRender>
+      <DontReRender
+        currentStepNum={0}
+      >
         <Markdown
           source="## Step 0 Title"
         >
@@ -922,7 +948,9 @@ exports[`MultiStepForm should render short answer 1`] = `
         </Markdown>
       </DontReRender>
     </div>
-    <DontReRender>
+    <DontReRender
+      currentStepNum={0}
+    >
       <Markdown
         source="Step 0 Description"
       >
@@ -946,7 +974,9 @@ exports[`MultiStepForm should render short answer 1`] = `
         </ReactMarkdown>
       </Markdown>
     </DontReRender>
-    <DontReRender>
+    <DontReRender
+      currentStepNum={0}
+    >
       <Markdown
         className="text-muted tool-note"
         source="Step 0 notes"
@@ -1109,9 +1139,11 @@ exports[`MultiStepForm should render short answer: submitting answer 1`] = `
         }
       }
     >
-      <DontReRender>
+      <DontReRender
+        currentStepNum={1}
+      >
         <Markdown
-          source="## Step 0 Title"
+          source="## Step 1 Title: ***“Answer step 0”*** and Answer step 0"
         >
           <ReactMarkdown
             containerTagName="div"
@@ -1121,19 +1153,29 @@ exports[`MultiStepForm should render short answer: submitting answer 1`] = `
                 "Link": [Function],
               }
             }
-            source="## Step 0 Title"
+            source="## Step 1 Title: ***“Answer step 0”*** and Answer step 0"
           >
             <div>
               <Heading
-                key="1:1-1:152"
+                key="1:1-1:568"
                 level={2}
                 literal={null}
-                nodeKey="1:1-1:152"
+                nodeKey="1:1-1:568"
               >
                 <h2
-                  key="1:1-1:152"
+                  key="1:1-1:568"
                 >
-                  Step 0 Title
+                  Step 1 Title: 
+                  <strong
+                    key="1:1-1:566"
+                  >
+                    <em
+                      key="1:1-1:565"
+                    >
+                      “Answer step 0”
+                    </em>
+                  </strong>
+                   and Answer step 0
                 </h2>
               </Heading>
             </div>
@@ -1141,9 +1183,11 @@ exports[`MultiStepForm should render short answer: submitting answer 1`] = `
         </Markdown>
       </DontReRender>
     </div>
-    <DontReRender>
+    <DontReRender
+      currentStepNum={1}
+    >
       <Markdown
-        source="Step 0 Description"
+        source="Step 1 Description: ***“Answer step 0”*** and Answer step 0"
       >
         <ReactMarkdown
           containerTagName="div"
@@ -1153,22 +1197,34 @@ exports[`MultiStepForm should render short answer: submitting answer 1`] = `
               "Link": [Function],
             }
           }
-          source="Step 0 Description"
+          source="Step 1 Description: ***“Answer step 0”*** and Answer step 0"
         >
           <div>
             <p
-              key="1:1-1:182"
+              key="1:1-1:598"
             >
-              Step 0 Description
+              Step 1 Description: 
+              <strong
+                key="1:1-1:596"
+              >
+                <em
+                  key="1:1-1:595"
+                >
+                  “Answer step 0”
+                </em>
+              </strong>
+               and Answer step 0
             </p>
           </div>
         </ReactMarkdown>
       </Markdown>
     </DontReRender>
-    <DontReRender>
+    <DontReRender
+      currentStepNum={1}
+    >
       <Markdown
         className="text-muted tool-note"
-        source="Step 0 notes"
+        source="Step 1 notes: ***“Answer step 0”*** and Answer step 0"
       >
         <ReactMarkdown
           className="text-muted tool-note"
@@ -1179,15 +1235,25 @@ exports[`MultiStepForm should render short answer: submitting answer 1`] = `
               "Link": [Function],
             }
           }
-          source="Step 0 notes"
+          source="Step 1 notes: ***“Answer step 0”*** and Answer step 0"
         >
           <div
             className="text-muted tool-note"
           >
             <p
-              key="1:1-1:122"
+              key="1:1-1:538"
             >
-              Step 0 notes
+              Step 1 notes: 
+              <strong
+                key="1:1-1:536"
+              >
+                <em
+                  key="1:1-1:535"
+                >
+                  “Answer step 0”
+                </em>
+              </strong>
+               and Answer step 0
             </p>
           </div>
         </ReactMarkdown>
@@ -1307,7 +1373,9 @@ exports[`MultiStepForm should render stars review 1`] = `
         }
       }
     >
-      <DontReRender>
+      <DontReRender
+        currentStepNum={0}
+      >
         <Markdown
           source="## Step 0 Title"
         >
@@ -1339,7 +1407,9 @@ exports[`MultiStepForm should render stars review 1`] = `
         </Markdown>
       </DontReRender>
     </div>
-    <DontReRender>
+    <DontReRender
+      currentStepNum={0}
+    >
       <Markdown
         source="Step 0 Description"
       >
@@ -1363,7 +1433,9 @@ exports[`MultiStepForm should render stars review 1`] = `
         </ReactMarkdown>
       </Markdown>
     </DontReRender>
-    <DontReRender>
+    <DontReRender
+      currentStepNum={0}
+    >
       <Markdown
         className="text-muted tool-note"
         source="Step 0 notes"
@@ -1590,7 +1662,9 @@ exports[`MultiStepForm with data 1`] = `
         }
       }
     >
-      <DontReRender>
+      <DontReRender
+        currentStepNum={1}
+      >
         <Markdown
           source="## Title"
         >
@@ -1622,7 +1696,9 @@ exports[`MultiStepForm with data 1`] = `
         </Markdown>
       </DontReRender>
     </div>
-    <DontReRender>
+    <DontReRender
+      currentStepNum={1}
+    >
       <Markdown
         source="***“My name is neo”*** and My name is neo and me"
       >
