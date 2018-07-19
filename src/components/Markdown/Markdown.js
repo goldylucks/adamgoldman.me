@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 
@@ -9,7 +11,11 @@ import YtEmbedd from '../YtEmbedd'
 import LoomEmbedd from '../LoomEmbedd'
 import ExplicitWarning from '../ExplicitWarning'
 
-const Markdown = props => (
+type Props = {
+  dontEmbedd: ?boolean
+}
+
+const Markdown = (props: Props) => (
   <ReactMarkdown
     {...props}
     renderers={{
@@ -18,11 +24,11 @@ const Markdown = props => (
               return <ExplicitWarning explicitContent={linkProps.children} />
             }
 
-            if (linkProps.href === 'YtEmbedd') {
+            if (linkProps.href === 'YtEmbedd' && !props.dontEmbedd) {
               return <YtEmbedd src={linkProps.children} />
             }
 
-            if (linkProps.href === 'LoomEmbedd') {
+            if (linkProps.href === 'LoomEmbedd' && !props.dontEmbedd) {
               return <LoomEmbedd src={linkProps.children} />
             }
 
