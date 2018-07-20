@@ -177,20 +177,6 @@ describe('replaceVarsUtil', () => {
 })
 
 describe('stateForReviewRating', () => {
-  it('should go to finalComments', () => {
-    const rating = 3
-    const steps = [{}, { id: 'choosePaymentAmount' }, { id: 'finalComments' }]
-    const state = {
-      currentStepNum: 0,
-    }
-    expect(stateForReviewRating(rating, steps)(state)).toEqual({
-      answerByStep: {
-        0: String(rating),
-      },
-      currentStepNum: 2,
-      rating,
-    })
-  })
   it('should go to choosePaymentAmount', () => {
     const rating = 4
     const steps = [{}, { id: 'choosePaymentAmount' }, { id: 'finalComments' }]
