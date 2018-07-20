@@ -12,9 +12,11 @@ import ExternalA from '../../components/ExternalA'
 import Benefits from '../../components/Benefits'
 import Testimonials from '../../components/Testimonials'
 
+import MessengerFixed from './MessengerFixed'
 import testimonials from './testimonialsData'
 import FAQContainer from './FAQContainer'
 import s from './SavoringYourPet.css'
+import MobileNav from './MobileNav'
 
 const TOP_BAR_HRIGHT = 56
 
@@ -29,6 +31,7 @@ class SavoringYourPet extends React.Component<Props> {
   render() {
     return (
       <div style={{ paddingTop: TOP_BAR_HRIGHT }}>
+        <MessengerFixed />
         {this.renderTopBar()}
         <div className="container">
           <div className={`mainheading ${s.widthContainer}`}>
@@ -49,9 +52,9 @@ class SavoringYourPet extends React.Component<Props> {
             <p>Losing your beloved pet is one of <strong>the most devastating experiences a human can go through</strong>. The pain can be greater than losing a family member.</p>
             <p>The unconditional love, the acceptance, the beloved companionship ... It’s something you rarely get anywhere else.</p>
             <hr className={s.hr} />
-            <h4 className="text-center">“The death of a pet can be a truly traumatic experience and create a large void in our hearts and lives” <br />- <strong>Ralph Ryback M.D.</strong></h4>
+            <h4 ref={(el) => { this.elTrauma = el }} className="text-center">“The death of a pet can be a truly traumatic experience and create a large void in our hearts and lives” <br />- <strong>Ralph Ryback M.D.</strong></h4>
             <hr className={s.hr} />
-            <h2 ref={(el) => { this.elPain = el }} className="text-center" style={{ marginBottom: 20 }}>Do you feel any of the following?</h2>
+            <h2 className="text-center" style={{ marginBottom: 20 }}>Do you feel any of the following?</h2>
             <ul>
               <li><strong>Emptiness</strong> as you go through your day?</li>
               <li><strong>Guilt & regret</strong> about what you did or didn’t do?</li>
@@ -138,7 +141,7 @@ class SavoringYourPet extends React.Component<Props> {
             <p>That’s right, you can <strong>guarantee</strong> your <strong>lifetime access</strong> to this program <strong>for less than the price of 1 therapy session</strong>.</p>
             <p>I am so confident this will help you beyond your expectations, I’m willing to personally take all the risk off your hands when you invest in this today, with a double guarantee:</p>
             <div ref={(el) => { this.elGuarantee = el }} className="text-center" style={{ marginBottom: 40 }}>
-              <h4 className>30 days no hassle money back guarantee</h4>
+              <h4 className="text-center">30 days no hassle money back guarantee</h4>
               <img
                 src={cloudImg('30-day-refund-guarantee_ug806q')}
                 alt="30 day refund guarantee"
@@ -175,32 +178,38 @@ class SavoringYourPet extends React.Component<Props> {
     )
   }
   renderTopBar() {
+    const navitems = [
+      { text: 'Trauma', nodeId: 'elTrauma' },
+      { text: 'Program', nodeId: 'elProgram' },
+      { text: 'Modules', nodeId: 'elModules' },
+      { text: 'Research', nodeId: 'elResearch' },
+      { text: 'About Me', nodeId: 'elAboutMe' },
+      { text: 'Guarantee', nodeId: 'elGuarantee' },
+    ]
+    const title = 'Savoring Your Pet'
     return (
       <nav className="navbar navbar-expand-lg fixed-top main-nav navbar-light">
         <div className="container">
-          <Link className="navbar-brand mr-auto" to="/savoring-your-pet">Savoring Your Pet</Link>
+          <MobileNav items={navitems} onItemClick={this.scrollTo} title={title} />
+          <Link className="navbar-brand mr-auto" to="/savoring-your-pet">{title}</Link>
           <div className="collapse navbar-collapse">
             <ul className="navbar-nav ml-auto">
-              {[
-              { text: 'Pain', nodeId: 'elPain' },
-              { text: 'Program', nodeId: 'elProgram' },
-              { text: 'Modules', nodeId: 'elModules' },
-              { text: 'Research', nodeId: 'elResearch' },
-              { text: 'About Me', nodeId: 'elAboutMe' },
-              { text: 'Guarantee', nodeId: 'elGuarantee' },
-            ].map(({ text, nodeId }) => (
-              <li className="nav-item">
-                <a className="nav-link" onClick={() => scrollToTopOfNode(this[nodeId], { duration: 1000, topOffest: TOP_BAR_HRIGHT })}>{text}</a>
-              </li>
+              {navitems.map(({ text, nodeId }) => (
+                <li className="nav-item" key={nodeId}>
+                  <a className="nav-link" onClick={() => this.scrollTo(nodeId)}>{text}</a>
+                </li>
             ))}
-              <li className="nav-item">
-                <a className="nav-link btn btn-primary btn-sm" onClick={() => scrollToTopOfNode(this.elBuyNow, { duration: 1000, topOffest: TOP_BAR_HRIGHT })}>Claim Access</a>
+              <li className="nav-item" key="buyNow">
+                <a className="nav-link btn btn-primary btn-sm" onClick={() => this.scrollTo('elBuyNow')}>Claim Access</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
     )
+  }
+  scrollTo = (nodeId) => {
+    scrollToTopOfNode(this[nodeId], { duration: 1000, topOffest: TOP_BAR_HRIGHT })
   }
   renderBenefitsSection() {
     return (

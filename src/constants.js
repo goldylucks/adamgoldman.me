@@ -7,6 +7,7 @@ export const FB_REVIEWS = 'https://www.facebook.com/adamgoldman.me/reviews/'
 export const MESSENGER_LINK = 'https://m.me/adamgoldman.me'
 export const MESSENGER_LINK_TOOL_CONCERN = `${MESSENGER_LINK}?ref=tool-concern-generic-entry`
 export const MESSENGER_LINK_INNER_CIRCLE = `${MESSENGER_LINK}?ref=inner-circle`
+export const MESSENGER_LINK_SAVORING_PETS_HP = `${MESSENGER_LINK}?ref=savoring-pet-homepage`
 export const MESSENGER_LINK_BOOK_SESSION = `${DOMAIN}/book-session`
 export const MESSENGER_LINK_WELCOME = `${DOMAIN}/contact`
 export const MESSENGER_LINK_SAVORING_CONTACT = `${DOMAIN}/savoring-your-child/contact`
