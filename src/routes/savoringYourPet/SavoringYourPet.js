@@ -344,7 +344,7 @@ His work is a detailed challenge to the rest of us to learn how to “up our gam
   }
   renderAboutMeSection() {
     return (
-      <section ref={(el) => { this.elAboutMe = el }}>
+      <section ref={(el) => { this.elAboutMe = el }} id="about-me">
         <h1 className="text-center">Who am I to guide you through this journey?</h1>
         <div className={s.aboutContainer}>
           <img
