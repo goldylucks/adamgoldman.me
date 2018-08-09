@@ -18,11 +18,17 @@ import FAQContainer from './FAQContainer'
 import s from './SavoringYourPet.css'
 import MobileNav from './MobileNav'
 
-const TOP_BAR_HRIGHT = 56
+export const TOP_BAR_HRIGHT = 56
 
 type Props = {}
 
-class SavoringYourPet extends React.Component<Props> {
+type State = {
+  isCouponApplied: boolean,
+  isProcessingCoupon: boolean,
+  couponInputValue: string
+}
+
+class SavoringYourPet extends React.Component<Props, State> {
   state = {
     isCouponApplied: false,
     isProcessingCoupon: false,
