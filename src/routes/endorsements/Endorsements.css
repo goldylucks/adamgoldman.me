@@ -1,0 +1,18 @@
+.widthContainer {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonialImg {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  max-width: 200px;
+}
+
+.separator {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: block;
+}

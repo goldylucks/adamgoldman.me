@@ -79,11 +79,9 @@ class MainNav extends React.Component {
         { to: '/savoring-your-child/pricing', text: <span>Pricing <FontAwesomeIcon icon={faHeart} style={{ color: 'red', marginLeft: 5 }} /></span> },
       ]
       : [
-        { to: '/transcripts', text: 'Transcripts' },
-        { to: '/tools', text: 'Tutorials' },
+        { to: '/endorsements', text: 'Endorsements' },
         { to: '/about', text: 'About' },
         { href: MESSENGER_LINK_WELCOME, text: 'Contact' },
-        { to: '/i-dont-charge-i-accept', text: <span>Pricing <FontAwesomeIcon icon={faHeart} style={{ color: 'red', marginLeft: 5 }} /></span> },
       ]
   }
 }

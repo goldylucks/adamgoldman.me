@@ -2,19 +2,19 @@ import React from 'react'
 
 import Layout from '../../components/Layout'
 
-import Home from './Home'
+import Endorsements from './Endorsements'
 
-const path = '/'
+const path = '/endorsements'
 
 async function action() {
   return {
-    chunks: ['home'],
-    title: 'Adam Goldman\'s Virtual Home',
+    chunks: ['endorsements'],
+    title: 'Endorsements',
     path,
-    description: "Relax, it's just life",
+    description: 'Endorsements',
     component: (
       <Layout path={path}>
-        <Home />
+        <Endorsements />
       </Layout>
     ),
   }

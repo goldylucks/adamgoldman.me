@@ -3,7 +3,8 @@
 import React from 'react'
 import axios from 'axios'
 
-import { filterDrafts } from '../../utils'
+import { filterDrafts, isAdam } from '../../utils'
+import history from '../../history'
 import BottomSection from '../../components/BottomSection'
 import Card from '../../components/Card'
 
@@ -21,6 +22,9 @@ class ToolsListPage extends React.Component<Props> {
     isFetchingTutorials: true,
   }
   componentDidMount() {
+    if (!isAdam()) {
+      history.push('/')
+    }
     this.fetchTutorials()
   }
   render() {

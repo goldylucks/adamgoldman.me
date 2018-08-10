@@ -28,6 +28,23 @@ label[for] {
 button {
   cursor: pointer;
 }
+html .cta-button {
+	font-size: 50px;
+  padding: 30px;
+  margin: 20px auto;
+  border-radius: 30px;
+  display: inline-block;
+  background: #03a87c !important;
+  color: #fff !important;
+}
+@media only screen and (max-width : 900px) {
+  html .cta-button{
+    font-size: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    width: 100%;
+  }
+}
 input[type="image"], input[type="checkbox"] {
   cursor: pointer;
 }

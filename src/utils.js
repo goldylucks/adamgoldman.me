@@ -8,6 +8,13 @@ Array.prototype.last = function () {
 
 const cloudinaryCore = new cloudinary.Cloudinary({ cloud_name: 'goldylucks', secure: true })
 
+export const isAdam = () => {
+  try {
+    return JSON.parse(localStorage.getItem('user')).fbUserId === '1459675790775313'
+  } catch (err) {
+    return false
+  }
+}
 export const cloudImg = imgName => cloudinaryCore.url(imgName)
 
 export const PROFILE_IMG = cloudImg('adamgoldman.me/profile-smiling')

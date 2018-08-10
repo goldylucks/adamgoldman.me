@@ -6,7 +6,7 @@ import Layout from '../../components/Layout'
 import Transcripts from './Transcripts'
 
 const title = 'Transcripts'
-const description = 'Transcripts and notes of sessions with "clients"'
+const description = 'Transcripts and notes of sessions with clients'
 
 async function action({ path }) {
   const { data } = await axios.get('/api/posts/transcripts')
