@@ -1,11 +1,10 @@
 # Adam Goldman
 
-My virtual home, with all my content, free and open sourced, FOREVER
+[![Site Status][site-status]][site-url] [![Build Status][travis-image]][travis-url] [![GPLv3][license-image]][license-url]
 
-[![Site Status][site-status]][site-url] [![Build Status][travis-image]][travis-url] [![Code Analysis][code-analysis-image]][code-analysis-url] [![dependencies][dependencies-image]][dependencies-url] [![devDependencies][dev-dependencies-image]][dev-dependencies-url] [![GPLv3][license-image]][license-url]
+Join Influencers, trainers, coaches and countless others who are experiencing radical results in extremely short time.
 
-## Use
-[AdamGoldman.me][site-url] is kindly hosted on Heroku  
+# [BOOK A SESSION](https://www.adamgoldman.me/book-session)
 
 ## Contact
 Issues, features (and Prs!) are always [welcomed][issues-url] :)  
@@ -33,18 +32,9 @@ Code is available under the [GPL v3 license][license-url] - you can use any part
 [travis-image]: https://travis-ci.org/goldylucks/adamgoldman.me.svg?branch=master
 [travis-url]: https://travis-ci.org/goldylucks/adamgoldman.me
 
-[dependencies-image]: https://img.shields.io/bithound/dependencies/github/goldylucks/adamgoldman.me.svg
-[dependencies-url]: https://www.bithound.io/github/goldylucks/adamgoldman.me/master/dependencies/npm
-
-[dev-dependencies-image]: https://img.shields.io/bithound/devDependencies/github/goldylucks/adamgoldman.me.svg
-[dev-dependencies-url]: https://www.bithound.io/github/goldylucks/adamgoldman.me/master/dependencies/npm
-
-[code-analysis-image]: https://www.bithound.io/github/goldylucks/adamgoldman.me/badges/code.svg
-[code-analysis-url]: https://www.bithound.io/github/goldylucks/adamgoldman.me
-
 [license-image]: https://img.shields.io/badge/license-GPL%20v3-brightgreen.svg
 [license-url]: http://www.gnu.org/licenses/gpl-3.0.en.html
 
-[site-url]: http://www.adamgoldman.me/
+[site-url]: https://www.adamgoldman.me
 [site-status]: https://img.shields.io/website-up-down-green-red/http/adamgoldman.me.svg
-[contact-url]: http://www.adamgoldman.me/lets-talk
+[contact-url]: https://www.adamgoldman.me/contact
