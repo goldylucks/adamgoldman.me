@@ -11,7 +11,6 @@ exports[`MultiStepForm should render flash answer 1`] = `
   }
   currentStepNum={0}
   hiddenFields={Array []}
-  hideSubscribeButton={false}
   onAnswerLinkPress={[Function]}
   onAnswerNewLinkPress={[Function]}
   onConcern={[MockFunction]}
@@ -199,19 +198,6 @@ exports[`MultiStepForm should render flash answer 1`] = `
         </div>
       </Answers>
     </div>
-    <ExternalA
-      className="btn btn-secondary btn-sm"
-      href="https://m.me/adamgoldman.me?ref=inner-circle"
-    >
-      <a
-        className="btn btn-secondary btn-sm"
-        href="https://m.me/adamgoldman.me?ref=inner-circle"
-        rel="nofollow noreferrer noopener"
-        target="_blank"
-      >
-        Subscribe to future tools
-      </a>
-    </ExternalA>
   </div>
 </MultiStepForm>
 `;
@@ -227,7 +213,6 @@ exports[`MultiStepForm should render long answer 1`] = `
   }
   currentStepNum={0}
   hiddenFields={Array []}
-  hideSubscribeButton={false}
   onAnswerLinkPress={[Function]}
   onAnswerNewLinkPress={[Function]}
   onConcern={[MockFunction]}
@@ -391,19 +376,6 @@ exports[`MultiStepForm should render long answer 1`] = `
         Continue
       </button>
     </form>
-    <ExternalA
-      className="btn btn-secondary btn-sm"
-      href="https://m.me/adamgoldman.me?ref=inner-circle"
-    >
-      <a
-        className="btn btn-secondary btn-sm"
-        href="https://m.me/adamgoldman.me?ref=inner-circle"
-        rel="nofollow noreferrer noopener"
-        target="_blank"
-      >
-        Subscribe to future tools
-      </a>
-    </ExternalA>
   </div>
 </MultiStepForm>
 `;
@@ -419,7 +391,6 @@ exports[`MultiStepForm should render payment 1`] = `
   }
   currentStepNum={0}
   hiddenFields={Array []}
-  hideSubscribeButton={false}
   onAnswerLinkPress={[Function]}
   onAnswerNewLinkPress={[Function]}
   onConcern={[MockFunction]}
@@ -644,19 +615,6 @@ exports[`MultiStepForm should render payment 1`] = `
         width="1"
       />
     </form>
-    <ExternalA
-      className="btn btn-secondary btn-sm"
-      href="https://m.me/adamgoldman.me?ref=inner-circle"
-    >
-      <a
-        className="btn btn-secondary btn-sm"
-        href="https://m.me/adamgoldman.me?ref=inner-circle"
-        rel="nofollow noreferrer noopener"
-        target="_blank"
-      >
-        Subscribe to future tools
-      </a>
-    </ExternalA>
   </div>
 </MultiStepForm>
 `;
@@ -672,7 +630,6 @@ exports[`MultiStepForm should render radio answers 1`] = `
   }
   currentStepNum={0}
   hiddenFields={Array []}
-  hideSubscribeButton={false}
   onAnswerLinkPress={[Function]}
   onAnswerNewLinkPress={[Function]}
   onConcern={[MockFunction]}
@@ -852,19 +809,6 @@ exports[`MultiStepForm should render radio answers 1`] = `
         </div>
       </Answers>
     </div>
-    <ExternalA
-      className="btn btn-secondary btn-sm"
-      href="https://m.me/adamgoldman.me?ref=inner-circle"
-    >
-      <a
-        className="btn btn-secondary btn-sm"
-        href="https://m.me/adamgoldman.me?ref=inner-circle"
-        rel="nofollow noreferrer noopener"
-        target="_blank"
-      >
-        Subscribe to future tools
-      </a>
-    </ExternalA>
   </div>
 </MultiStepForm>
 `;
@@ -880,7 +824,6 @@ exports[`MultiStepForm should render short answer 1`] = `
   }
   currentStepNum={0}
   hiddenFields={Array []}
-  hideSubscribeButton={false}
   onAnswerLinkPress={[Function]}
   onAnswerNewLinkPress={[Function]}
   onConcern={[MockFunction]}
@@ -1044,19 +987,6 @@ exports[`MultiStepForm should render short answer 1`] = `
         Press Enter or click to Continue
       </button>
     </form>
-    <ExternalA
-      className="btn btn-secondary btn-sm"
-      href="https://m.me/adamgoldman.me?ref=inner-circle"
-    >
-      <a
-        className="btn btn-secondary btn-sm"
-        href="https://m.me/adamgoldman.me?ref=inner-circle"
-        rel="nofollow noreferrer noopener"
-        target="_blank"
-      >
-        Subscribe to future tools
-      </a>
-    </ExternalA>
   </div>
 </MultiStepForm>
 `;
@@ -1072,7 +1002,6 @@ exports[`MultiStepForm should render short answer: submitting answer 1`] = `
   }
   currentStepNum={0}
   hiddenFields={Array []}
-  hideSubscribeButton={false}
   onAnswerLinkPress={[Function]}
   onAnswerNewLinkPress={[Function]}
   onConcern={[MockFunction]}
@@ -1311,19 +1240,6 @@ exports[`MultiStepForm should render short answer: submitting answer 1`] = `
     >
       Back
     </button>
-    <ExternalA
-      className="btn btn-secondary btn-sm"
-      href="https://m.me/adamgoldman.me?ref=inner-circle"
-    >
-      <a
-        className="btn btn-secondary btn-sm"
-        href="https://m.me/adamgoldman.me?ref=inner-circle"
-        rel="nofollow noreferrer noopener"
-        target="_blank"
-      >
-        Subscribe to future tools
-      </a>
-    </ExternalA>
   </div>
 </MultiStepForm>
 `;
@@ -1339,7 +1255,6 @@ exports[`MultiStepForm should render stars review 1`] = `
   }
   currentStepNum={0}
   hiddenFields={Array []}
-  hideSubscribeButton={false}
   onAnswerLinkPress={[Function]}
   onAnswerNewLinkPress={[Function]}
   onConcern={[MockFunction]}
@@ -1599,19 +1514,6 @@ exports[`MultiStepForm should render stars review 1`] = `
         </span>
       </div>
     </ReactStars>
-    <ExternalA
-      className="btn btn-secondary btn-sm"
-      href="https://m.me/adamgoldman.me?ref=inner-circle"
-    >
-      <a
-        className="btn btn-secondary btn-sm"
-        href="https://m.me/adamgoldman.me?ref=inner-circle"
-        rel="nofollow noreferrer noopener"
-        target="_blank"
-      >
-        Subscribe to future tools
-      </a>
-    </ExternalA>
   </div>
 </MultiStepForm>
 `;
@@ -1627,7 +1529,6 @@ exports[`MultiStepForm with data 1`] = `
   }
   currentStepNum={1}
   hiddenFields={Array []}
-  hideSubscribeButton={false}
   onAnswerLinkPress={[Function]}
   onAnswerNewLinkPress={[Function]}
   onConcern={[MockFunction]}
@@ -1783,19 +1684,6 @@ exports[`MultiStepForm with data 1`] = `
     >
       Back
     </button>
-    <ExternalA
-      className="btn btn-secondary btn-sm"
-      href="https://m.me/adamgoldman.me?ref=inner-circle"
-    >
-      <a
-        className="btn btn-secondary btn-sm"
-        href="https://m.me/adamgoldman.me?ref=inner-circle"
-        rel="nofollow noreferrer noopener"
-        target="_blank"
-      >
-        Subscribe to future tools
-      </a>
-    </ExternalA>
   </div>
 </MultiStepForm>
 `;

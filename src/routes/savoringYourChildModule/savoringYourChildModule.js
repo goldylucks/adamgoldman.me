@@ -140,7 +140,6 @@ class savoringYourChildSectionModule extends React.Component<Props> {
               childHim: user.savoringChildGender === 'male' ? 'him' : 'her',
               childName: user.savoringChildName,
             }}
-            hideSubscribeButton
             scrollTop={() => scrollToTopOfNode(this.toolResponseNode)}
             onUpdateProgress={onUpdateProgress}
             onConcern={this.props.onConcern}

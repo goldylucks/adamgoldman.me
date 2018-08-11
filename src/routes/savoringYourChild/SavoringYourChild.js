@@ -214,7 +214,6 @@ His work is a detailed challenge to the rest of us to learn how to “up our gam
           <MultiStepForm
             onAnswerLinkPress={this.answerLinkPress}
             onAnswerNewLinkPress={this.props.onAnswerNewLinkPress}
-            hideSubscribeButton
             {...toolResponse}
             scrollTop={() => scrollToTopOfNode(this.toolResponseNode)}
             onUpdateProgress={this.props.onUpdateProgress}

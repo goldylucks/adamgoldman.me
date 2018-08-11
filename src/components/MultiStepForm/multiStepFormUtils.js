@@ -73,10 +73,10 @@ export const replaceVarsUtil = ({
   }
 }
 
-export const stateForReviewRating = (rating, steps) => ({ answerByStep, currentStepNum }) => ({
+export const stateForReviewRating = rating => ({ answerByStep, currentStepNum }) => ({
   rating,
   answerByStep: { ...answerByStep, [currentStepNum]: String(rating) },
-  currentStepNum: stepNumById('choosePaymentAmount', steps),
+  currentStepNum: currentStepNum + 1,
 })
 
 export const stepNumById = (id, steps) => steps.findIndex(s => s.id === id)

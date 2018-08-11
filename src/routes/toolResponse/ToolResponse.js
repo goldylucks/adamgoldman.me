@@ -3,7 +3,6 @@
 import React from 'react'
 import axios from 'axios'
 
-import Share from '../../components/Share'
 import MultiStepForm from '../../components/MultiStepForm'
 
 type Props = {
@@ -35,9 +34,7 @@ class ToolResponse extends React.Component<Props> {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-md-2 col-xs-12">
-            <Share path={path} title={toolResponse.title} />
-          </div>
+          <div className="col-md-2 col-xs-12" />
           <div className="col-md-8 col-xs-12">
             <div className="mainheading">
               <h1 className="posttitle">{toolResponse.title}</h1>

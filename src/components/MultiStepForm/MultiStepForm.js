@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import ReactStars from 'react-stars'
 import _ from 'lodash'
 
-import { MESSENGER_LINK_TOOL_CONCERN, MESSENGER_LINK_INNER_CIRCLE } from '../../constants'
 import Markdown from '../../components/Markdown'
 import ExternalA from '../../components/ExternalA'
 import { isMobile } from '../../utils'
@@ -21,7 +20,6 @@ class MultiStepForm extends React.Component {
     answerByStep: PropTypes.object.isRequired,
     price: PropTypes.number.isRequired,
     stepsStack: PropTypes.array.isRequired,
-    hideSubscribeButton: PropTypes.bool,
     onUpdateProgress: PropTypes.func.isRequired,
     onConcern: PropTypes.func.isRequired,
     scrollTop: PropTypes.func,
@@ -30,7 +28,6 @@ class MultiStepForm extends React.Component {
   }
   static defaultProps = {
     path: '',
-    hideSubscribeButton: false,
     scrollTop,
     onAnswerLinkPress: _.noop,
     onAnswerNewLinkPress: _.noop,
@@ -74,7 +71,6 @@ class MultiStepForm extends React.Component {
         {this.renderAnswers()}
         {this.renderStars()}
         {this.renderBack()}
-        {this.renderSubscribe()}
       </div>
     )
   }
@@ -233,14 +229,6 @@ class MultiStepForm extends React.Component {
     return this.state.currentStepNum === 0 ? null : <button className="btn btn-secondary btn-sm" style={{ display: 'block', marginBottom: 10 }} onClick={this.back}>Back</button>
   }
 
-  renderSubscribe() {
-    const { hideSubscribeButton } = this.props
-    if (hideSubscribeButton) {
-      return null
-    }
-    return <ExternalA href={MESSENGER_LINK_INNER_CIRCLE} className="btn btn-secondary btn-sm">Subscribe to future tools</ExternalA>
-  }
-
   onInputSubmit = (evt) => {
     evt.preventDefault()
     const { goToStepByNum } = this.currentStep()
@@ -350,10 +338,7 @@ class MultiStepForm extends React.Component {
   }
 
   onStarReviewRating = (rating) => {
-    if (rating <= 2 && global.confirm('Glad you are being honest with me and yourself. \nI\'d like to hear how I can help you with this and what didn\'t you like.\n\n click "ok" to start a conversation with me on messenger')) {
-      window.open(MESSENGER_LINK_TOOL_CONCERN)
-    }
-    this.setState(stateForReviewRating(rating, this.props.steps))
+    this.setState(stateForReviewRating(rating))
     this.props.scrollTop()
   }
 
