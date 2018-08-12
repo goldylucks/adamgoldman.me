@@ -13,6 +13,9 @@ import s from '../savoringYourPet/SavoringYourPet.css'
 type Props = {}
 
 class SavoringYourPetAfterPayment extends Component<Props> {
+  componentDidMount() {
+    trackAdwordsConversion()
+  }
   render() {
     return (
       <div style={{ paddingTop: TOP_BAR_HRIGHT }}>
@@ -43,3 +46,11 @@ class SavoringYourPetAfterPayment extends Component<Props> {
 }
 
 export default withStyles(s)(SavoringYourPetAfterPayment)
+
+function trackAdwordsConversion() {
+  global.console.log('tracked adwords conversion')
+  window.gtag('event', 'conversion', {
+    send_to: 'AW-842400866/3qJzCLTHtIcBEOKI2JED',
+    transaction_id: '',
+  })
+}
