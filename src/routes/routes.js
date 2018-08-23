@@ -39,6 +39,10 @@ const routes = {
       load: () => import(/* webpackChunkName: 'blogPost' */ './blogPost'),
     },
     {
+      path: '/shop/decision-destroyer',
+      load: () => import(/* webpackChunkName: 'decisionDestroyer' */ './decisionDestroyer'),
+    },
+    {
       path: '/savoring-your-child',
       load: () => import(/* webpackChunkName: 'savoringYourChild' */ './savoringYourChild'),
     },
