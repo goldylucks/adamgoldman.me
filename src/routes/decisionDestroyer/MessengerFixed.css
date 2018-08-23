@@ -1,0 +1,22 @@
+.container {
+  position: fixed !important;
+  bottom: 64px;
+  right: 20px;
+  width: 100px;
+  display: block;
+  transition: 0.5s opacity;
+  border-bottom: none !important;
+  z-index: 10000;
+}
+
+@media (max-width: 800px) {
+  .container {
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+  }
+}
+
+.container > img {
+  max-width: 100%;
+}

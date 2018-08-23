@@ -2,6 +2,7 @@ import toolsRoutes from './tools/toolsRoutes'
 import toolResponsesRoutes from './toolResponses/toolResponsesRoutes'
 import postsRoutes from './posts/postsRoutes'
 import usersRoutes from './users/usersRoutes'
+import couponsRoutes from './coupons/couponsRoutes'
 
 const router = require('express').Router()
 
@@ -11,6 +12,7 @@ router.use('/posts', postsRoutes)
 router.use('/users', usersRoutes)
 
 router.post('/savoringPetCoupon', savoringPetCoupon)
+router.use('/coupons', couponsRoutes)
 
 export default router
 
