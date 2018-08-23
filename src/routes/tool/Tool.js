@@ -6,7 +6,6 @@ import axios from 'axios'
 import history from '../../history'
 import FbGateKeeper from '../../components/FbGateKeeper'
 import Link from '../../components/Link'
-import Share from '../../components/Share'
 
 type Props = {
   tool: Object,
@@ -21,15 +20,13 @@ class Tool extends React.Component {
   props: Props
   render() {
     const {
-      path, tool,
+      tool,
     } = this.props
     return (
       <div>
         <div className="container">
           <div className="row">
-            <div className="col-md-2 col-xs-12">
-              <Share path={path} title={tool.title} />
-            </div>
+            <div className="col-md-2 col-xs-12" />
             <div className="col-md-8 col-xs-12">
               <div className="mainheading">
                 <h1 className="posttitle">{tool.title}</h1>
