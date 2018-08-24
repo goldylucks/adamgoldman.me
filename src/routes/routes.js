@@ -15,6 +15,10 @@ const routes = {
       load: () => import(/* webpackChunkName: 'makeAdmin' */ './makeAdmin'),
     },
     {
+      path: '/adminCoupons',
+      load: () => import(/* webpackChunkName: 'adminCoupons' */ './adminCoupons'),
+    },
+    {
       path: '/endorsements',
       load: () => import(/* webpackChunkName: 'endorsements' */ './endorsements'),
     },
@@ -41,6 +45,10 @@ const routes = {
     {
       path: '/shop/decision-destroyer',
       load: () => import(/* webpackChunkName: 'decisionDestroyer' */ './decisionDestroyer'),
+    },
+    {
+      path: '/shop/decision-destroyer/success-f8j43',
+      load: () => import(/* webpackChunkName: 'decisionDestroyerAfterPayment' */ './decisionDestroyerAfterPayment'),
     },
     {
       path: '/savoring-your-child',

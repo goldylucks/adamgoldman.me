@@ -23,7 +23,9 @@ class ToolsListPage extends React.Component<Props> {
   }
   componentDidMount() {
     if (!isAdam()) {
+      global.alert('you are not allowed on this page')
       history.push('/')
+      return
     }
     this.fetchTutorials()
   }

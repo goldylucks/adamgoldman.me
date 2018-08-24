@@ -192,12 +192,12 @@ class DecisionDestroyer extends React.Component<Props, State> {
       { text: 'About Me', nodeId: 'elAboutMe' },
       { text: 'Guarantee', nodeId: 'elGuarantee' },
     ]
-    const title = 'Savoring Your Pet'
+    const title = 'Decision Destroyer'
     return (
       <nav className="navbar navbar-expand-lg fixed-top main-nav navbar-light">
         <div className="container">
           <MobileNav items={navitems} onItemClick={this.scrollTo} title={title} />
-          <Link className="navbar-brand mr-auto" to="/savoring-your-pet">{title}</Link>
+          <Link className="navbar-brand mr-auto" to="/shop/decision-destroyer">{title}</Link>
           <div className="collapse navbar-collapse">
             <ul className="navbar-nav ml-auto">
               {navitems.map(({ text, nodeId }) => (
@@ -384,10 +384,12 @@ His work is a detailed challenge to the rest of us to learn how to “up our gam
     const { isCouponApplied, couponInputValue, isProcessingCoupon } = this.state
     return (
       <div>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" className="text-center">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
           <input type="hidden" name="cmd" value="_s-xclick" />
-          <input type="hidden" name="landing_page" value="billing" />
-          <input type="hidden" name="hosted_button_id" value={isCouponApplied ? 'RHHHM7QUDJRXE' : '5RVFWYZP5HMBG'} />
+          <input type="hidden" name="hosted_button_id" value={isCouponApplied ? 'Y38NYRE7NZAH6' : 'US9BDVZ3FFKJA'} />
+          <table>
+            <tr><td><input type="hidden" name="on0" value="coupon" />coupon</td></tr><tr><td><input type="text" name="os0" maxLength="200" /></td></tr>
+          </table>
           <input type="image" src="http://res.cloudinary.com/goldylucks/image/upload/v1531924994/get-access-now_pqssf4.jpg" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
           <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
         </form>
@@ -410,7 +412,7 @@ His work is a detailed challenge to the rest of us to learn how to “up our gam
     }
     this.setState({ isProcessingCoupon: true })
     try {
-      const { data: isValid } = await axios.post('/api/savoringPetCoupon', { coupon: couponInputValue })
+      const { data: isValid } = await axios.get(`/api/coupons/validate/decision-destroyer/${couponInputValue}`)
       if (isValid) {
         global.alert('Valid coupon, enjoy your discount')
         this.setState({ isCouponApplied: true, isProcessingCoupon: false })
