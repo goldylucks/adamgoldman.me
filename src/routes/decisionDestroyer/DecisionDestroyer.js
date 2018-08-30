@@ -41,110 +41,132 @@ class DecisionDestroyer extends React.Component<Props, State> {
         {this.renderTopBar()}
         <div className="container">
           <div className={`mainheading ${s.widthContainer}`}>
-            <h1 className="sitetitle text-center">How to honor your furry friend&apos;s memory after the transition</h1>
-            <p className="lead text-center">And savor the relationship in a healing way</p>
-            <div className="text-center">
-              <div>
-                <img
-                  src={cloudImg('adamgoldman.me/until-loved-animal')}
-                  alt="Grief for pet love"
-                  style={{ maxWidth: '100%' }}
-                />
-              </div>
-              <span>Source: <ExternalA href="https://me.me/i/until-one-has-loved-an-animal-a-part-of-ones-21452968">me.me</ExternalA></span>
-            </div>
+            <h1 className="sitetitle text-center">How to reprogram traumas and limiting beliefs</h1>
+            <p className="lead text-center">And plant life altering powerful experiences instead</p>
           </div>
           <div className={s.widthContainer}>
-            <p>Losing your beloved pet is one of <strong>the most devastating experiences a human can go through</strong>. The pain can be greater than losing a family member.</p>
-            <p>The unconditional love, the acceptance, the beloved companionship ... It’s something you rarely get anywhere else.</p>
-            <hr className={s.hr} />
-            <h4 ref={(el) => { this.elTrauma = el }} className="text-center">“The death of a pet can be a truly traumatic experience and create a large void in our hearts and lives” <br />- <strong>Ralph Ryback M.D.</strong></h4>
-            <hr className={s.hr} />
-            <h2 className="text-center" style={{ marginBottom: 20 }}>Do you feel any of the following?</h2>
+            <p>We all had negative imprint experiences that caught us unprepared, and caused us to form limiting beliefs about ourselves and the world around us.</p>
+            <h2 className="text-center" style={{ marginBottom: 25, marginTop: 40 }}>Did you ever feel any of the following?</h2>
             <ul>
-              <li><strong>Emptiness</strong> as you go through your day?</li>
-              <li><strong>Guilt & regret</strong> about what you did or didn’t do?</li>
-              <li><strong>Doubt</strong> you will ever fill this void?</li>
+              <li>I don’t deserve ...</li>
+              <li style={{ fontWeight: 'bold' }}>I am not enough / worthy</li>
+              <li>I am stupid / not smart</li>
+              <li style={{ fontWeight: 'bold' }}>Making money is hard</li>
+              <li>The world is not safe</li>
+              <li style={{ fontWeight: 'bold' }}>I will never / always …</li>
+              <li>I must / shouldn’t ...</li>
             </ul>
-            <p>You need to know <strong>you are NOT alone</strong> in this, and what you are going through is very, VERY understandable. It’s not uncommon to hear the following outcries from fellow grieving souls who’ve shared similar fate:</p>
-            <ul>
-              <li>"I have nothing to look forward to"</li>
-              <li><strong>“A big part of me has died”</strong></li>
-              <li>"Will this pain ever go away?"</li>
-            </ul>
-            <hr className={s.hr} />
-            <h4 className="text-center">“Unattended grief is one of the leading underlying causes for depression” <br />- <strong>Steve Andreas, M.A.</strong></h4>
-            <hr className={s.hr} />
-            <p>This is exactly the reason why <strong>I’ve been dedicating the last year to</strong> develop and refine a method to <strong>soften this pain, and alleviate much of the suffering</strong> you and others are feeling right now.</p>
-            <p>I’ve talked and listened to hundreds of people just like you, and helped dozens experiencing crippling grief and unbearable pain, while consulting with two amazing people (see below) whose work has impacted thousands of lives already.</p>
-            <p>Our combined work gave birth to a new program, unlike anything we’ve seen or experienced before.</p>
-            <hr className={s.hr} />
-            <strong className="text-center">Presenting ...</strong>
-            <h1 ref={(el) => { this.elProgram = el }} className="text-center">Savoring Your Pet</h1>
-            <p className="lead">A step by step gentle journey from grief to appreciation, that will show you how to transform and soften your grief in a healthier way, alleviate much of your pain, so you can expect to ...</p>
-            {this.renderBenefitsSection()}
-            <h2 className="text-center" style={{ marginTop: 20, marginBottom: 20 }}>How is this program different?</h2>
-            <p>I know we all had our share of things that did not work, so let me start by listing what we will NOT be doing together:</p>
+            <p>You need to know <strong>you are NOT alone in this</strong>. Almost each client I had over the past 8 years was once limited by one (and usually more) of the above beliefs.</p>
+            <p>As author and master trainer <ExternalA href="https://conniraeandreas.com/">Connirae Andreas</ExternalA> (PhD) explains in her excellent <ExternalA href="http://steveandreas.com/Articles/DecisionD.html">article</ExternalA>:</p>
+            <div style={{ width: '80%', marginRight: 'auto', marginLeft: 'auto' }}>
+              <blockquote className="lead text-center" style={{ fontStyle: 'italic' }}>“If we have an experience early in life that makes us conclude, for example, that we are unworthy, or that we are stupid or incapable of learning, this typically colors and influences the way we act from then on. We tend to act in ways that confirm these beliefs.”</blockquote>
+              <div className={`text-center ${s.connirae}`}>
+                <img
+                  style={{ borderRadius: '50%' }}
+                  src={cloudImg('adamgoldman.me/Connirae_Andreas')}
+                  alt="Connirae Andreas"
+                />
+                <ExternalA className={s.andreasCaption} href="https://andreasnlptrainings.com/connirae-andreas-bio/">Connirae Andreas, Ph.D., master trainer</ExternalA>
+              </div>
+              <p style={{ marginTop: 20, marginBotton: 20 }}>She then alludes to <strong>the solution</strong>:</p>
+              <blockquote className="lead text-center" style={{ fontStyle: 'italic' }}>“In the same way, if we had an even earlier impactful experience that we are worthy or are capable of learning, this strong belief can then transform even the most difficult experiences that occur later, so that they support this positive belief.”</blockquote>
+            </div>
+            <p>And that’s exactly what you’re going to experience today. Presenting ...</p>
+            <h1 className="text-center">The Decision Destroyer</h1>
+            <p>Trying to hold a house during an earthquake, or reconstruct it afterwards, requires tremendous work and resources.</p>
+            <p>But if you could go back to before the earthquake happened, get a warning, and build something stronger, the house would be able to sustain it much better.</p>
+            <p>In the same way, this pattern developed by Dr. Bandler, will allow you to make up a new powerful imprint experience, code it in your mind as a life altering moment, and place it just in the right moment in your past, BEFORE you were struck by the traumatic imprint that caused you to form limiting beliefs.</p>
+            <p>Now I know what you might be thinking …</p>
+            <p>“But if I make up this experience, it’s not real! Why would it affect me?”</p>
+            <p>This is exactly what Janet thought as well before experiencing this process, and watch her reaction at the 1:10 mark of this quick video:</p>
             <div>
-              <div>❌ Medication</div>
-              <div>❌ Life advice or coaching</div>
-              <div>❌ Positive affirmations</div>
-              <div>❌ Traditional therapy and psychoanalysis</div>
-              <div>❌ Mediums / channeling / other dimension communication</div>
-              <div>❌ New age woo-woo methods</div>
+              Janet Vid here
             </div>
-            <h5 className="text-center" style={{ marginTop: 20, marginBottom: 20 }}>It’s not about saying goodbye</h5>
-            <p>Most people (even professionals!) make the common mistake of thinking grief is about learning to say goodbye. I have NOT found this to be useful!</p>
-            <p>Why would any of us would want to say goodbye to such a beautiful, ever loving, unconditionally accepting relationship?</p>
-            <p>I don't want you to say goodbye, I want you to <strong>learn how to say hello again</strong>. How to think of your loved one in a way that honors them, and <strong>treasure the good experiences</strong> you shared, and everything that relationship has given you.</p>
-            <p>One of the first things you’ll soon learn is how to gently implement the following simple yet beautiful wisdom:</p>
-            <div className="text-center">
-              <img
-                src={cloudImg('adamgoldman.me/dr-sauss-it-happened')}
-                alt="Smile because it happened"
-                style={{ maxWidth: '100%' }}
-              />
-              <span>Source: <ExternalA href="https://www.scoopnest.com/user/Jestepar/758043485618528257-don-t-cry-because-it-s-over-smile-because-it-happened-dr-seuss-quote-thankfulthursday">scoopnest.com</ExternalA></span>
-            </div>
+            <p style={{ fontStyle: 'italic' }}>“The strangest thing to me is that the memory I made up seems real! I logically know this didn’t happen!”</p>
+            <p>The trick is to deconstruct how your mind already codes life altering moments, and apply these codings to the new imprint experience, so you can learn how to ...</p>
+            <section>
+              <div className="row justify-content-md-center">
+                <div className="col col-lg-10">
+                  <Benefits benefits={[
+              'Transform beliefs you formed about yourself and the world',
+              'Heal traumatic experiences that caught you unprepared',
+              'Imprint powerful decisions and beliefs on demand',
+              'Be free from past limitations',
+              'Program your future behavior and emotions',
+                ]}
+                  />
+                </div>
+              </div>
+              <small>* Results may vary (<ExternalA href="/legal-stuff" style={{ color: 'inherit' }}>full disclaimer</ExternalA>)</small>
+            </section>
             <hr className={s.hr} />
-            <h2 ref={(el) => { this.elModules = el }} className="text-center" style={{ marginBottom: 30 }}>Here’s what you’re getting when you get your copy of the program today:</h2>
-            {this.renderModules()}
             {this.renderBuyNowScrollButton()}
             <hr className={s.hr} />
-            <div className="text-center">
-              <h2>Trusted by a leading brand</h2>
-              <img
-                src={cloudImg('i-love-vet-cover_y5radw')}
-                alt="Animal grief partners"
-                style={{ maxWidth: '100%' }}
-              />
-              <ExternalA href="https://iloveveterinary.com/">I Love Veterinary</ExternalA>
-            </div>
-          </div>
-          <div className={s.widthContainer}>
+            <h2 className="text-center" style={{ marginBottom: 25, marginTop: 40 }}>How is this program different?</h2>
+            <p>I know we all had our share of things that did not work, so let me start by listing what this process is NOT:</p>
+            <div>❌ Medication</div>
+            <div>❌ Life advice or coaching</div>
+            <div>❌ Positive affirmations</div>
+            <div>❌ Traditional therapy and psychoanalysis</div>
+            <div>❌ New age woo-woo methods</div>
+            <h2 className="text-center" style={{ marginBottom: 25, marginTop: 40 }}>What are the steps I will take?</h2>
+
+            <h4>Step 1: Identify negative imprint</h4>
+            <p>Choose a negative experience that left a negative imprint and still limits you. </p>
+            <p>I.e. I had a client that overheard his parents shouting about a divorce, having no idea that things aren’t going well between them. This caught him completely unprepared, and he formed the limiting belief that “I am not enough”, since if he would have been “enough”, his parents would stay together.</p>
+
+            <h4>Step 2: Design new imprint experience</h4>
+            <p>Design in your mind an experience, that if would have happened, would have prepared you for the negative imprint experience.</p>
+            <p>For my client, designing an experience of his parents explaining to him the situation, and that their separation has nothing to do with him, would have prepare him for hearing them shouting about the breakup.</p>
+
+            <h4>Step 3: Decode a powerful life altering moment</h4>
+            <p>Think about one of the more meaningful experiences that you had, that as you look back at it now, you're really glad it happened, and it shaped you in a positive way.</p>
+            <p>We will use a carefully design sequence to deconstruct how your mind codes this experience (note: this step is mind boggling)</p>
+
+            <h4>Step 4: Apply codings to the designed experience</h4>
+            <p>Now that we know exactly how your mind codes a powerful experience, we apply this codings to the new experience you designed in step 2.</p>
+            <p>This step is what caused Janet (the woman from the video above) to say: “The strangest thing to me is that the memory I made up seems real” (it’s at the 1:10 mark)</p>
+
+            <h4>Step 5: Recode the past</h4>
+            <p>In this step we take the change and the learnings of the newly designed imprint experience, and carry it forward through time, reevaluating the negative imprint experience (step 1) and other past events that followed.</p>
+            <p>This is where Janet said “It changed everything! It’s like it doesn’t matter anymore”.</p>
+
+            <h4>Step 6: Program the future</h4>
+            <p>Now that we’ve recoded the past, it’s time to program the future with you being as you’re, without the limitation and with the new powerful positive imprint.</p>
+
             <hr className={s.hr} />
-          </div>
-          {this.renderAndreas()}
-          <div className={s.widthContainer}>
+            {this.renderBuyNowScrollButton()}
             <hr className={s.hr} />
+            <div className="text-center"><h4 style={{ fontStyle: 'italic' }}>“We consider this pattern to be the most rapid and complete method for dealing with all traumatic imprint experiences that is available to date”</h4> - Connirae Andreas PhD, author and master trainer</div>
             <div className={s.widthContainer}>
-              {this.renderAboutMeSection()}
+              <hr className={s.hr} />
+              <div className={s.widthContainer}>
+                {this.renderAboutMeSection()}
+                <p className="lead" style={{ marginTop: 60, marginBottom: 30 }}>Here’s what <strong>author and master trainer Steve Andreas (M.A.)</strong> recently said about my work:</p>
+                {this.renderSteveAndreas()}
+              </div>
+              <hr className={s.hr} />
             </div>
-            <hr className={s.hr} />
+            {this.renderBuyNowScrollButton()}
           </div>
           {this.renderTestimonialsSection()}
           <div className={s.widthContainer}>
             <hr className={s.hr} />
             <h2 ref={(el) => { this.elBuyNow = el }} className="text-center">“So how much will it cost me?”</h2>
-            <p>I have invested thousands of dollars, and countless days and nights of work and research into this program, but I want to keep it affordable for you and others who are going through this, so I am asking a lot less than the actual value of the program.</p>
+            <p>Here’s the problem … I haven’t met many good trainers that can walk you through this process, and the ones that are good are pretty expensive (I charge 200$ myself).</p>
+
+            <p>But I don’t want you to pay nearly that much. Even tho the results of this process are worth way more than that, I want this to be available for anyone who is interested in shattering their limitations and put non useful beliefs and traumas in the past.</p>
+
+            <p>That’s why I designed a step by step interactive process that you can do right now, from the comfort of your own home (or wherever you are), for less than a quarter of the price of a therapy session.</p>
+
             <div>
-              <h4 className="text-center"><small>Instead of the full price of </small><s>312$</s></h4>
+              <h4 className="text-center"><small>Instead of the price of a private session </small><s>200$</s></h4>
               {this.renderFinalPrice()}
               {this.renderPaymentButton()}
               {this.renderPaypalSecure()}
             </div>
             <hr className={s.hr} />
-            <p>That’s right, you can <strong>guarantee</strong> your <strong>lifetime access</strong> to this program <strong>for less than the price of 1 therapy session</strong>.</p>
+            <p>That’s right, you can <strong>guarantee</strong> your <strong>lifetime access</strong> to this program <strong>for less than the price of dinner and a movie</strong>.</p>
             <p>I am so confident this will help you beyond your expectations, I’m willing to personally take all the risk off your hands when you invest in this today, with a double guarantee:</p>
             <div ref={(el) => { this.elGuarantee = el }} className="text-center" style={{ marginBottom: 40 }}>
               <h4 className="text-center">30 days no hassle money back guarantee</h4>
@@ -152,26 +174,24 @@ class DecisionDestroyer extends React.Component<Props, State> {
                 src={cloudImg('30-day-refund-guarantee_ug806q')}
                 alt="30 day refund guarantee"
               />
+              <p>Try it for 30 days. If you are not blown away by the results, I will not only refund you in full, but you can also even <strong>keep access to the process for free</strong>. This is my way of thanking you for proactively choosing to take <strong>action and improve your life</strong>.</p>
             </div>
             <h4 className="text-center" style={{ marginBottom: 40 }}>Complementary private session guarantee (100$ value)</h4>
-            <p>In fact, I’m willing to make this even easier for you to get on board today. I charge 200$ for a private 1 hour session. and after you’re done with this program, if you still don’t feel this is one of the best decisions you ever took since embarking on your journey of grief, I will not only refund you in full, I will get on a complementary one on one 30 minute private video session with you, to explore other methods to assist you and facilitate in your healing.</p>
-            <p>You either get immense benefits from this program, or you get a 100$ worth free session. Either way, it’s a win-win for you.</p>
+            <p>In fact, I’m willing to make this even easier for you to get on board today. I charge 200$ for a private 1 hour session. and after you’re done with this process, if you still don’t feel this is one of the best decisions you ever took, I will not only refund you in full, I will get on a complementary one on one 30 minute private video session with you, to explore other methods to assist you and facilitate in your healing, and getting the results you want.</p>
+            <p>You either get immense benefits from this process, or you get a 100$ free session. Either way, it’s a win-win for you.</p>
             <hr className={s.hr} />
             <h5 style={{ marginBottom: 30 }} className="text-center">No need to continue suffering more than you have to</h5>
             <p>
-              <strong>Instead of feeling pain</strong> as you think of your beloved close companion, you have the opportunity to literally rewire your mind to <strong>reclaim the good feelings, warmth and appreciation</strong> about everything you valued and didn’t want to lose.
+              <strong>Instead of feeling pain</strong> as you think of the negative experiences that limit your present and future, you can literally redesign your past and program your future in a way that serves you most.
             </p>
-            <p>
-              <strong>Instead of losing sleep</strong> and missing any more opportunities for a better life, you can learn how to <strong>let the qualities you appreciate</strong> in your furry friend, compel and <strong>draw you forward</strong> to an ever <strong>brightening future</strong>.
-            </p>
-            <p>I am very curious to hear about all the ways the decision you took today has brought peace, comfort and love to your life.</p>
+            <p>I am very curious to hear about all the ways the decision you took today has brought peace, comfort, opportunities and freedom to your life.</p>
             <p>Best to you on your journey,
               <br />
             - <strong>Adam Goldman</strong>
             </p>
             {this.renderBuyNowScrollButton()}
-            <p style={{ marginTop: 40 }}><strong>Ps.</strong>Yes, you can literally rewire your mind, body and feelings, to transform your current grief to feeling of appreciation, in way that will honor your lost furry friend in a comprehensive way.</p>
-            <p><strong>Ps.s. </strong>Remember all the risk is on me, so when you gain access today there’s nothing for you to lose other than unwanted negative feelings.</p>
+            <p style={{ marginTop: 40 }}><strong>Ps.</strong> Yes, you can literally rewire your mind and feelings, and trade past limitations for new positive imprint experiences.</p>
+            <p><strong>Ps.s. </strong> Remember all the risk is on me, so when you gain access today there’s nothing for you to lose other than unwanted negative limitations and feelings.</p>
             <section style={{ marginTop: 40 }}>
               <FAQContainer />
             </section>
@@ -217,74 +237,6 @@ class DecisionDestroyer extends React.Component<Props, State> {
   scrollTo = (nodeId) => {
     scrollToTopOfNode(this[nodeId], { duration: 1000, topOffest: TOP_BAR_HRIGHT })
   }
-  renderBenefitsSection() {
-    return (
-      <section>
-        <div className="row justify-content-md-center">
-          <div className="col col-lg-10">
-            <Benefits benefits={[
-              'Enjoy thinking about your beloved furry friend again',
-              'Focus on the good experiences shared',
-              'Feel their love & presence even more',
-              'Look forward to a brightening future',
-              'Increase the peace & love in your life',
-                ]}
-            />
-          </div>
-        </div>
-        <small>* Results may vary (<ExternalA href="/legal-stuff" style={{ color: 'inherit' }}>full disclaimer</ExternalA>)</small>
-      </section>
-    )
-  }
-
-  renderModules() {
-    return (
-      <div>
-        <div>
-          <h3>Module 1: Clarity and order</h3>
-          <p>
-            We’ll go over 6 common aspects of grief and carefully separate them to distinct concepts, before we examine and transform them one by one.
-            <br /> <strong>✔️ Value: 30$</strong>
-          </p>
-        </div>
-        <div>
-          <h3>Module 2: Peaceful Ending</h3>
-          <p>Soften the unpleasantness and negative feelings regarding the moment of transition, and the events regarding the transition, and rewire your mind to go back to the happy memories. This will also pacify disturbing or graphic images you might still have.            <br /> <strong>✔️ Value: 47$</strong>
-          </p>
-        </div>
-        <div>
-          <h3>Module 3: Savoring future plans</h3>
-          <p>Increase the peace and acceptance towards the future that will not be, and events you might have planned with your beloved furry friend.            <br /> <strong>✔️ Value: 47$</strong>
-          </p>
-        </div>
-        <div>
-          <h3>Module 4: Reunion</h3>
-          <p>Say “hello” again, and regain access to the good times shared, and what you valued in the relationship and didn’t want to lose.            <br /> <strong>✔️ Value: 47$</strong>
-          </p>
-        </div>
-        <div>
-          <h3>Module 5: Relationship Consolidation</h3>
-          <p>Every relationship has ups and downs. Learn how to intensify the good feelings from the good experiences, and soften and discharge bad experiences and events you had.            <br /> <strong>✔️ Value: 47$</strong>
-          </p>
-        </div>
-        <div>
-          <h3>Module 6: Special Days</h3>
-          <p>Some days of the year are usually harder than others, like memorial days, anniversary days for getting or adopting your pet, or their birthday. In this process you learn how to use these days as an opportunity to remind yourself how lucky you are to have had them in your life, reminisce about your relationship and honor it even more.            <br /> <strong>✔️ Value: 47$</strong>
-          </p>
-        </div>
-        <div>
-          <h3>Module 7: Re-engaging the future</h3>
-          <p>Now that we transformed much of the emptiness to presence and appreciation, it’s time to create a compelling ever brightening future, as you learn how to let the qualities in this valued relationship draw you forward.            <br /> <strong>✔️ Value: 47$</strong>
-          </p>
-        </div>
-        <div className="text-center">
-          <h2>How much does it worth?</h2>
-        30$ + 47$ + 47$ + 47$ + 47$ + 47$ + 47$ =
-          <h3 style={{ marginTop: 20 }}>312$</h3>
-        </div>
-      </div>
-    )
-  }
 
   renderBuyNowScrollButton() {
     return (
@@ -292,31 +244,9 @@ class DecisionDestroyer extends React.Component<Props, State> {
     )
   }
 
-  renderAndreas() {
+  renderSteveAndreas() {
     return (
-      <div ref={(el) => { this.elResearch = el }}>
-        <div className={s.widthContainer}>
-
-          <h2 className="text-center">Made possible by decades of research and field experience</h2>
-          <p>Many parts of this program are based on the work of Steve and Connirae Andreas, a couple of humble and extremely precise personal change practitioners, with <strong>more than 80+ years of experience in the field of psychology and personal change</strong>.</p>
-          <h6 className="text-center">Connirae & Steve Andreas</h6>
-        </div>
-        <div className={s.andreasContainerBoth}>
-          <div className={s.andreasContainerIndividual}>
-            <img
-              src={cloudImg('adamgoldman.me/Connirae_Andreas')}
-              alt="Connirae Andreas"
-            />
-            <ExternalA className={s.andreasCaption} href="https://andreasnlptrainings.com/connirae-andreas-bio/">Connirae Andreas, Ph.D., master trainer</ExternalA>
-          </div>
-          <div className={s.andreasContainerIndividual}>
-            <img
-              src={cloudImg('adamgoldman.me/Steve_Andreas')}
-              alt="Steve Andreas"
-            />
-            <ExternalA className={s.andreasCaption} href="http://steveandreas.com/cv.html">Steve Andreas, M.A., master trainer</ExternalA>
-          </div>
-        </div>
+      <div>
         <div className={s.widthContainer}>
           <blockquote style={{ marginTop: 20 }}>
             Adam Goldman is a brilliant new colleague whose depth and breadth of understanding of the principles of personal change is exceptional, combined with the hands-on skills to manifest this in the experience of clients.
@@ -326,13 +256,21 @@ class DecisionDestroyer extends React.Component<Props, State> {
             <br />
             <br />
 
-He has created online programs to guide participants through effective change processes on their own, a huge opportunity for so many who would otherwise not be able to even think of affording it.
+            <strong>He has created online programs to guide participants through effective change processes on their own, a huge opportunity for so many who would otherwise not be able to even think of affording it.</strong>
             <br />
             <br />
 His work is a detailed challenge to the rest of us to learn how to “up our game” or be left behind in the dustbin of history.
-            <br />
-            <strong>- Steve Andreas, MA, master trainer and author.</strong>
           </blockquote>
+          <br />
+          <div className={s.andreasContainerBoth}>
+            <div className={s.andreasContainerIndividual}>
+              <img
+                src={cloudImg('adamgoldman.me/Steve_Andreas')}
+                alt="Steve Andreas"
+              />
+              <ExternalA className={s.andreasCaption} href="http://steveandreas.com/cv.html">Steve Andreas, M.A., master trainer</ExternalA>
+            </div>
+          </div>
         </div>
       </div>
     )
@@ -370,13 +308,13 @@ His work is a detailed challenge to the rest of us to learn how to “up our gam
   renderFinalPrice() {
     const { isCouponApplied } = this.state
     if (!isCouponApplied) {
-      return <h3 className="text-center"><small>Order today for</small><br /> <strong>Only 97$</strong></h3>
+      return <h3 className="text-center"><small>Order today for</small><br /> <strong>Only 30$</strong></h3>
     }
     return (
       <div>
-        <h3 className="text-center" style={{ textDecoration: 'line-through' }}><small>Order today for</small><br /> <strong>Only 97$</strong></h3>
-        <h2 className="text-center">Limited time offer for I Love Veterinary customers!</h2>
-        <h3 className="text-center"><small>Order today for</small><br /> <strong>Only 47$</strong></h3>
+        <h3 className="text-center" style={{ textDecoration: 'line-through' }}><small>Order today for</small><br /> <strong>Only 30$</strong></h3>
+        <h2 className="text-center">Limited time offer for my partners` customers!</h2>
+        <h3 className="text-center"><small>Order today for</small><br /> <strong>Only 13$</strong></h3>
       </div>
     )
   }
@@ -384,11 +322,11 @@ His work is a detailed challenge to the rest of us to learn how to “up our gam
     const { isCouponApplied, couponInputValue, isProcessingCoupon } = this.state
     return (
       <div>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" className="text-center">
           <input type="hidden" name="cmd" value="_s-xclick" />
           <input type="hidden" name="hosted_button_id" value={isCouponApplied ? 'Y38NYRE7NZAH6' : 'US9BDVZ3FFKJA'} />
-          <table>
-            <tr><td><input type="hidden" name="on0" value="coupon" />coupon</td></tr><tr><td><input type="text" name="os0" maxLength="200" /></td></tr>
+          <table style={{ display: 'none' }}>
+            <tr><td><input type="hidden" name="on0" value="coupon" />coupon</td></tr><tr><td><input type="text" name="os0" maxLength="200" value={couponInputValue} /></td></tr>
           </table>
           <input type="image" src="http://res.cloudinary.com/goldylucks/image/upload/v1531924994/get-access-now_pqssf4.jpg" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
           <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
