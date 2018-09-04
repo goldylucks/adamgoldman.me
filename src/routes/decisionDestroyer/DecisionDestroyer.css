@@ -78,9 +78,6 @@
 }
 
 @media (max-width: 800px) {
-  .andreasContainerBoth {
-    flex-direction: column;
-  }
   .andreasContainerIndividual {
     margin-right: 0;
     margin-bottom: 20px;

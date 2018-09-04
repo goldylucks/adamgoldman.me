@@ -325,10 +325,12 @@ His work is a detailed challenge to the rest of us to learn how to “up our gam
       <div>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" className="text-center">
           <input type="hidden" name="cmd" value="_s-xclick" />
+          <input type="hidden" name="landing_page" value="billing" />
           <input type="hidden" name="hosted_button_id" value={isCouponApplied ? 'Y38NYRE7NZAH6' : 'US9BDVZ3FFKJA'} />
-          <table style={{ display: 'none' }}>
-            <tr><td><input type="hidden" name="on0" value="coupon" />coupon</td></tr><tr><td><input type="text" name="os0" maxLength="200" value={couponInputValue} /></td></tr>
-          </table>
+          <div style={{ display: 'none' }}>
+            <input type="hidden" name="on0" value="coupon" />coupon
+            <input type="text" name="os0" maxLength="200" value={couponInputValue} />
+          </div>
           <input type="image" src="http://res.cloudinary.com/goldylucks/image/upload/v1531924994/get-access-now_pqssf4.jpg" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
           <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
         </form>
