@@ -104,7 +104,7 @@ class DecisionDestroyer extends React.Component<Props, State> {
             {this.renderBuyNowScrollButton()}
             <hr className={s.hr} />
             <h2 className="text-center" style={{ marginBottom: 25, marginTop: 40 }}>How is this program different?</h2>
-            <p>I know we all had our share of things that did not work, so let me start by listing what this process is NOT:</p>
+            <p>I know we all have had our share of things that did not work, so let me start by listing what this process is NOT:</p>
             <div>❌ Medication</div>
             <div>❌ Life advice or coaching</div>
             <div>❌ Positive affirmations</div>
@@ -117,7 +117,7 @@ class DecisionDestroyer extends React.Component<Props, State> {
             <p>I.e. I had a client that overheard his parents shouting about a divorce, having no idea that things aren’t going well between them. This caught him completely unprepared, and he formed the limiting belief that “I am not enough”, since if he would have been “enough”, his parents would stay together.</p>
 
             <h4>Step 2: Design new imprint experience</h4>
-            <p>Design in your mind an experience, that if would have happened, would have prepared you for the negative imprint experience.</p>
+            <p>Design in your mind an experience, that if it would have happened, would have prepared you for the negative imprint experience.</p>
             <p>For my client, designing an experience of his parents explaining to him the situation, and that their separation has nothing to do with him, would have prepare him for hearing them shouting about the breakup.</p>
 
             <h4>Step 3: Decode a powerful life altering moment</h4>
@@ -125,7 +125,7 @@ class DecisionDestroyer extends React.Component<Props, State> {
             <p>We will use a carefully design sequence to deconstruct how your mind codes this experience (note: this step is mind boggling)</p>
 
             <h4>Step 4: Apply codings to the designed experience</h4>
-            <p>Now that we know exactly how your mind codes a powerful experience, we apply this codings to the new experience you designed in step 2.</p>
+            <p>Now that we know exactly how your mind codes a powerful experience, we apply these codings to the new experience you designed in step 2.</p>
             <p>This step is what caused Janet (the woman from the video above) to say: “The strangest thing to me is that the memory I made up seems real” (it’s at the 1:10 mark)</p>
 
             <h4>Step 5: Recode the past</h4>
@@ -133,7 +133,7 @@ class DecisionDestroyer extends React.Component<Props, State> {
             <p>This is where Janet said “It changed everything! It’s like it doesn’t matter anymore”.</p>
 
             <h4>Step 6: Program the future</h4>
-            <p>Now that we’ve recoded the past, it’s time to program the future with you being as you’re, without the limitation and with the new powerful positive imprint.</p>
+            <p>Now that we’ve recoded the past, it’s time to program the future with you being as you are, without the limitation and with the new powerful positive imprint.</p>
 
             <hr className={s.hr} />
             {this.renderBuyNowScrollButton()}
@@ -154,14 +154,14 @@ class DecisionDestroyer extends React.Component<Props, State> {
           <div className={s.widthContainer}>
             <hr className={s.hr} />
             <h2 ref={(el) => { this.elBuyNow = el }} className="text-center">“So how much will it cost me?”</h2>
-            <p>Here’s the problem … I haven’t met many good trainers that can walk you through this process, and the ones that are good are pretty expensive (I charge 200$ myself).</p>
+            <p>Here’s the problem … I haven’t met many good trainers that can walk you through this process, and the ones that are good are pretty expensive (I charge $200 myself).</p>
 
             <p>But I don’t want you to pay nearly that much. Even tho the results of this process are worth way more than that, I want this to be available for anyone who is interested in shattering their limitations and put non useful beliefs and traumas in the past.</p>
 
             <p>That’s why I designed a step by step interactive process that you can do right now, from the comfort of your own home (or wherever you are), for less than a quarter of the price of a therapy session.</p>
 
             <div>
-              <h4 className="text-center"><small>Instead of the price of a private session </small><s>200$</s></h4>
+              <h4 className="text-center"><small>Instead of the price of a private session </small><s>$200</s></h4>
               {this.renderFinalPrice()}
               {this.renderPaymentButton()}
               {this.renderPaypalSecure()}
@@ -177,9 +177,9 @@ class DecisionDestroyer extends React.Component<Props, State> {
               />
               <p>Try it for 30 days. If you are not blown away by the results, I will not only refund you in full, but you can also even <strong>keep access to the process for free</strong>. This is my way of thanking you for proactively choosing to take <strong>action and improve your life</strong>.</p>
             </div>
-            <h4 className="text-center" style={{ marginBottom: 40 }}>Complementary private session guarantee (100$ value)</h4>
-            <p>In fact, I’m willing to make this even easier for you to get on board today. I charge 200$ for a private 1 hour session. and after you’re done with this process, if you still don’t feel this is one of the best decisions you ever took, I will not only refund you in full, I will get on a complementary one on one 30 minute private video session with you, to explore other methods to assist you and facilitate in your healing, and getting the results you want.</p>
-            <p>You either get immense benefits from this process, or you get a 100$ free session. Either way, it’s a win-win for you.</p>
+            <h4 className="text-center" style={{ marginBottom: 40 }}>Complementary private session guarantee ($100 value)</h4>
+            <p>In fact, I’m willing to make this even easier for you to get on board today. I charge $200 for a private 1 hour session. and after you’re done with this process, if you still don’t feel this is one of the best decisions you ever took, I will not only refund you in full, I will get on a complementary one on one 30 minute private video session with you, to explore other methods to assist you and facilitate in your healing, and getting the results you want.</p>
+            <p>You either get immense benefits from this process, or you get a $100 free session. Either way, it’s a win-win for you.</p>
             <hr className={s.hr} />
             <h5 style={{ marginBottom: 30 }} className="text-center">No need to continue suffering more than you have to</h5>
             <p>
@@ -309,13 +309,13 @@ His work is a detailed challenge to the rest of us to learn how to “up our gam
   renderFinalPrice() {
     const { isCouponApplied } = this.state
     if (!isCouponApplied) {
-      return <h3 className="text-center"><small>Order today for</small><br /> <strong>Only 30$</strong></h3>
+      return <h3 className="text-center"><small>Order today for</small><br /> <strong>Only $30</strong></h3>
     }
     return (
       <div>
-        <h3 className="text-center" style={{ textDecoration: 'line-through' }}><small>Order today for</small><br /> <strong>Only 30$</strong></h3>
+        <h3 className="text-center" style={{ textDecoration: 'line-through' }}><small>Order today for</small><br /> <strong>Only $30</strong></h3>
         <h2 className="text-center">Limited time offer for my partners` customers!</h2>
-        <h3 className="text-center"><small>Order today for</small><br /> <strong>Only 13$</strong></h3>
+        <h3 className="text-center"><small>Order today for</small><br /> <strong>Only $13</strong></h3>
       </div>
     )
   }
