@@ -13,8 +13,8 @@ export const MESSENGER_LINK_DECISION_DESTROYER_AFTER_PURCHASE_INTRO = `${MESSENG
 export const MESSENGER_LINK_DECISION_DESTROYER_FINISHED_PROCESS = `${MESSENGER_LINK}?ref=decision-destroyer-finished`
 export const MESSENGER_LINK_SAVORING_PETS_HP = `${MESSENGER_LINK}?ref=savoring-pet-homepage`
 export const MESSENGER_LINK_SAVORING_PETS_AFTER_PURCHASE_INTRO = `${MESSENGER_LINK}?ref=savoring-pet-after-purchase-intro`
-export const MESSENGER_LINK_BOOK_SESSION = `${DOMAIN}/book-session`
-export const MESSENGER_LINK_WELCOME = `${DOMAIN}/contact`
+export const MESSENGER_LINK_BOOK_SESSION = `${MESSENGER_LINK}?ref=book-session`
+export const MESSENGER_LINK_WELCOME = `${MESSENGER_LINK}?ref=welcome`
 export const MESSENGER_LINK_SAVORING_CONTACT = `${DOMAIN}/savoring-your-child/contact`
 export const TWITTER_HANDLE = 'adamthegoldman'
 
