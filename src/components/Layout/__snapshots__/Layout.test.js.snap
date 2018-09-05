@@ -93,7 +93,7 @@ exports[`Layout renders children correctly 1`] = `
               >
                 <a
                   className="nav-link navLink"
-                  href="https://www.adamgoldman.me/contact"
+                  href="https://m.me/adamgoldman.me?ref=welcome"
                   rel="nofollow noreferrer noopener"
                   target="_blank"
                 >
@@ -110,7 +110,7 @@ exports[`Layout renders children correctly 1`] = `
               >
                 <a
                   className="nav-link btn btn-primary btn-block"
-                  href="https://www.adamgoldman.me/book-session"
+                  href="https://m.me/adamgoldman.me?ref=book-session"
                   rel="nofollow noreferrer noopener"
                   target="_blank"
                 >
@@ -161,7 +161,7 @@ exports[`Layout renders children correctly 1`] = `
           >
             <a
               className="nav-link"
-              href="https://www.adamgoldman.me/contact"
+              href="https://m.me/adamgoldman.me?ref=welcome"
               rel="nofollow noreferrer noopener"
               target="_blank"
             >
@@ -178,7 +178,7 @@ exports[`Layout renders children correctly 1`] = `
           >
             <a
               className="nav-link btn btn-primary btn-sm"
-              href="https://www.adamgoldman.me/book-session"
+              href="https://m.me/adamgoldman.me?ref=book-session"
               rel="nofollow noreferrer noopener"
               target="_blank"
             >
@@ -189,7 +189,7 @@ exports[`Layout renders children correctly 1`] = `
       </div>
       <a
         className="nav-link btn btn-primary btn-sm d-sm-block d-md-none"
-        href="https://www.adamgoldman.me/book-session"
+        href="https://m.me/adamgoldman.me?ref=book-session"
         rel="nofollow noreferrer noopener"
         target="_blank"
       >
@@ -266,7 +266,7 @@ exports[`Layout renders children correctly 1`] = `
   </div>
   <a
     className="container"
-    href="https://www.adamgoldman.me/contact"
+    href="https://m.me/adamgoldman.me?ref=welcome"
     rel="nofollow noreferrer noopener"
     target="_blank"
   >
