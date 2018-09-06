@@ -17,6 +17,12 @@ router.route('/form/:id/')
 router.route('/:id/make-admin/')
   .put(decodeToken, isUserOwner, controller.makeAdmin)
 
+router.route('/loginWithEmail')
+  .post(controller.loginWithEmail)
+
+router.route('/signupWithEmail')
+  .post(controller.signupWithEmail)
+
 // router.route('/getFbReviews')
 //   .get(controller.getFBPageReviews) // consider isAdmin check
 
