@@ -1,4 +1,5 @@
 import mongoose from 'mongoose'
+import isEmail from 'validator/lib/isEmail'
 
 const { Schema } = mongoose
 const UsersSchema = getSchema()
@@ -18,8 +19,18 @@ function getSchema() {
 
     name: {
       type: String,
-      required: true,
       min: 2,
+    },
+
+    password: {
+      type: String,
+      select: false,
+    },
+
+    email: {
+      type: String,
+      required: false,
+      validate: [isEmail, 'invalid email'],
     },
 
     fbUserId: String,

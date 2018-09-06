@@ -1,4 +1,6 @@
 import axios from 'axios'
+import bcrypt from 'bcryptjs'
+import CustomError from 'custom-error-generator'
 
 import { fbId, fbSecret, fbPageId, fbPageAccessToken, adminPass } from '../../../config'
 import { signToken } from '../../auth'
@@ -7,7 +9,7 @@ import ToolResponses from '../toolResponses/toolResponsesModel'
 import Users from './usersModel'
 
 export default {
-  getOne, fbAuth, updateUser, updateUserForm, getFBPageReviews, makeAdmin,
+  getOne, fbAuth, updateUser, updateUserForm, getFBPageReviews, makeAdmin, loginWithEmail, signupWithEmail,
 }
 
 async function getOne(req, res, next) {
@@ -22,6 +24,50 @@ async function getOne(req, res, next) {
   } catch (err) {
     next(err)
   }
+}
+
+async function loginWithEmail(req, res, next) {
+  const { email, password } = req.body
+  let user
+  try {
+    user = await Users.findOne({ email }).select('+password')
+    if (!user) {
+      res.status(400).send('user does not exist or wrong password')
+      return
+    }
+    const passwordMatch = bcrypt.compareSync(password, user.password)
+    if (!passwordMatch) {
+      res.status(400).send('user does not exist or wrong password')
+      return
+    }
+    const toolResponses = await getToolResponses(user._id)
+    user = prepareUser(user, toolResponses)
+    res.status(201).json(user)
+  } catch (err) {
+    next(err)
+  }
+}
+
+function signupWithEmail(req, res, next) {
+  const hash = bcrypt.hashSync(req.body.password, 10)
+  let user
+  Users.create({ password: hash, email: req.body.email })
+    .then((_user) => {
+      user = _user
+      return getToolResponses(user._id)
+    })
+    .then((toolResponses) => {
+      user = prepareUser(user, toolResponses)
+      res.status(201).json(user)
+    })
+    .catch((err) => {
+      if (err.errors && err.errors.email && err.errors.email.message) {
+        throw new CustomError('custom error', {
+          code: 400,
+        })('Error with email, perhaps user with that email already exists')
+      }
+    })
+    .catch(next)
 }
 
 function updateUserForm(req, res, next) {

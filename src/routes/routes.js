@@ -15,6 +15,10 @@ const routes = {
       load: () => import(/* webpackChunkName: 'makeAdmin' */ './makeAdmin'),
     },
     {
+      path: '/signup-with-email',
+      load: () => import(/* webpackChunkName: 'signupWithEmail' */ './signupWithEmail'),
+    },
+    {
       path: '/adminCoupons',
       load: () => import(/* webpackChunkName: 'adminCoupons' */ './adminCoupons'),
     },
