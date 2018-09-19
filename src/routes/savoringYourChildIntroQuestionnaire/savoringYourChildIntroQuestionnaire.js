@@ -88,10 +88,10 @@ class savoringYourChildIntroQuestionnaire extends Component<Props> {
   completed(link, multiFormState) {
     const { answerByStep } = multiFormState
     const userPropertiesToUpdate = {
-      name: answerByStep[6],
-      savoringChildName: answerByStep[7],
-      savoringChildGender: answerByStep[8].match(/son/i) ? 'male' : 'female',
-      gender: answerByStep[8].match(/father/i) ? 'male' : 'female',
+      name: answerByStep[5],
+      savoringChildName: answerByStep[6],
+      savoringChildGender: answerByStep[7].match(/son/i) ? 'male' : 'female',
+      gender: answerByStep[7].match(/father/i) ? 'male' : 'female',
     }
     this.props.onComplete(userPropertiesToUpdate)
   }
