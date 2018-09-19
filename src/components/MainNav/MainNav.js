@@ -1,8 +1,6 @@
 // @flow
 
 import React from 'react'
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import faHeart from '@fortawesome/fontawesome-free-solid/faHeart'
 import cx from 'classnames'
 
 import { isSavoring } from '../../utils'
@@ -76,7 +74,8 @@ class MainNav extends React.Component {
   navItems() {
     return this.isSavoring()
       ? [
-        { to: '/savoring-your-child/pricing', text: <span>Pricing <FontAwesomeIcon icon={faHeart} style={{ color: 'red', marginLeft: 5 }} /></span> },
+        { to: '/savoring-your-child/modules', text: 'Modules' },
+        { href: MESSENGER_LINK_WELCOME, text: 'Contact' },
       ]
       : [
         { to: '/endorsements', text: 'Endorsements' },

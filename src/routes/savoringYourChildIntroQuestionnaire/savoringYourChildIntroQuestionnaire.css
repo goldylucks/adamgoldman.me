@@ -1,0 +1,14 @@
+/*
+footerHeight = 47px
+headerHeight = 56px
+buffer = 30px
+*/
+.introModule {
+  min-height: calc(100vh - 47px - 56px - 30px)
+}
+
+/* for testimonials images */
+.introModule img {
+  max-width: 100px;
+  border-radius: 50%;
+}
