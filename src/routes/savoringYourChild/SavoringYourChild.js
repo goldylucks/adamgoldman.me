@@ -19,6 +19,9 @@ import { testimonials } from './data'
 export const TOP_BAR_HRIGHT = 56
 
 class SavoringYourChild extends React.Component {
+  componentWillMount() {
+    trackFbVisitor()
+  }
   render() {
     return (
       <div>
@@ -403,3 +406,7 @@ His work is a detailed challenge to the rest of us to learn how to “up our gam
 }
 
 export default withStyles(s)(SavoringYourChild)
+
+function trackFbVisitor() {
+  window.fbq('track', 'Savoring Your Child Sales Letter Visitor')
+}

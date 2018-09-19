@@ -15,6 +15,7 @@ type Props = {}
 class SavoringYourChildAfterPayment extends Component<Props> {
   componentDidMount() {
     trackAdwordsConversion()
+    trackFbConversion()
   }
   render() {
     return (
@@ -49,9 +50,15 @@ class SavoringYourChildAfterPayment extends Component<Props> {
 export default withStyles(s)(SavoringYourChildAfterPayment)
 
 function trackAdwordsConversion() {
-  global.console.log('tracked adwords conversion')
   window.gtag('event', 'conversion', {
     send_to: 'AW-842400866/3qJzCLTHtIcBEOKI2JED',
     transaction_id: '',
+  })
+}
+
+function trackFbConversion() {
+  window.fbq('track', 'Purchase', {
+    value: 97,
+    currency: 'USD',
   })
 }
