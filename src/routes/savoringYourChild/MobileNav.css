@@ -1,0 +1,22 @@
+.mobileMenu {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  transition: all 0.3s ease;
+  background: #fff;
+  box-shadow: 2px 0 2px -2px rgba(0,0,0,.15);
+  padding: 0 16px;
+  z-index: 1030;
+  left: -240px;
+  width: 240px;
+}
+.isOpen {
+  left: 0;
+}
+.mobileMenuHeadline {
+  padding: 20px 0;
+}
+.navLink {
+  font-size: 1.1em;
+  font-weight: 300;
+}

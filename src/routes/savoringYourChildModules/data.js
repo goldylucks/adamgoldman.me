@@ -1,6 +1,9 @@
 // eslint-disable-next-line import/prefer-default-export
 export const modules = [
   {
+    title: 'Clarity & Order', description: 'Get clarity about the different aspects of the grief you are going through', url: 'clarity-and-order',
+  },
+  {
     title: 'Peaceful Ending', description: 'Attach the moment of transition to your last happy memory', url: 'peaceful-ending',
   },
   {

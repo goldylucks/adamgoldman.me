@@ -55,10 +55,6 @@ const routes = {
       load: () => import(/* webpackChunkName: 'decisionDestroyerAfterPayment' */ './decisionDestroyerAfterPayment'),
     },
     {
-      path: '/savoring-your-child',
-      load: () => import(/* webpackChunkName: 'savoringYourChild' */ './savoringYourChild'),
-    },
-    {
       path: '/savoring-your-pet',
       load: () => import(/* webpackChunkName: 'savoringYourPet' */ './savoringYourPet'),
     },
@@ -67,12 +63,20 @@ const routes = {
       load: () => import(/* webpackChunkName: 'savoringYourPetAfterPayment' */ './savoringYourPetAfterPayment'),
     },
     {
+      path: '/savoring-your-child',
+      load: () => import(/* webpackChunkName: 'savoringYourChild' */ './savoringYourChild'),
+    },
+    {
+      path: '/savoring-your-child/success-84jf',
+      load: () => import(/* webpackChunkName: 'savoringYourChildAfterPayment' */ './savoringYourChildAfterPayment'),
+    },
+    {
       path: '/savoring-your-child/modules',
       load: () => import(/* webpackChunkName: 'savoringYourChildModules' */ './savoringYourChildModules'),
     },
     {
-      path: '/savoring-your-child/feedback',
-      load: () => import(/* webpackChunkName: 'savoringYourChildFeedback' */ './savoringYourChildFeedback'),
+      path: '/savoring-your-child/intro-questionnaire',
+      load: () => import(/* webpackChunkName: 'savoringYourChildIntroQuestionnaire' */ './savoringYourChildIntroQuestionnaire'),
     },
     {
       // using array because soon we will add more sections

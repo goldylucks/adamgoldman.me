@@ -1,28 +1,42 @@
+.widthContainer {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .hr {
   margin-top: 3rem;
   margin-bottom: 3rem;
-}
-/*
-footerHeight = 47px
-headerHeight = 56px
-buffer = 30px
-*/
-.introModule {
-  min-height: calc(100vh - 47px - 56px - 30px)
 }
 
 .painPoint {
   font-size: 30px;
 }
-/* for testimonials images */
-.introModule img {
-  max-width: 100px;
-  border-radius: 50%;
-}
 
 .asterixDisclaimer {
   font-size: 14px;
   vertical-align: text-top;
+}
+
+
+.getStartedButton {
+  font-size: 50px;
+  padding: 30px;
+  margin: 20px auto;
+  border-radius: 30px;
+  display: block;
+  width: 50%;
+  background: #03a87c;
+  color: #fff !important;
+}
+
+@media only screen and (max-width : 768px) {
+  .getStartedButton{
+    font-size: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    width: 100%;
+  }
 }
 
 .andreasContainerBoth {

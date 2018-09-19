@@ -11,8 +11,13 @@ export const MESSENGER_LINK_INNER_CIRCLE = `${MESSENGER_LINK}?ref=inner-circle`
 export const MESSENGER_LINK_DECISION_DESTROYER_HP = `${MESSENGER_LINK}?ref=decision-destroyer-homepage`
 export const MESSENGER_LINK_DECISION_DESTROYER_AFTER_PURCHASE_INTRO = `${MESSENGER_LINK}?ref=decision-destroyer-after-purchase-intro`
 export const MESSENGER_LINK_DECISION_DESTROYER_FINISHED_PROCESS = `${MESSENGER_LINK}?ref=decision-destroyer-finished`
+
 export const MESSENGER_LINK_SAVORING_PETS_HP = `${MESSENGER_LINK}?ref=savoring-pet-homepage`
 export const MESSENGER_LINK_SAVORING_PETS_AFTER_PURCHASE_INTRO = `${MESSENGER_LINK}?ref=savoring-pet-after-purchase-intro`
+
+export const MESSENGER_LINK_SAVORING_YOUR_CHILD_HP = `${MESSENGER_LINK}?ref=savoring-your-child-homepage`
+export const MESSENGER_LINK_SAVORING_YOUR_CHILD_PURCHASE_INTRO = `${MESSENGER_LINK}?ref=savoring-your-child-after-purchase-intro`
+
 export const MESSENGER_LINK_BOOK_SESSION = `${MESSENGER_LINK}?ref=book-session`
 export const MESSENGER_LINK_WELCOME = `${MESSENGER_LINK}?ref=welcome`
 export const MESSENGER_LINK_SAVORING_CONTACT = `${DOMAIN}/savoring-your-child/contact`

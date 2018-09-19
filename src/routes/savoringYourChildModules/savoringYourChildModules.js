@@ -2,7 +2,6 @@
 
 import React from 'react'
 
-import LoomEmbedd from '../../components/LoomEmbedd'
 import BreadCrumbs from '../../components/BreadCrumbs'
 import MessageMe from '../../components/MessageMe'
 import SavoringYourChildModulesComponent from '../../components/SavoringYourChildModulesComponent'
@@ -24,7 +23,6 @@ const SavoringYourChildModules = ({ user }:Props) => (
       />
       <div className="mainheading">
         <h1 className="sitetitle">Which module you want to explore next?</h1>
-        <LoomEmbedd src="7b3f79cd8ad849569415624c79c39d5d" />
       </div>
       <SavoringYourChildModulesComponent modules={modules} user={user} />
       <hr />

@@ -58,12 +58,12 @@ export const testimonials = [
 
 export const logistics = [
   {
-    title: 'Do I need to physically go somewhere?',
-    content: `Nope! I work with parents directly through [messenger](${MESSENGER_LINK_WELCOME}), so you can follow the process from the comfort of your own home, or on the go`,
+    title: 'When will I start feeling less pain?',
+    content: 'Most parents confess tremendous relief immediately after the powerful first process - "Peaceful Ending" - Which you will access in a few minutes after getting your copy of the program.',
   },
   {
-    title: 'Do I need to pay anything to experience benefits?',
-    content: 'After we are done you can decide if and how much you\'d love to [pay](/savoring-your-child/pricing) 💖',
+    title: 'Do I need to physically go somewhere?',
+    content: `Nope! I work with parents directly through [messenger](${MESSENGER_LINK_WELCOME}), so you can follow the process from the comfort of your own home, or on the go`,
   },
   {
     title: 'What about privacy?',
@@ -92,7 +92,6 @@ However for many people, you can send them this page and let them read by themse
 If you have a real "hard case" or "skeptic" in your close environment, [message me](${MESSENGER_LINK_WELCOME}) and we'll think together how to "package" the information in a way they could digest in a softer way.
 `,
   },
-
   {
     title: 'I don\'t want to say goodbye',
     content: `
