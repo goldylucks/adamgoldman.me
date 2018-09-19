@@ -40,7 +40,7 @@ class SavoringYourChild extends React.Component {
             <span>Source: <ExternalA href="http://yourtribute.com">yourtribute.com</ExternalA></span>
           </div>
           <div className={s.widthContainer}>
-            <p>Losing your child is one of <strong>the most devastating experiences a parent can go through</strong>. The pain can be greater than losing a family member.</p>
+            <p>Losing your child is one of <strong>the most devastating experiences a parent can go through</strong>.</p>
             <p>The unconditional love, acceptance, connection ... It’s something you rarely get to feel anywhere else.</p>
             <hr className={s.hr} />
             <h4 ref={(el) => { this.elTrauma = el }} className="text-center">“The loss of a child is the most devastating experience a parent can face-and missing the child never goes away. A piece of yourself is lost and your future is forever changed.” <br />- <strong>Margo F. Weiss, PhD.</strong></h4>
@@ -75,7 +75,6 @@ class SavoringYourChild extends React.Component {
               <div>❌ Life advice or coaching</div>
               <div>❌ Positive affirmations</div>
               <div>❌ Traditional therapy and psychoanalysis</div>
-              <div>❌ Mediums / channeling / other dimension communication</div>
               <div>❌ New age woo-woo methods</div>
             </div>
             <h5 className="text-center" style={{ marginTop: 20, marginBottom: 20 }}>It’s not about saying goodbye</h5>
@@ -138,9 +137,9 @@ class SavoringYourChild extends React.Component {
                 alt="30 day refund guarantee"
               />
             </div>
-            <h4 className="text-center" style={{ marginBottom: 40 }}>Complementary private session guarantee (100$ value)</h4>
+            <h4 className="text-center" style={{ marginBottom: 40 }}>Complementary private session guarantee ($100 value)</h4>
             <p>In fact, I’m willing to make this even easier for you to get on board today. I charge 200$ for a private 1 hour session. and after you’re done with this program, if you still don’t feel this is one of the best decisions you ever took since embarking on your journey of grief, I will not only refund you in full, I will get on a complementary one on one 30 minute private video session with you, to explore other methods to assist you and facilitate in your healing.</p>
-            <p>You either get immense benefits from this program, or you get a 100$ worth free session. Either way, it’s a win-win for you.</p>
+            <p>You either get immense benefits from this program, or you get a free $100 worth session. Either way, it’s a win-win for you.</p>
             <hr className={s.hr} />
             <h5 style={{ marginBottom: 30 }} className="text-center">No need to continue suffering more than you have to</h5>
             <p>
@@ -156,8 +155,8 @@ class SavoringYourChild extends React.Component {
             </p>
 
             {this.renderBuyNowScrollButton()}
-            <p style={{ marginTop: 40 }}><strong>Ps.</strong>Yes, you can literally rewire your mind, body and feelings, to transform your current grief to feeling of appreciation, in way that will honor your lost child in a comprehensive way.</p>
-            <p><strong>Ps.s. </strong>Remember all the risk is on me, so when you gain access today there’s nothing for you to lose other than unwanted negative feelings.</p>
+            <p style={{ marginTop: 40 }}><strong>P.S.</strong>Yes, you can literally rewire your mind, body and feelings, to transform your current grief to feeling of appreciation, in way that will honor your lost child in a comprehensive way.</p>
+            <p><strong>P.P.S. </strong>Remember all the risk is on me, so when you gain access today there’s nothing for you to lose other than unwanted negative feelings.</p>
           </div>
           <section>
             <FAQContainer />
@@ -220,7 +219,7 @@ class SavoringYourChild extends React.Component {
       <section ref={(el) => { this.elPartnership = el }}>
         <h1 className="text-center" style={{ marginBottom: 30 }}>Partnerships and acknowledgements</h1>
         <h3 className="text-center">Helping Parents Heal</h3>
-        <p className="lead">I work closely with helping parents heal, a non profit organization dedicated to support parents in a very accepting, loving, non judgemental way, regardless of personal belief.</p>
+        <p className="lead">I work closely with Helping Parents Heal, a non profit organization dedicated to support parents in a very accepting, loving, non judgemental way, regardless of personal belief.</p>
         <img
           src={cloudImg('adamgoldman.me/helping-parents-heal-cover-min')}
           alt="Helping Parents Heal"
@@ -324,37 +323,37 @@ His work is a detailed challenge to the rest of us to learn how to “up our gam
         </div>
         <div>
           <h3>Module 2: Peaceful Ending</h3>
-          <p>Soften the unpleasantness and negative feelings regarding the moment of transition, and the events regarding the transition, and rewire your mind to go back to the happy memories. This will also <strong>pacify disturbing or graphic images</strong> you might still have.            <br /> <strong>✔️ Value: 47$</strong>
+          <p>Soften the unpleasantness and negative feelings regarding the moment of transition, and the events regarding the transition, and rewire your mind to go back to the happy memories. This will also <strong>pacify disturbing or graphic images</strong> you might still have.            <br /> <strong>✔️ Value: $47</strong>
           </p>
         </div>
         <div>
           <h3>Module 3: Savoring future plans</h3>
-          <p>Increase the peace and acceptance towards the future that will not be, and events you might have planned with and for your child.<br /> <strong>✔️ Value: 47$</strong>
+          <p>Increase the peace and acceptance towards the future that will not be, and events you might have planned with and for your child.<br /> <strong>✔️ Value: $47</strong>
           </p>
         </div>
         <div>
           <h3>Module 4: Reunion</h3>
-          <p>Say “hello” again, and regain access to the good times shared, and what you valued in the relationship and didn’t want to lose.            <br /> <strong>✔️ Value: 47$</strong>
+          <p>Say “hello” again, and regain access to the good times shared, and what you valued in the relationship and didn’t want to lose.            <br /> <strong>✔️ Value: $47</strong>
           </p>
         </div>
         <div>
           <h3>Module 5: Relationship Consolidation</h3>
-          <p>Every relationship has ups and downs. Learn how to intensify the good feelings from the good experiences, and soften and discharge bad experiences and events you had.            <br /> <strong>✔️ Value: 47$</strong>
+          <p>Every relationship has ups and downs. Learn how to intensify the good feelings from the good experiences, and soften and discharge bad experiences and events you had.            <br /> <strong>✔️ Value: $47</strong>
           </p>
         </div>
         <div>
           <h3>Module 6: Special Days</h3>
-          <p>Some days of the year are usually harder than others, like birthdays, memorial days and holidays. In this process you learn how to use these days as an opportunity to remind yourself how lucky you are to have had them in your life, reminisce about your relationship and honor it even more.            <br /> <strong>✔️ Value: 47$</strong>
+          <p>Some days of the year are usually harder than others, like birthdays, memorial days and holidays. In this process you learn how to use these days as an opportunity to remind yourself how lucky you are to have had them in your life, reminisce about your relationship and honor it even more.            <br /> <strong>✔️ Value: $47</strong>
           </p>
         </div>
         <div>
           <h3>Module 7: Re-engaging the future</h3>
-          <p>Now that we transformed much of the emptiness to presence and appreciation, it’s time to create a compelling ever brightening future, as you learn how to let the qualities in this valued relationship draw you forward.            <br /> <strong>✔️ Value: 47$</strong>
+          <p>Now that we transformed much of the emptiness to presence and appreciation, it’s time to create a compelling ever brightening future, as you learn how to let the qualities in this valued relationship draw you forward.            <br /> <strong>✔️ Value: $47</strong>
           </p>
         </div>
         <div className="text-center">
-          <h2>How much does it worth?</h2>
-        30$ + 47$ + 47$ + 47$ + 47$ + 47$ + 47$ =
+          <h2>How much is it worth?</h2>
+        30$ + $47 + $47 + $47 + $47 + $47 + $47 =
           <h3 style={{ marginTop: 20 }}>312$</h3>
         </div>
       </div>
@@ -372,7 +371,7 @@ His work is a detailed challenge to the rest of us to learn how to “up our gam
   }
 
   renderFinalPrice() {
-    return <h3 className="text-center"><small>Order today for</small><br /> <strong>Only 97$</strong></h3>
+    return <h3 className="text-center"><small>Order today for</small><br /> <strong>Only $97</strong></h3>
   }
   renderPaymentButton() {
     return (
