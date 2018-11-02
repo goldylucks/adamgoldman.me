@@ -10,10 +10,6 @@ class FbComments extends React.Component {
     rendered: false,
   };
 
-  componentDidMount() {
-    this.reloadFB()
-  }
-
   shouldComponentUpdate(nextProps, nextState) {
     return nextState.rendered !== this.state.rendered
   }
@@ -26,35 +22,7 @@ class FbComments extends React.Component {
   props: Props
 
   render() {
-    const { ...restProps } = this.props
-    const opacity = this.state.rendered ? 1 : 0
-
-    return (
-      <section {...restProps} id="comments">
-        <h1 style={{ textAlign: 'center' }}>Join the conversation!</h1>
-        <div
-          style={{
-            minHeight: 180,
-            opacity,
-            background: '#fff',
-            transition: '0.5s opacity',
-            boxShadow: '0px 0px 10px 0px rgba(0,0,0,0.75)',
-            borderRadius: 5,
-          }}
-          ref={(el) => {
-            this.elem = el
-          }}
-        >
-          <div
-            className="fb-comments"
-            data-href={this.state.href}
-            data-numposts="5"
-            data-width="710"
-            data-colorscheme="dark"
-          />
-        </div>
-      </section>
-    )
+    return null
   }
 
   elem = null;
