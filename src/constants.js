@@ -3,7 +3,7 @@
 export const APP_NAME = 'Adam Goldman'
 export const EMAIL = 'goldy@adamgoldman.me'
 export const MAIL_TO_LINK = 'mailto:goldy@adamgoldman.me'
-export const DOMAIN = 'https://www.adamgoldman.me'
+export const DOMAIN = 'https://adamgoldman.herokuapp.com'
 export const FB_REVIEWS = 'https://www.facebook.com/adamgoldman.me/reviews/'
 export const MESSENGER_LINK = 'https://m.me/adamgoldman.me'
 export const MESSENGER_LINK_TOOL_CONCERN = `${MESSENGER_LINK}?ref=tool-concern-generic-entry`

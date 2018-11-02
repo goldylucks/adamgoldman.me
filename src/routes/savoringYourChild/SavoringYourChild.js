@@ -46,7 +46,7 @@ class SavoringYourChild extends React.Component {
             <p>Losing your child is one of <strong>the most devastating experiences a parent can go through</strong>.</p>
             <p>The unconditional love, acceptance, connection ... It’s something you rarely get to feel anywhere else.</p>
             <hr className={s.hr} />
-            <h4 ref={(el) => { this.elTrauma = el }} className="text-center">“The loss of a child is the most devastating experience a parent can face-and missing the child never goes away. A piece of yourself is lost and your future is forever changed.” <br />- <strong>Margo F. Weiss, PhD.</strong></h4>
+            <h4 ref={(el) => { this.elTrauma = el }} className="text-center">“The loss of a child is the most devastating experience a parent can face - and missing the child never goes away. A piece of yourself is lost and your future is forever changed.” <br />- <strong>Margo F. Weiss, PhD.</strong></h4>
             <hr className={s.hr} />
             <h2 className="text-center" style={{ marginBottom: 20 }}>Do you feel any of the following?</h2>
             <ul>
@@ -63,7 +63,7 @@ class SavoringYourChild extends React.Component {
             <hr className={s.hr} />
             <h4 className="text-center">“Unattended grief is one of the leading underlying causes for depression” <br />- <strong>Steve Andreas, M.A.</strong></h4>
             <hr className={s.hr} />
-            <p>This is exactly the reason why <strong>I’ve been dedicating the last year to</strong> develop and refine a method to <strong>soften this pain, and alleviate much of the suffering</strong> you and fellow parnets are feeling right now.</p>
+            <p>This is exactly the reason why <strong>I’ve been dedicating the last year to</strong> develop and refine a method to <strong>soften this pain, and alleviate much of the suffering</strong> you and fellow parents are feeling right now.</p>
             <p>I’ve talked and listened to hundreds of parents just like you, and helped dozens experiencing crippling grief and unbearable pain, while consulting with two amazing people (see below) whose work has impacted thousands of lives already.</p>
             <p>Our combined work gave birth to a new program, unlike anything we’ve seen or experienced before.</p>
             <hr className={s.hr} />
@@ -83,7 +83,7 @@ class SavoringYourChild extends React.Component {
             <h5 className="text-center" style={{ marginTop: 20, marginBottom: 20 }}>It’s not about saying goodbye</h5>
             <p>Most people (even professionals!) make the common mistake of thinking grief is about learning to say goodbye. I have NOT found this to be useful!</p>
             <p>Why would any of us would want to say goodbye to such a beautiful, ever loving, unconditionally accepting relationship?</p>
-            <p>I don't want you to say goodbye, I want you to <strong>learn how to say hello again</strong>. How to think of your precious child in a way that honors them, <strong>treasure the good experiences</strong> you shared, and everything that relationship has given you.</p>
+            <p>I don't want you to say goodbye, I want you to <strong>learn how to say hello again</strong>. How to think of your precious child in a way that honors them, <strong>treasure the good experiences</strong> you shared, and everything that that relationship has given you.</p>
             <p>One of the first things you’ll soon learn is how to gently implement the following simple yet beautiful wisdom:</p>
             <div className="text-center">
               <img
