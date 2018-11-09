@@ -6,7 +6,7 @@ const router = require('express').Router()
 
 router.route('/')
   .get(...isAdminMiddlewares, controller.getAll)
-  .post(decodeToken, getFreshUser, controller.create)
+  .post(controller.create)
 
 router.route('/fetchByUserOrCreate/:toolSlug')
   .get(decodeToken, getFreshUser, controller.fetchByUserOrCreate)

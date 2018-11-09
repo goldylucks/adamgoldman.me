@@ -6,11 +6,9 @@ import axios from 'axios'
 import MultiStepForm from '../../components/MultiStepForm'
 
 type Props = {
-  tool: object,
   user: object,
   path: string,
   responseId: string,
-  onLogin: func,
 }
 class ToolResponse extends React.Component<Props> {
   state = {
@@ -64,10 +62,11 @@ class ToolResponse extends React.Component<Props> {
   }
 
   updateProgress = (nextState) => {
-    fireGaEventOnStepChange(this.state.toolResponse.title, Number(nextState.currentStepNum))
+    console.log(nextState)
+    // fireGaEventOnStepChange(this.state.toolResponse.title, Number(nextState.currentStepNum))
     if (nextState.currentStepNum === this.state.toolResponse.steps.length - 1) {
       nextState.status = 'Completed'
-      fireGaEventToolCompleted(this.state.toolResponse.title)
+      // fireGaEventToolCompleted(this.state.toolResponse.title)
     }
     axios.put(`/api/toolResponses/${this.props.responseId}`, { ...this.state.toolResponse, ...nextState })
       .catch((err) => {
@@ -76,38 +75,38 @@ class ToolResponse extends React.Component<Props> {
       })
   }
 
-  onConcern = (currentStepNum) => {
-    fireGaEventOnConcern(this.state.toolResponse.title, currentStepNum)
+  onConcern = () => {
+    // fireGaEventOnConcern(this.state.toolResponse.title, currentStepNum)
   }
 }
 
 export default ToolResponse
 
-function fireGaEventOnStepChange(toolTitle, stepNumber) {
-  window.ga('send', {
-    hitType: 'event',
-    eventCategory: 'Mind Tool',
-    eventAction: 'Go To Step',
-    eventLabel: toolTitle,
-    eventValue: stepNumber,
-  })
-}
+// function fireGaEventOnStepChange(toolTitle, stepNumber) {
+//   window.ga('send', {
+//     hitType: 'event',
+//     eventCategory: 'Mind Tool',
+//     eventAction: 'Go To Step',
+//     eventLabel: toolTitle,
+//     eventValue: stepNumber,
+//   })
+// }
 
-function fireGaEventToolCompleted(toolTitle) {
-  window.ga('send', {
-    hitType: 'event',
-    eventCategory: 'Mind Tool',
-    eventAction: 'Completed',
-    eventLabel: toolTitle,
-  })
-}
+// function fireGaEventToolCompleted(toolTitle) {
+//   window.ga('send', {
+//     hitType: 'event',
+//     eventCategory: 'Mind Tool',
+//     eventAction: 'Completed',
+//     eventLabel: toolTitle,
+//   })
+// }
 
-function fireGaEventOnConcern(toolTitle, stepNumber) {
-  window.ga('send', {
-    hitType: 'event',
-    eventCategory: 'Mind Tool',
-    eventAction: 'Concern on step:',
-    eventLabel: toolTitle,
-    eventValue: stepNumber,
-  })
-}
+// function fireGaEventOnConcern(toolTitle, stepNumber) {
+//   window.ga('send', {
+//     hitType: 'event',
+//     eventCategory: 'Mind Tool',
+//     eventAction: 'Concern on step:',
+//     eventLabel: toolTitle,
+//     eventValue: stepNumber,
+//   })
+// }

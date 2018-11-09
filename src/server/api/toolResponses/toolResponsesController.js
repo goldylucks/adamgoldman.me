@@ -1,4 +1,3 @@
-import { validateOwnerOrAdmin } from '../../auth'
 import Tools from '../tools/toolsModel'
 
 import savoringReviewSteps from './savoringReviewSteps'
@@ -10,7 +9,7 @@ export default {
 
 function getAll(req, res, next) {
   ToolResponses.find()
-    .select('createdAt user title currentStepNum status rating')
+    .select('createdAt user title currentStepNum status rating wpUserId')
     .sort('-createdAt')
     .populate('user')
     .then(tools => res.json(tools))
@@ -20,10 +19,6 @@ function getAll(req, res, next) {
 function get(req, res, next) {
   ToolResponses.findOne({ _id: req.params.id })
     .populate('user')
-    .then((tool) => {
-      validateOwnerOrAdmin(req.user, tool.user._id)
-      return tool
-    })
     .then(tool => res.json(tool))
     .catch(next)
 }

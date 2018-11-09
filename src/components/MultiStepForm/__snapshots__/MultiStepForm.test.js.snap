@@ -355,18 +355,7 @@ exports[`MultiStepForm should render long answer 1`] = `
           className="form-text text-muted"
           id="inputHelp"
         >
-          <ExternalA
-            href="/privacy"
-            target="_blank"
-          >
-            <a
-              href="/privacy"
-              rel="nofollow noreferrer noopener"
-              target="_blank"
-            >
-              Privacy is sacred. Your data is safe.
-            </a>
-          </ExternalA>
+          Your data is safe.
         </small>
       </div>
       <button
@@ -966,18 +955,7 @@ exports[`MultiStepForm should render short answer 1`] = `
           className="form-text text-muted"
           id="inputHelp"
         >
-          <ExternalA
-            href="/privacy"
-            target="_blank"
-          >
-            <a
-              href="/privacy"
-              rel="nofollow noreferrer noopener"
-              target="_blank"
-            >
-              Privacy is sacred. Your data is safe.
-            </a>
-          </ExternalA>
+          Your data is safe.
         </small>
       </div>
       <button
@@ -1207,18 +1185,7 @@ exports[`MultiStepForm should render short answer: submitting answer 1`] = `
           className="form-text text-muted"
           id="inputHelp"
         >
-          <ExternalA
-            href="/privacy"
-            target="_blank"
-          >
-            <a
-              href="/privacy"
-              rel="nofollow noreferrer noopener"
-              target="_blank"
-            >
-              Privacy is sacred. Your data is safe.
-            </a>
-          </ExternalA>
+          Your data is safe.
         </small>
       </div>
       <button
@@ -1651,18 +1618,7 @@ exports[`MultiStepForm with data 1`] = `
           className="form-text text-muted"
           id="inputHelp"
         >
-          <ExternalA
-            href="/privacy"
-            target="_blank"
-          >
-            <a
-              href="/privacy"
-              rel="nofollow noreferrer noopener"
-              target="_blank"
-            >
-              Privacy is sacred. Your data is safe.
-            </a>
-          </ExternalA>
+          Your data is safe.
         </small>
       </div>
       <button

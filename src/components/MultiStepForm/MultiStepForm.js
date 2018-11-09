@@ -4,7 +4,6 @@ import ReactStars from 'react-stars'
 import _ from 'lodash'
 
 import Markdown from '../../components/Markdown'
-import ExternalA from '../../components/ExternalA'
 import { isMobile } from '../../utils'
 
 import DontReRender from './DontReRender'
@@ -122,7 +121,7 @@ class MultiStepForm extends React.Component {
             className="form-control"
             aria-describedby="inputHelp"
           />
-          <small id="inputHelp" className="form-text text-muted"><ExternalA href="/privacy" target="_blank">Privacy is sacred. Your data is safe.</ExternalA></small>
+          <small id="inputHelp" className="form-text text-muted">Your data is safe.</small>
         </div>
         <button type="submit" className="btn btn-primary">Press Enter or click to Continue</button>
       </form>
@@ -146,7 +145,7 @@ class MultiStepForm extends React.Component {
             className="form-control"
             aria-describedby="inputHelp"
           />
-          <small id="inputHelp" className="form-text text-muted"><ExternalA href="/privacy" target="_blank">Privacy is sacred. Your data is safe.</ExternalA></small>
+          <small id="inputHelp" className="form-text text-muted">Your data is safe.</small>
         </div>
         <button type="submit" className="btn btn-primary">Continue</button>
       </form>

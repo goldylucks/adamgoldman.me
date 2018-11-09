@@ -52,7 +52,7 @@ class AdminToolResponses extends React.Component<Props> {
         {
           Header: 'User',
           id: 'user',
-          accessor: item => this.renderUser(item.user),
+          accessor: item => this.renderUser(item),
         },
         {
           Header: 'Tool',
@@ -91,11 +91,18 @@ class AdminToolResponses extends React.Component<Props> {
     </Link>
   )
 
-  renderUser = ({ name } = {}) => {
-    if (!name) {
+  renderUser = (item) => {
+    console.log(item)
+    if (item.wpUserId) {
+      return `WP id: ${item.wpUserId}`
+    }
+    if (!item.user) {
       return 'user not found'
     }
-    return name
+    if (!item.user.name) {
+      return 'user name not found'
+    }
+    return item.user.name
   }
   fetchToolResponses() {
     axios.get('/api/toolResponses')
