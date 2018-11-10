@@ -1,7 +1,5 @@
 import React from 'react'
 
-import Layout from '../../components/Layout'
-
 import BrainToolV3 from './BrainTool-v3'
 
 async function action({ params, path }) {
@@ -21,9 +19,7 @@ async function action({ params, path }) {
     description: tool.description,
     path,
     component: (
-      <Layout path={path}>
-        <BrainToolV3 tool={tool} path={path} />
-      </Layout>
+      <BrainToolV3 tool={tool} path={path} />
     ),
   }
 }

@@ -20,7 +20,7 @@ class StepsV2 extends React.Component {
 
   state = {
     ...this.props.initialState,
-    currentStep: 0,
+    currentStep: 22,
   }
 
   render() {

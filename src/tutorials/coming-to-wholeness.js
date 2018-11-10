@@ -1,8 +1,6 @@
 import React from 'react'
 
 import { MESSENGER_LINK_WELCOME } from '../constants'
-import Link from '../components/Link'
-import FbShareLink from '../components/FbShareLink'
 import Testimony from '../components/Testimony'
 
 export const title = 'Coming To Wholeness'
@@ -632,28 +630,9 @@ And *${stepsState.initialContextFuture}* ...
 
 Isn't it great you can learn so fast?
 
-[know others](FB_SHARE) that can enjoy that as well?
-
-or you want to do it again on another issue / experience first?
+This is the end of the process. Refresh the page (F5) to do it again,
+or do another process next.
 `,
-    answers: [
-      {
-        onClick: 'onRestart',
-        text: 'I want to do it again on the same experience!',
-      },
-      {
-        onClick: 'onRestart',
-        text: 'I want to do it again on a different experience',
-      },
-      <FbShareLink>I want more to experience this!</FbShareLink>,
-      <Link to="/i-dont-charge-i-accept">
-        This is great and I want to give back
-      </Link>,
-      <Link to="/tools">Cool! what other brain hacks can you teach me?</Link>,
-      {
-        text: 'Thank you Adam, can I share with you my experience?',
-        onClick: 'onShareWithAdam',
-      },
-    ],
+    answers: [],
   },
 ]
