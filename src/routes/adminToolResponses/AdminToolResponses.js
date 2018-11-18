@@ -55,17 +55,12 @@ class AdminToolResponses extends React.Component<Props> {
           accessor: item => this.renderUser(item),
         },
         {
+          Header: 'wpUserId',
+          accessor: 'wpUserId',
+        },
+        {
           Header: 'Tool',
           accessor: 'title',
-        },
-        {
-          Header: 'Step',
-          accessor: 'currentStepNum',
-          className: 'text-center',
-        },
-        {
-          Header: 'Status',
-          accessor: 'status',
         },
         {
           Header: 'Rating',
@@ -92,9 +87,10 @@ class AdminToolResponses extends React.Component<Props> {
   )
 
   renderUser = (item) => {
+    const { firstName, lastName } = item
     console.log(item)
-    if (item.wpUserId) {
-      return `WP id: ${item.wpUserId}`
+    if (firstName || lastName) {
+      return `${firstName} ${lastName}`
     }
     if (!item.user) {
       return 'user not found'

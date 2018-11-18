@@ -20,48 +20,13 @@ function getSchema() {
       required: true,
     },
 
-    // toolId: {
-    //   type: Schema.Types.ObjectId,
-    //   ref: 'tools',
-    //   required: true,
-    // },
-
-    // user: {
-    //   type: Schema.Types.ObjectId,
-    //   ref: 'users',
-    //   required: true,
-    // },
-
-    // status: {
-    //   type: String,
-    //   required: true,
-    //   default: 'In Progress',
-    //   enum: ['In Progress', 'Completed'],
-    // },
-
-    // currentStepNum: {
-    //   type: Number,
-    //   required: true,
-    //   default: 0,
-    // },
-
-    // price: {
-    //   type: Number,
-    //   required: true,
-    //   default: 0,
-    // },
-
     rating: Number,
 
     steps: [],
 
-    // stepsStack: {
-    //   type: [],
-    //   required: true,
-    //   default: [],
-    // },
-
     wpUserId: String,
+    firstName: String,
+    lastName: String,
 
     answerByStep: {
       type: Object,

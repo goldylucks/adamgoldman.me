@@ -4,6 +4,7 @@ import cx from 'classnames'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
 import faPaperPlane from '@fortawesome/fontawesome-free-regular/faPaperPlane'
 import faLink from '@fortawesome/fontawesome-free-solid/faLink'
+import faDatabase from '@fortawesome/fontawesome-free-solid/faDatabase'
 import faExternalLinkAlt from '@fortawesome/fontawesome-free-solid/faExternalLinkAlt'
 import faExclamation from '@fortawesome/fontawesome-free-solid/faExclamation'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
@@ -130,7 +131,14 @@ class Answers extends React.Component {
                   />
                 </div>
                 <div className={cx('col-10', s.answerOptionCol, { [s.isVisible]: a.hasGoToStep || a.isLink || a.isLinkNew || a.isConcern })}>
-                  {[{ toggleId: 'hasGoToStep', icon: faPaperPlane, fieldId: 'goToStepByNum' }, { toggleId: 'isLink', icon: faLink, fieldId: 'link' }, { toggleId: 'isLinkNew', icon: faExternalLinkAlt, fieldId: 'linkNew' }, { toggleId: 'isConcern', icon: faExclamation, fieldId: 'concern' }]
+                  {
+                    [
+                      { toggleId: 'hasGoToStep', icon: faPaperPlane, fieldId: 'goToStepByNum' },
+                      { toggleId: 'isLink', icon: faLink, fieldId: 'link' },
+                      { toggleId: 'isLinkNew', icon: faExternalLinkAlt, fieldId: 'linkNew' },
+                      { toggleId: 'isSaveAnswersToDb', icon: faDatabase, fieldId: 'saveAnswersToDb' },
+                      { toggleId: 'isConcern', icon: faExclamation, fieldId: 'concern' },
+                    ]
                   .map(({ toggleId, icon, fieldId }) => (
                     <div className={s.answerOption} key={fieldId}>
                       <div
