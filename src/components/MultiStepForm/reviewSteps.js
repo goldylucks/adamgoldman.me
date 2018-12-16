@@ -1,7 +1,5 @@
 /* eslint-disable max-len */
 
-import { MESSENGER_LINK_WELCOME } from '../../constants'
-
 export default [
   {
     title: 'Review - most useful',
@@ -31,8 +29,9 @@ Please don’t hold back. I take everything as constructive feedback.`,
     title: 'Next steps',
     description: 'What would you like to do next?',
     answers: [
-      { text: 'Repeat this process again', isRepeatProcess: true },
-      { text: 'Talk to me (Adam)', isLinkNew: true, linkNew: MESSENGER_LINK_WELCOME },
+      { text: 'Share my experience in the FB group', isLinkNew: true, linkNew: 'https://www.facebook.com/groups/mindHackingAdamGoldman' },
+      { text: 'Choose my next mind adventure', isLinkNew: true, linkNew: 'https://www.adamgoldman.me/mind-hacking-journeys/' },
+      { text: 'Talk to you Adam (Opens messenger)', isLinkNew: true, linkNew: 'https://m.me/adamgoldman.me?ref=talk-at-end-of-module' },
     ],
   },
 ]
