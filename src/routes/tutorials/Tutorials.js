@@ -3,7 +3,6 @@
 import React from 'react'
 import axios from 'axios'
 
-import { filterDrafts } from '../../utils'
 import BottomSection from '../../components/BottomSection'
 import Card from '../../components/Card'
 
@@ -43,8 +42,6 @@ class ToolsListPage extends React.Component<Props> {
                   ? <div>Loading ...</div>
                   : tutorials
                     .concat(tutorialsHardCoded)
-                    .filter(filterDrafts)
-                    .filter(this.filterSavoring)
                   .map(t => (
                     <Card {...t} url={`${path}/${t.url}`} key={t.url} />
                   ))
