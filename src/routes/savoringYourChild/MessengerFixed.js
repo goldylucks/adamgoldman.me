@@ -6,7 +6,7 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles'
 import { MESSENGER_LINK_SAVORING_YOUR_CHILD_HP } from '../../constants'
 import { cloudImg } from '../../utils'
 
-import s from './MessengerFixed.css'
+import './MessengerFixed.css'
 
 const MessengerFixed = () => (
   <a

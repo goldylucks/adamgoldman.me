@@ -1,1 +1,1 @@
-export default from './FbLoginButton'
+export { default } from './FbLoginButton'

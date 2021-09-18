@@ -1,1 +1,1 @@
-export default from './FbComments'
+export { default } from './FbComments'

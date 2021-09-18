@@ -1,1 +1,1 @@
-export default from './MainNavMobile'
+export { default } from './MainNavMobile'

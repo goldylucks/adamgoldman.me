@@ -1,1 +1,1 @@
-export default from './LoadingSite'
+export { default } from './LoadingSite'

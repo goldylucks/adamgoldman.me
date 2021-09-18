@@ -1,1 +1,1 @@
-export default from './SavoringToolResponseContainer'
+export { default } from './SavoringToolResponseContainer'

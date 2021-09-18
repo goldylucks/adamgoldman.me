@@ -1,1 +1,1 @@
-export default from './BottomSection'
+export { default } from './BottomSection'

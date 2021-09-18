@@ -6,7 +6,7 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles'
 import { MESSENGER_LINK_WELCOME, MESSENGER_LINK_SAVORING_CONTACT } from '../../constants'
 import { isSavoring, cloudImg } from '../../utils'
 
-import s from './MessengerFixed.css'
+import './MessengerFixed.css'
 
 type Props = {
   path: string,

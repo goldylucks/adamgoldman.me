@@ -1,1 +1,1 @@
-export default from './Ending'
+export { default } from './Ending'

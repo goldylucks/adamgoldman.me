@@ -3,7 +3,7 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles'
 
 import Link from '../Link'
 
-import s from './Footer.css'
+import './Footer.css'
 
 const Footer = () => (
   <div className="footer">

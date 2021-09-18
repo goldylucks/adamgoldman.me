@@ -1,1 +1,1 @@
-export default from './FbReview'
+export { default } from './FbReview'

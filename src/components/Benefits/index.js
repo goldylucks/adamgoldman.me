@@ -1,1 +1,1 @@
-export default from './Benefits'
+export { default } from './Benefits'

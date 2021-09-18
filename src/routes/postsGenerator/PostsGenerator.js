@@ -5,7 +5,7 @@ import axios from 'axios'
 
 import { inputChange, inputToggle } from '../../forms'
 
-import s from './PostsGenerator.css'
+import './PostsGenerator.css'
 
 class PostsGenerator extends React.Component {
   static propTypes = {

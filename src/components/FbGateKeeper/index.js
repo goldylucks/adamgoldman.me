@@ -1,1 +1,1 @@
-export default from './FbGateKeeper'
+export { default } from './FbGateKeeper'

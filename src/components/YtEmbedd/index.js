@@ -1,1 +1,1 @@
-export default from './YtEmbedd'
+export { default } from './YtEmbedd'

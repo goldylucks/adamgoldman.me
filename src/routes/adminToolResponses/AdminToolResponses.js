@@ -1,126 +1,133 @@
 // @flow
 
-import React from 'react'
-import axios from 'axios'
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import faTrash from '@fortawesome/fontawesome-free-solid/faTrash'
-import ReactTable from 'react-table'
+import React from "react";
+import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import faTrash from "@fortawesome/free-solid-svg-icons/faTrash";
+import ReactTable from "react-table";
 
-import Link from '../../components/Link'
+import Link from "../../components/Link";
 
 type Props = {
-  path: string
-}
+  path: string,
+};
 
 class AdminToolResponses extends React.Component<Props> {
   state = {
     toolResponses: [],
     isFetchingToolResponses: true,
-  }
+  };
   componentDidMount() {
-    this.fetchToolResponses()
+    this.fetchToolResponses();
   }
   render() {
-    const { isFetchingToolResponses } = this.state
+    const { isFetchingToolResponses } = this.state;
     return (
       <div>
         <div className="container">
           <div className="mainheading">
             <h1 className="sitetitle">Tool Histories</h1>
           </div>
-          {
-            isFetchingToolResponses
-              ? 'Loading responses'
-              : this.renderTable()
-
-          }
+          {isFetchingToolResponses ? "Loading responses" : this.renderTable()}
           <hr />
         </div>
       </div>
-    )
+    );
   }
   renderTable() {
     return (
       <ReactTable
         data={this.state.toolResponses}
         columns={[
-        {
-          Header: 'Date',
-          id: 'date',
-          accessor: this.renderDate,
-        },
-        {
-          Header: 'User',
-          id: 'user',
-          accessor: item => this.renderUser(item),
-        },
-        {
-          Header: 'wpUserId',
-          accessor: 'wpUserId',
-        },
-        {
-          Header: 'Tool',
-          accessor: 'title',
-        },
-        {
-          Header: 'Rating',
-          className: 'text-center',
-          accessor: 'rating',
-        },
-        {
-          Header: 'actions',
-          accessor: '_id',
-          className: 'text-center',
-          Cell: ({ value: id }) => (
-            <a onClick={() => { this.deleteResponse(id) }}><FontAwesomeIcon icon={faTrash} /></a>
-          ),
-        },
-      ]}
+          {
+            Header: "Date",
+            id: "date",
+            accessor: this.renderDate,
+          },
+          {
+            Header: "User",
+            id: "user",
+            accessor: (item) => this.renderUser(item),
+          },
+          {
+            Header: "wpUserId",
+            accessor: "wpUserId",
+          },
+          {
+            Header: "Tool",
+            accessor: "title",
+          },
+          {
+            Header: "Rating",
+            className: "text-center",
+            accessor: "rating",
+          },
+          {
+            Header: "actions",
+            accessor: "_id",
+            className: "text-center",
+            Cell: ({ value: id }) => (
+              <a
+                onClick={() => {
+                  this.deleteResponse(id);
+                }}
+              >
+                <FontAwesomeIcon icon={faTrash} />
+              </a>
+            ),
+          },
+        ]}
         className="-striped -highlight"
       />
-    )
+    );
   }
   renderDate = ({ createdAt, _id }) => (
     <Link to={`${this.props.path}/${_id}`}>
-      {createdAt.replace(/(-|T)/g, ' ').split('.')[0]}
+      {createdAt.replace(/(-|T)/g, " ").split(".")[0]}
     </Link>
-  )
+  );
 
   renderUser = (item) => {
-    const { firstName, lastName } = item
-    console.log(item)
+    const { firstName, lastName } = item;
+    console.log(item);
     if (firstName || lastName) {
-      return `${firstName} ${lastName}`
+      return `${firstName} ${lastName}`;
     }
     if (!item.user) {
-      return 'user not found'
+      return "user not found";
     }
     if (!item.user.name) {
-      return 'user name not found'
+      return "user name not found";
     }
-    return item.user.name
-  }
+    return item.user.name;
+  };
   fetchToolResponses() {
-    axios.get('/api/toolResponses')
-      .then(({ data }) => this.setState({ toolResponses: data, isFetchingToolResponses: false }))
+    axios
+      .get("/api/toolResponses")
+      .then(({ data }) =>
+        this.setState({ toolResponses: data, isFetchingToolResponses: false })
+      )
       .catch((err) => {
-        global.console.log(err)
-        this.setState({ isFetchingToolResponses: false })
-      })
+        global.console.log(err);
+        this.setState({ isFetchingToolResponses: false });
+      });
   }
   deleteResponse(id) {
-    if (!global.confirm('delete?')) {
-      return
+    if (!global.confirm("delete?")) {
+      return;
     }
-    axios.delete(`/api/toolResponses/${id}`)
+    axios
+      .delete(`/api/toolResponses/${id}`)
       .then(() => {
-        this.setState({ toolResponses: this.state.toolResponses.filter(tr => tr._id !== id) })
+        this.setState({
+          toolResponses: this.state.toolResponses.filter((tr) => tr._id !== id),
+        });
       })
-      .catch(err => console.error(err))
+      .catch((err) => console.error(err));
   }
 }
 
-export default AdminToolResponses
+export default AdminToolResponses;
 
 // (
 //   <table className="table">

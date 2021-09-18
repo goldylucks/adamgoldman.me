@@ -1,1 +1,1 @@
-export default from './StopWarning'
+export { default } from './StopWarning'

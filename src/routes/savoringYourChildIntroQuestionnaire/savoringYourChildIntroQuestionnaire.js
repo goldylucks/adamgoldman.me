@@ -7,7 +7,7 @@ import { scrollToTopOfNode } from '../../utils'
 import MultiStepForm from '../../components/MultiStepForm'
 import FbGateKeeper from '../../components/FbGateKeeper'
 
-import s from './savoringYourChildIntroQuestionnaire.css'
+import './savoringYourChildIntroQuestionnaire.css'
 
 type Props = {
   user: Object,

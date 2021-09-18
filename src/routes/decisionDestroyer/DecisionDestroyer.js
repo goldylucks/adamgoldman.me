@@ -16,7 +16,7 @@ import YtEmbedd from '../../components/YtEmbedd/YtEmbedd'
 import MessengerFixed from './MessengerFixed'
 import testimonials from './testimonialsData'
 import FAQContainer from './FAQContainer'
-import s from './DecisionDestroyer.css'
+import './DecisionDestroyer.css'
 import MobileNav from './MobileNav'
 
 export const TOP_BAR_HRIGHT = 56

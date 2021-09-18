@@ -1,1 +1,1 @@
-export default from './FbShareLink'
+export { default } from './FbShareLink'

@@ -3,7 +3,7 @@
 import React from 'react'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
 
-import s from './Tags.css'
+import './Tags.css'
 
 type Props = {
   tags?: Array<string>,

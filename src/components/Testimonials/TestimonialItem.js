@@ -3,7 +3,7 @@
 import React from 'react'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
 
-import s from './Testimonials.css'
+import './Testimonials.css'
 
 type Props = {
   item: Object,

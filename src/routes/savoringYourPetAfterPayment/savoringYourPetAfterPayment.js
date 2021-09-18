@@ -8,7 +8,7 @@ import { MESSENGER_LINK_SAVORING_PETS_AFTER_PURCHASE_INTRO } from '../../constan
 import Link from '../../components/Link'
 import { TOP_BAR_HRIGHT } from '../savoringYourPet/SavoringYourPet'
 import MessengerFixed from '../savoringYourPet/MessengerFixed'
-import s from '../savoringYourPet/SavoringYourPet.css'
+import '../savoringYourPet/SavoringYourPet.css'
 
 type Props = {}
 

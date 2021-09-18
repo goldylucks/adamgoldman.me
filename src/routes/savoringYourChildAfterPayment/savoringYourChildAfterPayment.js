@@ -8,7 +8,7 @@ import { MESSENGER_LINK_SAVORING_YOUR_CHILD_PURCHASE_INTRO, MAIL_TO_LINK } from 
 import Link from '../../components/Link'
 import { TOP_BAR_HRIGHT } from '../savoringYourChild/SavoringYourChild'
 import MessengerFixed from '../savoringYourChild/MessengerFixed'
-import s from '../savoringYourChild/SavoringYourChild.css'
+import '../savoringYourChild/SavoringYourChild.css'
 
 type Props = {}
 

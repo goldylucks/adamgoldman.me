@@ -13,7 +13,7 @@ import Link from '../../components/Link'
 import MobileNav from './MobileNav'
 import MessengerFixed from './MessengerFixed'
 import FAQContainer from './FAQContainer'
-import s from './SavoringYourChild.css'
+import './SavoringYourChild.css'
 import { testimonials } from './data'
 
 export const TOP_BAR_HRIGHT = 56

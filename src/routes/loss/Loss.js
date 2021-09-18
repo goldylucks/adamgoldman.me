@@ -6,7 +6,7 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles'
 import Card from '../../components/Card'
 import Link from '../../components/Link'
 
-import s from './Loss.css'
+import './Loss.css'
 
 type Props = {
   sections: [],

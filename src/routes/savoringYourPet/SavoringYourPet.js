@@ -15,7 +15,7 @@ import Testimonials from '../../components/Testimonials'
 import MessengerFixed from './MessengerFixed'
 import testimonials from './testimonialsData'
 import FAQContainer from './FAQContainer'
-import s from './SavoringYourPet.css'
+import './SavoringYourPet.css'
 import MobileNav from './MobileNav'
 
 export const TOP_BAR_HRIGHT = 56

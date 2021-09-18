@@ -8,7 +8,7 @@ import ExternalA from '../../components/ExternalA'
 import Markdown from '../../components/Markdown'
 import { cloudImg } from '../../utils'
 
-import s from './Endorsements.css'
+import './Endorsements.css'
 
 type Props = {}
 

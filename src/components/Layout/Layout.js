@@ -6,7 +6,7 @@ import Footer from '../Footer'
 import MainNav from '../MainNav'
 import MessengerFixed from '../MessengerFixed'
 
-import s from './Layout.css'
+import './Layout.css'
 
 class Layout extends React.Component {
   static propTypes = {

@@ -15,7 +15,7 @@ import FbReview from '../../components/FbReview'
 import Legend from './components/Legend'
 import TOC from './components/TOC'
 import Details from './components/Details'
-import s from './Transcript.css'
+import './Transcript.css'
 
 type Props = {
   title: string,

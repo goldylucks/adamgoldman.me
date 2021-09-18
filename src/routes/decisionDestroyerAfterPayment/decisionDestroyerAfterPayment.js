@@ -8,7 +8,7 @@ import { MESSENGER_LINK_DECISION_DESTROYER_AFTER_PURCHASE_INTRO, MAIL_TO_LINK } 
 import Link from '../../components/Link'
 import { TOP_BAR_HRIGHT } from '../decisionDestroyer/DecisionDestroyer'
 import MessengerFixed from '../decisionDestroyer/MessengerFixed'
-import s from '../decisionDestroyer/DecisionDestroyer.css'
+import '../decisionDestroyer/DecisionDestroyer.css'
 
 type Props = {}
 

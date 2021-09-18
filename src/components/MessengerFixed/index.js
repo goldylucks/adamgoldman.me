@@ -1,1 +1,1 @@
-export default from './MessengerFixed'
+export { default } from './MessengerFixed'

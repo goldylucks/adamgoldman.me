@@ -14,7 +14,7 @@ import GetStarted from '../../components/GetStartedButton'
 import FbGateKeeper from '../../components/FbGateKeeper'
 import MultiStepForm from '../../components/MultiStepForm'
 
-import s from './SavoringYourChildModule.css'
+import './SavoringYourChildModule.css'
 
 type Props = {
   title: string,

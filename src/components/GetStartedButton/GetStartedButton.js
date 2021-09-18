@@ -5,7 +5,7 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles'
 
 import { scrollToElem } from '../../utils'
 
-import s from './GetStartedButton.css'
+import './GetStartedButton.css'
 
 type Props = {
   text?: string,

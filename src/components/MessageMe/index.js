@@ -1,1 +1,1 @@
-export default from './MessageMe'
+export { default } from './MessageMe'

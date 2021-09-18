@@ -5,7 +5,7 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles'
 import Slider from 'react-slick'
 
 import TestimonialItem from './TestimonialItem'
-import s from './Testimonials.css'
+import './Testimonials.css'
 
 type Props = {
   testimonials?: Array<Object>,

@@ -5,7 +5,7 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles'
 
 import FbLoginbutton from '../FbLoginButton'
 
-import s from './FbGateKeeper.css'
+import './FbGateKeeper.css'
 
 type Props = {
   onLogin: Function,

@@ -42,14 +42,14 @@
   cursor: pointer;
 }
 
-.answer:hover .answerActions{
+.answer:hover .answerActions {
   opacity: 1;
 }
 
 .answerOptionCol {
   transition: opacity 0.5s;
   opacity: 0;
-  height: 0px;
+  height: 10px;
   position: relative;
   top: -4px;
   margin-bottom: -1px;
@@ -77,7 +77,7 @@
 
 .answerOptionField {
   transition: width 0.5s;
-  width: 0px;
+  width: 60px;
   height: 10px;
   font-size: 10px;
   border: none;

@@ -1,1 +1,1 @@
-export default from './InputTrigger'
+export { default } from './InputTrigger'

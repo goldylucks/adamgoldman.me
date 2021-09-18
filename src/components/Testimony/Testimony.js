@@ -4,7 +4,7 @@ import React from 'react'
 import cx from 'classnames'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
 
-import s from './Testimony.css'
+import './Testimony.css'
 
 type Props = {
   imgSrc?: string,

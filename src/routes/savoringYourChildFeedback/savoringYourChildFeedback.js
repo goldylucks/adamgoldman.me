@@ -7,7 +7,7 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles'
 import { DOMAIN, FB_APP_ID } from '../../constants'
 import MessageMe from '../../components/MessageMe'
 
-import s from './SavoringYourChildFeedback.css'
+import './SavoringYourChildFeedback.css'
 
 const SavoringYourChildFeedback = () => (
   <FacebookProvider appId={FB_APP_ID}>

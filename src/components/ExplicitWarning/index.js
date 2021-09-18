@@ -1,1 +1,1 @@
-export default from './ExplicitWarning'
+export { default } from './ExplicitWarning'
