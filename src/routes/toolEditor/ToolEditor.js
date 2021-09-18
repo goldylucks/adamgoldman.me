@@ -188,9 +188,9 @@ class ToolEditor extends React.Component {
       description: 'What pronouns do you use?',
     })
     step.answers = [
-      { text: 'He / Him / His' },
-      { text: 'She / Her / Hers' },
-      { text: 'Them / They / Theirs' },
+      { text: 'He / Him / His / Himself' },
+      { text: 'She / Her / Hers / Herself' },
+      { text: 'Them / They / Theirs / Themselves' },
     ].map(freshAnswer)
     steps[stepIdx] = step
     this.setState({ steps })

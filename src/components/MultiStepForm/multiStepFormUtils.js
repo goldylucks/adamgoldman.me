@@ -85,7 +85,7 @@ export const stateForReviewRating =
 
 export const stepNumById = (id, steps) => steps.findIndex(s => s.id === id)
 
-const isPronoun = key => !!key.match(/he|him|his/)
+const isPronoun = key => !!key.match(/he|him|his|himself/)
 
 const pronounFor = ({ key, steps, answerByStep }) => {
   const pronounStep = steps.find(s => s.isPronouns)
@@ -99,5 +99,8 @@ const pronounFor = ({ key, steps, answerByStep }) => {
   }
   if (key === 'his') {
     return pronounAnswer.split(' / ')[2].toLowerCase()
+  }
+  if (key === 'himself') {
+    return pronounAnswer.split(' / ')[3].toLowerCase()
   }
 }
