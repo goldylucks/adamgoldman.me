@@ -1,15 +1,15 @@
 {
   "steps": [
     {
-      "title": "The first step 2",
-      "description": "",
+      "title": "Pronouns",
+      "description": "What pronouns do you use?",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
       "answers": [
         {
           "isOther": false,
-          "text": "answer 1",
+          "text": "He / Him / His",
           "hasGoToStep": false,
           "goToStepByNum": "",
           "isLink": false,
@@ -21,7 +21,19 @@
         },
         {
           "isOther": false,
-          "text": "answer 2",
+          "text": "She / Her / Hers",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Them / They / Theirs",
           "hasGoToStep": false,
           "goToStepByNum": "",
           "isLink": false,
@@ -33,11 +45,12 @@
         }
       ],
       "flashSpeed": "",
-      "flashStepNum": ""
+      "flashStepNum": "",
+      "isPronouns": true
     },
     {
-      "title": "",
-      "description": "",
+      "title": "Welcome",
+      "description": "He -> ${he}\nHim -> ${him}\nhis -> ${his}",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",

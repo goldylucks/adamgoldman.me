@@ -18,6 +18,7 @@ class Step extends Component {
     sIdx: PropTypes.number.isRequired,
     step: PropTypes.object.isRequired,
     stepCount: PropTypes.number.isRequired,
+    onSetStepToPronouns: PropTypes.number.isRequired,
     onUpdateStep: PropTypes.func.isRequired,
     onRemoveStep: PropTypes.func.isRequired,
     onAddStep: PropTypes.func.isRequired,
@@ -46,6 +47,7 @@ class Step extends Component {
       stepCount,
       onPromptVariable,
       onRegisterUnpromptVariable,
+      onSetStepToPronouns,
     } = this.props
     return (
       <div key={sIdx} id={`step-${sIdx}`} className='step'>
@@ -143,6 +145,7 @@ class Step extends Component {
                 <FontAwesomeIcon icon={faTrashAlt} />
               </a>
             </p>
+            <a onClick={() => onSetStepToPronouns(sIdx)}>Pronouns</a>
             <select
               className={cx('select', 'stepRevealable')}
               style={{ marginRight: 5 }}

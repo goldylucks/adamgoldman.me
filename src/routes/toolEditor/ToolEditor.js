@@ -1,7 +1,7 @@
 import React from 'react'
 import { Typeahead } from 'react-bootstrap-typeahead'
 
-import { freshStep } from './toolEditorUtils'
+import { freshAnswer, freshStep } from './toolEditorUtils'
 import Steps from './Steps'
 import Controls from './Controls'
 import Toc from './Toc'
@@ -48,6 +48,7 @@ class ToolEditor extends React.Component {
             steps={this.state.steps}
             onUpdateSteps={this.updateSteps}
             hiddenFields={this.state.hiddenFields}
+            onSetStepToPronouns={this.setStepToPronouns}
           />
           <Controls tool={{ ...this.state }} />
         </div>
@@ -176,7 +177,23 @@ class ToolEditor extends React.Component {
   updateSteps = steps => {
     this.setState({ steps })
     // eslint-disable-next-line no-console
-    console.log({ steps })
+    // console.log({ steps })
+  }
+
+  setStepToPronouns = stepIdx => {
+    const steps = [...this.state.steps]
+    const step = freshStep({
+      isPronouns: true,
+      title: 'Pronouns',
+      description: 'What pronouns do you use?',
+    })
+    step.answers = [
+      { text: 'He / Him / His' },
+      { text: 'She / Her / Hers' },
+      { text: 'Them / They / Theirs' },
+    ].map(freshAnswer)
+    steps[stepIdx] = step
+    this.setState({ steps })
   }
 }
 

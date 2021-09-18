@@ -16,6 +16,7 @@ class Steps extends Component {
   static propTypes = {
     steps: PropTypes.array.isRequired,
     onUpdateSteps: PropTypes.func.isRequired,
+    onSetStepToPronouns: PropTypes.func.isRequired,
     hiddenFields: PropTypes.array.isRequired,
   }
 
@@ -45,6 +46,7 @@ class Steps extends Component {
         <div>
           {this.props.steps.map((step, sIdx) => (
             <Step
+              onSetStepToPronouns={this.props.onSetStepToPronouns}
               onPromptVariable={this.promptVariable}
               onRegisterUnpromptVariable={this.registerUnpromptVariable}
               step={step}

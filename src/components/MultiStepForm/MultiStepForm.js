@@ -415,6 +415,7 @@ class MultiStepForm extends React.Component {
       hiddenFields: this.props.hiddenFields,
       answerByStep: this.state.answerByStep,
       currentStepNum: this.state.currentStepNum,
+      steps: this.props.steps,
     })
   }
 

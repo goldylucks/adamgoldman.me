@@ -47,6 +47,7 @@ export const replaceVarsUtil = ({
   hiddenFields,
   answerByStep,
   currentStepNum,
+  steps,
 }) => {
   if (!str) {
     return ''
@@ -55,17 +56,9 @@ export const replaceVarsUtil = ({
   try {
     return str.replace(/\${(.*?)}/g, (...args) => {
       const key = args[1]
+      if (isPronoun(key)) return pronounFor({ key, steps, answerByStep })
       if (key === 'echo') {
         return `***“${answerByStep[currentStepNum - 1]}”***`
-      }
-      if (key.indexOf('he') === 0) {
-        return answerByStep[key.slice(2)].match(/female/i) ? 'she' : 'he'
-      }
-      if (key.indexOf('his') === 0) {
-        return answerByStep[key.slice(3)].match(/female/i) ? 'her' : 'his'
-      }
-      if (key.indexOf('him') === 0) {
-        return answerByStep[key.slice(3)].match(/female/i) ? 'her' : 'him'
       }
       if (key[0] === 's') {
         return answerByStep[key.slice(1)]
@@ -91,3 +84,20 @@ export const stateForReviewRating =
   })
 
 export const stepNumById = (id, steps) => steps.findIndex(s => s.id === id)
+
+const isPronoun = key => !!key.match(/he|him|his/)
+
+const pronounFor = ({ key, steps, answerByStep }) => {
+  const pronounStep = steps.find(s => s.isPronouns)
+  const pronounStepIdx = steps.indexOf(pronounStep)
+  const pronounAnswer = answerByStep[pronounStepIdx]
+  if (key === 'he') {
+    return pronounAnswer.split(' / ')[0].toLowerCase()
+  }
+  if (key.indexOf('him') === 0) {
+    return pronounAnswer.split(' / ')[1].toLowerCase()
+  }
+  if (key === 'his') {
+    return pronounAnswer.split(' / ')[2].toLowerCase()
+  }
+}

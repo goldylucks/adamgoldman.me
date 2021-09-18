@@ -6,6 +6,8 @@ const persistToolCtrl = (req, res) => {
   const { toolName, steps } = req.body
   const fileWithPath = path.resolve(toolsDataDir, `${toolName}.json`)
   const dataToWrite = JSON.stringify({ steps }, null, 2)
+  // eslint-disable-next-line no-console
+  console.log(`persisting ${fileWithPath}`)
   fs.writeFileSync(fileWithPath, dataToWrite)
   res.send('success')
 }
