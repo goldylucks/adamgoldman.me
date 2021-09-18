@@ -1,0 +1,7 @@
+.benefit {
+  font-size: 30px;
+}
+.benefit > * {
+  color: green;
+  margin-right: 10px;
+}

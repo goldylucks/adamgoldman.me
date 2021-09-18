@@ -1,0 +1,88 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css');
+
+:global {
+  .slick-prev:before, .slick-next:before {
+    opacity: 1;
+    color: #00C5FF;
+    font-size: 30px;
+  }
+  .slick-next {
+    right: -36px;
+  }
+  .slick-prev {
+    left: -41px;
+  }
+  .slick-slide {
+    position: relative;
+  }
+  .slick-track {
+    display: flex;
+    margin-top: 10px;
+    .slick-slide {
+      display: flex;
+      height: auto;
+    }
+  }
+  .slick-slider.countSlide-1 .slick-list .slick-track,
+  .slick-slider .slick-list .slick-track .slick-slide.totalSlides-1-1 {
+    width:100% !important;
+  }
+  .slick-slider .slick-list .slick-track .slick-slide.totalSlides-1-1 {
+    max-width: 450px !important;
+    margin: 0 auto;
+  }
+}
+.item {
+  border-radius: 10px;
+  border: 1px solid #00C5FF;
+  margin: 10px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.19);
+}
+.item h3 {
+  padding: 5px 5px 0 5px;
+  text-align: center;
+  height: 76px;
+}
+.itemText:before{
+  content: "\201C";
+  font-family: Georgia, serif;
+  font-size: 60px;
+  color: #00C5FF;
+  position:absolute;
+  left: 10px;
+  top:-4px;
+}
+.itemText {
+  position:relative;
+  padding:15px;
+}
+.itemText p {
+  text-indent: 25px;
+}
+.testimonialImage img {
+  display: block;
+  margin: 0 auto;
+}
+.avatar {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+.userTitle {
+  text-align: center;
+  padding: 10px;
+}
+.userDetails {
+  padding-top: 10px;
+}
+@media only screen and (max-width : 768px) {
+  :global {
+    .slick-next {
+      right: -15px;
+    }
+    .slick-prev {
+      left: -25px;
+    }
+  }
+}

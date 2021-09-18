@@ -1,0 +1,279 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout renders children correctly 1`] = `
+<div
+  className="container"
+>
+  <nav
+    className="navbar navbar-expand-lg fixed-top main-nav navbar-light"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="clearfix d-sm-block d-md-none"
+      >
+        <span
+          style={
+            Object {
+              "cursor": "pointer",
+            }
+          }
+        >
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-bars fa-w-14 "
+            data-icon="bars"
+            data-prefix="fas"
+            onClick={[Function]}
+            role="img"
+            style={
+              Object {
+                "marginRight": 10,
+              }
+            }
+            viewBox="0 0 448 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </span>
+        <div
+          className="mobileMenu"
+        >
+          <nav>
+            <h3
+              className="mobileMenuHeadline"
+              onClick={[Function]}
+            >
+              Adam Goldman
+            </h3>
+            <ul
+              className="navbar-nav"
+            >
+              <li
+                className="nav-item"
+              >
+                <a
+                  className="nav-link navLink"
+                  href="/"
+                  onClick={[Function]}
+                >
+                  Home
+                </a>
+              </li>
+              <li
+                className="nav-item"
+              >
+                <a
+                  className="nav-link navLink"
+                  href="/endorsements"
+                  onClick={[Function]}
+                >
+                  Endorsements
+                </a>
+              </li>
+              <li
+                className="nav-item"
+              >
+                <a
+                  className="nav-link navLink"
+                  href="/about"
+                  onClick={[Function]}
+                >
+                  About
+                </a>
+              </li>
+              <li
+                className="nav-item"
+              >
+                <a
+                  className="nav-link navLink"
+                  href="https://m.me/adamgoldman.me?ref=welcome"
+                  rel="nofollow noreferrer noopener"
+                  target="_blank"
+                >
+                  Contact
+                </a>
+              </li>
+              <li
+                className="nav-item"
+                style={
+                  Object {
+                    "marginTop": 20,
+                  }
+                }
+              >
+                <a
+                  className="nav-link btn btn-primary btn-block"
+                  href="https://m.me/adamgoldman.me?ref=book-session"
+                  rel="nofollow noreferrer noopener"
+                  target="_blank"
+                >
+                  Book a session
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <a
+        className="navbar-brand mr-auto"
+        href="/"
+        onClick={[Function]}
+      >
+        Adam Goldman
+      </a>
+      <div
+        className="collapse navbar-collapse"
+      >
+        <ul
+          className="navbar-nav ml-auto"
+        >
+          <li
+            className="nav-item"
+          >
+            <a
+              className="nav-link"
+              href="/endorsements"
+              onClick={[Function]}
+            >
+              Endorsements
+            </a>
+          </li>
+          <li
+            className="nav-item"
+          >
+            <a
+              className="nav-link"
+              href="/about"
+              onClick={[Function]}
+            >
+              About
+            </a>
+          </li>
+          <li
+            className="nav-item"
+          >
+            <a
+              className="nav-link"
+              href="https://m.me/adamgoldman.me?ref=welcome"
+              rel="nofollow noreferrer noopener"
+              target="_blank"
+            >
+              Contact
+            </a>
+          </li>
+          <li
+            className="nav-item"
+            style={
+              Object {
+                "marginLeft": 10,
+              }
+            }
+          >
+            <a
+              className="nav-link btn btn-primary btn-sm"
+              href="https://m.me/adamgoldman.me?ref=book-session"
+              rel="nofollow noreferrer noopener"
+              target="_blank"
+            >
+              Book a session
+            </a>
+          </li>
+        </ul>
+      </div>
+      <a
+        className="nav-link btn btn-primary btn-sm d-sm-block d-md-none"
+        href="https://m.me/adamgoldman.me?ref=book-session"
+        rel="nofollow noreferrer noopener"
+        target="_blank"
+      >
+        Book a session
+      </a>
+    </div>
+  </nav>
+  <div
+    className="innerContainer"
+  >
+    <div
+      className="child"
+      onLogin={[Function]}
+      onStartToolResponse={[Function]}
+      onSubmitIntro={undefined}
+      onSubmitModule={undefined}
+      onUpdateUser={[Function]}
+      user={Object {}}
+    />
+  </div>
+  <div
+    className="container container-footer"
+  >
+    <div
+      className="footer"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-sm-12"
+        >
+          <p
+            className="pull-left"
+          >
+            Copyright © 2017 
+            <a
+              className="link"
+              href="/"
+              onClick={[Function]}
+            >
+              Adam Goldman
+            </a>
+          </p>
+          <p
+            className="pull-right"
+          >
+            <a
+              className="link"
+              href="/legal-stuff"
+              onClick={[Function]}
+            >
+              legal stuff
+            </a>
+            <a
+              className="link"
+              href="/privacy"
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginLeft": 10,
+                }
+              }
+            >
+              Privacy
+            </a>
+          </p>
+        </div>
+      </div>
+      <div
+        className="clearfix"
+      />
+    </div>
+  </div>
+  <a
+    className="container"
+    href="https://m.me/adamgoldman.me?ref=welcome"
+    rel="nofollow noreferrer noopener"
+    target="_blank"
+  >
+    <img
+      alt="Messenger Link"
+      src="https://res.cloudinary.com/goldylucks/image/upload/v1/adamgoldman.me/messenger"
+    />
+  </a>
+</div>
+`;

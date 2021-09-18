@@ -1,0 +1,15 @@
+.container {
+  padding-top:5rem;
+  height: 100%;
+  display: block;
+}
+
+.innerContainer{
+  height: 90%;
+}
+.mainContent {
+  max-width: 740px;
+  padding-left: 20px;
+  padding-right: 20px;
+  /*margin: 0 auto;*/
+}

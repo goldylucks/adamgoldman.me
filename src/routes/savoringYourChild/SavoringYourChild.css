@@ -1,0 +1,98 @@
+.widthContainer {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hr {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.painPoint {
+  font-size: 30px;
+}
+
+.asterixDisclaimer {
+  font-size: 14px;
+  vertical-align: text-top;
+}
+
+
+.getStartedButton {
+  font-size: 50px;
+  padding: 30px;
+  margin: 20px auto;
+  border-radius: 30px;
+  display: block;
+  width: 50%;
+  background: #03a87c;
+  color: #fff !important;
+}
+
+@media only screen and (max-width : 768px) {
+  .getStartedButton{
+    font-size: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    width: 100%;
+  }
+}
+
+.andreasContainerBoth {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.andreasContainerBoth img {
+  border-radius: 50%;
+  max-width: 100%;
+  margin-bottom: 5px;
+}
+
+.andreasContainerIndividual {
+  margin-right: 20px;
+}
+
+.andreasCaption {
+  text-align: center;
+  display: block;
+}
+
+.aboutContainer {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.aboutContainer img {
+  border-radius: 50%;
+  max-width: 100%;
+  margin-right: 20px;
+}
+
+.aboutContainer .lead {
+  max-width: 40%;
+}
+
+@media (max-width: 800px) {
+  .andreasContainerBoth {
+    flex-direction: column;
+  }
+  .andreasContainerIndividual {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  
+  .aboutContainer {
+    flex-direction: column;
+  }
+  .aboutContainer img {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .aboutContainer .lead {
+    max-width: 100%;
+  }
+}
+
