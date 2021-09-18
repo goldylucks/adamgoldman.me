@@ -11,130 +11,126 @@ import YtEmbedd from '../YtEmbedd'
 import LoomEmbedd from '../LoomEmbedd'
 import ExplicitWarning from '../ExplicitWarning'
 
-type Props = {
-  dontEmbedd: ?boolean
-}
-
-const Markdown = (props: Props) => (
+const Markdown = props => (
   <ReactMarkdown
     {...props}
     renderers={{
-          Link: (linkProps) => {
-            if (linkProps.href === 'explicitWarning') {
-              return <ExplicitWarning explicitContent={linkProps.children} />
-            }
+      Link: function MarkdownLink(linkProps) {
+        if (linkProps.href === 'explicitWarning') {
+          return <ExplicitWarning explicitContent={linkProps.children} />
+        }
 
-            if (linkProps.href === 'YtEmbedd' && !props.dontEmbedd) {
-              return <YtEmbedd src={linkProps.children} />
-            }
+        if (linkProps.href === 'YtEmbedd' && !props.dontEmbedd) {
+          return <YtEmbedd src={linkProps.children} />
+        }
 
-            if (linkProps.href === 'LoomEmbedd' && !props.dontEmbedd) {
-              return <LoomEmbedd src={linkProps.children} />
-            }
+        if (linkProps.href === 'LoomEmbedd' && !props.dontEmbedd) {
+          return <LoomEmbedd src={linkProps.children} />
+        }
 
-            if (linkProps.href === 'iframe') {
-              return <FbReview review={linkProps.children} />
-            }
+        if (linkProps.href === 'iframe') {
+          return <FbReview review={linkProps.children} />
+        }
 
-            if (linkProps.href.match(/^adam$|^other$/)) {
-              const href = linkProps.children[1]
-              if (href && href.includes && href.includes('://')) {
-                return (
-                  <span
-                    className={`chat-message-container clearfix ${linkProps.href}`}
+        if (linkProps.href.match(/^adam$|^other$/)) {
+          const href = linkProps.children[1]
+          if (href && href.includes && href.includes('://')) {
+            return (
+              <span
+                className={`chat-message-container clearfix ${linkProps.href}`}
+              >
+                <span className='chat-message'>
+                  <a
+                    href={href}
+                    target='_blank'
+                    rel='nofollow noreferrer noopener'
                   >
-                    <span className="chat-message">
-                      <a
-                        href={href}
-                        target="_blank"
-                        rel="nofollow noreferrer noopener"
-                      >
-                        {href}
-                      </a>
-                    </span>
-                  </span>
-                )
-              }
-              return (
-                <span
-                  className={`chat-message-container clearfix ${linkProps.href}`}
-                >
-                  <span className="chat-message">{linkProps.children}</span>
+                    {href}
+                  </a>
                 </span>
-              )
-            }
+              </span>
+            )
+          }
+          return (
+            <span
+              className={`chat-message-container clearfix ${linkProps.href}`}
+            >
+              <span className='chat-message'>{linkProps.children}</span>
+            </span>
+          )
+        }
 
-            if (linkProps.href.indexOf('STRIKE') === 0) {
-              return <s>{linkProps.children}</s>
-            }
+        if (linkProps.href.indexOf('STRIKE') === 0) {
+          return <s>{linkProps.children}</s>
+        }
 
-            if (linkProps.href.indexOf('TITLE_') === 0) {
-              return (
-                <span
-                  data-title={linkProps.href
-                    .replace('TITLE_', '')
-                    .replace(/_/g, ' ')}
-                >
-                  {linkProps.children}
-                </span>
-              )
-            }
+        if (linkProps.href.indexOf('TITLE_') === 0) {
+          return (
+            <span
+              data-title={linkProps.href
+                .replace('TITLE_', '')
+                .replace(/_/g, ' ')}
+            >
+              {linkProps.children}
+            </span>
+          )
+        }
 
-            if (linkProps.href.match('EMAIL')) {
-              return (
-                <a
-                  href={`mailto:${EMAIL}`}
-                  target="_blank"
-                  rel="nofollow noreferrer noopener"
-                >
-                  {linkProps.children}
-                </a>
-              )
-            }
+        if (linkProps.href.match('EMAIL')) {
+          return (
+            <a
+              href={`mailto:${EMAIL}`}
+              target='_blank'
+              rel='nofollow noreferrer noopener'
+            >
+              {linkProps.children}
+            </a>
+          )
+        }
 
-            if (linkProps.href.match('FB_SHARE')) {
-              return <FbShareLink>{linkProps.children}</FbShareLink>
-            }
+        if (linkProps.href.match('FB_SHARE')) {
+          return <FbShareLink>{linkProps.children}</FbShareLink>
+        }
 
-            if (linkProps.href.match('FB_REVIEWS')) {
-              return (
-                <a
-                  href={FB_REVIEWS}
-                  target="_blank"
-                  rel="nofollow noreferrer noopener"
-                >
-                  {linkProps.children}
-                </a>
-              )
-            }
+        if (linkProps.href.match('FB_REVIEWS')) {
+          return (
+            <a
+              href={FB_REVIEWS}
+              target='_blank'
+              rel='nofollow noreferrer noopener'
+            >
+              {linkProps.children}
+            </a>
+          )
+        }
 
-            if (linkProps.href.match('http')) {
-              return (
-                <a
-                  href={linkProps.href}
-                  target="_blank"
-                  rel="nofollow noreferrer noopener"
-                >
-                  {linkProps.children}
-                </a>
-              )
-            }
+        if (linkProps.href.match('http')) {
+          return (
+            <a
+              href={linkProps.href}
+              target='_blank'
+              rel='nofollow noreferrer noopener'
+            >
+              {linkProps.children}
+            </a>
+          )
+        }
 
-            if (linkProps.href.match(/NEW$/)) {
-              return (
-                <a
-                  href={linkProps.href.replace(/NEW$/, '')}
-                  target="_blank"
-                  rel="nofollow noreferrer noopener"
-                >
-                  {linkProps.children}
-                </a>
-              )
-            }
+        if (linkProps.href.match(/NEW$/)) {
+          return (
+            <a
+              href={linkProps.href.replace(/NEW$/, '')}
+              target='_blank'
+              rel='nofollow noreferrer noopener'
+            >
+              {linkProps.children}
+            </a>
+          )
+        }
 
-            return <Link to={linkProps.href}>{linkProps.children}</Link>
-          },
-        }}
+        return <Link to={linkProps.href}>{linkProps.children}</Link>
+      },
+    }}
   />
 )
 

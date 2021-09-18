@@ -3,10 +3,10 @@
 import React from 'react'
 import axios from 'axios'
 
+import tutorialsHardCoded from './tutorialsHardCoded'
+
 import BottomSection from '../../components/BottomSection'
 import Card from '../../components/Card'
-
-import tutorialsHardCoded from './tutorialsHardCoded'
 
 type Props = {
   title: string,
@@ -27,25 +27,27 @@ class ToolsListPage extends React.Component<Props> {
     const { tutorials, isFetchingTutorials } = this.state
     return (
       <React.Fragment>
-        <div className="container">
-          <div className="mainheading">
-            <h1 className="sitetitle">{title}</h1>
-            <p className="lead">{description}</p>
+        <div className='container'>
+          <div className='mainheading'>
+            <h1 className='sitetitle'>{title}</h1>
+            <p className='lead'>{description}</p>
           </div>
-          <section className="recent-posts">
-            <div className="section-title">
-              <h2><span>All Tutorials</span></h2>
+          <section className='recent-posts'>
+            <div className='section-title'>
+              <h2>
+                <span>All Tutorials</span>
+              </h2>
             </div>
-            <div className="card-columns listrecent">
-              {
-                isFetchingTutorials
-                  ? <div>Loading ...</div>
-                  : tutorials
-                    .concat(tutorialsHardCoded)
+            <div className='card-columns listrecent'>
+              {isFetchingTutorials ? (
+                <div>Loading ...</div>
+              ) : (
+                tutorials
+                  .concat(tutorialsHardCoded)
                   .map(t => (
                     <Card {...t} url={`${path}/${t.url}`} key={t.url} />
                   ))
-                }
+              )}
             </div>
           </section>
         </div>
@@ -54,9 +56,12 @@ class ToolsListPage extends React.Component<Props> {
     )
   }
   fetchTutorials() {
-    axios.get('/api/tools/all')
-      .then(({ data }) => this.setState({ tutorials: data, isFetchingTutorials: false }))
-      .catch((err) => {
+    axios
+      .get('/api/tools/all')
+      .then(({ data }) =>
+        this.setState({ tutorials: data, isFetchingTutorials: false }),
+      )
+      .catch(err => {
         global.console.log(err)
         this.setState({ isFetchingTutorials: false })
       })

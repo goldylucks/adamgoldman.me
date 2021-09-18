@@ -6,11 +6,16 @@ Array.prototype.last = function () {
 }
 /* eslint-enable no-extend-native */
 
-const cloudinaryCore = new cloudinary.Cloudinary({ cloud_name: 'goldylucks', secure: true })
+const cloudinaryCore = new cloudinary.Cloudinary({
+  cloud_name: 'goldylucks',
+  secure: true,
+})
 
 export const isAdam = () => {
   try {
-    return JSON.parse(localStorage.getItem('user')).fbUserId === '1459675790775313'
+    return (
+      JSON.parse(localStorage.getItem('user')).fbUserId === '1459675790775313'
+    )
   } catch (err) {
     return false
   }
@@ -23,15 +28,19 @@ export const noop = () => null
 
 export const isProd = process.env.NODE_ENV === 'production'
 
-export const scrollToTopOfNode = (node, { duration = 300, topOffest = 0 } = {}) => {
-  const top = node.getBoundingClientRect().top - document.body.getBoundingClientRect().top
+export const scrollToTopOfNode = (
+  node,
+  { duration = 300, topOffest = 0 } = {},
+) => {
+  const top =
+    node.getBoundingClientRect().top - document.body.getBoundingClientRect().top
   scrollToElem(document.querySelector('html'), top - topOffest, duration)
 }
 
 export const scrollToElem = (element, to, duration) => {
   if (duration <= 0) return
   const difference = to - element.scrollTop
-  const perTick = difference / duration * 10
+  const perTick = (difference / duration) * 10
 
   setTimeout(() => {
     // eslint-disable-next-line operator-assignment
@@ -45,7 +54,7 @@ export const filterDrafts = item => !item.isDraft
 
 export const titleToSlug = title => title.toLowerCase().replace(/ /g, '-')
 
-export const getSlug = (item) => {
+export const getSlug = item => {
   if (item.type === 'pages') {
     return `/${item.url}`
   }
@@ -55,9 +64,7 @@ export const getSlug = (item) => {
   return `/${item.type}/${item.url}`
 }
 
-const parseFbMsg = ({
-  type, html, alt, src, style, duration,
-}) => {
+const parseFbMsg = ({ type, html, alt, src, style, duration }) => {
   if (type === 'voiceMsg') {
     return `Voice msg - Duration: ${duration}`
   }
@@ -96,10 +103,12 @@ export const parseFbConversation = arrOfMsgs =>
         return `<div class="chat-message-time">${content}</div>`
       }
       return content
-        .map(msg =>
-          `<div class="chat-message-container clearfix ${author} ${msg.isRtl
-            ? 'rtl'
-            : ''}"><div class="chat-message">${parseFbMsg(msg)}</div></div>`)
+        .map(
+          msg =>
+            `<div class="chat-message-container clearfix ${author} ${
+              msg.isRtl ? 'rtl' : ''
+            }"><div class="chat-message">${parseFbMsg(msg)}</div></div>`,
+        )
         .join('')
     })
     .join('')
@@ -118,6 +127,7 @@ export const isMobile = () => window.innerWidth <= 800
 
 export const isSavoring = path => path.includes('savoring-your-child')
 
-export const didUserFillForm = (user, formId) => user.form && user.form.includes(formId)
+export const didUserFillForm = (user, formId) =>
+  user.form && user.form.includes(formId)
 
 export const nn = n => (Number(n) < 10 ? `0${n}` : `${n}`)

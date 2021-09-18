@@ -3,7 +3,8 @@ import { cloudImg } from '../../utils'
 export default {
   slug: 'peaceful-ending',
   title: 'Peaceful Ending',
-  description: 'This process will help soften the unpleasantness and negative feelings regarding the moment of transition, and the events regarding the transition, like the funeral and related things you might went through.',
+  description:
+    'This process will help soften the unpleasantness and negative feelings regarding the moment of transition, and the events regarding the transition, like the funeral and related things you might went through.',
   loom: '7ca3c61f85a14110b9d91f87adde01e9',
   benefits: [
     'Soften the moment of getting the news',
@@ -15,7 +16,7 @@ export default {
     {
       title: 'Minimized the absence',
       text: 'Pretty interesting ... to see things in reverse ... and the circus music was perfect.  It reduced the personal injury I felt to just a set of decisions that were made - no judgments...nothing personal…',
-      name: 'Beth D\'Angelo',
+      name: "Beth D'Angelo",
       nameMeta: 'Mother of Sean, transitioned in a car accident',
       imgSrc: cloudImg('users/beth_deangelo_avatar2'),
     },
@@ -28,9 +29,10 @@ export default {
     },
     {
       title: 'I was living in this traumatized experience',
-      text: 'This made me understand how intensively I was living in this traumatized experience. Like I literary was living it through every day every moment. I don\'t hold on to heavy, sad memories anymore. Like I don\'t need to force myself every day to tell me that something terrible happened. I can choose how to feel. it is great. And the reverse was fun',
+      text: "This made me understand how intensively I was living in this traumatized experience. Like I literary was living it through every day every moment. I don't hold on to heavy, sad memories anymore. Like I don't need to force myself every day to tell me that something terrible happened. I can choose how to feel. it is great. And the reverse was fun",
       name: 'Vita Steina',
-      nameMeta: 'Mother of Ralph, transitioned from illness after long period in the hospital',
+      nameMeta:
+        'Mother of Ralph, transitioned from illness after long period in the hospital',
       imgSrc: cloudImg('users/vita_steina_avatar'),
     },
     {
@@ -45,7 +47,8 @@ export default {
       text: 'This way is better than it was before. Better, much better. Thank you !!!',
       name: 'Tracy Soussi',
       nameMeta: 'Mother of Aymen, transitioned from illness',
-      imgSrc: 'https://res.cloudinary.com/goldylucks/image/upload/c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1530689574/Tracy_Soussi_ix64h4.jpg',
+      imgSrc:
+        'https://res.cloudinary.com/goldylucks/image/upload/c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1530689574/Tracy_Soussi_ix64h4.jpg',
     },
     {
       title: 'Took me to a healthy Anthony',

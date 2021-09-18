@@ -12,13 +12,10 @@ const MessengerFixed = () => (
   <a
     className={s.container}
     href={MESSENGER_LINK_SAVORING_YOUR_CHILD_HP}
-    target="_blank"
-    rel="nofollow noreferrer noopener"
+    target='_blank'
+    rel='nofollow noreferrer noopener'
   >
-    <img
-      src={cloudImg('adamgoldman.me/messenger')}
-      alt="Messenger Link"
-    />
+    <img src={cloudImg('adamgoldman.me/messenger')} alt='Messenger Link' />
   </a>
 )
 

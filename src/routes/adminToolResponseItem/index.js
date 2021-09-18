@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Layout from '../../components/Layout'
-
 import AdminToolResponseItem from './AdminToolResponseItem'
+
+import Layout from '../../components/Layout'
 
 async function action({ path, params }) {
   return {

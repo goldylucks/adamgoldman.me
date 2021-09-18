@@ -9,7 +9,8 @@ export default {
   description: 'Description here',
   html: (
     <div>
-      <Markdown source={`
+      <Markdown
+        source={`
 Since no one 'taught' us how to grieve in a healthy way, we are apt to get 'stuck' in unuseful patterns.
 
 ## Recalling the ending

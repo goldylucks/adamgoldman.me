@@ -9,11 +9,8 @@ async function action({ path }) {
     chunks: ['toolEditor'],
     title,
     path,
-    description:
-      'Create a brain tool',
-    component: (
-      <ToolJsonEditor />
-    ),
+    description: 'Create a brain tool',
+    component: <ToolJsonEditor />,
   }
 }
 

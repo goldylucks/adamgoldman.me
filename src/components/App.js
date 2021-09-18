@@ -53,9 +53,9 @@ class App extends React.PureComponent {
   static propTypes = {
     context: PropTypes.shape(ContextType).isRequired,
     children: PropTypes.element.isRequired,
-  };
+  }
 
-  static childContextTypes = ContextType;
+  static childContextTypes = ContextType
 
   state = {
     user: {},
@@ -87,14 +87,14 @@ class App extends React.PureComponent {
     if (!this.state.isUiReady) {
       return <LoadingSite />
     }
-    return (
-      React.Children.only(React.cloneElement(this.props.children, {
+    return React.Children.only(
+      React.cloneElement(this.props.children, {
         user: this.state.user,
         onLogin: this.login,
         onLogout: this.logout,
         onUpdateUser: this.updateUser,
         onStartToolResponse: this.startToolResponse,
-      }))
+      }),
     )
   }
 
@@ -111,18 +111,21 @@ class App extends React.PureComponent {
     this.setState({ user: {} })
   }
 
-  updateUser = (user) => {
+  updateUser = user => {
     this.setState({ user })
     global.localStorage.setItem('user', JSON.stringify(user))
   }
 
-  startToolResponse = (toolResponse) => {
-    this.setState(({ user }) => ({
-      user: {
-        ...user,
-        toolResponses: user.toolResponses.concat(toolResponse),
-      },
-    }), global.localStorage.setItem('user', JSON.stringify(this.state.user)))
+  startToolResponse = toolResponse => {
+    this.setState(
+      ({ user }) => ({
+        user: {
+          ...user,
+          toolResponses: user.toolResponses.concat(toolResponse),
+        },
+      }),
+      global.localStorage.setItem('user', JSON.stringify(this.state.user)),
+    )
   }
 
   syncUserFromLS() {
@@ -131,15 +134,18 @@ class App extends React.PureComponent {
       user = JSON.parse(user)
       this.setState({ user })
       setAuthHeader(user.token)
-      axios.get(`/api/users/${user._id}`)
+      axios
+        .get(`/api/users/${user._id}`)
         .then(({ data }) => {
           global.console.log('[user logged in]', data)
           this.updateUser(data)
           this.setState({ isUiReady: true })
         })
-        .catch((err) => {
+        .catch(err => {
           this.setState({ isUiReady: true })
-          global.alert('there was an error logging you on, I will look into it and get back at you')
+          global.alert(
+            'there was an error logging you on, I will look into it and get back at you',
+          )
           global.console.error(err)
         })
     } else {

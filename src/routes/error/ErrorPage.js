@@ -21,14 +21,15 @@ class ErrorPage extends React.Component {
       message: PropTypes.string.isRequired,
       stack: PropTypes.string.isRequired,
     }),
-  };
+  }
 
   static defaultProps = {
     error: null,
-  };
+  }
 
   render() {
-    if (__DEV__ && this.props.error) { // eslint-disable-line no-undef
+    if (__DEV__ && this.props.error) {
+      // eslint-disable-line no-undef
       return (
         <div>
           <h1>{this.props.error.name}</h1>

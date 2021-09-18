@@ -4,24 +4,24 @@ import React from 'react'
 
 type Props = {
   children: any,
-};
+}
 
 class FbShareLink extends React.Component {
   state = {
     href: '',
-  };
+  }
 
   componentDidMount() {
     this.setHref()
   }
 
-  props: Props;
+  props: Props
 
   render() {
     return (
       <a
-        rel="nofollow noreferrer noopener"
-        target="_blank"
+        rel='nofollow noreferrer noopener'
+        target='_blank'
         href={`https://www.facebook.com/sharer/sharer.php?u=${this.state.href}`}
       >
         {this.props.children}

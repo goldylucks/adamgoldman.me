@@ -1,13 +1,13 @@
 import React from 'react'
 
-import Layout from '../../components/Layout'
-
 import Page from './Page'
+
+import Layout from '../../components/Layout'
 
 async function action({ params, path }) {
   const page = await import(`../../pages/${params.page}.js`)
     .then(module => module.default) // use an object from `export default`
-    .catch((error) => {
+    .catch(error => {
       if (error.message.startsWith('Cannot find module')) {
         return null // module (page) does not exists
       }

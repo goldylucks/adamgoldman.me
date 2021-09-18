@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Layout from '../../components/Layout'
-
 import ToolResponse from './ToolResponse'
+
+import Layout from '../../components/Layout'
 
 async function action({ params, path }) {
   return {

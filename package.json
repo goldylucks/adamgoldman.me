@@ -2,11 +2,17 @@
   "name": "adam",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "server": "nodemon server/server",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:3004",
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/fontawesome-free-brands": "^5.0.13",
-    "@fortawesome/free-regular-svg-icons": "^5.0.13",
-    "@fortawesome/free-solid-svg-icons": "^5.0.13",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
@@ -17,6 +23,7 @@
     "axios": "^0.21.4",
     "classnames": "^2.2.5",
     "cloudinary-core": "^2.3.0",
+    "express": "^4.17.1",
     "history": "^4.7.2",
     "lodash": "^4.17.5",
     "pretty-error": "^2.1.1",
@@ -42,18 +49,6 @@
     "textarea-caret": "^3.1.0",
     "validator": "^10.7.1"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -65,5 +60,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12",
+    "prettier": "^2.4.1"
   }
 }

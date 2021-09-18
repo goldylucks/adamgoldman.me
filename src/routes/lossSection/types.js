@@ -9,7 +9,8 @@ export default {
   description: 'Description here',
   html: (
     <div>
-      <Markdown source={`
+      <Markdown
+        source={`
 Each type of loss is unique, and have it’s own manifestations and consequences in the participants’ lives.
 
 There are however many commonalities in the structure of how participants internally represent their loss, which the protocol is designed to transform to a more resourceful response.

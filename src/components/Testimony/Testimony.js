@@ -14,19 +14,22 @@ type Props = {
   isRtl?: boolean,
 }
 
-const Testimony = ({
-  imgSrc, text, name, nameMeta, isRtl,
-}:
-Props) => (
-  <article className="clearfix">
+const Testimony = ({ imgSrc, text, name, nameMeta, isRtl }: Props) => (
+  <article className='clearfix'>
     <blockquote className={cx('card-text', { rtl: isRtl })}>{text}</blockquote>
-    <div className="clearfix">
+    <div className='clearfix'>
       <div className={cx('avatar-with-text', { rtl: isRtl })}>
-        {imgSrc && <img alt={`${name}'s testimonial'`} src={imgSrc} className="avatar" />}
+        {imgSrc && (
+          <img alt={`${name}'s testimonial'`} src={imgSrc} className='avatar' />
+        )}
       </div>
       <div className={cx('avatar-with-text', { rtl: isRtl })}>
         <strong>{name}</strong>
-        {nameMeta && <p><small>{nameMeta}</small></p>}
+        {nameMeta && (
+          <p>
+            <small>{nameMeta}</small>
+          </p>
+        )}
       </div>
     </div>
     <hr />

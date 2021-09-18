@@ -6,20 +6,21 @@ import Link from '../Link'
 
 type Props = {
   crumbs: Array<Object>,
-  basePath?: string
-};
+  basePath?: string,
+}
 
 const BreadCrumbs = ({ crumbs, basePath, ...restProps }: Props) => (
   <div {...restProps}>
     <Link to={basePath}>Home</Link>
     {crumbs.map((c, idx) =>
-        (idx === crumbs.length - 1 ? (
-          <span> | {c.text}</span>
-        ) : (
-          <span>
-            <span> | </span> <Link to={c.path}>{c.text}</Link>
-          </span>
-        )))}
+      idx === crumbs.length - 1 ? (
+        <span> | {c.text}</span>
+      ) : (
+        <span>
+          <span> | </span> <Link to={c.path}>{c.text}</Link>
+        </span>
+      ),
+    )}
   </div>
 )
 

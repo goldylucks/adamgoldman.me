@@ -1,10 +1,10 @@
 .selectedCardBorder {
-  border: 1px solid #00C5FF;
+  border: 1px solid #00c5ff;
   border-radius: 0.25rem;
 }
 .selectedCardIcon {
   position: absolute;
   right: 11px;
   top: 6px;
-  color: #00C5FF;
+  color: #00c5ff;
 }

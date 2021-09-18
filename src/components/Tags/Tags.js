@@ -7,12 +7,14 @@ import './Tags.css'
 
 type Props = {
   tags?: Array<string>,
-};
+}
 
 const Tags = ({ tags }: Props) => (
   <ul className={s.tags}>
     {tags.map(t => (
-      <li><span>{t}</span></li>
+      <li>
+        <span>{t}</span>
+      </li>
     ))}
   </ul>
 )

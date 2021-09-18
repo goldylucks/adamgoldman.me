@@ -27,15 +27,14 @@ export default class SavoringToolResponseContainer extends React.Component<Props
 
   // handle routing to other module
   componentDidUpdate(prevProps) {
-    if (this.props.user._id && (this.props.toolSlug !== prevProps.toolSlug)) {
+    if (this.props.user._id && this.props.toolSlug !== prevProps.toolSlug) {
       this.fetchToolResponse()
     }
   }
 
   render() {
-    const {
-      isFetchingToolResponse, toolResponse, fetchingToolResponseError,
-    } = this.state
+    const { isFetchingToolResponse, toolResponse, fetchingToolResponseError } =
+      this.state
     const { children, toolSlug, ...remainingProps } = this.props
     return React.cloneElement(children, {
       ...remainingProps,
@@ -55,16 +54,20 @@ export default class SavoringToolResponseContainer extends React.Component<Props
   fetchToolResponse = () => {
     const { toolSlug } = this.props
     this.setState({ isFetchingToolResponse: true })
-    axios.get(`/api/toolResponses/fetchByUserOrCreate/${toolSlug}`)
+    axios
+      .get(`/api/toolResponses/fetchByUserOrCreate/${toolSlug}`)
       .then(({ data: toolResponse }) => {
         this.setState({ toolResponse, isFetchingToolResponse: false })
         if (this.isNewToolResponse(toolResponse)) {
           this.addToolResponseToUser(toolResponse)
         }
       })
-      .catch((err) => {
+      .catch(err => {
         global.console.error(err)
-        this.setState({ fetchingToolResponseError: err.message, isFetchingToolResponse: false })
+        this.setState({
+          fetchingToolResponseError: err.message,
+          isFetchingToolResponse: false,
+        })
       })
   }
 
@@ -76,12 +79,26 @@ export default class SavoringToolResponseContainer extends React.Component<Props
     // if last step answered is star rating:
     if (this.progressIsStarRating(nextMultiFormState, prevMultiFormState)) {
       const stars = nextMultiFormState.answerByStep[nextStepN - 1]
-      fireGaEventOnStepChange(toolResponse.title, nextStepN, nextStep.gaEventAction, true, stars)
+      fireGaEventOnStepChange(
+        toolResponse.title,
+        nextStepN,
+        nextStep.gaEventAction,
+        true,
+        stars,
+      )
     } else {
-      fireGaEventOnStepChange(toolResponse.title, nextStepN, nextStep.gaEventAction)
+      fireGaEventOnStepChange(
+        toolResponse.title,
+        nextStepN,
+        nextStep.gaEventAction,
+      )
     }
-    axios.put(`/api/toolResponses/${toolResponse._id}`, { ...toolResponse, ...nextMultiFormState })
-      .catch((err) => {
+    axios
+      .put(`/api/toolResponses/${toolResponse._id}`, {
+        ...toolResponse,
+        ...nextMultiFormState,
+      })
+      .catch(err => {
         global.console.error(err)
         global.alert(err.message)
       })
@@ -90,35 +107,38 @@ export default class SavoringToolResponseContainer extends React.Component<Props
     const { toolResponse } = this.state
     const previousStepN = Number(nextMultiFormState.currentStepNum) - 1
     const previousStep = toolResponse.steps[previousStepN]
-    const isGoingForward = Number(nextMultiFormState.currentStepNum) === Number(prevMultiFormState.currentStepNum + 1)
+    const isGoingForward =
+      Number(nextMultiFormState.currentStepNum) ===
+      Number(prevMultiFormState.currentStepNum + 1)
     const lastStepIsStarr = previousStep.type === 'stars-review'
     return lastStepIsStarr && isGoingForward
   }
   // userPropertiesToUpdate currently only for passing user info on completing intro questionnaire
-  complete = (userPropertiesToUpdate) => {
+  complete = userPropertiesToUpdate => {
     const { toolResponse } = this.state
     fireGaEventToolCompleted(toolResponse.title)
-    axios.put(`/api/toolResponses/${toolResponse._id}`, { status: 'Completed' })
-      .catch((err) => {
+    axios
+      .put(`/api/toolResponses/${toolResponse._id}`, { status: 'Completed' })
+      .catch(err => {
         global.console.error(err)
         global.alert(err.message)
       })
     this.updateUserOnCompletion(userPropertiesToUpdate)
     this.updateUserInDb(userPropertiesToUpdate)
   }
-  answerLinkPress = (link) => {
+  answerLinkPress = link => {
     console.log(link)
   }
-  answerNewLinkPress = (link) => {
+  answerNewLinkPress = link => {
     console.log(link, 'DELETE ME')
     fireGaEventOnOutboundLink(link)
   }
 
-  onConcern = (currentStepNum) => {
+  onConcern = currentStepNum => {
     fireGaEventOnConcern(this.state.toolResponse.title, currentStepNum)
   }
 
-  markToolResponseAsCompleted = (tr) => {
+  markToolResponseAsCompleted = tr => {
     if (tr._id === this.state.toolResponse._id) {
       tr.status = 'Completed'
     }
@@ -134,12 +154,15 @@ export default class SavoringToolResponseContainer extends React.Component<Props
     const { onUpdateUser, user } = this.props
     onUpdateUser({
       ...user,
-      toolResponses: [...user.toolResponses, {
-        createdAt: newToolResponse.createdAt,
-        status: newToolResponse.status,
-        toolId: newToolResponse.toolId,
-        _id: newToolResponse._id,
-      }],
+      toolResponses: [
+        ...user.toolResponses,
+        {
+          createdAt: newToolResponse.createdAt,
+          status: newToolResponse.status,
+          toolId: newToolResponse.toolId,
+          _id: newToolResponse._id,
+        },
+      ],
     })
   }
 
@@ -152,20 +175,29 @@ export default class SavoringToolResponseContainer extends React.Component<Props
     })
   }
 
-  updateUserInDb = (userPropertiesToUpdate) => {
-    axios.put(`/api/users/${this.props.user._id}`, userPropertiesToUpdate)
-      .catch((err) => {
+  updateUserInDb = userPropertiesToUpdate => {
+    axios
+      .put(`/api/users/${this.props.user._id}`, userPropertiesToUpdate)
+      .catch(err => {
         global.console.error(err)
-        global.alert('there was an error processing your answers, please contact me')
+        global.alert(
+          'there was an error processing your answers, please contact me',
+        )
       })
   }
 
-  onLogin = (user) => {
+  onLogin = user => {
     this.props.onLogin(user, this.fetchToolResponse)
   }
 }
 
-function fireGaEventOnStepChange(toolTitle, nextStepN, nextStepGaEventAction, hasValue, value) {
+function fireGaEventOnStepChange(
+  toolTitle,
+  nextStepN,
+  nextStepGaEventAction,
+  hasValue,
+  value,
+) {
   const options = {
     hitType: 'event',
     eventCategory: 'Savoring Tool',

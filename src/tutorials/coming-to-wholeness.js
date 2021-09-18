@@ -8,19 +8,23 @@ export const nick = 'whole'
 
 export const description = 'A PRACTICAL step by step tool for non "enlightment"'
 
-export const credits = 'Source: I\'ve adapted this [tool](/tools) from Connirae\'s [Wholeness Process](http://andreasnlptrainings.com/wholeness/).'
+export const credits =
+  "Source: I've adapted this [tool](/tools) from Connirae's [Wholeness Process](http://andreasnlptrainings.com/wholeness/)."
 
 export const url = 'coming-to-wholeness'
 
-const confirmDecline = (that) => {
-  this.setState({
-    inputILocation: '',
-    inputISizeShape: '',
-    inputISensationQuality: '',
-  }, that.goToStepByTitle('I - Location'))
+const confirmDecline = that => {
+  this.setState(
+    {
+      inputILocation: '',
+      inputISizeShape: '',
+      inputISensationQuality: '',
+    },
+    that.goToStepByTitle('I - Location'),
+  )
 }
 
-const allowCompleteIntegration = (that) => {
+const allowCompleteIntegration = that => {
   const nextIs = [...that.state.Is]
   nextIs.pop()
   that.setState({
@@ -91,13 +95,13 @@ export const steps = [
       <div>
         <Testimony
           text="I feel like that resolved the memory even more and equipped me with a tool I can tap into in a similar situation in the future. That exercise makes me feel much more aware and accepting of myself and what's inside my head, it's incredibly helpful."
-          name="Julianne Barley"
-          nameMeta="cleared all Fibromyalgia symptoms"
+          name='Julianne Barley'
+          nameMeta='cleared all Fibromyalgia symptoms'
         />
         <Testimony
           text="Man! Just completed two rounds of this WHOLENESS process and I'm FLYING! The frustration turned into a soft sensation, and I can keep on going!"
-          name="Tommy Gorden"
-          nameMeta="Hypnotist"
+          name='Tommy Gorden'
+          nameMeta='Hypnotist'
         />
       </div>
     ),
@@ -119,7 +123,9 @@ So are we together on this my friend?`,
       {
         text: 'I rather wait passively for life to improve',
         onClick: () =>
-          global.alert("I wish you all the luck then, hoping you won't need it ;)"),
+          global.alert(
+            "I wish you all the luck then, hoping you won't need it ;)",
+          ),
       },
     ],
   },
@@ -271,7 +277,7 @@ E.g. *"it's in front of me, pretty close, slightly to the right"*
     input: {
       placeholder: 'It’s ...',
       id: 'ILocation',
-      onSubmit: (that) => {
+      onSubmit: that => {
         that.setState(
           {
             Is: that.state.Is.concat({
@@ -295,7 +301,7 @@ And when it's *${stepsState.inputILocation}*, **what is the size & shape of this
     input: {
       placeholder: 'It’s ...',
       id: 'ISizeShape',
-      onSubmit: (that) => {
+      onSubmit: that => {
         const nextIs = [...that.state.Is]
         nextIs.last().sizeShape = that.state.inputISizeShape
         that.setState({ Is: nextIs }, that.next)
@@ -316,7 +322,7 @@ E.g foggy, clear, dense, or empty, heavy, light, vibrating, still, etc.
     input: {
       placeholder: 'The sensation quality is ...',
       id: 'ISensationQuality',
-      onSubmit: (that) => {
+      onSubmit: that => {
         const nextIs = [...that.state.Is]
         nextIs.last().sensationQuality = that.state.inputISensationQuality
         that.setState({ Is: nextIs }, that.next)
@@ -355,7 +361,9 @@ It matters less if the answer is ‘Yes’ or ‘No’, It just tells us what to
     description: stepsState => `
 And no ...
 
-And you just noticed the sensation here - ***${lastI(stepsState).location}*** - doesn’t welcome the invitation to open and relax, right?
+And you just noticed the sensation here - ***${
+      lastI(stepsState).location
+    }*** - doesn’t welcome the invitation to open and relax, right?
 `,
     answers: [
       { text: 'Correct', onClickThat: confirmDecline },
@@ -444,15 +452,19 @@ First notice, is it the same as it was before, or is it a little bit different? 
     description: stepsState => `
 And It's *${stepsState.iCompare}*
 
-And now notice what happens, when this sensation of this "I" here - *${lastI(stepsState)
-    .location}* - is invited to open and relax ... as the fullness of Awareness ... There can be an allowing of this to happen in its own way.
+And now notice what happens, when this sensation of this "I" here - *${
+      lastI(stepsState).location
+    }* - is invited to open and relax ... as the fullness of Awareness ... There can be an allowing of this to happen in its own way.
 
 Does the sensation of this ‘I’ welcome the invitation to open and relax as the fullness of Awareness?
 
-You might prefer to notice what happens when the fullness of Awareness... all of consciousness... is invited to flow in and as... the sensation *${lastI(stepsState).location}*.
+You might prefer to notice what happens when the fullness of Awareness... all of consciousness... is invited to flow in and as... the sensation *${
+      lastI(stepsState).location
+    }*.
 
-Or, it may feel like the Awareness already present in *${lastI(stepsState)
-    .location}*, wakes up to itself.
+Or, it may feel like the Awareness already present in *${
+      lastI(stepsState).location
+    }*, wakes up to itself.
 
 It matters less if the answer is ‘Yes’ or ‘No’, It just tells us what to do next.
 `,
@@ -546,12 +558,16 @@ What is it like, being this way?
       {
         text: "It's better but there's still something left",
         onClick: () =>
-          global.alert("it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?"),
+          global.alert(
+            "it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?",
+          ),
       },
       {
         text: "It's exactly the same as before, I don't percieve any change",
         onClick: () =>
-          global.alert("it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?"),
+          global.alert(
+            "it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?",
+          ),
       },
     ],
   },
@@ -579,12 +595,16 @@ And check how it is being this way in two situations in the past of *${stepsStat
       {
         text: "It's better but there's still something left",
         onClick: () =>
-          global.alert("it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?"),
+          global.alert(
+            "it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?",
+          ),
       },
       {
         text: "It's exactly the same as before, I don't percieve any change",
         onClick: () =>
-          global.alert("it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?"),
+          global.alert(
+            "it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?",
+          ),
       },
     ],
   },
@@ -613,12 +633,16 @@ And check how it is being this way in three (or) more future scenarios of *${ste
       {
         text: "It's better but there's still something left",
         onClick: () =>
-          global.alert("it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?"),
+          global.alert(
+            "it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?",
+          ),
       },
       {
         text: "It's exactly the same as before, I don't percieve any change",
         onClick: () =>
-          global.alert("it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?"),
+          global.alert(
+            "it's very common for the first time. refresh the page and do the process again, and then contact me, I'll walk you thru it, deal?",
+          ),
       },
     ],
   },

@@ -15,23 +15,20 @@ type Props = {
   path: string,
   nick: string,
   ps: string,
-};
+}
 
-const Page = ({
-  title, body, html, path, nick, ps,
-}:
-Props) => (
+const Page = ({ title, body, html, path, nick, ps }: Props) => (
   <div>
-    <div className="container">
-      <div className="row">
-        <div className="col-md-2 col-xs-12">
+    <div className='container'>
+      <div className='row'>
+        <div className='col-md-2 col-xs-12'>
           <Share path={path} title={title} />
         </div>
-        <div className="col-md-8 col-xs-12">
-          <div className="mainheading">
-            <h1 className="posttitle">{title}</h1>
+        <div className='col-md-8 col-xs-12'>
+          <div className='mainheading'>
+            <h1 className='posttitle'>{title}</h1>
           </div>
-          <div className="article-post">
+          <div className='article-post'>
             <Markdown source={body} />
             {html && <div style={{ marginBottom: 40 }}>{html}</div>}
           </div>

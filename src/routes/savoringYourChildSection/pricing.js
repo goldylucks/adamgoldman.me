@@ -24,7 +24,9 @@ First of all, I ain't afraid of anything ;)
 
 So far no one has "taken advantage". **Some pay less, some pay more**, some really can't spare a dime so they work more passionately to refer other parents.
 
-![Yoda "pay less, pay more, feel better, you will"](${cloudImg('adamgoldman.me/yoda-pay.jpg')})
+![Yoda "pay less, pay more, feel better, you will"](${cloudImg(
+    'adamgoldman.me/yoda-pay.jpg',
+  )})
 
 ---
 

@@ -4,7 +4,7 @@ export default [
   {
     title: 'Overwhelmingly beautiful, Adam.....tears',
     text: 'You have helped me process what I thought I had worked on....and I am fully aware the layers are peeled back to reveal more. It has been a pleasure to know you, Adam.',
-    name: 'Beth D\'Angelo',
+    name: "Beth D'Angelo",
     imgSrc: cloudImg('users/beth_deangelo_avatar2'),
   },
   {
@@ -35,7 +35,8 @@ export default [
     title: 'My friends are raving!',
     text: 'I used to think it will never go away and I should live with it. Your amazing - thank you so much! All of my friends are raving about you helping them!!!',
     name: 'Tracy Soussi',
-    imgSrc: 'https://res.cloudinary.com/goldylucks/image/upload/c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1530689574/Tracy_Soussi_ix64h4.jpg',
+    imgSrc:
+      'https://res.cloudinary.com/goldylucks/image/upload/c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1530689574/Tracy_Soussi_ix64h4.jpg',
   },
   {
     title: 'Thank you for this opportunity',

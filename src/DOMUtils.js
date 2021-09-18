@@ -10,7 +10,9 @@
 import { isMobile } from './utils'
 
 export function updateTag(tagName, keyName, keyValue, attrName, attrValue) {
-  const node = document.head.querySelector(`${tagName}[${keyName}="${keyValue}"]`)
+  const node = document.head.querySelector(
+    `${tagName}[${keyName}="${keyValue}"]`,
+  )
   if (node && node.getAttribute(attrName) === attrValue) return
 
   // Remove and create a new tag in order to make it work with bookmarks in Safari

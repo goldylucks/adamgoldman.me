@@ -9,7 +9,8 @@ export default {
   description: 'Description here',
   html: (
     <div>
-      <Markdown source={`
+      <Markdown
+        source={`
 Some participants have lingering feelings mixed with the loss, which needs to be addressed before proceeding with healthy resourceful grieving.
 
 ## Examples

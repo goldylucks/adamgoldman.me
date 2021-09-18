@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Layout from '../../components/Layout'
-
 import Tutorials from './Tutorials'
+
+import Layout from '../../components/Layout'
 
 const title = 'Brain Hacking Automation Tools'
 const description = 'Rewire your brain step by step tutorials'
@@ -15,11 +15,7 @@ async function action({ path }) {
     path,
     component: (
       <Layout path={path}>
-        <Tutorials
-          title={title}
-          path={path}
-          description={description}
-        />
+        <Tutorials title={title} path={path} description={description} />
       </Layout>
     ),
   }

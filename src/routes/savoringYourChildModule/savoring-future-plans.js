@@ -5,7 +5,7 @@ export default {
   title: 'Savoring Future Plans',
   description: 'Savor the future plans & dreams for your child',
   benefits: [
-    'Increase acceptance and peace towards things that won\'t happen',
+    "Increase acceptance and peace towards things that won't happen",
     'Savor future plans you had for & with your child',
   ],
   testimonials: [

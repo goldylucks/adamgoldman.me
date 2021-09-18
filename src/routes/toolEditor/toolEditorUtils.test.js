@@ -13,15 +13,27 @@ describe('strToValidationErrors', () => {
 
 describe('getValidationWarnings', () => {
   it('should return empty array', () => {
-    expect(getValidationWarnings({ steps: [{ title: 'foo' }, { title: 'foo ${s0} ${echo} ${he0} ${his0} ${him0} ${hfoo}' }] })).toEqual([])
+    expect(
+      getValidationWarnings({
+        steps: [
+          { title: 'foo' },
+          { title: 'foo ${s0} ${echo} ${he0} ${his0} ${him0} ${hfoo}' },
+        ],
+      }),
+    ).toEqual([])
   })
   it('should return [${0}, ${1}]', () => {
-    expect(getValidationWarnings({
-      steps: [{ title: 'foo' }, {
-        title: 'foo ${0}',
-        description: 'bar ${s2}',
-        answers: [{ text: '${1}' }],
-      }],
-    })).toEqual(['${0}', '${1}'])
+    expect(
+      getValidationWarnings({
+        steps: [
+          { title: 'foo' },
+          {
+            title: 'foo ${0}',
+            description: 'bar ${s2}',
+            answers: [{ text: '${1}' }],
+          },
+        ],
+      }),
+    ).toEqual(['${0}', '${1}'])
   })
 })

@@ -21,7 +21,8 @@ Most of the work we will do is content free, and you get to choose how much you 
 `,
   },
   {
-    title: 'Wouldn\'t people think I don\'t care for my beloved furry friend if I\'m not in pain?',
+    title:
+      "Wouldn't people think I don't care for my beloved furry friend if I'm not in pain?",
     content: `
 That depends on the people around you.
 
@@ -34,7 +35,7 @@ If you have a real "hard case" or "skeptic" in your close environment, [message 
   },
 
   {
-    title: 'I don\'t want to say goodbye',
+    title: "I don't want to say goodbye",
     content: `
 You don't have to, and I actually strongly recommend against it.
 
@@ -48,7 +49,8 @@ Through the process you will learn how to "say hello" again, and reclaim the con
 `,
   },
   {
-    title: 'I\'m afraid that if I experience them vividly, I\'ll want to go be with them',
+    title:
+      "I'm afraid that if I experience them vividly, I'll want to go be with them",
     content: `
 What I'd like to offer you, is a way to experience their presence more, and attend to the appreciation of the relationship you had, and everything that you gained and learned from it.
 
@@ -56,7 +58,7 @@ So in a way, you will be with them more and feel them more.
 `,
   },
   {
-    title: 'Shouldn\'t loss be painful?',
+    title: "Shouldn't loss be painful?",
     content: `
 Absolutely. I would be very suspicious if you would feel ZERO pain whatsoever about losing this valued relationship.
 
@@ -72,7 +74,7 @@ It propels me and draws me even more towards the future, and that is what I want
 `,
   },
   {
-    title: 'Isn\'t grieving a way to honor our pets?',
+    title: "Isn't grieving a way to honor our pets?",
     content: `
 Indeed, if there was nothing valuable lost, there would be no need to grieve in the first place.
 

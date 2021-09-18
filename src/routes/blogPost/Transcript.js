@@ -4,6 +4,10 @@ import React from 'react'
 import withStyles from 'isomorphic-style-loader/lib/withStyles'
 import axios from 'axios'
 
+import Legend from './components/Legend'
+import TOC from './components/TOC'
+import Details from './components/Details'
+
 import Markdown from '../../components/Markdown'
 import Share from '../../components/Share'
 import BottomSection from '../../components/BottomSection'
@@ -12,9 +16,6 @@ import Tags from '../../components/Tags'
 import StopWarning from '../../components/StopWarning'
 import FbReview from '../../components/FbReview'
 
-import Legend from './components/Legend'
-import TOC from './components/TOC'
-import Details from './components/Details'
 import './Transcript.css'
 
 type Props = {
@@ -32,7 +33,7 @@ type Props = {
   nick: string,
   isBodyRtl?: boolean,
   ps?: string,
-};
+}
 
 class Transcript extends React.Component {
   static defaultProps = {
@@ -68,34 +69,31 @@ class Transcript extends React.Component {
   props: Props
 
   render() {
-    const {
-      title,
-      tags,
-      fbReview,
-      nick,
-      ps,
-    } = this.props
+    const { title, tags, fbReview, nick, ps } = this.props
     return (
       <div>
-        <div className="container">
-          <div className="row">
-            <div className="col-md-2 col-xs-12">
+        <div className='container'>
+          <div className='row'>
+            <div className='col-md-2 col-xs-12'>
               <Share />
             </div>
 
-            <div className="col-md-8 col-xs-12">
-              <div className="mainheading">
-                <h1 className="posttitle">{title}</h1>
+            <div className='col-md-8 col-xs-12'>
+              <div className='mainheading'>
+                <h1 className='posttitle'>{title}</h1>
               </div>
               {fbReview && <FbReview review={fbReview} />}
-              <div className="article-post">
+              <div className='article-post'>
                 <TOC />
                 <hr />
                 {this.renderDetails()}
                 <hr />
                 {this.renderIntro()}
                 <hr />
-                <Legend name={this.props.name} isBodyRtl={this.props.isBodyRtl} />
+                <Legend
+                  name={this.props.name}
+                  isBodyRtl={this.props.isBodyRtl}
+                />
                 <hr />
                 {this.renderTranscript()}
                 {this.renderAdminSave()}
@@ -112,11 +110,15 @@ class Transcript extends React.Component {
   }
 
   renderDetails() {
-    const {
-      date, fbProfile, name, age, diagnosis,
-    } = this.props
+    const { date, fbProfile, name, age, diagnosis } = this.props
     return (
-      <Details date={date} fbProfile={fbProfile} name={name} age={age} diagnosis={diagnosis} />
+      <Details
+        date={date}
+        fbProfile={fbProfile}
+        name={name}
+        age={age}
+        diagnosis={diagnosis}
+      />
     )
   }
 
@@ -137,45 +139,72 @@ ${this.props.intro}
         <h1>Verbatim Transcript + Notes</h1>
 
         {this.renderWarning()}
-        {this.state.transcript.map(({
-      author, source, type, duration, style, isRtl, src, alt,
-    }, idx) => {
-      if (author === 'time') {
-        return <div key={idx} className="chat-message-time">{source}</div>
-      }
+        {this.state.transcript.map(
+          ({ author, source, type, duration, style, isRtl, src, alt }, idx) => {
+            if (author === 'time') {
+              return (
+                <div key={idx} className='chat-message-time'>
+                  {source}
+                </div>
+              )
+            }
 
-      if (author === 'comment') {
-        if (!this.state.showComments) { return null }
-        return (
-          <div key={idx} className={`clearfix transcript-comment ${!this.state.isAdmin ? '' : s.chatMessageContainerAdmin}`}>
-            {this.renderComment({ idx, source })}
-            {this.renderMessageEditable(idx)}
-            {this.renderMessageActions(idx)}
-          </div>
-        )
-      }
+            if (author === 'comment') {
+              if (!this.state.showComments) {
+                return null
+              }
+              return (
+                <div
+                  key={idx}
+                  className={`clearfix transcript-comment ${
+                    !this.state.isAdmin ? '' : s.chatMessageContainerAdmin
+                  }`}
+                >
+                  {this.renderComment({ idx, source })}
+                  {this.renderMessageEditable(idx)}
+                  {this.renderMessageActions(idx)}
+                </div>
+              )
+            }
 
-      if (author === 'headline') {
-        return (
-          <div key={idx} className={`clearfix ${!this.state.isAdmin ? '' : s.chatMessageContainerAdmin}`}>
-            <div className={s.sectionDivider} />
-            {this.renderHeadline({ idx, source })}
-            {this.renderMessageEditable(idx)}
-            {this.renderMessageActions(idx)}
-          </div>
-        )
-      }
+            if (author === 'headline') {
+              return (
+                <div
+                  key={idx}
+                  className={`clearfix ${
+                    !this.state.isAdmin ? '' : s.chatMessageContainerAdmin
+                  }`}
+                >
+                  <div className={s.sectionDivider} />
+                  {this.renderHeadline({ idx, source })}
+                  {this.renderMessageEditable(idx)}
+                  {this.renderMessageActions(idx)}
+                </div>
+              )
+            }
 
-      return (
-        <div key={idx} className={`chat-message-container clearfix ${!this.state.isAdmin ? '' : s.chatMessageContainerAdmin} ${author} ${isRtl ? 'rtl' : ''}`}>
-          {this.renderMessage({
-            idx, type, duration, source, style, src, alt,
-          })}
-          {this.renderMessageEditable(idx)}
-          {this.renderMessageActions(idx)}
-        </div>
-      )
-    })}
+            return (
+              <div
+                key={idx}
+                className={`chat-message-container clearfix ${
+                  !this.state.isAdmin ? '' : s.chatMessageContainerAdmin
+                } ${author} ${isRtl ? 'rtl' : ''}`}
+              >
+                {this.renderMessage({
+                  idx,
+                  type,
+                  duration,
+                  source,
+                  style,
+                  src,
+                  alt,
+                })}
+                {this.renderMessageEditable(idx)}
+                {this.renderMessageActions(idx)}
+              </div>
+            )
+          },
+        )}
       </article>
     )
   }
@@ -186,7 +215,9 @@ ${this.props.intro}
     }
     return (
       <div className={s.controls}>
-        <a className={s.control} onClick={this.savePost}>Save</a>
+        <a className={s.control} onClick={this.savePost}>
+          Save
+        </a>
       </div>
     )
   }
@@ -196,7 +227,7 @@ ${this.props.intro}
       <StopWarning
         id={this.props.title}
         onDismiss={() => this.setState({ showComments: true })}
-        dismissText="I read it twice, show me the comments Adam!"
+        dismissText='I read it twice, show me the comments Adam!'
         text={`# Don't rob yourself from a valuable learning experience!
 
 Go through the verbatim transcript first at least twice before toggling on my notes.
@@ -214,21 +245,25 @@ Pretty please?`}
     )
   }
 
-  renderMessage({
-    idx, type, duration, source, style, src, alt,
-  }) {
+  renderMessage({ idx, type, duration, source, style, src, alt }) {
     if (idx === this.state.messageEditableIdx) {
       return null
     }
     /* eslint-disable react/no-danger */
     return (
-      <div className="chat-message">
-        { type === 'voiceMsg' && `Voice msg - Duration: ${duration}` }
-        { type === 'sticker' && <div style={style} /> }
-        { type.match(/emoticon|image/) && <img alt={alt} src={src} /> }
-        { type === 'likeSticker' && '{LIKE}' }
-        { type.match(/textWithEmoticon|textWithHtml/) && <div dangerouslySetInnerHTML={{ __html: source }} /> }
-        { type === 'text' && <div dangerouslySetInnerHTML={{ __html: source.replace('\n', '<br />') }} /> }
+      <div className='chat-message'>
+        {type === 'voiceMsg' && `Voice msg - Duration: ${duration}`}
+        {type === 'sticker' && <div style={style} />}
+        {type.match(/emoticon|image/) && <img alt={alt} src={src} />}
+        {type === 'likeSticker' && '{LIKE}'}
+        {type.match(/textWithEmoticon|textWithHtml/) && (
+          <div dangerouslySetInnerHTML={{ __html: source }} />
+        )}
+        {type === 'text' && (
+          <div
+            dangerouslySetInnerHTML={{ __html: source.replace('\n', '<br />') }}
+          />
+        )}
       </div>
     )
     /* eslint-enable react/no-danger */
@@ -244,11 +279,13 @@ Pretty please?`}
     /* eslint-disable jsx-a11y/no-autofocus */
     return (
       <textarea
-        className="form-control"
+        className='form-control'
         style={{ height: 400 }}
         autoFocus
         value={this.state.messageEditableValue}
-        onChange={evt => this.setState({ messageEditableValue: evt.target.value })}
+        onChange={evt =>
+          this.setState({ messageEditableValue: evt.target.value })
+        }
       />
     )
     /* eslint-enable jsx-a11y/no-autofocus */
@@ -258,16 +295,16 @@ Pretty please?`}
     if (idx === this.state.messageEditableIdx) {
       return null
     }
-    return <h2 className="transcript-headline">{source}</h2>
+    return <h2 className='transcript-headline'>{source}</h2>
   }
 
   renderComment({ idx, source }) {
     if (idx === this.state.messageEditableIdx) {
       return null
     }
-    return !this.state.showComments
-      ? null
-      : <Markdown className={s.transcriptComment} source={source} />
+    return !this.state.showComments ? null : (
+      <Markdown className={s.transcriptComment} source={source} />
+    )
   }
 
   renderMessageActions(idx) {
@@ -281,9 +318,9 @@ Pretty please?`}
         <a onClick={() => this.addHeadlineBeforeMessage(idx)}>Headline</a>
         <a onClick={() => this.addCommentBeforeMessage(idx)}>Comment Before</a>
         <a onClick={() => this.addCommentAfterMessage(idx)}>Comment After</a>
-        { !isEdited && <a onClick={() => this.editMessage(idx)}>Edit</a> }
-        { isEdited && <a onClick={() => this.uneditMessage()}>UnEdit</a> }
-        { isEdited && <a onClick={() => this.saveMessage(idx)}>Save</a> }
+        {!isEdited && <a onClick={() => this.editMessage(idx)}>Edit</a>}
+        {isEdited && <a onClick={() => this.uneditMessage()}>UnEdit</a>}
+        {isEdited && <a onClick={() => this.saveMessage(idx)}>Save</a>}
       </div>
     )
   }
@@ -363,18 +400,19 @@ Pretty please?`}
   }
 
   savePost = () => {
-    axios.put(`/api/posts/${this.props.url}/transcript`, this.state.transcript)
-      .then((res) => {
+    axios
+      .put(`/api/posts/${this.props.url}/transcript`, this.state.transcript)
+      .then(res => {
         global.console.log('saved!', res.data)
         global.alert('saved!')
       })
-      .catch((err) => {
+      .catch(err => {
         global.console.error(err)
         global.alert(err.message)
       })
   }
 
-  commentHotkey = (evt) => {
+  commentHotkey = evt => {
     if (this.state.messageEditableIdx) {
       if (evt.key === 'Enter' && evt.ctrlKey) {
         this.saveMessage(this.state.messageEditableIdx)

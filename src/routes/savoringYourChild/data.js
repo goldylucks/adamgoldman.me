@@ -8,7 +8,7 @@ export const testimonials = [
   {
     title: 'Overwhelmingly beautiful, Adam.....tears',
     text: 'You have helped me process what I thought I had worked on....and I am fully aware the layers are peeled back to reveal more. It has been a pleasure to know you, Adam.',
-    name: 'Beth D\'Angelo',
+    name: "Beth D'Angelo",
     nameMeta: 'Mother of Sean, transitioned in a car accident',
     imgSrc: cloudImg('users/beth_deangelo_avatar2'),
   },
@@ -30,7 +30,8 @@ export const testimonials = [
     title: 'I was just existing',
     text: 'first 10 month I think I had lost ability to think. I was just existing without any wants/ wishes or needs. this makes me feel that I have so much good memories with him and I should focus more on these Thank you so much!!!',
     name: 'Vita Steina',
-    nameMeta: 'Mother of Ralph, transitioned from illness after long period in the hospital',
+    nameMeta:
+      'Mother of Ralph, transitioned from illness after long period in the hospital',
     imgSrc: cloudImg('users/vita_steina_avatar'),
   },
   {
@@ -45,7 +46,8 @@ export const testimonials = [
     text: 'I used to think it will never go away and I should live with it. Your amazing - thank you so much! All of my friends are raving about you helping them!!!',
     name: 'Tracy Soussi',
     nameMeta: 'Mother of Aymen, admin & facilitator for bereaved parents',
-    imgSrc: 'https://res.cloudinary.com/goldylucks/image/upload/c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1530689574/Tracy_Soussi_ix64h4.jpg',
+    imgSrc:
+      'https://res.cloudinary.com/goldylucks/image/upload/c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1530689574/Tracy_Soussi_ix64h4.jpg',
   },
   {
     title: 'Thank you for this opportunity',
@@ -59,7 +61,8 @@ export const testimonials = [
 export const logistics = [
   {
     title: 'When will I start feeling less pain?',
-    content: 'Most parents confess tremendous relief immediately after the powerful first process - "Peaceful Ending" - Which you will access in a few minutes after getting your copy of the program.',
+    content:
+      'Most parents confess tremendous relief immediately after the powerful first process - "Peaceful Ending" - Which you will access in a few minutes after getting your copy of the program.',
   },
   {
     title: 'Do I need to physically go somewhere?',
@@ -81,7 +84,8 @@ Most of the work I do is content free, and you get to choose how much you want t
 
 export const lossGrief = [
   {
-    title: 'Wouldn\'t people think I don\'t care for my child if I\'m not in pain?',
+    title:
+      "Wouldn't people think I don't care for my child if I'm not in pain?",
     content: `
 That depends on the people around you.
 
@@ -93,7 +97,7 @@ If you have a real "hard case" or "skeptic" in your close environment, [message 
 `,
   },
   {
-    title: 'I don\'t want to say goodbye',
+    title: "I don't want to say goodbye",
     content: `
 You don't have to, and I actually strongly recommend against it.
 
@@ -107,7 +111,8 @@ Through the process you will learn how to "say hello" again, and reclaim the con
 `,
   },
   {
-    title: 'I\'m afraid that if I experience them vividly, I\'ll want to go be with them',
+    title:
+      "I'm afraid that if I experience them vividly, I'll want to go be with them",
     content: `
 What I'd like to offer you, is a way to experience their presence more, and attend to the appreciation of the relationship you had, and everything that you gained and learned from it.
 
@@ -115,7 +120,7 @@ So in a way, you will be with them more and feel them more.
 `,
   },
   {
-    title: 'Shouldn\'t loss be painful?',
+    title: "Shouldn't loss be painful?",
     content: `
 Absolutely. I would be very suspicious if a parent would feel ZERO pain whatsoever about losing their child.
 
@@ -131,7 +136,7 @@ It propels me and draws me even more towards the future, and that is what I want
 `,
   },
   {
-    title: 'Isn\'t grieving a way to honor your child?',
+    title: "Isn't grieving a way to honor your child?",
     content: `
 Indeed, if there was nothing valuable lost, there would be no need to grieve in the first place.
 

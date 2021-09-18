@@ -10,7 +10,8 @@ export default {
   description: 'Description here',
   html: (
     <div>
-      <Markdown source={`
+      <Markdown
+        source={`
 I (Adam) am currently at Chiang Mai, Thailand, GMT +7.
 
 I'm available in [messenger](${MESSENGER_LINK_WELCOME}) most days between 10am-11pm.

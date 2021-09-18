@@ -40,9 +40,9 @@ class PostsGenerator extends React.Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="mainheading">
-          <h1 className="posttitle">Posts Generator</h1>
+      <div className='container'>
+        <div className='mainheading'>
+          <h1 className='posttitle'>Posts Generator</h1>
         </div>
 
         {this.renderDetails()}
@@ -50,7 +50,9 @@ class PostsGenerator extends React.Component {
         <hr />
 
         <div className={s.controls}>
-          <a className={s.control} onClick={this.save}>Save</a>
+          <a className={s.control} onClick={this.save}>
+            Save
+          </a>
         </div>
       </div>
     )
@@ -76,73 +78,145 @@ class PostsGenerator extends React.Component {
     return (
       <div>
         <h2>Details</h2>
-        <div className="form-group">
-        Title
-          <input className="form-control" placeholder="title" value={title} onChange={inputChange.call(this, 'title')} />
+        <div className='form-group'>
+          Title
+          <input
+            className='form-control'
+            placeholder='title'
+            value={title}
+            onChange={inputChange.call(this, 'title')}
+          />
         </div>
 
-        <div className="form-group">
-      Nick
-          <input className="form-control" placeholder="nick" value={nick} onChange={inputChange.call(this, 'nick')} />
+        <div className='form-group'>
+          Nick
+          <input
+            className='form-control'
+            placeholder='nick'
+            value={nick}
+            onChange={inputChange.call(this, 'nick')}
+          />
         </div>
 
-        <div className="form-group">
-      description
-          <input className="form-control" placeholder="description" value={description} onChange={inputChange.call(this, 'description')} />
+        <div className='form-group'>
+          description
+          <input
+            className='form-control'
+            placeholder='description'
+            value={description}
+            onChange={inputChange.call(this, 'description')}
+          />
         </div>
 
-        <div className="form-group">
-      fbProfile
-          <input className="form-control" placeholder="fbProfile" value={fbProfile} onChange={inputChange.call(this, 'fbProfile')} />
+        <div className='form-group'>
+          fbProfile
+          <input
+            className='form-control'
+            placeholder='fbProfile'
+            value={fbProfile}
+            onChange={inputChange.call(this, 'fbProfile')}
+          />
         </div>
 
-        <div className="form-group">
-      name
-          <input className="form-control" placeholder="name" value={name} onChange={inputChange.call(this, 'name')} />
+        <div className='form-group'>
+          name
+          <input
+            className='form-control'
+            placeholder='name'
+            value={name}
+            onChange={inputChange.call(this, 'name')}
+          />
         </div>
 
-        <div className="form-group">
-      tags
-          <input className="form-control" placeholder="tags" value={tags} onChange={inputChange.call(this, 'tags')} />
+        <div className='form-group'>
+          tags
+          <input
+            className='form-control'
+            placeholder='tags'
+            value={tags}
+            onChange={inputChange.call(this, 'tags')}
+          />
         </div>
 
-        <div className="form-group">
-      diagnosis
-          <input className="form-control" placeholder="diagnosis" value={diagnosis} onChange={inputChange.call(this, 'diagnosis')} />
+        <div className='form-group'>
+          diagnosis
+          <input
+            className='form-control'
+            placeholder='diagnosis'
+            value={diagnosis}
+            onChange={inputChange.call(this, 'diagnosis')}
+          />
         </div>
 
-        <div className="form-group">
-      date
-          <input className="form-control" placeholder="date" value={date} onChange={inputChange.call(this, 'date')} />
+        <div className='form-group'>
+          date
+          <input
+            className='form-control'
+            placeholder='date'
+            value={date}
+            onChange={inputChange.call(this, 'date')}
+          />
         </div>
 
-        <div className="form-group">
-      age
-          <input className="form-control" placeholder="age" value={age} onChange={inputChange.call(this, 'age')} />
+        <div className='form-group'>
+          age
+          <input
+            className='form-control'
+            placeholder='age'
+            value={age}
+            onChange={inputChange.call(this, 'age')}
+          />
         </div>
 
-        <div className="form-group">
-      fbReview
-          <input className="form-control" placeholder="fbReview" value={fbReview} onChange={inputChange.call(this, 'fbReview')} />
+        <div className='form-group'>
+          fbReview
+          <input
+            className='form-control'
+            placeholder='fbReview'
+            value={fbReview}
+            onChange={inputChange.call(this, 'fbReview')}
+          />
         </div>
 
-        <div className="form-group">
-      intro
-          <textarea className="form-control" placeholder="intro" value={intro} onChange={inputChange.call(this, 'intro')} />
+        <div className='form-group'>
+          intro
+          <textarea
+            className='form-control'
+            placeholder='intro'
+            value={intro}
+            onChange={inputChange.call(this, 'intro')}
+          />
         </div>
 
-        <div className="form-group">
-      transcript
-          <textarea className="form-control" placeholder="transcript" value={transcript} onChange={inputChange.call(this, 'transcript')} />
+        <div className='form-group'>
+          transcript
+          <textarea
+            className='form-control'
+            placeholder='transcript'
+            value={transcript}
+            onChange={inputChange.call(this, 'transcript')}
+          />
         </div>
 
         <div>
-          <input type="checkbox" id="isRtl" value={isRtl} checked={isRtl} onChange={inputToggle.call(this, 'isRtl')} />
-          <label htmlFor="isRtl">RTL</label>
+          <input
+            type='checkbox'
+            id='isRtl'
+            value={isRtl}
+            checked={isRtl}
+            onChange={inputToggle.call(this, 'isRtl')}
+          />
+          <label htmlFor='isRtl'>RTL</label>
         </div>
         <div>
-          <input type="checkbox" id="isDraft" value={isDraft} checked={isDraft} onChange={inputToggle.call(this, 'isDraft')} />
-          <label htmlFor="isDraft">Draft</label>
+          <input
+            type='checkbox'
+            id='isDraft'
+            value={isDraft}
+            checked={isDraft}
+            onChange={inputToggle.call(this, 'isDraft')}
+          />
+          <label htmlFor='isDraft'>Draft</label>
         </div>
       </div>
     )
@@ -156,12 +230,13 @@ class PostsGenerator extends React.Component {
     // const comment = md => ({ author: 'comment', md })
     state.transcript = eval(state.transcript) // eslint-disable-line no-eval
     state.tags = state.tags.split(', ')
-    axios.post('/api/posts', state)
-      .then((res) => {
+    axios
+      .post('/api/posts', state)
+      .then(res => {
         global.console.log('saved!', res.data)
         global.alert('saved!')
       })
-      .catch((err) => {
+      .catch(err => {
         global.console.error(err)
         global.alert(err.message)
       })

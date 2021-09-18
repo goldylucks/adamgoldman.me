@@ -16,11 +16,11 @@ class LoomEmbedd extends React.Component<Props> {
       <iframe
         title={`Loom embedd of ${src}`}
         style={{ margin: '60px auto', display: 'block' }}
-        width="100%"
-        height="340"
+        width='100%'
+        height='340'
         src={`https://www.useloom.com/embed/${src}`}
-        webkitallowfullscreen="true"
-        mozallowfullscreen="true"
+        webkitallowfullscreen='true'
+        mozallowfullscreen='true'
         allowFullScreen
       />
     )

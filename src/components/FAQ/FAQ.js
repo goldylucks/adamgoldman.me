@@ -6,16 +6,18 @@ import Collapsible from 'react-collapsible'
 import Markdown from '../../components/Markdown'
 
 type Props = {
-  faqs: []
+  faqs: [],
 }
 
 const FAQ = ({ faqs }: Props) => (
   <div>
-    {faqs
-      .map(f => (
-        <Collapsible trigger={<span style={{ fontStyle: 'italic' }}>{f.title}</span>} key={f.title}>
-          <Markdown source={f.content} />
-        </Collapsible>
+    {faqs.map(f => (
+      <Collapsible
+        trigger={<span style={{ fontStyle: 'italic' }}>{f.title}</span>}
+        key={f.title}
+      >
+        <Markdown source={f.content} />
+      </Collapsible>
     ))}
   </div>
 )

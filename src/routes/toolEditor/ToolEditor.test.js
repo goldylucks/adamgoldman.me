@@ -4,14 +4,14 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import Wrapper from '../../../test/TestWrapper'
-
 import ToolEditor from './ToolEditor'
+
+import Wrapper from '../../../test/TestWrapper'
 
 test('ToolEditor no data', () => {
   const component = renderer.create(
     <Wrapper>
-      <ToolEditor url="test" data={{}} />
+      <ToolEditor url='test' data={{}} />
     </Wrapper>,
   )
   const tree = component.toJSON()
@@ -22,7 +22,7 @@ test('ToolEditor with data', () => {
   const component = renderer.create(
     <Wrapper>
       <ToolEditor
-        url="test"
+        url='test'
         data={{
           title: 'Test title',
           description: 'Test description',
@@ -32,14 +32,12 @@ test('ToolEditor with data', () => {
           isGrief: true,
           steps: [
             {
- title: 'Step 0',
-description: 'Step 0 description',
-notes: 'Step 0 notes',
-type: 'radio',
-answers: [
-              { text: 'answer 1' },
-            ],
-},
+              title: 'Step 0',
+              description: 'Step 0 description',
+              notes: 'Step 0 notes',
+              type: 'radio',
+              answers: [{ text: 'answer 1' }],
+            },
           ],
           hiddenFields: [{ label: 'test hidden field' }],
         }}

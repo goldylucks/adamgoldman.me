@@ -10,7 +10,7 @@ type Props = {
 }
 
 const Avatar = ({ imgSrc, alt }: Props) => (
-  <img src={imgSrc} alt={alt} className="avatar" />
+  <img src={imgSrc} alt={alt} className='avatar' />
 )
 
 Avatar.defaultProps = {

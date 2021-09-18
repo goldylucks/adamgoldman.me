@@ -12,14 +12,16 @@ type Props = {
   diagnosis: '',
 }
 
-const Details = ({
-  date, name, age, diagnosis, fbProfile,
-}: Props) => (
+const Details = ({ date, name, age, diagnosis, fbProfile }: Props) => (
   <Markdown
     source={`
 # Details
 - Date of session: ${date}
-${!fbProfile ? `- Name: ${name}` : `- Name: [${name}](https://www.fb.com/${fbProfile})`}
+${
+  !fbProfile
+    ? `- Name: ${name}`
+    : `- Name: [${name}](https://www.fb.com/${fbProfile})`
+}
 ${!age ? '' : `- Age: ${age}`}
 ${!diagnosis ? '&nbsp;' : `- Diagnosis: ${diagnosis}`}
 - Medium of communication: Facebook chat

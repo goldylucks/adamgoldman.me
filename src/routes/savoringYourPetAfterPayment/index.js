@@ -8,9 +8,7 @@ function action({ path }) {
     title: 'Savoring Your Pet - Success',
     path,
     description: 'Success page',
-    component: (
-      <SavoringYourPetAfterPayment path={path} />
-    ),
+    component: <SavoringYourPetAfterPayment path={path} />,
   }
 }
 

@@ -7,10 +7,9 @@ function action({ path }) {
     chunks: ['decisionDestroyer'],
     title: 'Decision Destroyer',
     path,
-    description: 'How to transform decisions that have a negative impact on your life',
-    component: (
-      <DecisionDestroyer path={path} />
-    ),
+    description:
+      'How to transform decisions that have a negative impact on your life',
+    component: <DecisionDestroyer path={path} />,
   }
 }
 

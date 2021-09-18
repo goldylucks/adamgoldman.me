@@ -32,45 +32,95 @@ class Answers extends React.Component<Props, State> {
   }
   render() {
     const {
-      answers, onSubmit, path, isPulsating, onLinkPress, onNewLinkPress,
+      answers,
+      onSubmit,
+      path,
+      isPulsating,
+      onLinkPress,
+      onNewLinkPress,
     } = this.props
     return (
       <div className={cx('answer-group', { pulsating: isPulsating })}>
         {answers.map((answer, idx) => {
           let html
           if (answer.isConcern) {
-            html = <ExternalA className="btn btn-primary btn-fixed" onClick={this.concernClick} href={MESSENGER_LINK_TOOL_CONCERN}>{answer.text}</ExternalA>
+            html = (
+              <ExternalA
+                className='btn btn-secondary btn-fixed'
+                onClick={this.concernClick}
+                href={MESSENGER_LINK_TOOL_CONCERN}
+              >
+                {answer.text}
+              </ExternalA>
+            )
           } else if (answer.isFbShare) {
-            html = <ExternalA className="btn btn-primary btn-fixed" href={getFbShareUrl(path)}>{answer.text}</ExternalA>
+            html = (
+              <ExternalA
+                className='btn btn-secondary btn-fixed'
+                href={getFbShareUrl(path)}
+              >
+                {answer.text}
+              </ExternalA>
+            )
           } else if (answer.link) {
-            html = <Link className="btn btn-primary btn-fixed" onClick={() => onLinkPress(answer.link)} to={answer.link}>{answer.text}</Link>
+            html = (
+              <Link
+                className='btn btn-secondary btn-fixed'
+                onClick={() => onLinkPress(answer.link)}
+                to={answer.link}
+              >
+                {answer.text}
+              </Link>
+            )
           } else if (answer.linkNew) {
-            html = <ExternalA className="btn btn-primary btn-fixed" onClick={() => onNewLinkPress(answer.linkNew)} href={answer.linkNew}>{answer.text}</ExternalA>
+            html = (
+              <ExternalA
+                className='btn btn-secondary btn-fixed'
+                onClick={() => onNewLinkPress(answer.linkNew)}
+                href={answer.linkNew}
+              >
+                {answer.text}
+              </ExternalA>
+            )
           } else if (answer.isOther) {
             html = (
-              <form onSubmit={(evt) => {
+              <form
+                onSubmit={evt => {
                   evt.preventDefault()
                   this.submitOther(idx)
                 }}
               >
                 <input
-                  onChange={(evt) => { this.setState({ other: evt.target.value }) }}
-                  placeholder="Other"
-                  data-test="other"
+                  onChange={evt => {
+                    this.setState({ other: evt.target.value })
+                  }}
+                  placeholder='Other'
+                  data-test='other'
                   value={this.state.other}
-                  className="btn btn-primary text-left"
+                  className='btn btn-secondary text-left'
                 />
                 <button>Submit</button>
               </form>
             )
           } else {
             html = (
-              <a className="btn btn-primary btn-fixed" onClick={() => onSubmit(idx)}>{answer.text}</a>
+              <a
+                className='btn btn-secondary btn-fixed'
+                onClick={() => onSubmit(idx)}
+              >
+                {answer.text}
+              </a>
             )
           }
 
           return (
-            <div key={idx} style={{ marginBottom: 10 }} data-test={`answer-${idx}`}>{html}</div>
+            <div
+              key={idx}
+              style={{ marginBottom: 10 }}
+              data-test={`answer-${idx}`}
+            >
+              {html}
+            </div>
           )
         })}
       </div>
@@ -84,7 +134,9 @@ class Answers extends React.Component<Props, State> {
 
   concernClick = () => {
     this.props.onConcern()
-    global.alert('Let\'s talk about it in messenger, click "get started" if messenger asks you')
+    global.alert(
+      'Let\'s talk about it in messenger, click "get started" if messenger asks you',
+    )
   }
 }
 

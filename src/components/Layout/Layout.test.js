@@ -9,7 +9,7 @@ describe('Layout', () => {
     const wrapper = renderer
       .create(
         <Wrapper>
-          <div className="child" />
+          <div className='child' />
         </Wrapper>,
       )
       .toJSON()

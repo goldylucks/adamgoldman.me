@@ -13,7 +13,9 @@ export default {
 
 Before you read the topics **I sense you* like me just **LOVE presentations**, never reach for the phone during, and thank your maker for oh yet another exhilarating experience.
 
-![Presentation Is Coming](${cloudImg('adamgoldman.me/presentation-is-coming.jpg')})
+![Presentation Is Coming](${cloudImg(
+    'adamgoldman.me/presentation-is-coming.jpg',
+  )})
 
 There are very few people I can actually [listen](TITLE_as_in,_focus,_and_not_doing_anything_else) to without plotting my exit right off the bat, as their move to their second slide.
 

@@ -1,17 +1,17 @@
 // @flow
 
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import handPointsLeft from "@fortawesome/free-regular-svg-icons/faHandPointLeft";
-import handPointsRight from "@fortawesome/free-regular-svg-icons/faHandPointRight";
+import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import handPointsLeft from '@fortawesome/free-regular-svg-icons/faHandPointLeft'
+import handPointsRight from '@fortawesome/free-regular-svg-icons/faHandPointRight'
 
 type Props = {
   children: any,
   isRtl?: boolean,
-};
+}
 
 const Answer = ({ children, isRtl }: Props) => (
-  <div className={`tool-answer ${!isRtl ? "" : "rtl"}`}>
+  <div className={`tool-answer ${!isRtl ? '' : 'rtl'}`}>
     {isRtl ? (
       <FontAwesomeIcon icon={handPointsLeft} style={{ marginLeft: 10 }} />
     ) : (
@@ -19,10 +19,10 @@ const Answer = ({ children, isRtl }: Props) => (
     )}
     {children}
   </div>
-);
+)
 
 Answer.defaultProps = {
   isRtl: false,
-};
+}
 
-export default Answer;
+export default Answer

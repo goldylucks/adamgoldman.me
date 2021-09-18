@@ -1,14 +1,14 @@
 import React from 'react'
 
-import Layout from '../../components/Layout'
-
 import GriefSection from './GriefSection'
+
+import Layout from '../../components/Layout'
 
 async function action({ params }) {
   const path = `/grief/${params.section}`
   const section = await import(`./${params.section}.js`)
     .then(module => module.default) // use an object from `export default`
-    .catch((error) => {
+    .catch(error => {
       if (error.message.startsWith('Cannot find module')) {
         return null // module (section) does not exists
       }

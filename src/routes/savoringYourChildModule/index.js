@@ -1,14 +1,14 @@
 import React from 'react'
 
+import SavoringYourChildModule from './savoringYourChildModule'
+
 import Layout from '../../components/Layout'
 import SavoringToolResponseContainer from '../../components/SavoringToolResponseContainer'
-
-import SavoringYourChildModule from './savoringYourChildModule'
 
 async function action({ params, path }) {
   const module = await import(`./${params.module}.js`)
     .then(_module => _module.default) // use an object from `export default`
-    .catch((error) => {
+    .catch(error => {
       if (error.message.startsWith('Cannot find module')) {
         return null // module (module) does not exists
       }

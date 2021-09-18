@@ -4,7 +4,7 @@ import * as React from 'react'
 
 type Props = {
   children: React.Node,
-  currentStepNum: number
+  currentStepNum: number,
 }
 
 class DontReRender extends React.Component<Props> {

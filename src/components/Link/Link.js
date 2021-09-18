@@ -16,11 +16,11 @@ class Link extends React.Component {
     to: PropTypes.string.isRequired,
     children: PropTypes.node.isRequired,
     onClick: PropTypes.func,
-  };
+  }
 
   static defaultProps = {
     onClick: null,
-  };
+  }
 
   render() {
     const { to, children, ...props } = this.props
@@ -31,7 +31,7 @@ class Link extends React.Component {
     )
   }
 
-  handleClick = (event) => {
+  handleClick = event => {
     if (this.props.onClick) {
       this.props.onClick(event)
     }

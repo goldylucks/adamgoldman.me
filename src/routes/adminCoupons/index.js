@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Layout from '../../components/Layout'
-
 import AdminCoupons from './adminCoupons'
+
+import Layout from '../../components/Layout'
 
 async function action({ path }) {
   return {

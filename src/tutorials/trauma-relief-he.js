@@ -11,11 +11,13 @@ export const tags = ['טראומה']
 export const title = 'שחרור מטראומה'
 export const nick = 'מלחמה ברוורס זה שלום'
 // eslint-disable-next-line prettier/prettier
-export const description = 'איך להפוך חויה שלילית, ריבים, ויכוחים וזכרונות שעדיין רעים למשאב עוצמתי'
+export const description =
+  'איך להפוך חויה שלילית, ריבים, ויכוחים וזכרונות שעדיין רעים למשאב עוצמתי'
 
 export const isRtl = true
 
-export const credits = 'בניתי את ה[כלי](/tools) הזה על בסיס תהליך הטראומה של באנדלר, פרטים נוספים בספר [Heart of the Mind](http://amzn.to/2xFE4yX) פרק 7'
+export const credits =
+  'בניתי את ה[כלי](/tools) הזה על בסיס תהליך הטראומה של באנדלר, פרטים נוספים בספר [Heart of the Mind](http://amzn.to/2xFE4yX) פרק 7'
 
 export const initialState = {
   gender: '',
@@ -31,26 +33,33 @@ export const steps = [
       <div>
         <Testimony
           isRtl
-          name="דורה טליאס"
-          nameMeta="מאובחנת עם סרטן השד"
-          text="מדהים!!!
-כל כך פשוט ואפקטיבי.. תוך חצי שעה בערך מזכרון עצוב.. מאוכזב.. כועס.. הפך להיות לזכרון מצחיק ללא שום חשיבות ומשמעות..תנו לעצמכם את המתנה הזו.."
+          name='דורה טליאס'
+          nameMeta='מאובחנת עם סרטן השד'
+          text='מדהים!!!
+כל כך פשוט ואפקטיבי.. תוך חצי שעה בערך מזכרון עצוב.. מאוכזב.. כועס.. הפך להיות לזכרון מצחיק ללא שום חשיבות ומשמעות..תנו לעצמכם את המתנה הזו..'
         />
         <Testimony
           isRtl
-          text="יותר אפקטיבי מ8 שנים טיפול פסיכולוגי"
-          name="רותם אלישע"
-          nameMeta="חוותה אונס במשך כמה שנים"
+          text='יותר אפקטיבי מ8 שנים טיפול פסיכולוגי'
+          name='רותם אלישע'
+          nameMeta='חוותה אונס במשך כמה שנים'
         />
-      </div>),
+      </div>
+    ),
     description: () => `
 אהלן! אדם כאן, אני ופרצופי איתך בכל שלב, ותמיד [כאן](${MESSENGER_LINK_WELCOME}) לשאלות :)
 
 עדיף לדבר אליך בלשון ... ?
 `,
     answers: [
-      { text: 'דבר אלי בלשון זכר', onClickThat: that => that.setState({ gender: 'male' }, that.next) },
-      { text: 'דבר אלי בלשון נקבה', onClickThat: that => that.setState({ gender: 'female' }, that.next) },
+      {
+        text: 'דבר אלי בלשון זכר',
+        onClickThat: that => that.setState({ gender: 'male' }, that.next),
+      },
+      {
+        text: 'דבר אלי בלשון נקבה',
+        onClickThat: that => that.setState({ gender: 'female' }, that.next),
+      },
     ],
   },
   {
@@ -58,7 +67,9 @@ export const steps = [
     description: ({ gender }) => `
 לכולנו יש זכרונות מהעבר שעדיין משפיעים עלינו בצורה לא מועילה.
 
-חויות שקופצות לראש ללא הזמנה ולמרות ש${he.ata(gender)} ${he.yodea(gender)} שכלית שזה נגמר, זה עדיין משפיע עליך.
+חויות שקופצות לראש ללא הזמנה ולמרות ש${he.ata(gender)} ${he.yodea(
+      gender,
+    )} שכלית שזה נגמר, זה עדיין משפיע עליך.
 
 כמה דוגמאות נפוצות:
 
@@ -70,9 +81,7 @@ export const steps = [
 בעוד רגע אני אוביל אותך בתהליך קצר, אבל קודם ${he.ata(gender)} בטח תוהה ...
 
 `,
-    answers: [
-      { text: 'איך זה הולך לעבוד אדם?' },
-    ],
+    answers: [{ text: 'איך זה הולך לעבוד אדם?' }],
   },
 
   {
@@ -96,7 +105,9 @@ export const steps = [
   {
     title: 'שם',
     description: gender => `
-מעולה, עכשיו לפני ש${he.ata(gender)} ${he.bojer(gender)} את הזכרון הראשון לשחרר, ${he.tagid(gender)}, מה השם שלך?
+מעולה, עכשיו לפני ש${he.ata(gender)} ${he.bojer(
+      gender,
+    )} את הזכרון הראשון לשחרר, ${he.tagid(gender)}, מה השם שלך?
 `,
     input: {
       placeholder: 'קוראים לי ...',
@@ -108,7 +119,11 @@ export const steps = [
     title: 'בחירת זכרון מהעבר לשחרר',
     description: ({ inputName, gender }) => `
 אוקי ${inputName},
-${he.tajshov(gender)} על זכרון שהיה לך בעבר, שקופץ לך לראש לפעמים, ועדיין גורם לך להרגיש רע, או באופן ש${he.ata(gender)} לא רוצה, ו${he.tomar(gender)} לי ...
+${he.tajshov(
+  gender,
+)} על זכרון שהיה לך בעבר, שקופץ לך לראש לפעמים, ועדיין גורם לך להרגיש רע, או באופן ש${he.ata(
+      gender,
+    )} לא רוצה, ו${he.tomar(gender)} לי ...
 
 מה היה הגיל של ${inputName} בזכרון הזה?
 `,
@@ -121,29 +136,53 @@ ${he.tajshov(gender)} על זכרון שהיה לך בעבר, שקופץ לך ל
   {
     title: 'לפני שמשהו קרה, בטוח לחלוטין',
     description: ({ gender, inputName, inputAgeInMemory }) => `
-עכשיו בעוד רגע אני אבקש ממך להקפיא את הזכרון ברגע שלפני שמשהו קרה, ככה ש${he.ata(gender)} רואה את ${inputName} ${he.ben(gender)} ${inputAgeInMemory} בתמונה קפואה, ${he.batuaj(gender)} לחלוטין כמו שאני הייתי לפני התאונה שלי:
+עכשיו בעוד רגע אני אבקש ממך להקפיא את הזכרון ברגע שלפני שמשהו קרה, ככה ש${he.ata(
+      gender,
+    )} רואה את ${inputName} ${he.ben(
+      gender,
+    )} ${inputAgeInMemory} בתמונה קפואה, ${he.batuaj(
+      gender,
+    )} לחלוטין כמו שאני הייתי לפני התאונה שלי:
 
 לאחי הייתה תאונה לפני הרבה זמן על האופנוע, בזמן שעבדך הנאמן כאן היה רכוב מאחור.
 
-(${he.ata(gender)}  ${he.yajol(gender)} לדמיין כמה אבא העריך את הבן שלו, אח שלי, מחזיק את האופנוע ...)
+(${he.ata(gender)}  ${he.yajol(
+      gender,
+    )} לדמיין כמה אבא העריך את הבן שלו, אח שלי, מחזיק את האופנוע ...)
 
 כמה רגעים לפני התאונה, לא היה שום סימן לסכנה, וכולנו בטוחים לחלוטין.
 
-אז אני רוצה ש${he.tire(gender)} את ${inputName} ${he.ben(gender)} ${inputAgeInMemory} בתמונה קפואה, שחור לבן, ${he.batuaj(gender)} לחלוטין, במסך קטן מושתק רחוק רחוק, ו${he.taase(gender)} את התמונה קצת לא בפוקוס וברזולוציה נמוכה.
+אז אני רוצה ש${he.tire(gender)} את ${inputName} ${he.ben(
+      gender,
+    )} ${inputAgeInMemory} בתמונה קפואה, שחור לבן, ${he.batuaj(
+      gender,
+    )} לחלוטין, במסך קטן מושתק רחוק רחוק, ו${he.taase(
+      gender,
+    )} את התמונה קצת לא בפוקוס וברזולוציה נמוכה.
 
-קצת כמו ש${he.ata(gender)}  ${he.bojer(gender)} את הרזולוציה הכי נמוכה ביוטיוב,  ${he.makir(gender)}?
+קצת כמו ש${he.ata(gender)}  ${he.bojer(
+      gender,
+    )} את הרזולוציה הכי נמוכה ביוטיוב,  ${he.makir(gender)}?
 
 ${he.taase(gender)} את זה עכשיו, ותגיד לי כשסיימת.
 `,
-    answers: [
-      { text: 'סיימתי, בוא נמשיך' },
-    ],
+    answers: [{ text: 'סיימתי, בוא נמשיך' }],
   },
 
   {
     title: 'אחרי שהכל נגמר, בטוח לחלוטין',
     description: ({ gender, inputName, inputAgeInMemory }) => `
-מעולה, עכשיו בעוד רגע אני אבקש ממך לראות את ${inputName} ${he.ben(gender)} ${inputAgeInMemory} באותה תמונה קפואה, שחור לבן, במסך הקטן הרחוק רחוק, ו${he.tarits(gender)} את הזכרון קדימה הכי מהר ש${he.ata(gender)}  ${he.yajol(gender)}, ו${he.takpi(gender)} את התמונה בסוף הזכרון, אחרי שהכל נגמר" ו${he.ata(gender)} רואה את ${inputName} ${he.ben(gender)} ${inputAgeInMemory} שם ${he.batuaj(gender)} לחלוטין.
+מעולה, עכשיו בעוד רגע אני אבקש ממך לראות את ${inputName} ${he.ben(
+      gender,
+    )} ${inputAgeInMemory} באותה תמונה קפואה, שחור לבן, במסך הקטן הרחוק רחוק, ו${he.tarits(
+      gender,
+    )} את הזכרון קדימה הכי מהר ש${he.ata(gender)}  ${he.yajol(
+      gender,
+    )}, ו${he.takpi(gender)} את התמונה בסוף הזכרון, אחרי שהכל נגמר" ו${he.ata(
+      gender,
+    )} רואה את ${inputName} ${he.ben(
+      gender,
+    )} ${inputAgeInMemory} שם ${he.batuaj(gender)} לחלוטין.
 
 כמה שניות לפני התאונה שלנו, אחי ואני נסענו בכיף שלנו על האופנוע, סצנה די נייטרלית סך הכל.
 
@@ -151,9 +190,17 @@ ${he.taase(gender)} את זה עכשיו, ותגיד לי כשסיימת.
 
 הרגל שלי לא החלימה 100% עדיין, אבל התאונה עצמה נגמרה, וכולנו בטוחים שוב.
 
-אז אני רוצה ש${he.tarits(gender)} קדימה את זכרון העבר למקום דומה, בו${he.ata(gender)}  ${he.yajol(gender)} לראות את ${inputName} ${he.ben(gender)} ${inputAgeInMemory} אחרי כל מה שקרה, ${he.batuaj(gender)} לחלוטין, ברגע הנייטרלי או החיובי הבא.
+אז אני רוצה ש${he.tarits(gender)} קדימה את זכרון העבר למקום דומה, בו${he.ata(
+      gender,
+    )}  ${he.yajol(gender)} לראות את ${inputName} ${he.ben(
+      gender,
+    )} ${inputAgeInMemory} אחרי כל מה שקרה, ${he.batuaj(
+      gender,
+    )} לחלוטין, ברגע הנייטרלי או החיובי הבא.
 
-עכשיו, ${he.ata(gender)}  ${he.makir(gender)} את הסאונד של סרט מצוייר ש${he.ata(gender)}  ${he.meritz(gender)} אותו קדימה?
+עכשיו, ${he.ata(gender)}  ${he.makir(gender)} את הסאונד של סרט מצוייר ש${he.ata(
+      gender,
+    )}  ${he.meritz(gender)} אותו קדימה?
 `,
     answers: ({ gender }) => [
       { text: 'להריץ קדימה סרט מצוייר, בטח! צליל משעשע' },
@@ -166,25 +213,49 @@ ${he.taase(gender)} את זה עכשיו, ותגיד לי כשסיימת.
     description: ({ gender, inputName, inputAgeInMemory }) => `
 מעולה, אז הנה מה שאני רוצה ש${he.taase(gender)}:
 
-1. ${he.tire(gender)} את ${inputName} ${he.ben(gender)} ${inputAgeInMemory}, במסך קטן רחוק רחוק, קפוא בזמן, בהתחלת הזכרון, לפני שמשהו קרה, ${he.batuaj(gender)} לחלוטין
-2.  ${he.taase(gender)} את התמונה שחור לבן, קצת לא בפוקוס, ו${he.torid(gender)} את הרזולוציה
+1. ${he.tire(gender)} את ${inputName} ${he.ben(
+      gender,
+    )} ${inputAgeInMemory}, במסך קטן רחוק רחוק, קפוא בזמן, בהתחלת הזכרון, לפני שמשהו קרה, ${he.batuaj(
+      gender,
+    )} לחלוטין
+2.  ${he.taase(gender)} את התמונה שחור לבן, קצת לא בפוקוס, ו${he.torid(
+      gender,
+    )} את הרזולוציה
 3. תשתיק את הקול
-4.  ${he.tarits(gender)} קדימה את הסרט הכי מהר ש${he.ata(gender)}  ${he.yajol(gender)} כל הדרך עד אחרי שהכל נגמר, ו${he.ata(gender)} רואה את ${inputName} ${he.ben(gender)} ${inputAgeInMemory} ברגע הנייטרלי או החיובי הבא
+4.  ${he.tarits(gender)} קדימה את הסרט הכי מהר ש${he.ata(gender)}  ${he.yajol(
+      gender,
+    )} כל הדרך עד אחרי שהכל נגמר, ו${he.ata(
+      gender,
+    )} רואה את ${inputName} ${he.ben(
+      gender,
+    )} ${inputAgeInMemory} ברגע הנייטרלי או החיובי הבא
 5. כמו סרט מצוייר,  ${he.tishma(gender)} את הכל רץ קדימה מאוד מהר
 
-${he.taase(gender)} את זה עכשיו, ו${he.teiadea(gender)} אותי כש${he.ata(gender)}  ${he.mesayem(gender)}
+${he.taase(gender)} את זה עכשיו, ו${he.teiadea(gender)} אותי כש${he.ata(
+      gender,
+    )}  ${he.mesayem(gender)}
 
 `,
     answers: ({ gender, inputName, inputAgeInMemory }) => [
       { text: 'סיימתי, בוא נמשיך' },
-      { text: `אוקיי. הרצתי את הזכרון קדימה, ואני רואה את ${inputName} ${he.ben(gender)} ${inputAgeInMemory} ${he.batuaj(gender)} לחלוטין אחרי הסוף` },
+      {
+        text: `אוקיי. הרצתי את הזכרון קדימה, ואני רואה את ${inputName} ${he.ben(
+          gender,
+        )} ${inputAgeInMemory} ${he.batuaj(gender)} לחלוטין אחרי הסוף`,
+      },
     ],
   },
 
   {
     title: 'מלחמה ברוורס זה ...',
     description: ({ gender, inputName, inputAgeInMemory }) => `
-עכשיו, בזמן ש${he.ata(gender)} רואה את ${inputName} ${he.ben(gender)} ${inputAgeInMemory} בתמונה הקטנה רחוק רחוק, ${he.batuaj(gender)} לחלוטין, אחרי הסוף, אי פעם חשבת כבר למה הופך סרט מלחמה, כש${he.ata(gender)}  ${he.meritz(gender)} אותו ברוורס?
+עכשיו, בזמן ש${he.ata(gender)} רואה את ${inputName} ${he.ben(
+      gender,
+    )} ${inputAgeInMemory} בתמונה הקטנה רחוק רחוק, ${he.batuaj(
+      gender,
+    )} לחלוטין, אחרי הסוף, אי פעם חשבת כבר למה הופך סרט מלחמה, כש${he.ata(
+      gender,
+    )}  ${he.meritz(gender)} אותו ברוורס?
 
 [diihWjg0lAM](YtEmbedd)
 
@@ -200,7 +271,7 @@ ${he.taase(gender)} את זה עכשיו, ו${he.teiadea(gender)} אותי כש$
 
 `,
     answers: [
-      { text: 'לא חשבתי על זה עדיין, ת\'כלס זה מעניין ...' },
+      { text: "לא חשבתי על זה עדיין, ת'כלס זה מעניין ..." },
       { text: 'חשבתי על זה, אכן' },
     ],
   },
@@ -208,13 +279,27 @@ ${he.taase(gender)} את זה עכשיו, ו${he.teiadea(gender)} אותי כש$
   {
     title: 'רוורס כמו סרט מצוייר',
     description: ({ gender, inputAgeInMemory }) => `
-עכשיו בעוד רגע אני אבקש ממך לעשות משהו מעניין, ואל  ${he.taase(gender)} את זה עד שאני אומר לך, אוקיי?
+עכשיו בעוד רגע אני אבקש ממך לעשות משהו מעניין, ואל  ${he.taase(
+      gender,
+    )} את זה עד שאני אומר לך, אוקיי?
 
-אני רוצה ש${he.tikanes(gender)} אל תוך סוף הזכרון, אל תוך הגוף של עצמך ${he.ben(gender)}  ה${inputAgeInMemory}, ${he.batuaj(gender)} לחלוטין, ככה ש${he.ata(gender)} רואה את מה שראית באותו זמן,  ${he.shomea(gender)} מה ששמעת ו...
+אני רוצה ש${he.tikanes(gender)} אל תוך סוף הזכרון, אל תוך הגוף של עצמך ${he.ben(
+      gender,
+    )}  ה${inputAgeInMemory}, ${he.batuaj(gender)} לחלוטין, ככה ש${he.ata(
+      gender,
+    )} רואה את מה שראית באותו זמן,  ${he.shomea(gender)} מה ששמעת ו...
 
-${he.tarits(gender)} את הזכרון ברוורס, דרך העיניים שלך, הכי מהר ש${he.ata(gender)}  ${he.yajol(gender)}, כל הדרך עד ללפני ההתחלה, איפה ש${he.ata(gender)} ${he.batuaj(gender)} לחלוטין שוב.
+${he.tarits(gender)} את הזכרון ברוורס, דרך העיניים שלך, הכי מהר ש${he.ata(
+      gender,
+    )}  ${he.yajol(gender)}, כל הדרך עד ללפני ההתחלה, איפה ש${he.ata(
+      gender,
+    )} ${he.batuaj(gender)} לחלוטין שוב.
 
-אז ${he.ata(gender)} ${he.shomea(gender)} את כולם מדברים אחורה, רואה את הכל ואת כולם נעים אחורה ברוורס, הכי מהר ש${he.ata(gender)}  ${he.yajol(gender)}.
+אז ${he.ata(gender)} ${he.shomea(
+      gender,
+    )} את כולם מדברים אחורה, רואה את הכל ואת כולם נעים אחורה ברוורס, הכי מהר ש${he.ata(
+      gender,
+    )}  ${he.yajol(gender)}.
 
 (ניחשת טוב, כמו סרט מצוייר)
 
@@ -222,11 +307,27 @@ ${he.tarits(gender)} את הזכרון ברוורס, דרך העיניים של�
 
 אז הנה הצעדים שוב:
 
-1.  ${he.tikanes(gender)} אל תוך סוף הזכרון, לתוך הגוף של עצמך ${he.ben(gender)} ${inputAgeInMemory}, ${he.batuaj(gender)} לחלוטין
+1.  ${he.tikanes(gender)} אל תוך סוף הזכרון, לתוך הגוף של עצמך ${he.ben(
+      gender,
+    )} ${inputAgeInMemory}, ${he.batuaj(gender)} לחלוטין
 2. ${he.tire(gender)} את מה שראית באותו זמן,  ${he.tishma(gender)} את מה ששמעת
-3.  ${he.tarits(gender)} את הזכרון ברוורס הכי מהר ש${he.ata(gender)}  ${he.yajol(gender)},  ${he.tishma(gender)} את כולם מדברים אחורה, ${he.tire(gender)} את הכל ואת כולם נעים אחורה ברוורס, הכי מהר ש${he.ata(gender)}  ${he.yajol(gender)}, כמו סרט מצוייר, כל הדרך עד לפני ההתחלה, איפה ש${he.ata(gender)} ${he.batuaj(gender)} לחלוטין שוב
+3.  ${he.tarits(gender)} את הזכרון ברוורס הכי מהר ש${he.ata(
+      gender,
+    )}  ${he.yajol(gender)},  ${he.tishma(
+      gender,
+    )} את כולם מדברים אחורה, ${he.tire(
+      gender,
+    )} את הכל ואת כולם נעים אחורה ברוורס, הכי מהר ש${he.ata(
+      gender,
+    )}  ${he.yajol(
+      gender,
+    )}, כמו סרט מצוייר, כל הדרך עד לפני ההתחלה, איפה ש${he.ata(
+      gender,
+    )} ${he.batuaj(gender)} לחלוטין שוב
 
-${he.taatsom(gender)} את העיניים ו${he.taase(gender)} את זה עכשיו,  ${he.teiadea(gender)} אותי שסיימת
+${he.taatsom(gender)} את העיניים ו${he.taase(
+      gender,
+    )} את זה עכשיו,  ${he.teiadea(gender)} אותי שסיימת
 
 `,
     answers: [
@@ -245,29 +346,59 @@ ${he.taatsom(gender)} את העיניים ו${he.taase(gender)} את זה עכש
 
 עכשיו נעשה את זה אפילו יותר טוב.
 
-אני רוצה ש${he.taase(gender)} את אותו הדבר, אבל הפעם ${he.tosif(gender)} נעימה נחמדה או צליל של מהו מצחיק בזמן ש${he.ata(gender)}  ${he.meritz(gender)} את הזכרון ברוורס.
+אני רוצה ש${he.taase(gender)} את אותו הדבר, אבל הפעם ${he.tosif(
+      gender,
+    )} נעימה נחמדה או צליל של מהו מצחיק בזמן ש${he.ata(gender)}  ${he.meritz(
+      gender,
+    )} את הזכרון ברוורס.
 
 לרוב האנשים שפגשתי נעימת קרקס עובדת כמו קסם:
 
 [1D5Sa2Yq-2g](YtEmbedd)
 
-${he.ata(gender)}  ${he.yajol(gender)} להשתמש בכל דבר ש${he.ata(gender)} רוצה שגורם לך לצחוק, להרגיש גיחוך, עוצמתי, מה ש${he.ata(gender)} ${he.maadif(gender)}.
+${he.ata(gender)}  ${he.yajol(gender)} להשתמש בכל דבר ש${he.ata(
+      gender,
+    )} רוצה שגורם לך לצחוק, להרגיש גיחוך, עוצמתי, מה ש${he.ata(
+      gender,
+    )} ${he.maadif(gender)}.
 
-יש כאלה ש${he.ohavim(gender)} לשמוע קומיקאי מסויים. ${he.ajerim(gender)} ${he.margishim(gender)} עוצמה פנימית כש${he.shomim(gender)} שיר כלשהו.
+יש כאלה ש${he.ohavim(gender)} לשמוע קומיקאי מסויים. ${he.ajerim(
+      gender,
+    )} ${he.margishim(gender)} עוצמה פנימית כש${he.shomim(gender)} שיר כלשהו.
 
 וכמובן אפשר תמיד פשוט לצחוק :)
 
 [yLmd0100T9g](YtEmbedd)
 
-${he.tivjar(gender)} את מה שגורם לך להרגיש הכי טוב עכשיו ו${he.taase(gender)} את זה שוב ככה:
+${he.tivjar(gender)} את מה שגורם לך להרגיש הכי טוב עכשיו ו${he.taase(
+      gender,
+    )} את זה שוב ככה:
 
 
-1.  ${he.tikanes(gender)} אל תוך סוף הזכרון, לתוך הגוף של עצמך ${he.ben(gender)} ${inputAgeInMemory}, ${he.batuaj(gender)} לחלוטין
+1.  ${he.tikanes(gender)} אל תוך סוף הזכרון, לתוך הגוף של עצמך ${he.ben(
+      gender,
+    )} ${inputAgeInMemory}, ${he.batuaj(gender)} לחלוטין
 2. ${he.tire(gender)} את מה שראית באותו זמן,  ${he.tishma(gender)} את מה ששמעת
 3.  ${he.tatjil(gender)} את מוזיקת הקרקס (או צליל/שיר אחר שבחרת)
-4.  ${he.tarits(gender)} את הזכרון ברוורס הכי מהר ש${he.ata(gender)}  ${he.yajol(gender)},  ${he.tishma(gender)} את כולם מדברים אחורה, ${he.tire(gender)} את הכל ואת כולם נעים אחורה ברוורס, הכי מהר ש${he.ata(gender)}  ${he.yajol(gender)}, כמו סרט מצוייר, כל הדרך עד לפני ההתחלה, איפה ש${he.ata(gender)} ${he.batuaj(gender)} לחלוטין שוב
+4.  ${he.tarits(gender)} את הזכרון ברוורס הכי מהר ש${he.ata(
+      gender,
+    )}  ${he.yajol(gender)},  ${he.tishma(
+      gender,
+    )} את כולם מדברים אחורה, ${he.tire(
+      gender,
+    )} את הכל ואת כולם נעים אחורה ברוורס, הכי מהר ש${he.ata(
+      gender,
+    )}  ${he.yajol(
+      gender,
+    )}, כמו סרט מצוייר, כל הדרך עד לפני ההתחלה, איפה ש${he.ata(
+      gender,
+    )} ${he.batuaj(gender)} לחלוטין שוב
 
-${he.taatsom(gender)} את העיניים ו${he.taase(gender)} את זה עכשיו, ו${he.teiadea(gender)} אותי כשסיימת, ו${he.ata(gender)} בתחילת הזכרון שוב, ו${he.ata(gender)} ${he.batuaj(gender)} לחלוטין
+${he.taatsom(gender)} את העיניים ו${he.taase(
+      gender,
+    )} את זה עכשיו, ו${he.teiadea(gender)} אותי כשסיימת, ו${he.ata(
+      gender,
+    )} בתחילת הזכרון שוב, ו${he.ata(gender)} ${he.batuaj(gender)} לחלוטין
 
 `,
     answers: [
@@ -297,14 +428,22 @@ ${he.taatsom(gender)} את העיניים ו${he.taase(gender)} את זה עכש
   {
     title: 'נסיון שווא',
     description: ({ gender }) => `
-${he.tajshov(gender)} על אותו זכרון ישן מהעבר שלך ו${he.tenase(gender)} לשווא להרגיש כלפיו אותו דבר כמו פעם, לפני שלמדת את התהליך הזה.
+${he.tajshov(gender)} על אותו זכרון ישן מהעבר שלך ו${he.tenase(
+      gender,
+    )} לשווא להרגיש כלפיו אותו דבר כמו פעם, לפני שלמדת את התהליך הזה.
 
-${he.ata(gender)} ${he.alul(gender)} להיות ${he.mufta(gender)} לגלות שזה לא כל כך קל יותר :)
+${he.ata(gender)} ${he.alul(gender)} להיות ${he.mufta(
+      gender,
+    )} לגלות שזה לא כל כך קל יותר :)
 `,
     answers: ({ gender }) => [
       { text: `זה מדהים! אני ${he.margish(gender)} טוב!` },
       { text: `אני ${he.margish(gender)} יותר גרוע` },
-      { text: `מה לעזא... אני אשכרה ${he.margish(gender)} טוב לגבי זה, מה קורה כאן?!` },
+      {
+        text: `מה לעזא... אני אשכרה ${he.margish(
+          gender,
+        )} טוב לגבי זה, מה קורה כאן?!`,
+      },
       { text: `אני ${he.margish(gender)} בדיוק אותו דבר כמו בעבר` },
     ],
   },
@@ -312,22 +451,35 @@ ${he.ata(gender)} ${he.alul(gender)} להיות ${he.mufta(gender)} לגלות �
   {
     title: 'להרגיש טוב כלפי ...',
     description: ({ gender }) => `
-וכמה טוב ${he.ata(gender)} ${he.margish(gender)} עכשיו, כש${he.ata(gender)} ${he.lomed(gender)}, ש${he.ata(gender)}  ${he.yajol(gender)} ללמוד להרגיש טוב יותר כלפי מה שפעם השפיע עליך בצורה שכבר לא מועילה?
+וכמה טוב ${he.ata(gender)} ${he.margish(gender)} עכשיו, כש${he.ata(
+      gender,
+    )} ${he.lomed(gender)}, ש${he.ata(gender)}  ${he.yajol(
+      gender,
+    )} ללמוד להרגיש טוב יותר כלפי מה שפעם השפיע עליך בצורה שכבר לא מועילה?
 
 1-10, כמה טוב ${he.ata(gender)} ${he.margish(gender)} עכשיו?
 
-ו${he.sim(gender)} לב, זה  יכול להיות מעניין לשים לב לא רק איפה בגוף ${he.ata(gender)}  ${he.yajol(gender)} להרגיש טוב קודם,
+ו${he.sim(gender)} לב, זה  יכול להיות מעניין לשים לב לא רק איפה בגוף ${he.ata(
+      gender,
+    )}  ${he.yajol(gender)} להרגיש טוב קודם,
 
 עכשיו,
 
-איפה בגוף ${he.ata(gender)}  ${he.yajol(gender)} להרגיש טוב יותר חזק, ולאן בגוף ההרגשה הזאת יכולה להתחיל לזרום ולהתפשט.
+איפה בגוף ${he.ata(gender)}  ${he.yajol(
+      gender,
+    )} להרגיש טוב יותר חזק, ולאן בגוף ההרגשה הזאת יכולה להתחיל לזרום ולהתפשט.
 
 ואם לתחושה הזאת היה צבע, ואיזה צבע זה היה יכול להיות?
 
-${he.taer(gender)} את התחושה הזאת באופן הכי חי ומפורט ש${he.ata(gender)}  ${he.yajol(gender)}
+${he.taer(gender)} את התחושה הזאת באופן הכי חי ומפורט ש${he.ata(
+      gender,
+    )}  ${he.yajol(gender)}
 `,
     input: {
-      placeholder: ({ gender }) => `אני ${he.margish(gender)} טוב קודם ב... וזה כמו ... וזה מתפשט/זורם ל... בצבע ...`,
+      placeholder: ({ gender }) =>
+        `אני ${he.margish(
+          gender,
+        )} טוב קודם ב... וזה כמו ... וזה מתפשט/זורם ל... בצבע ...`,
       id: 'GoodFeelingDescription',
     },
   },
@@ -357,8 +509,7 @@ ${he.makir(gender)} [אחרים](FB_SHARE) ש${he.yajol(gender)}ים להנות 
         },
       },
       <FbShareLink>אני רוצה שעוד יחוו את זה</FbShareLink>,
-      <Link to="/i-dont-charge-i-accept">למדתי הרבה ואני רוצה לתת חזרה</Link>,
+      <Link to='/i-dont-charge-i-accept'>למדתי הרבה ואני רוצה לתת חזרה</Link>,
     ],
   },
-
 ]

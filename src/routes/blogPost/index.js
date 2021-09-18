@@ -1,10 +1,10 @@
 import React from 'react'
 import axios from 'axios'
 
-import Layout from '../../components/Layout'
-
 import BlogPost from './BlogPost'
 import Transcript from './Transcript'
+
+import Layout from '../../components/Layout'
 
 const dbPosts = [
   'healing-metaphors-water-slime',
@@ -31,7 +31,7 @@ async function action({ params, path }) {
 
   const post = await import(`../../posts/${params.post}.js`)
     .then(module => module.default) // use an object from `export default`
-    .catch((error) => {
+    .catch(error => {
       if (error.message.startsWith('Cannot find module')) {
         return null // module (post) does not exists
       }

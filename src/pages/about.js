@@ -1,4 +1,7 @@
-import { MESSENGER_LINK_WELCOME, MESSENGER_LINK_BOOK_SESSION } from '../constants'
+import {
+  MESSENGER_LINK_WELCOME,
+  MESSENGER_LINK_BOOK_SESSION,
+} from '../constants'
 
 export default {
   title: 'Who am I anyway?',

@@ -9,7 +9,8 @@ export default {
   description: 'Description here',
   html: (
     <div>
-      <Markdown source={`
+      <Markdown
+        source={`
 Some participants have a shock response associated with the death itself, getting in the way of healthy [resourceful grieving](/loss/resourceful-response).
 
 ## Examples

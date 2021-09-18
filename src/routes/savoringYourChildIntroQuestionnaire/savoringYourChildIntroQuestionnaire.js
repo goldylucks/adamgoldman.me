@@ -21,16 +21,16 @@ type Props = {
   onUpdateUser: Function,
   onConcern: Function,
   onComplete: Function,
-  onUpdateUserInDb: Function
+  onUpdateUserInDb: Function,
 }
 
 class savoringYourChildIntroQuestionnaire extends Component<Props> {
   render() {
     return (
       <div>
-        <div className="container">
-          <div className="mainheading">
-            <h1 className="sitetitle text-center">Intro Questionnaire</h1>
+        <div className='container'>
+          <div className='mainheading'>
+            <h1 className='sitetitle text-center'>Intro Questionnaire</h1>
           </div>
           <div style={{ position: 'relative' }}>
             {this.renderToolResponse()}
@@ -42,27 +42,47 @@ class savoringYourChildIntroQuestionnaire extends Component<Props> {
 
   renderToolResponse() {
     const {
-      toolResponse, isFetchingToolResponse, fetchingToolResponseError, user, onLogin,
+      toolResponse,
+      isFetchingToolResponse,
+      fetchingToolResponseError,
+      user,
+      onLogin,
     } = this.props
     if (!user._id) {
       return (
-        <div className={s.introModule} data-test="noUser">
+        <div className={s.introModule} data-test='noUser'>
           <h1>Intro</h1>
-          <p>Let me tell you a little bit about how I work with parents, so you can get a gentle idea about the short time we are about to spend together, ok?</p>
+          <p>
+            Let me tell you a little bit about how I work with parents, so you
+            can get a gentle idea about the short time we are about to spend
+            together, ok?
+          </p>
           <FbGateKeeper onLogin={onLogin} user={user} />
         </div>
       )
     }
     if (fetchingToolResponseError) {
-      return <p data-test="error">There was an error loading. Please refresh the page and contact me if it continues</p>
+      return (
+        <p data-test='error'>
+          There was an error loading. Please refresh the page and contact me if
+          it continues
+        </p>
+      )
     }
     if (isFetchingToolResponse || !toolResponse) {
-      return <p data-test="loading">Loading ...</p>
+      return <p data-test='loading'>Loading ...</p>
     }
     return (
       <div className={s.introModule}>
         <div>
-          <h1 className="text-center" ref={(ref) => { this.toolResponseNode = ref }}>Intro Questionnaire</h1>
+          <h1
+            className='text-center'
+            ref={ref => {
+              this.toolResponseNode = ref
+            }}
+          >
+            Intro Questionnaire
+          </h1>
         </div>
         <div>
           <MultiStepForm

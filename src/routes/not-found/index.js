@@ -1,9 +1,9 @@
 import React from 'react'
 
+import notFound from './notFound'
+
 import Layout from '../../components/Layout'
 import Page from '../page/Page'
-
-import notFound from './notFound'
 
 const path = '/404/'
 

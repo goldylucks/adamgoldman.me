@@ -3,24 +3,32 @@ import PropTypes from 'prop-types'
 import ReactStars from 'react-stars'
 import _ from 'lodash'
 
-import Markdown from '../../components/Markdown'
-import { isMobile } from '../../utils'
-
 import DontReRender from './DontReRender'
-import { stateForGoToStep, stateForBack, stateForStepInputChange, stateForReviewRating, replaceVarsUtil, initialAnswerByStepState, scrollTop } from './multiStepFormUtils'
+import {
+  stateForGoToStep,
+  stateForBack,
+  stateForStepInputChange,
+  stateForReviewRating,
+  replaceVarsUtil,
+  initialAnswerByStepState,
+  scrollTop,
+} from './multiStepFormUtils'
 import Answers from './Answers'
+
+import { isMobile } from '../../utils'
+import Markdown from '../../components/Markdown'
 
 class MultiStepForm extends React.Component {
   static propTypes = {
     steps: PropTypes.array.isRequired,
     hiddenFields: PropTypes.array.isRequired,
-    path: PropTypes.string,
     currentStepNum: PropTypes.number.isRequired,
     answerByStep: PropTypes.object.isRequired,
     price: PropTypes.number.isRequired,
     stepsStack: PropTypes.array.isRequired,
     onUpdateProgress: PropTypes.func.isRequired,
     onConcern: PropTypes.func.isRequired,
+    path: PropTypes.string,
     scrollTop: PropTypes.func,
     onAnswerLinkPress: PropTypes.func,
     onAnswerNewLinkPress: PropTypes.func,
@@ -58,9 +66,7 @@ class MultiStepForm extends React.Component {
   render() {
     return (
       <div>
-        <div style={{ marginBottom: 30 }}>
-          {this.renderTitle()}
-        </div>
+        <div style={{ marginBottom: 30 }}>{this.renderTitle()}</div>
         {this.renderDescription()}
         {this.renderNotes()}
         {this.renderInput()}
@@ -76,7 +82,9 @@ class MultiStepForm extends React.Component {
 
   renderTitle() {
     const { title } = this.currentStep()
-    if (!title) { return null }
+    if (!title) {
+      return null
+    }
     return (
       <DontReRender currentStepNum={this.state.currentStepNum}>
         <Markdown source={`## ${this.replaceVars(title)}`} />
@@ -86,7 +94,9 @@ class MultiStepForm extends React.Component {
 
   renderDescription() {
     const { description } = this.currentStep()
-    if (!description) { return null }
+    if (!description) {
+      return null
+    }
     return (
       <DontReRender currentStepNum={this.state.currentStepNum}>
         <Markdown source={this.replaceVars(description)} />
@@ -96,10 +106,15 @@ class MultiStepForm extends React.Component {
 
   renderNotes() {
     const { notes } = this.currentStep()
-    if (!notes) { return null }
+    if (!notes) {
+      return null
+    }
     return (
       <DontReRender currentStepNum={this.state.currentStepNum}>
-        <Markdown className="text-muted tool-note" source={this.replaceVars(notes)} />
+        <Markdown
+          className='text-muted tool-note'
+          source={this.replaceVars(notes)}
+        />
       </DontReRender>
     )
   }
@@ -111,19 +126,25 @@ class MultiStepForm extends React.Component {
     }
     return (
       <form onSubmit={this.onInputSubmit}>
-        <div className="form-group">
+        <div className='form-group'>
           <input
             value={this.state.answerByStep[this.state.currentStepNum]}
             onChange={this.stepInputChange}
-            placeholder={this.replaceVars(inputPlaceholder || 'write your answer here')}
+            placeholder={this.replaceVars(
+              inputPlaceholder || 'write your answer here',
+            )}
             required
             autoFocus={!isMobile()}
-            className="form-control"
-            aria-describedby="inputHelp"
+            className='form-control'
+            aria-describedby='inputHelp'
           />
-          <small id="inputHelp" className="form-text text-muted">Your data is safe.</small>
+          <small id='inputHelp' className='form-text text-muted'>
+            Your data is safe.
+          </small>
         </div>
-        <button type="submit" className="btn btn-primary">Press Enter or click to Continue</button>
+        <button type='submit' className='btn btn-primary'>
+          Press Enter or click to Continue
+        </button>
       </form>
     )
   }
@@ -135,19 +156,25 @@ class MultiStepForm extends React.Component {
     }
     return (
       <form onSubmit={this.onInputSubmit}>
-        <div className="form-group">
+        <div className='form-group'>
           <textarea
             value={this.state.answerByStep[this.state.currentStepNum]}
             onChange={this.stepInputChange}
-            placeholder={this.replaceVars(inputPlaceholder || 'write your answer here')}
+            placeholder={this.replaceVars(
+              inputPlaceholder || 'write your answer here',
+            )}
             required
             autoFocus={!isMobile()}
-            className="form-control"
-            aria-describedby="inputHelp"
+            className='form-control'
+            aria-describedby='inputHelp'
           />
-          <small id="inputHelp" className="form-text text-muted">Your data is safe.</small>
+          <small id='inputHelp' className='form-text text-muted'>
+            Your data is safe.
+          </small>
         </div>
-        <button type="submit" className="btn btn-primary">Continue</button>
+        <button type='submit' className='btn btn-primary'>
+          Continue
+        </button>
       </form>
     )
   }
@@ -159,7 +186,9 @@ class MultiStepForm extends React.Component {
     return (
       <div>
         <button onClick={this.initFlash}>Flash me!</button>
-        <p>{this.state.isFlashing && this.flashPhrase()[[this.state.flashedIdx]]}</p>
+        <p>
+          {this.state.isFlashing && this.flashPhrase()[[this.state.flashedIdx]]}
+        </p>
       </div>
     )
   }
@@ -170,25 +199,50 @@ class MultiStepForm extends React.Component {
     }
     const { price } = this.state
     return (
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-        <input type="hidden" name="cmd" value="_s-xclick" />
-        <input type="hidden" name="hosted_button_id" value="L73XBAVRMGQ6S" />
-        <div className="form-group">
-          <select name="os0" className="form-control" value={price} onChange={(evt) => { this.setState({ price: evt.target.value }) }}>
-            <option value="7">$7 USD</option>
-            <option value="9">$9 USD</option>
-            <option value="23">$23 USD</option>
-            <option value="30">$30 USD</option>
-            <option value="70">$70 USD</option>
-            <option value="140">$140 USD</option>
-            <option value="350">$350 USD</option>
-            <option value="600">$600 USD</option>
-            <option value="970">$970 USD</option>
+      <form
+        action='https://www.paypal.com/cgi-bin/webscr'
+        method='post'
+        target='_blank'
+      >
+        <input type='hidden' name='cmd' value='_s-xclick' />
+        <input type='hidden' name='hosted_button_id' value='L73XBAVRMGQ6S' />
+        <div className='form-group'>
+          <select
+            name='os0'
+            className='form-control'
+            value={price}
+            onChange={evt => {
+              this.setState({ price: evt.target.value })
+            }}
+          >
+            <option value='7'>$7 USD</option>
+            <option value='9'>$9 USD</option>
+            <option value='23'>$23 USD</option>
+            <option value='30'>$30 USD</option>
+            <option value='70'>$70 USD</option>
+            <option value='140'>$140 USD</option>
+            <option value='350'>$350 USD</option>
+            <option value='600'>$600 USD</option>
+            <option value='970'>$970 USD</option>
           </select>
         </div>
-        <input type="hidden" name="currency_code" value="USD" />
-        <input type="image" style={{ width: 'auto' }} src="https://www.paypalobjects.com/en_US/IL/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
-        <img style={{ display: 'none' }} alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+        <input type='hidden' name='currency_code' value='USD' />
+        <input
+          type='image'
+          style={{ width: 'auto' }}
+          src='https://www.paypalobjects.com/en_US/IL/i/btn/btn_buynowCC_LG.gif'
+          border='0'
+          name='submit'
+          alt='PayPal - The safer, easier way to pay online!'
+        />
+        <img
+          style={{ display: 'none' }}
+          alt=''
+          border='0'
+          src='https://www.paypalobjects.com/en_US/i/scr/pixel.gif'
+          width='1'
+          height='1'
+        />
       </form>
     )
   }
@@ -197,8 +251,10 @@ class MultiStepForm extends React.Component {
     if (!this.currentStep().answers) {
       return null
     }
-    const answers = this.currentStep().answers.map((answer) => {
-      if (answer.text) { answer.text = this.replaceVars(answer.text) }
+    const answers = this.currentStep().answers.map(answer => {
+      if (answer.text) {
+        answer.text = this.replaceVars(answer.text)
+      }
       return answer
     })
     return (
@@ -221,35 +277,55 @@ class MultiStepForm extends React.Component {
     if (this.currentStep().type !== 'stars-review') {
       return null
     }
-    return <ReactStars half={false} count={5} onChange={this.onStarReviewRating} size={60} />
+    return (
+      <ReactStars
+        half={false}
+        count={5}
+        onChange={this.onStarReviewRating}
+        size={60}
+      />
+    )
   }
 
   renderBack() {
-    return this.state.currentStepNum === 0 ? null : <button className="btn btn-secondary btn-sm" style={{ display: 'block', marginBottom: 10 }} onClick={this.back}>Back</button>
+    return this.state.currentStepNum === 0 ? null : (
+      <button
+        className='btn btn-secondary btn-sm'
+        style={{ display: 'block', marginBottom: 10 }}
+        onClick={this.back}
+      >
+        Back
+      </button>
+    )
   }
 
-  onInputSubmit = (evt) => {
+  onInputSubmit = evt => {
     evt.preventDefault()
     const { goToStepByNum } = this.currentStep()
     if (goToStepByNum) {
-      this.goToStep(Number(goToStepByNum), { shouldResetPreviousAnswers: Number(goToStepByNum) < this.state.currentStepNum }) // eslint-disable-line max-len
+      this.goToStep(Number(goToStepByNum), {
+        shouldResetPreviousAnswers:
+          Number(goToStepByNum) < this.state.currentStepNum,
+      }) // eslint-disable-line max-len
     } else {
       this.next()
     }
   }
 
-  submitMultipleChoiceAnswer = (aIdx) => {
+  submitMultipleChoiceAnswer = aIdx => {
     const answerByStep = { ...this.state.answerByStep }
-    const {
-      text, goToStepByNum, isRepeatProcess, price, goToStepById,
-    } = this.getAnswerByAidx(aIdx)
+    const { text, goToStepByNum, isRepeatProcess, price, goToStepById } =
+      this.getAnswerByAidx(aIdx)
     answerByStep[this.state.currentStepNum] = text
     this.setState({ answerByStep })
     if (price) {
       this.setState({ price })
     }
     if (goToStepByNum) {
-      this.goToStep(Number(goToStepByNum), { shouldResetPreviousAnswers: Number(goToStepByNum) < this.state.currentStepNum }) // eslint-disable-line max-len
+      this.goToStep(Number(goToStepByNum), {
+        shouldResetPreviousAnswers:
+          Number(goToStepByNum) < this.state.currentStepNum,
+      }) // eslint-disable-line max-len
     } else if (goToStepById) {
       this.goToStepById(goToStepById)
     } else if (isRepeatProcess) {
@@ -265,16 +341,19 @@ class MultiStepForm extends React.Component {
     answerByStep[this.state.currentStepNum] = text
     this.setState({ answerByStep })
     if (goToStepByNum) {
-      this.goToStep(Number(goToStepByNum), { shouldResetPreviousAnswers: Number(goToStepByNum) < this.state.currentStepNum }) // eslint-disable-line max-len
+      this.goToStep(Number(goToStepByNum), {
+        shouldResetPreviousAnswers:
+          Number(goToStepByNum) < this.state.currentStepNum,
+      }) // eslint-disable-line max-len
     } else {
       this.next()
     }
   }
 
-  onAnswerLinkPress = (link) => {
+  onAnswerLinkPress = link => {
     this.props.onAnswerLinkPress(link, this.isLastStep, this.state)
   }
-  onAnswerNewLinkPress = (link) => {
+  onAnswerNewLinkPress = link => {
     this.props.onAnswerNewLinkPress(link, this.isLastStep, this.state)
   }
   get isLastStep() {
@@ -289,7 +368,10 @@ class MultiStepForm extends React.Component {
   }
 
   setFlashTimeout = () => {
-    this.flashTimeout = setTimeout(this.incFlashIdx, this.currentStep().flashSpeed)
+    this.flashTimeout = setTimeout(
+      this.incFlashIdx,
+      this.currentStep().flashSpeed,
+    )
   }
 
   incFlashIdx = () => {
@@ -319,7 +401,7 @@ class MultiStepForm extends React.Component {
     this.props.scrollTop()
   }
 
-  stepInputChange = (evt) => {
+  stepInputChange = evt => {
     this.setState(stateForStepInputChange(evt.target.value))
   }
 
@@ -336,12 +418,12 @@ class MultiStepForm extends React.Component {
     })
   }
 
-  onStarReviewRating = (rating) => {
+  onStarReviewRating = rating => {
     this.setState(stateForReviewRating(rating))
     this.props.scrollTop()
   }
 
-  goToStepById = (id) => {
+  goToStepById = id => {
     this.goToStep(this.stepNumById(id))
   }
 
@@ -356,4 +438,3 @@ class MultiStepForm extends React.Component {
   }
 }
 export default MultiStepForm
-

@@ -1,9 +1,9 @@
 import React from 'react'
 import axios from 'axios'
 
-import Layout from '../../components/Layout'
-
 import PostsGenerator from './PostsGenerator'
+
+import Layout from '../../components/Layout'
 
 const title = 'Posts Generator'
 
@@ -13,8 +13,7 @@ async function action({ params, path }) {
     chunks: ['postsGenerator'],
     title,
     path,
-    description:
-      'Create a post',
+    description: 'Create a post',
     component: (
       <Layout path={path}>
         <PostsGenerator data={data} url={params.post} />

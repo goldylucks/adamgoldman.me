@@ -24,10 +24,10 @@ class AdminToolResponseItem extends React.Component<Props> {
   render() {
     return (
       <div>
-        <div className="container">
-          <div className="mainheading">
-            <Link to="/adminToolResponses">Tools history list</Link>
-            <h1 className="sitetitle">Tool History</h1>
+        <div className='container'>
+          <div className='mainheading'>
+            <Link to='/adminToolResponses'>Tools history list</Link>
+            <h1 className='sitetitle'>Tool History</h1>
           </div>
           {this.renderResponseItem()}
           <hr />
@@ -58,34 +58,61 @@ class AdminToolResponseItem extends React.Component<Props> {
 
   // eslint-disable-next-line class-methods-use-this
   renderStepsWithAnswers({
-    steps, answerByStep, currentStepNum, hiddenFields,
+    steps,
+    answerByStep,
+    currentStepNum,
+    hiddenFields,
   }) {
     return steps.slice(0, currentStepNum).map((step, sIdx) => (
       <div>
-        <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-around',
+          }}
+        >
           <div style={{ width: '60%' }}>
-            <Markdown source={'## ' + replaceVarsUtil({ // eslint-disable-line prefer-template
-    str: step.title, hiddenFields, answerByStep, currentStepNum: sIdx,
-    })}
+            <Markdown
+              source={
+                '## ' +
+                replaceVarsUtil({
+                  // eslint-disable-line prefer-template
+                  str: step.title,
+                  hiddenFields,
+                  answerByStep,
+                  currentStepNum: sIdx,
+                })
+              }
             />
             <Markdown
               dontEmbedd
               source={replaceVarsUtil({
-    str: step.description, hiddenFields, answerByStep, currentStepNum: sIdx,
-    })}
+                str: step.description,
+                hiddenFields,
+                answerByStep,
+                currentStepNum: sIdx,
+              })}
             />
             <Markdown
               dontEmbedd
-              className="text-muted tool-note"
+              className='text-muted tool-note'
               source={replaceVarsUtil({
-    str: step.notes, hiddenFields, answerByStep, currentStepNum: sIdx,
-    })}
+                str: step.notes,
+                hiddenFields,
+                answerByStep,
+                currentStepNum: sIdx,
+              })}
             />
           </div>
           <div style={{ width: '30%' }}>
-            <Markdown source={replaceVarsUtil({
-      str: answerByStep[sIdx], hiddenFields, answerByStep, currentStepNum: sIdx,
-      })}
+            <Markdown
+              source={replaceVarsUtil({
+                str: answerByStep[sIdx],
+                hiddenFields,
+                answerByStep,
+                currentStepNum: sIdx,
+              })}
             />
           </div>
         </div>
@@ -95,9 +122,12 @@ class AdminToolResponseItem extends React.Component<Props> {
   }
 
   fetchToolResponses() {
-    axios.get(`/api/toolResponses/${this.props.id}`)
-      .then(({ data }) => this.setState({ toolResponse: data, isFetchingToolResponse: false }))
-      .catch((err) => {
+    axios
+      .get(`/api/toolResponses/${this.props.id}`)
+      .then(({ data }) =>
+        this.setState({ toolResponse: data, isFetchingToolResponse: false }),
+      )
+      .catch(err => {
         global.console.log(err)
         this.setState({ isFetchingToolResponse: false })
       })

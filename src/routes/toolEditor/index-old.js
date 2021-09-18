@@ -11,11 +11,8 @@ async function action({ params, path }) {
     chunks: ['toolEditor'],
     title,
     path,
-    description:
-      'Create a brain tool',
-    component: (
-      <ToolEditor data={data || {}} url={params.tool} />
-    ),
+    description: 'Create a brain tool',
+    component: <ToolEditor data={data || {}} url={params.tool} />,
   }
 }
 

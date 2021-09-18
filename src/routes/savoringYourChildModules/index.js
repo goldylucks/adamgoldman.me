@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Layout from '../../components/Layout'
-
 import SavoringYourChildModules from './savoringYourChildModules'
+
+import Layout from '../../components/Layout'
 
 const title = 'Savoring Your Child Modules'
 

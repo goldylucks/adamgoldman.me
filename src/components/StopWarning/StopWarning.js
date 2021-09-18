@@ -10,13 +10,13 @@ class StopWarning extends React.Component {
     dismissText: PropTypes.string,
     id: PropTypes.string.isRequired,
     onDismiss: PropTypes.func.isRequired,
-  };
+  }
 
   static defaultProps = {
     dismissText: 'Got it, never show this again',
   }
 
-  state = { hide: true };
+  state = { hide: true }
 
   componentDidMount() {
     if (localStorage.getItem(`hideWarning${this.props.id}`)) {
@@ -55,11 +55,15 @@ class StopWarning extends React.Component {
             display: 'block',
             margin: '10px auto',
           }}
-          alt="Puss in boots asking you please"
+          alt='Puss in boots asking you please'
           src={`${cloudImg('adamgoldman.me/boots')}`}
         />
         <Markdown source={text} />
-        <button className="btn btn-block" onClick={this.dismiss} style={{ fontStyle: 'italic' }}>
+        <button
+          className='btn btn-block'
+          onClick={this.dismiss}
+          style={{ fontStyle: 'italic' }}
+        >
           {dismissText}
         </button>
       </article>
@@ -70,7 +74,7 @@ class StopWarning extends React.Component {
     localStorage.setItem(`hideWarning${this.props.id}`, true)
     this.setState({ hide: true })
     this.props.onDismiss()
-  };
+  }
 }
 
 export default StopWarning

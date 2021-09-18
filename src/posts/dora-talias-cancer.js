@@ -1,7 +1,8 @@
 import { parseFbConversation } from '../utils'
 
 export default {
-  title: 'דורה טליאס - ניקוי אבל ואבדן, געגועים לבעל, אכזבה, כעס, עצב ואבחון של סרטן', // eslint-disable-line prettier/prettier
+  title:
+    'דורה טליאס - ניקוי אבל ואבדן, געגועים לבעל, אכזבה, כעס, עצב ואבחון של סרטן', // eslint-disable-line prettier/prettier
   isTitleRtl: true,
   tags: [],
   description: 'לתת לדורה לספר על עצמה כאן ...',
@@ -58,8 +59,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'מה שאת מצליחה, את שומרת,\nמה שלא, שמה במגירה \n\n"דברים שניסיתי ועדיין לא עבדו לי"\n',
+          html: 'מה שאת מצליחה, את שומרת,\nמה שלא, שמה במגירה \n\n"דברים שניסיתי ועדיין לא עבדו לי"\n',
           isRtl: true,
         },
         { type: 'text', html: 'יש?\n', isRtl: true },
@@ -89,8 +89,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'שינוי תזונה מאוד מאוד דרסתי בשנה הראשונה למחלה  שעקבות זה ירדתי בצורה דראסטית במשקל אך לא היה ריפוי\n',
+          html: 'שינוי תזונה מאוד מאוד דרסתי בשנה הראשונה למחלה  שעקבות זה ירדתי בצורה דראסטית במשקל אך לא היה ריפוי\n',
           isRtl: true,
         },
       ],
@@ -170,8 +169,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'מה עם התזונה, מה השינוי שעשית, מה היום\nכנ"ל לגבי מדיטציות ודמיון מודרך\n',
+          html: 'מה עם התזונה, מה השינוי שעשית, מה היום\nכנ"ל לגבי מדיטציות ודמיון מודרך\n',
           isRtl: true,
         },
       ],
@@ -181,8 +179,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'לא מחברת לזה אין לי סבלנות...לפני שחליתי הייתי עושה מדיטציות בקלי קלות היום לא..\n',
+          html: 'לא מחברת לזה אין לי סבלנות...לפני שחליתי הייתי עושה מדיטציות בקלי קלות היום לא..\n',
           isRtl: true,
         },
         {
@@ -197,8 +194,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'היום אני אוכלת הכל חוץ מקמח לבן (פסטות למיניהם)\nסוכר\nדברי חלב\nכי אם הייתי ממשיכה עוד שינוי הדרסטי רק ירקות פירות זרעים ואגוזים הייתי מתה מרזון.\nאני שוקלת 36 ק"ג זה תת תזונה לגילי 66..\n',
+          html: 'היום אני אוכלת הכל חוץ מקמח לבן (פסטות למיניהם)\nסוכר\nדברי חלב\nכי אם הייתי ממשיכה עוד שינוי הדרסטי רק ירקות פירות זרעים ואגוזים הייתי מתה מרזון.\nאני שוקלת 36 ק"ג זה תת תזונה לגילי 66..\n',
           isRtl: true,
         },
       ],
@@ -208,8 +204,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'אוקיי\nנגיע גם לעניין האוכל, זה כבר עשיתי המון, יש הרבה תהליכים מעולים לזה\n',
+          html: 'אוקיי\nנגיע גם לעניין האוכל, זה כבר עשיתי המון, יש הרבה תהליכים מעולים לזה\n',
           isRtl: true,
         },
       ],
@@ -220,8 +215,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'עכשיו\nמה הזכרון הכי קדום שלך\nשאת זוכרת עכשיו\nשהיית תינוקת / ילדה קטנה\nמבלי להיכנס לפרטים\n\nבת כמה את בזכרון הזה,\nאת מרגישה חיובי או שלילי לגבי,\nואיזה סוג של רגש זה\n',
+          html: 'עכשיו\nמה הזכרון הכי קדום שלך\nשאת זוכרת עכשיו\nשהיית תינוקת / ילדה קטנה\nמבלי להיכנס לפרטים\n\nבת כמה את בזכרון הזה,\nאת מרגישה חיובי או שלילי לגבי,\nואיזה סוג של רגש זה\n',
           isRtl: true,
         },
       ],
@@ -270,8 +264,7 @@ function msgs() {
         },
         {
           type: 'text',
-          html:
-            'הזיכרון הכי קדום שלי בתור ילדה בת 6 בערך בכיתה א\nזיכרון לא חיובי ולא שלילי אין שם שום תחושה אני רואה את עצמי מחיוכת..\n',
+          html: 'הזיכרון הכי קדום שלי בתור ילדה בת 6 בערך בכיתה א\nזיכרון לא חיובי ולא שלילי אין שם שום תחושה אני רואה את עצמי מחיוכת..\n',
           isRtl: true,
         },
       ],
@@ -312,8 +305,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'הצלחתי להכנס..\nבת 7 או 8 משהו כזה..\nמרגישה שמחה ואהובה עם סבתא שלי..יש שם שמחה בלב\n',
+          html: 'הצלחתי להכנס..\nבת 7 או 8 משהו כזה..\nמרגישה שמחה ואהובה עם סבתא שלי..יש שם שמחה בלב\n',
           isRtl: true,
         },
       ],
@@ -331,8 +323,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'אמרת שהזכרון הכי קדום זה בגיל 6\nואת רואה עת עצמך מחייכת\n\nואז הצלחת להיכנס אליו, וראית אותו מבפנים, דרך העיניים שלך, כן?\n',
+          html: 'אמרת שהזכרון הכי קדום זה בגיל 6\nואת רואה עת עצמך מחייכת\n\nואז הצלחת להיכנס אליו, וראית אותו מבפנים, דרך העיניים שלך, כן?\n',
           isRtl: true,
         },
         {
@@ -347,8 +338,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'כן אבל כנראה שזה  אותו גיל רק חשבתי גיל 6 בעצם זהו זכרון של הגילאים 7 או 6 משהו כזה..\n',
+          html: 'כן אבל כנראה שזה  אותו גיל רק חשבתי גיל 6 בעצם זהו זכרון של הגילאים 7 או 6 משהו כזה..\n',
           isRtl: true,
         },
         { type: 'text', html: 'טיסה נעימה\n', isRtl: true },
@@ -369,8 +359,7 @@ function msgs() {
         { type: 'text', html: 'אתה מבין נכון\n', isRtl: true },
         {
           type: 'text',
-          html:
-            'הבנתי את העקרון..אעשה את זה ארשום לי במחברת הכל וכשאסיים אכתוב לך גם כל מה שעלה משם..זה בסדר?\n',
+          html: 'הבנתי את העקרון..אעשה את זה ארשום לי במחברת הכל וכשאסיים אכתוב לך גם כל מה שעלה משם..זה בסדר?\n',
           isRtl: true,
         },
       ],
@@ -383,8 +372,7 @@ function msgs() {
         { type: 'text', html: 'אני כאן לשאלות\n', isRtl: true },
         {
           type: 'text',
-          html:
-            "אני בטוח שיהיה מעניין לעבוד איתך, תפסת את הקטע הראשון ממש מהר!\n\nהרבה אנשים גורמים לי להקיז דם לפני שמעזים לעשות את הצעד הכי קטנצ'יק בשביל להרגיש יותר טוב\n",
+          html: "אני בטוח שיהיה מעניין לעבוד איתך, תפסת את הקטע הראשון ממש מהר!\n\nהרבה אנשים גורמים לי להקיז דם לפני שמעזים לעשות את הצעד הכי קטנצ'יק בשביל להרגיש יותר טוב\n",
           isRtl: true,
         },
       ],
@@ -396,8 +384,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'אני קצת עסוקה כרגע אהייה שוב אחרי השעה 20.00 אם זה בסדר  בנתיים אני מחפשת זכרונות נוספים ומנסה ממש להכנס לתוכם להרגיש תחושות ..טעמים..קולות..\n',
+          html: 'אני קצת עסוקה כרגע אהייה שוב אחרי השעה 20.00 אם זה בסדר  בנתיים אני מחפשת זכרונות נוספים ומנסה ממש להכנס לתוכם להרגיש תחושות ..טעמים..קולות..\n',
           isRtl: true,
         },
       ],
@@ -408,8 +395,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'היי אדם\nהאם הזכרונות שאני מעלה אמורות להיות לפי סדר כרונולוגי של הגיל או מה שעולה לא משנה אם זה לפי הסדר\n',
+          html: 'היי אדם\nהאם הזכרונות שאני מעלה אמורות להיות לפי סדר כרונולוגי של הגיל או מה שעולה לא משנה אם זה לפי הסדר\n',
           isRtl: true,
         },
       ],
@@ -464,8 +450,7 @@ function msgs() {
         { type: 'text', html: 'רק סוג הזכרון\n', isRtl: true },
         {
           type: 'text',
-          html:
-            'נניח תאונת דרכים, אבדן של מישהו יקר, וכדומה\nכלומר רק ה"קטגוריה"\n',
+          html: 'נניח תאונת דרכים, אבדן של מישהו יקר, וכדומה\nכלומר רק ה"קטגוריה"\n',
           isRtl: true,
         },
       ],
@@ -476,14 +461,12 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'גיל 13 עליה לארץ בתי הורים עם אחי הקטן בן 11 לפנימיה מטורקיה זכרון שהוא לא חיובי ולא שלילי בעיקר יש שם התרגשות ..\n',
+          html: 'גיל 13 עליה לארץ בתי הורים עם אחי הקטן בן 11 לפנימיה מטורקיה זכרון שהוא לא חיובי ולא שלילי בעיקר יש שם התרגשות ..\n',
           isRtl: true,
         },
         {
           type: 'text',
-          html:
-            'גיל 16 רוצה לנסוע עם חברים מהפנימיה לבקר  בטורקיה לחופש לא התאפשר..יש שם אכזבה..בכי..עצב..\n',
+          html: 'גיל 16 רוצה לנסוע עם חברים מהפנימיה לבקר  בטורקיה לחופש לא התאפשר..יש שם אכזבה..בכי..עצב..\n',
           isRtl: true,
         },
       ],
@@ -493,26 +476,22 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'גיל 24.5 בערך...עצב תחושה של לאן הכנסתי את עצמי..!!??\nמדובר כאן על יום חתונתי עם בעלי...היה קשה..בגלל סיבות שלא יכולה לפרט כאן...כי זה יהייה ארוך מאוד...\n',
+          html: 'גיל 24.5 בערך...עצב תחושה של לאן הכנסתי את עצמי..!!??\nמדובר כאן על יום חתונתי עם בעלי...היה קשה..בגלל סיבות שלא יכולה לפרט כאן...כי זה יהייה ארוך מאוד...\n',
           isRtl: true,
         },
         {
           type: 'text',
-          html:
-            'גיל 56 איבדתי את בעלי למחלת הסרטן...שנתיים ושמונה חודשים לפני התגלתה המחלה..היה לי דזאוו...הייתי בסרט הזה..ידעתי שבעלי הולך למות זה ענין של זמן..תחושות ..חוסר אונים..עצב..תחושת אשמה כי יש בי ידיעה ברורה שבעלי לא יבריא ..\n',
+          html: 'גיל 56 איבדתי את בעלי למחלת הסרטן...שנתיים ושמונה חודשים לפני התגלתה המחלה..היה לי דזאוו...הייתי בסרט הזה..ידעתי שבעלי הולך למות זה ענין של זמן..תחושות ..חוסר אונים..עצב..תחושת אשמה כי יש בי ידיעה ברורה שבעלי לא יבריא ..\n',
           isRtl: true,
         },
         {
           type: 'text',
-          html:
-            'בעקבות זה התמוטטות עצבים אישפוז של יומיים..שאחרי זה התנהלתי כמו רובוט..\n',
+          html: 'בעקבות זה התמוטטות עצבים אישפוז של יומיים..שאחרי זה התנהלתי כמו רובוט..\n',
           isRtl: true,
         },
         {
           type: 'textWithEmoticon',
-          html:
-            'תקשיב...אני שמה לב שכל הזכרונות שעולים הם שליליים...<img alt="😕" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zf2/1/16/1f615.png">',
+          html: 'תקשיב...אני שמה לב שכל הזכרונות שעולים הם שליליים...<img alt="😕" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zf2/1/16/1f615.png">',
           isRtl: true,
         },
       ],
@@ -524,8 +503,7 @@ function msgs() {
         { type: 'text', html: 'וזה מעולה שאת עושה בהם סדר\n', isRtl: true },
         {
           type: 'text',
-          html:
-            'זה לא הדבר הכי נעים לעשות, אבל, זאת הפעם האחרונה שהם ישפיעו עליך באופן לא חיובי\n',
+          html: 'זה לא הדבר הכי נעים לעשות, אבל, זאת הפעם האחרונה שהם ישפיעו עליך באופן לא חיובי\n',
           isRtl: true,
         },
       ],
@@ -552,15 +530,13 @@ function msgs() {
       content: [
         {
           type: 'textWithEmoticon',
-          html:
-            'אני אמשיך עם זה מחר..<img alt="☺" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zfb/1/16/263a.png">',
+          html: 'אני אמשיך עם זה מחר..<img alt="☺" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zfb/1/16/263a.png">',
           isRtl: true,
         },
         { type: 'text', html: 'אפשרי?\n', isRtl: true },
         {
           type: 'text',
-          html:
-            'אני רק רוצה ליידע אותך שאני עם סרטן שד מאוגוסט 2014 \nמעולם לא ראיתי אונקולוג..ללא ניתוח ללא כימו וללא הקרנות רק ריפוי טבעי כי אני מאמינה שמה שהגוף שלי יצר לא טוב הוא יודע לתקן את הלא טוב הזה..\n',
+          html: 'אני רק רוצה ליידע אותך שאני עם סרטן שד מאוגוסט 2014 \nמעולם לא ראיתי אונקולוג..ללא ניתוח ללא כימו וללא הקרנות רק ריפוי טבעי כי אני מאמינה שמה שהגוף שלי יצר לא טוב הוא יודע לתקן את הלא טוב הזה..\n',
           isRtl: true,
         },
       ],
@@ -577,8 +553,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'עברתי מצבים נוראיים וקיצוניים ביותר..הגעתי למצב של מוות רוחני מוות תלט מוות פיסי הייתי על קרשים דכאון נוראי...ולא הסכמתי לקחת שום כדור נגד דכאון לאט לאט בנחישות יצאתי מהמצב הזה בעזרת מלאכים אנושיים שפגשתי בדרך...\n',
+          html: 'עברתי מצבים נוראיים וקיצוניים ביותר..הגעתי למצב של מוות רוחני מוות תלט מוות פיסי הייתי על קרשים דכאון נוראי...ולא הסכמתי לקחת שום כדור נגד דכאון לאט לאט בנחישות יצאתי מהמצב הזה בעזרת מלאכים אנושיים שפגשתי בדרך...\n',
           isRtl: true,
         },
       ],
@@ -628,8 +603,7 @@ function msgs() {
       content: [
         {
           type: 'textWithHtml',
-          html:
-            '<a target="_blank" href="https://l.messenger.com/l.php?u=https%3A%2F%2Fdocs.google.com%2Fa%2Fadamgoldman.me%2Fdocument%2Fd%2F13kBMviocVF2LyF0BHN7a9dcnLpqUD4uwvRl682nw724%2Fedit%3Fusp%3Dsharing&amp;h=ATOFfG6IwkHJoLsBrU-peMezk5jraSqZOhVVY2xKLygI_uJCiB6UHNAF77JB2HD_47l_cAhys5a8_Z-RWH47bpw37r_3i7YFA5za_BJRRicmBSZabYWUPldpvaKfK4Fo8GIYlg" rel="nofollow noopener">https://docs.google.com/a/adamgoldman.me/document/d/13kBMviocVF2LyF0BHN7a9dcnLpqUD4uwvRl682nw724/edit?usp=sharing</a>',
+          html: '<a target="_blank" href="https://l.messenger.com/l.php?u=https%3A%2F%2Fdocs.google.com%2Fa%2Fadamgoldman.me%2Fdocument%2Fd%2F13kBMviocVF2LyF0BHN7a9dcnLpqUD4uwvRl682nw724%2Fedit%3Fusp%3Dsharing&amp;h=ATOFfG6IwkHJoLsBrU-peMezk5jraSqZOhVVY2xKLygI_uJCiB6UHNAF77JB2HD_47l_cAhys5a8_Z-RWH47bpw37r_3i7YFA5za_BJRRicmBSZabYWUPldpvaKfK4Fo8GIYlg" rel="nofollow noopener">https://docs.google.com/a/adamgoldman.me/document/d/13kBMviocVF2LyF0BHN7a9dcnLpqUD4uwvRl682nw724/edit?usp=sharing</a>',
           isRtl: false,
         },
         { type: 'text', html: 'תראי אם יש לך גישה\n', isRtl: true },
@@ -652,8 +626,7 @@ function msgs() {
         { type: 'text', html: 'כן תלחצי על בקשת אישור\n', isRtl: true },
         {
           type: 'textWithHtml',
-          html:
-            '<a target="_blank" href="https://l.messenger.com/l.php?u=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F13kBMviocVF2LyF0BHN7a9dcnLpqUD4uwvRl682nw724%2Fedit&amp;h=ATOFfG6IwkHJoLsBrU-peMezk5jraSqZOhVVY2xKLygI_uJCiB6UHNAF77JB2HD_47l_cAhys5a8_Z-RWH47bpw37r_3i7YFA5za_BJRRicmBSZabYWUPldpvaKfK4Fo8GIYlg" rel="nofollow noopener">https://docs.google.com/document/d/13kBMviocVF2LyF0BHN7a9dcnLpqUD4uwvRl682nw724/edit#</a>',
+          html: '<a target="_blank" href="https://l.messenger.com/l.php?u=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F13kBMviocVF2LyF0BHN7a9dcnLpqUD4uwvRl682nw724%2Fedit&amp;h=ATOFfG6IwkHJoLsBrU-peMezk5jraSqZOhVVY2xKLygI_uJCiB6UHNAF77JB2HD_47l_cAhys5a8_Z-RWH47bpw37r_3i7YFA5za_BJRRicmBSZabYWUPldpvaKfK4Fo8GIYlg" rel="nofollow noopener">https://docs.google.com/document/d/13kBMviocVF2LyF0BHN7a9dcnLpqUD4uwvRl682nw724/edit#</a>',
           isRtl: false,
         },
         { type: 'text', html: 'תבדקי עכשיו אם זה עובד\n', isRtl: true },
@@ -664,8 +637,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'בקישור החדש אני מגיע ישר לזכרונות שכתבתי  משם אין לי לאן להתקדם\n',
+          html: 'בקישור החדש אני מגיע ישר לזכרונות שכתבתי  משם אין לי לאן להתקדם\n',
           isRtl: true,
         },
       ],
@@ -676,8 +648,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'קיבלתי מייל ממך יש שם דף עם כל הזכרונות שלי..\nאיך ממשיכים משם?\n',
+          html: 'קיבלתי מייל ממך יש שם דף עם כל הזכרונות שלי..\nאיך ממשיכים משם?\n',
           isRtl: true,
         },
       ],
@@ -728,8 +699,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            "אחד היתרונות בעבודה בצ'אט,\nאנחנו עונים מתי שפנויים\n\nלסנכרן זה לא חובה\n\nאז כשאת חוזרת\n\nמבלי להיכנס לפרטים, תגידי רק מה סוג הזכרון של גיל 14.5-15\n",
+          html: "אחד היתרונות בעבודה בצ'אט,\nאנחנו עונים מתי שפנויים\n\nלסנכרן זה לא חובה\n\nאז כשאת חוזרת\n\nמבלי להיכנס לפרטים, תגידי רק מה סוג הזכרון של גיל 14.5-15\n",
           isRtl: true,
         },
       ],
@@ -776,8 +746,7 @@ function msgs() {
         { type: 'text', html: 'עכשיו אני רוצה שתעשי כזה דבר\n', isRtl: true },
         {
           type: 'text',
-          html:
-            'עכשיו תראי\nבתור צעד ראשון\nאני רוצה שתצאי מהתמונה הזאת\nותראי אותה מבחוץ\nמרחוק\nכלומר\nתראי את דורה בת ה14.5\nמבחוץ\nככה שאת רואה את כל הגוף שלה\nיש?\n',
+          html: 'עכשיו תראי\nבתור צעד ראשון\nאני רוצה שתצאי מהתמונה הזאת\nותראי אותה מבחוץ\nמרחוק\nכלומר\nתראי את דורה בת ה14.5\nמבחוץ\nככה שאת רואה את כל הגוף שלה\nיש?\n',
           isRtl: true,
         },
       ],
@@ -804,8 +773,7 @@ function msgs() {
         { type: 'text', html: 'אוקיי\n', isRtl: true },
         {
           type: 'text',
-          html:
-            'עכשיו תראי\nלפני כמה זמן לי ולאחי הייתה תאונת אופנוע\nנהג חתך אותנו מהחניה\n\nאז אנחנו נסענו באופנוע בכיף שלנו\nוכמה שניות לפני שהנהג פגע בנו, היינו בשיחה משעשעת\nולא היה שום סימן לסכנה\nכלומר, באותו רגע, הזכרון הזה היה נייטרלי לחלוטין\nוהיינו בטוחים לחלוטין\nמבינה?\n',
+          html: 'עכשיו תראי\nלפני כמה זמן לי ולאחי הייתה תאונת אופנוע\nנהג חתך אותנו מהחניה\n\nאז אנחנו נסענו באופנוע בכיף שלנו\nוכמה שניות לפני שהנהג פגע בנו, היינו בשיחה משעשעת\nולא היה שום סימן לסכנה\nכלומר, באותו רגע, הזכרון הזה היה נייטרלי לחלוטין\nוהיינו בטוחים לחלוטין\nמבינה?\n',
           isRtl: true,
         },
       ],
@@ -819,8 +787,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'ואז היה את הרגע של הפגיעה\nלא נעים\nהיינו בשוק כמה שניות\nהתעשתנו\n\nוירדנו לשוליים להחליף פרטים עם הנהג\nהרגל שלי באותו רגע עדיין לא החלימה לחלוטין\nאבל האירוע עצמו של התאונה נגמר\n\nוהיינו שוב בטוחים לחלוטין\nלכל זכרון, גדול כקטן, יש רגע נייטרלי של לפני, ויש רגע נייטרלי של אחרי\nעד כה איתי?\n',
+          html: 'ואז היה את הרגע של הפגיעה\nלא נעים\nהיינו בשוק כמה שניות\nהתעשתנו\n\nוירדנו לשוליים להחליף פרטים עם הנהג\nהרגל שלי באותו רגע עדיין לא החלימה לחלוטין\nאבל האירוע עצמו של התאונה נגמר\n\nוהיינו שוב בטוחים לחלוטין\nלכל זכרון, גדול כקטן, יש רגע נייטרלי של לפני, ויש רגע נייטרלי של אחרי\nעד כה איתי?\n',
           isRtl: true,
         },
       ],
@@ -834,8 +801,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'מעולה\nעכשיו אני רוצה שתמצאי את הרגע של לפני בזכרון שלך\nלפני שמשהו קרה\nואת רואה את דורה בת ה14.5 בתמונה\nוהיא בטוחה לחלוטין\nאין סימן לסכנה\nיכול להיות שזה כמה דקות לפני\nויכול להיות שזה בכלל שעה לפני\n\nוזה נייטרלי לחלוטין\n',
+          html: 'מעולה\nעכשיו אני רוצה שתמצאי את הרגע של לפני בזכרון שלך\nלפני שמשהו קרה\nואת רואה את דורה בת ה14.5 בתמונה\nוהיא בטוחה לחלוטין\nאין סימן לסכנה\nיכול להיות שזה כמה דקות לפני\nויכול להיות שזה בכלל שעה לפני\n\nוזה נייטרלי לחלוטין\n',
           isRtl: true,
         },
       ],
@@ -853,8 +819,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'הסיטואציה שלי כאן לא היתה עם סכנה..יש לי אותי שאני רואה אותה מבחוץ..\n',
+          html: 'הסיטואציה שלי כאן לא היתה עם סכנה..יש לי אותי שאני רואה אותה מבחוץ..\n',
           isRtl: true,
         },
       ],
@@ -872,8 +837,7 @@ function msgs() {
       content: [
         {
           type: 'textWithHtml',
-          html:
-            '<span>וזאת תמונה </span><b><span class="_3oh- _58nk"><span>מלפני</span></span></b>',
+          html: '<span>וזאת תמונה </span><b><span class="_3oh- _58nk"><span>מלפני</span></span></b>',
           isRtl: true,
         },
         {
@@ -906,8 +870,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'עכשיו אני רוצה שתמצאי את הרגע של אחרי בזכרון שלך\nאחרי שהכל נגמר,\nואת רואה את דורה בת ה14.5 בתמונה\nוהיא בטוחה לחלוטין\nאין סימן לסכנה\nיכול להיות שזה כמה דקות אחרי\nויכול להיות שזה בכלל שעה אחרי\n\nוזה נייטרלי לחלוטין\n\nתגידי לי שמצאת את הרגע שאת רואה את דורה בת ה14.5 אחרי שהכל נגמר, והיא בטוחה לחלוטין\n',
+          html: 'עכשיו אני רוצה שתמצאי את הרגע של אחרי בזכרון שלך\nאחרי שהכל נגמר,\nואת רואה את דורה בת ה14.5 בתמונה\nוהיא בטוחה לחלוטין\nאין סימן לסכנה\nיכול להיות שזה כמה דקות אחרי\nויכול להיות שזה בכלל שעה אחרי\n\nוזה נייטרלי לחלוטין\n\nתגידי לי שמצאת את הרגע שאת רואה את דורה בת ה14.5 אחרי שהכל נגמר, והיא בטוחה לחלוטין\n',
           isRtl: true,
         },
       ],
@@ -959,8 +922,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'ואני רוצה שתראי את התמונה הזאת מרחוק\nככה שאת רואה את דורה בת ה14.5\nרחוק רחוק\nבמסך קטן ושחור לבן\nללא קול או סאונד\n',
+          html: 'ואני רוצה שתראי את התמונה הזאת מרחוק\nככה שאת רואה את דורה בת ה14.5\nרחוק רחוק\nבמסך קטן ושחור לבן\nללא קול או סאונד\n',
           isRtl: true,
         },
         { type: 'text', html: 'תגידי לי כשעשית\n', isRtl: true },
@@ -977,8 +939,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'עכשיו באותו מסך קטן, שחור לבן, רחוק רחוק, ללא קול, אני רוצה שתחליפי את התמונה של האחרי, בתמונה של הלפני.\nככה שאת רואה את דורה בת ה14.5\nרחוק רחוק\nבמסך קטן ושחור לבן\nללא קול או סאונד\nלפני שיש זכר לאירוע,\n',
+          html: 'עכשיו באותו מסך קטן, שחור לבן, רחוק רחוק, ללא קול, אני רוצה שתחליפי את התמונה של האחרי, בתמונה של הלפני.\nככה שאת רואה את דורה בת ה14.5\nרחוק רחוק\nבמסך קטן ושחור לבן\nללא קול או סאונד\nלפני שיש זכר לאירוע,\n',
           isRtl: true,
         },
       ],
@@ -988,8 +949,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'כלומר כשהייתי עם תקווה והרצון ועדיין חשבתי שהכל יהייה כמו שאני רוצה\n',
+          html: 'כלומר כשהייתי עם תקווה והרצון ועדיין חשבתי שהכל יהייה כמו שאני רוצה\n',
           isRtl: true,
         },
         { type: 'text', html: 'יש לי את התמונה\n', isRtl: true },
@@ -1002,8 +962,7 @@ function msgs() {
         { type: 'text', html: 'עכשיו\n', isRtl: true },
         {
           type: 'text',
-          html:
-            'עכשיו אני רוצה שתריצי את זה קדימה\nהכי מהר שאת יכולה\nבמסך הקטן\nרחוק רחוק\nשחור לבן\nבלי קול\nותראי את זה מרחוק\nתראי את רות הקטנה\nבהילוך מהיר\n',
+          html: 'עכשיו אני רוצה שתריצי את זה קדימה\nהכי מהר שאת יכולה\nבמסך הקטן\nרחוק רחוק\nשחור לבן\nבלי קול\nותראי את זה מרחוק\nתראי את רות הקטנה\nבהילוך מהיר\n',
           isRtl: true,
         },
         { type: 'text', html: 'עוברת את מה שהיא עברה\n', isRtl: true },
@@ -1076,8 +1035,7 @@ function msgs() {
       content: [
         {
           type: 'textWithHtml',
-          html:
-            '<a target="_blank" href="https://l.messenger.com/l.php?u=https%3A%2F%2Fyoutu.be%2F1D5Sa2Yq-2g&amp;h=ATOFfG6IwkHJoLsBrU-peMezk5jraSqZOhVVY2xKLygI_uJCiB6UHNAF77JB2HD_47l_cAhys5a8_Z-RWH47bpw37r_3i7YFA5za_BJRRicmBSZabYWUPldpvaKfK4Fo8GIYlg" rel="nofollow noopener">https://youtu.be/1D5Sa2Yq-2g</a>',
+          html: '<a target="_blank" href="https://l.messenger.com/l.php?u=https%3A%2F%2Fyoutu.be%2F1D5Sa2Yq-2g&amp;h=ATOFfG6IwkHJoLsBrU-peMezk5jraSqZOhVVY2xKLygI_uJCiB6UHNAF77JB2HD_47l_cAhys5a8_Z-RWH47bpw37r_3i7YFA5za_BJRRicmBSZabYWUPldpvaKfK4Fo8GIYlg" rel="nofollow noopener">https://youtu.be/1D5Sa2Yq-2g</a>',
           isRtl: false,
         },
       ],
@@ -1115,8 +1073,7 @@ function msgs() {
       content: [
         {
           type: 'textWithEmoticon',
-          html:
-            'מעניין <img alt="🙂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/z4c/1/16/1f642.png">',
+          html: 'מעניין <img alt="🙂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/z4c/1/16/1f642.png">',
           isRtl: true,
         },
         { type: 'text', html: 'עכשיו\n', isRtl: true },
@@ -1130,8 +1087,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'אני מרגישה שאין לזכרון שום חשיבות כשאני נזכרת ורואה בעיני רוחי את ההילוך המהיר בשחור לבן אחורה זה אפילו מצחיק אותי\n',
+          html: 'אני מרגישה שאין לזכרון שום חשיבות כשאני נזכרת ורואה בעיני רוחי את ההילוך המהיר בשחור לבן אחורה זה אפילו מצחיק אותי\n',
           isRtl: true,
         },
       ],
@@ -1142,8 +1098,7 @@ function msgs() {
         { type: 'text', html: 'אפילו מצחיק???\n', isRtl: true },
         {
           type: 'textWithEmoticon',
-          html:
-            'חשבתי שזה זכרון שלילי <img alt="🙂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/z4c/1/16/1f642.png">',
+          html: 'חשבתי שזה זכרון שלילי <img alt="🙂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/z4c/1/16/1f642.png">',
           isRtl: true,
         },
         { type: 'text', html: 'מעניין לא?\n', isRtl: true },
@@ -1232,8 +1187,7 @@ function msgs() {
         },
         {
           type: 'text',
-          html:
-            'וכמה את תוכלי להשפיע עליהם לחיוב\nעכשיו שאת יודעת כמה צחוק מסתתר בכל פינה\n',
+          html: 'וכמה את תוכלי להשפיע עליהם לחיוב\nעכשיו שאת יודעת כמה צחוק מסתתר בכל פינה\n',
           isRtl: true,
         },
       ],
@@ -1243,8 +1197,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'אני מבינה מזה שהכל תלוי במשמעויות שאנחנו נותנים לכל מיני ארועים שקורים לנו בחיים אך ורק המשמעות\n',
+          html: 'אני מבינה מזה שהכל תלוי במשמעויות שאנחנו נותנים לכל מיני ארועים שקורים לנו בחיים אך ורק המשמעות\n',
           isRtl: true,
         },
       ],
@@ -1263,8 +1216,7 @@ function msgs() {
         },
         {
           type: 'textWithEmoticon',
-          html:
-            'או מעדיפה להמשיך לצחוק? <img alt="🙂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/z4c/1/16/1f642.png">',
+          html: 'או מעדיפה להמשיך לצחוק? <img alt="🙂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/z4c/1/16/1f642.png">',
           isRtl: true,
         },
       ],
@@ -1305,8 +1257,7 @@ function msgs() {
         },
         {
           type: 'textWithHtml',
-          html:
-            '<span>לתת ביקורת בעמוד, שעוד אנשים ילמדו ממך מה אפשרי</span><br><a target="_blank" href="https://www.facebook.com/pg/adamgoldman.me/reviews/">https://www.facebook.com/pg/adamgoldman.me/reviews/</a>',
+          html: '<span>לתת ביקורת בעמוד, שעוד אנשים ילמדו ממך מה אפשרי</span><br><a target="_blank" href="https://www.facebook.com/pg/adamgoldman.me/reviews/">https://www.facebook.com/pg/adamgoldman.me/reviews/</a>',
           isRtl: true,
         },
       ],
@@ -1317,8 +1268,7 @@ function msgs() {
       content: [
         {
           type: 'image',
-          src:
-            'https://scontent.fskg1-1.fna.fbcdn.net/v/t35.0-0/p480x480/22711675_1496603220415903_1152451256_o.png?oh=e5ddfb8187c7bdda8c1df4e4d78e9e9b&oe=59FA0A30',
+          src: 'https://scontent.fskg1-1.fna.fbcdn.net/v/t35.0-0/p480x480/22711675_1496603220415903_1152451256_o.png?oh=e5ddfb8187c7bdda8c1df4e4d78e9e9b&oe=59FA0A30',
           isRtl: false,
         },
       ],
@@ -1385,8 +1335,7 @@ function msgs() {
       content: [
         {
           type: 'textWithEmoticon',
-          html:
-            'ראיתי תודה <img alt="🙂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/z4c/1/16/1f642.png">',
+          html: 'ראיתי תודה <img alt="🙂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/z4c/1/16/1f642.png">',
           isRtl: true,
         },
         { type: 'text', html: 'וזאת רק ההתחלה\n', isRtl: true },
@@ -1394,8 +1343,7 @@ function msgs() {
         { type: 'text', html: 'שלמדת ממש מהר\n', isRtl: true },
         {
           type: 'text',
-          html:
-            'ויש עוד הרבההההההההההההה דורה\nהרבה דברים שהולכים להשתפר בחיים שלך\n',
+          html: 'ויש עוד הרבההההההההההההה דורה\nהרבה דברים שהולכים להשתפר בחיים שלך\n',
           isRtl: true,
         },
         { type: 'text', html: 'וכמו שראית, הכל מאוד פשוט\n', isRtl: true },
@@ -1417,8 +1365,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'וכל עוד את רוצה להמשיך וללמוד להרגיש יותר טוב ולבנות עתיד מזהיר יותר,\nאני לרשותך\n',
+          html: 'וכל עוד את רוצה להמשיך וללמוד להרגיש יותר טוב ולבנות עתיד מזהיר יותר,\nאני לרשותך\n',
           isRtl: true,
         },
         { type: 'text', html: 'ולרשות כל יקירייך\n', isRtl: true },
@@ -1434,16 +1381,14 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'יש לך את כל התהליך שעשינו פה בפייסבוק\nאת יכולה לגלול קצת למעלה ולקרוא אותו שוב\n\nואז תבחרי זכרון אחר לעשות אותו\n',
+          html: 'יש לך את כל התהליך שעשינו פה בפייסבוק\nאת יכולה לגלול קצת למעלה ולקרוא אותו שוב\n\nואז תבחרי זכרון אחר לעשות אותו\n',
           isRtl: true,
         },
         { type: 'text', html: 'ותגידי לי איך היה\n', isRtl: true },
         { type: 'text', html: 'ואם את רוצה הכוונה קצת\n', isRtl: true },
         {
           type: 'textWithEmoticon',
-          html:
-            'זאת בכל זאת הפעם  השנייה שלך <img alt="🙂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/z4c/1/16/1f642.png">',
+          html: 'זאת בכל זאת הפעם  השנייה שלך <img alt="🙂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/z4c/1/16/1f642.png">',
           isRtl: true,
         },
         {
@@ -1468,8 +1413,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'אני עושה את זה כבר כמה שנים, עובד עם כמה עשרות במקביל כל הזמן\n\nמהקבוצה של הפייס  שאת חברה בה, בנתיים יש 5\n',
+          html: 'אני עושה את זה כבר כמה שנים, עובד עם כמה עשרות במקביל כל הזמן\n\nמהקבוצה של הפייס  שאת חברה בה, בנתיים יש 5\n',
           isRtl: true,
         },
       ],
@@ -1508,8 +1452,7 @@ function msgs() {
         },
         {
           type: 'text',
-          html:
-            'אתה יודע אני עכשיו מנסה לחזור לזכרון השלילי שוב ..הוא איננו יש שם רק חיוך...ואהבה וחמלה\n',
+          html: 'אתה יודע אני עכשיו מנסה לחזור לזכרון השלילי שוב ..הוא איננו יש שם רק חיוך...ואהבה וחמלה\n',
           isRtl: true,
         },
       ],
@@ -1519,8 +1462,7 @@ function msgs() {
       content: [
         {
           type: 'textWithEmoticon',
-          html:
-            'לומדים אצלי <img alt="🙂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/z4c/1/16/1f642.png">',
+          html: 'לומדים אצלי <img alt="🙂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/z4c/1/16/1f642.png">',
           isRtl: true,
         },
         { type: 'text', html: 'בדיוק!\n', isRtl: true },
@@ -1531,8 +1473,7 @@ function msgs() {
         },
         {
           type: 'text',
-          html:
-            'ויש עוד הרבה חיוכים ...\nוהרבה אהבות ..\nוהרבה חמלות ..\n\nשחיכו לך יותר מדי זמן\n',
+          html: 'ויש עוד הרבה חיוכים ...\nוהרבה אהבות ..\nוהרבה חמלות ..\n\nשחיכו לך יותר מדי זמן\n',
           isRtl: true,
         },
         { type: 'text', html: 'ומחכים שתגלי אותם\n', isRtl: true },
@@ -1560,8 +1501,7 @@ function msgs() {
       content: [
         {
           type: 'textWithEmoticon',
-          html:
-            'בנתיים אני אנסה לעבוד על עוד זכרון זה יקח לי קצת זמן אולי זה ידחה למחר..<img alt="☺" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zfb/1/16/263a.png">',
+          html: 'בנתיים אני אנסה לעבוד על עוד זכרון זה יקח לי קצת זמן אולי זה ידחה למחר..<img alt="☺" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zfb/1/16/263a.png">',
           isRtl: true,
         },
       ],
@@ -1571,8 +1511,7 @@ function msgs() {
       content: [
         {
           type: 'textWithEmoticon',
-          html:
-            'יש זמן, כולנו צעירים <img alt="😉" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/z57/1/16/1f609.png">',
+          html: 'יש זמן, כולנו צעירים <img alt="😉" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/z57/1/16/1f609.png">',
           isRtl: true,
         },
       ],
@@ -1584,8 +1523,7 @@ function msgs() {
         { type: 'text', html: 'ערב טוב אדם\n', isRtl: true },
         {
           type: 'text',
-          html:
-            'אני מנסה לעבוד על הזיכרון של היום שנודע לי שאני עם סרטן שד ממאיר...מוצאת הזכרון אך לא רואה תנועה אלא תמונה קפואה..איך ממשיכים משם ?\n',
+          html: 'אני מנסה לעבוד על הזיכרון של היום שנודע לי שאני עם סרטן שד ממאיר...מוצאת הזכרון אך לא רואה תנועה אלא תמונה קפואה..איך ממשיכים משם ?\n',
           isRtl: true,
         },
       ],
@@ -1612,8 +1550,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'תזכרי שאני פה איתך בפייסבוק,\nולא רואה את הפנים שלך, את צריכה להגיד לי מה את עושה\n',
+          html: 'תזכרי שאני פה איתך בפייסבוק,\nולא רואה את הפנים שלך, את צריכה להגיד לי מה את עושה\n',
           isRtl: true,
         },
       ],
@@ -1643,8 +1580,7 @@ function msgs() {
         { type: 'text', html: 'לתמונה הקפואה הזאת אנחנו נחזור\n', isRtl: true },
         {
           type: 'text',
-          html:
-            'בנתיים, יש לך עוד זכרונות מהעבר עליהם את יכולה לעשות את התהליך?\n',
+          html: 'בנתיים, יש לך עוד זכרונות מהעבר עליהם את יכולה לעשות את התהליך?\n',
           isRtl: true,
         },
       ],
@@ -1654,8 +1590,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'בתמונה הקפואה הזו אני לא רואה ולא מרגישה כלום..לא עצב לא כעס לא שמחה כלום אני חושבת שאני בהלם טוטאלי ורק עכשיו כשאני מנסה לשחזר את הסיטואציה אני  מבינה שהייתי בהלם בשוק..כי הייתי בטוחה שאין לי סרטן\n',
+          html: 'בתמונה הקפואה הזו אני לא רואה ולא מרגישה כלום..לא עצב לא כעס לא שמחה כלום אני חושבת שאני בהלם טוטאלי ורק עכשיו כשאני מנסה לשחזר את הסיטואציה אני  מבינה שהייתי בהלם בשוק..כי הייתי בטוחה שאין לי סרטן\n',
           isRtl: true,
         },
       ],
@@ -1676,8 +1611,7 @@ function msgs() {
       content: [
         {
           type: 'textWithHtml',
-          html:
-            '<span>בנתיים, תכתבי פה במסמך, על איזה זכרונות עשית את התהליך</span><br><a target="_blank" href="https://l.messenger.com/l.php?u=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F13kBMviocVF2LyF0BHN7a9dcnLpqUD4uwvRl682nw724%2Fedit&amp;h=ATOFfG6IwkHJoLsBrU-peMezk5jraSqZOhVVY2xKLygI_uJCiB6UHNAF77JB2HD_47l_cAhys5a8_Z-RWH47bpw37r_3i7YFA5za_BJRRicmBSZabYWUPldpvaKfK4Fo8GIYlg" rel="nofollow noopener">https://docs.google.com/document/d/13kBMviocVF2LyF0BHN7a9dcnLpqUD4uwvRl682nw724/edit#</a>',
+          html: '<span>בנתיים, תכתבי פה במסמך, על איזה זכרונות עשית את התהליך</span><br><a target="_blank" href="https://l.messenger.com/l.php?u=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F13kBMviocVF2LyF0BHN7a9dcnLpqUD4uwvRl682nw724%2Fedit&amp;h=ATOFfG6IwkHJoLsBrU-peMezk5jraSqZOhVVY2xKLygI_uJCiB6UHNAF77JB2HD_47l_cAhys5a8_Z-RWH47bpw37r_3i7YFA5za_BJRRicmBSZabYWUPldpvaKfK4Fo8GIYlg" rel="nofollow noopener">https://docs.google.com/document/d/13kBMviocVF2LyF0BHN7a9dcnLpqUD4uwvRl682nw724/edit#</a>',
           isRtl: true,
         },
         { type: 'text', html: 'שיהיה לנו מעקב\n', isRtl: true },
@@ -1722,8 +1656,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'כן  אפשר לעזוב  בצד בנתיים רוצה להעיד על זיכרון מלפני 4 שנים, 13 שנות עבודה כמנהלת חנויות של דניאלה לנביא אילצו אותי להתפטר... זיכרון שלילי מלא באכזבה..כאב עמיר בנשמה איך וויתרו עלי ככה ..אחרי 13 שנה כה"מנהלת" עם המון המון השגים והצלחות בחנויות שניהלתי..\n',
+          html: 'כן  אפשר לעזוב  בצד בנתיים רוצה להעיד על זיכרון מלפני 4 שנים, 13 שנות עבודה כמנהלת חנויות של דניאלה לנביא אילצו אותי להתפטר... זיכרון שלילי מלא באכזבה..כאב עמיר בנשמה איך וויתרו עלי ככה ..אחרי 13 שנה כה"מנהלת" עם המון המון השגים והצלחות בחנויות שניהלתי..\n',
           isRtl: true,
         },
         { type: 'text', html: 'את זה אני רואה במלא תנועה ..\n', isRtl: true },
@@ -1744,8 +1677,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'הכל...כמו סרט לפני שאמרו לי שאין להם מה להציע לי אם אני רוצה לעזוב את הניהול של החנות מסויימת שניהלתי שנתיים..אז הם מצאו פתרון בלהגיד לי תהיי מוכרת במקום מנהלת...וזה לא היה מקובל עלי\n',
+          html: 'הכל...כמו סרט לפני שאמרו לי שאין להם מה להציע לי אם אני רוצה לעזוב את הניהול של החנות מסויימת שניהלתי שנתיים..אז הם מצאו פתרון בלהגיד לי תהיי מוכרת במקום מנהלת...וזה לא היה מקובל עלי\n',
           isRtl: true,
         },
       ],
@@ -1766,8 +1698,7 @@ function msgs() {
         { type: 'text', html: 'עשיתי א  זה\n', isRtl: true },
         {
           type: 'text',
-          html:
-            'אני חוזרת להתחלה של הזיכרון ואין שם שום כאב שום אכזבה..הכל בסדר כפי שהיה...אני שמחה..\n',
+          html: 'אני חוזרת להתחלה של הזיכרון ואין שם שום כאב שום אכזבה..הכל בסדר כפי שהיה...אני שמחה..\n',
           isRtl: true,
         },
       ],
@@ -1780,8 +1711,7 @@ function msgs() {
         { type: 'text', html: 'איזה קטע זה הא\n', isRtl: true },
         {
           type: 'text',
-          html:
-            'תארי לך\nאנשים "רגילים" נזכרים בעבר שלהם\nומפחדים להתקל בזכרונות \n\nכשאני נזכר בעבר, או שאני נזכר במשו טוב,\nאו שנזכר במשו שעדיין לא הפכתי לזכרון שמח\n\nוזה אחלה של מקום להיות בו!\n',
+          html: 'תארי לך\nאנשים "רגילים" נזכרים בעבר שלהם\nומפחדים להתקל בזכרונות \n\nכשאני נזכר בעבר, או שאני נזכר במשו טוב,\nאו שנזכר במשו שעדיין לא הפכתי לזכרון שמח\n\nוזה אחלה של מקום להיות בו!\n',
           isRtl: true,
         },
       ],
@@ -1792,14 +1722,12 @@ function msgs() {
         { type: 'text', html: 'זכרון של הפיטורים שלי\n', isRtl: true },
         {
           type: 'text',
-          html:
-            'כרגע אני מרגישה שאין לזה שום משמעות עבורי..יא איזה משקל נתתי לזה כשזה קרה...זה היה אחד הטריגרים שהביאו לי את הסרטן\n',
+          html: 'כרגע אני מרגישה שאין לזה שום משמעות עבורי..יא איזה משקל נתתי לזה כשזה קרה...זה היה אחד הטריגרים שהביאו לי את הסרטן\n',
           isRtl: true,
         },
         {
           type: 'text',
-          html:
-            'הכי מצחיק כשאני עוברת אחורה בהילוך מהיר...אני אפילו שומעת קולות כמו ששומעים בסרטים מצויירים וזה ממש משעשע אותי!',
+          html: 'הכי מצחיק כשאני עוברת אחורה בהילוך מהיר...אני אפילו שומעת קולות כמו ששומעים בסרטים מצויירים וזה ממש משעשע אותי!',
           isRtl: true,
         },
       ],
@@ -1855,8 +1783,7 @@ function msgs() {
         { type: 'text', html: 'ערב טוב אדם\n', isRtl: true },
         {
           type: 'text',
-          html:
-            'לפני כמה דקות סיימתי עם תהליך עבודה על זכרון נוסף.\nרשמתי לך באפליקציה על כל הזכרונות שעבדתי עליהם.\n',
+          html: 'לפני כמה דקות סיימתי עם תהליך עבודה על זכרון נוסף.\nרשמתי לך באפליקציה על כל הזכרונות שעבדתי עליהם.\n',
           isRtl: true,
         },
       ],
@@ -1868,8 +1795,7 @@ function msgs() {
         { type: 'text', html: 'מעולה\n', isRtl: true },
         {
           type: 'text',
-          html:
-            'מה עם זה:\nרוצה לנסוע עם חברים פנימיה לבקר בטורקיה לחופש לא התאפשר - אכזבה, עצב\n',
+          html: 'מה עם זה:\nרוצה לנסוע עם חברים פנימיה לבקר בטורקיה לחופש לא התאפשר - אכזבה, עצב\n',
           isRtl: true,
         },
       ],
@@ -1945,14 +1871,12 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'ממש קצר .. קטע של מוזיקת הקרקס ממש משעשע ..מצחיק כי אני מרגישה שאני בתוך סרט מצוייר..עם קולות ודיבורים לא מובנים\n',
+          html: 'ממש קצר .. קטע של מוזיקת הקרקס ממש משעשע ..מצחיק כי אני מרגישה שאני בתוך סרט מצוייר..עם קולות ודיבורים לא מובנים\n',
           isRtl: true,
         },
         {
           type: 'text',
-          html:
-            'אני כל הזמן חוזרת לזכרונות הללו ונוכחת לדעת שהם עוברים לידי ללא שום השפעה כאילו שזו לא אני מעורבת בהם\n',
+          html: 'אני כל הזמן חוזרת לזכרונות הללו ונוכחת לדעת שהם עוברים לידי ללא שום השפעה כאילו שזו לא אני מעורבת בהם\n',
           isRtl: true,
         },
       ],
@@ -1973,8 +1897,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'עבדתי על הזכרונות שהכי השפיעו עלי רשמתי אותם כזכרונות שליליים כי הם ניו כאלה אך ההשפעה שלהם על חיי לא היו כל כך משמעותיים כמו השאר\n',
+          html: 'עבדתי על הזכרונות שהכי השפיעו עלי רשמתי אותם כזכרונות שליליים כי הם ניו כאלה אך ההשפעה שלהם על חיי לא היו כל כך משמעותיים כמו השאר\n',
           isRtl: true,
         },
       ],
@@ -1985,8 +1908,7 @@ function msgs() {
         { type: 'text', html: 'כמו השאר?\n', isRtl: true },
         {
           type: 'text',
-          html:
-            'אוקיי נעבור רגע אחד אחד\nמה עם זה:\n\n"56 - בעל נפטר מסרטן\n\nבעקבות זה התמוטטות עצבים אשפוז של יומיים..שאחרי זה התנהלתי כמו רובוט..\n"\n',
+          html: 'אוקיי נעבור רגע אחד אחד\nמה עם זה:\n\n"56 - בעל נפטר מסרטן\n\nבעקבות זה התמוטטות עצבים אשפוז של יומיים..שאחרי זה התנהלתי כמו רובוט..\n"\n',
           isRtl: true,
         },
       ],
@@ -2008,8 +1930,7 @@ function msgs() {
         },
         {
           type: 'text',
-          html:
-            'יש את הרגע שקיבלת את הידיעה\nיש את ההתנהלות שלך אחרי\n"כמו רובוט"\n\nוגם, יש  את מה שאתה מרגישה כלפי בעלך\n',
+          html: 'יש את הרגע שקיבלת את הידיעה\nיש את ההתנהלות שלך אחרי\n"כמו רובוט"\n\nוגם, יש  את מה שאתה מרגישה כלפי בעלך\n',
           isRtl: true,
         },
         {
@@ -2063,8 +1984,7 @@ function msgs() {
         { type: 'text', html: 'לא הודיעו לי הייתי איתו\n', isRtl: true },
         {
           type: 'text',
-          html:
-            'ברור שלא למרות שביקשנו אני והילדים שזה יגמר כי הוא סבל סבל לא אנושי\n',
+          html: 'ברור שלא למרות שביקשנו אני והילדים שזה יגמר כי הוא סבל סבל לא אנושי\n',
           isRtl: true,
         },
       ],
@@ -2075,15 +1995,13 @@ function msgs() {
         { type: 'text', html: 'ואמרת גם\n', isRtl: true },
         {
           type: 'text',
-          html:
-            '"בעקבות זה התמוטטות עצבים אשפוז של יומיים..שאחרי זה התנהלתי כמו רובוט.."\n',
+          html: '"בעקבות זה התמוטטות עצבים אשפוז של יומיים..שאחרי זה התנהלתי כמו רובוט.."\n',
           isRtl: true,
         },
         { type: 'text', html: 'מתי זה נגמר?\n', isRtl: true },
         {
           type: 'textWithEmoticon',
-          html:
-            'או שאני מדבר עכשיו עם רובוט? <img alt="😀" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zce/1/16/1f600.png">',
+          html: 'או שאני מדבר עכשיו עם רובוט? <img alt="😀" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zce/1/16/1f600.png">',
           isRtl: true,
         },
       ],
@@ -2093,8 +2011,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'כל זה קרה כשהרופא אמר לי בהתחלה שאין מה לעשות עבורו  וידעתי שהוא ימות זה רק ענין של זמן ..כשחזרנו מהבית חולים אחרי 10 חמי אשפוז שלו אותו לילה קרתה ההתמוטטות\n',
+          html: 'כל זה קרה כשהרופא אמר לי בהתחלה שאין מה לעשות עבורו  וידעתי שהוא ימות זה רק ענין של זמן ..כשחזרנו מהבית חולים אחרי 10 חמי אשפוז שלו אותו לילה קרתה ההתמוטטות\n',
           isRtl: true,
         },
       ],
@@ -2105,8 +2022,7 @@ function msgs() {
         { type: 'text', html: 'אוקיי\n', isRtl: true },
         {
           type: 'text',
-          html:
-            'אז הזכרון השלילי זה על כל התקופה מאז האבחון שלו, ועד סיום האשפוז של יומיים שלך?\n',
+          html: 'אז הזכרון השלילי זה על כל התקופה מאז האבחון שלו, ועד סיום האשפוז של יומיים שלך?\n',
           isRtl: true,
         },
       ],
@@ -2135,8 +2051,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'הייתה הקלה מאוד גדולה בשבילי ואז היו לי רגעים שהרגשתי רגשי אשמה כי הרבה שנים רציתי להפיג ממנו כשהוא חלה לא עזבתי ..סעדתי טיפלתי ..המכל הלב עם המון אהבה..\n',
+          html: 'הייתה הקלה מאוד גדולה בשבילי ואז היו לי רגעים שהרגשתי רגשי אשמה כי הרבה שנים רציתי להפיג ממנו כשהוא חלה לא עזבתי ..סעדתי טיפלתי ..המכל הלב עם המון אהבה..\n',
           isRtl: true,
         },
       ],
@@ -2173,8 +2088,7 @@ function msgs() {
         },
         {
           type: 'text',
-          html:
-            'כשאני אומרת 3 שנים  לא היה כל הזמן שלילי הכל פשוט היה קושי..הייתי מוטשת..פעמיים בשבוע בבית חולים כימו ועל זה שכרוך בזה זה שלילי כי היתה מחלה קשה מאוד  ..התמודדות יומיומית\n',
+          html: 'כשאני אומרת 3 שנים  לא היה כל הזמן שלילי הכל פשוט היה קושי..הייתי מוטשת..פעמיים בשבוע בבית חולים כימו ועל זה שכרוך בזה זה שלילי כי היתה מחלה קשה מאוד  ..התמודדות יומיומית\n',
           isRtl: true,
         },
       ],
@@ -2184,8 +2098,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'תראי\nאת לא צריכה לעבור דרך כל פרט ופרט\n\nבעיקר על הרגעים שהיו חזקים יותר\n\nוגם תזכרי שהאפקט יהיה חיובי בכל מקרה, גם אם תפספסי קצת חלקים, תוכלי לעשות  את זה שוב\n',
+          html: 'תראי\nאת לא צריכה לעבור דרך כל פרט ופרט\n\nבעיקר על הרגעים שהיו חזקים יותר\n\nוגם תזכרי שהאפקט יהיה חיובי בכל מקרה, גם אם תפספסי קצת חלקים, תוכלי לעשות  את זה שוב\n',
           isRtl: true,
         },
         {
@@ -2217,8 +2130,7 @@ function msgs() {
       content: [
         {
           type: 'textWithHtml',
-          html:
-            '<span>תזכרי שההתחלה היא תמיד </span><b><span class="_3oh- _58nk"><span>לפני</span></span></b><span> שמשהו קרה</span>',
+          html: '<span>תזכרי שההתחלה היא תמיד </span><b><span class="_3oh- _58nk"><span>לפני</span></span></b><span> שמשהו קרה</span>',
           isRtl: true,
         },
         {
@@ -2292,8 +2204,7 @@ function msgs() {
       content: [
         {
           type: 'textWithEmoticon',
-          html:
-            'בטח...תודה רבה על הכל .בנתיים לילה טוב<img alt="😍" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/z2/1/16/1f60d.png">',
+          html: 'בטח...תודה רבה על הכל .בנתיים לילה טוב<img alt="😍" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/z2/1/16/1f60d.png">',
           isRtl: true,
         },
       ],
@@ -2322,8 +2233,7 @@ function msgs() {
         { type: 'text', html: 'היי אדם\n', isRtl: true },
         {
           type: 'text',
-          html:
-            'האם יכול להיות שהמח שלי עושה את התהליך בצורה אוטומטית  בלי  צורך לעבור את כל התהליך\n',
+          html: 'האם יכול להיות שהמח שלי עושה את התהליך בצורה אוטומטית  בלי  צורך לעבור את כל התהליך\n',
           isRtl: true,
         },
       ],
@@ -2333,8 +2243,7 @@ function msgs() {
       content: [
         {
           type: 'textWithEmoticon',
-          html:
-            'כן, בשלב מסויים המח מבין את התהליך ועושה אותו "בלי לשאול אותך" <img alt="🙂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/z4c/1/16/1f642.png">',
+          html: 'כן, בשלב מסויים המח מבין את התהליך ועושה אותו "בלי לשאול אותך" <img alt="🙂" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/z4c/1/16/1f642.png">',
           isRtl: true,
         },
         { type: 'text', html: 'לשם אנחנו מכוונים\n', isRtl: true },
@@ -2378,8 +2287,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'כשהתחלתי עם התהליך על הזכרון עם המחלה של בעלי וכל זה עבר מהתחלה  הרגשתי  שזה לא מזיז לי בכלל... זה עובר לידי...לפני זה כשהייתי נזכרת היה לי עצב בלב ועכשיו כל זכרון שלילי שכתבתי הם כבר כאילו לא זכרונות שלי..יכול להיות דבר כזה?\n',
+          html: 'כשהתחלתי עם התהליך על הזכרון עם המחלה של בעלי וכל זה עבר מהתחלה  הרגשתי  שזה לא מזיז לי בכלל... זה עובר לידי...לפני זה כשהייתי נזכרת היה לי עצב בלב ועכשיו כל זכרון שלילי שכתבתי הם כבר כאילו לא זכרונות שלי..יכול להיות דבר כזה?\n',
           isRtl: true,
         },
       ],
@@ -2419,8 +2327,7 @@ function msgs() {
         },
         {
           type: 'text',
-          html:
-            'לא חושבת שכל אחד יכול להגיע לזה צריך להיות עם דמיון מפותח מאוד בשביל זה\n',
+          html: 'לא חושבת שכל אחד יכול להגיע לזה צריך להיות עם דמיון מפותח מאוד בשביל זה\n',
           isRtl: true,
         },
       ],
@@ -2451,8 +2358,7 @@ function msgs() {
         { type: 'text', html: 'אני מאוד מסוקרן לגלות\n', isRtl: true },
         {
           type: 'text',
-          html:
-            'וגם\nכמו שאת תראי\n\nהדרך הכי טובה, מהירה, ויעילה, להשפיע על אנשים אחרים,\nזה לזרוח מבפנים כמה שיותר חזק, ולהרגיש כל כך טוב,\nעד שאנשים אחרים לא יוכלו להתעלם וירצו גם לעצמם\n',
+          html: 'וגם\nכמו שאת תראי\n\nהדרך הכי טובה, מהירה, ויעילה, להשפיע על אנשים אחרים,\nזה לזרוח מבפנים כמה שיותר חזק, ולהרגיש כל כך טוב,\nעד שאנשים אחרים לא יוכלו להתעלם וירצו גם לעצמם\n',
           isRtl: true,
         },
       ],
@@ -2462,14 +2368,12 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'אני כבר מרגישה שאני בתהליך הבראה מעוצם מאוד..ואני יודעת בוודאות שלא נוטר הרבה כשי דאגיד אני בריאה לחלוטין..\n',
+          html: 'אני כבר מרגישה שאני בתהליך הבראה מעוצם מאוד..ואני יודעת בוודאות שלא נוטר הרבה כשי דאגיד אני בריאה לחלוטין..\n',
           isRtl: true,
         },
         {
           type: 'text',
-          html:
-            'אז איך אני ממשיכה מכאן..אני רואה שכל זכרון שלילי כבר ממש לא מזיז לי כאילו לא זכרונות שלי ...מתבוננת עליהם מחוצה לי..\n',
+          html: 'אז איך אני ממשיכה מכאן..אני רואה שכל זכרון שלילי כבר ממש לא מזיז לי כאילו לא זכרונות שלי ...מתבוננת עליהם מחוצה לי..\n',
           isRtl: true,
         },
         {
@@ -2515,15 +2419,13 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            '12 - בנק הפועלים\n681 - סניף לב דיזנגוף תל אביב\n560975- מספר החשבון שלי\n',
+          html: '12 - בנק הפועלים\n681 - סניף לב דיזנגוף תל אביב\n560975- מספר החשבון שלי\n',
           isRtl: true,
         },
         { type: 'text', html: 'או במלים אחרות\n', isRtl: true },
         {
           type: 'text',
-          html:
-            'בנק הפועלים\nסניף לב דיזנגוף תל אביב\nחשבון 560975\nאדם גולדמן\n',
+          html: 'בנק הפועלים\nסניף לב דיזנגוף תל אביב\nחשבון 560975\nאדם גולדמן\n',
           isRtl: true,
         },
       ],
@@ -2550,8 +2452,7 @@ function msgs() {
 
         {
           type: 'text',
-          html:
-            'ואז תראי עם יש עוד משהו שמגביל אותך,\nאו שאת כבר חופשייה לחלוטין\n',
+          html: 'ואז תראי עם יש עוד משהו שמגביל אותך,\nאו שאת כבר חופשייה לחלוטין\n',
           isRtl: true,
         },
       ],
@@ -2579,8 +2480,7 @@ function msgs() {
       content: [
         {
           type: 'textWithEmoticon',
-          html:
-            'אעבוד על זה שישי שבת ...<img alt="☺" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zfb/1/16/263a.png">',
+          html: 'אעבוד על זה שישי שבת ...<img alt="☺" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zfb/1/16/263a.png">',
           isRtl: true,
         },
       ],
@@ -2590,8 +2490,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'תראי, כשאת עושה את הסריקה, תחפשי גם זכרונות מאוד חזקים משמעותיים עבורך שהם חיוביים\n',
+          html: 'תראי, כשאת עושה את הסריקה, תחפשי גם זכרונות מאוד חזקים משמעותיים עבורך שהם חיוביים\n',
           isRtl: true,
         },
         { type: 'text', html: 'ותרשמי אותם\n', isRtl: true },
@@ -2615,8 +2514,7 @@ function msgs() {
         { type: 'text', html: 'הא בדיוק!\n', isRtl: true },
         {
           type: 'text',
-          html:
-            'עכשיו קחי את החיוך הזה, ותדמייני כמה יותר טוב העתיד שלך ושל יקירייך הולך להיות\n',
+          html: 'עכשיו קחי את החיוך הזה, ותדמייני כמה יותר טוב העתיד שלך ושל יקירייך הולך להיות\n',
           isRtl: true,
         },
       ],
@@ -2648,8 +2546,7 @@ function msgs() {
         },
         {
           type: 'textWithEmoticon',
-          html:
-            'עד שנדביק את כולם... <img alt="😉" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/z57/1/16/1f609.png">',
+          html: 'עד שנדביק את כולם... <img alt="😉" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/z57/1/16/1f609.png">',
           isRtl: true,
         },
       ],
@@ -2660,8 +2557,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'עוד פעם\nלעבור על כל החיים שלי לסרוק ולראות אם יש השפעה שלילית או רגש כלשהו על זכרונות שליליים או עצובים  \nו גם לרשום זכרונות חיוביים ושמחים ?\n',
+          html: 'עוד פעם\nלעבור על כל החיים שלי לסרוק ולראות אם יש השפעה שלילית או רגש כלשהו על זכרונות שליליים או עצובים  \nו גם לרשום זכרונות חיוביים ושמחים ?\n',
           isRtl: true,
         },
       ],
@@ -2673,14 +2569,12 @@ function msgs() {
         { type: 'text', html: 'הדגש כאן הוא\n', isRtl: true },
         {
           type: 'text',
-          html:
-            '1. לנסות בכח להרגיש רע\n2. לעשות רשימה של זכרונות חיוביים / משמעותיים\n',
+          html: '1. לנסות בכח להרגיש רע\n2. לעשות רשימה של זכרונות חיוביים / משמעותיים\n',
           isRtl: true,
         },
         {
           type: 'text',
-          html:
-            'כי כל החיים רוב האנשים מפחדים מהעבר שלהם\nומפחדים "ליפול חזרה" לרגשות ישנים\n\nאני לא רוצה שתפחדי\n\nאני רוצה שראי במו עינייך שאין אופציה לחזור חזרה לאיך שהיית פעם\n',
+          html: 'כי כל החיים רוב האנשים מפחדים מהעבר שלהם\nומפחדים "ליפול חזרה" לרגשות ישנים\n\nאני לא רוצה שתפחדי\n\nאני רוצה שראי במו עינייך שאין אופציה לחזור חזרה לאיך שהיית פעם\n',
           isRtl: true,
         },
       ],
@@ -2690,8 +2584,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'כשאני מנסה בכח להרגיש רע ..לרשום א  זה את זכרונות הרעים שאני אבדוק האם הם משפיעים עלי?האם יש צורך לרשום שוב?\n',
+          html: 'כשאני מנסה בכח להרגיש רע ..לרשום א  זה את זכרונות הרעים שאני אבדוק האם הם משפיעים עלי?האם יש צורך לרשום שוב?\n',
           isRtl: true,
         },
       ],
@@ -2726,8 +2619,7 @@ function msgs() {
         {
           type: 'emoticon',
           alt: ':)',
-          src:
-            'https://static.xx.fbcdn.net/images/emoji.php/v9/z6/1/32/1f642.png',
+          src: 'https://static.xx.fbcdn.net/images/emoji.php/v9/z6/1/32/1f642.png',
           isRtl: false,
         },
       ],
@@ -2745,8 +2637,7 @@ function msgs() {
       content: [
         {
           type: 'textWithEmoticon',
-          html:
-            'עדיין לא ...הייתי מאוד עסוקה..עבדתי בשבת והיה יום הולדת לנכד..היום אתחיל ..<img alt="☺" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zfb/1/16/263a.png">',
+          html: 'עדיין לא ...הייתי מאוד עסוקה..עבדתי בשבת והיה יום הולדת לנכד..היום אתחיל ..<img alt="☺" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zfb/1/16/263a.png">',
           isRtl: true,
         },
       ],
@@ -2757,20 +2648,17 @@ function msgs() {
         { type: 'text', html: 'מזל טוב!\n', isRtl: true },
         {
           type: 'text',
-          html:
-            'לא זוכר אם שאלתי אותך כבר\nאני בקשר עם עוד הרבה אנשים, והרבה יכולים וישמח ללמוד ממך\n',
+          html: 'לא זוכר אם שאלתי אותך כבר\nאני בקשר עם עוד הרבה אנשים, והרבה יכולים וישמח ללמוד ממך\n',
           isRtl: true,
         },
         {
           type: 'text',
-          html:
-            'אני רוצה להעלות את ההתקמות שלך באתר שלי, כדי שכולם יוכלו ללמוד ולקבל השראה\n',
+          html: 'אני רוצה להעלות את ההתקמות שלך באתר שלי, כדי שכולם יוכלו ללמוד ולקבל השראה\n',
           isRtl: true,
         },
         {
           type: 'text',
-          html:
-            'אני הכי אשמח עם תרצי שאשים קישור לפרופיל שלך בפייסבוק, ככה שיוכלו לפנות אליך ולראות שמדובר בבנאדם אמיתי ושזה באמת אפשרי ללמוד להרגיש כל כך טוב  כל כך מהר\n',
+          html: 'אני הכי אשמח עם תרצי שאשים קישור לפרופיל שלך בפייסבוק, ככה שיוכלו לפנות אליך ולראות שמדובר בבנאדם אמיתי ושזה באמת אפשרי ללמוד להרגיש כל כך טוב  כל כך מהר\n',
           isRtl: true,
         },
         { type: 'text', html: 'מה את אומרת?\n', isRtl: true },
@@ -2781,8 +2669,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'בסדר גמור..אין בעיה..רק לא הייתי רוצה שכולם יראו את תוכן הזכרון כלומר את הפרטים..\n',
+          html: 'בסדר גמור..אין בעיה..רק לא הייתי רוצה שכולם יראו את תוכן הזכרון כלומר את הפרטים..\n',
           isRtl: true,
         },
       ],
@@ -2792,8 +2679,7 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'אוקיי, אז אני אעלה את זה לאתר במצב פרטי שרק את תוכלי לראות, ואז תגידי לי אם תרצי לשנות עוד פרטים\n',
+          html: 'אוקיי, אז אני אעלה את זה לאתר במצב פרטי שרק את תוכלי לראות, ואז תגידי לי אם תרצי לשנות עוד פרטים\n',
           isRtl: true,
         },
         { type: 'text', html: 'ורק אז אפרסם לקהל הרחב\n', isRtl: true },
@@ -2839,20 +2725,17 @@ function msgs() {
       content: [
         {
           type: 'text',
-          html:
-            'היי אדם \nרשמתי לך במסמך את 5 הזכרונות שעשעתי איתם את התהליך.\n',
+          html: 'היי אדם \nרשמתי לך במסמך את 5 הזכרונות שעשעתי איתם את התהליך.\n',
           isRtl: true,
         },
         {
           type: 'text',
-          html:
-            'אני סוקרת את חיי מהנקודה  הכי רחוקה שיכולה להיזכר  תא כל כך מוצאת עוד זכרונות כואבים כמו אלו שכבר כתבתי...שהיו כל כך משמעותיים...\n',
+          html: 'אני סוקרת את חיי מהנקודה  הכי רחוקה שיכולה להיזכר  תא כל כך מוצאת עוד זכרונות כואבים כמו אלו שכבר כתבתי...שהיו כל כך משמעותיים...\n',
           isRtl: true,
         },
         {
           type: 'textWithEmoticon',
-          html:
-            'עכשיו אתחיל לעשות אשימה של זכרונות טובים <img alt="☺" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zfb/1/16/263a.png">',
+          html: 'עכשיו אתחיל לעשות אשימה של זכרונות טובים <img alt="☺" class="_1ift _2560 img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/zfb/1/16/263a.png">',
           isRtl: true,
         },
       ],
@@ -2865,8 +2748,7 @@ function msgs() {
         {
           type: 'emoticon',
           alt: ':)',
-          src:
-            'https://static.xx.fbcdn.net/images/emoji.php/v9/z6/1/32/1f642.png',
+          src: 'https://static.xx.fbcdn.net/images/emoji.php/v9/z6/1/32/1f642.png',
           isRtl: false,
         },
         {
@@ -2876,8 +2758,7 @@ function msgs() {
         },
         {
           type: 'text',
-          html:
-            'כמה שתזכרי יותר אחורה בזמן, השינוי לטובה יהיה יותר עמוק, חזק, ובריא\n',
+          html: 'כמה שתזכרי יותר אחורה בזמן, השינוי לטובה יהיה יותר עמוק, חזק, ובריא\n',
           isRtl: true,
         },
       ],

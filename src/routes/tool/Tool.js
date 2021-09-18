@@ -13,25 +13,23 @@ type Props = {
   path: string,
   onLogin: Function,
   onStartToolResponse: Function,
-};
+}
 
 // eslint-disable-next-line react/prefer-stateless-function
 class Tool extends React.Component {
   props: Props
   render() {
-    const {
-      tool,
-    } = this.props
+    const { tool } = this.props
     return (
       <div>
-        <div className="container">
-          <div className="row">
-            <div className="col-md-2 col-xs-12" />
-            <div className="col-md-8 col-xs-12">
-              <div className="mainheading">
-                <h1 className="posttitle">{tool.title}</h1>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-md-2 col-xs-12' />
+            <div className='col-md-8 col-xs-12'>
+              <div className='mainheading'>
+                <h1 className='posttitle'>{tool.title}</h1>
               </div>
-              <div className="article-post">
+              <div className='article-post'>
                 {this.renderStartNew()}
                 {this.renderHistory()}
               </div>
@@ -45,15 +43,18 @@ class Tool extends React.Component {
   renderStartNew() {
     return (
       <div style={{ position: 'relative' }}>
-        <section className="jumbotron">
-          <h1 className="display-4">Start new proccess</h1>
-          <p className="lead">
-            <button className="btn btn-primary btn-lg" onClick={this.getStarted}>Get Started</button>
+        <section className='jumbotron'>
+          <h1 className='display-4'>Start new proccess</h1>
+          <p className='lead'>
+            <button
+              className='btn btn-primary btn-lg'
+              onClick={this.getStarted}
+            >
+              Get Started
+            </button>
           </p>
         </section>
-        {!this.props.user._id &&
-        <FbGateKeeper onLogin={this.props.onLogin} />
-        }
+        {!this.props.user._id && <FbGateKeeper onLogin={this.props.onLogin} />}
       </div>
     )
   }
@@ -63,7 +64,9 @@ class Tool extends React.Component {
     if (!this.props.user._id) {
       return null
     }
-    const historyItems = user.toolResponses.filter(item => item.toolId === tool._id)
+    const historyItems = user.toolResponses.filter(
+      item => item.toolId === tool._id,
+    )
     if (!historyItems.length) {
       return null
     }
@@ -71,11 +74,16 @@ class Tool extends React.Component {
       <section>
         <h4>History</h4>
         {historyItems.map(item => (
-          <ul className="list-group">
-            <li className="list-group-item">
-              <Link to={`${path}/${item._id}`} className="d-flex justify-content-between align-items-center">
+          <ul className='list-group'>
+            <li className='list-group-item'>
+              <Link
+                to={`${path}/${item._id}`}
+                className='d-flex justify-content-between align-items-center'
+              >
                 {item.createdAt}
-                <span className="badge badge-primary badge-pill">{item.status}</span>
+                <span className='badge badge-primary badge-pill'>
+                  {item.status}
+                </span>
               </Link>
             </li>
           </ul>
@@ -85,22 +93,21 @@ class Tool extends React.Component {
   }
 
   getStarted = () => {
-    const {
-      tool, user, path, onStartToolResponse,
-    } = this.props
+    const { tool, user, path, onStartToolResponse } = this.props
     const data = {
       toolId: tool._id,
       user: user._id,
       ...tool,
     }
     delete data._id
-    axios.post('/api/toolResponses', data)
-      .then((res) => {
+    axios
+      .post('/api/toolResponses', data)
+      .then(res => {
         global.console.log(res)
         history.push(`${path}/${res.data._id}`)
         onStartToolResponse(res.data)
       })
-      .catch((err) => {
+      .catch(err => {
         global.alert(err.message)
         global.console.error(err)
       })

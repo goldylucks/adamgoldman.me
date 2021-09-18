@@ -1,10 +1,10 @@
 import React from 'react'
 import axios from 'axios'
 
+import Tool from './Tool'
+
 import Layout from '../../components/Layout'
 import reviewSteps from '../../components/MultiStepForm/reviewSteps'
-
-import Tool from './Tool'
 
 async function action({ path }) {
   const { data } = await axios.get(`/api${path}`)

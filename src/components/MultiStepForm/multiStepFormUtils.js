@@ -2,16 +2,18 @@ import _ from 'lodash'
 
 import { scrollToElem } from '../../utils'
 
-export const stateForGoToStep = (stepToGoTo, { shouldResetPreviousAnswers } = {}) => ({
-  currentStepNum, stepsStack, answerByStep,
-}) => ({
-  currentStepNum: stepToGoTo,
-  flashedIdx: 0,
-  stepsStack: shouldResetPreviousAnswers
-    ? stepsStack.filter(stepN => stepN < stepToGoTo) : stepsStack.concat(currentStepNum),
-  answerByStep: shouldResetPreviousAnswers
-    ? _.pickBy(answerByStep, (answer, stepN) => stepN < stepToGoTo) : answerByStep,
-})
+export const stateForGoToStep =
+  (stepToGoTo, { shouldResetPreviousAnswers } = {}) =>
+  ({ currentStepNum, stepsStack, answerByStep }) => ({
+    currentStepNum: stepToGoTo,
+    flashedIdx: 0,
+    stepsStack: shouldResetPreviousAnswers
+      ? stepsStack.filter(stepN => stepN < stepToGoTo)
+      : stepsStack.concat(currentStepNum),
+    answerByStep: shouldResetPreviousAnswers
+      ? _.pickBy(answerByStep, (answer, stepN) => stepN < stepToGoTo)
+      : answerByStep,
+  })
 
 export const scrollTop = () => {
   scrollToElem(document.querySelector('html'), 0, 300)
@@ -23,13 +25,17 @@ export const stateForBack = ({ stepsStack }) => ({
   flashedIdx: 0,
 })
 
-export const stateForStepInputChange = newInput => ({
-  answerByStep, currentStepNum,
-}) => ({
-  answerByStep: { ...answerByStep, [currentStepNum]: newInput },
-})
+export const stateForStepInputChange =
+  newInput =>
+  ({ answerByStep, currentStepNum }) => ({
+    answerByStep: { ...answerByStep, [currentStepNum]: newInput },
+  })
 
-export const initialAnswerByStepState = ({ answerByStep, currentStepNum, stepsCount }) => {
+export const initialAnswerByStepState = ({
+  answerByStep,
+  currentStepNum,
+  stepsCount,
+}) => {
   for (let i = currentStepNum; i <= stepsCount; i += 1) {
     answerByStep[i] = ''
   }
@@ -37,7 +43,10 @@ export const initialAnswerByStepState = ({ answerByStep, currentStepNum, stepsCo
 }
 
 export const replaceVarsUtil = ({
-  str, hiddenFields, answerByStep, currentStepNum,
+  str,
+  hiddenFields,
+  answerByStep,
+  currentStepNum,
 }) => {
   if (!str) {
     return ''
@@ -73,10 +82,12 @@ export const replaceVarsUtil = ({
   }
 }
 
-export const stateForReviewRating = rating => ({ answerByStep, currentStepNum }) => ({
-  rating,
-  answerByStep: { ...answerByStep, [currentStepNum]: String(rating) },
-  currentStepNum: currentStepNum + 1,
-})
+export const stateForReviewRating =
+  rating =>
+  ({ answerByStep, currentStepNum }) => ({
+    rating,
+    answerByStep: { ...answerByStep, [currentStepNum]: String(rating) },
+    currentStepNum: currentStepNum + 1,
+  })
 
 export const stepNumById = (id, steps) => steps.findIndex(s => s.id === id)

@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import AnswersV2 from './Answers-v2'
+
 import Markdown from '../../../components/Markdown'
 import { scrollToElem } from '../../../utils'
-
-import AnswersV2 from './Answers-v2'
 
 class StepsV2 extends React.Component {
   static propTypes = {
@@ -29,7 +29,10 @@ class StepsV2 extends React.Component {
 
     return (
       <div>
-        <h6 style={{ marginBottom: 0, position: 'relative', top: -30 }} className={!isRtl ? '' : 'rtl'}>
+        <h6
+          style={{ marginBottom: 0, position: 'relative', top: -30 }}
+          className={!isRtl ? '' : 'rtl'}
+        >
           {!isRtl ? 'Step' : 'צעד'} {currentStep}/{steps.length - 1}
         </h6>
         {steps.map((step, idx) => (
@@ -70,7 +73,7 @@ ${step.description(this.state)}
     }
     return (
       <form
-        onSubmit={(evt) => {
+        onSubmit={evt => {
           evt.preventDefault()
           if (input.onSubmit) {
             input.onSubmit(this)
@@ -78,20 +81,28 @@ ${step.description(this.state)}
           }
           this.next()
         }}
-        className="tool-form"
+        className='tool-form'
       >
-        <div className="form-group">
+        <div className='form-group'>
           <input
             value={this.state[`input${input.id}`]}
             onChange={this.inputsChange(input.id)}
             className={`form-control ${!this.props.isRtl ? '' : 'rtl'}`}
-            placeholder={typeof input.placeholder === 'function' ? input.placeholder(this.state) : input.placeholder}
+            placeholder={
+              typeof input.placeholder === 'function'
+                ? input.placeholder(this.state)
+                : input.placeholder
+            }
             required
-            aria-describedby="inputHelp"
+            aria-describedby='inputHelp'
           />
-          <small id="inputHelp" className="form-text text-muted">I will never share your data with anyone else.</small>
+          <small id='inputHelp' className='form-text text-muted'>
+            I will never share your data with anyone else.
+          </small>
         </div>
-        <button type="submit" className="btn btn-primary">{!this.props.isRtl ? 'Let\'s continue' : 'בוא נמשיך'}</button>
+        <button type='submit' className='btn btn-primary'>
+          {!this.props.isRtl ? "Let's continue" : 'בוא נמשיך'}
+        </button>
       </form>
     )
   }
@@ -106,9 +117,9 @@ ${step.description(this.state)}
         answers={
           typeof answers === 'function'
             ? answers(this.state, {
-              goToStepByTitle: this.goToStepByTitle,
-              resetInputs: this.resetInputs,
-            })
+                goToStepByTitle: this.goToStepByTitle,
+                resetInputs: this.resetInputs,
+              })
             : answers
         }
         onNext={this.next}
@@ -118,24 +129,25 @@ ${step.description(this.state)}
   }
 
   back = n =>
-    this.goToStep(this.state.currentStep - (typeof n === 'number' ? n : 1));
+    this.goToStep(this.state.currentStep - (typeof n === 'number' ? n : 1))
   next = n =>
-    this.goToStep(this.state.currentStep + (typeof n === 'number' ? n : 1));
+    this.goToStep(this.state.currentStep + (typeof n === 'number' ? n : 1))
 
-  goToStep = (step) => {
+  goToStep = step => {
     scrollTop()
     this.setState({ currentStep: step })
-  };
+  }
 
-  goToStepByTitle = (title) => {
+  goToStepByTitle = title => {
     const { steps } = this.props
     scrollTop()
     this.setState({
       currentStep: steps.indexOf(steps.find(s => s.title === title)),
     })
-  };
+  }
 
-  inputsChange = id => evt => this.setState({ [`input${id}`]: evt.target.value })
+  inputsChange = id => evt =>
+    this.setState({ [`input${id}`]: evt.target.value })
 
   resetInputs = (...inputIdsToReset) => {
     inputIdsToReset.forEach(id => this.setState({ [`input${id}`]: '' }))

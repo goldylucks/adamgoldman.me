@@ -10,7 +10,8 @@ export default {
   description: 'Description here',
   html: (
     <div>
-      <Markdown source={`
+      <Markdown
+        source={`
 In contrast to people who feel the [emptiness](/loss/common-pitfalls), and stuck in [unuseful patterns](/loss/common-pitfalls), some people actually “lit up” when they talk about their loss.
 
 They would still prefer to have the person still in their life, but they can feel their presence and appreciate the good times shared together.
@@ -19,18 +20,19 @@ Few people have done this “spontaneously”, and participants who complete the
 `}
       />
       <Testimony
-        text="Up until an hour ago I felt like I was having a heart attack. Now I feel reunited with Larry, and remember all the good vacations we had, and how good he is to me"
-        name="Catherine"
-        nameMeta="Husband diad from heart attack"
+        text='Up until an hour ago I felt like I was having a heart attack. Now I feel reunited with Larry, and remember all the good vacations we had, and how good he is to me'
+        name='Catherine'
+        nameMeta='Husband diad from heart attack'
       />
       <Testimony
-        imgSrc="https://scontent.fmad3-4.fna.fbcdn.net/v/t1.0-1/p50x50/22852018_10155160350728379_1394566735044658139_n.jpg?oh=57414f3649e2f9a526776e8a6be6d521&oe=5AC94334"
-        text="When I think of them now, I always have these good feelings with it 🙂"
-        name="Julianne Barley"
-        nameMeta="Lost both parents at early age"
+        imgSrc='https://scontent.fmad3-4.fna.fbcdn.net/v/t1.0-1/p50x50/22852018_10155160350728379_1394566735044658139_n.jpg?oh=57414f3649e2f9a526776e8a6be6d521&oe=5AC94334'
+        text='When I think of them now, I always have these good feelings with it 🙂'
+        name='Julianne Barley'
+        nameMeta='Lost both parents at early age'
       />
 
-      <Markdown source={`
+      <Markdown
+        source={`
 If you still don't have a resourceful response to your loss, [sign up to participate](/loss/participate) in the process so we can [get started](/loss/participate).
 
 ---

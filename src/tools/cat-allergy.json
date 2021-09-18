@@ -1,0 +1,108 @@
+{
+  "steps": [
+    {
+      "title": "The first step 2",
+      "description": "",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "answer 1",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "answer 2",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "",
+      "description": "",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "",
+      "description": "",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "",
+      "description": "",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    }
+  ]
+}

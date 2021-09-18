@@ -10,7 +10,9 @@ export default {
 as each and every one of us has different neural networks
 in our minds, and we respond to different things so that when I tell you to
 
-![What's normal for the spider is chaos for the fly](${cloudImg('adamgoldman.me/normal-for-spider')})
+![What's normal for the spider is chaos for the fly](${cloudImg(
+    'adamgoldman.me/normal-for-spider',
+  )})
 
 *"now notice how a blue cool wave of relaxation overflows your body"*
 

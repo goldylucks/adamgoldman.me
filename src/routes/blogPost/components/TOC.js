@@ -4,13 +4,13 @@ import Markdown from '../../../components/Markdown'
 
 const TOC = () => (
   <Markdown
-    source="
+    source='
 # TOC
 - Details
 - Intro
 - Legend
 - Verbatim Transcript + Notes
-"
+'
   />
 )
 

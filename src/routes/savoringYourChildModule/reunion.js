@@ -3,7 +3,7 @@ import { cloudImg } from '../../utils'
 export default {
   slug: 'reunion',
   title: 'Reunion',
-  description: 'Reunite with your child\'s presence and valued relationship',
+  description: "Reunite with your child's presence and valued relationship",
   benefits: [
     'Reunite with the warmth, presence and appreciation of your child',
     'Increase the love you already feel',
@@ -29,7 +29,8 @@ export default {
       title: 'I feel closer to him again',
       text: 'Some therapists focus on "letting go", but this is different. I don\'t feel so sad or empty. I feel really good, like he is with me, where I need to be. Peaceful and satisfied.',
       name: 'Vita Steina',
-      nameMeta: 'Mother of Ralph, transitioned from illness after long period in the hospital',
+      nameMeta:
+        'Mother of Ralph, transitioned from illness after long period in the hospital',
       imgSrc: cloudImg('users/vita_steina_avatar'),
     },
     {
@@ -44,7 +45,8 @@ export default {
       text: 'I guess I never realized I did not vision Aymen when I think about him. Just the epiphany that I wasn’t visualizing Aymen is amazing.',
       name: 'Tracy Soussi',
       nameMeta: 'Mother of Aymen, admin & facilitator for bereaved parents',
-      imgSrc: 'https://res.cloudinary.com/goldylucks/image/upload/c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1530689574/Tracy_Soussi_ix64h4.jpg',
+      imgSrc:
+        'https://res.cloudinary.com/goldylucks/image/upload/c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1530689574/Tracy_Soussi_ix64h4.jpg',
     },
   ],
   faq: [],

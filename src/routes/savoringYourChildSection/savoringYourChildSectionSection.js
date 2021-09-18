@@ -9,23 +9,20 @@ type Props = {
   title: string,
   body: string,
   path: string,
-};
+}
 
-const savoringYourChildSectionSection = ({
-  title, body, path,
-}:
-Props) => (
+const savoringYourChildSectionSection = ({ title, body, path }: Props) => (
   <div>
-    <div className="container">
-      <div className="row">
-        <div className="col-md-2 col-xs-12">
+    <div className='container'>
+      <div className='row'>
+        <div className='col-md-2 col-xs-12'>
           <Share path={path} title={title} />
         </div>
-        <div className="col-md-8 col-xs-12">
-          <div className="mainheading">
-            <h1 className="posttitle">{title}</h1>
+        <div className='col-md-8 col-xs-12'>
+          <div className='mainheading'>
+            <h1 className='posttitle'>{title}</h1>
           </div>
-          <div className="article-post">
+          <div className='article-post'>
             <Markdown source={body} />
           </div>
         </div>

@@ -8,7 +8,7 @@ class FbComments extends React.Component {
   state = {
     href: '',
     rendered: false,
-  };
+  }
 
   shouldComponentUpdate(nextProps, nextState) {
     return nextState.rendered !== this.state.rendered
@@ -25,10 +25,9 @@ class FbComments extends React.Component {
     return null
   }
 
-  elem = null;
-  timeoutFb = null;
-  timeoutFbRender = null;
-
+  elem = null
+  timeoutFb = null
+  timeoutFbRender = null
 
   urlToShare() {
     return this.props.urlProp ? DOMAIN + this.props.urlProp : this.state.href
@@ -38,19 +37,19 @@ class FbComments extends React.Component {
     return encodeURIComponent(this.urlToShare())
   }
 
-    reloadFB = () => {
-      if (!global.FB) {
-        this.timeoutFb = setTimeout(this.reloadFB, 500)
-        return
-      }
-      this.setState({ href: window.location.href }, () => {
-        global.FB.XFBML.parse(this.elem, () => {
-          this.timeoutFbRender = setTimeout(() => {
-            this.setState({ rendered: true })
-          }, 1000)
-        })
+  reloadFB = () => {
+    if (!global.FB) {
+      this.timeoutFb = setTimeout(this.reloadFB, 500)
+      return
+    }
+    this.setState({ href: window.location.href }, () => {
+      global.FB.XFBML.parse(this.elem, () => {
+        this.timeoutFbRender = setTimeout(() => {
+          this.setState({ rendered: true })
+        }, 1000)
       })
-    };
+    })
+  }
 }
 
 export default FbComments

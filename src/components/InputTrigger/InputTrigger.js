@@ -44,11 +44,7 @@ class InputTrigger extends Component {
 
   render() {
     return (
-      <div
-        role="button"
-        tabIndex={-1}
-        onKeyDown={this.handleTrigger}
-      >
+      <div role='button' tabIndex={-1} onKeyDown={this.handleTrigger}>
         {this.props.children}
       </div>
     )
@@ -62,18 +58,8 @@ class InputTrigger extends Component {
   }
 
   handleTrigger(event) {
-    const {
-      trigger,
-      onStart,
-      onCancel,
-      onType,
-    } = this.props
-    const {
-      which,
-      shiftKey,
-      metaKey,
-      ctrlKey,
-    } = event
+    const { trigger, onStart, onCancel, onType } = this.props
+    const { which, shiftKey, metaKey, ctrlKey } = event
     const { selectionStart } = event.target
     const { triggered, triggerStartPosition } = this.state
     if (!triggered) {
@@ -83,32 +69,40 @@ class InputTrigger extends Component {
         ctrlKey === !!trigger.ctrlKey &&
         metaKey === !!trigger.metaKey
       ) {
-        this.setState({
-          triggered: true,
-          triggerStartPosition: selectionStart + 1,
-        }, () => {
-          setTimeout(() => {
-            onStart(getHookObject('start', this.props.elementRef))
-          }, 0)
-        })
+        this.setState(
+          {
+            triggered: true,
+            triggerStartPosition: selectionStart + 1,
+          },
+          () => {
+            setTimeout(() => {
+              onStart(getHookObject('start', this.props.elementRef))
+            }, 0)
+          },
+        )
         return null
       }
     } else {
       if (which === 8 && selectionStart <= triggerStartPosition) {
-        this.setState({
-          triggered: false,
-          triggerStartPosition: null,
-        }, () => {
-          setTimeout(() => {
-            onCancel(getHookObject('cancel', this.props.elementRef))
-          }, 0)
-        })
+        this.setState(
+          {
+            triggered: false,
+            triggerStartPosition: null,
+          },
+          () => {
+            setTimeout(() => {
+              onCancel(getHookObject('cancel', this.props.elementRef))
+            }, 0)
+          },
+        )
 
         return null
       }
 
       setTimeout(() => {
-        onType(getHookObject('typing', this.props.elementRef, triggerStartPosition))
+        onType(
+          getHookObject('typing', this.props.elementRef, triggerStartPosition),
+        )
       }, 0)
     }
 

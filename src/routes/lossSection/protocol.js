@@ -55,32 +55,32 @@ If there are strong feelings mixed with the loss, perhaps over a fight that happ
       </Collapsible>
       <Collapsible trigger={<h2>Part 2: Reunion</h2>}>
         {[
-            {
-              title: 'Eliciting loss/grief representation',
-              content: `
+          {
+            title: 'Eliciting loss/grief representation',
+            content: `
 I (Adam) ask the participant how she is currently thinking about the loss, particularly what image(s) and sound(s) come to mind. More often than not, at this point, the representation is still [not resourceful](/loss/common-pitfalls).
 `,
-            },
+          },
 
-            {
-              title: 'Eliciting resourceful loss',
-              content: `
+          {
+            title: 'Eliciting resourceful loss',
+            content: `
 I ask the participant to think about a meaningful person who is no longer in her life, yet when she thinks of them, she experiences them as a [resource](/loss/resourceful-response), and feels their presence, warmth, appreciation and gratitude for the relationship they had.
 `,
-            },
-            {
-              title: 'Contrastive Analysis (CA)',
-              content: `
+          },
+          {
+            title: 'Contrastive Analysis (CA)',
+            content: `
 We compare the representation of the [resourceful loss](/loss/resourceful-response), to the non resourceful loss (the current person she is grieving). Again we attend mostly to the images and sounds.
 
 Usually the pictures of the two representations are in a different place in the participant’s personal space.
 
 E.g. The non-resourceful loss would be slightly to your down left, about 6 meters away, while the [resourceful loss](/loss/resourceful-response) would be much closer and to your right.
   `,
-            },
-            {
-              title: 'Mapping Across (MA)',
-              content: `
+          },
+          {
+            title: 'Mapping Across (MA)',
+            content: `
 Here we “map across” the non resourceful loss representation, to the same “coding” of the [resourceful representation](/loss/resourceful-response).
 
 Usually starting with location works best, so I ask the participant to notice what happens as she allows the picture of the non resourceful loss to slide over to the same location of the [resourceful loss](/loss/resourceful-response), so she sees them at the same place and distance.
@@ -89,19 +89,19 @@ Oftentimes this change will carry over many other changes of representation such
 
 We then go back and forth between the two representations, and notice if there’s any other aspects we can learn from the [resourceful representation](/loss/resourceful-response), and use them to improve the non resourceful loss representation.
 `,
-            },
+          },
 
-            {
-              title: 'Mapping Across (MA) - Congruence Check',
-              content: `
+          {
+            title: 'Mapping Across (MA) - Congruence Check',
+            content: `
 For many participants, mapping across the representation makes a big shift in their experience, and transforms it into a more [resourceful](/loss/resourceful-response) one.
 
 Usually there are no objections to experience the loss this way, but it’s important to make sure the participant is fully congruent with the change, and provide and reassurance if needed, and attend to concerns if arise.
 `,
-            },
-            {
-              title: 'Relationship Consolidation',
-              content: `
+          },
+          {
+            title: 'Relationship Consolidation',
+            content: `
 In every relationship there are some moments that are better than others. This is a three part process in which we:
 1. Sort out good and bad experience in the relationship
 2. Soften the response from the bad ones
@@ -111,45 +111,49 @@ In every relationship there are some moments that are better than others. This i
  - The bad experiences are often dimmer and viewed in third person, from the outside, while the good experiences are experienced in first person, as if the participant is reliving them and can access the good feelings
 5. (Optional) For many participants, envisioning the person they lost right there with them, watching the collage together, and talking about it, further solidifies the feelings of presence and appreciation.
 `,
-            },
-
-          ].map(renderCollapsible)}
+          },
+        ].map(renderCollapsible)}
       </Collapsible>
       <Collapsible trigger={<h2>Part 3: Reengaging the future</h2>}>
-        <p>This part is derived from the most effective strategies for responding resourcefully to a loss, and makes sure that the participant will actively seek out appropriate new nourishing experiences in the future.</p>
+        <p>
+          This part is derived from the most effective strategies for responding
+          resourcefully to a loss, and makes sure that the participant will
+          actively seek out appropriate new nourishing experiences in the
+          future.
+        </p>
         {[
-            {
-              title: 'Identify values/outcomes',
-              content: `
+          {
+            title: 'Identify values/outcomes',
+            content: `
 We Identify the values, aspects, values and outcomes that made the relationship valuable. Some common responses include humor, acceptance, unconditional love, etc.
 `,
-            },
+          },
 
-            {
-              title: 'Transformation to future experiences',
-              content: `
+          {
+            title: 'Transformation to future experiences',
+            content: `
 We then elicit future possible encounters, scenarios and relationships that could represent and express the same values and qualities in different ways. Since no one (that I know of) can predict the future, these future representations are not “fixed in stone”, so the “fine details” of these future possibilities is not needed.
 `,
-            },
+          },
 
-            {
-              title: 'Congruence check',
-              content: `
+          {
+            title: 'Congruence check',
+            content: `
 I ask the participant if she has any objections to experience these possibilities and directions in her future. At this point concerns are rare, but if they arise we attend to them of course.
 `,
-            },
+          },
 
-            {
-              title: 'Placing the new experiences in the future',
-              content: `
+          {
+            title: 'Placing the new experiences in the future',
+            content: `
 Without knowing exactly when each will happen, the participant envisions the future possibilities being “sprinkled” into her future, as something to look forward to and propel herself into the future, bearing the values and qualities in mind.
 `,
-            },
-
-          ].map(renderCollapsible)}
+          },
+        ].map(renderCollapsible)}
       </Collapsible>
       <Collapsible trigger={<h2>Part 4: Feedback & Followup</h2>}>
-        <Markdown source={`
+        <Markdown
+          source={`
 The participant shares her experience, points for improvement, and rates again her feelings when thinking about the loss.
 
 To make sure the change is long lasting and pervasive, we schedule (optional) brief follow up sessions in the next intervals:
@@ -164,7 +168,8 @@ While it as rare, if any concerns or setback arises, we attend to those as well.
         />
       </Collapsible>
       <hr />
-      <Markdown source={`
+      <Markdown
+        source={`
 After you go through the protcol, and are ready to experience a more [resourceful response](/loss/resourceful-response) to your loss, you can [signup here to particiapte](/loss/participate) as well.
 `}
       />

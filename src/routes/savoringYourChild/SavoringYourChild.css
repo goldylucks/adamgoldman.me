@@ -18,7 +18,6 @@
   vertical-align: text-top;
 }
 
-
 .getStartedButton {
   font-size: 50px;
   padding: 30px;
@@ -30,8 +29,8 @@
   color: #fff !important;
 }
 
-@media only screen and (max-width : 768px) {
-  .getStartedButton{
+@media only screen and (max-width: 768px) {
+  .getStartedButton {
     font-size: 30px;
     padding: 20px;
     border-radius: 20px;
@@ -83,7 +82,7 @@
     margin-right: 0;
     margin-bottom: 20px;
   }
-  
+
   .aboutContainer {
     flex-direction: column;
   }
@@ -95,4 +94,3 @@
     max-width: 100%;
   }
 }
-

@@ -8,7 +8,9 @@ export default {
   body: `
 ## Looks like you took one too many left turns ...
 
-<img alt="Middle of nowhere" src="${cloudImg('adamgoldman.me/nowhere')}" style="max-width: 100%;" />
+<img alt="Middle of nowhere" src="${cloudImg(
+    'adamgoldman.me/nowhere',
+  )}" style="max-width: 100%;" />
 
 Whatever it is you were looking for, it's not here my friend.
 

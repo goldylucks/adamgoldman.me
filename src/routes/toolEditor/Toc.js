@@ -1,22 +1,32 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { DragDropContext, Droppable } from "react-beautiful-dnd";
-import { pure } from "recompose";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { DragDropContext, Droppable } from 'react-beautiful-dnd'
+import { pure } from 'recompose'
 
-import { reorder, scrollToElem } from "../../utils";
+import Draggable from './Draggable'
+import Persist from './Persist'
 
-import Draggable from "./Draggable";
+import { reorder, scrollToElem } from '../../utils'
 
 const Toc = ({ steps, onReorderSteps }) => (
-  <div style={{ maxHeight: "90vh", overflowY: "scroll" }}>
-    <h2>TOC</h2>
-    <a onClick={() => scrollToElem(document.querySelector("html"), 0, 300)}>
+  <div style={{ maxHeight: '90vh', overflowY: 'scroll' }}>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+      }}
+    >
+      <h2>TOC</h2>
+      <Persist steps={steps} />
+    </div>
+    <a onClick={() => scrollToElem(document.querySelector('html'), 0, 300)}>
       Details
     </a>
     <DragDropContext
-      onDragEnd={(result) => onDragEnd(result, steps, onReorderSteps)}
+      onDragEnd={result => onDragEnd(result, steps, onReorderSteps)}
     >
-      <Droppable droppableId="droppable">
+      <Droppable droppableId='droppable'>
         {(provided, snapshot) => (
           <div
             ref={provided.innerRef}
@@ -33,24 +43,24 @@ const Toc = ({ steps, onReorderSteps }) => (
       </Droppable>
     </DragDropContext>
   </div>
-);
+)
 
 Toc.propTypes = {
   steps: PropTypes.array.isRequired,
   onReorderSteps: PropTypes.func.isRequired,
-};
+}
 
-export default pure(Toc);
+export default pure(Toc)
 
 function onDragEnd(result, steps, onReorderSteps) {
   // dropped outside the list
   if (!result.destination) {
-    return;
+    return
   }
-  onReorderSteps(reorder(steps, result.source.index, result.destination.index));
+  onReorderSteps(reorder(steps, result.source.index, result.destination.index))
 }
 
-const grid = 2;
+const grid = 2
 
 // function getItemStyle(draggableStyle, isDragging) {
 //   return {
@@ -68,7 +78,7 @@ const grid = 2;
 
 function getListStyle(isDraggingOver) {
   return {
-    background: isDraggingOver ? "lightblue" : "lightgrey",
+    background: isDraggingOver ? 'lightblue' : 'lightgrey',
     padding: grid,
-  };
+  }
 }

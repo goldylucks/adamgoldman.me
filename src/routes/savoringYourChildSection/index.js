@@ -1,14 +1,14 @@
 import React from 'react'
 
-import Layout from '../../components/Layout'
-
 import SavoringYourChildSectionSection from './savoringYourChildSectionSection'
+
+import Layout from '../../components/Layout'
 
 async function action({ path }) {
   const sectionName = path.split('/')[2]
   const section = await import(`./${sectionName}.js`)
     .then(module => module.default) // use an object from `export default`
-    .catch((error) => {
+    .catch(error => {
       if (error.message.startsWith('Cannot find module')) {
         return null // module (section) does not exists
       }

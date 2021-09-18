@@ -1,42 +1,42 @@
 // @flow
 
-import React from "react";
-import ClickOutside from "react-click-outside";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import faBars from "@fortawesome/free-solid-svg-icons/faBars";
-import cx from "classnames";
-import withStyles from "isomorphic-style-loader/lib/withStyles";
+import React from 'react'
+import ClickOutside from 'react-click-outside'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import faBars from '@fortawesome/free-solid-svg-icons/faBars'
+import cx from 'classnames'
+import withStyles from 'isomorphic-style-loader/lib/withStyles'
 
-import history from "../../history";
+import history from '../../history'
 
-import "./MobileNav.css";
+import './MobileNav.css'
 
 type Props = {
   items: [],
-  title: "",
+  title: '',
   onItemClick: Function,
-};
+}
 
 class MobileNav extends React.Component<Props> {
   state = {
     isOpen: false,
-  };
+  }
 
   componentDidMount() {
     history.listen(() => {
       if (this.state.isOpen) {
-        this.close();
+        this.close()
       }
-    });
+    })
   }
 
   render() {
     return (
       <ClickOutside
         onClickOutside={this.close}
-        className="clearfix d-sm-block d-lg-none"
+        className='clearfix d-sm-block d-lg-none'
       >
-        <span style={{ cursor: "pointer" }}>
+        <span style={{ cursor: 'pointer' }}>
           <FontAwesomeIcon
             icon={faBars}
             style={{ marginRight: 10 }}
@@ -48,21 +48,21 @@ class MobileNav extends React.Component<Props> {
             <h3 className={s.mobileMenuHeadline} onClick={this.toggle}>
               {this.props.title}
             </h3>
-            <ul className="navbar-nav">
+            <ul className='navbar-nav'>
               {this.props.items.map(({ text, nodeId }) => (
-                <li className="nav-item" key={nodeId}>
+                <li className='nav-item' key={nodeId}>
                   <a
-                    className="nav-link"
+                    className='nav-link'
                     onClick={() => this.onItemClick(nodeId)}
                   >
                     {text}
                   </a>
                 </li>
               ))}
-              <li className="nav-item">
+              <li className='nav-item'>
                 <a
-                  className="nav-link btn btn-primary btn-sm"
-                  onClick={() => this.props.onItemClick("elBuyNow")}
+                  className='nav-link btn btn-primary btn-sm'
+                  onClick={() => this.props.onItemClick('elBuyNow')}
                 >
                   Claim Access
                 </a>
@@ -71,17 +71,17 @@ class MobileNav extends React.Component<Props> {
           </nav>
         </div>
       </ClickOutside>
-    );
+    )
   }
 
   onItemClick(nodeId) {
-    this.close();
-    this.props.onItemClick(nodeId);
+    this.close()
+    this.props.onItemClick(nodeId)
   }
 
-  toggle = () => this.setState({ isOpen: !this.state.isOpen });
+  toggle = () => this.setState({ isOpen: !this.state.isOpen })
 
-  close = () => this.setState({ isOpen: false });
+  close = () => this.setState({ isOpen: false })
 }
 
-export default withStyles(s)(MobileNav);
+export default withStyles(s)(MobileNav)

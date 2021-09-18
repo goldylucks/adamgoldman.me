@@ -6,11 +6,12 @@
 
 .sectionDivider:before {
   content: '...';
-  font-family: medium-content-slab-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-family: medium-content-slab-serif-font, Georgia, Cambria,
+    'Times New Roman', Times, serif;
   font-weight: 400;
   font-style: italic;
   font-size: 30px;
-  letter-spacing: .6em;
+  letter-spacing: 0.6em;
 }
 
 .chatMessageActions {

@@ -9,8 +9,8 @@
   color: #fff !important;
 }
 
-@media only screen and (max-width : 768px) {
-  .ctaButton{
+@media only screen and (max-width: 768px) {
+  .ctaButton {
     font-size: 30px;
     padding: 20px;
     border-radius: 20px;

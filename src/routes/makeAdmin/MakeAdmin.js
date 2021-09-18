@@ -13,10 +13,10 @@ class MakeAdmin extends React.Component {
   props: Props
   render() {
     return (
-      <div className="container">
+      <div className='container'>
         <form onSubmit={this.submit}>
           <input
-            placeholder="password"
+            placeholder='password'
             value={this.state.password}
             onChange={evt => this.setState({ password: evt.target.value })}
           />
@@ -25,14 +25,17 @@ class MakeAdmin extends React.Component {
     )
   }
 
-  submit = (evt) => {
+  submit = evt => {
     evt.preventDefault()
-    axios.put(`/api/users/${this.props.user._id}/make-admin`, { password: this.state.password })
-      .then((res) => {
+    axios
+      .put(`/api/users/${this.props.user._id}/make-admin`, {
+        password: this.state.password,
+      })
+      .then(res => {
         global.alert('welcome to management.')
         global.console.log(res)
       })
-      .catch((err) => {
+      .catch(err => {
         global.alert(err.message)
         global.console.error(err)
       })

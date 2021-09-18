@@ -1,10 +1,11 @@
 import { MESSENGER_LINK_WELCOME } from '../constants'
 
-const description = 'Work on any past memories you want to clear, current problems you still have, and building an ever brightening future'
+const description =
+  'Work on any past memories you want to clear, current problems you still have, and building an ever brightening future'
 
 export default {
   title: 'Book a Session',
-  nick: 'let\'s do this',
+  nick: "let's do this",
   description,
   tags: [],
   body: `

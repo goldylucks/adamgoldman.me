@@ -1,9 +1,9 @@
 import React from 'react'
 
+import SavoringYourChildIntroQuestionnaire from './savoringYourChildIntroQuestionnaire'
+
 import Layout from '../../components/Layout'
 import SavoringToolResponseContainer from '../../components/SavoringToolResponseContainer'
-
-import SavoringYourChildIntroQuestionnaire from './savoringYourChildIntroQuestionnaire'
 
 function action({ path }) {
   return {
@@ -13,7 +13,7 @@ function action({ path }) {
     description: 'Savoring Your Child Intro Questionnaire',
     component: (
       <Layout path={path}>
-        <SavoringToolResponseContainer toolSlug="savoring-intro">
+        <SavoringToolResponseContainer toolSlug='savoring-intro'>
           <SavoringYourChildIntroQuestionnaire path={path} {...module} />
         </SavoringToolResponseContainer>
       </Layout>

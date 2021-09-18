@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Layout from '../../components/Layout'
-
 import Endorsements from './Endorsements'
+
+import Layout from '../../components/Layout'
 
 const path = '/endorsements'
 

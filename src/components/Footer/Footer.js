@@ -6,19 +6,30 @@ import Link from '../Link'
 import './Footer.css'
 
 const Footer = () => (
-  <div className="footer">
-    <div className="row">
-      <div className="col-sm-12">
-        <p className="pull-left">
-               Copyright &copy; 2017 <Link className={s.link} to="/">Adam Goldman</Link>
+  <div className='footer'>
+    <div className='row'>
+      <div className='col-sm-12'>
+        <p className='pull-left'>
+          Copyright &copy; 2017{' '}
+          <Link className={s.link} to='/'>
+            Adam Goldman
+          </Link>
         </p>
-        <p className="pull-right">
-          <Link className={`${s.link}`} to="/legal-stuff">legal stuff</Link>
-          <Link className={`${s.link}`} style={{ marginLeft: 10 }} to="/privacy">Privacy</Link>
+        <p className='pull-right'>
+          <Link className={`${s.link}`} to='/legal-stuff'>
+            legal stuff
+          </Link>
+          <Link
+            className={`${s.link}`}
+            style={{ marginLeft: 10 }}
+            to='/privacy'
+          >
+            Privacy
+          </Link>
         </p>
       </div>
     </div>
-    <div className="clearfix" />
+    <div className='clearfix' />
   </div>
 )
 

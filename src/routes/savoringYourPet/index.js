@@ -7,10 +7,9 @@ function action({ path }) {
     chunks: ['savoringYourPet'],
     title: 'Savoring Your Pet',
     path,
-    description: "How to honor your furry friend's memory after the transition, and savor the relationship in a healing way",
-    component: (
-      <SavoringYourPet path={path} />
-    ),
+    description:
+      "How to honor your furry friend's memory after the transition, and savor the relationship in a healing way",
+    component: <SavoringYourPet path={path} />,
   }
 }
 

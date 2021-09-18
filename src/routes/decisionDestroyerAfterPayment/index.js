@@ -8,9 +8,7 @@ function action({ path }) {
     title: 'Decision Destroyer - Success',
     path,
     description: 'Success page',
-    component: (
-      <DecisionDestroyerAfterPayment path={path} />
-    ),
+    component: <DecisionDestroyerAfterPayment path={path} />,
   }
 }
 

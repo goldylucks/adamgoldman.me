@@ -3,7 +3,8 @@ import { cloudImg } from '../../utils'
 export default {
   slug: 'relationship-consolidation',
   title: 'Relationship Consolidation',
-  description: 'This process will increase acceptance and soften unpleasant experiences, while increasing the presence and good feeling towards and with your child.',
+  description:
+    'This process will increase acceptance and soften unpleasant experiences, while increasing the presence and good feeling towards and with your child.',
   benefits: [
     'Reclaim good experiences with your child',
     'Intensify good feelings and memories',
@@ -38,7 +39,8 @@ export default {
       text: 'I have to process all of this … I did have some wonderful memories Aymen and I shared that I even forgot about! OK thank you so much Adam - I am going to be thinking about this, thank you!',
       name: 'Tracy Soussi',
       nameMeta: 'Mother of Aymen, transitioned from illness',
-      imgSrc: 'https://res.cloudinary.com/goldylucks/image/upload/c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1530689574/Tracy_Soussi_ix64h4.jpg',
+      imgSrc:
+        'https://res.cloudinary.com/goldylucks/image/upload/c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1530689574/Tracy_Soussi_ix64h4.jpg',
     },
   ],
   faq: [],

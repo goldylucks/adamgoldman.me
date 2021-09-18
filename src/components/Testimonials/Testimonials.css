@@ -2,9 +2,10 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css');
 
 :global {
-  .slick-prev:before, .slick-next:before {
+  .slick-prev:before,
+  .slick-next:before {
     opacity: 1;
-    color: #00C5FF;
+    color: #00c5ff;
     font-size: 30px;
   }
   .slick-next {
@@ -26,7 +27,7 @@
   }
   .slick-slider.countSlide-1 .slick-list .slick-track,
   .slick-slider .slick-list .slick-track .slick-slide.totalSlides-1-1 {
-    width:100% !important;
+    width: 100% !important;
   }
   .slick-slider .slick-list .slick-track .slick-slide.totalSlides-1-1 {
     max-width: 450px !important;
@@ -35,7 +36,7 @@
 }
 .item {
   border-radius: 10px;
-  border: 1px solid #00C5FF;
+  border: 1px solid #00c5ff;
   margin: 10px;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.19);
 }
@@ -44,18 +45,18 @@
   text-align: center;
   height: 76px;
 }
-.itemText:before{
-  content: "\201C";
+.itemText:before {
+  content: '\201C';
   font-family: Georgia, serif;
   font-size: 60px;
-  color: #00C5FF;
-  position:absolute;
+  color: #00c5ff;
+  position: absolute;
   left: 10px;
-  top:-4px;
+  top: -4px;
 }
 .itemText {
-  position:relative;
-  padding:15px;
+  position: relative;
+  padding: 15px;
 }
 .itemText p {
   text-indent: 25px;
@@ -76,7 +77,7 @@
 .userDetails {
   padding-top: 10px;
 }
-@media only screen and (max-width : 768px) {
+@media only screen and (max-width: 768px) {
   :global {
     .slick-next {
       right: -15px;

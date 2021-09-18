@@ -18,7 +18,7 @@ class Endorsements extends React.Component<Props> {
       <div>
         <div className={`container ${s.widthContainer}`}>
           <article className={s.testimonial}>
-            <h1 className="text-center">“A challenge to the rest of us”</h1>
+            <h1 className='text-center'>“A challenge to the rest of us”</h1>
             <Markdown
               className={s.testimonialText}
               source={`
@@ -30,15 +30,18 @@ He has created online programs to guide clients through effective change process
             <img
               className={`text-center ${s.testimonialImg}`}
               src={cloudImg('adamgoldman.me/Steve_Andreas')}
-              alt="Steve Andreas"
+              alt='Steve Andreas'
             />
-            <div className="text-center">
-              <ExternalA href="http://steveandreas.com/cv.html">Steve Andreas</ExternalA> - MA, master trainer, author, publisher
+            <div className='text-center'>
+              <ExternalA href='http://steveandreas.com/cv.html'>
+                Steve Andreas
+              </ExternalA>{' '}
+              - MA, master trainer, author, publisher
             </div>
           </article>
           <hr className={s.separator} />
           <article className={s.testimonial}>
-            <h1 className="text-center">“researched, potent, and effective”</h1>
+            <h1 className='text-center'>“researched, potent, and effective”</h1>
             <Markdown
               className={s.testimonialText}
               source={`
@@ -47,16 +50,19 @@ I was planning on hiring a therapist for several long, drawn out, expensive sess
             />
             <img
               className={`text-center ${s.testimonialImg}`}
-              src="http://res.cloudinary.com/goldylucks/image/upload/v1533918214/lilli-luxe_thdcny.jpg"
-              alt="Lillie Lux Feedback"
+              src='http://res.cloudinary.com/goldylucks/image/upload/v1533918214/lilli-luxe_thdcny.jpg'
+              alt='Lillie Lux Feedback'
             />
-            <div className="text-center">
-              <ExternalA href="http://lillisadventures.com/">Lilli Luxe</ExternalA> - model & influencer, 1.3M subscribers
+            <div className='text-center'>
+              <ExternalA href='http://lillisadventures.com/'>
+                Lilli Luxe
+              </ExternalA>{' '}
+              - model & influencer, 1.3M subscribers
             </div>
           </article>
           <hr className={s.separator} />
           <article className={s.testimonial}>
-            <h1 className="text-center">“Guided epiphanies for change”</h1>
+            <h1 className='text-center'>“Guided epiphanies for change”</h1>
             <Markdown
               className={s.testimonialText}
               source={`
@@ -80,16 +86,16 @@ Epiphanies are most valuable when you have them yourself, not when other's share
             />
             <img
               className={`text-center ${s.testimonialImg}`}
-              src="https://res.cloudinary.com/goldylucks/image/upload/c_thumb,w_200,g_face/v1533917342/marcy-lela.jpg"
-              alt="Marcy Lela Feedback"
+              src='https://res.cloudinary.com/goldylucks/image/upload/c_thumb,w_200,g_face/v1533917342/marcy-lela.jpg'
+              alt='Marcy Lela Feedback'
             />
-            <div className="text-center">
-            Marcy Lela - MA, Juevnile, counselor, 11+ years of exp.
+            <div className='text-center'>
+              Marcy Lela - MA, Juevnile, counselor, 11+ years of exp.
             </div>
           </article>
           <hr className={s.separator} />
           <article className={s.testimonial}>
-            <h1 className="text-center">“An immediate shift”</h1>
+            <h1 className='text-center'>“An immediate shift”</h1>
             <Markdown
               className={s.testimonialText}
               source={`
@@ -97,15 +103,17 @@ Adam and I worked on some excellent techniques to eliminate a self limiting beli
             />
             <img
               className={`text-center ${s.testimonialImg}`}
-              src="https://res.cloudinary.com/goldylucks/image/upload/v1533918910/julia_zstzjk.jpg"
-              alt="Julia Wojnar Feedback"
+              src='https://res.cloudinary.com/goldylucks/image/upload/v1533918910/julia_zstzjk.jpg'
+              alt='Julia Wojnar Feedback'
             />
-            <div className="text-center">
-            Julia Wojnar - Founder & speaker, <ExternalA href="https://www.unleashyourpresence.com">Unleash Your Presence</ExternalA>
+            <div className='text-center'>
+              Julia Wojnar - Founder & speaker,{' '}
+              <ExternalA href='https://www.unleashyourpresence.com'>
+                Unleash Your Presence
+              </ExternalA>
             </div>
           </article>
           <hr className={s.separator} />
-
         </div>
       </div>
     )

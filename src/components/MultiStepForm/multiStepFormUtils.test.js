@@ -1,4 +1,11 @@
-import { replaceVarsUtil, stateForGoToStep, stateForBack, stateForStepInputChange, stateForReviewRating, initialAnswerByStepState } from './multiStepFormUtils'
+import {
+  replaceVarsUtil,
+  stateForGoToStep,
+  stateForBack,
+  stateForStepInputChange,
+  stateForReviewRating,
+  initialAnswerByStepState,
+} from './multiStepFormUtils'
 
 describe('stateForGoToStep', () => {
   it('should skip ahead', () => {
@@ -162,7 +169,9 @@ describe('replaceVarsUtil', () => {
       },
       currentStepNum: 2,
     }
-    expect(replaceVarsUtil(params)).toEqual('he is nice, his hand is long, and we like him')
+    expect(replaceVarsUtil(params)).toEqual(
+      'he is nice, his hand is long, and we like him',
+    )
   })
   it('should return string with replaced gender for female', () => {
     const params = {
@@ -172,7 +181,9 @@ describe('replaceVarsUtil', () => {
       },
       currentStepNum: 2,
     }
-    expect(replaceVarsUtil(params)).toEqual('she is nice, her hand is long, and we like her')
+    expect(replaceVarsUtil(params)).toEqual(
+      'she is nice, her hand is long, and we like her',
+    )
   })
 })
 

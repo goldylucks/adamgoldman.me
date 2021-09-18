@@ -16,23 +16,32 @@ const routes = {
     },
     {
       path: '/signup-with-email',
-      load: () => import(/* webpackChunkName: 'signupWithEmail' */ './signupWithEmail'),
+      load: () =>
+        import(/* webpackChunkName: 'signupWithEmail' */ './signupWithEmail'),
     },
     {
       path: '/adminCoupons',
-      load: () => import(/* webpackChunkName: 'adminCoupons' */ './adminCoupons'),
+      load: () =>
+        import(/* webpackChunkName: 'adminCoupons' */ './adminCoupons'),
     },
     {
       path: '/endorsements',
-      load: () => import(/* webpackChunkName: 'endorsements' */ './endorsements'),
+      load: () =>
+        import(/* webpackChunkName: 'endorsements' */ './endorsements'),
     },
     {
       path: '/adminToolResponses',
-      load: () => import(/* webpackChunkName: 'adminToolResponses' */ './adminToolResponses'),
+      load: () =>
+        import(
+          /* webpackChunkName: 'adminToolResponses' */ './adminToolResponses'
+        ),
     },
     {
       path: '/adminToolResponses/:id',
-      load: () => import(/* webpackChunkName: 'adminToolResponseItem' */ './adminToolResponseItem'),
+      load: () =>
+        import(
+          /* webpackChunkName: 'adminToolResponseItem' */ './adminToolResponseItem'
+        ),
     },
     {
       path: '/transcripts',
@@ -48,44 +57,72 @@ const routes = {
     },
     {
       path: '/shop/decision-destroyer',
-      load: () => import(/* webpackChunkName: 'decisionDestroyer' */ './decisionDestroyer'),
+      load: () =>
+        import(
+          /* webpackChunkName: 'decisionDestroyer' */ './decisionDestroyer'
+        ),
     },
     {
       path: '/shop/decision-destroyer/success-f8j43',
-      load: () => import(/* webpackChunkName: 'decisionDestroyerAfterPayment' */ './decisionDestroyerAfterPayment'),
+      load: () =>
+        import(
+          /* webpackChunkName: 'decisionDestroyerAfterPayment' */ './decisionDestroyerAfterPayment'
+        ),
     },
     {
       path: '/savoring-your-pet',
-      load: () => import(/* webpackChunkName: 'savoringYourPet' */ './savoringYourPet'),
+      load: () =>
+        import(/* webpackChunkName: 'savoringYourPet' */ './savoringYourPet'),
     },
     {
       path: '/savoring-your-pet/success-dj34f84',
-      load: () => import(/* webpackChunkName: 'savoringYourPetAfterPayment' */ './savoringYourPetAfterPayment'),
+      load: () =>
+        import(
+          /* webpackChunkName: 'savoringYourPetAfterPayment' */ './savoringYourPetAfterPayment'
+        ),
     },
     {
       path: '/savoring-your-child',
-      load: () => import(/* webpackChunkName: 'savoringYourChild' */ './savoringYourChild'),
+      load: () =>
+        import(
+          /* webpackChunkName: 'savoringYourChild' */ './savoringYourChild'
+        ),
     },
     {
       path: '/savoring-your-child/success-84jf',
-      load: () => import(/* webpackChunkName: 'savoringYourChildAfterPayment' */ './savoringYourChildAfterPayment'),
+      load: () =>
+        import(
+          /* webpackChunkName: 'savoringYourChildAfterPayment' */ './savoringYourChildAfterPayment'
+        ),
     },
     {
       path: '/savoring-your-child/modules',
-      load: () => import(/* webpackChunkName: 'savoringYourChildModules' */ './savoringYourChildModules'),
+      load: () =>
+        import(
+          /* webpackChunkName: 'savoringYourChildModules' */ './savoringYourChildModules'
+        ),
     },
     {
       path: '/savoring-your-child/intro-questionnaire',
-      load: () => import(/* webpackChunkName: 'savoringYourChildIntroQuestionnaire' */ './savoringYourChildIntroQuestionnaire'),
+      load: () =>
+        import(
+          /* webpackChunkName: 'savoringYourChildIntroQuestionnaire' */ './savoringYourChildIntroQuestionnaire'
+        ),
     },
     {
       // using array because soon we will add more sections
       path: ['pricing'].map(s => `/savoring-your-child/${s}`),
-      load: () => import(/* webpackChunkName: 'savoringYourChildSection' */ './savoringYourChildSection'),
+      load: () =>
+        import(
+          /* webpackChunkName: 'savoringYourChildSection' */ './savoringYourChildSection'
+        ),
     },
     {
       path: '/savoring-your-child/:module',
-      load: () => import(/* webpackChunkName: 'savoringYourChildModule' */ './savoringYourChildModule'),
+      load: () =>
+        import(
+          /* webpackChunkName: 'savoringYourChildModule' */ './savoringYourChildModule'
+        ),
     },
     {
       path: '/loss',
@@ -97,7 +134,8 @@ const routes = {
     },
     {
       path: '/posts-generator/:post',
-      load: () => import(/* webpackChunkName: 'postsGenerator' */ './postsGenerator'),
+      load: () =>
+        import(/* webpackChunkName: 'postsGenerator' */ './postsGenerator'),
     },
     {
       path: '/tools',
@@ -114,7 +152,8 @@ const routes = {
     },
     {
       path: '/tools/:toolUrl/:toolResponseId',
-      load: () => import(/* webpackChunkName: 'toolResponse' */ './toolResponse'),
+      load: () =>
+        import(/* webpackChunkName: 'toolResponse' */ './toolResponse'),
     },
     {
       path: '/tool-editor/:tool',
@@ -122,7 +161,8 @@ const routes = {
     },
     {
       path: '/tool-json-editor',
-      load: () => import(/* webpackChunkName: 'toolJsonEditor' */ './toolJsonEditor'),
+      load: () =>
+        import(/* webpackChunkName: 'toolJsonEditor' */ './toolJsonEditor'),
     },
     {
       path: '/:page',
@@ -148,7 +188,8 @@ const routes = {
 }
 
 // The error page is available by permanent url for development mode
-if (__DEV__) { // eslint-disable-line no-undef
+if (__DEV__) {
+  // eslint-disable-line no-undef
   routes.children.unshift({
     path: '/error',
     action: require('./error').default,
