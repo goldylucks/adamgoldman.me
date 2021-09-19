@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predeploy-tools": "yarn build && cp build/index.html build/200.html",
+    "deploy-tools": "surge build adam-mind-tools.surge.sh",
     "server": "nodemon server/server",
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -63,6 +65,7 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.12",
-    "prettier": "^2.4.1"
+    "prettier": "^2.4.1",
+    "surge": "^0.23.0"
   }
 }

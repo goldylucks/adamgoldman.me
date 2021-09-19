@@ -1,15 +1,180 @@
 {
   "steps": [
     {
-      "title": "",
-      "description": "",
+      "title": "Magnitude of the problem",
+      "description": "I've talked to many people who had allergies. Some take bi-weekly shots, some take pills, some vacuum the house every day to lessen the symptoms.\n\nBefore we put this condition behind us, let me quickly ask you:\n\nHow much time a week would you say you spend dealing with this problem?\n\nIncluding trips to the doctor's office, pharmacy, vacuuming the house, etc",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
       "answers": [
         {
           "isOther": false,
-          "text": "",
+          "text": "Less than an hour per week",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Up to 5 hours per week",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Up to 15 hours per week",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "More than 20 hours per week",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Magnitude of the problem",
+      "description": "${echo}\n\nAnd how much money do you spend each month on this problem?",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Up to $50 per month",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Up to $100 per month",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "More than $100 per month",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Life after the cure",
+      "description": "${echo}\n\nOk, now imagine we are 15 minutes into the future and you no longer have this problem.\n\nHow great it would be to have all this free time and money, not to mention be free of the symptoms?",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "That will good",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "It will be amazing",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "It will change my life immensely",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Let's begin",
+      "description": "${echo}\n\nGreat. And with that, let's begin!",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Great, let's start",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Let's do this Adam!",
           "hasGoToStep": false,
           "goToStepByNum": "",
           "isLink": false,
@@ -684,7 +849,7 @@
     },
     {
       "title": "Anchoring an appropriate response",
-      "description": "Now in a moment, I’ll ask you to imagine touching and playing with the stimulant you chose a couple of steps ago:\n\n${s15}\n\nAnd really feel the touch on your skin, your hands, body, and even the face.\n\nAs you are doing so, start holding the anchor you’ve selected in the previous steps:\n\n#{echo}\n\nAfter you feel you have “peaked” this experience in your mind, and you really got a good feel of the touch of the similar stimulant:\n\n${s15}\n\nYou can let go of the anchor.\n\nGot the steps?\n\n1. Get ready to anchor: ANCHOR\n2. Think of the similar stimulant: STIMULANT\n3. Imagine touching, playing and rubbing it with your hands, body, and face\n4. Start holding the anchor\n5. As you really start to sense the touch of the stimulant, release the anchor and reorient yourself here to the present moment.\n\nYou can do this with eyes closed or open, whatever is more comfortable for you.\n\nScroll down when you’re done.\n\n…\n\n\n…\n\n\n…\n\n\n…\n\n\n…\n\n\n…\n\n\nYou’re back?\n\nGreat!\n\nThis resource we just anchored will come in real handy real soon. You’ll see soon enough.\n\nOn with the show …\n",
+      "description": "Now in a moment, I’ll ask you to imagine touching and playing with the stimulant you chose a couple of steps ago:\n\n${s18}\n\nAnd really feel the touch on your skin, your hands, body, and even the face.\n\nAs you are doing so, start holding the anchor you’ve selected in the previous steps:\n\n#{echo}\n\nAfter you feel you have “peaked” this experience in your mind, and you really got a good feel of the touch of the similar stimulant:\n\n${s18}\n\nYou can let go of the anchor.\n\nGot the steps?\n\n1. Get ready to anchor: ANCHOR\n2. Think of the similar stimulant: STIMULANT\n3. Imagine touching, playing and rubbing it with your hands, body, and face\n4. Start holding the anchor\n5. As you really start to sense the touch of the stimulant, release the anchor and reorient yourself here to the present moment.\n\nYou can do this with eyes closed or open, whatever is more comfortable for you.\n\nScroll down when you’re done.\n\n…\n\n\n…\n\n\n…\n\n\n…\n\n\n…\n\n\n…\n\n\nYou’re back?\n\nGreat!\n\nThis resource we just anchored will come in real handy real soon. You’ll see soon enough.\n\nOn with the show …\n",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -777,7 +942,7 @@
     },
     {
       "title": "Seeing yourself on the other side",
-      "description": "Now in a moment, I’ll have you watching yourself on the other side of ${s18}, as ${he} is touching the similar stimulant - ${s15} - having a perfectly appropriate healthy response.\n\nAgain, go for full (even exaggerated) contact. See ${him} touching it, playing with it, rubbing it fully, with hands, body, and face, really getting ${himself} all over it.\n\nAs you watch ${him} really getting into it, start holding the anchor we established earlier:\n\n${s16}\n\nAnd keep it holding it, until I tell explicitly you to let go.\n\nReady?\n\nHere are the steps to recap:\n1. See yourself on the of the side of ${s18}\n2. Watch ${him} touching the similar stimulant: ${s15}\n3. As you see ${him} really getting into it, start holding the anchor we established earlier: ${s16}\n4. Keep holding the anchor until I explicitly tell you to let go\n\nYou can do this with eyes open or closed, and click the button below when you’re done (while still holding the anchor)\n\nDo it now.",
+      "description": "Now in a moment, I’ll have you watching yourself on the other side of ${s21}, as ${he} is touching the similar stimulant - ${s18} - having a perfectly appropriate healthy response.\n\nAgain, go for full (even exaggerated) contact. See ${him} touching it, playing with it, rubbing it fully, with hands, body, and face, really getting ${himself} all over it.\n\nAs you watch ${him} really getting into it, start holding the anchor we established earlier:\n\n${s19}\n\nAnd keep it holding it, until I tell explicitly you to let go.\n\nReady?\n\nHere are the steps to recap:\n1. See yourself on the of the side of ${s21}\n2. Watch ${him} touching the similar stimulant: ${s18}\n3. As you see ${him} really getting into it, start holding the anchor we established earlier: ${s19}\n4. Keep holding the anchor until I explicitly tell you to let go\n\nYou can do this with eyes open or closed, and click the button below when you’re done (while still holding the anchor)\n\nDo it now.",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -964,7 +1129,7 @@
     },
     {
       "title": "Going back for changes",
-      "description": "Next I’ll orient you back a couple of steps, to where you are watching yourself having an appropriate response to the similar stimulant: \n\n${s15}\n\nAfterwards, you will again watch yourself playing with a cat, and this time make the adjustments and changes in your response to your liking.",
+      "description": "Next I’ll orient you back a couple of steps, to where you are watching yourself having an appropriate response to the similar stimulant: \n\n${s18}\n\nAfterwards, you will again watch yourself playing with a cat, and this time make the adjustments and changes in your response to your liking.",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
