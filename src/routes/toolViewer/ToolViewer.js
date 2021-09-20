@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 
-import catAllergyData from '../../tools/cat-allergy.json'
+import toolsData from '../../tools/tools-data'
 import MultiStepForm from '../../components/MultiStepForm/MultiStepForm'
-
-const toolsData = {
-  'cat-allergy': catAllergyData,
-}
 
 const ToolViewer = () => {
   const { tool } = useParams()

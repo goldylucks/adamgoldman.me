@@ -5,14 +5,10 @@ import { freshAnswer, freshStep } from './toolEditorUtils'
 import Steps from './Steps'
 import Controls from './Controls'
 import Toc from './Toc'
-
-import catAllergyData from '../../tools/cat-allergy.json'
-import { inputChange, inputToggle } from '../../forms'
 import './ToolEditor.css'
 
-const toolsData = {
-  'cat-allergy': catAllergyData,
-}
+import toolsData from '../../tools/tools-data'
+import { inputChange, inputToggle } from '../../forms'
 
 class ToolEditor extends React.Component {
   state = {

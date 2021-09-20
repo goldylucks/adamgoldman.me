@@ -17,7 +17,7 @@ class Step extends Component {
     sIdx: PropTypes.number.isRequired,
     step: PropTypes.object.isRequired,
     stepCount: PropTypes.number.isRequired,
-    onSetStepToPronouns: PropTypes.number.isRequired,
+    onSetStepToPronouns: PropTypes.func.isRequired,
     onUpdateStep: PropTypes.func.isRequired,
     onRemoveStep: PropTypes.func.isRequired,
     onAddStep: PropTypes.func.isRequired,

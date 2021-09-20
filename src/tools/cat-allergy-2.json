@@ -1,0 +1,1364 @@
+{
+  "steps": [
+    {
+      "title": "Magnitude of the problem",
+      "description": "I've talked to many people who had allergies. Some take bi-weekly shots, some take pills, some vacuum the house every day to lessen the symptoms.\n\nBefore we put this condition behind us, let me quickly ask you:\n\nHow much time a week would you say you spend dealing with this problem?\n\nIncluding trips to the doctor's office, pharmacy, vacuuming the house, etc",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Less than an hour per week",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Up to 5 hours per week",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Up to 15 hours per week",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "More than 20 hours per week",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Magnitude of the problem",
+      "description": "${echo}\n\nAnd how much money do you spend each month on this problem?",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Up to $50 per month",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Up to $100 per month",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "More than $100 per month",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Life after the cure",
+      "description": "${echo}\n\nOk, now imagine we are 15 minutes into the future and you no longer have this problem.\n\nHow great it would be to have all this free time and money, not to mention be free of the symptoms?",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "That will good",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "It will be amazing",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "It will change my life immensely",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Let's begin",
+      "description": "${echo}\n\nGreat. And with that, let's begin!",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Great, let's start",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Let's do this Adam!",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Pronouns",
+      "description": "What pronouns do you use?",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "He / Him / His",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "She / Her / Hers",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Them / They / Theirs",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": "",
+      "isPronouns": true
+    },
+    {
+      "title": "Your immune system",
+      "description": "The role of your immune system is to keep you alive and well, and for the most part, it’s doing its job rather well.\n\nHowever …\n\nEven immune systems make mistakes sometimes. Nobody’s perfect right?\n\nAn allergy is usually a mistake caused by a false neurological association. \n\nLike “crossing the wires” in your mind.\n\n I’ve worked with many people who have successfully acquired different allergies in very creative ways.\n\nThe good thing is that we can retrain your immune system to once again respond to cats in an appropriate ways.\n",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Continue",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Retraining the immune system",
+      "description": "What we are about to do is gently retrain your immune system.\n\nCorrect the mistake it did when it learned to give you these “warning signals” packaged in an allergic response.\n\nNotice the key-word here:\n\nGently.\n\nWhen we’re done, your immune system will accurately identify cats for what they are. Harmless (some would say adorable) furry creatures.\n\nThis will have some side benefits of course\n",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Side benefits? Great!",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "What side benefits?",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Stronger immune system - One less frontier",
+      "description": "Up until today, cats were one more thing your immune system was on the lookout for. That’s another frontier to manage.\n\nEach one of these frontiers consumes resources of course. Resources you are about to allocate to more constructive functions.\n\nLike we said, for the most part,  it’s good to enforce these frontiers because it keeps us safe from unwanted infiltrators.\n\nBut now that we are going to re-identify cats for what they are, we are going to have one less frontier to worry about, which will result in...\n",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Will result in what?",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Oh damn the suspense is killing me!",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Less stress on the body",
+      "description": "By closing that frontier, we'll have reduced the maintenance requirements for “being you.”\n\nThere are countless benefits for reducing stress on the system, and now you’ll have more resources to allocate to different things such as:\n\n- Fighting real dangers (viruses, infections, etc)\n - Digestion\n- Sleep\n\nAnd many more.\n\nYou’ll also be actually safer without that dangerous old allergic response you used to have!\n",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Oh cool!",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Let's continue",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Missing allergies",
+      "description": "You probably had this response for quite some time now in the past, so before we proceed I need to ask you something very important, which might seem a bit strange.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Oh you got me curious now Adam!",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Sure, what is it?",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I love strange questions :)",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Would you miss it?",
+      "description": "After we’re done with this process, the allergic response you used to have will be gone. \n\nSometimes it happens instantaneously, and sometimes it takes a few days, but it will be gone.\n\nI know you’ll probably say you won't miss it, but I must ask because, well, these are the rules ;) And also, I’m very thorough like that.\n\nSo, imagine we are a few days into the future, and you, my friend, are 100% healthy around cats.\n\nThere’s nothing left of that part of you which used to cause the old allergic response.\n\nwould you miss it in any way?\n\nIs there any part of you who objects to keep being free of this old condition, and enjoy being around cats if you wish?\n\nAgain, I know it’s a bit strange to ask, but I like to be sure before we continue.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Objections? Of course not!",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "100% healthy around cats? I’m loving it!",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "No objections. This is great.",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I have an objection",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": "true"
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Will you miss it?",
+      "description": "${echo}\n\nGreat, that's usually the case.\n\nNow let's proceed to the next step",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Continue",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "On with the show!",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Controlled response",
+      "description": "In a minute I’ll ask you to get back just a *little bit* of the allergic response you had in the past.\n\nWe’re doing this in order to get some reference to the very near future, in which this response will be already gone completely from your life.\n\nDon’t do it before I tell you.\n\nI’ll want you to go back to the past, to the first time you had the allergic response, and relive that moment slowly. As you do so, the moment you start feeling the allergic response back, “wake up” and “shake it off”\n\nBy “wake up” I mean reorient yourself back to the present moment, here with me, stand up and walk around for a few seconds.\n\n##### Let me outline the steps for you:\n\n1. Go back to the past, to the first experience in which you had the allergic response\n2. Relive that experience slowly\n3. As soon as you start feeling that allergic response in your body, “wake up” and “shake it off” by standing up, and walk around for a few seconds.\n\nSome people like to do steps 1-2 with eyes closed. It’s your mind, your body, and your decision of course.\n\nReady?\n\nDo it now and let me know when you’re done by scrolling down the page.\n\n…\n\n\n\n…\n\n\n\n…\n\n\n\n…\n\n\n\n…\n\n\n\n…\n\n\nBack?\n\nGreat. Were you able to generate some of the allergic response from the past?",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Yes",
+          "hasGoToStep": false,
+          "goToStepByNum": "16",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "No",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "",
+      "description": "**No**\n\nOK, sometimes it takes a bit more effort to conjure up this response from the past. So here are two things to try next: \n\nRelive that memory again, and this time pay extra attention to the bodily sensations of that experience.\n\n\nRelive the strongest past experience you have with the past allergic response\n\nAlso, if you touched any cats in any of those experiences, pay extra attention to the texture and temperature of these furry creatures.\n\nDo it now, and let me know when you’re done.\n\n…\n\n\n…\n\n\n…\n\n\n…\n\n\n…\n\n\n…\n\nWell? How was it? Were you able to generate some of the response now?\n",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Yes",
+          "hasGoToStep": false,
+          "goToStepByNum": "16",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "No",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "",
+      "description": "**No**\n\nOK, here’s the next alternative to try. \n\nImagine playing with 4 cats right now. Really feel their touch in your hand, and in your face. Imagine rubbing your face or your cheeks on their fur. \n\nDon’t hold back, really get in there.\n\nDo this for up to 3 minutes. \n\nRemember, as soon as you start feeling the allergic response, “wake up” and walk around a bit.\n\nDo it now and let me know when you’re done.\n\n\n…\n\n\n…\n\n\n\n…\n\n\n\n…\n\n\nBack?\n\nGreat.\n\nWere you able to generate now any of the allergic response?\n",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Yes",
+          "hasGoToStep": false,
+          "goToStepByNum": "16",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "No",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "",
+      "description": "**No**\n\nOK, this requires some investigation, so let's have a quick chat before you continue.\n\nI'm mostly available on my personal WhatsApp:\n\n+972506867607\n\nOr at Facebook messenger:\n\nhttps://m.me/shlakyshlaky\n\nYou can also send me an email at:\n\ngoldy@adamgoldman.me",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "WhatsApp",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "https://api.whatsapp.com/send?phone=+972506867607",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Fb Messenger",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "https://m.me/shlakyshlaky",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Email",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "mailto:goldy@adamgoldman.me?subject=Cat Allergy",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "",
+      "description": "**Yes**\n\nGreat.\n\n(If you didn’t get up and walked around a bit, please do it now before continuing)\n\nNow before we move to the next step, there’s another reason I asked you to generate some of the old allergic response.\n\nNot telling you makes the effect stronger, but it’s no biggie if you already know.\n",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "What is it?",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Why so mysterious Adam?",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "A sneaky little trick",
+      "description": "By generating the allergic response in your mind alone, i.e. without physically being exposed to the stimulant, you just provided an unshakeable proof to your entire system that, well, this is not a “purely physical” condition.\n\nIf this was 100% physical, you wouldn’t have been able to do so.\n\nPretty cool eh?",
+      "notes": "We can talk further about the “mind-body split\" after this process if you wish",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Hmm … Good point",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "OK, let’s continue",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "You sneaky little devil Adam!",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "A similar stimulant",
+      "description": "OK this next step is very simple.\n\nThink of something that is very similar to a cat, in which you already respond appropriately to. Most people go for a dog, but if something else comes to your mind, by all means, go for it.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Dog",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": true,
+          "text": "Other",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": "",
+          "isReadOnly": true
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Anchoring preface",
+      "description": "${echo}\n\nGreat.\n\nNow choose a place on your body you can comfortably press for a few minutes.\n\nThese usually work well:\n\n- Pressing two fingers together\n- Pressing the index and middle fingers on your thigh\n- Pressing the index and middle fingers on your arm\n- Pressing the index and middle fingers on your shoulder\n\nWe are going to use that soon to “anchor” a healthy response by your immune system. Don’t worry about the term “anchoring” for now.\n\nLet me know when you’ve found a comfortable spot to press.\n\n(don’t hold on to it yet, just locate the spot)",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Pressing two fingers together",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Pressing the index and middle fingers on your thigh",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Pressing the index and middle fingers on your arm",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Pressing the index and middle fingers on your shoulder",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": true,
+          "text": "Other",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": "",
+          "isReadOnly": true
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Anchoring an appropriate response",
+      "description": "Now in a moment, I’ll ask you to imagine touching and playing with the stimulant you chose a couple of steps ago:\n\n${s18}\n\nAnd really feel the touch on your skin, your hands, body, and even the face.\n\nAs you are doing so, start holding the anchor you’ve selected in the previous step:\n\n${s19}\n\nAfter you feel you have “peaked” this experience in your mind, and you really got a good feel of the touch of the similar stimulant:\n\n${s18}\n\nYou can let go of the anchor.\n\nGot the steps?\n\n1. Get ready to anchor: ${s19}\n2. Think about the similar stimulant: ${s18}\n3. Imagine touching, playing, and rubbing it with your hands, body, and face\n4. Start holding the anchor\n5. As you really start to sense the touch of the ${s18}, release the anchor and reorient yourself here to the present moment.\n\nYou can do this with eyes closed or open, whatever is more comfortable for you.\n\nScroll down when you’re done.\n\n…\n\n\n…\n\n\n…\n\n\n…\n\n\n…\n\n\n…\n\n\nYou’re back?\n\nGreat!\n\nThis resource we just anchored will come in real handy real soon. You’ll see soon enough.\n\nOn with the show …\n",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "OK, let’s continue",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "That was fun!",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "The great wall",
+      "description": "Now let me ask you a question, my friend.\n\nIf you’d have two all-mighty plexiglasses splitting the current room you’re in, into two quarantined spaces, and one plexiglass would be warm, and one would be cold, which one would be a better “isolator”?\n\nBoth plexiglasses span across the entire room, cover wall to wall, floor to ceiling. One is cold, one is warm.\n\nWhich one do you feel isolates better your side of the room from the other side?\n\nIf both of them isolates equally strong, just pick one.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "The warm plexiglass",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "The cold plexiglass",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "The great wall",
+      "description": "${echo}\n\nGreat, so imagine that plexiglass now, splitting the space you’re in into two, covering wall to wall, floor to ceiling.\n\nThis plexiglass ain’t your regular plexiglass my friend.\n\nIt’s been crafted especially for you by a team of world-class plexiglass masters, who’ve been passing their plexiglass crafting arts from generation to generation.\n\nActually … \n\nIt’s even better than that.\n\nIt’s been crafted by something way more powerful: Your mind!\n\nBut seriously now, as you already see ${s21} now, I want you to also see yourself on the other side of it, over there, while you are right here, completely isolated from ${him}.\n\nSee yourself as you are today, wearing the same cloth, on the other side, beyond ${s21}.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "OK, I see myself on the other side",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Seeing yourself on the other side",
+      "description": "Now in a moment, I’ll have you watching yourself on the other side of ${s21}, as ${he} is touching the ${s18}, having a perfectly appropriate healthy response.\n\nAgain, go for full (even exaggerated) contact. See ${him} touching it, playing with it, rubbing it fully, with hands, body, and face, really getting ${himself} all over it.\n\nAs you watch ${him} really getting into it, start holding the anchor we established earlier:\n\n${s19}\n\nAnd keep it holding it, until I tell explicitly you to let go.\n\nReady?\n\nHere are the steps to recap:\n1. See yourself on the of the side of ${s21}\n2. Watch ${him} touching the ${s18}\n3. As you see ${him} really getting into it, start holding the anchor we established earlier: ${s19}\n4. Keep holding the anchor until I explicitly tell you to let go\n\nYou can do this with eyes open or closed, and click the button below when you’re done (while still holding the anchor)\n\nDo it now.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I’m done, and I’m holding the anchor",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Seeing yourself on the other side",
+      "description": "Great, now watch ${him} over there on the other side, playing with a cat in the same way, and having the same appropriate response. \n\n${his} immune system also knows exactly what to do now.\n\nKeep holding the anchor as you do so.\n",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Watched ${him} playing with the cat, it was fun!",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "That’s interesting, ${he} actually enjoyed it",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "OK, done, let’s continue",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Seeing yourself on the other side",
+      "description": "${echo}\n\nGreat, now before we integrate these learnings you just witnessed on the other side, let’s do a quick check.\n\nSince it’s your mind, might as well optimize and design your response as you see fit.\n\nSo, as you just witnessed yourself on the other side playing with a cat, is there anything in your response you’d like to change or optimize?\n\nEither in your response on this side of the plexiglass, or ${his} response on the other side.\n\n(keep holding the anchor)",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "There is something I want to change",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Nothing to change, my response is good",
+          "hasGoToStep": false,
+          "goToStepByNum": "29",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Making way for changes",
+      "description": "***“There is something I want to change”***\n\nGreat observation!\n\nThere’s no rush, and it’s great that you want to optimize your mind and your life, and you are not settling.\n\nI like that!\n\nYou can release the anchor now.\n\nNow, here’s what we’ll do.\n\nFirst, run your phone number, social security number, or ID number in your head.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I’ve ran my phone number",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I’ve ran my social security number",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I’ve ran my ID number",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Making way for changes",
+      "description": "${echo}\n\nGreat, now run it in your head again, this time backwards, from the end to the beginning.\n\nWe are doing this to do a quick “reset” in your mind, and make way to the changes you are about to install.\n\nIt’s not fun but it is useful, and we’ll get back at having fun shortly, promise!",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "I’ve ran it backwards",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I’ve ran it backwards, ready for fun again!",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Going back for changes",
+      "description": "Next I’ll orient you back a couple of steps, to where you are watching yourself having an appropriate response to the similar stimulant: \n\n${s18}\n\nAfterwards, you will again watch yourself playing with a cat, and this time make the adjustments and changes in your response to your liking.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Take me back",
+          "hasGoToStep": false,
+          "goToStepByNum": "23",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Preparing for integration",
+      "description": "*“Nothing to change, my response is good”*\n\nGreat, now keep holding the anchor, and as you do so, allow the plexiglass to disappear, so there’s nothing between you and yourself who just played with the cat with the good response.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "OK, plexiglass has disappeared, still holding the anchor",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Integrating learnings",
+      "description": "Now bring ${him} into you, so you will learn everything ${he} already knows, including how to play with cats and have a good healthy response, as you keep holding the anchor.\n\nTake as much time as you need to integrate these learnings.\n\nWhen you feel you are ready, let’s continue.",
+      "notes": "Remember to keep holding the anchor",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Integrated ${him} into me, ready to continue",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "I have learned everything ${he} learned, let’s continue",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Solidifying learnings (+ enjoyment?)",
+      "description": "${echo}\n\nGood.\n\nNow, while still holding the anchor, imagine playing with a cat in the same way right here, in the same way you’ve just learned.\n\nTouch it in the same way, feel it in the same way, so you have the same or better response.",
+      "notes": "(hint: you are not forbidden from enjoying this)",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "Played with the cat, a good response",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Played with the cat, an even better response!",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Furry gratitude",
+      "description": "${echo}\n\nMarvelous!\n\nNow release anchor, and continue to play with the cat.\n\nPay extra attention to how the cat enjoys your touch even more, deeply, and feel the cat’s gratitude and appreciation towards your touch and playfulness.",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "This is interesting …",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "The cat really enjoys it now",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Oh yes, so much gratitude!",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Going forward",
+      "description": "That's it!\n\nYou should be good to go now.\n\nThe next time you'll encounter a cat, you can expect to have a perfectly healthy response.\n\nSometimes there might be a slight appearance of the old symptoms in the first few days or encounters with cats, so don't worry if that happens.\n\nIt's perfectly normal, it's just your immune system adjusting to these learnings.\n\nOne last thing to do...",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "What's that?",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Feedback",
+      "description": "I'd love to hear how was the experience for you, so I could make it better for the next person.\n\nAny parts that you liked more than others?\n\nAnything you think should be clarified or explained differently?\n\nDid you find any difficulties performing any of the steps?\n\nPlease let me know!\n\nI'm mostly available on my personal WhatsApp:\n\n+972-50-686-7607\n\nIf WhatsApp ain't your thing, we can do Facebook:\n\nhttps://m.me/shlakyshlaky\n\nYou can also send me an email at:\n\ngoldy@adamgoldman.me",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "WhatsApp",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "https://api.whatsapp.com/send?phone=+972506867607",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Facebook",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "https://m.me/shlakyshlaky",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Email",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "mailto:goldy@adamgoldman.me?subject=Cat Allergy",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    }
+  ]
+}
