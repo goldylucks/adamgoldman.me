@@ -1,6 +1,8 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
+import './styles/global.css'
+
 import ToolEditor from './routes/toolEditor/ToolEditor'
 import ToolViewer from './routes/toolViewer/ToolViewer'
 

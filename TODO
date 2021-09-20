@@ -1,5 +1,1 @@
-- capture gender
-- set dynamic var him/her etc based on gender
-- load produced json to generator
-- load produced json to tool viewer (MultiStepForm Component?)
 - show in iframe in independant html file

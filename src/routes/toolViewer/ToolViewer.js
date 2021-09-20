@@ -31,7 +31,7 @@ const ToolViewer = () => {
 
   function onUpdateProgress(...args) {
     // eslint-disable-next-line no-console
-    console.log('[onUpdateProgress]', ...args)
+    // console.log('[onUpdateProgress]', ...args)
   }
 }
 
