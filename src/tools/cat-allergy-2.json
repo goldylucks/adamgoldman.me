@@ -2,7 +2,7 @@
   "steps": [
     {
       "title": "Magnitude of the problem",
-      "description": "I've talked to many people who had allergies. Some take bi-weekly shots, some take pills, some vacuum the house every day to lessen the symptoms.\n\nBefore we put this condition behind us, let me quickly ask you:\n\nHow much time a week would you say you spend dealing with this problem?\n\nIncluding trips to the doctor's office, pharmacy, vacuuming the house, etc",
+      "description": "<h1>Foo</h1>",
       "notes": "",
       "type": "radio",
       "inputPlaceholder": "",
@@ -70,7 +70,7 @@
           "isOther": false,
           "text": "Up to $50 per month",
           "hasGoToStep": false,
-          "goToStepByNum": "",
+          "goToStepByNum": "4",
           "isLink": false,
           "link": "",
           "isLinkNew": false,

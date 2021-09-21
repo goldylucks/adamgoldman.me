@@ -1,0 +1,133 @@
+{
+  "steps": [
+    {
+      "title": "Pronouns",
+      "description": "What pronouns do you use?",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "He / Him / His / Himself",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "She / Her / Hers / Herself",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "Them / They / Theirs / Themselves",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": "",
+      "isPronouns": true
+    },
+    {
+      "title": "Step 1",
+      "description": "He -> ${he}\n\n",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "3",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        },
+        {
+          "isOther": false,
+          "text": "",
+          "hasGoToStep": true,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Step 2",
+      "description": "",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    },
+    {
+      "title": "Step 3",
+      "description": "",
+      "notes": "",
+      "type": "radio",
+      "inputPlaceholder": "",
+      "answers": [
+        {
+          "isOther": false,
+          "text": "",
+          "hasGoToStep": false,
+          "goToStepByNum": "",
+          "isLink": false,
+          "link": "",
+          "isLinkNew": false,
+          "linkNew": "",
+          "isConcern": false,
+          "concern": ""
+        }
+      ],
+      "flashSpeed": "",
+      "flashStepNum": ""
+    }
+  ]
+}

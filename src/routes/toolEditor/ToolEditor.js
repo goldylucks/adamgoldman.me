@@ -37,9 +37,6 @@ class ToolEditor extends React.Component {
     return (
       <div style={{ padding: 10 }}>
         <div className='clearfix' style={{ width: '60%', float: 'left' }}>
-          {this.renderDetails()}
-          <hr />
-          <h1 className='text-center'>Steps</h1>
           <Steps
             steps={this.state.steps}
             onUpdateSteps={this.updateSteps}
