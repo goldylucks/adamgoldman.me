@@ -4,7 +4,6 @@ import { DragDropContext, Droppable } from 'react-beautiful-dnd'
 import { pure } from 'recompose'
 
 import Draggable from './Draggable'
-import Persist from './Persist'
 
 import { reorder, scrollToElem } from '../../utils'
 

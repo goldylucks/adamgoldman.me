@@ -2,14 +2,9 @@ import React from 'react'
 import axios from 'axios'
 import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrashAlt, faSave, faEye } from '@fortawesome/free-regular-svg-icons'
+import { faEye } from '@fortawesome/free-regular-svg-icons'
 import { faDatabase } from '@fortawesome/free-solid-svg-icons/'
-import _ from 'lodash'
-
-import { getValidationWarnings, cleanEmptyValues } from './toolEditorUtils'
 import './ToolEditor.css'
-
-import Link from '../../components/Link'
 
 class Controls extends React.Component {
   static propTypes = {
