@@ -42,7 +42,7 @@ class Steps extends Component {
   render() {
     return (
       <div>
-        {this.renderPromptVariableAc()}
+        {/* {this.renderPromptVariableAc()} */}
         <div>
           {this.props.steps.map((step, sIdx) => (
             <Step

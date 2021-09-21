@@ -10,16 +10,7 @@ import { reorder, scrollToElem } from '../../utils'
 
 const Toc = ({ steps, onReorderSteps }) => (
   <div style={{ maxHeight: '90vh', overflowY: 'scroll' }}>
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-      }}
-    >
-      <h2>TOC</h2>
-      <Persist steps={steps} />
-    </div>
+    <h2>TOC</h2>
     <a onClick={() => scrollToElem(document.querySelector('html'), 0, 300)}>
       Details
     </a>

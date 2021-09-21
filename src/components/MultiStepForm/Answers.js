@@ -8,22 +8,7 @@ import ExternalA from '../../components/ExternalA'
 import { MESSENGER_LINK_TOOL_CONCERN } from '../../constants'
 import { getFbShareUrl } from '../../utils/fbUtils'
 
-type Props = {
-  answers: Array<any>,
-  onSubmit: Function,
-  onSubmitOther?: Function,
-  onConcern: Function,
-  onLinkPress: Function,
-  onNewLinkPress: Function,
-  path: String,
-  isPulsating: Boolean,
-}
-
-const State = {
-  other: String,
-}
-
-class Answers extends React.Component<Props, State> {
+class Answers extends React.Component {
   static defaultProps = {
     onSubmitOther: () => {},
   }

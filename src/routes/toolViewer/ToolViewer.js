@@ -9,16 +9,23 @@ const ToolViewer = () => {
   const toolData = toolsData[tool]
 
   return (
-    <MultiStepForm
-      steps={toolData.steps}
-      hiddenFields={[]}
-      currentStepNum={0}
-      answerByStep={{}}
-      price={0}
-      stepsStack={[]}
-      onUpdateProgress={onUpdateProgress}
-      onConcern={onConcern}
-    />
+    <div
+      style={{
+        maxWidth: 600,
+        margin: '40px auto',
+      }}
+    >
+      <MultiStepForm
+        steps={toolData.steps}
+        hiddenFields={[]}
+        currentStepNum={0}
+        answerByStep={{}}
+        price={0}
+        stepsStack={[]}
+        onUpdateProgress={onUpdateProgress}
+        onConcern={onConcern}
+      />
+    </div>
   )
 
   function onConcern() {

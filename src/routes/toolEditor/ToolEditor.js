@@ -46,7 +46,10 @@ class ToolEditor extends React.Component {
             hiddenFields={this.state.hiddenFields}
             onSetStepToPronouns={this.setStepToPronouns}
           />
-          <Controls tool={{ ...this.state }} />
+          <Controls
+            steps={this.state.steps}
+            toolKey={this.props.match.params.tool}
+          />
         </div>
         <div
           className='clearfix'
