@@ -46,7 +46,6 @@ class Step extends Component {
       stepCount,
       onPromptVariable,
       onRegisterUnpromptVariable,
-      onSetStepToPronouns,
     } = this.props
     return (
       <div key={sIdx} id={`step-${sIdx}`} className='step'>
@@ -144,7 +143,6 @@ class Step extends Component {
                 <FontAwesomeIcon icon={faTrashAlt} />
               </a>
             </p>
-            <a onClick={() => onSetStepToPronouns(sIdx)}>Pronouns</a>
             <select
               className={cx('select', 'stepRevealable')}
               style={{ marginRight: 5 }}
@@ -153,6 +151,7 @@ class Step extends Component {
               required
             >
               <option value='radio'>Radio</option>
+              <option value='pronouns'>Pronouns</option>
               <option value='checkbox'>Checkbox</option>
               <option value='short'>Short</option>
               <option value='long'>Long</option>
@@ -303,9 +302,26 @@ class Step extends Component {
   elems = {}
 
   changeStepKey = key => evt => {
+    if (key === 'type') return this.changeStepType(evt)
+
     this.props.onUpdateStep(this.props.sIdx, {
       ...this.props.step,
       [key]: evt.target.value,
+    })
+  }
+
+  changeStepType = evt => {
+    const shouldContinue = window.confirm(
+      `Set step type to ${evt.target.value}?`,
+    )
+    if (!shouldContinue) return
+    if (evt.target.value === 'pronouns') {
+      return this.props.onSetStepToPronouns(this.props.sIdx)
+    }
+    this.props.onUpdateStep(this.props.sIdx, {
+      ...this.props.step,
+      type: evt.target.value,
+      isPronouns: false,
     })
   }
 

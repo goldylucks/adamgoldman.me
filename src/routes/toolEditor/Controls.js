@@ -32,13 +32,14 @@ class Controls extends React.Component {
   render() {
     return (
       <div className='controls'>
-        <Link
+        <a
           className='control'
-          to={`/tool-viewer/${this.props.toolKey}`}
+          href={`/tool-viewer/${this.props.toolKey}`}
           target='_blank'
+          rel='noreferrer'
         >
           <FontAwesomeIcon icon={faEye} />
-        </Link>
+        </a>
         <a className='control' onClick={this.persist}>
           <FontAwesomeIcon icon={faDatabase} />
         </a>
