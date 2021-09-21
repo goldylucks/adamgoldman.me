@@ -13,6 +13,8 @@ const ToolViewer = () => {
       style={{
         maxWidth: 600,
         margin: '40px auto',
+        paddingRight: 20,
+        paddingLeft: 20,
       }}
     >
       <MultiStepForm
